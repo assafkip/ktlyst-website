@@ -1,145 +1,142 @@
 {
-  "generated_at": "2026-02-06T08:52:59.633828",
+  "generated_at": "2026-02-06T11:06:32.361934",
   "time_periods": {
     "daily": {
-      "executive_summary": "Today's intelligence highlights critical vulnerabilities in SolarWinds, SmarterMail, and React Native CLI being actively exploited in ransomware campaigns. State-backed group TGR-STA-1030 has compromised 70 government and infrastructure entities, while supply chain attacks targeting dYdX npm/PyPI packages deliver wallet stealers and RAT malware.",
+      "executive_summary": "Today's intelligence shows a surge in critical vulnerabilities across enterprise infrastructure, with 41 critical-severity signals highlighting active exploitation campaigns. Supply chain attacks targeting npm/PyPI packages and widespread ransomware operations by multiple threat groups pose immediate risks to organizations.",
       "key_threats": [
-        "SolarWinds CVE-2025-40551 vulnerability requiring immediate patching",
-        "SmarterMail exploitation in active ransomware campaigns",
-        "Supply chain compromise of dYdX npm and PyPI packages",
-        "TGR-STA-1030 state-backed campaign against 70 government entities",
-        "Large-scale web traffic hijacking via malicious NGINX configurations"
-      ],
-      "key_cves": [
-        "CVE-2025-40551 - Critical SolarWinds vulnerability",
-        "CVE-2025-11953 - React Native Community CLI OS command injection",
-        "CVE-2026-24423 - SmarterTools SmarterMail authentication bypass",
-        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS",
-        "CVE-2026-25049 - Critical n8n system command execution flaw"
-      ],
-      "threat_actors": [
-        "TGR-STA-1030 - Asian state-backed group targeting government and infrastructure with 70 confirmed breaches",
-        "Akira - Ransomware group published new victim TriPartum",
-        "Dragonforce - Ransomware group targeting Esposito Bros. Construction Ltd",
-        "Play - Active in automation-based infections using reverse shells and cognitive rootkits",
-        "Conti - Ongoing operations with AI-enhanced tradecraft and backdoor deployments"
-      ],
-      "trends": "State-backed actors are intensifying campaigns against critical infrastructure while ransomware groups maintain steady victim publication rates. Supply chain attacks are increasingly targeting developer tools and cryptocurrency-related packages.",
-      "recommendations": [
-        "Immediately patch SolarWinds systems affected by CVE-2025-40551",
-        "Review and secure SmarterMail deployments against authentication bypass attacks",
-        "Audit npm and PyPI package dependencies for dYdX-related compromises",
-        "Enhance monitoring of government and infrastructure networks for TGR-STA-1030 indicators",
-        "Implement additional validation for NGINX configurations to prevent traffic hijacking"
-      ],
-      "detection_opportunities": "Monitor for unusual DDNS configuration changes in ZYXEL devices and suspicious command execution patterns in React Native development environments. Watch for anomalous package installations and unexpected network traffic redirection through compromised NGINX servers.",
-      "period": "daily",
-      "period_days": 1,
-      "generated_at": "2026-02-06T08:52:32.645908",
-      "signal_count": 197,
-      "critical_count": 37,
-      "high_count": 12,
-      "category_breakdown": {
-        "advisory": 2,
-        "news": 108,
-        "research": 39,
-        "apt": 25,
-        "cve": 7,
-        "malware": 16
-      }
-    },
-    "weekly": {
-      "executive_summary": "This week saw 599 security signals with 165 critical alerts, highlighting significant supply chain attacks including compromised dYdX npm/PyPI packages and a sophisticated NGINX traffic hijacking campaign. State-backed group TGR-STA-1030 breached 70 government entities while ransomware groups Akira and Dragonforce continued operations, alongside critical vulnerabilities in SolarWinds, SmarterMail, and React Native requiring immediate patching.",
-      "key_threats": [
+        "SmarterMail RCE vulnerability actively exploited in ransomware attacks",
         "Compromised dYdX npm and PyPI packages delivering wallet stealers and RAT malware",
-        "Asian state-backed TGR-STA-1030 group targeting 70 government and infrastructure entities",
-        "Critical SolarWinds CVE-2025-40551 vulnerability exploitation",
-        "SmarterMail vulnerability being actively exploited in ransomware attacks",
-        "Large-scale web traffic hijacking via malicious NGINX configurations"
-      ],
-      "key_cves": [
-        "CVE-2025-40551 - Critical SolarWinds vulnerability requiring immediate patching",
-        "CVE-2025-11953 - React Native Community CLI OS command injection flaw",
-        "CVE-2026-24423 - SmarterTools SmarterMail missing authentication vulnerability",
-        "CVE-2025-55182 - NGINX configuration flaw enabling traffic hijacking",
-        "CVE-2026-25049 - Critical n8n system command execution vulnerability"
-      ],
-      "threat_actors": [
-        "TGR-STA-1030 - Asian state-backed group compromising government and infrastructure entities",
-        "Akira - Ransomware group publishing new victim TriPartum",
-        "Dragonforce - Ransomware group targeting Esposito Bros. Construction Ltd",
-        "Play - Involved in advanced automation-based infection techniques",
-        "Conti - Continuing operations with focus on AI-powered tradecraft evolution"
-      ],
-      "trends": "Supply chain attacks are intensifying with compromised package repositories and AI-generated code security flaws becoming prominent attack vectors. State-backed groups are increasingly targeting critical infrastructure while ransomware operations maintain steady victim publication rates.",
-      "recommendations": [
-        "Immediately patch SolarWinds CVE-2025-40551 and SmarterMail vulnerabilities",
-        "Audit and validate all npm and PyPI package dependencies for integrity",
-        "Review NGINX configurations for malicious modifications and implement monitoring",
-        "Enhance monitoring for state-backed APT indicators targeting government infrastructure",
-        "Deploy AI-assisted code security scanners for development environments"
-      ],
-      "detection_opportunities": "Monitor for unusual outbound connections from development environments, package installation anomalies, and NGINX configuration changes. Implement enhanced logging for government and infrastructure networks to detect TGR-STA-1030 TTPs including lateral movement and persistence mechanisms.",
-      "period": "weekly",
-      "period_days": 7,
-      "generated_at": "2026-02-06T08:52:46.546812",
-      "signal_count": 599,
-      "critical_count": 165,
-      "high_count": 50,
-      "category_breakdown": {
-        "advisory": 23,
-        "news": 276,
-        "research": 98,
-        "apt": 88,
-        "cve": 64,
-        "malware": 50
-      }
-    },
-    "monthly": {
-      "executive_summary": "This month saw 848 security signals with 234 critical alerts, highlighting significant supply chain attacks including compromised dYdX packages and a state-backed campaign affecting 70 government entities. Critical vulnerabilities in SolarWinds, SmarterMail, and React Native components require immediate patching, while ransomware groups Akira and Dragonforce continue active operations.",
-      "key_threats": [
-        "Compromised npm and PyPI packages in dYdX delivering wallet stealers and RAT malware",
-        "Asian state-backed group TGR-STA-1030 breaching 70 government and infrastructure entities",
-        "Critical SmarterMail vulnerability actively exploited in ransomware campaigns",
-        "SolarWinds CVE-2025-40551 vulnerability requiring immediate attention",
+        "TGR-STA-1030 state-backed group breaching 70+ government and infrastructure entities",
+        "Multiple ransomware groups publishing new victims including Akira, Dragonforce, and Thegentlemen",
         "Large-scale web traffic hijacking campaign exploiting malicious NGINX configurations"
       ],
       "key_cves": [
-        "CVE-2025-40551 - Critical SolarWinds vulnerability",
-        "CVE-2025-11953 - React Native Community CLI OS command injection",
-        "CVE-2026-24423 - SmarterTools SmarterMail missing authentication",
-        "CVE-2026-25049 - n8n system command execution flaw",
-        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS"
+        "CVE-2026-24423 - SmarterMail missing authentication allowing remote code execution",
+        "CVE-2025-40551 - Critical SolarWinds vulnerability requiring immediate patching",
+        "CVE-2026-25049 - n8n workflow automation platform enabling system command execution",
+        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS configuration",
+        "CVE-2026-1207 - Django SQL injection vulnerability in RasterField lookup"
       ],
       "threat_actors": [
-        "Play - Advanced automation attacks including reverse shells and cognitive rootkits",
-        "Conti - Living off AI techniques and backdoor deployment in popular tools",
-        "Akira - Active ransomware operations with new victim TriPartum",
-        "Dragonforce - Ongoing ransomware campaign targeting Esposito Bros. Construction",
-        "TGR-STA-1030 - State-backed APT compromising government and critical infrastructure"
+        "Play - Conducting advanced automation-based attacks using reverse shells and cognitive rootkits",
+        "Conti - Active in social engineering campaigns and backdoor deployments",
+        "Akira - Recently published TriPartum as new ransomware victim",
+        "TGR-STA-1030 - Asian state-backed group targeting government and critical infrastructure"
       ],
-      "trends": "AI-powered vulnerability discovery is accelerating with Claude Opus identifying 500+ high-severity flaws across major libraries. Supply chain attacks are increasingly targeting development environments through compromised packages and development tools.",
+      "trends": "Supply chain attacks are escalating with compromised development packages, while ransomware groups continue high-volume victim publishing. State-backed actors are increasingly targeting critical infrastructure with sophisticated automated attack techniques.",
       "recommendations": [
-        "Immediately patch SolarWinds CVE-2025-40551 and SmarterMail vulnerabilities",
-        "Audit and validate all npm and PyPI package dependencies, especially dYdX-related packages",
-        "Implement enhanced monitoring for state-backed APT indicators targeting government entities",
-        "Review and harden NGINX configurations to prevent traffic hijacking",
-        "Deploy additional scrutiny on AI-generated code using AST-based security scanners"
+        "Immediately patch SmarterMail installations and review authentication configurations",
+        "Audit npm and PyPI dependencies, especially dYdX packages, for compromise indicators",
+        "Deploy enhanced monitoring for NGINX configuration tampering and traffic anomalies",
+        "Review and harden DDNS configurations on ZYXEL network devices",
+        "Implement code scanning tools for AI-generated code to detect security vulnerabilities"
       ],
-      "detection_opportunities": "Monitor for unusual package installation activities, especially from npm/PyPI repositories, and implement behavioral detection for reverse shell communications. Focus on NGINX configuration changes and anomalous traffic routing patterns that could indicate hijacking attempts.",
+      "detection_opportunities": "Monitor for unusual DDNS configuration changes, suspicious npm/PyPI package installations, and anomalous web traffic patterns indicative of hijacking campaigns. Focus on detecting automated attack tools and reverse shell connections associated with Play group activities.",
+      "period": "daily",
+      "period_days": 1,
+      "generated_at": "2026-02-06T11:06:07.432749",
+      "signal_count": 234,
+      "critical_count": 41,
+      "high_count": 20,
+      "category_breakdown": {
+        "advisory": 8,
+        "news": 128,
+        "research": 40,
+        "apt": 29,
+        "cve": 8,
+        "malware": 21
+      }
+    },
+    "weekly": {
+      "executive_summary": "This week saw 636 security signals with 169 critical alerts, highlighting active ransomware campaigns by Akira and Dragonforce groups, critical vulnerabilities in SolarWinds and SmarterMail being exploited in attacks, and a significant supply chain compromise affecting dYdX npm and PyPI packages. Asian state-backed group TGR-STA-1030 breached 70+ government and infrastructure entities, indicating heightened nation-state activity.",
+      "key_threats": [
+        "Active ransomware campaigns by Akira and Dragonforce targeting multiple organizations",
+        "Supply chain compromise of dYdX npm and PyPI packages delivering wallet stealers and RAT malware",
+        "TGR-STA-1030 Asian state-backed group breaching 70+ government and infrastructure entities",
+        "Critical SmarterMail vulnerability actively exploited in ransomware attacks",
+        "SolarWinds CVE-2025-40551 vulnerability requiring immediate patching"
+      ],
+      "key_cves": [
+        "CVE-2025-40551 - Critical SolarWinds vulnerability",
+        "CVE-2026-24423 - SmarterMail RCE flaw actively exploited in ransomware attacks",
+        "CVE-2026-25049 - Critical n8n flaw enabling system command execution",
+        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS configuration",
+        "CVE-2025-55182 - NGINX configuration flaw enabling web traffic hijacking"
+      ],
+      "threat_actors": [
+        "Akira - Published new victim TriPartum, continuing ransomware operations",
+        "Dragonforce - Published new victim Esposito Bros. Construction Ltd",
+        "TGR-STA-1030 - Asian state-backed group targeting government and infrastructure entities",
+        "Play - Involved in advanced automation and infection techniques",
+        "Conti - Associated with AI-powered living-off-the-land techniques"
+      ],
+      "trends": "Threat actors are increasingly targeting supply chain components and leveraging AI-generated code vulnerabilities, with ransomware groups maintaining high activity levels. Nation-state actors are focusing on government and critical infrastructure entities with sophisticated breach techniques.",
+      "recommendations": [
+        "Immediately patch SolarWinds CVE-2025-40551 and SmarterMail CVE-2026-24423",
+        "Audit and verify integrity of npm and PyPI packages, especially dYdX-related components",
+        "Implement enhanced monitoring for government and infrastructure network environments",
+        "Deploy AST-based security scanners for AI-generated code review",
+        "Strengthen NGINX configuration security and review DDNS settings on ZYXEL devices"
+      ],
+      "detection_opportunities": "Monitor for unusual npm/PyPI package installations, unauthorized DDNS configuration changes, and network traffic patterns consistent with wallet stealer malware. Implement behavioral analysis for detecting state-backed group TTPs and ransomware staging activities.",
+      "period": "weekly",
+      "period_days": 7,
+      "generated_at": "2026-02-06T11:06:20.092671",
+      "signal_count": 636,
+      "critical_count": 169,
+      "high_count": 58,
+      "category_breakdown": {
+        "advisory": 29,
+        "news": 296,
+        "research": 99,
+        "apt": 92,
+        "cve": 65,
+        "malware": 55
+      }
+    },
+    "monthly": {
+      "executive_summary": "This month saw significant supply chain compromises including malicious npm/PyPI packages targeting crypto wallets, critical infrastructure attacks by state-backed groups, and exploitation of unpatched vulnerabilities in SolarWinds and SmarterMail systems. Organizations should prioritize patching critical CVEs and enhancing supply chain security monitoring.",
+      "key_threats": [
+        "Supply chain attacks via compromised dYdX npm and PyPI packages delivering wallet stealers",
+        "State-backed group TGR-STA-1030 compromising 70+ government and infrastructure entities",
+        "Ransomware groups exploiting SmarterMail vulnerabilities for system access",
+        "Large-scale web traffic hijacking through malicious NGINX configurations",
+        "AI-generated code vulnerabilities discovered across 500+ open-source libraries"
+      ],
+      "key_cves": [
+        "CVE-2025-40551 - SolarWinds vulnerability requiring immediate patching",
+        "CVE-2026-24423 - SmarterMail RCE flaw actively exploited in ransomware campaigns",
+        "CVE-2026-25049 - Critical n8n flaw enabling system command execution",
+        "CVE-2025-11730 - ZYXEL ATP/USG remote code execution via DDNS configuration"
+      ],
+      "threat_actors": [
+        "Play - Advanced automation techniques including reverse shells and cognitive rootkits",
+        "Conti - Continued ransomware operations with focus on living-off-the-land techniques",
+        "Akira - Active ransomware campaigns against business targets",
+        "TGR-STA-1030 - State-backed APT targeting critical infrastructure globally"
+      ],
+      "trends": "Increased sophistication in supply chain attacks targeting developer ecosystems and AI-assisted vulnerability discovery revealing widespread flaws in open-source libraries. Ransomware groups are increasingly leveraging unpatched enterprise software vulnerabilities for initial access.",
+      "recommendations": [
+        "Immediately patch SolarWinds CVE-2025-40551 and SmarterMail CVE-2026-24423",
+        "Implement enhanced monitoring of npm/PyPI package installations and dependencies",
+        "Review and harden NGINX configurations to prevent traffic hijacking",
+        "Deploy AI-assisted code scanning tools for vulnerability detection",
+        "Strengthen authentication controls for critical enterprise applications"
+      ],
+      "detection_opportunities": "Monitor for unusual npm/PyPI package installations, suspicious DDNS configuration changes, and unauthorized system command execution. Focus on detecting living-off-the-land techniques and anomalous network traffic patterns indicative of infrastructure compromise.",
       "period": "monthly",
       "period_days": 30,
-      "generated_at": "2026-02-06T08:52:59.633772",
-      "signal_count": 848,
-      "critical_count": 234,
-      "high_count": 65,
+      "generated_at": "2026-02-06T11:06:32.361789",
+      "signal_count": 885,
+      "critical_count": 238,
+      "high_count": 73,
       "category_breakdown": {
-        "advisory": 42,
-        "news": 342,
-        "research": 192,
-        "apt": 115,
-        "cve": 95,
-        "malware": 62
+        "advisory": 48,
+        "news": 362,
+        "research": 193,
+        "apt": 119,
+        "cve": 96,
+        "malware": 67
       }
     }
   }

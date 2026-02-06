@@ -4178,6 +4178,1267 @@
     "is_fraud_trust_safety": false
   },
   {
+    "id": "sec_eaa5ff9f7757",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "critical",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Infinite Tiers Group",
+    "summary": "itgsoftware.com ITG Software, Inc. is a provider of mission critical integrated business software solutions. Using a rigorous design approach, we build integrated software systems that will have a marked positive effect on the bottom line. Infinite Tiers Group, Inc. has a unique approach to...",
+    "source_url": "https://www.ransomware.live/id/SW5maW5pdGUgVGllcnMgR3JvdXBAdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "supply_chain"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "technology",
+      "manufacturing",
+      "retail"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_07cd869147e8",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Silvi SRL",
+    "summary": "silvi.it Silvi SRL, established in 1990, specializes in advanced industrial automation solutions, offering a range of products including palletizing systems, depalletizing systems, and special machines. The company serves various sectors such as metal packaging, pet food, automotive, chemical and...",
+    "source_url": "https://www.ransomware.live/id/U2lsdmkgU1JMQHRoZWdlbnRsZW1lbg==",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "ics",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "healthcare",
+      "manufacturing",
+      "transportation"
+    ],
+    "target_regions": [
+      "north_america",
+      "europe"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_5acb2019397b",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "apt",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Marina Home Interiors",
+    "summary": "marinahomeinteriors.com Conceptualized in 1997, Marina Home Interiors Retail Network is a Dubai based premium home furnishings company and operates its stores across the Arabian Gulf region, Egypt and the Indian subcontinent. Marina Home is a household name across the countries it operates in and...",
+    "source_url": "https://www.ransomware.live/id/TWFyaW5hIEhvbWUgSW50ZXJpb3JzQHRoZWdlbnRsZW1lbg==",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [
+      "Conti"
+    ],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "retail"
+    ],
+    "target_regions": [
+      "north_america",
+      "asia_pacific",
+      "middle_east"
+    ],
+    "attack_phase": null,
+    "confidence_level": "medium",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_a57c65a8d25e",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Nishiyama Seisakusho",
+    "summary": "nishiyama-ss.co.jp zoominfo.com/c/nishiyama-seisakusho-co-ltd/482975122 Nishiyama Seisakusho Co., Ltd. specializes in the production of precision machinery and components, particularly focusing on high-quality manufacturing since its establishment in 1949. The company offers a range of products...",
+    "source_url": "https://www.ransomware.live/id/TmlzaGl5YW1hIFNlaXNha3VzaG9AdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "on_prem"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america",
+      "russia_cis"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_95a38b8ac768",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : BAM - Brand Art Media",
+    "summary": "bam.lu zoominfo.com/c/bam---brand-art-media/372530213 BAMHUB MEDIA is a tech and design agency that offers a wide range of services including website and app design, software development, 3D design, and branding. They specialize in expo branding, providing end-to-end exhibition services from design...",
+    "source_url": "https://www.ransomware.live/id/QkFNIC0gQnJhbmQgQXJ0IE1lZGlhQHRoZWdlbnRsZW1lbg==",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "ics",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "technology",
+      "manufacturing",
+      "transportation"
+    ],
+    "target_regions": [
+      "north_america",
+      "europe"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_25d874655ca4",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Gady Family",
+    "summary": "gady.at zoominfo.com/c/gady-family/431055072 Gady Family is a prominent automotive and agricultural machinery dealer in southeastern Austria, offering a wide range of new and used vehicles including brands like BMW, MINI, Opel, and Toyota. The company also specializes in agricultural machinery and...",
+    "source_url": "https://www.ransomware.live/id/R2FkeSBGYW1pbHlAdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_b4c4afc25af0",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Dome Partners",
+    "summary": "dome.ws zoominfo.com/c/dome-partners/425321491 Dome+Partners specializes in architecture and urban planning, focusing on blending modern aesthetics with functionality. They offer a range of projects including mixed-use developments, cultural institutions, and residential spaces across various...",
+    "source_url": "https://www.ransomware.live/id/RG9tZSBQYXJ0bmVyc0B0aGVnZW50bGVtZW4=",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "ics",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "government",
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_adc4dbfe908f",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Chonburi Provincial Administration",
+    "summary": "chon.go.th official website for the Chonburi Provincial Administration in Thailand. This local government organization manages the Chonburi Province, an area that includes the popular city of Pattaya. Its core functions involve providing local civil services, infrastructure planning, public health...",
+    "source_url": "https://www.ransomware.live/id/Q2hvbmJ1cmkgUHJvdmluY2lhbCBBZG1pbmlzdHJhdGlvbkB0aGVnZW50bGVtZW4=",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "on_prem",
+      "linux"
+    ],
+    "mitre_tactics": [
+      "resource_development"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "government",
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_e1c2ea061366",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Torus",
+    "summary": "cfh.money zoominfo.com/c/torus/1313694164 TORUS. Being built to be the world\u2019s leading Neo Wellness Platform, TORUS shall encompass all of wealth, health, education and lifestyle wellness. In short, it will invite users to experience a world of wellness that shall rotate around them. Addressing...",
+    "source_url": "https://www.ransomware.live/id/VG9ydXNAdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "on_prem"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing",
+      "education"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_53cd9b053c66",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : PLUS Malaysia Berhad",
+    "summary": "plus.com.my zoominfo.com/c/plus-malaysia-berhad/450191982 PLUS Malaysia Berhad provides a comprehensive travel experience through its expressways, offering facilities for relaxation and refreshment along the routes. The company enhances travel convenience with its PLUS App, which includes features...",
+    "source_url": "https://www.ransomware.live/id/UExVUyBNYWxheXNpYSBCZXJoYWRAdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "patch",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "on_prem"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_07fc24c3a9ba",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : EXIM Bank",
+    "summary": "eximbankja.com zoominfo.com/c/exim-bank/101959142 Exim Bank Jamaica provides innovative trade financing solutions, short and medium-term loans, and advisory services aimed at fostering business growth. The bank is dedicated to supporting the productive sector by offering competitively-priced...",
+    "source_url": "https://www.ransomware.live/id/RVhJTSBCYW5rQHRoZWdlbnRsZW1lbg==",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": "financial",
+    "target_industries": [
+      "finance",
+      "energy"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_716961295de2",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Ankara-\u0130zmir",
+    "summary": "aniyht.com The Ankara-\u0130zmir High-Speed Railway Line Project (A\u0130YHT) is a significant project under the General Directorate of Infrastructure Investments of the Republic of Turkey&#x27;s Ministry of Transport and Infrastructure, which will connect Turkey&#x27;s capital, Ankara, with \u0130zmir, the...",
+    "source_url": "https://www.ransomware.live/id/QW5rYXJhLcSwem1pckB0aGVnZW50bGVtZW4=",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [
+      "resource_development"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "transportation"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_af6561d0b62c",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Trace",
+    "summary": "trace.tv zoominfo.com/c/trace/138903628 TRACE FR is a leading platform for news related to people, music, lifestyle, entertainment, and urban and Afro-urban cultures. The company offers a variety of services including TV channels, radio stations, and mobile applications that cater to diverse...",
+    "source_url": "https://www.ransomware.live/id/VHJhY2VAdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "phishing"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_af808b34d180",
+    "source_name": "Ransomware Live",
+    "source_type": "threat_tracking",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "\ud83c\udff4\u200d\u2620\ufe0f Thegentlemen has just published a new victim : Far East",
+    "summary": "fareastfamelineddb.com zoominfo.com/c/far-east-fame-line-ddb-plc/455777113 Far East Fame Line DDB PLC is a company that operates in the Apparel &amp; Accessories Retail industry. It employs 250to499 people and has 10Mto25M of revenue. The company is headquartered in Phra Nakhon Si Ayutthaya, Phra...",
+    "source_url": "https://www.ransomware.live/id/RmFyIEVhc3RAdGhlZ2VudGxlbWVu",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat actors",
+      "victims"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "supply_chain"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing",
+      "retail"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Zoom"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_0f7535a2e0cd",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "DKnife Linux toolkit hijacks router traffic to spy, deliver malware",
+    "summary": "A newly discovered toolkit called DKnife has been used since 2019 to hijack traffic at the edge-device level and deliver malware in espionage campaigns. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/dknife-linux-toolkit-hijacks-router-traffic-to-spy-deliver-malware/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "malware",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": "espionage",
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Linux",
+      "Edge"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_49b358c4e4ed",
+    "source_name": "Bleeping Computer",
+    "source_type": "news",
+    "signal_category": "cve",
+    "severity": "critical",
+    "title": "CISA warns of SmarterMail RCE flaw used in ransomware attacks",
+    "summary": "The Cybersecurity & Infrastructure Security Agency (CISA) in the U.S. has issued a warning about CVE-2026-24423, an unauthenticated remote code execution (RCE) flaw in SmarterMail that is used in ransomware attacks. [...]",
+    "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-smartermail-rce-flaw-used-in-ransomware-attacks/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "malware",
+      "ransomware",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [
+      "CVE-2026-24423"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "ransomware",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "resource_development",
+      "execution",
+      "impact"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": "financial",
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america",
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "medium",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_c68aacd20ca6",
+    "source_name": "Dark Reading",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "'Encrypt It Already' Campaign Pushes Big Tech to Prioritize E2E Encryption",
+    "summary": "The Electronic Frontier Foundation is urging major technology companies to follow through on their promises to implement end-to-end encryption (E2E) by default across their services, as privacy concerns mount amid increased AI use.",
+    "source_url": "https://www.darkreading.com/cloud-security/encrypt-it-already-pushes-big-tech-e2e-encryption",
+    "source_date": "2026-02-06",
+    "tags": [
+      "ransomware",
+      "threat intelligence",
+      "vulnerabilities",
+      "enterprise security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "technology"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_c57c08394418",
+    "source_name": "ZDNet Security",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Beyond gold:\u00a0Why Team USA will be wearing titanium at these Olympic",
+    "summary": "US athletes will sport Oura Rings to track their health. Here's why sponsorships like these can inspire new features.",
+    "source_url": "https://www.zdnet.com/article/oura-rings-team-usa-olympics-official-wearable/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "enterprise",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_fc7c785254b3",
+    "source_name": "ZDNet Security",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "AT&T's new phone for kids might solve your biggest problem with parental controls - for $3 a month",
+    "summary": "With standard budget phone specs and a decent camera, the amiGO Jr. phone could become a go-to option for parents. There's a companion watch, too.",
+    "source_url": "https://www.zdnet.com/article/at-t-kid-friendly-smartphone-amigo-jr-parental-controls/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "enterprise",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_c1889ca218a3",
+    "source_name": "ZDNet Security",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "The best Presidents' Day phone sales live now",
+    "summary": "For Presidents' Day, I've rounded up the best phone deals available now from Apple, Samsung, Motorola, and more.",
+    "source_url": "https://www.zdnet.com/article/best-presidents-day-phone-deals-2026/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "enterprise",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_4eb5ec28d663",
+    "source_name": "ZDNet Security",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "Finally, a 16-inch Windows laptop that's a worthy alternative to my MacBook Pro",
+    "summary": "HP's EliteBook 8 G1i (16-inch) is a power-efficient multitasker with a generous selection of I/O. Here's my buying advice in 2026.",
+    "source_url": "https://www.zdnet.com/article/hp-elitebook-8-g1i-review/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "enterprise",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "windows"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Windows"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_42c4c3e3c722",
+    "source_name": "ZDNet Security",
+    "source_type": "news",
+    "signal_category": "apt",
+    "severity": "high",
+    "title": "The best Presidents' Day laptop sales we've found so far",
+    "summary": "We're following the best laptop deals ahead of Presidents' Day 2026, with offers from Acer, Lenovo, HP, and Apple.",
+    "source_url": "https://www.zdnet.com/article/best-laptop-deals-presidents-day-2026/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "enterprise",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_ecb9384cf32e",
+    "source_name": "ZDNet Security",
+    "source_type": "news",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "Microsoft said my PC was 'too old' to run Windows 11 - how I upgraded in 5 minutes anyway",
+    "summary": "It'll require a few extra steps, but you can upgrade an 'incompatible' PC to Windows 11. Here's how I updated mine.",
+    "source_url": "https://www.zdnet.com/article/how-to-upgrade-windows-11-pc-no-longer-supported/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "patch",
+      "enterprise",
+      "vulnerabilities",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "windows",
+      "microsoft_defender"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Microsoft",
+      "Windows"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_5b430c637d0a",
+    "source_name": "Infosecurity Magazine",
+    "source_type": "news",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "Chinese-Made Malware Kit Targets Chinese-Based Routers and Edge Devices",
+    "summary": "DKnife is a Chinese made malware framework that targets Chinese-based users",
+    "source_url": "https://www.infosecurity-magazine.com/news/china-malware-kit-targets-routers/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "compliance",
+      "industry",
+      "security news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "on_prem"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Edge"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_c981f26becb6",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "apt",
+    "severity": "critical",
+    "title": "Cybersecurity statistics of the week (January 26th - January 30th)",
+    "summary": "Hi guys, I send out a weekly newsletter with the latest cybersecurity vendor reports and research, and thought you might find it useful, so sharing it here. All the reports and research below were published between January 26th - January 30th. You can get the below into your inbox every week if you...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qxnpjh/cybersecurity_statistics_of_the_week_january_26th/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "community",
+      "news",
+      "cloud",
+      "exploit",
+      "supply-chain"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "gcp"
+    ],
+    "mitre_tactics": [
+      "resource_development",
+      "initial_access",
+      "impact"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "finance",
+      "technology",
+      "manufacturing",
+      "retail"
+    ],
+    "target_regions": [
+      "north_america",
+      "europe",
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Ios",
+      "Google Cloud",
+      "Teams"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": true
+  },
+  {
+    "id": "sec_0af2b2871a37",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "How Much Do Cybersecurity Analysts Earn by City in 2026?",
+    "summary": "&#32; submitted by &#32; /u/Coolonair [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qxo0am/how_much_do_cybersecurity_analysts_earn_by_city/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "community",
+      "discussions",
+      "news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [
+      "command_and_control"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "retail"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": "command_control",
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_cab03cad6a3f",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "news",
+    "severity": "informational",
+    "title": "How do you get better at network and security topology diagrams, plus HLDs?",
+    "summary": "I\u2019m a cybersecurity engineer. A recurring part of my job is producing network and security topologies and writing HLDs for designs and changes. Problem is, diagramming and HLD documentation doesn\u2019t come naturally to me. I can build and troubleshoot systems, but turning that into clean diagrams and...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qxqkvf/how_do_you_get_better_at_network_and_security/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "community",
+      "discussions",
+      "ics",
+      "news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing",
+      "telecom"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_061345afaebb",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "AI Agents\u2019 Most Downloaded Skill Is Discovered to Be an Infostealer",
+    "summary": "&#32; submitted by &#32; /u/Malwarebeasts [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qxopz3/ai_agents_most_downloaded_skill_is_discovered_to/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "community",
+      "discussions",
+      "news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_4fdeb00b3702",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "In today's episode of \"AI will make tech people unemployed by the end of 2025\": The most downloaded Clawdbot/OpenClaw skill is AmosStealer macOS malware",
+    "summary": "&#32; submitted by &#32; /u/vashchylau [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qxny34/in_todays_episode_of_ai_will_make_tech_people/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "community",
+      "news",
+      "cloud",
+      "discussions",
+      "credentials"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "technology",
+      "manufacturing"
+    ],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [
+      "Aws"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_5141ab34e690",
+    "source_name": "Reddit r/cybersecurity",
+    "source_type": "community",
+    "signal_category": "research",
+    "severity": "critical",
+    "title": "I'm a high school student and I built an open-source SAST tool to catch API leaks in Python code.",
+    "summary": "Hi everyone! \ud83d\udc4b I'm a high school student from Turkey (Scr1pt). I've been learning Python and Cybersecurity, and I realized how easy it is to accidentally leave API keys or secrets in code. So, I built Code Sentinel. \ud83d\udee1\ufe0f What it does: It uses Heuristic Analysis and Regex patterns to scan your code...",
+    "source_url": "https://www.reddit.com/r/cybersecurity/comments/1qxmwll/im_a_high_school_student_and_i_built_an/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "community",
+      "discussions",
+      "cloud",
+      "news"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "aws",
+      "slack"
+    ],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "technology",
+      "manufacturing",
+      "education"
+    ],
+    "target_regions": [
+      "north_america",
+      "europe"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [
+      "hash"
+    ],
+    "affected_products": [
+      "Aws",
+      "Slack"
+    ],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "sec_ac68b91335a9",
+    "source_name": "Reddit r/netsec",
+    "source_type": "community",
+    "signal_category": "malware",
+    "severity": "informational",
+    "title": "AI Agents\u2019 Most Downloaded Skill Is Discovered to Be an Infostealer",
+    "summary": "&#32; submitted by &#32; /u/Malwarebeasts [link] &#32; [comments]",
+    "source_url": "https://www.reddit.com/r/netsec/comments/1qxp66x/ai_agents_most_downloaded_skill_is_discovered_to/",
+    "source_date": "2026-02-06",
+    "tags": [
+      "tools",
+      "research",
+      "technical security"
+    ],
+    "cve_ids": [],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [],
+    "mitre_tactics": [],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [],
+    "target_regions": [
+      "north_america"
+    ],
+    "attack_phase": null,
+    "confidence_level": "low",
+    "first_seen": "2026-02-06",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
     "id": "cisa_kev_cve_2025_11953",
     "source_name": "CISA KEV",
     "source_type": "government",
@@ -7926,6 +9187,287 @@
       "north_america"
     ],
     "attack_phase": null,
+    "confidence_level": "high",
+    "first_seen": "2026-02-05",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "cisa_ics_icsa_26_036_01",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-036-01: TP-Link Systems Inc. VIGI Series IP Camera",
+    "summary": "CISA ICS Advisory for TP-Link Systems Inc. VIGI Series IP Camera. CVEs: CVE-2026-0629",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-01",
+    "source_date": "2026-02-05",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2026-0629"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "initial_access"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "high",
+    "first_seen": "2026-02-05",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "cisa_ics_icsa_26_036_02",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-036-02: Mitsubishi Electric MELSEC iQ-R Series",
+    "summary": "CISA ICS Advisory for Mitsubishi Electric MELSEC iQ-R Series. CVEs: CVE-2025-15080",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-02",
+    "source_date": "2026-02-05",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-15080"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "initial_access"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "high",
+    "first_seen": "2026-02-05",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "cisa_ics_icsa_26_036_03",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-036-03: o6 Automation GmbH Open62541",
+    "summary": "CISA ICS Advisory for o6 Automation GmbH Open62541. CVEs: CVE-2026-1301",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-03",
+    "source_date": "2026-02-05",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2026-1301"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "initial_access"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "high",
+    "first_seen": "2026-02-05",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "cisa_ics_icsa_26_036_04",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-036-04: Ilevia EVE X1 Server",
+    "summary": "CISA ICS Advisory for Ilevia EVE X1 Server. CVEs: CVE-2025-34185, CVE-2025-34184, CVE-2025-34183",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-04",
+    "source_date": "2026-02-05",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2025-34185",
+      "CVE-2025-34184",
+      "CVE-2025-34183",
+      "CVE-2025-34186",
+      "CVE-2025-34187",
+      "CVE-2025-34517",
+      "CVE-2025-34518",
+      "CVE-2025-34512",
+      "CVE-2025-34513"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "initial_access"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "manufacturing"
+    ],
+    "target_regions": [
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "high",
+    "first_seen": "2026-02-05",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "cisa_ics_icsa_26_036_05",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-036-05: Hitachi Energy XMC20",
+    "summary": "CISA ICS Advisory for Hitachi Energy XMC20. CVEs: CVE-2024-3596",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-05",
+    "source_date": "2026-02-05",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2024-3596"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "command_and_control"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "energy",
+      "manufacturing"
+    ],
+    "target_regions": [
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
+    "confidence_level": "high",
+    "first_seen": "2026-02-05",
+    "ioc_types": [],
+    "affected_products": [],
+    "exploit_type": null,
+    "is_fraud_trust_safety": false
+  },
+  {
+    "id": "cisa_ics_icsa_26_036_06",
+    "source_name": "CISA ICS-CERT",
+    "source_type": "government",
+    "signal_category": "advisory",
+    "severity": "high",
+    "title": "ICSA-26-036-06: Hitachi Energy FOX61x",
+    "summary": "CISA ICS Advisory for Hitachi Energy FOX61x. CVEs: CVE-2024-3596",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-06",
+    "source_date": "2026-02-05",
+    "tags": [
+      "CISA",
+      "ICS",
+      "SCADA",
+      "OT"
+    ],
+    "cve_ids": [
+      "CVE-2024-3596"
+    ],
+    "threat_actors": [],
+    "malware_families": [],
+    "env_tags": [
+      "linux",
+      "windows",
+      "on_prem"
+    ],
+    "mitre_tactics": [
+      "initial_access"
+    ],
+    "mitre_techniques": [],
+    "campaign_names": null,
+    "motivation": null,
+    "target_industries": [
+      "energy",
+      "manufacturing"
+    ],
+    "target_regions": [
+      "russia_cis"
+    ],
+    "attack_phase": "exploitation",
     "confidence_level": "high",
     "first_seen": "2026-02-05",
     "ioc_types": [],
