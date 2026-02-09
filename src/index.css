@@ -415,7 +415,44 @@ html, body {
     line-height: 1.6;
 }
 
-/* Trust & Differentiation Section */
+/* Compatibility Section */
+.compatibility-section {
+    margin-top: 3rem;
+}
+
+.compatibility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.compat-card {
+    background: rgba(59, 157, 255, 0.05);
+    border: 1px solid rgba(59, 157, 255, 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.compat-card:hover {
+    background: rgba(59, 157, 255, 0.1);
+    border-color: rgba(59, 157, 255, 0.4);
+}
+
+.compat-card h3 {
+    color: #3b9dff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.compat-card p {
+    color: #a0b0c0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Trust & Data Section */
 .trust-section {
     background: rgba(59, 157, 255, 0.05);
     border: 1px solid rgba(59, 157, 255, 0.2);
@@ -700,7 +737,7 @@ html, body {
         padding: 3rem 2rem;
     }
 
-    .matters-grid, .solution-benefits, .trust-features {
+    .matters-grid, .solution-benefits, .trust-features, .compatibility-grid {
         grid-template-columns: 1fr;
     }
 

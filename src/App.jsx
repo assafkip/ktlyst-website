@@ -26,75 +26,37 @@ function App() {
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Problem Section — "Why does this matter right now?" */}
       <section className="site-section problem">
-        <h2 className="section-heading">The Problem</h2>
+        <h2 className="section-heading">Why This Matters Now</h2>
 
         <p className="problem-intro">
-          Security teams generate high-quality threat intelligence every day: incident reports, audits, advisories, analyst notes. But most of it never becomes detection.
+          Security teams generate high-quality threat intelligence every day. But the last 20%—turning that intelligence into deployed detection—is where most organizations stall.
         </p>
 
         <div className="problem-statement">
-          Translation is manual, slow, and siloed. As a result, breaches routinely occur using known tactics that were documented but never operationalized.
+          Over <span className="result-number">50% of breaches</span> are detected externally, even in mature organizations. The gap isn't knowledge—it's translation. Documented tactics sit in reports while the same techniques are used in the next attack.
         </div>
 
-        <div className="why-matters">
-          <h3 className="section-heading" style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Why This Matters Now</h3>
-
-          <div className="matters-grid">
-            <div className="matter-card">
-              <h3>Attackers Iterate in Hours</h3>
-              <p>AI-powered adversaries evolve faster than ever. Detection engineering still takes days.</p>
-            </div>
-            <div className="matter-card">
-              <h3>Indicators Are Cheap to Rotate</h3>
-              <p>It's trivial for attackers to change IPs and domains. Expensive for them to retrain tradecraft.</p>
-            </div>
-            <div className="matter-card">
-              <h3>Industry Focus Is Wrong</h3>
-              <p>Most tools still focus on atomic indicators. Meanwhile, behavioral patterns go undetected.</p>
-            </div>
-            <div className="matter-card">
-              <h3>The Result</h3>
-              <p>Over <span className="result-number">50% of breaches</span> are detected externally, even in mature organizations.</p>
-            </div>
+        <div className="matters-grid">
+          <div className="matter-card">
+            <h3>Attackers Iterate in Hours</h3>
+            <p>AI-powered adversaries evolve faster than ever. Detection engineering still takes days.</p>
+          </div>
+          <div className="matter-card">
+            <h3>Indicators Are Cheap to Rotate</h3>
+            <p>IPs and domains change in minutes. Tradecraft takes months to retrain—but most tools still chase the wrong layer.</p>
           </div>
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* Solution Section — "What is KTLYST, in one sentence?" */}
       <section className="site-section solution">
         <h2>What We Built</h2>
 
         <p className="solution-description">
-          KTLYST converts unstructured security narratives into review-ready behavioral detection candidates in under 10 minutes.
+          KTLYST converts unstructured security narratives into review-ready behavioral detection candidates in under 10 minutes. Detection rules and logic—not alerts, not another engine—just the missing translation layer.
         </p>
-
-        <div className="output-box">
-          <p><strong>Output:</strong> Detection rules and logic (not alerts, not another engine—just the missing translation layer)</p>
-        </div>
-
-        <h3 style={{ color: '#fff', fontSize: '1.3rem', margin: '2rem 0 1.5rem' }}>Who It's For</h3>
-        <p style={{ color: '#a0b0c0', marginBottom: '1.5rem' }}>Mid-to-large enterprises with:</p>
-
-        <div className="solution-benefits">
-          <div className="benefit">
-            <h3>Internal Threat Intel Capacity</h3>
-            <p>You have a team generating intelligence.</p>
-          </div>
-          <div className="benefit">
-            <h3>Detection Engineering Teams</h3>
-            <p>You have engineers who write detection rules.</p>
-          </div>
-          <div className="benefit">
-            <h3>Intelligence Backlog</h3>
-            <p>You have intel you can't operationalize fast enough.</p>
-          </div>
-          <div className="benefit">
-            <h3>Stack in Place</h3>
-            <p>You have SIEM, EDR, or detection platforms deployed.</p>
-          </div>
-        </div>
       </section>
 
       {/* How It Works Section */}
@@ -158,46 +120,31 @@ function App() {
         </div>
       </section>
 
-      {/* Trust & Security Section */}
-      <section className="site-section trust-section">
-        <h2 className="section-heading" style={{ fontSize: '2.2rem' }}>Trust &amp; Security</h2>
+      {/* Compatibility Section — "Will this fit my stack?" */}
+      <section className="site-section compatibility-section">
+        <h2 className="section-heading" style={{ fontSize: '2.2rem' }}>Compatibility</h2>
 
-        <div className="trust-features">
-          <div className="trust-feature">
-            <h3>Deterministic, Not Probabilistic</h3>
-            <div className="operational-meaning">
-              <p><strong>Same input → same output every time.</strong> No silent drift. Every change is versioned and reviewable.</p>
-            </div>
-            <p style={{ marginTop: '1rem', color: '#a0b0c0' }}>This means your detection logic is stable, auditable, and predictable in production.</p>
+        <div className="compatibility-grid">
+          <div className="compat-card">
+            <h3>Input Formats</h3>
+            <p>Incident reports, audit findings, analyst notes, government advisories, STIX/TAXII feeds—any unstructured or semi-structured security narrative.</p>
           </div>
-
-          <div className="trust-feature">
-            <h3>Full Provenance</h3>
-            <div className="operational-meaning">
-              <p><strong>Character-level traceability.</strong> Every detection rule shows exactly which part of your intelligence generated it.</p>
-            </div>
-            <p style={{ marginTop: '1rem', color: '#a0b0c0' }}>Engineers can validate, modify, and approve with full visibility before deployment.</p>
-          </div>
-
-          <div className="trust-feature">
-            <h3>Internal-Intel First</h3>
-            <div className="operational-meaning">
-              <p><strong>We process what you already know</strong>—your incident reports, audits, and analyst notes.</p>
-            </div>
-            <p style={{ marginTop: '1rem', color: '#a0b0c0' }}>Your proprietary intelligence stays internal. No external data correlation or training.</p>
-          </div>
-
-          <div className="trust-feature">
-            <h3>Behavioral Detections</h3>
-            <div className="operational-meaning">
-              <p><strong>Target tradecraft, not indicators.</strong> Forces attackers to change how they operate.</p>
-            </div>
-            <p style={{ marginTop: '1rem', color: '#a0b0c0' }}>Atomic indicators (IPs, domains) rotate in minutes. Behavior changes take months.</p>
+          <div className="compat-card">
+            <h3>Output Targets</h3>
+            <p>Splunk (SPL), Microsoft Sentinel (KQL), Datadog, Elastic, Sigma rules. Detection logic delivered in the format your stack already consumes.</p>
           </div>
         </div>
 
-        <div className="data-deployment-box">
-          <h3>Data &amp; Deployment</h3>
+        <p style={{ textAlign: 'center', color: '#a0b0c0', marginTop: '1.5rem', fontSize: '0.95rem' }}>
+          Typical adoption: plug into existing workflows in under a week. No infrastructure changes required.
+        </p>
+      </section>
+
+      {/* Trust & Security Section — "What happens to my data?" */}
+      <section className="site-section trust-section">
+        <h2 className="section-heading" style={{ fontSize: '2.2rem' }}>What Happens to Your Data</h2>
+
+        <div className="data-deployment-box" style={{ marginTop: '0' }}>
           <ul>
             <li>&#10003; <strong>Retention:</strong> Your intelligence and generated rules are retained for your team's reference and audit only.</li>
             <li>&#10003; <strong>No Training:</strong> Your data is never used to train models or improve KTLYST for other customers.</li>
@@ -259,12 +206,13 @@ function App() {
           <div className="team-member">
             <h3>Assaf Kipnis</h3>
             <div className="title">Founder &amp; CEO</div>
-            <p>Built and operated threat intel and detection systems at Google, Meta, and LinkedIn. Led detection engineering at one of the world's largest security operations centers.</p>
+            <p>Built and operated threat intel and detection systems at Google, Meta, LinkedIn, and ElevenLabs. Led detection engineering at one of the world's largest security operations centers.</p>
 
             <div className="company-badges">
               <div className="badge">Google</div>
               <div className="badge">Meta</div>
               <div className="badge">LinkedIn</div>
+              <div className="badge">ElevenLabs</div>
             </div>
 
             <a href="https://www.linkedin.com/in/assafkipnis/">LinkedIn Profile →</a>
@@ -273,12 +221,12 @@ function App() {
           <div className="team-member">
             <h3>Stephan Kaufmann</h3>
             <div className="title">Co-Founder &amp; COO</div>
-            <p>Built large-scale threat intelligence and detection systems at Meta, McAfee, ElevenLabs, and HP. Operations and execution expertise across infrastructure and product teams.</p>
+            <p>Built large-scale threat intelligence and detection systems at Meta, McAfee, and HP. Operations and execution expertise across infrastructure and product teams.</p>
 
             <div className="company-badges">
               <div className="badge">Meta</div>
               <div className="badge">McAfee</div>
-              <div className="badge">ElevenLabs</div>
+              <div className="badge">HP</div>
             </div>
 
             <a href="https://www.linkedin.com/in/stephan-kaufmann/">LinkedIn Profile →</a>
