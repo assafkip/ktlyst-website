@@ -32,19 +32,28 @@ export default function Navbar() {
             </span>
           </a>
 
-          {/* CTA Button */}
-          <a
-            href="https://calendly.com/assafkip"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`btn-primary text-sm transition-all duration-300 ${
-              isScrolled
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 -translate-y-2 pointer-events-none'
-            }`}
-          >
-            Book a Demo
-          </a>
+          {/* Navigation Links */}
+          <div className="flex items-center gap-6">
+            <a
+              href="/signals"
+              className="text-silver hover:text-accent text-sm font-medium transition-colors"
+            >
+              Signals
+            </a>
+            {/* CTA Button */}
+            <a
+              href="https://calendly.com/assafkip"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn-primary text-sm transition-all duration-300 ${
+                isScrolled
+                  ? 'opacity-100 translate-y-0'
+                  : 'opacity-0 -translate-y-2 pointer-events-none'
+              }`}
+            >
+              Book a Demo
+            </a>
+          </div>
         </div>
       </div>
     </nav>

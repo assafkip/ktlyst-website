@@ -1,0 +1,332 @@
+{
+  "generated_at": "2026-02-02T10:11:07.193958",
+  "summary": {
+    "hot_signals_count": 1,
+    "overdue_count": 0,
+    "stalled_count": 7,
+    "intro_opportunities_count": 3,
+    "ready_to_contact_count": 7,
+    "total_actions": 18
+  },
+  "hot_signals": [
+    {
+      "signal": {
+        "id": "linkedin_scan_ed_sim_agentic_building_20260201",
+        "summary": "Actively building AI agent tools (OpenClaw, Moltbook, Chewbarka) - demonstrates hands-on engagement with agentic AI technology. Posted 'The dreaming/just build it mindset' showing personal experimentation with AI assistants that do calendar alerts, Twitter monitoring, daily briefings.",
+        "source_url": "https://www.linkedin.com/in/edsim/recent-activity/all/",
+        "source_type": "linkedin",
+        "source_date": "2026-02-01",
+        "signal_type": "soft",
+        "signal_category": "security_trend_commentary"
+      },
+      "matched_contact": {
+        "contact_id": "ed_sim_boldstart",
+        "name": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "hours_ago": 34,
+      "action": "Reference this in outreach to Ed Sim",
+      "priority": "medium"
+    }
+  ],
+  "overdue_followups": [],
+  "stalled_contacts": [
+    {
+      "contact": {
+        "id": "chenxi_wang_rain",
+        "name": "Chenxi Wang",
+        "firm": "Rain Capital",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Limor Elbaz",
+        "connector_linkedin": "https://www.linkedin.com/in/limorelbaz/",
+        "connection_strength": "direct",
+        "notes": "1st degree connection to both parties"
+      },
+      "action": "Request intro from Limor Elbaz"
+    },
+    {
+      "contact": {
+        "id": "dave_dewalt_nightdragon",
+        "name": "Dave DeWalt",
+        "firm": "NightDragon",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Guy Rosen",
+        "connector_linkedin": "https://www.linkedin.com/in/guyrosen/",
+        "connection_strength": "direct",
+        "notes": "Meta CISO, leverage Assaf's Meta background"
+      },
+      "action": "Request intro from Guy Rosen"
+    },
+    {
+      "contact": {
+        "id": "asheem_chandna_greylock",
+        "name": "Asheem Chandna",
+        "firm": "Greylock",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Pratik Savla",
+        "connector_linkedin": "https://www.linkedin.com/in/pratiksavla/",
+        "connection_strength": "strong",
+        "notes": "156 mutual connections, LOCAL to San Jose"
+      },
+      "action": "Request intro from Pratik Savla"
+    },
+    {
+      "contact": {
+        "id": "alberto_yepez_forgepoint",
+        "name": "Alberto Y\u00e9pez",
+        "firm": "ForgePoint Capital",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Ingrid Dickinson",
+        "connector_linkedin": "https://www.linkedin.com/in/ingriddickinson/",
+        "connection_strength": "super_connector",
+        "notes": "164 mutual connections, Meta Security"
+      },
+      "action": "Request intro from Ingrid Dickinson"
+    },
+    {
+      "contact": {
+        "id": "kobi_samboursky_glilot",
+        "name": "Kobi Samboursky",
+        "firm": "Glilot Capital",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Al Ghous",
+        "connector_linkedin": null,
+        "connection_strength": "strong",
+        "notes": "CISO/Advisor/Investor, 49 mutual connections"
+      },
+      "action": "Request intro from Al Ghous"
+    },
+    {
+      "contact": {
+        "id": "ed_sim_boldstart",
+        "name": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Prabhath Karanth",
+        "connector_linkedin": "https://www.linkedin.com/in/prabhathkaranth/",
+        "connection_strength": "direct",
+        "notes": "Multi-VC connector (Cyberstarts, Ballistic, Boldstart)"
+      },
+      "action": "Request intro from Prabhath Karanth"
+    },
+    {
+      "contact": {
+        "id": "shlomo_kramer_angel",
+        "name": "Shlomo Kramer",
+        "firm": "Angel (Check Point/Imperva/Cato founder)",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connector_linkedin": null,
+        "connection_strength": "direct",
+        "notes": "1ST DEGREE DIRECT CONNECTION - No intro needed!"
+      },
+      "action": "Request intro from None"
+    }
+  ],
+  "intro_opportunities": [
+    {
+      "connector": {
+        "name": "Ingrid Dickinson",
+        "linkedin": "https://www.linkedin.com/in/ingriddickinson/",
+        "organization": "Meta Security",
+        "mutual_connections": 164
+      },
+      "can_intro_to": [
+        {
+          "id": "alberto_yepez_forgepoint",
+          "name": "Alberto Y\u00e9pez",
+          "firm": "ForgePoint Capital",
+          "tier": "A"
+        }
+      ],
+      "intros_available": 3,
+      "action": "Ask Ingrid Dickinson for intro to Alberto Y\u00e9pez"
+    },
+    {
+      "connector": {
+        "name": "Pratik Savla",
+        "linkedin": "https://www.linkedin.com/in/pratiksavla/",
+        "organization": "San Jose (LOCAL)",
+        "mutual_connections": 156
+      },
+      "can_intro_to": [
+        {
+          "id": "asheem_chandna_greylock",
+          "name": "Asheem Chandna",
+          "firm": "Greylock",
+          "tier": "A"
+        }
+      ],
+      "intros_available": 3,
+      "action": "Ask Pratik Savla for intro to Asheem Chandna"
+    },
+    {
+      "connector": {
+        "name": "Prabhath Karanth",
+        "linkedin": "https://www.linkedin.com/in/prabhathkaranth/",
+        "organization": null,
+        "mutual_connections": 14
+      },
+      "can_intro_to": [
+        {
+          "id": "ed_sim_boldstart",
+          "name": "Ed Sim",
+          "firm": "Boldstart Ventures",
+          "tier": "A"
+        }
+      ],
+      "intros_available": 3,
+      "action": "Ask Prabhath Karanth for intro to Ed Sim"
+    }
+  ],
+  "ready_to_contact": [
+    {
+      "contact": {
+        "id": "shlomo_kramer_angel",
+        "name": "Shlomo Kramer",
+        "firm": "Angel (Check Point/Imperva/Cato founder)",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/shlomokramer"
+      },
+      "approach": "direct",
+      "next_action": "Send direct LinkedIn message",
+      "notes": "Most active cyber angel, 98 mutual connections",
+      "action": "Send direct message to Shlomo Kramer"
+    },
+    {
+      "contact": {
+        "id": "alberto_yepez_forgepoint",
+        "name": "Alberto Y\u00e9pez",
+        "firm": "ForgePoint Capital",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/albertoyepez/"
+      },
+      "approach": "warm_intro",
+      "connector": "Ingrid Dickinson",
+      "next_action": "Request intro from Ingrid",
+      "notes": "Also invested in Qevlar AI (detection startup)",
+      "action": "Request intro from Ingrid Dickinson"
+    },
+    {
+      "contact": {
+        "id": "asheem_chandna_greylock",
+        "name": "Asheem Chandna",
+        "firm": "Greylock",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/asheemchandna/"
+      },
+      "approach": "warm_intro",
+      "connector": "Pratik Savla",
+      "next_action": "Request intro from Pratik",
+      "notes": "Led Tenzai $75M seed, invested in 7AI - validates detection/SOC thesis",
+      "action": "Request intro from Pratik Savla"
+    },
+    {
+      "contact": {
+        "id": "chenxi_wang_rain",
+        "name": "Chenxi Wang",
+        "firm": "Rain Capital",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/chenxiwang88/"
+      },
+      "approach": "warm_intro",
+      "connector": "Limor Elbaz",
+      "next_action": "Request intro from Limor",
+      "notes": "AI security focus, $500K-$2M checks",
+      "action": "Request intro from Limor Elbaz"
+    },
+    {
+      "contact": {
+        "id": "dave_dewalt_nightdragon",
+        "name": "Dave DeWalt",
+        "firm": "NightDragon",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/ddewalt/"
+      },
+      "approach": "warm_intro",
+      "connector": "Guy Rosen",
+      "next_action": "Request intro from Guy Rosen",
+      "notes": "Former FireEye/McAfee CEO, security-only fund, $1M-$5M checks",
+      "action": "Request intro from Guy Rosen"
+    },
+    {
+      "contact": {
+        "id": "ed_sim_boldstart",
+        "name": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/edsim/"
+      },
+      "approach": "warm_intro",
+      "connector": "Prabhath Karanth",
+      "next_action": "Request intro from Prabhath",
+      "notes": "Fund VII closed $250M, agentic AI focus, portfolio includes Snyk/Protect AI/BigID",
+      "action": "Request intro from Prabhath Karanth"
+    },
+    {
+      "contact": {
+        "id": "kobi_samboursky_glilot",
+        "name": "Kobi Samboursky",
+        "firm": "Glilot Capital",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/kobisamboursky/"
+      },
+      "approach": "warm_intro",
+      "connector": "Al Ghous",
+      "next_action": "Request intro from Al Ghous",
+      "notes": "40+ mutual connections, AI + cyber thesis",
+      "action": "Request intro from Al Ghous"
+    }
+  ]
+}

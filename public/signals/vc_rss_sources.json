@@ -1,0 +1,145 @@
+{
+  "description": "VC-focused RSS feeds for funding news and investment activity",
+  "sources": [
+    {
+      "source_name": "Crunchbase Funding Rounds",
+      "source_type": "crunchbase",
+      "rss_feeds": [
+        "https://news.crunchbase.com/feed/"
+      ]
+    },
+    {
+      "source_name": "TechCrunch Startups",
+      "source_type": "news",
+      "rss_feeds": [
+        "https://techcrunch.com/category/startups/feed/"
+      ]
+    },
+    {
+      "source_name": "TechCrunch Venture",
+      "source_type": "news",
+      "rss_feeds": [
+        "https://techcrunch.com/category/venture/feed/"
+      ]
+    },
+    {
+      "source_name": "PR Newswire Funding",
+      "source_type": "press",
+      "rss_feeds": [
+        "https://www.prnewswire.com/rss/financial-services-latest-news/funding-activities-list.rss"
+      ]
+    },
+    {
+      "source_name": "Business Wire Technology",
+      "source_type": "press",
+      "rss_feeds": [
+        "https://feed.businesswire.com/rss/home/?rss=G1QFDERJXkJeGVtXWg=="
+      ]
+    },
+    {
+      "source_name": "GlobeNewswire Funding",
+      "source_type": "press",
+      "rss_feeds": [
+        "https://www.globenewswire.com/RssFeed/subjectcode/27-Funding%20and%20Investment%20Announcements/feedTitle/GlobeNewswire%20-%20Funding%20and%20Investment%20Announcements.xml"
+      ]
+    },
+    {
+      "source_name": "Axios Pro Rata",
+      "source_type": "news",
+      "rss_feeds": [
+        "https://www.axios.com/pro/deals/feed"
+      ]
+    },
+    {
+      "source_name": "PitchBook News",
+      "source_type": "news",
+      "rss_feeds": [
+        "https://pitchbook.com/feed"
+      ]
+    },
+    {
+      "source_name": "Fortune Term Sheet",
+      "source_type": "news",
+      "rss_feeds": [
+        "https://fortune.com/section/term-sheet/feed/"
+      ]
+    },
+    {
+      "source_name": "Venture Beat",
+      "source_type": "news",
+      "rss_feeds": [
+        "https://venturebeat.com/feed/"
+      ]
+    },
+    {
+      "source_name": "SaaStr Blog",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://www.saastr.com/feed/"
+      ]
+    },
+    {
+      "source_name": "Both Sides of the Table",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://bothsidesofthetable.com/feed"
+      ]
+    },
+    {
+      "source_name": "AVC (Fred Wilson)",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://avc.com/feed/"
+      ]
+    },
+    {
+      "source_name": "Feld Thoughts",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://feld.com/feed"
+      ]
+    },
+    {
+      "source_name": "Tomasz Tunguz",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://tomtunguz.com/feed/"
+      ]
+    },
+    {
+      "source_name": "Hunter Walk",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://hunterwalk.com/feed/"
+      ]
+    },
+    {
+      "source_name": "A16Z Blog",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://a16z.com/feed/"
+      ]
+    },
+    {
+      "source_name": "First Round Review",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://review.firstround.com/feed.xml"
+      ]
+    },
+    {
+      "source_name": "Bessemer Cloud Index",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://www.bvp.com/atlas/feed"
+      ]
+    },
+    {
+      "source_name": "Sequoia Arc",
+      "source_type": "blog",
+      "rss_feeds": [
+        "https://www.sequoiacap.com/feed/"
+      ]
+    }
+  ]
+}
