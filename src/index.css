@@ -82,7 +82,7 @@ html, body {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 4rem 4rem;
+    padding: 8rem 4rem 6rem;
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -105,37 +105,37 @@ html, body {
     font-size: 2rem;
 }
 
-.hero-tagline {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    color: #3b9dff;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-weight: 500;
-}
-
 .hero-headline {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.3;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    color: #fff;
 }
 
-.hero-headline .highlight {
+.hero-headline .emphasis {
     color: #3b9dff;
 }
 
-.hero-reassurance {
+.hero-subheading {
+    font-size: 1.4rem;
+    color: #3b9dff;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.hero-description {
     font-size: 1.1rem;
-    color: #b0c0d0;
+    color: #c0d0e0;
     margin-bottom: 2.5rem;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    font-weight: 400;
+    line-height: 1.8;
 }
 
 .hero-cta-buttons {
@@ -204,7 +204,7 @@ html, body {
     color: #c0d0e0;
     margin-bottom: 2rem;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -212,26 +212,29 @@ html, body {
 .problem-statement {
     background: rgba(59, 157, 255, 0.08);
     border: 1px solid rgba(59, 157, 255, 0.3);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 8px;
     margin-bottom: 3rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.8;
+    color: #e0e0e0;
 }
 
-.why-matters {
-    margin-top: 3rem;
+.result-number {
+    color: #ff6b6b;
+    font-weight: 700;
 }
 
-.matters-grid {
+.silo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.matter-card {
+.silo-card {
     background: rgba(59, 157, 255, 0.05);
     border: 1px solid rgba(59, 157, 255, 0.2);
     padding: 2rem;
@@ -239,26 +242,21 @@ html, body {
     transition: all 0.3s;
 }
 
-.matter-card:hover {
+.silo-card:hover {
     background: rgba(59, 157, 255, 0.1);
     border-color: rgba(59, 157, 255, 0.4);
 }
 
-.matter-card h3 {
+.silo-card h3 {
     color: #3b9dff;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
-.matter-card p {
+.silo-card p {
     color: #a0b0c0;
     font-size: 1rem;
     line-height: 1.6;
-}
-
-.result-number {
-    color: #ff6b6b;
-    font-weight: 700;
 }
 
 /* Solution Section */
@@ -281,99 +279,30 @@ html, body {
     line-height: 1.8;
 }
 
-.solution-benefits {
+.two-layer-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.benefit {
-    padding: 1.5rem;
+.layer {
+    padding: 2rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 6px;
     border-left: 3px solid #3b9dff;
 }
 
-.benefit h3 {
+.layer h3 {
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
-.benefit p {
+.layer p {
     color: #a0b0c0;
     font-size: 0.95rem;
-}
-
-/* Proof Section - Teaser Format */
-.proof-teaser {
-    background: rgba(59, 157, 255, 0.08);
-    border: 1px solid rgba(59, 157, 255, 0.3);
-    padding: 2.5rem;
-    border-radius: 8px;
-    margin-top: 2rem;
-}
-
-.proof-teaser h3 {
-    color: #3b9dff;
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-}
-
-.demo-teaser-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.demo-input, .demo-output {
-    background: rgba(0, 0, 0, 0.4);
-    padding: 1.5rem;
-    border-radius: 6px;
-    border: 1px solid rgba(59, 157, 255, 0.2);
-}
-
-.demo-input h4, .demo-output h4 {
-    color: #3b9dff;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.demo-input p, .demo-output p {
-    color: #a0b0c0;
-    font-size: 0.9rem;
     line-height: 1.6;
-    font-family: 'Monaco', 'Menlo', monospace;
-}
-
-/* Neutral token styling */
-.token {
-    display: inline-block;
-    padding: 0.2rem 0.5rem;
-    background: rgba(100, 150, 200, 0.2);
-    border-radius: 3px;
-    color: #a0b0c0;
-    font-family: 'Monaco', 'Menlo', monospace;
-    font-size: 0.85rem;
-}
-
-.demo-button {
-    background: #3b9dff;
-    color: #000;
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.demo-button:hover {
-    background: #5aadff;
 }
 
 /* How It Works Section */
@@ -418,83 +347,223 @@ html, body {
     line-height: 1.6;
 }
 
-/* Compatibility Section */
-.compatibility-section {
-    margin-top: 3rem;
+/* Demo Teaser */
+.proof-teaser {
+    background: rgba(59, 157, 255, 0.08);
+    border: 1px solid rgba(59, 157, 255, 0.3);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
 }
 
-.compatibility-grid {
+.proof-teaser h3 {
+    color: #3b9dff;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.demo-teaser-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.demo-input, .demo-output {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(59, 157, 255, 0.2);
+}
+
+.demo-input h4, .demo-output h4 {
+    color: #3b9dff;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.demo-input p, .demo-output p {
+    color: #a0b0c0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.token {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    background: rgba(100, 150, 200, 0.2);
+    border-radius: 3px;
+    color: #a0b0c0;
+    font-family: 'Monaco', 'Menlo', monospace;
+    font-size: 0.85rem;
+}
+
+.demo-button {
+    background: #3b9dff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.demo-button:hover {
+    background: #5aadff;
+}
+
+/* Where This Goes / Vision Section */
+.vision-section {
+    background: linear-gradient(135deg, rgba(59, 157, 255, 0.1), rgba(59, 157, 255, 0.05));
+    border: 1px solid rgba(59, 157, 255, 0.3);
+    border-radius: 8px;
+    padding: 3rem;
+    margin: 3rem 0;
+}
+
+.vision-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.vision-description {
+    font-size: 1.1rem;
+    color: #c0d0e0;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.compat-card {
+.timeline-year {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 6px;
+    border-left: 4px solid #3b9dff;
+}
+
+.timeline-year h3 {
+    color: #3b9dff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.timeline-year p {
+    color: #a0b0c0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.moat-statement {
+    background: rgba(59, 157, 255, 0.15);
+    border: 1px solid rgba(59, 157, 255, 0.4);
+    padding: 2rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.moat-statement p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.moat-statement .emphasis {
+    color: #3b9dff;
+    font-weight: 600;
+}
+
+/* Compatibility Section */
+.compatibility {
+    margin-top: 3rem;
+}
+
+.compat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.compat-box {
     background: rgba(59, 157, 255, 0.05);
     border: 1px solid rgba(59, 157, 255, 0.2);
     padding: 2rem;
     border-radius: 8px;
-    transition: all 0.3s;
 }
 
-.compat-card:hover {
-    background: rgba(59, 157, 255, 0.1);
-    border-color: rgba(59, 157, 255, 0.4);
-}
-
-.compat-card h3 {
+.compat-box h3 {
     color: #3b9dff;
-    font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
-.compat-card p {
+.compat-box p {
     color: #a0b0c0;
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-/* Trust & Data Section */
-.trust-section {
+.compat-adoption {
+    grid-column: 1 / -1;
+    background: rgba(100, 150, 200, 0.1);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 3px solid #3b9dff;
+    text-align: center;
+}
+
+.compat-adoption p {
+    color: #a0b0c0;
+}
+
+/* Data & Deployment */
+.data-deployment {
     background: rgba(59, 157, 255, 0.05);
     border: 1px solid rgba(59, 157, 255, 0.2);
     padding: 3rem;
     border-radius: 8px;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 
-.trust-features {
+.data-deployment h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.data-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    margin-top: 2rem;
+    gap: 2rem;
 }
 
-.trust-feature h3 {
+.data-item h3 {
     color: #3b9dff;
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
-.trust-feature p {
+.data-item p {
     color: #a0b0c0;
     font-size: 0.95rem;
     line-height: 1.6;
-}
-
-.operational-meaning {
-    background: rgba(100, 150, 200, 0.1);
-    border-left: 3px solid #3b9dff;
-    padding: 1rem 1.5rem;
-    border-radius: 4px;
-    margin-top: 0.5rem;
-}
-
-.operational-meaning p {
-    color: #c0d0e0;
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
 }
 
 /* Design Partner CTA */
@@ -504,12 +573,21 @@ html, body {
     padding: 3rem;
     border-radius: 8px;
     text-align: center;
-    margin-top: 3rem;
+    margin: 3rem 0;
 }
 
 .design-partner-cta h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+}
+
+.partner-intro {
+    color: #c0d0e0;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .criteria-list {
@@ -593,7 +671,17 @@ html, body {
 .team-intro {
     text-align: center;
     color: #c0d0e0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.team-intro-alt {
+    text-align: center;
+    color: #c0d0e0;
     margin-bottom: 3rem;
+    font-size: 1rem;
 }
 
 .team-grid {
@@ -684,42 +772,6 @@ html, body {
     color: #5aadff;
 }
 
-/* Data & Deployment Box */
-.data-deployment-box {
-    background: rgba(100, 150, 200, 0.1);
-    border-left: 3px solid #3b9dff;
-    padding: 2rem;
-    border-radius: 6px;
-    margin-top: 2.5rem;
-}
-
-.data-deployment-box h3 {
-    color: #3b9dff;
-    margin-bottom: 1rem;
-}
-
-.data-deployment-box ul {
-    list-style: none;
-    color: #a0b0c0;
-}
-
-.data-deployment-box li {
-    padding: 0.5rem 0;
-}
-
-/* Output box */
-.output-box {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1.5rem;
-    border-radius: 6px;
-    border-left: 3px solid #3b9dff;
-    margin-bottom: 2rem;
-}
-
-.output-box p {
-    color: #c0d0e0;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .site-nav {
@@ -740,7 +792,11 @@ html, body {
         padding: 3rem 2rem;
     }
 
-    .matters-grid, .solution-benefits, .trust-features, .compatibility-grid {
+    .silo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two-layer-container {
         grid-template-columns: 1fr;
     }
 
@@ -749,6 +805,18 @@ html, body {
     }
 
     .demo-teaser-content {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .data-list {
         grid-template-columns: 1fr;
     }
 

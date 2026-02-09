@@ -13,11 +13,15 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-logo">KTLYST <span className="labs">LABS</span></div>
-        <p className="hero-tagline">Turning Threat Intelligence Into Detection in Under 10 Minutes</p>
-        <h1 className="hero-headline">The <span className="highlight">deterministic</span> translation layer between intelligence production and detection execution</h1>
 
-        <p className="hero-reassurance">
-          <strong>What that means:</strong> Same input always produces the same output. Changes are versioned and reviewable. Nothing ships without explicit human approval.
+        <h1 className="hero-headline">
+          The <span className="emphasis">amnesia problem</span>. Security teams keep relearning the same lessons. Knowledge gets filed, not operationalized. Effectiveness resets instead of compounding.
+        </h1>
+
+        <p className="hero-subheading">Security Learning Control Plane</p>
+
+        <p className="hero-description">
+          Every security team solves the same problems repeatedly. KTLYST captures what you learn and turns it into durable operational improvements that persist across team changes, incident cycles, and organizational memory loss.
         </p>
 
         <div className="hero-cta-buttons">
@@ -26,44 +30,59 @@ function App() {
         </div>
       </section>
 
-      {/* Problem Section — "Why does this matter right now?" */}
+      {/* Problem Section */}
       <section className="site-section problem">
         <h2 className="section-heading">Why This Matters Now</h2>
 
         <p className="problem-intro">
-          Security teams generate high-quality threat intelligence every day. But the last 20%—turning that intelligence into deployed detection—is where most organizations stall.
+          The three-silo problem. Intel writes reports that get filed. IR closes incidents that stay in docs. Red team findings sit in wikis. Each team solves problems others already solved. No system connects them.
         </p>
 
         <div className="problem-statement">
-          Over <span className="result-number">50% of breaches</span> are detected externally, even in mature organizations. The gap isn't knowledge—it's translation. Documented tactics sit in reports while the same techniques are used in the next attack.
+          <span className="result-number">Over 50% of breaches</span> are detected externally. But not because translation is slow—because institutional knowledge doesn't persist. Lessons learned vanish. Effectiveness resets.
         </div>
 
-        <div className="matters-grid">
-          <div className="matter-card">
-            <h3>Attackers Iterate in Hours</h3>
-            <p>AI-powered adversaries evolve faster than ever. Detection engineering still takes days.</p>
+        <div className="silo-grid">
+          <div className="silo-card">
+            <h3>Threat Intelligence Silo</h3>
+            <p>Reports on adversary tactics, frameworks, and behaviors are filed as PDFs. Knowledge stays in Confluence, never operationalized.</p>
           </div>
-          <div className="matter-card">
-            <h3>Indicators Are Cheap to Rotate</h3>
-            <p>IPs and domains change in minutes. Tradecraft takes months to retrain—but most tools still chase the wrong layer.</p>
+          <div className="silo-card">
+            <h3>Incident Response Silo</h3>
+            <p>IR teams handle incidents, document findings, close tickets. Lessons stay in Jira, never reach security design.</p>
+          </div>
+          <div className="silo-card">
+            <h3>Red Team Silo</h3>
+            <p>Penetration tests reveal organizational weaknesses. Reports sit in wikis. The same weaknesses surface again next assessment.</p>
           </div>
         </div>
       </section>
 
-      {/* Solution Section — "What is KTLYST, in one sentence?" */}
+      {/* Solution Section */}
       <section className="site-section solution">
         <h2>What We Built</h2>
 
         <p className="solution-description">
-          KTLYST converts unstructured security narratives into review-ready behavioral detection candidates in under 10 minutes. Detection rules and logic—not alerts, not another engine—just the missing translation layer.
+          Two layers working together:
         </p>
+
+        <div className="two-layer-container">
+          <div className="layer">
+            <h3>Layer 1: Today's Wedge</h3>
+            <p>Intel → detection in minutes with full provenance. Fast enough to prove the model works. Modern enough that you trust the output. Auditable enough to deploy to production on day one.</p>
+          </div>
+          <div className="layer">
+            <h3>Layer 2: The Platform</h3>
+            <p>Infrastructure that captures what security teams learn and turns it into durable operational improvements. A knowledge graph that grows every time you use it. Speed becomes proof of the architecture, not the headline.</p>
+          </div>
+        </div>
       </section>
 
       {/* How It Works Section */}
       <section className="site-section how-it-works">
         <h2 className="section-heading">How It Works</h2>
         <p style={{ textAlign: 'center', color: '#c0d0e0', fontSize: '1.1rem', marginBottom: '2rem' }}>
-          From security narrative to detection candidate in <strong style={{ color: '#3b9dff' }}>under 10 minutes</strong>
+          Human judgment goes in. Auditable, versioned enforcement comes out. Provenance traces every decision back to source.
         </p>
 
         <div className="process-steps">
@@ -89,7 +108,7 @@ function App() {
           </div>
         </div>
 
-        {/* Proof Teaser Example */}
+        {/* Demo Teaser */}
         <div className="proof-teaser">
           <h3>Example: From Intelligence to Detection</h3>
 
@@ -120,37 +139,76 @@ function App() {
         </div>
       </section>
 
-      {/* Compatibility Section — "Will this fit my stack?" */}
-      <section className="site-section compatibility-section">
-        <h2 className="section-heading" style={{ fontSize: '2.2rem' }}>Compatibility</h2>
+      {/* Where This Goes Section */}
+      <section className="site-section vision-section">
+        <h2>Where This Goes</h2>
 
-        <div className="compatibility-grid">
-          <div className="compat-card">
-            <h3>Input Formats</h3>
-            <p>Incident reports, audit findings, analyst notes, government advisories, STIX/TAXII feeds—any unstructured or semi-structured security narrative.</p>
+        <p className="vision-description">
+          The compounding vision. Each time you use KTLYST, institutional knowledge gets captured, versioned, and operationalized. It doesn't disappear when team members leave. It doesn't reset after incident response. It compounds.
+        </p>
+
+        <div className="timeline-grid">
+          <div className="timeline-year">
+            <h3>Year 1</h3>
+            <p>Faster detection rules. Intel team → detections in minutes instead of months. Effectiveness starts to compound.</p>
           </div>
-          <div className="compat-card">
-            <h3>Output Targets</h3>
-            <p>Splunk (SPL), Microsoft Sentinel (KQL), Datadog, Elastic, Sigma rules. Detection logic delivered in the format your stack already consumes.</p>
+          <div className="timeline-year">
+            <h3>Year 2</h3>
+            <p>Knowledge persistence. Incident lessons don't vanish. Red team findings become operational security improvements, not closed tickets.</p>
+          </div>
+          <div className="timeline-year">
+            <h3>Year 3</h3>
+            <p>A knowledge graph of every adversary that's targeted you. Every technique you've seen, every control you've built, every decision you've made—all connected, versioned, auditable.</p>
           </div>
         </div>
 
-        <p style={{ textAlign: 'center', color: '#a0b0c0', marginTop: '1.5rem', fontSize: '0.95rem' }}>
-          Typical adoption: plug into existing workflows in under a week. No infrastructure changes required.
-        </p>
+        <div className="moat-statement">
+          <p>
+            You're not building faster workflows. You're building <span className="emphasis">infrastructure that compounds</span>. That's the moat story. That's what sophisticated buyers need to see.
+          </p>
+        </div>
       </section>
 
-      {/* Trust & Security Section — "What happens to my data?" */}
-      <section className="site-section trust-section">
-        <h2 className="section-heading" style={{ fontSize: '2.2rem' }}>What Happens to Your Data</h2>
+      {/* Compatibility Section */}
+      <section className="site-section compatibility">
+        <h2 className="section-heading">Compatibility</h2>
 
-        <div className="data-deployment-box" style={{ marginTop: '0' }}>
-          <ul>
-            <li>&#10003; <strong>Retention:</strong> Your intelligence and generated rules are retained for your team's reference and audit only.</li>
-            <li>&#10003; <strong>No Training:</strong> Your data is never used to train models or improve KTLYST for other customers.</li>
-            <li>&#10003; <strong>Encryption:</strong> All data in transit and at rest uses industry-standard encryption.</li>
-            <li>&#10003; <strong>Deployment:</strong> Deploy on-premises or in your cloud environment. No data leaves your infrastructure unless you choose to.</li>
-          </ul>
+        <div className="compat-grid">
+          <div className="compat-box">
+            <h3>Input Formats</h3>
+            <p>Incident reports, audit findings, analyst notes, government advisories, STIX/TAXII feeds—any unstructured or semi-structured security narrative.</p>
+          </div>
+          <div className="compat-box">
+            <h3>Output Targets</h3>
+            <p>Splunk (SPL), Microsoft Sentinel (KQL), Datadog, Elastic, Sigma rules. Detection logic delivered in the format your stack already consumes.</p>
+          </div>
+          <div className="compat-adoption">
+            <p><strong>Typical adoption:</strong> Plug into existing workflows in under a week. No infrastructure changes required.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Data & Deployment Section */}
+      <section className="site-section data-deployment">
+        <h2>What Happens to Your Data</h2>
+
+        <div className="data-list">
+          <div className="data-item">
+            <h3>&#10003; Retention</h3>
+            <p>Your intelligence and generated rules are retained for your team's reference and audit only.</p>
+          </div>
+          <div className="data-item">
+            <h3>&#10003; No Training</h3>
+            <p>Your data is never used to train models or improve KTLYST for other customers.</p>
+          </div>
+          <div className="data-item">
+            <h3>&#10003; Encryption</h3>
+            <p>All data in transit and at rest uses industry-standard encryption.</p>
+          </div>
+          <div className="data-item">
+            <h3>&#10003; Deployment</h3>
+            <p>Deploy on-premises or in your cloud environment. No data leaves your infrastructure unless you choose to.</p>
+          </div>
         </div>
       </section>
 
@@ -158,19 +216,19 @@ function App() {
       <section className="site-section design-partner-cta">
         <h2>Become a Design Partner</h2>
 
-        <p style={{ color: '#c0d0e0', fontSize: '1.05rem', marginBottom: '1.5rem' }}>
+        <p className="partner-intro">
           We're working with security teams to refine KTLYST before general availability. If you fit the criteria below, we want to hear from you.
         </p>
 
         <div className="criteria-list">
           <div className="criteria-item">
-            <p>Internal threat intelligence team</p>
+            <p>Tired of rebuilding knowledge after every team change</p>
           </div>
           <div className="criteria-item">
-            <p>Detection engineering capability</p>
+            <p>Detection engineering capability that's being underutilized</p>
           </div>
           <div className="criteria-item">
-            <p>Backlog of unoperationalized intel</p>
+            <p>Security effectiveness that resets instead of compounds</p>
           </div>
           <div className="criteria-item">
             <p>Willingness to provide structured feedback</p>
@@ -198,15 +256,19 @@ function App() {
       <section className="site-section team">
         <h2 className="section-heading">Team</h2>
 
-        <div className="team-intro">
-          <p>Combined 30+ years in security detection and threat intelligence. We've built these systems at scale and seen firsthand how intelligence dies between teams.</p>
-        </div>
+        <p className="team-intro">
+          "We've built these systems at scale and seen firsthand how intelligence dies between teams."
+        </p>
+
+        <p className="team-intro-alt">
+          Combined 30+ years in security detection and threat intelligence. We're building infrastructure that prevents knowledge from disappearing.
+        </p>
 
         <div className="team-grid">
           <div className="team-member">
             <h3>Assaf Kipnis</h3>
             <div className="title">Founder &amp; CEO</div>
-            <p>Built and operated threat intel and detection systems at Google, Meta, LinkedIn, and ElevenLabs. Led detection engineering at one of the world's largest security operations centers.</p>
+            <p>Built threat intel and detection systems at Google, Meta, LinkedIn, and ElevenLabs. Led detection engineering at one of the world's largest security operations centers. Designed the architectural patterns that allow security knowledge to compound instead of reset.</p>
 
             <div className="company-badges">
               <div className="badge">Google</div>
