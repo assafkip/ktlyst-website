@@ -82,12 +82,10 @@ html, body {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 4rem 5rem;
+    padding: 8rem 4rem 4rem;
     text-align: center;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
