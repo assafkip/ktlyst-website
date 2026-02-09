@@ -391,6 +391,48 @@
             text-decoration: none;
         }
 
+        /* Environment filter chips */
+        .env-chip {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: 1px solid var(--gray-300);
+            background: var(--gray-50);
+            color: var(--gray-600);
+            transition: all 0.2s;
+        }
+
+        .env-chip:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .env-chip.active {
+            background: #059669;
+            color: white;
+            border-color: #059669;
+        }
+
+        .env-chip-summary {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            background: #dcfce7;
+            color: #059669;
+            margin-right: 4px;
+        }
+
+        /* Focus tab styles */
+        .focus-tab {
+            transition: all 0.2s;
+        }
+
+        .focus-tab:hover {
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 20px;
@@ -408,7 +450,25 @@
     </style>
 </head>
 <body>
-    <header class="header">
+    <!-- Navigation Bar -->
+    <nav id="mainNav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(30, 58, 95, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(59, 130, 246, 0.2); transition: all 0.3s;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+            <div style="display: flex; items-center: center; justify-content: space-between; height: 56px;">
+                <!-- Logo -->
+                <a href="/" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <span style="font-size: 1.25rem; font-weight: 700; font-family: monospace; color: #3b82f6;">KTLYST</span>
+                    <span style="color: #9ca3af; font-size: 0.875rem; font-family: monospace;">Labs</span>
+                </a>
+                <!-- Navigation Links -->
+                <div style="display: flex; align-items: center; gap: 24px;">
+                    <a href="/" style="color: #9ca3af; text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='#3b82f6'" onmouseout="this.style.color='#9ca3af'">Home</a>
+                    <a href="/signals" style="color: #3b82f6; text-decoration: none; font-size: 0.875rem; font-weight: 500;">Signals</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header" style="margin-top: 56px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
             <div>
                 <h1>Security Signals Intelligence</h1>
@@ -594,10 +654,157 @@
                         <ul id="recommendations" style="list-style: disc; padding-left: 20px; font-size: 0.9rem; color: var(--gray-700);"></ul>
                     </div>
                 </div>
+
+                <!-- Collapsible Details Section -->
+                <div id="summaryDetailsToggle" style="display: none; margin-top: 16px;">
+                    <button onclick="toggleSummaryDetails()" style="display: flex; align-items: center; gap: 6px; background: none; border: 1px solid var(--gray-300); padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; color: var(--gray-600); width: 100%;">
+                        <span id="summaryDetailsArrow" style="transition: transform 0.2s;">▶</span>
+                        <span>Show Details (Detection Opportunities & Trends)</span>
+                    </button>
+                    <div id="summaryDetailsContent" style="display: none; margin-top: 12px;">
+                        <div id="summaryDetectionOps" style="display: none; background: white; padding: 14px; border-radius: 8px; margin-bottom: 12px; border: 1px solid #c4b5fd;">
+                            <div style="font-weight: 600; font-size: 0.8rem; color: #7c3aed; margin-bottom: 8px;">🎯 DETECTION OPPORTUNITIES</div>
+                            <p id="summaryDetectionText" style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--gray-700);"></p>
+                        </div>
+                        <div id="summaryTrends" style="display: none; background: white; padding: 14px; border-radius: 8px; border: 1px solid #bfdbfe;">
+                            <div style="font-weight: 600; font-size: 0.8rem; color: #2563eb; margin-bottom: 8px;">📈 TRENDS</div>
+                            <p id="summaryTrendsText" style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--gray-700);"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="summaryLoading" style="text-align: center; padding: 20px; color: var(--gray-500);">
                 Loading AI-generated summary...
+            </div>
+        </div>
+
+        <!-- Collapsible Industry Focus Section -->
+        <div id="focusSectionWrapper" style="display: none; margin-bottom: 24px; border: 1px solid var(--gray-200); border-radius: 12px; overflow: hidden; background: white;">
+            <button onclick="toggleFocusSection()" style="display: flex; align-items: center; justify-content: space-between; width: 100%; background: var(--gray-50); border: none; padding: 14px 20px; cursor: pointer; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span id="focusSectionArrow" style="transition: transform 0.2s; color: var(--gray-500);">▶</span>
+                    <span style="font-size: 0.95rem; font-weight: 500; color: var(--gray-700);">🎯 Industry Focus Views</span>
+                    <span style="font-size: 0.8rem; color: var(--gray-400);">(Detection, SOC Ops, Ransomware)</span>
+                </div>
+            </button>
+            <div id="focusSectionContent" style="display: none; padding: 20px;">
+                <!-- Focus Tabs -->
+                <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center;">
+                    <span style="font-size: 0.85rem; color: var(--gray-500); font-weight: 500;">Focus:</span>
+                    <button class="focus-tab active" data-focus="detection_engineering" style="padding: 8px 18px; border-radius: 8px; font-size: 0.85rem; cursor: pointer; border: 1px solid #8b5cf6; background: #7c3aed; color: white;">🛡️ Detection</button>
+                    <button class="focus-tab" data-focus="soc_operations" style="padding: 8px 18px; border-radius: 8px; font-size: 0.85rem; cursor: pointer; border: 1px solid #8b5cf6; background: #f5f3ff; color: #7c3aed;">🖥️ SOC Ops</button>
+                    <button class="focus-tab" data-focus="ransomware" style="padding: 8px 18px; border-radius: 8px; font-size: 0.85rem; cursor: pointer; border: 1px solid #8b5cf6; background: #f5f3ff; color: #7c3aed;">🔒 Ransomware</button>
+                </div>
+                <!-- Industry Focus Summary -->
+                <div id="focusSummaryContent" style="display: none; background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); border: 1px solid #c4b5fd; border-radius: 12px; padding: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                        <div>
+                            <h3 id="focusTitle" style="margin: 0 0 4px 0; font-size: 1.1rem; color: #5b21b6;">Industry Focus</h3>
+                            <span id="focusMeta" style="font-size: 0.75rem; color: var(--gray-500);"></span>
+                        </div>
+                        <span style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; background: #ede9fe; color: #7c3aed;">🎯 Specialized View</span>
+                    </div>
+                    <div style="background: white; padding: 14px; border-radius: 8px; margin-bottom: 16px; border-left: 3px solid #7c3aed;">
+                        <div style="font-weight: 600; font-size: 0.8rem; color: var(--gray-500); margin-bottom: 6px;">SUMMARY</div>
+                        <p id="focusSummaryText" style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--gray-700);"></p>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                        <div style="background: white; padding: 14px; border-radius: 8px;">
+                            <div style="font-weight: 600; font-size: 0.8rem; color: #dc2626; margin-bottom: 8px;">⚠️ RELEVANT THREATS</div>
+                            <ul id="focusThreats" style="margin: 0; padding-left: 18px; font-size: 0.85rem; color: var(--gray-700); list-style: disc;"></ul>
+                        </div>
+                        <div style="background: white; padding: 14px; border-radius: 8px;">
+                            <div style="font-weight: 600; font-size: 0.8rem; color: #059669; margin-bottom: 8px;">✅ RECOMMENDATIONS</div>
+                            <ul id="focusRecs" style="margin: 0; padding-left: 18px; font-size: 0.85rem; color: var(--gray-700); list-style: disc;"></ul>
+                        </div>
+                    </div>
+                    <div id="focusImpact" style="margin-top: 16px; background: white; padding: 14px; border-radius: 8px; display: none;">
+                        <div style="font-weight: 600; font-size: 0.8rem; color: #2563eb; margin-bottom: 8px;">📊 IMPACT ASSESSMENT</div>
+                        <p id="focusImpactText" style="margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--gray-700);"></p>
+                    </div>
+                </div>
+                <div id="focusLoading" style="text-align: center; padding: 20px; color: var(--gray-500); display: none;">
+                    Loading focus summary...
+                </div>
+            </div>
+        </div>
+
+        <!-- My Environment Filter Bar -->
+        <div id="envFilterBar" style="margin-bottom: 24px; border: 1px solid var(--gray-200); border-radius: 12px; overflow: hidden; background: white;">
+            <!-- Collapsed State -->
+            <div id="envFilterCollapsed" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); cursor: pointer;" onclick="toggleEnvFilter()">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.1rem;">🎯</span>
+                    <span style="font-weight: 500; color: var(--gray-700);">My Environment</span>
+                    <div id="envFilterSummary" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                        <span style="font-size: 0.8rem; color: var(--gray-500); font-style: italic;">No filters applied - showing all signals</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span id="envFilterCount" style="font-size: 0.8rem; color: var(--gray-500);"></span>
+                    <button onclick="event.stopPropagation(); clearEnvFilters();" style="font-size: 0.75rem; padding: 4px 8px; border: 1px solid var(--gray-300); border-radius: 4px; background: white; color: var(--gray-600); cursor: pointer;">Clear</button>
+                    <span id="envFilterArrow" style="color: var(--gray-400); transition: transform 0.2s;">▼</span>
+                </div>
+            </div>
+            <!-- Expanded State -->
+            <div id="envFilterExpanded" style="display: none; padding: 20px; border-top: 1px solid var(--gray-200); background: white;">
+                <!-- Cloud -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-size: 0.75rem; font-weight: 600; color: var(--gray-500); margin-bottom: 8px; text-transform: uppercase;">Cloud Platform</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="env-chip" data-category="cloud" data-value="aws" onclick="toggleEnvChip(this)">AWS</button>
+                        <button class="env-chip" data-category="cloud" data-value="azure" onclick="toggleEnvChip(this)">Azure</button>
+                        <button class="env-chip" data-category="cloud" data-value="gcp" onclick="toggleEnvChip(this)">GCP</button>
+                        <button class="env-chip" data-category="cloud" data-value="on-prem" onclick="toggleEnvChip(this)">On-Prem</button>
+                    </div>
+                </div>
+                <!-- Infrastructure -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-size: 0.75rem; font-weight: 600; color: var(--gray-500); margin-bottom: 8px; text-transform: uppercase;">Infrastructure</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="env-chip" data-category="infra" data-value="kubernetes" onclick="toggleEnvChip(this)">Kubernetes</button>
+                        <button class="env-chip" data-category="infra" data-value="docker" onclick="toggleEnvChip(this)">Docker</button>
+                        <button class="env-chip" data-category="infra" data-value="vmware" onclick="toggleEnvChip(this)">VMware</button>
+                        <button class="env-chip" data-category="infra" data-value="terraform" onclick="toggleEnvChip(this)">Terraform</button>
+                        <button class="env-chip" data-category="infra" data-value="linux" onclick="toggleEnvChip(this)">Linux</button>
+                        <button class="env-chip" data-category="infra" data-value="windows" onclick="toggleEnvChip(this)">Windows</button>
+                    </div>
+                </div>
+                <!-- Security Tools -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-size: 0.75rem; font-weight: 600; color: var(--gray-500); margin-bottom: 8px; text-transform: uppercase;">Security Stack</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="env-chip" data-category="security" data-value="crowdstrike" onclick="toggleEnvChip(this)">CrowdStrike</button>
+                        <button class="env-chip" data-category="security" data-value="sentinelone" onclick="toggleEnvChip(this)">SentinelOne</button>
+                        <button class="env-chip" data-category="security" data-value="microsoft-defender" onclick="toggleEnvChip(this)">Microsoft Defender</button>
+                        <button class="env-chip" data-category="security" data-value="splunk" onclick="toggleEnvChip(this)">Splunk</button>
+                        <button class="env-chip" data-category="security" data-value="elastic" onclick="toggleEnvChip(this)">Elastic</button>
+                        <button class="env-chip" data-category="security" data-value="palo-alto" onclick="toggleEnvChip(this)">Palo Alto</button>
+                    </div>
+                </div>
+                <!-- Identity & Mail -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-size: 0.75rem; font-weight: 600; color: var(--gray-500); margin-bottom: 8px; text-transform: uppercase;">Identity & Collaboration</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="env-chip" data-category="identity" data-value="okta" onclick="toggleEnvChip(this)">Okta</button>
+                        <button class="env-chip" data-category="identity" data-value="azure-ad" onclick="toggleEnvChip(this)">Azure AD / Entra</button>
+                        <button class="env-chip" data-category="identity" data-value="office365" onclick="toggleEnvChip(this)">Office 365</button>
+                        <button class="env-chip" data-category="identity" data-value="google-workspace" onclick="toggleEnvChip(this)">Google Workspace</button>
+                        <button class="env-chip" data-category="identity" data-value="slack" onclick="toggleEnvChip(this)">Slack</button>
+                    </div>
+                </div>
+                <!-- Threat Focus -->
+                <div style="margin-bottom: 0;">
+                    <div style="font-size: 0.75rem; font-weight: 600; color: var(--gray-500); margin-bottom: 8px; text-transform: uppercase;">Threat Focus</div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <button class="env-chip" data-category="threat" data-value="ransomware" onclick="toggleEnvChip(this)">Ransomware</button>
+                        <button class="env-chip" data-category="threat" data-value="apt" onclick="toggleEnvChip(this)">APT / Nation-State</button>
+                        <button class="env-chip" data-category="threat" data-value="supply-chain" onclick="toggleEnvChip(this)">Supply Chain</button>
+                        <button class="env-chip" data-category="threat" data-value="zero-day" onclick="toggleEnvChip(this)">Zero-Days</button>
+                        <button class="env-chip" data-category="threat" data-value="phishing" onclick="toggleEnvChip(this)">Phishing</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -619,12 +826,216 @@
         const DATA_URL = '/signals/security-signals-data.json';
         const SUMMARIES_URL = '/signals/security-summaries.json';
 
+        // Store summaries globally for focus tab switching
+        let securitySummaries = null;
+        let currentFocus = 'detection_engineering';
+
+        // Toggle functions for collapsible sections
+        function toggleSummaryDetails() {
+            const content = document.getElementById('summaryDetailsContent');
+            const arrow = document.getElementById('summaryDetailsArrow');
+            const isHidden = content.style.display === 'none';
+            content.style.display = isHidden ? 'block' : 'none';
+            arrow.style.transform = isHidden ? 'rotate(90deg)' : 'rotate(0deg)';
+        }
+
+        function toggleFocusSection() {
+            const content = document.getElementById('focusSectionContent');
+            const arrow = document.getElementById('focusSectionArrow');
+            const isHidden = content.style.display === 'none';
+            content.style.display = isHidden ? 'block' : 'none';
+            arrow.style.transform = isHidden ? 'rotate(90deg)' : 'rotate(0deg)';
+        }
+
+        function toggleEnvFilter() {
+            const expanded = document.getElementById('envFilterExpanded');
+            const arrow = document.getElementById('envFilterArrow');
+            const isHidden = expanded.style.display === 'none';
+            expanded.style.display = isHidden ? 'block' : 'none';
+            arrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        // Environment Filter State and Functions
+        const envFilterState = {
+            cloud: [],
+            infra: [],
+            security: [],
+            identity: [],
+            threat: []
+        };
+
+        const envFilterKeywords = {
+            'aws': ['aws', 'amazon', 'ec2', 's3', 'lambda', 'cloudfront', 'rds', 'eks', 'ecs', 'iam'],
+            'azure': ['azure', 'microsoft cloud', 'entra', 'intune', 'sentinel', 'defender for cloud'],
+            'gcp': ['gcp', 'google cloud', 'gke', 'bigquery', 'cloud run'],
+            'on-prem': ['on-prem', 'on-premises', 'data center', 'vmware', 'hyperv'],
+            'kubernetes': ['kubernetes', 'k8s', 'kubectl', 'helm', 'container orchestration', 'eks', 'aks', 'gke'],
+            'docker': ['docker', 'container', 'dockerfile', 'docker hub'],
+            'vmware': ['vmware', 'vsphere', 'esxi', 'vcenter'],
+            'terraform': ['terraform', 'infrastructure as code', 'iac', 'hashicorp'],
+            'linux': ['linux', 'ubuntu', 'centos', 'rhel', 'debian', 'fedora', 'kernel'],
+            'windows': ['windows', 'windows server', 'active directory', 'ntlm', 'kerberos', 'powershell'],
+            'crowdstrike': ['crowdstrike', 'falcon', 'crowdstrike falcon'],
+            'sentinelone': ['sentinelone', 'sentinel one', 's1'],
+            'microsoft-defender': ['defender', 'microsoft defender', 'defender for endpoint', 'mde', 'defender atp'],
+            'splunk': ['splunk', 'splunk enterprise', 'splunk cloud'],
+            'elastic': ['elastic', 'elasticsearch', 'kibana', 'elastic siem'],
+            'palo-alto': ['palo alto', 'pan-os', 'cortex', 'prisma', 'xsoar', 'xdr'],
+            'okta': ['okta', 'okta sso', 'okta mfa'],
+            'azure-ad': ['azure ad', 'entra', 'azure active directory', 'aad'],
+            'office365': ['office 365', 'o365', 'microsoft 365', 'm365', 'exchange online', 'sharepoint online'],
+            'google-workspace': ['google workspace', 'gsuite', 'google drive', 'gmail enterprise'],
+            'slack': ['slack', 'slack enterprise'],
+            'ransomware': ['ransomware', 'lockbit', 'blackcat', 'alphv', 'clop', 'akira', 'play ransomware', 'royal ransomware', 'encryption', 'extortion'],
+            'apt': ['apt', 'nation-state', 'state-sponsored', 'advanced persistent', 'lazarus', 'cozy bear', 'fancy bear'],
+            'supply-chain': ['supply chain', 'software supply', 'dependency', 'npm', 'pypi', 'package manager', 'solarwinds'],
+            'zero-day': ['zero-day', '0-day', 'zero day', 'actively exploited', 'in the wild', 'kev', 'known exploited'],
+            'phishing': ['phishing', 'spear-phishing', 'business email compromise', 'bec', 'credential harvesting']
+        };
+
+        function toggleEnvChip(chip) {
+            const category = chip.dataset.category;
+            const value = chip.dataset.value;
+
+            chip.classList.toggle('active');
+
+            if (chip.classList.contains('active')) {
+                if (!envFilterState[category].includes(value)) {
+                    envFilterState[category].push(value);
+                }
+            } else {
+                envFilterState[category] = envFilterState[category].filter(v => v !== value);
+            }
+
+            updateEnvFilterSummary();
+            renderSignals();
+        }
+
+        function clearEnvFilters() {
+            Object.keys(envFilterState).forEach(key => {
+                envFilterState[key] = [];
+            });
+            document.querySelectorAll('.env-chip.active').forEach(chip => {
+                chip.classList.remove('active');
+            });
+            updateEnvFilterSummary();
+            renderSignals();
+        }
+
+        function updateEnvFilterSummary() {
+            const summaryEl = document.getElementById('envFilterSummary');
+            const allFilters = [];
+
+            Object.entries(envFilterState).forEach(([category, values]) => {
+                values.forEach(value => {
+                    const chip = document.querySelector(`.env-chip[data-value="${value}"]`);
+                    if (chip) {
+                        allFilters.push(chip.textContent);
+                    }
+                });
+            });
+
+            if (allFilters.length === 0) {
+                summaryEl.innerHTML = '<span style="font-size: 0.8rem; color: var(--gray-500); font-style: italic;">No filters applied - showing all signals</span>';
+            } else {
+                summaryEl.innerHTML = allFilters.map(f =>
+                    `<span class="env-chip-summary">${f}</span>`
+                ).join('');
+            }
+        }
+
+        function getActiveEnvFilters() {
+            const activeKeywords = [];
+            Object.entries(envFilterState).forEach(([category, values]) => {
+                values.forEach(value => {
+                    if (envFilterKeywords[value]) {
+                        activeKeywords.push(...envFilterKeywords[value]);
+                    }
+                });
+            });
+            return activeKeywords;
+        }
+
+        function signalMatchesEnvFilter(signal) {
+            const activeKeywords = getActiveEnvFilters();
+            if (activeKeywords.length === 0) return true;
+
+            const searchText = [
+                signal.title || '',
+                signal.summary || '',
+                (signal.affected_tech || []).join(' '),
+                (signal.tags || []).join(' ')
+            ].join(' ').toLowerCase();
+
+            return activeKeywords.some(keyword => searchText.includes(keyword.toLowerCase()));
+        }
+
+        // Focus tab switching
+        function updateFocusTabStyles() {
+            document.querySelectorAll('.focus-tab').forEach(tab => {
+                const isActive = tab.dataset.focus === currentFocus;
+                tab.style.background = isActive ? '#7c3aed' : '#f5f3ff';
+                tab.style.color = isActive ? 'white' : '#7c3aed';
+            });
+        }
+
+        function renderFocusSummary() {
+            if (!securitySummaries || !securitySummaries.industry_focus) {
+                document.getElementById('focusSummaryContent').style.display = 'none';
+                return;
+            }
+
+            const focusData = securitySummaries.industry_focus?.daily?.[currentFocus];
+            const focusPanel = document.getElementById('focusSummaryContent');
+
+            if (focusData) {
+                focusPanel.style.display = 'block';
+
+                const focusTitles = {
+                    detection_engineering: '🛡️ Detection Engineering',
+                    soc_operations: '🖥️ SOC Operations',
+                    ransomware: '🔒 Ransomware'
+                };
+                document.getElementById('focusTitle').textContent = `Daily ${focusTitles[currentFocus]} Focus`;
+
+                const genAt = focusData.generated_at ? new Date(focusData.generated_at).toLocaleString() : 'Not yet generated';
+                const signalCount = focusData.signal_count || 0;
+                document.getElementById('focusMeta').innerHTML = `Generated: ${genAt} | ${signalCount} relevant signals`;
+
+                document.getElementById('focusSummaryText').textContent = focusData.summary || 'No summary available.';
+
+                const threats = focusData.relevant_threats || [];
+                document.getElementById('focusThreats').innerHTML = threats.length > 0
+                    ? threats.map(t => `<li style="margin-bottom: 6px;">${escapeHtml(t)}</li>`).join('')
+                    : '<li style="color: var(--gray-400);">No specific threats identified</li>';
+
+                const recs = focusData.recommendations || [];
+                document.getElementById('focusRecs').innerHTML = recs.length > 0
+                    ? recs.map(r => `<li style="margin-bottom: 6px;">${escapeHtml(r)}</li>`).join('')
+                    : '<li style="color: var(--gray-400);">No specific recommendations</li>';
+
+                const impact = focusData.impact_assessment || '';
+                const impactEl = document.getElementById('focusImpact');
+                if (impact) {
+                    document.getElementById('focusImpactText').textContent = impact;
+                    impactEl.style.display = 'block';
+                } else {
+                    impactEl.style.display = 'none';
+                }
+            } else {
+                focusPanel.style.display = 'none';
+            }
+        }
+
         // Load and display AI summaries
         async function loadSummaries() {
             try {
                 const response = await fetch(SUMMARIES_URL);
                 if (!response.ok) throw new Error('Summaries not available');
                 const data = await response.json();
+
+                // Store globally for focus tabs
+                securitySummaries = data;
 
                 // Get daily summary (default)
                 const summary = data.time_periods?.daily;
@@ -641,13 +1052,42 @@
                 // Executive summary
                 document.getElementById('executiveSummary').textContent = summary.executive_summary || 'No summary available';
 
-                // Key threats
+                // Key threats with source references
                 const threatsList = document.getElementById('keyThreats');
                 threatsList.innerHTML = '';
+                const sources = summary.sources || [];
                 (summary.key_threats || []).slice(0, 5).forEach(threat => {
                     const li = document.createElement('li');
-                    li.textContent = threat;
                     li.style.marginBottom = '8px';
+
+                    // Handle both old format (string) and new format (object with refs)
+                    if (typeof threat === 'string') {
+                        li.textContent = threat;
+                    } else {
+                        // New format with references
+                        const threatText = document.createElement('span');
+                        threatText.textContent = threat.text || threat;
+                        li.appendChild(threatText);
+
+                        // Add footnote references
+                        if (threat.refs && threat.refs.length > 0 && sources.length > 0) {
+                            threat.refs.forEach(refId => {
+                                const source = sources.find(s => s.id === refId);
+                                if (source && source.url) {
+                                    const sup = document.createElement('sup');
+                                    const link = document.createElement('a');
+                                    link.href = source.url;
+                                    link.target = '_blank';
+                                    link.rel = 'noopener noreferrer';
+                                    link.textContent = `[${refId}]`;
+                                    link.style.cssText = 'color: #f97316; text-decoration: none; margin-left: 2px; font-size: 0.75em;';
+                                    link.title = source.title || 'Source';
+                                    sup.appendChild(link);
+                                    li.appendChild(sup);
+                                }
+                            });
+                        }
+                    }
                     threatsList.appendChild(li);
                 });
 
@@ -671,9 +1111,52 @@
                     recsList.appendChild(li);
                 });
 
+                // Detection opportunities
+                const detOps = summary.detection_opportunities;
+                const detOpsEl = document.getElementById('summaryDetectionOps');
+                if (detOps) {
+                    document.getElementById('summaryDetectionText').textContent = detOps;
+                    detOpsEl.style.display = 'block';
+                } else {
+                    detOpsEl.style.display = 'none';
+                }
+
+                // Trends
+                const trends = summary.trends || '';
+                const trendsEl = document.getElementById('summaryTrends');
+                if (trends) {
+                    document.getElementById('summaryTrendsText').textContent = trends;
+                    trendsEl.style.display = 'block';
+                } else {
+                    trendsEl.style.display = 'none';
+                }
+
+                // Show/hide details toggle based on content
+                const detailsToggle = document.getElementById('summaryDetailsToggle');
+                if (detOps || trends) {
+                    detailsToggle.style.display = 'block';
+                } else {
+                    detailsToggle.style.display = 'none';
+                }
+
                 // Show content, hide loading
                 document.getElementById('summaryContent').style.display = 'block';
                 document.getElementById('summaryLoading').style.display = 'none';
+
+                // Show focus section if industry focus data exists
+                if (data.industry_focus && data.industry_focus.daily) {
+                    document.getElementById('focusSectionWrapper').style.display = 'block';
+                    renderFocusSummary();
+
+                    // Setup focus tab listeners
+                    document.querySelectorAll('.focus-tab').forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            currentFocus = tab.dataset.focus;
+                            updateFocusTabStyles();
+                            renderFocusSummary();
+                        });
+                    });
+                }
 
             } catch (error) {
                 document.getElementById('summaryLoading').innerHTML =
@@ -791,6 +1274,9 @@
             if (activeFilters.category !== 'all') {
                 filtered = filtered.filter(s => s.signal_category === activeFilters.category);
             }
+
+            // Environment filter
+            filtered = filtered.filter(s => signalMatchesEnvFilter(s));
 
             // Sort by date
             filtered.sort((a, b) => new Date(b.source_date || '2020-01-01') - new Date(a.source_date || '2020-01-01'));
