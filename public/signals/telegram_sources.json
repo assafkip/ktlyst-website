@@ -1,0 +1,451 @@
+{
+  "metadata": {
+    "description": "Telegram groups/channels for security signal collection",
+    "created": "2026-02-21",
+    "notes": "Sources with FIND_LINK entities still need manual lookup in Telegram. These channels migrate frequently."
+  },
+  "sources": [
+
+    {"_comment": "=== THREAT INTELLIGENCE (analysis, not victim dumps) ==="},
+
+    {
+      "name": "SecAtor",
+      "url": "https://t.me/true_secator",
+      "entity": "true_secator",
+      "source_type": "telegram",
+      "category": "security",
+      "topics": ["APT", "threat-intel", "ransomware", "nation-state"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "PT SWARM",
+      "url": "https://t.me/ptswarm",
+      "entity": "ptswarm",
+      "source_type": "telegram",
+      "category": "security",
+      "topics": ["vulnerability-research", "exploits", "CVE", "detection"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "RU_OSINT",
+      "url": "https://t.me/RU_OSINT",
+      "entity": "RU_OSINT",
+      "source_type": "telegram",
+      "category": "security",
+      "topics": ["OSINT", "investigations", "threat-hunting"],
+      "stream": null,
+      "priority": 1,
+      "enabled": false,
+      "_note": "Disabled: entity not resolvable on Telegram (username not found)"
+    },
+    {
+      "name": "Group-IB",
+      "url": "https://t.me/Group_IB",
+      "entity": "Group_IB",
+      "source_type": "telegram",
+      "category": "security",
+      "topics": ["threat-intel", "fraud-research", "APT", "dark-web"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "Ransomwatch",
+      "url": "https://t.me/ransomwatch",
+      "entity": "ransomwatch",
+      "source_type": "telegram",
+      "category": "security",
+      "topics": ["ransomware", "ecosystem-tracking", "group-analysis"],
+      "stream": null,
+      "priority": 1,
+      "enabled": false,
+      "_note": "Disabled: resolves to a user, not the channel. Correct entity unknown."
+    },
+
+    {"_comment": "=== FRAUD / DARK WEB (enabled) ==="},
+
+    {
+      "name": "Daisy Cloud",
+      "url": "https://t.me/up_daisycloud",
+      "entity": "up_daisycloud",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["stealer-logs", "credential-theft", "account-takeover"],
+      "stream": "stream_b",
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "Daisy Cloud (Mirror)",
+      "url": "https://t.me/NEW_DAISYCLOUD",
+      "entity": "NEW_DAISYCLOUD",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["stealer-logs", "credential-theft", "account-takeover"],
+      "stream": "stream_b",
+      "priority": 2,
+      "enabled": true
+    },
+    {
+      "name": "Dark Monitor",
+      "url": "https://t.me/cyberthint",
+      "entity": "cyberthint",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["CVE", "ransomware", "threat-intel"],
+      "stream": null,
+      "priority": 1,
+      "enabled": false,
+      "_note": "Disabled: automated victim notifications, no analysis. Redundant with ransomware.live RSS."
+    },
+    {
+      "name": "Data Leak Monitor",
+      "url": "https://t.me/breachdetector",
+      "entity": "breachdetector",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["data-breach", "leak-detection"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "Daily Dark Web",
+      "url": "https://t.me/dailydarkweb",
+      "entity": "dailydarkweb",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["ransomware", "data-breach", "dark-web"],
+      "stream": null,
+      "priority": 1,
+      "enabled": false,
+      "_note": "Disabled: entity not resolvable on Telegram"
+    },
+    {
+      "name": "Ransomlook - Ransomware Alerts",
+      "url": "https://t.me/ransomlook",
+      "entity": "ransomlook",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["ransomware", "victim-tracking"],
+      "stream": null,
+      "priority": 1,
+      "enabled": false,
+      "_note": "Disabled: automated victim notifications. Redundant with ransomware.live RSS."
+    },
+    {
+      "name": "NoName057(16) English",
+      "url": "https://t.me/noname05716eng",
+      "entity": "noname05716eng",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["hacktivism", "DDoS", "geopolitical"],
+      "stream": null,
+      "priority": 2,
+      "enabled": false,
+      "_note": "Disabled: entity not resolvable on Telegram"
+    },
+    {
+      "name": "IT Army of Ukraine",
+      "url": "https://t.me/itarmyofukraine2022",
+      "entity": "itarmyofukraine2022",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["hacktivism", "geopolitical", "DDoS"],
+      "stream": null,
+      "priority": 2,
+      "enabled": true
+    },
+    {
+      "name": "Cyber Security - Information Security - IT Security",
+      "url": "https://t.me/cybersecurityexperts",
+      "entity": "cybersecurityexperts",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["fraud-prevention", "incident-response", "threat-intel"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "Bugatti Cloud",
+      "url": "https://t.me/bugatti_cloud",
+      "entity": "bugatti_cloud",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["stealer-logs", "banking-fraud", "credential-theft"],
+      "stream": "stream_b",
+      "priority": 1,
+      "enabled": false,
+      "_note": "Disabled: entity not resolvable on Telegram"
+    },
+    {
+      "name": "AsCarding Underground",
+      "url": "https://t.me/ascarding_chat",
+      "entity": "ascarding_chat",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["carding", "OTP-bots", "mule-networks", "device-fraud"],
+      "stream": "stream_b",
+      "priority": 2,
+      "enabled": false,
+      "_note": "Disabled: community chat produces noise, not structured intel"
+    },
+    {
+      "name": "StarLink Cloud",
+      "url": "https://t.me/StarLinkCloud",
+      "entity": "StarLinkCloud",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["stealer-logs", "credential-theft"],
+      "stream": "stream_b",
+      "priority": 2,
+      "enabled": false,
+      "_note": "Disabled: entity not resolvable on Telegram"
+    },
+
+    {"_comment": "=== NEW CHANNELS (added 2026-02-23 from research) ==="},
+
+    {
+      "name": "vx-underground",
+      "url": "https://t.me/vxunderground",
+      "entity": "vxunderground",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["malware", "threat-intel", "APT", "malware-samples"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "Largest malware-sharing community. High-volume, high-quality threat intel."
+    },
+    {
+      "name": "Cyber Threat Intelligence",
+      "url": "https://t.me/ctinow",
+      "entity": "ctinow",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["threat-intel", "APT", "nation-state", "campaign-tracking"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "CTI aggregation channel. APT tracking and attribution."
+    },
+    {
+      "name": "DarkFeed News",
+      "url": "https://t.me/DarkfeedNews",
+      "entity": "DarkfeedNews",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["ransomware", "data-breach", "dark-web", "victim-tracking"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "Ransomware and breach tracking. Complements ransomwatch RSS."
+    },
+    {
+      "name": "Cyber Detective",
+      "url": "https://t.me/cybdetective",
+      "entity": "cybdetective",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["OSINT", "investigations", "tools", "techniques"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "OSINT tools, techniques, and investigations. High analytical value."
+    },
+    {
+      "name": "CVE Notify",
+      "url": "https://t.me/cveNotify",
+      "entity": "cveNotify",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["CVE", "vulnerability", "exploitation", "patching"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "Real-time CVE notifications. Auto-generated, filter for critical/high severity."
+    },
+    {
+      "name": "Russian OSINT",
+      "url": "https://t.me/Russian_OSINT",
+      "entity": "Russian_OSINT",
+      "source_type": "independent_research",
+      "category": "security",
+      "topics": ["OSINT", "geopolitical", "investigations", "threat-intel"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "Replaces disabled RU_OSINT. Different channel, similar coverage."
+    },
+    {
+      "name": "The Hacker News (Telegram)",
+      "url": "https://t.me/thehackernews",
+      "entity": "thehackernews",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["threat-intel", "CVE", "data-breach", "general-security"],
+      "stream": null,
+      "priority": 2,
+      "enabled": true,
+      "_note": "THN Telegram mirror. May overlap with RSS feed but includes community discussion."
+    },
+    {
+      "name": "R0 Crew",
+      "url": "https://t.me/R0_Crew",
+      "entity": "R0_Crew",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["malware", "reverse-engineering", "exploit-dev", "threat-intel"],
+      "stream": null,
+      "priority": 2,
+      "enabled": true,
+      "_note": "Russian-language RE/malware community. Deep technical analysis."
+    },
+    {
+      "name": "SOC Analyst / Blue Team",
+      "url": "https://t.me/socanalyst",
+      "entity": "socanalyst",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["detection-engineering", "SOC", "blue-team", "SIEM", "sigma-rules"],
+      "stream": null,
+      "priority": 1,
+      "enabled": true,
+      "_note": "Detection engineering content. Directly relevant to KTLYST thesis."
+    },
+    {
+      "name": "Pentesting News",
+      "url": "https://t.me/PentestingNews",
+      "entity": "PentestingNews",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["vulnerability-research", "exploit-dev", "offensive-security"],
+      "stream": null,
+      "priority": 2,
+      "enabled": true,
+      "_note": "Offensive security news. Good for vulnerability landscape awareness."
+    },
+
+    {"_comment": "=== STILL NEED LINKS (disabled) ==="},
+
+    {
+      "name": "Z-Pentest",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["hacktivism", "data-breach", "infrastructure-access"],
+      "stream": null,
+      "priority": 2,
+      "enabled": false,
+      "_note": "Channel was shut down by Telegram, may have reestablished under new name"
+    },
+    {
+      "name": "Ghost Princess",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["hacktivism", "geopolitical", "Middle-East"],
+      "stream": null,
+      "priority": 3,
+      "enabled": false
+    },
+    {
+      "name": "RipperSec",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["hacktivism", "data-theft", "geopolitical"],
+      "stream": null,
+      "priority": 3,
+      "enabled": false
+    },
+    {
+      "name": "Threat Intelligence Sharing",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "security",
+      "topics": ["threat-intel", "malware", "SOC"],
+      "stream": null,
+      "priority": 1,
+      "enabled": false
+    },
+    {
+      "name": "Cuckoo Cloud",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["stealer-logs", "credential-theft"],
+      "stream": "stream_b",
+      "priority": 2,
+      "enabled": false,
+      "_note": "Newer channel (2025), search Telegram directly"
+    },
+    {
+      "name": "Red Cloud",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["stealer-logs", "credential-theft"],
+      "stream": "stream_b",
+      "priority": 2,
+      "enabled": false,
+      "_note": "Frequently blocked but resilient, search Telegram directly"
+    },
+    {
+      "name": "CrdPro Corner",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["carding", "BIN-fraud", "cashout-methods"],
+      "stream": "stream_b",
+      "priority": 2,
+      "enabled": false,
+      "_note": "Invite-link based (t.me/+BMJ_Dt5dd90yN2Jk), may need join first"
+    },
+    {
+      "name": "Canada Union",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["mule-networks", "PII", "money-laundering", "KYC-bypass"],
+      "stream": "stream_b",
+      "priority": 3,
+      "enabled": false
+    },
+    {
+      "name": "Qianxun Japan Company",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["carding", "logistics-fraud", "Japan"],
+      "stream": "stream_b",
+      "priority": 3,
+      "enabled": false
+    },
+    {
+      "name": "Genius Qi Jiusi - Japan Real-Time Phishing",
+      "url": "https://t.me/FIND_LINK",
+      "entity": "FIND_LINK",
+      "source_type": "community",
+      "category": "fraud",
+      "topics": ["phishing", "JCB-fraud", "Japan"],
+      "stream": "stream_b",
+      "priority": 3,
+      "enabled": false
+    }
+  ]
+}

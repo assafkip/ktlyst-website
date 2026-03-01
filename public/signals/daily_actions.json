@@ -1,33 +1,96 @@
 {
-  "generated_at": "2026-02-02T10:11:07.193958",
+  "generated_at": "2026-02-21T10:24:56.444095",
   "summary": {
-    "hot_signals_count": 1,
+    "hot_signals_count": 4,
     "overdue_count": 0,
-    "stalled_count": 7,
-    "intro_opportunities_count": 3,
-    "ready_to_contact_count": 7,
-    "total_actions": 18
+    "stalled_count": 65,
+    "intro_opportunities_count": 0,
+    "ready_to_contact_count": 17,
+    "total_actions": 86
   },
   "hot_signals": [
     {
       "signal": {
-        "id": "linkedin_scan_ed_sim_agentic_building_20260201",
-        "summary": "Actively building AI agent tools (OpenClaw, Moltbook, Chewbarka) - demonstrates hands-on engagement with agentic AI technology. Posted 'The dreaming/just build it mindset' showing personal experimentation with AI assistants that do calendar alerts, Twitter monitoring, daily briefings.",
-        "source_url": "https://www.linkedin.com/in/edsim/recent-activity/all/",
-        "source_type": "linkedin",
-        "source_date": "2026-02-01",
+        "id": "vc_9c6d5c551e1b",
+        "summary": "General Catalyst commits $5B to India over five years",
+        "source_url": "https://techcrunch.com/2026/02/19/general-catalyst-commits-5b-to-india-over-five-years/",
+        "source_type": "news",
+        "source_date": "2026-02-20",
         "signal_type": "soft",
         "signal_category": "security_trend_commentary"
       },
       "matched_contact": {
-        "contact_id": "ed_sim_boldstart",
-        "name": "Ed Sim",
-        "firm": "Boldstart Ventures",
+        "contact_id": "quentin_clark_general_catalyst",
+        "name": "Quentin Clark",
+        "firm": "General Catalyst",
         "status": "not_started",
-        "tier": "A"
+        "tier": "B"
       },
-      "hours_ago": 34,
-      "action": "Reference this in outreach to Ed Sim",
+      "hours_ago": 27,
+      "action": "Reference this in outreach to Quentin Clark",
+      "priority": "medium"
+    },
+    {
+      "signal": {
+        "id": "vc_579c7a47e16e",
+        "summary": "General Catalyst commits $5B to India over five years",
+        "source_url": "https://techcrunch.com/2026/02/19/general-catalyst-commits-5b-to-india-over-five-years/",
+        "source_type": "news",
+        "source_date": "2026-02-20",
+        "signal_type": "soft",
+        "signal_category": "security_trend_commentary"
+      },
+      "matched_contact": {
+        "contact_id": "quentin_clark_general_catalyst",
+        "name": "Quentin Clark",
+        "firm": "General Catalyst",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "hours_ago": 27,
+      "action": "Reference this in outreach to Quentin Clark",
+      "priority": "medium"
+    },
+    {
+      "signal": {
+        "id": "vc_196e1991fe98",
+        "summary": "Ali Partovi\u2019s Neo looks to upend the accelerator model with low-dilution terms",
+        "source_url": "https://techcrunch.com/2026/02/19/ali-partovis-neo-looks-to-upend-the-accelerator-model-with-low-dilution-terms/",
+        "source_type": "news",
+        "source_date": "2026-02-20",
+        "signal_type": "soft",
+        "signal_category": "security_trend_commentary"
+      },
+      "matched_contact": {
+        "contact_id": "amit_agarwal_accel",
+        "name": "Amit Agarwal",
+        "firm": "Accel",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "hours_ago": 28,
+      "action": "Reference this in outreach to Amit Agarwal",
+      "priority": "medium"
+    },
+    {
+      "signal": {
+        "id": "vc_1b73e02bbdbc",
+        "summary": "Ali Partovi\u2019s Neo looks to upend the accelerator model with low-dilution terms",
+        "source_url": "https://techcrunch.com/2026/02/19/ali-partovis-neo-looks-to-upend-the-accelerator-model-with-low-dilution-terms/",
+        "source_type": "news",
+        "source_date": "2026-02-20",
+        "signal_type": "soft",
+        "signal_category": "security_trend_commentary"
+      },
+      "matched_contact": {
+        "contact_id": "amit_agarwal_accel",
+        "name": "Amit Agarwal",
+        "firm": "Accel",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "hours_ago": 28,
+      "action": "Reference this in outreach to Amit Agarwal",
       "priority": "medium"
     }
   ],
@@ -35,7 +98,121 @@
   "stalled_contacts": [
     {
       "contact": {
-        "id": "chenxi_wang_rain",
+        "id": "lior_simon_cyberstarts",
+        "name": "Lior Simon",
+        "firm": "Cyberstarts",
+        "status": "intro_requested",
+        "tier": "A"
+      },
+      "stage": "intro_requested",
+      "days_in_stage": 14,
+      "threshold": 5,
+      "days_overdue": 9,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Asked Tomer Poran"
+      },
+      "action": "Follow up with connector on intro status"
+    },
+    {
+      "contact": {
+        "id": "john_brennan_yl_ventures",
+        "name": "John Brennan",
+        "firm": "YL Ventures",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "nadav_zafrir_team8",
+        "name": "Nadav Zafrir",
+        "firm": "Team8",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Ray/Gidi?"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "liran_grinberg_team8",
+        "name": "Liran Grinberg",
+        "firm": "Team8",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "ted_schlein_ballistic_ventures",
+        "name": "Ted Schlein",
+        "firm": "Ballistic Ventures",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Prabhath Karanth",
+        "connection_strength": "direct",
+        "notes": "Via Prabhath Karanth"
+      },
+      "action": "Request intro from Prabhath Karanth"
+    },
+    {
+      "contact": {
+        "id": "barmak_meftah_ballistic_ventures",
+        "name": "Barmak Meftah",
+        "firm": "Ballistic Ventures",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "chenxi_wang_rain_capital",
         "name": "Chenxi Wang",
         "firm": "Rain Capital",
         "status": "not_started",
@@ -47,9 +224,8 @@
       "days_overdue": 7,
       "warm_intro_path": {
         "connector": "Limor Elbaz",
-        "connector_linkedin": "https://www.linkedin.com/in/limorelbaz/",
-        "connection_strength": "direct",
-        "notes": "1st degree connection to both parties"
+        "connection_strength": "strong",
+        "notes": "Via Limor Elbaz (1st degree, CONFIRMED)"
       },
       "action": "Request intro from Limor Elbaz"
     },
@@ -67,17 +243,16 @@
       "days_overdue": 7,
       "warm_intro_path": {
         "connector": "Guy Rosen",
-        "connector_linkedin": "https://www.linkedin.com/in/guyrosen/",
         "connection_strength": "direct",
-        "notes": "Meta CISO, leverage Assaf's Meta background"
+        "notes": "Via Guy Rosen (Meta CISO) or Monte Toren"
       },
       "action": "Request intro from Guy Rosen"
     },
     {
       "contact": {
-        "id": "asheem_chandna_greylock",
-        "name": "Asheem Chandna",
-        "firm": "Greylock",
+        "id": "mark_hatfield_ten_eleven_ventures",
+        "name": "Mark Hatfield",
+        "firm": "Ten Eleven Ventures",
         "status": "not_started",
         "tier": "A"
       },
@@ -86,17 +261,35 @@
       "threshold": 7,
       "days_overdue": 7,
       "warm_intro_path": {
-        "connector": "Pratik Savla",
-        "connector_linkedin": "https://www.linkedin.com/in/pratiksavla/",
-        "connection_strength": "strong",
-        "notes": "156 mutual connections, LOCAL to San Jose"
+        "connector": "Christopher Hadnagy",
+        "connection_strength": "direct",
+        "notes": "Via Christopher Hadnagy"
       },
-      "action": "Request intro from Pratik Savla"
+      "action": "Request intro from Christopher Hadnagy"
     },
     {
       "contact": {
-        "id": "alberto_yepez_forgepoint",
-        "name": "Alberto Y\u00e9pez",
+        "id": "alex_doll_ten_eleven_ventures",
+        "name": "Alex Doll",
+        "firm": "Ten Eleven Ventures",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "alberto_yepez_forgepoint_capital",
+        "name": "Alberto Yepez",
         "firm": "ForgePoint Capital",
         "status": "not_started",
         "tier": "A"
@@ -107,15 +300,33 @@
       "days_overdue": 7,
       "warm_intro_path": {
         "connector": "Ingrid Dickinson",
-        "connector_linkedin": "https://www.linkedin.com/in/ingriddickinson/",
-        "connection_strength": "super_connector",
-        "notes": "164 mutual connections, Meta Security"
+        "connection_strength": "direct",
+        "notes": "Via Ingrid Dickinson (164 mutual!) SUPER CONNECTOR"
       },
       "action": "Request intro from Ingrid Dickinson"
     },
     {
       "contact": {
-        "id": "kobi_samboursky_glilot",
+        "id": "don_dixon_forgepoint_capital",
+        "name": "Don Dixon",
+        "firm": "ForgePoint Capital",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "kobi_samboursky_glilot_capital",
         "name": "Kobi Samboursky",
         "firm": "Glilot Capital",
         "status": "not_started",
@@ -127,37 +338,16 @@
       "days_overdue": 7,
       "warm_intro_path": {
         "connector": "Al Ghous",
-        "connector_linkedin": null,
-        "connection_strength": "strong",
-        "notes": "CISO/Advisor/Investor, 49 mutual connections"
+        "connection_strength": "direct",
+        "notes": "Via Al Ghous (CISO/Advisor/Investor)"
       },
       "action": "Request intro from Al Ghous"
     },
     {
       "contact": {
-        "id": "ed_sim_boldstart",
-        "name": "Ed Sim",
-        "firm": "Boldstart Ventures",
-        "status": "not_started",
-        "tier": "A"
-      },
-      "stage": "not_started",
-      "days_in_stage": 14,
-      "threshold": 7,
-      "days_overdue": 7,
-      "warm_intro_path": {
-        "connector": "Prabhath Karanth",
-        "connector_linkedin": "https://www.linkedin.com/in/prabhathkaranth/",
-        "connection_strength": "direct",
-        "notes": "Multi-VC connector (Cyberstarts, Ballistic, Boldstart)"
-      },
-      "action": "Request intro from Prabhath Karanth"
-    },
-    {
-      "contact": {
-        "id": "shlomo_kramer_angel",
-        "name": "Shlomo Kramer",
-        "firm": "Angel (Check Point/Imperva/Cato founder)",
+        "id": "arik_kleinstein_glilot_capital",
+        "name": "Arik Kleinstein",
+        "firm": "Glilot Capital",
         "status": "not_started",
         "tier": "A"
       },
@@ -167,123 +357,1151 @@
       "days_overdue": 7,
       "warm_intro_path": {
         "connector": null,
-        "connector_linkedin": null,
         "connection_strength": "direct",
-        "notes": "1ST DEGREE DIRECT CONNECTION - No intro needed!"
+        "notes": "TBD"
       },
       "action": "Request intro from None"
-    }
-  ],
-  "intro_opportunities": [
-    {
-      "connector": {
-        "name": "Ingrid Dickinson",
-        "linkedin": "https://www.linkedin.com/in/ingriddickinson/",
-        "organization": "Meta Security",
-        "mutual_connections": 164
-      },
-      "can_intro_to": [
-        {
-          "id": "alberto_yepez_forgepoint",
-          "name": "Alberto Y\u00e9pez",
-          "firm": "ForgePoint Capital",
-          "tier": "A"
-        }
-      ],
-      "intros_available": 3,
-      "action": "Ask Ingrid Dickinson for intro to Alberto Y\u00e9pez"
-    },
-    {
-      "connector": {
-        "name": "Pratik Savla",
-        "linkedin": "https://www.linkedin.com/in/pratiksavla/",
-        "organization": "San Jose (LOCAL)",
-        "mutual_connections": 156
-      },
-      "can_intro_to": [
-        {
-          "id": "asheem_chandna_greylock",
-          "name": "Asheem Chandna",
-          "firm": "Greylock",
-          "tier": "A"
-        }
-      ],
-      "intros_available": 3,
-      "action": "Ask Pratik Savla for intro to Asheem Chandna"
-    },
-    {
-      "connector": {
-        "name": "Prabhath Karanth",
-        "linkedin": "https://www.linkedin.com/in/prabhathkaranth/",
-        "organization": null,
-        "mutual_connections": 14
-      },
-      "can_intro_to": [
-        {
-          "id": "ed_sim_boldstart",
-          "name": "Ed Sim",
-          "firm": "Boldstart Ventures",
-          "tier": "A"
-        }
-      ],
-      "intros_available": 3,
-      "action": "Ask Prabhath Karanth for intro to Ed Sim"
-    }
-  ],
-  "ready_to_contact": [
-    {
-      "contact": {
-        "id": "shlomo_kramer_angel",
-        "name": "Shlomo Kramer",
-        "firm": "Angel (Check Point/Imperva/Cato founder)",
-        "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/shlomokramer"
-      },
-      "approach": "direct",
-      "next_action": "Send direct LinkedIn message",
-      "notes": "Most active cyber angel, 98 mutual connections",
-      "action": "Send direct message to Shlomo Kramer"
     },
     {
       "contact": {
-        "id": "alberto_yepez_forgepoint",
-        "name": "Alberto Y\u00e9pez",
-        "firm": "ForgePoint Capital",
-        "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/albertoyepez/"
+        "id": "jay_leek_syn_ventures",
+        "name": "Jay Leek",
+        "firm": "SYN Ventures",
+        "status": "not_started",
+        "tier": "A"
       },
-      "approach": "warm_intro",
-      "connector": "Ingrid Dickinson",
-      "next_action": "Request intro from Ingrid",
-      "notes": "Also invested in Qevlar AI (detection startup)",
-      "action": "Request intro from Ingrid Dickinson"
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Lee Kushner / Caleb Sima",
+        "connection_strength": "direct",
+        "notes": "Via Lee Kushner / Caleb Sima"
+      },
+      "action": "Request intro from Lee Kushner / Caleb Sima"
+    },
+    {
+      "contact": {
+        "id": "hadar_paz_hyperplane",
+        "name": "Hadar Paz",
+        "firm": "Hyperplane",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Gidi?"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "yoav_tzruya_jerusalem_venture_partners_(jvp)",
+        "name": "Yoav Tzruya",
+        "firm": "Jerusalem Venture Partners (JVP)",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Ray?"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "zvika_netter_viola_ventures",
+        "name": "Zvika Netter",
+        "firm": "Viola Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Ray/Gidi?"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "emanuel_timor_vertex_ventures_israel",
+        "name": "Emanuel Timor",
+        "firm": "Vertex Ventures Israel",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "craig_enenstein_pico_venture_partners",
+        "name": "Craig Enenstein",
+        "firm": "Pico Venture Partners",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "marc_boscher_inner_loop_capital",
+        "name": "Marc Boscher",
+        "firm": "Inner Loop Capital",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "jyoti_bansal_unusual_ventures",
+        "name": "Jyoti Bansal",
+        "firm": "Unusual Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Alex Stamos",
+        "connection_strength": "direct",
+        "notes": "Via Alex Stamos"
+      },
+      "action": "Request intro from Alex Stamos"
+    },
+    {
+      "contact": {
+        "id": "jon_sakoda_decibel_partners",
+        "name": "Jon Sakoda",
+        "firm": "Decibel Partners",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "ed_sim_boldstart_ventures",
+        "name": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Prabhath Karanth",
+        "connection_strength": "direct",
+        "notes": "Via Prabhath Karanth"
+      },
+      "action": "Request intro from Prabhath Karanth"
+    },
+    {
+      "contact": {
+        "id": "jessica_lin_work-bench",
+        "name": "Jessica Lin",
+        "firm": "Work-Bench",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "jim_wilson_costanoa_ventures",
+        "name": "Jim Wilson",
+        "firm": "Costanoa Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "yousuf_khan_ridge_ventures",
+        "name": "Yousuf Khan",
+        "firm": "Ridge Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
     },
     {
       "contact": {
         "id": "asheem_chandna_greylock",
         "name": "Asheem Chandna",
         "firm": "Greylock",
-        "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/asheemchandna/"
+        "status": "not_started",
+        "tier": "B"
       },
-      "approach": "warm_intro",
-      "connector": "Pratik Savla",
-      "next_action": "Request intro from Pratik",
-      "notes": "Led Tenzai $75M seed, invested in 7AI - validates detection/SOC thesis",
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Pratik Savla",
+        "connection_strength": "direct",
+        "notes": "Via Pratik Savla (156 mutual, LOCAL San Jose!)"
+      },
       "action": "Request intro from Pratik Savla"
     },
     {
       "contact": {
-        "id": "chenxi_wang_rain",
+        "id": "martin_casado_a16z",
+        "name": "Martin Casado",
+        "firm": "a16z",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Brad Doctor",
+        "connection_strength": "direct",
+        "notes": "Via Brad Doctor (CISO, 45 mutual)"
+      },
+      "action": "Request intro from Brad Doctor"
+    },
+    {
+      "contact": {
+        "id": "quentin_clark_general_catalyst",
+        "name": "Quentin Clark",
+        "firm": "General Catalyst",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "bogomil_balkansky_sequoia_capital",
+        "name": "Bogomil Balkansky",
+        "firm": "Sequoia Capital",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "dave_zilberman_norwest_venture_partners",
+        "name": "Dave Zilberman",
+        "firm": "Norwest Venture Partners",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Already engaged"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "richard_seewald_evolution_equity_partners",
+        "name": "Richard Seewald",
+        "firm": "Evolution Equity Partners",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "bob_ackerman_allegiscyber",
+        "name": "Bob Ackerman",
+        "firm": "AllegisCyber",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "adam_bly_silent_ventures",
+        "name": "Adam Bly",
+        "firm": "Silent Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "mallun_yen_operator_collective",
+        "name": "Mallun Yen",
+        "firm": "Operator Collective",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "rob_rueckert_sorenson_ventures",
+        "name": "Rob Rueckert",
+        "firm": "Sorenson Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "chris_farmer_signalfire",
+        "name": "Chris Farmer",
+        "firm": "SignalFire",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "rudina_seseri_glasswing_ventures",
+        "name": "Rudina Seseri",
+        "firm": "Glasswing Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "ashu_garg_foundation_capital",
+        "name": "Ashu Garg",
+        "firm": "Foundation Capital",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "amit_agarwal_accel",
+        "name": "Amit Agarwal",
+        "firm": "Accel",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "venky_ganesan_menlo_ventures",
+        "name": "Venky Ganesan",
+        "firm": "Menlo Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "reid_christian_crv",
+        "name": "Reid Christian",
+        "firm": "CRV",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "phin_barnes_first_round_capital",
+        "name": "Phin Barnes",
+        "firm": "First Round Capital",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "shardul_shah_index_ventures",
+        "name": "Shardul Shah",
+        "firm": "Index Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": "Justin Somaini",
+        "connection_strength": "direct",
+        "notes": "Via Justin Somaini (3 mutual)"
+      },
+      "action": "Request intro from Justin Somaini"
+    },
+    {
+      "contact": {
+        "id": "thomas_krane_insight_partners",
+        "name": "Thomas Krane",
+        "firm": "Insight Partners",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "jai_das_sapphire_ventures",
+        "name": "Jai Das",
+        "firm": "Sapphire Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "neeraj_agrawal_battery_ventures",
+        "name": "Neeraj Agrawal",
+        "firm": "Battery Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "chip_hazard_flybridge",
+        "name": "Chip Hazard",
+        "firm": "Flybridge",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "charlie_plauche_s3_ventures",
+        "name": "Charlie Plauche",
+        "firm": "S3 Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "arif_janmohamed_lightspeed_venture_partners",
+        "name": "Arif Janmohamed",
+        "firm": "Lightspeed Venture Partners",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "theresia_gouw_acrew_capital",
+        "name": "Theresia Gouw",
+        "firm": "Acrew Capital",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "sunil_dhaliwal_amplify_partners",
+        "name": "Sunil Dhaliwal",
+        "firm": "Amplify Partners",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "pejman_nozad_pear_vc",
+        "name": "Pejman Nozad",
+        "firm": "Pear VC",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "jeff_clavier_uncork_capital",
+        "name": "Jeff Clavier",
+        "firm": "Uncork Capital",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "mark_gorenberg_zetta_venture_partners",
+        "name": "Mark Gorenberg",
+        "firm": "Zetta Venture Partners",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "tomasz_tunguz_theory_ventures",
+        "name": "Tomasz Tunguz",
+        "firm": "Theory Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "samir_kaul_khosla_ventures",
+        "name": "Samir Kaul",
+        "firm": "Khosla Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "adam_fisher_bessemer_venture_partners",
+        "name": "Adam Fisher",
+        "firm": "Bessemer Venture Partners",
+        "status": "not_started",
+        "tier": "A"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "greg_reichow_eclipse_ventures",
+        "name": "Greg Reichow",
+        "firm": "Eclipse Ventures",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "timothy_chen_essence_vc",
+        "name": "Timothy Chen",
+        "firm": "Essence VC",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "aydin_senkut_felicis_ventures",
+        "name": "Aydin Senkut",
+        "firm": "Felicis Ventures",
+        "status": "not_started",
+        "tier": "B"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "robin_vasan_mango_capital",
+        "name": "Robin Vasan",
+        "firm": "Mango Capital",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "ali_partovi_neo",
+        "name": "Ali Partovi",
+        "firm": "Neo",
+        "status": "not_started",
+        "tier": "C"
+      },
+      "stage": "not_started",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "TBD"
+      },
+      "action": "Request intro from None"
+    },
+    {
+      "contact": {
+        "id": "alex_ledoux_paladin",
+        "name": "Alex Ledoux",
+        "firm": "Paladin",
+        "status": "meeting_scheduled",
+        "tier": "A"
+      },
+      "stage": "meeting_scheduled",
+      "days_in_stage": 14,
+      "threshold": 7,
+      "days_overdue": 7,
+      "warm_intro_path": {
+        "connector": null,
+        "connection_strength": "direct",
+        "notes": "Going to second meeting"
+      },
+      "action": "Send meeting prep and agenda"
+    }
+  ],
+  "intro_opportunities": [],
+  "ready_to_contact": [
+    {
+      "contact": {
+        "id": "adam_fisher_bessemer_venture_partners",
+        "name": "Adam Fisher",
+        "firm": "Bessemer Venture Partners",
+        "tier": "A",
+        "linkedin_url": "https://il.linkedin.com/in/adamrfisher",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Tel Aviv - Exits: Wix, Fiverr - Portfolio: Cymulate, Hibob",
+      "action": "Send direct message to Adam Fisher"
+    },
+    {
+      "contact": {
+        "id": "alex_doll_ten_eleven_ventures",
+        "name": "Alex Doll",
+        "firm": "Ten Eleven Ventures",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/adollteneeleven",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Co-founder",
+      "action": "Send direct message to Alex Doll"
+    },
+    {
+      "contact": {
+        "id": "arik_kleinstein_glilot_capital",
+        "name": "Arik Kleinstein",
+        "firm": "Glilot Capital",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/arikkleinstein",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Co-founder",
+      "action": "Send direct message to Arik Kleinstein"
+    },
+    {
+      "contact": {
+        "id": "barmak_meftah_ballistic_ventures",
+        "name": "Barmak Meftah",
+        "firm": "Ballistic Ventures",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/barmakmeftah/",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Former AlienVault CEO",
+      "action": "Send direct message to Barmak Meftah"
+    },
+    {
+      "contact": {
+        "id": "don_dixon_forgepoint_capital",
+        "name": "Don Dixon",
+        "firm": "ForgePoint Capital",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/dondixon",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Trident Capital roots",
+      "action": "Send direct message to Don Dixon"
+    },
+    {
+      "contact": {
+        "id": "hadar_paz_hyperplane",
+        "name": "Hadar Paz",
+        "firm": "Hyperplane",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/hadarpaz",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Israeli security background - likely network overlap",
+      "action": "Send direct message to Hadar Paz"
+    },
+    {
+      "contact": {
+        "id": "john_brennan_yl_ventures",
+        "name": "John Brennan",
+        "firm": "YL Ventures",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/johnbrennanyl",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "US-side partner",
+      "action": "Send direct message to John Brennan"
+    },
+    {
+      "contact": {
+        "id": "liran_grinberg_team8",
+        "name": "Liran Grinberg",
+        "firm": "Team8",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/lirangrinberg",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Partner",
+      "action": "Send direct message to Liran Grinberg"
+    },
+    {
+      "contact": {
+        "id": "nadav_zafrir_team8",
+        "name": "Nadav Zafrir",
+        "firm": "Team8",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/nadav-zafrir-12a99482",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Ex-Unit 8200 commander - Israeli security elite",
+      "action": "Send direct message to Nadav Zafrir"
+    },
+    {
+      "contact": {
+        "id": "sunil_dhaliwal_amplify_partners",
+        "name": "Sunil Dhaliwal",
+        "firm": "Amplify Partners",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/sunildhaliwal/",
+        "sales_nav_url": null
+      },
+      "approach": "direct",
+      "next_action": null,
+      "notes": "Security focus - Splunk IPO, Forbes Midas List",
+      "action": "Send direct message to Sunil Dhaliwal"
+    },
+    {
+      "contact": {
+        "id": "alberto_yepez_forgepoint_capital",
+        "name": "Alberto Yepez",
+        "firm": "ForgePoint Capital",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/albertoyepez",
+        "sales_nav_url": null
+      },
+      "approach": "warm_intro",
+      "connector": "Ingrid Dickinson",
+      "next_action": null,
+      "notes": "Former Barracuda - detection background",
+      "action": "Request intro from Ingrid Dickinson"
+    },
+    {
+      "contact": {
+        "id": "chenxi_wang_rain_capital",
         "name": "Chenxi Wang",
         "firm": "Rain Capital",
         "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/chenxiwang88/"
+        "linkedin_url": "https://www.linkedin.com/in/chenxiwang88",
+        "sales_nav_url": null
       },
       "approach": "warm_intro",
       "connector": "Limor Elbaz",
-      "next_action": "Request intro from Limor",
-      "notes": "AI security focus, $500K-$2M checks",
+      "next_action": null,
+      "notes": "Former Forrester security analyst - AI security focus",
       "action": "Request intro from Limor Elbaz"
     },
     {
@@ -292,41 +1510,74 @@
         "name": "Dave DeWalt",
         "firm": "NightDragon",
         "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/ddewalt/"
+        "linkedin_url": "https://www.linkedin.com/in/ddewalt/",
+        "sales_nav_url": null
       },
       "approach": "warm_intro",
       "connector": "Guy Rosen",
-      "next_action": "Request intro from Guy Rosen",
-      "notes": "Former FireEye/McAfee CEO, security-only fund, $1M-$5M checks",
+      "next_action": null,
+      "notes": "Former FireEye/McAfee CEO - your McAfee background relevant",
       "action": "Request intro from Guy Rosen"
     },
     {
       "contact": {
-        "id": "ed_sim_boldstart",
-        "name": "Ed Sim",
-        "firm": "Boldstart Ventures",
+        "id": "jay_leek_syn_ventures",
+        "name": "Jay Leek",
+        "firm": "SYN Ventures",
         "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/edsim/"
+        "linkedin_url": "https://www.linkedin.com/in/jayleek",
+        "sales_nav_url": null
       },
       "approach": "warm_intro",
-      "connector": "Prabhath Karanth",
-      "next_action": "Request intro from Prabhath",
-      "notes": "Fund VII closed $250M, agentic AI focus, portfolio includes Snyk/Protect AI/BigID",
-      "action": "Request intro from Prabhath Karanth"
+      "connector": "Lee Kushner / Caleb Sima",
+      "next_action": null,
+      "notes": "Former Blackstone CISO - CISO network",
+      "action": "Request intro from Lee Kushner / Caleb Sima"
     },
     {
       "contact": {
-        "id": "kobi_samboursky_glilot",
+        "id": "kobi_samboursky_glilot_capital",
         "name": "Kobi Samboursky",
         "firm": "Glilot Capital",
         "tier": "A",
-        "linkedin_url": "https://www.linkedin.com/in/kobisamboursky/"
+        "linkedin_url": "https://linkedin.com/in/kobisamboursky",
+        "sales_nav_url": null
       },
       "approach": "warm_intro",
       "connector": "Al Ghous",
-      "next_action": "Request intro from Al Ghous",
-      "notes": "40+ mutual connections, AI + cyber thesis",
+      "next_action": null,
+      "notes": "Strong Israeli cyber portfolio",
       "action": "Request intro from Al Ghous"
+    },
+    {
+      "contact": {
+        "id": "mark_hatfield_ten_eleven_ventures",
+        "name": "Mark Hatfield",
+        "firm": "Ten Eleven Ventures",
+        "tier": "A",
+        "linkedin_url": "https://linkedin.com/in/mh1011",
+        "sales_nav_url": null
+      },
+      "approach": "warm_intro",
+      "connector": "Christopher Hadnagy",
+      "next_action": null,
+      "notes": "Deep security operating experience",
+      "action": "Request intro from Christopher Hadnagy"
+    },
+    {
+      "contact": {
+        "id": "ted_schlein_ballistic_ventures",
+        "name": "Ted Schlein",
+        "firm": "Ballistic Ventures",
+        "tier": "A",
+        "linkedin_url": "https://www.linkedin.com/in/ted-schlein-5630184b",
+        "sales_nav_url": null
+      },
+      "approach": "warm_intro",
+      "connector": "Prabhath Karanth",
+      "next_action": null,
+      "notes": "New fund from Kleiner security partner + Kevin Mandia",
+      "action": "Request intro from Prabhath Karanth"
     }
   ]
 }

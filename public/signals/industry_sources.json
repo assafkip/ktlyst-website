@@ -636,7 +636,8 @@
       ],
       "topics": ["vulnerabilities", "threats", "malware", "breaches"],
       "priority": 1,
-      "notes": "Threatpost security news"
+      "enabled": false,
+      "notes": "DISABLED: Threatpost shut down mid-2022, feed is stale"
     },
     {
       "source_name": "Troy Hunt",

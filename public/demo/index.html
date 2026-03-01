@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) — bot-filtered -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.__gaBotFiltered = (function(){
+        var ua = navigator.userAgent || '';
+        var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+        return bots.test(ua);
+      })();
+      if (!window.__gaBotFiltered) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-DPSD4GNJE0');
+      }
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Closing the Loop — Interactive Demo | KTLYST Labs</title>
+<meta name="description" content="See how siloed security events become governed, enforced prevention artifacts — in three phases, with full provenance.">
+<link rel="canonical" href="https://www.ktlystlabs.com/demo">
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ktlystlabs.com/demo">
+<meta property="og:title" content="Closing the Loop — Interactive Demo | KTLYST Labs">
+<meta property="og:description" content="See how siloed security events become governed, enforced prevention artifacts — in three phases, with full provenance.">
+<meta property="og:image" content="https://www.ktlystlabs.com/og-demo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="KTLYST Labs">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Closing the Loop — Interactive Demo | KTLYST Labs">
+<meta name="twitter:description" content="See how siloed security events become governed, enforced prevention artifacts — in three phases, with full provenance.">
+<meta name="twitter:image" content="https://www.ktlystlabs.com/og-demo.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #0a0e17;
+    --surface: #111827;
+    --surface-2: #1a2332;
+    --border: #1e293b;
+    --border-active: #3b82f6;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --red: #ef4444;
+    --red-dim: rgba(239, 68, 68, 0.15);
+    --orange: #f97316;
+    --orange-dim: rgba(249, 115, 22, 0.15);
+    --yellow: #eab308;
+    --yellow-dim: rgba(234, 179, 8, 0.15);
+    --green: #22c55e;
+    --green-dim: rgba(34, 197, 94, 0.15);
+    --purple: #a855f7;
+    --purple-dim: rgba(168, 85, 247, 0.15);
+    --cyan: #06b6d4;
+    --cyan-dim: rgba(6, 182, 212, 0.15);
+    --pink: #ec4899;
+    --pink-dim: rgba(236, 72, 153, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(59, 157, 255, 0.1);
+  }
+  .site-nav .nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-nav .nav-logo .labs { color: #7c9cc8; margin-left: 0.4rem; }
+  .site-nav .nav-right { display: flex; gap: 1.5rem; align-items: center; }
+  .site-nav .nav-right a {
+    text-decoration: none;
+    color: #a0b0c0;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .site-nav .nav-right a:hover { color: #3b9dff; }
+  .site-nav .cta-button {
+    background: #3b9dff;
+    color: #000 !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .site-nav .cta-button:hover { background: #5aadff; }
+
+  .scenario-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .scenario-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .scenario-name {
+    font-size: 13px;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  /* Main Layout */
+  .main {
+    display: grid;
+    grid-template-columns: 320px 1fr 340px;
+    height: calc(100vh - 95px);
+  }
+
+  /* Left Panel — Silo Events */
+  .panel-left {
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .panel-header {
+    padding: 16px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 10;
+  }
+
+  .event-card {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .event-card:hover { background: var(--surface-2); }
+  .event-card.active { background: var(--accent-glow); border-left: 3px solid var(--accent); }
+  .event-card.connected { border-left: 3px solid var(--green); }
+
+  .event-team {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  .team-cti { color: var(--cyan); background: var(--cyan-dim); }
+  .team-soc { color: var(--orange); background: var(--orange-dim); }
+  .team-email { color: var(--purple); background: var(--purple-dim); }
+  .team-iam { color: var(--yellow); background: var(--yellow-dim); }
+  .team-endpoint { color: var(--red); background: var(--red-dim); }
+
+  .event-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .event-detail {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  .event-time {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+
+  .event-status {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  .status-isolated { color: var(--text-muted); background: rgba(100,116,139,0.15); }
+  .status-linked { color: var(--green); background: var(--green-dim); }
+
+  /* Center — Graph Canvas */
+  .panel-center {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(59,130,246,0.03) 0%, transparent 70%),
+      var(--bg);
+  }
+
+  .center-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+  }
+
+  .view-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .controls {
+    display: flex;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .btn:hover { border-color: var(--accent); color: var(--text); }
+  .btn.active { border-color: var(--accent); background: var(--accent-glow); color: var(--accent); }
+  .btn.primary { background: var(--accent); color: white; border-color: var(--accent); }
+  .btn.primary:hover { background: #2563eb; }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Phase Overlay */
+  .phase-overlay {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 6px;
+    z-index: 20;
+  }
+
+  .phase-step {
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 6px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .phase-step.active {
+    background: var(--accent);
+    color: white;
+  }
+
+  .phase-step.completed {
+    color: var(--green);
+  }
+
+  /* Right Panel — Intelligence Output */
+  .panel-right {
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+  }
+
+  .intel-section {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .intel-section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .threat-narrative {
+    padding: 16px;
+    background: var(--red-dim);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .threat-narrative h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 4px;
+  }
+
+  .threat-narrative .campaign {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .threat-narrative p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .confidence-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .confidence-track {
+    flex: 1;
+    height: 4px;
+    background: rgba(239,68,68,0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .confidence-fill {
+    height: 100%;
+    background: var(--red);
+    border-radius: 2px;
+    transition: width 1s ease;
+  }
+
+  .confidence-label {
+    font-size: 11px;
+    color: var(--red);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .artifact-card {
+    padding: 12px 16px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+  }
+
+  .artifact-card.visible { opacity: 1; transform: translateY(0); }
+  .artifact-card.hidden { opacity: 0; transform: translateY(10px); }
+
+  .artifact-team {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .artifact-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .artifact-detail {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+
+  .artifact-target {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    padding: 2px 8px;
+    background: rgba(100,116,139,0.1);
+    border-radius: 4px;
+  }
+
+  .provenance-chain {
+    padding: 12px 16px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .provenance-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .provenance-step:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .prov-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .prov-source { background: var(--cyan-dim); color: var(--cyan); }
+  .prov-extract { background: var(--purple-dim); color: var(--purple); }
+  .prov-correlate { background: var(--orange-dim); color: var(--orange); }
+  .prov-govern { background: var(--green-dim); color: var(--green); }
+  .prov-enforce { background: var(--accent-glow); color: var(--accent); }
+
+  .prov-text { color: var(--text-dim); line-height: 1.4; }
+  .prov-text strong { color: var(--text); }
+
+  /* Stats bar */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* Timeline indicators */
+  .timeline-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  .timeline-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-in {
+    animation: fadeUp 0.4s ease forwards;
+  }
+
+  /* Pulse animation for active connections */
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  .pulse { animation: pulse 2s ease-in-out infinite; }
+
+  /* Staggered entrance animations */
+  .panel-left { animation: slideInLeft 0.5s ease both; }
+  .panel-center { animation: fadeIn 0.6s ease 0.15s both; }
+  .panel-right { animation: slideInRight 0.5s ease 0.3s both; }
+
+  .event-card { opacity: 0; animation: fadeUp 0.4s ease both; }
+  .event-card:nth-child(2) { animation-delay: 0.15s; }
+  .event-card:nth-child(3) { animation-delay: 0.25s; }
+  .event-card:nth-child(4) { animation-delay: 0.35s; }
+  .event-card:nth-child(5) { animation-delay: 0.45s; }
+  .event-card:nth-child(6) { animation-delay: 0.55s; }
+
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Back link */
+  .back-link {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .back-link:hover { color: var(--text); }
+  .back-link svg { width: 14px; height: 14px; }
+
+  /* Waitlist CTA */
+  .waitlist-btn {
+    padding: 7px 18px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    border: none;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .waitlist-btn:hover {
+    background: #2563eb;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  /* "Before KTLYST" dimmer */
+  .before-label {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+    pointer-events: none;
+    transition: opacity 0.5s;
+  }
+
+  .before-label .big {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-dim);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Bottom stat strip */
+  .bottom-strip {
+    position: absolute;
+    bottom: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 24px;
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .bottom-strip.visible { opacity: 1; }
+
+  .strip-stat {
+    text-align: center;
+  }
+
+  .strip-stat .val {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--green);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .strip-stat .lbl {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .main {
+      grid-template-columns: 280px 1fr 300px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .main {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    .panel-left, .panel-right {
+      border: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .panel-center {
+      height: 500px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">KTLYST <span class="labs">Labs</span></a>
+  <div class="nav-right">
+    <a href="/#how">How It Works</a>
+    <a href="/#partner">Design Partner</a>
+    <a href="/signals">Signals</a>
+    <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+  </div>
+</nav>
+<div class="scenario-bar">
+  <div>
+    <span class="scenario-label">Live Scenario &mdash; </span>
+    <span class="scenario-name">Scattered Spider Variant — Multi-Vector Campaign</span>
+  </div>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScr8iT20E4YuavrMgYM7EEOsNUAKZ61c1RkCLspidxHIOaNEg/viewform?usp=dialog" target="_blank" class="waitlist-btn">Join the Waitlist</a>
+</div>
+
+<div class="main">
+
+  <!-- LEFT: Silo Events -->
+  <div class="panel-left">
+    <div class="panel-header">
+      Incoming Events &mdash; 5 Teams, 72 Hours
+    </div>
+
+    <div class="event-card" data-event="0" id="evt-0">
+      <span class="event-status status-isolated" id="status-0">Isolated</span>
+      <div class="event-team team-cti">CTI &mdash; Threat Intel</div>
+      <div class="event-title">FBI Advisory: Scattered Spider variant targeting financial sector</div>
+      <div class="event-detail">New social engineering playbook. Targets helpdesk via phone + SMS. Requests MFA reset. Pivots to Okta admin console.</div>
+      <div class="event-time">Mon 09:14 AM &mdash; Severity: High</div>
+    </div>
+
+    <div class="event-card" data-event="1" id="evt-1">
+      <span class="event-status status-isolated" id="status-1">Isolated</span>
+      <div class="event-team team-soc">SOC &mdash; Operations</div>
+      <div class="event-title">VPN anomaly: auth from unrecognized device</div>
+      <div class="event-detail">Service account VPN login from residential IP in Phoenix, AZ. Device not enrolled in MDM. User claims no login.</div>
+      <div class="event-time">Mon 02:47 PM &mdash; Severity: Medium</div>
+    </div>
+
+    <div class="event-card" data-event="2" id="evt-2">
+      <span class="event-status status-isolated" id="status-2">Isolated</span>
+      <div class="event-team team-email">Email Security</div>
+      <div class="event-title">Spear-phish to 3 helpdesk staff</div>
+      <div class="event-detail">Spoofed IT leadership. Links to fake Okta SSO page. 1 user clicked. No credential submission detected.</div>
+      <div class="event-time">Tue 10:22 AM &mdash; Severity: Medium</div>
+    </div>
+
+    <div class="event-card" data-event="3" id="evt-3">
+      <span class="event-status status-isolated" id="status-3">Isolated</span>
+      <div class="event-team team-iam">IAM &mdash; Identity</div>
+      <div class="event-title">MFA reset request via helpdesk ticket</div>
+      <div class="event-detail">User "jchen" submitted ticket claiming new phone. Helpdesk reset MFA without voice verification. Same user as VPN anomaly.</div>
+      <div class="event-time">Tue 03:15 PM &mdash; Severity: Low</div>
+    </div>
+
+    <div class="event-card" data-event="4" id="evt-4">
+      <span class="event-status status-isolated" id="status-4">Isolated</span>
+      <div class="event-team team-endpoint">Endpoint &mdash; EDR</div>
+      <div class="event-title">PowerShell execution from jchen workstation</div>
+      <div class="event-detail">Encoded PowerShell command downloading remote toolkit. Matches known Scattered Spider stage-2 loader pattern.</div>
+      <div class="event-time">Wed 01:08 AM &mdash; Severity: High</div>
+    </div>
+  </div>
+
+  <!-- CENTER: Graph -->
+  <div class="panel-center">
+    <div class="center-header">
+      <span class="view-label" id="view-label">Before KTLYST &mdash; Siloed View</span>
+      <div class="controls">
+        <button class="btn active" id="btn-siloed" onclick="showPhase('siloed')">Siloed</button>
+        <button class="btn" id="btn-connected" onclick="showPhase('connected')">Connected</button>
+        <button class="btn" id="btn-governed" onclick="showPhase('governed')">Governed</button>
+      </div>
+    </div>
+
+    <canvas id="graph"></canvas>
+
+    <div class="before-label" id="before-label">
+      <span class="big">5 events. 5 teams.<br>0 connections.</span>
+      Each team triages independently.<br>
+      The attacker's campaign stays invisible.
+    </div>
+
+    <div class="bottom-strip" id="bottom-strip">
+      <div class="strip-stat">
+        <div class="val" id="strip-events">5</div>
+        <div class="lbl">Events Linked</div>
+      </div>
+      <div class="strip-stat">
+        <div class="val" id="strip-confidence">92%</div>
+        <div class="lbl">Campaign Confidence</div>
+      </div>
+      <div class="strip-stat">
+        <div class="val" id="strip-artifacts">7</div>
+        <div class="lbl">Artifacts Generated</div>
+      </div>
+      <div class="strip-stat">
+        <div class="val" id="strip-time">3 min</div>
+        <div class="lbl">Time to Close Loop</div>
+      </div>
+    </div>
+
+    <div class="phase-overlay">
+      <div class="phase-step active" id="phase-1" onclick="showPhase('siloed')">1. Siloed</div>
+      <div class="phase-step" id="phase-2" onclick="showPhase('connected')">2. Connected</div>
+      <div class="phase-step" id="phase-3" onclick="showPhase('governed')">3. Governed</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Intelligence Output -->
+  <div class="panel-right">
+    <div class="panel-header">
+      KTLYST Output
+    </div>
+
+    <div class="stats-bar" id="stats-bar" style="opacity: 0;">
+      <div class="stat">
+        <div class="stat-value" id="stat-sources">0</div>
+        <div class="stat-label">Sources</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="stat-gates">0</div>
+        <div class="stat-label">Gates Passed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="stat-artifacts-count">0</div>
+        <div class="stat-label">Artifacts</div>
+      </div>
+    </div>
+
+    <!-- Before KTLYST state -->
+    <div id="output-before">
+      <div class="intel-section">
+        <div class="intel-section-title">Current State</div>
+        <div style="padding: 20px; text-align: center; color: var(--text-muted);">
+          <div style="font-size: 40px; margin-bottom: 12px;">&#x1F6AB;</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--text-dim); margin-bottom: 8px;">No Cross-Team Intelligence</div>
+          <div style="font-size: 12px; line-height: 1.5;">
+            Each team sees their own event.<br>
+            No system connects the dots.<br>
+            The campaign continues.
+          </div>
+        </div>
+      </div>
+
+      <div class="intel-section">
+        <div class="intel-section-title">What Each Team Knows</div>
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--cyan);">CTI</div>
+          <div class="artifact-detail">"We forwarded the advisory. Not sure if anyone read it."</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--orange);">SOC</div>
+          <div class="artifact-detail">"VPN anomaly — closed as false positive. User said it wasn't them."</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--purple);">Email Sec</div>
+          <div class="artifact-detail">"Blocked the phishing domain. Filed the ticket."</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--yellow);">IAM</div>
+          <div class="artifact-detail">"MFA reset completed per SLA. No anomaly flagged."</div>
+        </div>
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--red);">Endpoint</div>
+          <div class="artifact-detail">"PowerShell alert. Escalated to IR. Waiting on triage."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- After KTLYST: Connected -->
+    <div id="output-connected" style="display: none;">
+      <div class="intel-section">
+        <div class="intel-section-title">Threat Narrative Reconstructed</div>
+        <div class="threat-narrative">
+          <h3>Scattered Spider Variant — Active Campaign</h3>
+          <div class="campaign">Campaign ID: CAMP-2026-0847 &mdash; Financial Sector</div>
+          <p>KTLYST correlated 5 events from 5 teams into a single campaign. The attacker used social engineering (phone + phishing) to compromise helpdesk → reset MFA → gain VPN access → deploy stage-2 tooling. Each step was processed by a different team. None saw the full chain.</p>
+          <div class="confidence-bar">
+            <span class="confidence-label">Campaign Confidence</span>
+            <div class="confidence-track"><div class="confidence-fill" style="width: 92%;"></div></div>
+            <span class="confidence-label">92%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intel-section">
+        <div class="intel-section-title">Correlation Evidence</div>
+        <div class="provenance-chain">
+          <div class="provenance-step">
+            <div class="prov-icon prov-source">1</div>
+            <div class="prov-text"><strong>FBI Advisory (Mon 09:14)</strong> — Scattered Spider social engineering playbook targeting financial sector helpdesks. Source: CISA AA23-353A variant.</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-extract">2</div>
+            <div class="prov-text"><strong>VPN anomaly (Mon 14:47)</strong> — Unregistered device matches TTP: "attacker registers new device post-MFA compromise." User: jchen.</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-correlate">3</div>
+            <div class="prov-text"><strong>Spear-phish (Tue 10:22)</strong> — Fake Okta page matches advisory TTP: "credential phishing via spoofed SSO portal." Targets: helpdesk staff.</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-govern">4</div>
+            <div class="prov-text"><strong>MFA reset (Tue 15:15)</strong> — Same user jchen. No voice verification = violated policy. Links to VPN anomaly + advisory prediction.</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-enforce">5</div>
+            <div class="prov-text"><strong>PowerShell exec (Wed 01:08)</strong> — Stage-2 loader matches advisory IOC pattern. Workstation: jchen. Kill chain complete.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intel-section">
+        <div class="intel-section-title">MITRE ATT&CK Chain</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+          <span class="timeline-badge" style="color: var(--cyan); background: var(--cyan-dim);"><span class="timeline-dot" style="background: var(--cyan);"></span> T1566.001 Phishing</span>
+          <span class="timeline-badge" style="color: var(--purple); background: var(--purple-dim);"><span class="timeline-dot" style="background: var(--purple);"></span> T1078 Valid Accounts</span>
+          <span class="timeline-badge" style="color: var(--yellow); background: var(--yellow-dim);"><span class="timeline-dot" style="background: var(--yellow);"></span> T1556 MFA Compromise</span>
+          <span class="timeline-badge" style="color: var(--orange); background: var(--orange-dim);"><span class="timeline-dot" style="background: var(--orange);"></span> T1059.001 PowerShell</span>
+          <span class="timeline-badge" style="color: var(--red); background: var(--red-dim);"><span class="timeline-dot" style="background: var(--red);"></span> T1105 Remote Tools</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- After KTLYST: Governed -->
+    <div id="output-governed" style="display: none;">
+      <div class="intel-section">
+        <div class="intel-section-title">Governed Prevention Artifacts</div>
+        <p style="font-size: 12px; color: var(--text-dim); margin-bottom: 12px;">One campaign narrative → 7 enforced artifacts across 5 teams. Each artifact has provenance, ownership, and audit trail.</p>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--orange);">SOC — Detection Engineering</div>
+          <div class="artifact-title">VPN + MFA correlation rule</div>
+          <div class="artifact-detail">Detect when VPN auth from unregistered device occurs within 48h of MFA reset for same user. 27/27 validation gates passed.</div>
+          <div class="artifact-target">→ Snowflake SQL + Splunk SPL</div>
+        </div>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--yellow);">IAM — Prevention</div>
+          <div class="artifact-title">MFA reset guardrail: require voice verification</div>
+          <div class="artifact-detail">Block MFA resets via ticket-only. Require live voice call + manager approval for helpdesk-initiated resets.</div>
+          <div class="artifact-target">→ Okta Policy + ServiceNow Workflow</div>
+        </div>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--purple);">Email — Prevention</div>
+          <div class="artifact-title">Lookalike domain block + phishing pattern rule</div>
+          <div class="artifact-detail">Add spoofed SSO domains to block list. Flag emails to helpdesk staff that contain SSO/MFA keywords from external senders.</div>
+          <div class="artifact-target">→ Proofpoint + Exchange Transport Rule</div>
+        </div>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--red);">Endpoint — Detection</div>
+          <div class="artifact-title">Stage-2 loader behavioral rule</div>
+          <div class="artifact-detail">Detect encoded PowerShell downloading from residential IPs where user had recent MFA change. Behavioral pattern, not IOC-based.</div>
+          <div class="artifact-target">→ CrowdStrike Custom IOA</div>
+        </div>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--cyan);">CTI — Strategic</div>
+          <div class="artifact-title">Campaign intelligence package</div>
+          <div class="artifact-detail">Full kill chain documented with provenance. Shared with ISAC. Feeds future correlation for Scattered Spider variant evolution.</div>
+          <div class="artifact-target">→ ThreatConnect + MISP</div>
+        </div>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--green);">IR — Playbook</div>
+          <div class="artifact-title">Scattered Spider response playbook</div>
+          <div class="artifact-detail">Step-by-step: identify social engineering vector, isolate compromised identity, check lateral movement, validate MFA integrity org-wide.</div>
+          <div class="artifact-target">→ Jira + PagerDuty</div>
+        </div>
+
+        <div class="artifact-card">
+          <div class="artifact-team" style="color: var(--pink);">GRC — Compliance</div>
+          <div class="artifact-title">Control gap documentation</div>
+          <div class="artifact-detail">Helpdesk MFA reset process violated SOX control requirements. Gap documented with remediation timeline and evidence chain.</div>
+          <div class="artifact-target">→ ServiceNow GRC</div>
+        </div>
+      </div>
+
+      <div class="intel-section">
+        <div class="intel-section-title">Provenance Chain</div>
+        <div class="provenance-chain">
+          <div class="provenance-step">
+            <div class="prov-icon prov-source">S</div>
+            <div class="prov-text"><strong>5 source events</strong> ingested from 5 teams</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-extract">E</div>
+            <div class="prov-text"><strong>12 behavioral indicators</strong> extracted deterministically (zero inference)</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-correlate">C</div>
+            <div class="prov-text"><strong>1 campaign reconstructed</strong> from cross-team correlation</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-govern">G</div>
+            <div class="prov-text"><strong>Human approved</strong> — CISO reviewed narrative + artifacts in 3 min</div>
+          </div>
+          <div class="provenance-step">
+            <div class="prov-icon prov-enforce">→</div>
+            <div class="prov-text"><strong>7 artifacts enforced</strong> across 5 teams, 9 target systems, 40 seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intel-section">
+        <div class="intel-section-title">The Loop is Closed</div>
+        <div style="padding: 16px; background: var(--green-dim); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; text-align: center;">
+          <div style="font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 8px;">This campaign can't work again.</div>
+          <div style="font-size: 12px; color: var(--text-dim); line-height: 1.5;">
+            MFA reset process hardened. VPN correlation rule active.<br>
+            Phishing pattern blocked. PowerShell loader detected.<br>
+            Full kill chain documented with provenance.<br><br>
+            <strong style="color: var(--text);">Every lesson became an enforced defense.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ============================================================
+// Graph / Canvas Drawing
+// ============================================================
+const canvas = document.getElementById('graph');
+const ctx = canvas.getContext('2d');
+
+let dpr = window.devicePixelRatio || 1;
+let W, H;
+let currentPhase = 'siloed';
+let animProgress = 0;
+let animTarget = 0;
+let animFrame;
+
+const teamColors = {
+  cti: '#06b6d4',
+  soc: '#f97316',
+  email: '#a855f7',
+  iam: '#eab308',
+  endpoint: '#ef4444'
+};
+
+const teamLabels = ['CTI', 'SOC', 'Email', 'IAM', 'Endpoint'];
+const teamKeys = ['cti', 'soc', 'email', 'iam', 'endpoint'];
+
+// Node positions (calculated on resize)
+let nodes = [];
+let centerNode = null;
+
+function resize() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  W = rect.width;
+  H = rect.height;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  calcNodes();
+  draw();
+}
+
+function calcNodes() {
+  const cx = W / 2;
+  const cy = H / 2 - 30;
+  const radius = Math.min(W, H) * 0.3;
+
+  centerNode = { x: cx, y: cy, r: 32, label: 'KTLYST', color: '#3b82f6' };
+
+  nodes = teamKeys.map((key, i) => {
+    const angle = (-Math.PI / 2) + (i / 5) * Math.PI * 2;
+    return {
+      x: cx + Math.cos(angle) * radius,
+      y: cy + Math.sin(angle) * radius,
+      r: 30,
+      label: teamLabels[i],
+      color: teamColors[key],
+      key: key
+    };
+  });
+}
+
+// Edges between events for "connected" phase
+const connections = [
+  [0, 2], // CTI → Email (advisory predicted phishing)
+  [2, 3], // Email → IAM (phishing → MFA reset)
+  [1, 3], // SOC → IAM (VPN anomaly → same user MFA reset)
+  [3, 4], // IAM → Endpoint (MFA reset → PowerShell)
+  [0, 4], // CTI → Endpoint (advisory predicted stage-2)
+  [1, 4], // SOC → Endpoint (VPN user → PowerShell user)
+];
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+
+  if (currentPhase === 'siloed') {
+    drawSiloed();
+  } else if (currentPhase === 'connected') {
+    drawConnected();
+  } else {
+    drawGoverned();
+  }
+}
+
+function drawSiloed() {
+  // Draw isolated nodes with no connections
+  nodes.forEach((n, i) => {
+    // Subtle glow
+    const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 2.5);
+    grad.addColorStop(0, n.color + '20');
+    grad.addColorStop(1, 'transparent');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r * 2.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Node circle
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = n.color + '25';
+    ctx.fill();
+    ctx.strokeStyle = n.color;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Label
+    ctx.fillStyle = n.color;
+    ctx.font = '600 11px DM Sans, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(n.label, n.x, n.y);
+
+    // "?" mark below
+    ctx.fillStyle = '#64748b';
+    ctx.font = '400 10px DM Sans, sans-serif';
+    ctx.fillText('isolated', n.x, n.y + n.r + 14);
+  });
+}
+
+function drawConnected() {
+  const p = animProgress;
+
+  // Draw connections (edges)
+  connections.forEach(([a, b], idx) => {
+    const delay = idx * 0.12;
+    const edgeP = Math.max(0, Math.min(1, (p - delay) / 0.3));
+    if (edgeP <= 0) return;
+
+    const na = nodes[a], nb = nodes[b];
+    const ex = na.x + (nb.x - na.x) * edgeP;
+    const ey = na.y + (nb.y - na.y) * edgeP;
+
+    ctx.beginPath();
+    ctx.moveTo(na.x, na.y);
+    ctx.lineTo(ex, ey);
+    ctx.strokeStyle = '#3b82f6' + Math.round(edgeP * 80).toString(16).padStart(2, '0');
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Edge particle
+    if (edgeP < 1) {
+      ctx.beginPath();
+      ctx.arc(ex, ey, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#3b82f6';
+      ctx.fill();
+    }
+  });
+
+  // Draw center node (KTLYST)
+  if (p > 0.3) {
+    const cp = Math.min(1, (p - 0.3) / 0.3);
+
+    // Center glow
+    const cgrad = ctx.createRadialGradient(centerNode.x, centerNode.y, 0, centerNode.x, centerNode.y, centerNode.r * 4);
+    cgrad.addColorStop(0, '#3b82f6' + Math.round(cp * 30).toString(16).padStart(2, '0'));
+    cgrad.addColorStop(1, 'transparent');
+    ctx.fillStyle = cgrad;
+    ctx.beginPath();
+    ctx.arc(centerNode.x, centerNode.y, centerNode.r * 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Center circle
+    ctx.beginPath();
+    ctx.arc(centerNode.x, centerNode.y, centerNode.r * cp, 0, Math.PI * 2);
+    ctx.fillStyle = '#3b82f620';
+    ctx.fill();
+    ctx.strokeStyle = '#3b82f6';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Center label
+    ctx.globalAlpha = cp;
+    ctx.fillStyle = '#3b82f6';
+    ctx.font = '700 12px DM Sans, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('KTLYST', centerNode.x, centerNode.y);
+    ctx.globalAlpha = 1;
+
+    // Lines from center to each node
+    nodes.forEach(n => {
+      const lp = Math.min(1, (p - 0.5) / 0.3);
+      if (lp <= 0) return;
+      ctx.beginPath();
+      ctx.moveTo(centerNode.x, centerNode.y);
+      const lx = centerNode.x + (n.x - centerNode.x) * lp;
+      const ly = centerNode.y + (n.y - centerNode.y) * lp;
+      ctx.lineTo(lx, ly);
+      ctx.strokeStyle = n.color + '40';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    });
+  }
+
+  // Draw team nodes
+  nodes.forEach((n) => {
+    const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 2.5);
+    grad.addColorStop(0, n.color + '20');
+    grad.addColorStop(1, 'transparent');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r * 2.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = n.color + '25';
+    ctx.fill();
+    ctx.strokeStyle = n.color;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.fillStyle = n.color;
+    ctx.font = '600 11px DM Sans, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(n.label, n.x, n.y);
+
+    ctx.fillStyle = p > 0.7 ? '#22c55e' : '#64748b';
+    ctx.font = '400 10px DM Sans, sans-serif';
+    ctx.fillText(p > 0.7 ? 'linked' : 'linking...', n.x, n.y + n.r + 14);
+  });
+}
+
+function drawGoverned() {
+  const p = animProgress;
+
+  // All connections solid
+  connections.forEach(([a, b]) => {
+    const na = nodes[a], nb = nodes[b];
+    ctx.beginPath();
+    ctx.moveTo(na.x, na.y);
+    ctx.lineTo(nb.x, nb.y);
+    ctx.strokeStyle = '#3b82f640';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  });
+
+  // Center node with strong glow
+  const cgrad = ctx.createRadialGradient(centerNode.x, centerNode.y, 0, centerNode.x, centerNode.y, centerNode.r * 5);
+  cgrad.addColorStop(0, '#22c55e18');
+  cgrad.addColorStop(1, 'transparent');
+  ctx.fillStyle = cgrad;
+  ctx.beginPath();
+  ctx.arc(centerNode.x, centerNode.y, centerNode.r * 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(centerNode.x, centerNode.y, centerNode.r, 0, Math.PI * 2);
+  ctx.fillStyle = '#22c55e20';
+  ctx.fill();
+  ctx.strokeStyle = '#22c55e';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  ctx.fillStyle = '#22c55e';
+  ctx.font = '700 12px DM Sans, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('KTLYST', centerNode.x, centerNode.y);
+
+  // Lines from center — now solid green (governed)
+  nodes.forEach(n => {
+    ctx.beginPath();
+    ctx.moveTo(centerNode.x, centerNode.y);
+    ctx.lineTo(n.x, n.y);
+    ctx.strokeStyle = n.color + '60';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Small artifact icons flowing out
+    if (p > 0.3) {
+      const ap = ((Date.now() / 2000 + nodes.indexOf(n) * 0.2) % 1);
+      const ax = centerNode.x + (n.x - centerNode.x) * ap;
+      const ay = centerNode.y + (n.y - centerNode.y) * ap;
+      ctx.beginPath();
+      ctx.arc(ax, ay, 4, 0, Math.PI * 2);
+      ctx.fillStyle = n.color;
+      ctx.fill();
+    }
+  });
+
+  // Team nodes with green border (governed)
+  nodes.forEach((n) => {
+    const grad = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 2.5);
+    grad.addColorStop(0, n.color + '20');
+    grad.addColorStop(1, 'transparent');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r * 2.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = n.color + '25';
+    ctx.fill();
+    ctx.strokeStyle = '#22c55e';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    ctx.fillStyle = n.color;
+    ctx.font = '600 11px DM Sans, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(n.label, n.x, n.y);
+
+    ctx.fillStyle = '#22c55e';
+    ctx.font = '600 10px DM Sans, sans-serif';
+    ctx.fillText('governed', n.x, n.y + n.r + 14);
+  });
+}
+
+// ============================================================
+// Phase transitions
+// ============================================================
+function showPhase(phase) {
+  gtag('event', 'demo_stage_reached', { stage_name: phase });
+  currentPhase = phase;
+  animProgress = 0;
+  animTarget = 1;
+
+  // Update buttons
+  document.querySelectorAll('.controls .btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.phase-step').forEach(s => s.classList.remove('active', 'completed'));
+
+  if (phase === 'siloed') {
+    document.getElementById('btn-siloed').classList.add('active');
+    document.getElementById('phase-1').classList.add('active');
+    document.getElementById('view-label').textContent = 'Before KTLYST — Siloed View';
+    document.getElementById('before-label').style.opacity = '1';
+    document.getElementById('bottom-strip').classList.remove('visible');
+    document.getElementById('output-before').style.display = '';
+    document.getElementById('output-connected').style.display = 'none';
+    document.getElementById('output-governed').style.display = 'none';
+    document.getElementById('stats-bar').style.opacity = '0';
+
+    // Reset event card statuses
+    for (let i = 0; i < 5; i++) {
+      document.getElementById('evt-' + i).classList.remove('connected');
+      document.getElementById('status-' + i).className = 'event-status status-isolated';
+      document.getElementById('status-' + i).textContent = 'Isolated';
+    }
+
+  } else if (phase === 'connected') {
+    document.getElementById('btn-connected').classList.add('active');
+    document.getElementById('phase-1').classList.add('completed');
+    document.getElementById('phase-2').classList.add('active');
+    document.getElementById('view-label').textContent = 'KTLYST — Connecting Events';
+    document.getElementById('before-label').style.opacity = '0';
+    document.getElementById('bottom-strip').classList.add('visible');
+    document.getElementById('output-before').style.display = 'none';
+    document.getElementById('output-connected').style.display = '';
+    document.getElementById('output-governed').style.display = 'none';
+    document.getElementById('stats-bar').style.opacity = '1';
+    document.getElementById('stat-sources').textContent = '5';
+    document.getElementById('stat-gates').textContent = '27';
+    document.getElementById('stat-artifacts-count').textContent = '—';
+
+    for (let i = 0; i < 5; i++) {
+      document.getElementById('evt-' + i).classList.add('connected');
+      document.getElementById('status-' + i).className = 'event-status status-linked';
+      document.getElementById('status-' + i).textContent = 'Linked';
+    }
+
+  } else if (phase === 'governed') {
+    document.getElementById('btn-governed').classList.add('active');
+    document.getElementById('phase-1').classList.add('completed');
+    document.getElementById('phase-2').classList.add('completed');
+    document.getElementById('phase-3').classList.add('active');
+    document.getElementById('view-label').textContent = 'KTLYST — Governed & Enforced';
+    document.getElementById('before-label').style.opacity = '0';
+    document.getElementById('bottom-strip').classList.add('visible');
+    document.getElementById('output-before').style.display = 'none';
+    document.getElementById('output-connected').style.display = 'none';
+    document.getElementById('output-governed').style.display = '';
+    document.getElementById('stats-bar').style.opacity = '1';
+    document.getElementById('stat-sources').textContent = '5';
+    document.getElementById('stat-gates').textContent = '27';
+    document.getElementById('stat-artifacts-count').textContent = '7';
+
+    for (let i = 0; i < 5; i++) {
+      document.getElementById('evt-' + i).classList.add('connected');
+      document.getElementById('status-' + i).className = 'event-status status-linked';
+      document.getElementById('status-' + i).textContent = 'Governed';
+    }
+  }
+
+  startAnim();
+}
+
+function startAnim() {
+  if (animFrame) cancelAnimationFrame(animFrame);
+
+  function tick() {
+    if (animProgress < animTarget) {
+      animProgress += 0.015;
+      if (animProgress > animTarget) animProgress = animTarget;
+      draw();
+      animFrame = requestAnimationFrame(tick);
+    } else if (currentPhase === 'governed') {
+      // Keep animating for governed phase (particle flow)
+      draw();
+      animFrame = requestAnimationFrame(tick);
+    }
+  }
+  animFrame = requestAnimationFrame(tick);
+}
+
+// Event card click → highlight
+document.querySelectorAll('.event-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.event-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+  });
+});
+
+// GA4: demo_started — fires once on first scroll past first section or first interactive click
+(function() {
+  var fired = false;
+  function fireDemoStarted() {
+    if (fired) return;
+    fired = true;
+    gtag('event', 'demo_started', { demo_page: 'closing_the_loop' });
+  }
+  // Fire on first click of any interactive element
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.event-card, .btn, .phase-step')) fireDemoStarted();
+  });
+  // Fire on scroll past first 300px
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) fireDemoStarted();
+  }, { passive: true });
+})();
+
+// Init
+window.addEventListener('resize', resize);
+resize();
+showPhase('siloed');
+</script>
+
+</body>
+</html>

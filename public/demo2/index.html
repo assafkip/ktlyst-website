@@ -1,0 +1,3162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) — bot-filtered -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.__gaBotFiltered = (function(){
+        var ua = navigator.userAgent || '';
+        var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+        return bots.test(ua);
+      })();
+      if (!window.__gaBotFiltered) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-DPSD4GNJE0');
+      }
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provenance Explorer — From Intel to Enforcement | KTLYST Labs</title>
+<meta name="description" content="Trace a single FBI advisory through Splunk, Snowflake, Okta, CrowdStrike, Jira, and ServiceNow — with full artifact provenance at every step.">
+<link rel="canonical" href="https://www.ktlystlabs.com/demo2">
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ktlystlabs.com/demo2">
+<meta property="og:title" content="Provenance Explorer — From Intel to Enforcement | KTLYST Labs">
+<meta property="og:description" content="Trace a single FBI advisory through Splunk, Snowflake, Okta, CrowdStrike, Jira, and ServiceNow — with full artifact provenance at every step.">
+<meta property="og:image" content="https://www.ktlystlabs.com/og-demo2.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="KTLYST Labs">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Provenance Explorer — From Intel to Enforcement | KTLYST Labs">
+<meta name="twitter:description" content="Trace a single FBI advisory through Splunk, Snowflake, Okta, CrowdStrike, Jira, and ServiceNow — with full artifact provenance.">
+<meta name="twitter:image" content="https://www.ktlystlabs.com/og-demo2.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #0a0e17;
+    --surface: #111827;
+    --surface-2: #1a2332;
+    --border: #1e293b;
+    --border-active: #3b82f6;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --text-muted: #64748b;
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --red: #ef4444;
+    --red-dim: rgba(239, 68, 68, 0.15);
+    --orange: #f97316;
+    --orange-dim: rgba(249, 115, 22, 0.15);
+    --yellow: #eab308;
+    --yellow-dim: rgba(234, 179, 8, 0.15);
+    --green: #22c55e;
+    --green-dim: rgba(34, 197, 94, 0.15);
+    --purple: #a855f7;
+    --purple-dim: rgba(168, 85, 247, 0.15);
+    --cyan: #06b6d4;
+    --cyan-dim: rgba(6, 182, 212, 0.15);
+    --pink: #ec4899;
+    --pink-dim: rgba(236, 72, 153, 0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── Header ─── */
+  .site-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(59, 157, 255, 0.1);
+  }
+  .site-nav .nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-nav .nav-logo .labs { color: #7c9cc8; margin-left: 0.4rem; }
+  .site-nav .nav-right { display: flex; gap: 1.5rem; align-items: center; }
+  .site-nav .nav-right a {
+    text-decoration: none;
+    color: #a0b0c0;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  .site-nav .nav-right a:hover { color: #3b9dff; }
+  .site-nav .cta-button {
+    background: #3b9dff;
+    color: #000 !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .site-nav .cta-button:hover { background: #5aadff; }
+
+  /* .header removed — replaced by .site-nav */
+
+  .scenario-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .scenario-name {
+    font-size: 13px;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  /* ─── Counter Strip ─── */
+  .counter-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(34,197,94,0.06));
+    border-bottom: 1px solid var(--border);
+  }
+
+  .counter-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .counter-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .counter-label {
+    color: var(--text-dim);
+    font-weight: 400;
+  }
+
+  .counter-arrow {
+    color: var(--text-muted);
+    font-size: 18px;
+  }
+
+  /* ─── Tab Bar ─── */
+  .tab-bar {
+    display: flex;
+    gap: 6px;
+    padding: 16px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tab:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+    background: var(--surface-2);
+  }
+
+  .tab.active {
+    border-color: var(--tab-color, var(--accent));
+    background: var(--tab-bg, var(--accent-glow));
+    color: var(--tab-color, var(--accent));
+  }
+
+  .tab-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tab-color, var(--accent));
+    flex-shrink: 0;
+  }
+
+  .tab-tool {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* ─── Main Area ─── */
+  .main-area {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    height: calc(100vh - 170px);
+    min-height: 600px;
+  }
+
+  /* ─── Tool Mock Container ─── */
+  .mock-container {
+    overflow-y: auto;
+    padding: 24px;
+  }
+
+  .mock-screen {
+    display: none;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    background: #000;
+    min-height: 500px;
+  }
+
+  .mock-screen.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── Generic Mock Elements ─── */
+  .mock-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .mock-titlebar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mock-titlebar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .mock-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 16px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mock-nav-item {
+    padding: 10px 14px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    font-size: 12px;
+  }
+
+  .mock-nav-item.active {
+    border-bottom-color: currentColor;
+    font-weight: 600;
+  }
+
+  .mock-body {
+    padding: 16px;
+  }
+
+  .mock-sidebar {
+    width: 200px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    padding: 12px 0;
+    flex-shrink: 0;
+  }
+
+  .mock-sidebar-item {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mock-sidebar-item.active {
+    background: rgba(255,255,255,0.05);
+    font-weight: 600;
+  }
+
+  .mock-sidebar-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.1);
+    flex-shrink: 0;
+  }
+
+  .code-block {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre;
+    tab-size: 2;
+  }
+
+  .ktlyst-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.25);
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .ktlyst-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse-dot 2s infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ─── Provenance Sidebar ─── */
+  .provenance-panel {
+    border-left: 1px solid var(--border);
+    overflow-y: auto;
+    background: var(--surface);
+    padding: 0;
+  }
+
+  .prov-header {
+    padding: 16px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 10;
+  }
+
+  .prov-section {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .prov-section-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .prov-chain {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .prov-chain::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--cyan), var(--accent), var(--green));
+    border-radius: 1px;
+  }
+
+  .prov-step {
+    position: relative;
+    padding: 8px 0;
+  }
+
+  .prov-step::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 14px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: var(--surface);
+  }
+
+  .prov-step.source::before { border-color: var(--cyan); background: var(--cyan-dim); }
+  .prov-step.process::before { border-color: var(--accent); background: var(--accent-glow); }
+  .prov-step.approve::before { border-color: var(--green); background: var(--green-dim); }
+  .prov-step.deploy::before { border-color: var(--green); background: var(--green); }
+
+  .prov-step-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .prov-step-detail {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.3;
+  }
+
+  .prov-step-time {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  .prov-artifact-id {
+    display: inline-block;
+    padding: 3px 8px;
+    background: rgba(59,130,246,0.1);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: 8px;
+  }
+
+  .prov-mitre {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--red);
+    font-weight: 500;
+    margin-top: 4px;
+    margin-right: 4px;
+  }
+
+  .prov-campaign {
+    padding: 12px;
+    background: var(--red-dim);
+    border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 8px;
+  }
+
+  .prov-campaign-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .prov-campaign-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .prov-campaign-name {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: SPLUNK
+     ────────────────────────────────────── */
+  .splunk-mock { background: #0C1017; }
+
+  .splunk-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #1A1C21;
+    border-bottom: 1px solid #2A2D35;
+  }
+
+  .splunk-logo {
+    font-size: 16px;
+    font-weight: 800;
+    color: #78BE20;
+    letter-spacing: 1px;
+  }
+
+  .splunk-logo span {
+    color: rgba(255,255,255,0.4);
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+
+  .splunk-nav {
+    display: flex;
+    gap: 0;
+    background: #111318;
+    border-bottom: 1px solid #2A2D35;
+    padding: 0 16px;
+  }
+
+  .splunk-nav-item {
+    padding: 10px 16px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    border-bottom: 2px solid transparent;
+  }
+
+  .splunk-nav-item.active {
+    color: #78BE20;
+    border-bottom-color: #78BE20;
+    font-weight: 600;
+  }
+
+  .splunk-searchbar {
+    display: flex;
+    align-items: center;
+    margin: 12px 16px;
+    background: #171A21;
+    border: 1px solid #3A3D45;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .splunk-searchbar-prefix {
+    padding: 10px 12px;
+    background: #1E2128;
+    color: #78BE20;
+    font-size: 12px;
+    font-weight: 600;
+    border-right: 1px solid #3A3D45;
+    white-space: nowrap;
+  }
+
+  .splunk-searchbar-input {
+    flex: 1;
+    padding: 10px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #E0E0E0;
+    background: none;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .splunk-searchbar-btn {
+    padding: 10px 20px;
+    background: #78BE20;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    cursor: default;
+  }
+
+  .splunk-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    border-bottom: 1px solid #1E2128;
+  }
+
+  .splunk-results-count {
+    color: #78BE20;
+    font-weight: 600;
+  }
+
+  .splunk-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin: 0 0 16px;
+  }
+
+  .splunk-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: #171A21;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    font-size: 11px;
+    border-bottom: 1px solid #2A2D35;
+    position: sticky;
+    top: 0;
+  }
+
+  .splunk-table td {
+    padding: 7px 12px;
+    border-bottom: 1px solid #1A1C21;
+    color: #D0D0D0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+
+  .splunk-table tr:hover td {
+    background: rgba(120,190,32,0.04);
+  }
+
+  .splunk-table .high {
+    color: #ef4444;
+    font-weight: 700;
+  }
+
+  .splunk-table .medium {
+    color: #f97316;
+    font-weight: 600;
+  }
+
+  .splunk-alert-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: rgba(120,190,32,0.06);
+    border-top: 1px solid #2A2D35;
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .splunk-alert-badge {
+    padding: 3px 8px;
+    background: rgba(120,190,32,0.15);
+    color: #78BE20;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .splunk-code {
+    background: #0F1117;
+    color: #E0E0E0;
+    border: 1px solid #2A2D35;
+    margin: 8px 16px 16px;
+    border-radius: 4px;
+  }
+
+  .splunk-code .kw { color: #78BE20; }
+  .splunk-code .fn { color: #61AFEF; }
+  .splunk-code .str { color: #CE9178; }
+  .splunk-code .op { color: #C678DD; }
+  .splunk-code .num { color: #D19A66; }
+  .splunk-code .comment { color: #5C6370; font-style: italic; }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: SNOWFLAKE
+     ────────────────────────────────────── */
+  .snowflake-mock { background: #FAFBFD; color: #1B2559; }
+
+  .snowflake-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #fff;
+    border-bottom: 1px solid #E5E9F0;
+  }
+
+  .snowflake-logo {
+    font-size: 16px;
+    font-weight: 700;
+    color: #29B5E8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .snowflake-logo-icon {
+    width: 24px;
+    height: 24px;
+    background: #29B5E8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .snowflake-sidebar {
+    width: 210px;
+    background: #fff;
+    border-right: 1px solid #E5E9F0;
+    flex-shrink: 0;
+  }
+
+  .snowflake-sidebar-item {
+    padding: 10px 16px;
+    font-size: 13px;
+    color: #6B7899;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .snowflake-sidebar-item.active {
+    background: #EDF4FF;
+    color: #1B6BD9;
+    font-weight: 600;
+    border-left: 3px solid #1B6BD9;
+  }
+
+  .snowflake-sidebar-icon {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+  }
+
+  .snowflake-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .snowflake-tabs {
+    display: flex;
+    gap: 0;
+    padding: 0 16px;
+    background: #fff;
+    border-bottom: 1px solid #E5E9F0;
+  }
+
+  .snowflake-tab {
+    padding: 10px 16px;
+    font-size: 13px;
+    color: #6B7899;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .snowflake-tab.active {
+    color: #1B6BD9;
+    border-bottom-color: #1B6BD9;
+    font-weight: 600;
+  }
+
+  .snowflake-tab-close {
+    font-size: 14px;
+    color: #9CA3AF;
+    cursor: default;
+    margin-left: 4px;
+  }
+
+  .snowflake-editor {
+    padding: 16px;
+    background: #FAFBFD;
+    flex: 1;
+  }
+
+  .snowflake-code {
+    background: #fff;
+    border: 1px solid #E5E9F0;
+    border-radius: 6px;
+    color: #1B2559;
+  }
+
+  .snowflake-code .kw { color: #1B6BD9; font-weight: 600; }
+  .snowflake-code .fn { color: #7C3AED; }
+  .snowflake-code .str { color: #059669; }
+  .snowflake-code .comment { color: #9CA3AF; font-style: italic; }
+
+  .snowflake-results {
+    margin: 12px 16px 16px;
+    background: #fff;
+    border: 1px solid #E5E9F0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .snowflake-results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #F3F6FA;
+    border-bottom: 1px solid #E5E9F0;
+    font-size: 12px;
+    color: #6B7899;
+  }
+
+  .snowflake-results-count {
+    color: #1B6BD9;
+    font-weight: 600;
+  }
+
+  .snowflake-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .snowflake-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: #F8F9FC;
+    color: #6B7899;
+    font-weight: 600;
+    font-size: 11px;
+    border-bottom: 1px solid #E5E9F0;
+  }
+
+  .snowflake-table td {
+    padding: 7px 12px;
+    border-bottom: 1px solid #F3F6FA;
+    color: #1B2559;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: OKTA
+     ────────────────────────────────────── */
+  .okta-mock { background: #F5F5F6; color: #1D1D21; }
+
+  .okta-topbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: #1D1D21;
+    gap: 20px;
+  }
+
+  .okta-logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .okta-topnav {
+    display: flex;
+    gap: 0;
+  }
+
+  .okta-topnav-item {
+    padding: 8px 14px;
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+  }
+
+  .okta-topnav-item.active {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .okta-layout {
+    display: flex;
+    min-height: 420px;
+  }
+
+  .okta-sidebar {
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid #E5E5E5;
+    padding: 12px 0;
+  }
+
+  .okta-sidebar-section {
+    padding: 8px 16px 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    font-weight: 600;
+  }
+
+  .okta-sidebar-item {
+    padding: 8px 16px;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .okta-sidebar-item.active {
+    background: #F0F4FF;
+    color: #0066CC;
+    font-weight: 600;
+    border-left: 3px solid #0066CC;
+  }
+
+  .okta-content {
+    flex: 1;
+    padding: 20px 24px;
+  }
+
+  .okta-content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1D1D21;
+    margin-bottom: 4px;
+  }
+
+  .okta-breadcrumb {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+
+  .okta-breadcrumb a {
+    color: #0066CC;
+    text-decoration: none;
+  }
+
+  .okta-card {
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .okta-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid #F0F0F0;
+  }
+
+  .okta-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D1D21;
+  }
+
+  .okta-status {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .okta-status.active {
+    background: #E8F5E9;
+    color: #2E7D32;
+  }
+
+  .okta-card-body {
+    padding: 16px;
+  }
+
+  .okta-field {
+    margin-bottom: 12px;
+  }
+
+  .okta-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .okta-field-value {
+    font-size: 13px;
+    color: #1D1D21;
+    line-height: 1.4;
+  }
+
+  .okta-field-value.mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #0066CC;
+  }
+
+  .okta-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #FFF3E0;
+    color: #E65100;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+
+  .okta-tag.red {
+    background: #FFEBEE;
+    color: #C62828;
+  }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: PROOFPOINT / EXCHANGE
+     ────────────────────────────────────── */
+  .proofpoint-mock { background: #F5F5F5; color: #333; }
+
+  .proofpoint-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #2B2B5E;
+  }
+
+  .proofpoint-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .proofpoint-logo-icon {
+    width: 22px;
+    height: 22px;
+    background: #F05A28;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .proofpoint-nav {
+    display: flex;
+    gap: 0;
+    background: #3B3B7A;
+    padding: 0 16px;
+  }
+
+  .proofpoint-nav-item {
+    padding: 10px 16px;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .proofpoint-nav-item.active {
+    color: #fff;
+    border-bottom-color: #F05A28;
+    font-weight: 600;
+  }
+
+  .proofpoint-content {
+    padding: 20px 24px;
+  }
+
+  .proofpoint-content h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+  }
+
+  .proofpoint-rule {
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .proofpoint-rule-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #FAFAFA;
+    border-bottom: 1px solid #E0E0E0;
+  }
+
+  .proofpoint-rule-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .proofpoint-rule-status {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #E8F5E9;
+    color: #2E7D32;
+  }
+
+  .proofpoint-rule-body {
+    padding: 16px;
+  }
+
+  .proofpoint-field {
+    margin-bottom: 14px;
+  }
+
+  .proofpoint-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .proofpoint-pattern {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .proofpoint-pattern-tag {
+    padding: 4px 10px;
+    background: #FFF3E0;
+    color: #E65100;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .proofpoint-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .proofpoint-action-tag {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .proofpoint-action-tag.quarantine {
+    background: #FFEBEE;
+    color: #C62828;
+  }
+
+  .proofpoint-action-tag.notify {
+    background: #E3F2FD;
+    color: #1565C0;
+  }
+
+  .proofpoint-action-tag.alert {
+    background: #FFF8E1;
+    color: #F57F17;
+  }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: CROWDSTRIKE
+     ────────────────────────────────────── */
+  .crowdstrike-mock { background: #0D0D12; color: #E0E0E8; }
+
+  .crowdstrike-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #14141B;
+    border-bottom: 1px solid #2A2A35;
+  }
+
+  .crowdstrike-logo {
+    font-size: 15px;
+    font-weight: 800;
+    color: #ED1C24;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .crowdstrike-logo-icon {
+    width: 24px;
+    height: 24px;
+    background: #ED1C24;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .crowdstrike-nav {
+    display: flex;
+    gap: 0;
+    background: #1A1A24;
+    border-bottom: 1px solid #2A2A35;
+    padding: 0 16px;
+  }
+
+  .crowdstrike-nav-item {
+    padding: 10px 16px;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .crowdstrike-nav-item.active {
+    color: #ED1C24;
+    border-bottom-color: #ED1C24;
+    font-weight: 600;
+  }
+
+  .crowdstrike-content {
+    padding: 20px;
+  }
+
+  .crowdstrike-content h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #E0E0E8;
+    margin-bottom: 16px;
+  }
+
+  .crowdstrike-ioa {
+    background: #14141B;
+    border: 1px solid #2A2A35;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .crowdstrike-ioa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #1A1A24;
+    border-bottom: 1px solid #2A2A35;
+  }
+
+  .crowdstrike-ioa-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #E0E0E8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .crowdstrike-severity {
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .crowdstrike-severity.critical {
+    background: rgba(237,28,36,0.15);
+    color: #ED1C24;
+    border: 1px solid rgba(237,28,36,0.3);
+  }
+
+  .crowdstrike-ioa-body {
+    padding: 16px;
+  }
+
+  .crowdstrike-field {
+    margin-bottom: 14px;
+  }
+
+  .crowdstrike-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .crowdstrike-field-value {
+    font-size: 13px;
+    color: #E0E0E8;
+    line-height: 1.4;
+  }
+
+  .crowdstrike-code {
+    background: #0D0D12;
+    border: 1px solid #2A2A35;
+    border-radius: 4px;
+    color: #E0E0E8;
+  }
+
+  .crowdstrike-code .kw { color: #ED1C24; }
+  .crowdstrike-code .str { color: #4EC9B0; }
+  .crowdstrike-code .op { color: #C678DD; }
+
+  .crowdstrike-mitre-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .crowdstrike-mitre-tag {
+    padding: 4px 10px;
+    background: rgba(237,28,36,0.1);
+    border: 1px solid rgba(237,28,36,0.25);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #ED1C24;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .crowdstrike-meta-row {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  .crowdstrike-meta-item {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .crowdstrike-meta-item strong {
+    color: #E0E0E8;
+    font-weight: 600;
+  }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: JIRA / SERVICENOW PLAYBOOK
+     ────────────────────────────────────── */
+  .jira-mock { background: #F4F5F7; color: #172B4D; }
+
+  .jira-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #0052CC;
+  }
+
+  .jira-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .jira-logo-icon {
+    width: 22px;
+    height: 22px;
+    background: #2684FF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .jira-breadcrumb {
+    padding: 12px 24px 0;
+    font-size: 12px;
+    color: #6B778C;
+  }
+
+  .jira-breadcrumb a {
+    color: #0052CC;
+    text-decoration: none;
+  }
+
+  .jira-content {
+    padding: 12px 24px 20px;
+  }
+
+  .jira-issue-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .jira-issue-key {
+    font-size: 13px;
+    color: #0052CC;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .jira-issue-type {
+    padding: 2px 8px;
+    background: #DEEBFF;
+    color: #0052CC;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .jira-issue-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #172B4D;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .jira-columns {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 20px;
+  }
+
+  .jira-main {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #DFE1E6;
+    padding: 16px;
+  }
+
+  .jira-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #6B778C;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .jira-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #F4F5F7;
+  }
+
+  .jira-step:last-child { border-bottom: none; }
+
+  .jira-step-num {
+    width: 24px;
+    height: 24px;
+    background: #DEEBFF;
+    color: #0052CC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .jira-step-content {
+    flex: 1;
+  }
+
+  .jira-step-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #172B4D;
+    margin-bottom: 2px;
+  }
+
+  .jira-step-detail {
+    font-size: 12px;
+    color: #6B778C;
+    line-height: 1.3;
+  }
+
+  .jira-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .jira-sidebar-card {
+    background: #fff;
+    border: 1px solid #DFE1E6;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .jira-sidebar-card-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B778C;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .jira-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 12px;
+    border-bottom: 1px solid #F4F5F7;
+  }
+
+  .jira-detail-row:last-child { border-bottom: none; }
+
+  .jira-detail-label {
+    color: #6B778C;
+    font-weight: 500;
+  }
+
+  .jira-detail-value {
+    color: #172B4D;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .jira-sla {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .jira-sla-bar {
+    flex: 1;
+    height: 6px;
+    background: #DFE1E6;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .jira-sla-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  .jira-sla-fill.green { background: #36B37E; }
+  .jira-sla-fill.yellow { background: #FFAB00; }
+
+  .jira-linked-issues {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .jira-linked-issue {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    background: #F4F5F7;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .jira-linked-issue-key {
+    color: #0052CC;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+
+  .jira-linked-issue-title {
+    color: #172B4D;
+    flex: 1;
+  }
+
+  .jira-priority {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .jira-priority.critical {
+    background: #FFEBE6;
+    color: #BF2600;
+  }
+
+  /* ──────────────────────────────────────
+     TOOL MOCK: SERVICENOW GRC
+     ────────────────────────────────────── */
+  .servicenow-mock { background: #F1F1F1; color: #333; }
+
+  .servicenow-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #293E40;
+  }
+
+  .servicenow-logo {
+    font-size: 14px;
+    font-weight: 700;
+    color: #81B5A1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .servicenow-logo-icon {
+    width: 22px;
+    height: 22px;
+    background: #81B5A1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #293E40;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .servicenow-nav {
+    display: flex;
+    gap: 0;
+    background: #1F2F31;
+    padding: 0 16px;
+  }
+
+  .servicenow-nav-item {
+    padding: 10px 14px;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .servicenow-nav-item.active {
+    color: #81B5A1;
+    border-bottom-color: #81B5A1;
+    font-weight: 600;
+  }
+
+  .servicenow-content {
+    padding: 20px 24px;
+  }
+
+  .servicenow-content h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+  }
+
+  .servicenow-record {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .servicenow-record-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #FAFAFA;
+    border-bottom: 1px solid #eee;
+  }
+
+  .servicenow-record-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .servicenow-record-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+  }
+
+  .servicenow-status {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .servicenow-status.remediated {
+    background: #E8F5E9;
+    color: #2E7D32;
+  }
+
+  .servicenow-record-body {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .servicenow-field {
+    margin-bottom: 0;
+  }
+
+  .servicenow-field.full {
+    grid-column: 1 / -1;
+  }
+
+  .servicenow-field-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .servicenow-field-value {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  .servicenow-audit {
+    margin-top: 16px;
+    border-top: 1px solid #eee;
+    padding: 16px;
+  }
+
+  .servicenow-audit-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .servicenow-audit-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #F5F5F5;
+    font-size: 12px;
+  }
+
+  .servicenow-audit-entry:last-child { border-bottom: none; }
+
+  .servicenow-audit-time {
+    color: #999;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    white-space: nowrap;
+    min-width: 120px;
+  }
+
+  .servicenow-audit-action {
+    color: #333;
+    line-height: 1.3;
+  }
+
+  .servicenow-gap-banner {
+    padding: 10px 16px;
+    background: #FFF3E0;
+    border: 1px solid #FFE0B2;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .servicenow-gap-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .servicenow-gap-text {
+    font-size: 12px;
+    color: #E65100;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  /* ─── Input/Output Items ─── */
+  .prov-io-item {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .prov-input-item {
+    background: var(--cyan-dim);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+  }
+
+  .prov-input-item .prov-io-source {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cyan);
+    margin-bottom: 3px;
+  }
+
+  .prov-input-item .prov-io-text {
+    color: var(--text);
+  }
+
+  .prov-output-item {
+    background: var(--green-dim);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .prov-output-item .prov-io-target {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--green);
+    margin-bottom: 3px;
+  }
+
+  .prov-output-item .prov-io-text {
+    color: var(--text);
+  }
+
+  .prov-io-who {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    font-style: italic;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 1200px) {
+    .main-area {
+      grid-template-columns: 1fr 280px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .main-area {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    .provenance-panel {
+      border-left: none;
+      border-top: 1px solid var(--border);
+    }
+    .header { padding: 16px 20px; }
+    .tab-bar { padding: 12px 20px; }
+    .counter-strip { gap: 16px; padding: 12px 20px; flex-wrap: wrap; }
+    .mock-container { padding: 16px; }
+    .jira-columns { grid-template-columns: 1fr; }
+    .servicenow-record-body { grid-template-columns: 1fr; }
+    .okta-layout { flex-direction: column; }
+    .okta-sidebar { width: 100%; }
+    .snowflake-layout { flex-direction: column !important; }
+    .snowflake-sidebar { width: 100% !important; }
+  }
+
+  @media (max-width: 600px) {
+    .tab-bar {
+      gap: 4px;
+    }
+    .tab {
+      padding: 6px 10px;
+      font-size: 11px;
+    }
+    .tab .tab-tool { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+     ═══════════════════════════════════════════ -->
+<nav class="site-nav">
+  <a href="/" class="nav-logo">KTLYST <span class="labs">Labs</span></a>
+  <div class="nav-right">
+    <a href="/#how">How It Works</a>
+    <a href="/#partner">Design Partner</a>
+    <a href="/signals">Signals</a>
+    <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+  </div>
+</nav>
+<div class="scenario-bar" style="display:flex;justify-content:space-between;align-items:center;padding:10px 24px;background:var(--surface);border-bottom:1px solid var(--border);">
+  <div>
+    <span class="scenario-label">Campaign &mdash; </span>
+    <span class="scenario-name">CAMP-2026-0847 — Scattered Spider</span>
+  </div>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJd1-KWBfDFGR0hOSmjqlzAdlpKULqnTFJIL7idmXEGPhXaw/viewform" target="_blank" style="background:#22c55e;color:#000;padding:6px 16px;border-radius:6px;font-size:0.85rem;font-weight:600;text-decoration:none;white-space:nowrap;">Join the Waitlist</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     COUNTER STRIP
+     ═══════════════════════════════════════════ -->
+<div class="counter-strip">
+  <div class="counter-item">
+    <span class="counter-num">1</span>
+    <span class="counter-label">approval</span>
+  </div>
+  <span class="counter-arrow">&rarr;</span>
+  <div class="counter-item">
+    <span class="counter-num">7</span>
+    <span class="counter-label">artifacts</span>
+  </div>
+  <span class="counter-arrow">&rarr;</span>
+  <div class="counter-item">
+    <span class="counter-num">6</span>
+    <span class="counter-label">tools</span>
+  </div>
+  <span class="counter-arrow">&rarr;</span>
+  <div class="counter-item">
+    <span class="counter-num">40</span>
+    <span class="counter-label">seconds</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     TAB BAR
+     ═══════════════════════════════════════════ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab active" data-screen="splunk"
+    style="--tab-color: var(--orange); --tab-bg: var(--orange-dim);">
+    <span class="tab-dot"></span>
+    SOC — Splunk
+    <span class="tab-tool">SPL Rule</span>
+  </button>
+  <button class="tab" data-screen="snowflake"
+    style="--tab-color: var(--cyan); --tab-bg: var(--cyan-dim);">
+    <span class="tab-dot"></span>
+    SOC — Snowflake
+    <span class="tab-tool">SQL Rule</span>
+  </button>
+  <button class="tab" data-screen="okta"
+    style="--tab-color: var(--yellow); --tab-bg: var(--yellow-dim);">
+    <span class="tab-dot"></span>
+    IAM — Okta
+    <span class="tab-tool">MFA Policy</span>
+  </button>
+  <button class="tab" data-screen="proofpoint"
+    style="--tab-color: var(--purple); --tab-bg: var(--purple-dim);">
+    <span class="tab-dot"></span>
+    Email — Proofpoint
+    <span class="tab-tool">Domain Block</span>
+  </button>
+  <button class="tab" data-screen="crowdstrike"
+    style="--tab-color: var(--red); --tab-bg: var(--red-dim);">
+    <span class="tab-dot"></span>
+    Endpoint — CrowdStrike
+    <span class="tab-tool">Custom IOA</span>
+  </button>
+  <button class="tab" data-screen="jira"
+    style="--tab-color: var(--accent); --tab-bg: var(--accent-glow);">
+    <span class="tab-dot"></span>
+    IR — Jira
+    <span class="tab-tool">Playbook</span>
+  </button>
+  <button class="tab" data-screen="servicenow"
+    style="--tab-color: var(--green); --tab-bg: var(--green-dim);">
+    <span class="tab-dot"></span>
+    GRC — ServiceNow
+    <span class="tab-tool">Control Record</span>
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MAIN AREA
+     ═══════════════════════════════════════════ -->
+<div class="main-area">
+
+  <!-- ─── Mock Tool Screens ─── -->
+  <div class="mock-container">
+
+    <!-- ════════════════════════════════════
+         1. SPLUNK
+         ════════════════════════════════════ -->
+    <div class="mock-screen active" id="screen-splunk">
+      <div class="splunk-mock">
+        <div class="splunk-topbar">
+          <div class="splunk-logo">splunk&gt; <span>enterprise</span></div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <span class="ktlyst-badge">KTLYST Governed</span>
+            <span style="color:rgba(255,255,255,0.3);font-size:12px;">admin &bull; search</span>
+          </div>
+        </div>
+        <div class="splunk-nav">
+          <div class="splunk-nav-item active">Search &amp; Reporting</div>
+          <div class="splunk-nav-item">Dashboards</div>
+          <div class="splunk-nav-item">Alerts</div>
+          <div class="splunk-nav-item">Reports</div>
+        </div>
+        <div class="splunk-searchbar">
+          <div class="splunk-searchbar-prefix">search</div>
+          <div class="splunk-searchbar-input">index=vpn sourcetype=vpn:auth | join user [search index=iam sourcetype=okta:mfa action=reset] | where _time_vpn - _time_mfa &lt; 86400</div>
+          <div class="splunk-searchbar-btn">&#9654;</div>
+        </div>
+
+        <div class="splunk-code">
+          <div class="code-block"><span class="comment">/* KTLYST Artifact: LA-2026-0847-DET-001 */</span>
+<span class="comment">/* Campaign: CAMP-2026-0847 (Scattered Spider) */</span>
+<span class="comment">/* Approved: CISO — 3 min review — Mon 09:17 */</span>
+
+<span class="kw">index</span>=vpn <span class="kw">sourcetype</span>=vpn:auth
+| <span class="fn">join</span> user [<span class="kw">search index</span>=iam <span class="kw">sourcetype</span>=okta:mfa action=reset]
+| <span class="fn">where</span> _time_vpn - _time_mfa <span class="op">&lt;</span> <span class="num">86400</span>
+| <span class="fn">where</span> <span class="op">NOT</span> <span class="fn">match</span>(device_id, known_devices)
+| <span class="fn">eval</span> risk_score=<span class="fn">case</span>(
+    geo_distance <span class="op">&gt;</span> <span class="num">500</span>, <span class="str">"CRITICAL"</span>,
+    geo_distance <span class="op">&gt;</span> <span class="num">100</span>, <span class="str">"HIGH"</span>,
+    <span class="num">1</span>=<span class="num">1</span>, <span class="str">"MEDIUM"</span>)
+| <span class="fn">table</span> _time user src_ip device_id mfa_reset_time risk_score
+</div>
+        </div>
+
+        <div class="splunk-info">
+          <span><span class="splunk-results-count">4 events</span> matched | <span style="color:rgba(255,255,255,0.3);">Last 24 hours</span></span>
+          <span style="color:rgba(255,255,255,0.3);">MITRE: T1078, T1556</span>
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table class="splunk-table">
+            <thead>
+              <tr>
+                <th>_time</th>
+                <th>user</th>
+                <th>src_ip</th>
+                <th>device_id</th>
+                <th>mfa_reset_time</th>
+                <th>risk_score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>02/24 03:41:12</td>
+                <td>jchen</td>
+                <td>198.51.100.47</td>
+                <td>UNKNOWN-9F2A</td>
+                <td>02/23 14:22:08</td>
+                <td class="high">CRITICAL</td>
+              </tr>
+              <tr>
+                <td>02/24 03:38:55</td>
+                <td>jchen</td>
+                <td>198.51.100.47</td>
+                <td>UNKNOWN-9F2A</td>
+                <td>02/23 14:22:08</td>
+                <td class="high">CRITICAL</td>
+              </tr>
+              <tr>
+                <td>02/24 01:12:33</td>
+                <td>mthompson</td>
+                <td>203.0.113.88</td>
+                <td>UNKNOWN-3C7D</td>
+                <td>02/23 18:45:02</td>
+                <td class="medium">HIGH</td>
+              </tr>
+              <tr>
+                <td>02/23 22:07:19</td>
+                <td>asingh</td>
+                <td>192.0.2.156</td>
+                <td>UNKNOWN-A1B3</td>
+                <td>02/23 16:11:44</td>
+                <td class="medium">MEDIUM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="splunk-alert-bar">
+          <span class="splunk-alert-badge">Alert Active</span>
+          <span>Threshold: &ge;1 event &rarr; Notify: SOC-L2 channel &bull; PagerDuty &bull; ServiceNow incident</span>
+          <span style="margin-left:auto;">
+            <span class="ktlyst-badge" style="font-size:9px;">LA-2026-0847-DET-001</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         2. SNOWFLAKE
+         ════════════════════════════════════ -->
+    <div class="mock-screen" id="screen-snowflake">
+      <div class="snowflake-mock">
+        <div class="snowflake-topbar">
+          <div class="snowflake-logo">
+            <div class="snowflake-logo-icon">&#10052;</div>
+            Snowflake
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <span class="ktlyst-badge" style="color:#1B6BD9;background:rgba(27,107,217,0.1);border-color:rgba(27,107,217,0.25);">KTLYST Governed</span>
+            <span style="color:#6B7899;font-size:12px;">SECURITY_ANALYST &bull; PROD</span>
+          </div>
+        </div>
+
+        <div style="display:flex;min-height:440px;" class="snowflake-layout">
+          <div class="snowflake-sidebar">
+            <div class="snowflake-sidebar-item">
+              <span class="snowflake-sidebar-icon">&#128200;</span> Dashboards
+            </div>
+            <div class="snowflake-sidebar-item active">
+              <span class="snowflake-sidebar-icon">&#128221;</span> Worksheets
+            </div>
+            <div class="snowflake-sidebar-item">
+              <span class="snowflake-sidebar-icon">&#128451;</span> Data
+            </div>
+            <div class="snowflake-sidebar-item">
+              <span class="snowflake-sidebar-icon">&#9881;</span> Admin
+            </div>
+          </div>
+
+          <div class="snowflake-content">
+            <div class="snowflake-tabs">
+              <div class="snowflake-tab active">
+                &#128221; KTLYST — VPN+MFA Correlation
+                <span class="snowflake-tab-close">&times;</span>
+              </div>
+              <div class="snowflake-tab">
+                + New Worksheet
+              </div>
+            </div>
+
+            <div class="snowflake-editor">
+              <div class="snowflake-code">
+                <div class="code-block"><span class="comment">-- KTLYST Artifact: LA-2026-0847-DET-002</span>
+<span class="comment">-- Campaign: CAMP-2026-0847 (Scattered Spider)</span>
+<span class="comment">-- Approved: CISO — 3 min review — Mon 09:17</span>
+<span class="comment">-- Governance: Hash-verified, provenance-tracked</span>
+
+<span class="kw">SELECT</span>
+  vpn.user_id,
+  vpn.src_ip,
+  vpn.auth_time,
+  mfa.reset_time,
+  <span class="fn">DATEDIFF</span>(<span class="str">'hour'</span>, mfa.reset_time, vpn.auth_time) <span class="kw">AS</span> hours_between,
+  vpn.geo_location,
+  vpn.device_enrolled
+<span class="kw">FROM</span> security.vpn_auth vpn
+<span class="kw">JOIN</span> security.mfa_events mfa
+  <span class="kw">ON</span> vpn.user_id = mfa.user_id
+<span class="kw">WHERE</span> mfa.reset_method = <span class="str">'helpdesk'</span>
+  <span class="kw">AND</span> vpn.device_enrolled = <span class="str">FALSE</span>
+  <span class="kw">AND</span> hours_between <span class="kw">BETWEEN</span> 0 <span class="kw">AND</span> 24
+<span class="kw">ORDER BY</span> vpn.auth_time <span class="kw">DESC</span>;
+</div>
+              </div>
+
+              <div class="snowflake-results">
+                <div class="snowflake-results-header">
+                  <span>Results <span class="snowflake-results-count">(3 rows)</span></span>
+                  <span style="color:#1B6BD9;font-size:11px;">Execution time: 0.42s</span>
+                </div>
+                <div style="overflow-x:auto;">
+                  <table class="snowflake-table">
+                    <thead>
+                      <tr>
+                        <th>USER_ID</th>
+                        <th>SRC_IP</th>
+                        <th>AUTH_TIME</th>
+                        <th>RESET_TIME</th>
+                        <th>HOURS_BETWEEN</th>
+                        <th>GEO_LOCATION</th>
+                        <th>DEVICE_ENROLLED</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>jchen</td>
+                        <td>198.51.100.47</td>
+                        <td>2026-02-24 03:41</td>
+                        <td>2026-02-23 14:22</td>
+                        <td style="color:#C62828;font-weight:600;">13</td>
+                        <td>Lagos, NG</td>
+                        <td style="color:#C62828;">FALSE</td>
+                      </tr>
+                      <tr>
+                        <td>mthompson</td>
+                        <td>203.0.113.88</td>
+                        <td>2026-02-24 01:12</td>
+                        <td>2026-02-23 18:45</td>
+                        <td style="color:#E65100;font-weight:600;">6</td>
+                        <td>Moscow, RU</td>
+                        <td style="color:#C62828;">FALSE</td>
+                      </tr>
+                      <tr>
+                        <td>asingh</td>
+                        <td>192.0.2.156</td>
+                        <td>2026-02-23 22:07</td>
+                        <td>2026-02-23 16:11</td>
+                        <td style="color:#F57F17;font-weight:600;">5</td>
+                        <td>Bucharest, RO</td>
+                        <td style="color:#C62828;">FALSE</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         3. OKTA
+         ════════════════════════════════════ -->
+    <div class="mock-screen" id="screen-okta">
+      <div class="okta-mock">
+        <div class="okta-topbar">
+          <div class="okta-logo">okta</div>
+          <div class="okta-topnav">
+            <div class="okta-topnav-item">Dashboard</div>
+            <div class="okta-topnav-item">Directory</div>
+            <div class="okta-topnav-item">Applications</div>
+            <div class="okta-topnav-item active">Security</div>
+            <div class="okta-topnav-item">Workflow</div>
+          </div>
+          <span class="ktlyst-badge" style="color:#0066CC;background:rgba(0,102,204,0.1);border-color:rgba(0,102,204,0.25);">KTLYST Governed</span>
+        </div>
+
+        <div class="okta-layout">
+          <div class="okta-sidebar">
+            <div class="okta-sidebar-section">Security</div>
+            <div class="okta-sidebar-item">General</div>
+            <div class="okta-sidebar-item active">Authentication Policies</div>
+            <div class="okta-sidebar-item">Authenticators</div>
+            <div class="okta-sidebar-item">Risk Scoring</div>
+            <div class="okta-sidebar-item">Device Trust</div>
+            <div class="okta-sidebar-section" style="margin-top:12px;">Access</div>
+            <div class="okta-sidebar-item">Networks</div>
+            <div class="okta-sidebar-item">API Access</div>
+          </div>
+
+          <div class="okta-content">
+            <div class="okta-breadcrumb">
+              <a>Security</a> &rsaquo; <a>Authentication Policies</a> &rsaquo; MFA Reset — Voice Verification
+            </div>
+            <h2>MFA Reset — Voice Verification Required</h2>
+
+            <div class="okta-card">
+              <div class="okta-card-header">
+                <span class="okta-card-title">Policy Configuration</span>
+                <span class="okta-status active">Active</span>
+              </div>
+              <div class="okta-card-body">
+                <div class="okta-field">
+                  <div class="okta-field-label">Description</div>
+                  <div class="okta-field-value">Require voice call verification to registered phone before any MFA factor reset initiated via helpdesk ticket. Deployed by KTLYST governance — campaign CAMP-2026-0847.</div>
+                </div>
+                <div class="okta-field">
+                  <div class="okta-field-label">Trigger Condition</div>
+                  <div class="okta-field-value mono">reset_method == "helpdesk_ticket" AND factor_type IN ("push", "totp", "sms")</div>
+                </div>
+                <div class="okta-field">
+                  <div class="okta-field-label">Required Action</div>
+                  <div class="okta-field-value">Voice call to registered phone number on file (pre-enrollment). User must confirm 6-digit code read aloud by system.</div>
+                </div>
+                <div class="okta-field">
+                  <div class="okta-field-label">Bypass Exceptions</div>
+                  <div class="okta-field-value">
+                    <span class="okta-tag red">None — SOX Regulated</span>
+                    <span class="okta-tag">No Emergency Override</span>
+                  </div>
+                </div>
+                <div class="okta-field">
+                  <div class="okta-field-label">KTLYST Artifact ID</div>
+                  <div class="okta-field-value mono">LA-2026-0847-IAM-003</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="okta-card">
+              <div class="okta-card-header">
+                <span class="okta-card-title">Conditional Access Scope</span>
+              </div>
+              <div class="okta-card-body">
+                <div class="okta-field">
+                  <div class="okta-field-label">Applied To</div>
+                  <div class="okta-field-value">All users — All applications</div>
+                </div>
+                <div class="okta-field">
+                  <div class="okta-field-label">Enforcement</div>
+                  <div class="okta-field-value">Deny reset if voice verification fails after 3 attempts. Escalate to Security team. Log as SOX control event.</div>
+                </div>
+                <div class="okta-field">
+                  <div class="okta-field-label">Audit</div>
+                  <div class="okta-field-value">All reset attempts logged with KTLYST provenance chain. Exported to SIEM + GRC.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         4. PROOFPOINT
+         ════════════════════════════════════ -->
+    <div class="mock-screen" id="screen-proofpoint">
+      <div class="proofpoint-mock">
+        <div class="proofpoint-topbar">
+          <div class="proofpoint-logo">
+            <div class="proofpoint-logo-icon">P</div>
+            Proofpoint
+          </div>
+          <span class="ktlyst-badge" style="color:#F05A28;background:rgba(240,90,40,0.1);border-color:rgba(240,90,40,0.25);">KTLYST Governed</span>
+        </div>
+        <div class="proofpoint-nav">
+          <div class="proofpoint-nav-item">Dashboard</div>
+          <div class="proofpoint-nav-item">Threats</div>
+          <div class="proofpoint-nav-item active">Email Rules</div>
+          <div class="proofpoint-nav-item">Quarantine</div>
+          <div class="proofpoint-nav-item">Reports</div>
+        </div>
+
+        <div class="proofpoint-content">
+          <h2>Transport Rules &rsaquo; Lookalike Domain Block</h2>
+
+          <div class="proofpoint-rule">
+            <div class="proofpoint-rule-header">
+              <div class="proofpoint-rule-title">
+                Block Lookalike Okta SSO Domains
+                <span style="font-size:11px;color:#999;font-weight:400;">LA-2026-0847-EML-004</span>
+              </div>
+              <span class="proofpoint-rule-status">Active</span>
+            </div>
+
+            <div class="proofpoint-rule-body">
+              <div class="proofpoint-field">
+                <div class="proofpoint-field-label">Description</div>
+                <div style="font-size:13px;color:#333;line-height:1.4;">
+                  Block inbound email containing links to lookalike Okta SSO domains used in Scattered Spider phishing campaigns. Deployed via KTLYST governance — campaign CAMP-2026-0847.
+                </div>
+              </div>
+
+              <div class="proofpoint-field">
+                <div class="proofpoint-field-label">Domain Patterns (Block)</div>
+                <div class="proofpoint-pattern">
+                  <span class="proofpoint-pattern-tag">*-okta-sso.*</span>
+                  <span class="proofpoint-pattern-tag">*okta-verify.*</span>
+                  <span class="proofpoint-pattern-tag">*oktaauth.*</span>
+                  <span class="proofpoint-pattern-tag">*okta-mfa.*</span>
+                  <span class="proofpoint-pattern-tag">*sso-okta.*</span>
+                </div>
+              </div>
+
+              <div class="proofpoint-field">
+                <div class="proofpoint-field-label">Also Blocking (Observed IOCs)</div>
+                <div class="proofpoint-pattern">
+                  <span class="proofpoint-pattern-tag" style="background:#FFEBEE;color:#C62828;">acme-okta-sso.com</span>
+                  <span class="proofpoint-pattern-tag" style="background:#FFEBEE;color:#C62828;">okta-verify-login.net</span>
+                  <span class="proofpoint-pattern-tag" style="background:#FFEBEE;color:#C62828;">corp-oktaauth.io</span>
+                </div>
+              </div>
+
+              <div class="proofpoint-field">
+                <div class="proofpoint-field-label">Actions</div>
+                <div class="proofpoint-actions">
+                  <span class="proofpoint-action-tag quarantine">Quarantine Message</span>
+                  <span class="proofpoint-action-tag notify">Notify User (phishing warning)</span>
+                  <span class="proofpoint-action-tag alert">Alert Email Security Team</span>
+                </div>
+              </div>
+
+              <div class="proofpoint-field">
+                <div class="proofpoint-field-label">MITRE ATT&amp;CK</div>
+                <div style="font-size:13px;color:#333;">
+                  T1566.002 — Spearphishing Link &bull; T1583.001 — Acquire Infrastructure: Domains
+                </div>
+              </div>
+
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;">
+                <span style="font-size:12px;color:#999;">Created: Mon 09:17 &bull; Last match: 3 messages quarantined</span>
+                <span class="ktlyst-badge" style="color:#F05A28;background:rgba(240,90,40,0.1);border-color:rgba(240,90,40,0.25);font-size:9px;">LA-2026-0847-EML-004</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         5. CROWDSTRIKE
+         ════════════════════════════════════ -->
+    <div class="mock-screen" id="screen-crowdstrike">
+      <div class="crowdstrike-mock">
+        <div class="crowdstrike-topbar">
+          <div class="crowdstrike-logo">
+            <div class="crowdstrike-logo-icon">CS</div>
+            CrowdStrike Falcon
+          </div>
+          <span class="ktlyst-badge">KTLYST Governed</span>
+        </div>
+        <div class="crowdstrike-nav">
+          <div class="crowdstrike-nav-item">Hosts</div>
+          <div class="crowdstrike-nav-item">Detections</div>
+          <div class="crowdstrike-nav-item active">Custom IOAs</div>
+          <div class="crowdstrike-nav-item">IOCs</div>
+          <div class="crowdstrike-nav-item">Response</div>
+        </div>
+
+        <div class="crowdstrike-content">
+          <h2>Custom IOA Rules &rsaquo; Scattered Spider Stage-2 Loader</h2>
+
+          <div class="crowdstrike-ioa">
+            <div class="crowdstrike-ioa-header">
+              <div class="crowdstrike-ioa-title">
+                Scattered Spider Stage-2 Loader
+              </div>
+              <span class="crowdstrike-severity critical">Critical</span>
+            </div>
+
+            <div class="crowdstrike-ioa-body">
+              <div class="crowdstrike-field">
+                <div class="crowdstrike-field-label">Rule Type</div>
+                <div class="crowdstrike-field-value">Process Creation</div>
+              </div>
+
+              <div class="crowdstrike-field">
+                <div class="crowdstrike-field-label">Detection Pattern</div>
+                <div class="crowdstrike-code">
+                  <div class="code-block"><span class="comment">// KTLYST Artifact: LA-2026-0847-EDR-005</span>
+<span class="comment">// Campaign: CAMP-2026-0847 (Scattered Spider)</span>
+
+<span class="kw">ImageFileName</span> = <span class="str">"*\\powershell.exe"</span>
+  <span class="op">AND</span>
+<span class="kw">CommandLine</span> = <span class="str">"*-enc*"</span> <span class="op">OR</span> <span class="kw">CommandLine</span> = <span class="str">"*-EncodedCommand*"</span>
+  <span class="op">AND</span>
+<span class="kw">NetworkConnection</span> <span class="op">WITHIN</span> <span class="str">30s</span> <span class="op">OF</span> ProcessStart
+  <span class="op">AND</span>
+<span class="kw">RemotePort</span> <span class="op">IN</span> (<span class="str">443</span>, <span class="str">8443</span>, <span class="str">4443</span>)
+</div>
+                </div>
+              </div>
+
+              <div class="crowdstrike-field">
+                <div class="crowdstrike-field-label">Description</div>
+                <div class="crowdstrike-field-value">Detects PowerShell execution with encoded commands followed by outbound HTTPS connection within 30 seconds — consistent with Scattered Spider stage-2 loader behavior observed in CAMP-2026-0847. Blocks execution and isolates host.</div>
+              </div>
+
+              <div class="crowdstrike-field">
+                <div class="crowdstrike-field-label">Response Action</div>
+                <div class="crowdstrike-field-value" style="color:#ED1C24;font-weight:600;">Block &bull; Kill Process &bull; Network Contain Host</div>
+              </div>
+
+              <div class="crowdstrike-field">
+                <div class="crowdstrike-field-label">MITRE ATT&amp;CK</div>
+                <div class="crowdstrike-mitre-tags">
+                  <span class="crowdstrike-mitre-tag">T1059.001</span>
+                  <span class="crowdstrike-mitre-tag">T1105</span>
+                  <span class="crowdstrike-mitre-tag">T1071.001</span>
+                </div>
+              </div>
+
+              <div class="crowdstrike-meta-row">
+                <div class="crowdstrike-meta-item">Platform: <strong>Windows</strong></div>
+                <div class="crowdstrike-meta-item">Policy: <strong>All Hosts</strong></div>
+                <div class="crowdstrike-meta-item">Created: <strong>Mon 09:17</strong></div>
+                <div class="crowdstrike-meta-item">Hits: <strong style="color:#ED1C24;">2 blocked</strong></div>
+              </div>
+
+              <div style="margin-top:16px;padding-top:12px;border-top:1px solid #2A2A35;display:flex;align-items:center;justify-content:space-between;">
+                <span class="ktlyst-badge">LA-2026-0847-EDR-005</span>
+                <span style="font-size:11px;color:rgba(255,255,255,0.3);">Governance hash: sha256:7f3a2...e91c</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         6. JIRA — IR PLAYBOOK
+         ════════════════════════════════════ -->
+    <div class="mock-screen" id="screen-jira">
+      <div class="jira-mock">
+        <div class="jira-topbar">
+          <div class="jira-logo">
+            <div class="jira-logo-icon">J</div>
+            Jira Service Management
+          </div>
+          <span class="ktlyst-badge" style="color:#fff;background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.25);">KTLYST Governed</span>
+        </div>
+
+        <div class="jira-breadcrumb">
+          <a>Security Operations</a> &rsaquo; <a>Incident Response</a> &rsaquo; IR-2026-0847
+        </div>
+
+        <div class="jira-content">
+          <div class="jira-issue-header">
+            <span class="jira-issue-key">IR-2026-0847</span>
+            <span class="jira-issue-type">Playbook</span>
+            <span class="jira-priority critical">P1 — Critical</span>
+          </div>
+          <div class="jira-issue-title">Scattered Spider Response Playbook v1</div>
+
+          <div class="jira-columns">
+            <div class="jira-main">
+              <div class="jira-section-title">Response Steps</div>
+
+              <div class="jira-step">
+                <div class="jira-step-num">1</div>
+                <div class="jira-step-content">
+                  <div class="jira-step-title">Isolate Affected Endpoints</div>
+                  <div class="jira-step-detail">Network-contain hosts matching IOC pattern via CrowdStrike Falcon RTR. Priority: jchen workstation, any host with encoded PowerShell execution.</div>
+                </div>
+              </div>
+
+              <div class="jira-step">
+                <div class="jira-step-num">2</div>
+                <div class="jira-step-content">
+                  <div class="jira-step-title">Revoke Compromised Sessions</div>
+                  <div class="jira-step-detail">Force session revocation for jchen, mthompson, asingh across Okta, VPN, and all SSO-linked applications. Disable accounts pending investigation.</div>
+                </div>
+              </div>
+
+              <div class="jira-step">
+                <div class="jira-step-num">3</div>
+                <div class="jira-step-content">
+                  <div class="jira-step-title">Reset Affected MFA Factors</div>
+                  <div class="jira-step-detail">In-person identity verification required. New MFA enrollment with hardware token only. Voice verification policy now enforced (Artifact LA-2026-0847-IAM-003).</div>
+                </div>
+              </div>
+
+              <div class="jira-step">
+                <div class="jira-step-num">4</div>
+                <div class="jira-step-content">
+                  <div class="jira-step-title">Hunt for Lateral Movement</div>
+                  <div class="jira-step-detail">Query Snowflake security lake for jchen credential usage across all systems. Check for privilege escalation, service account access, data exfiltration indicators.</div>
+                </div>
+              </div>
+
+              <div class="jira-step">
+                <div class="jira-step-num">5</div>
+                <div class="jira-step-content">
+                  <div class="jira-step-title">Notify FS-ISAC</div>
+                  <div class="jira-step-detail">Share anonymized IOCs with Financial Services ISAC. Include domain patterns, behavioral signatures, and MITRE mapping per KTLYST export.</div>
+                </div>
+              </div>
+
+              <div class="jira-step">
+                <div class="jira-step-num">6</div>
+                <div class="jira-step-content">
+                  <div class="jira-step-title">Executive Brief</div>
+                  <div class="jira-step-detail">Prepare CISO brief: scope of compromise, containment status, SOX control gap identified, remediation timeline. KTLYST provenance chain attached.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="jira-sidebar">
+              <div class="jira-sidebar-card">
+                <div class="jira-sidebar-card-title">Details</div>
+                <div class="jira-detail-row">
+                  <span class="jira-detail-label">Status</span>
+                  <span class="jira-detail-value" style="color:#0052CC;">In Progress</span>
+                </div>
+                <div class="jira-detail-row">
+                  <span class="jira-detail-label">Assignee</span>
+                  <span class="jira-detail-value">SOC Lead — Team Alpha</span>
+                </div>
+                <div class="jira-detail-row">
+                  <span class="jira-detail-label">Reporter</span>
+                  <span class="jira-detail-value">KTLYST (auto)</span>
+                </div>
+                <div class="jira-detail-row">
+                  <span class="jira-detail-label">Created</span>
+                  <span class="jira-detail-value">Mon 09:17</span>
+                </div>
+                <div class="jira-detail-row">
+                  <span class="jira-detail-label">KTLYST ID</span>
+                  <span class="jira-detail-value" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0052CC;">LA-2026-0847-IR-006</span>
+                </div>
+              </div>
+
+              <div class="jira-sidebar-card">
+                <div class="jira-sidebar-card-title">SLA Timers</div>
+                <div style="margin-bottom:8px;">
+                  <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;">
+                    <span style="color:#6B778C;">Containment</span>
+                    <span style="color:#36B37E;font-weight:600;">&lt; 4h</span>
+                  </div>
+                  <div class="jira-sla-bar"><div class="jira-sla-fill green" style="width:35%;"></div></div>
+                </div>
+                <div>
+                  <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;">
+                    <span style="color:#6B778C;">Eradication</span>
+                    <span style="color:#FFAB00;font-weight:600;">&lt; 24h</span>
+                  </div>
+                  <div class="jira-sla-bar"><div class="jira-sla-fill yellow" style="width:12%;"></div></div>
+                </div>
+              </div>
+
+              <div class="jira-sidebar-card">
+                <div class="jira-sidebar-card-title">Linked Incidents</div>
+                <div class="jira-linked-issues">
+                  <div class="jira-linked-issue">
+                    <span class="jira-linked-issue-key">SEC-4412</span>
+                    <span class="jira-linked-issue-title">jchen VPN anomaly</span>
+                  </div>
+                  <div class="jira-linked-issue">
+                    <span class="jira-linked-issue-key">SEC-4409</span>
+                    <span class="jira-linked-issue-title">Helpdesk phishing attempt</span>
+                  </div>
+                  <div class="jira-linked-issue">
+                    <span class="jira-linked-issue-key">SEC-4411</span>
+                    <span class="jira-linked-issue-title">MFA reset — jchen</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         7. SERVICENOW GRC
+         ════════════════════════════════════ -->
+    <div class="mock-screen" id="screen-servicenow">
+      <div class="servicenow-mock">
+        <div class="servicenow-topbar">
+          <div class="servicenow-logo">
+            <div class="servicenow-logo-icon">S</div>
+            ServiceNow GRC
+          </div>
+          <span class="ktlyst-badge" style="color:#81B5A1;background:rgba(129,181,161,0.1);border-color:rgba(129,181,161,0.25);">KTLYST Governed</span>
+        </div>
+        <div class="servicenow-nav">
+          <div class="servicenow-nav-item">Dashboard</div>
+          <div class="servicenow-nav-item active">Policy &amp; Compliance</div>
+          <div class="servicenow-nav-item">Risk</div>
+          <div class="servicenow-nav-item">Audit</div>
+          <div class="servicenow-nav-item">Vendors</div>
+        </div>
+
+        <div class="servicenow-content">
+          <h2>Control Records &rsaquo; Helpdesk MFA Reset Verification</h2>
+
+          <div class="servicenow-gap-banner">
+            <span class="servicenow-gap-icon">&#9888;</span>
+            <span class="servicenow-gap-text">
+              <strong>SOX Control Gap Identified:</strong> MFA reset completed without voice verification — violates SOX IT General Controls (ITGC). Gap discovered by KTLYST campaign analysis CAMP-2026-0847.
+            </span>
+          </div>
+
+          <div class="servicenow-record">
+            <div class="servicenow-record-header">
+              <div class="servicenow-record-title">
+                Helpdesk MFA Reset Verification
+                <span class="servicenow-record-id">CTRL-2026-0847-001</span>
+              </div>
+              <span class="servicenow-status remediated">Remediated</span>
+            </div>
+
+            <div class="servicenow-record-body">
+              <div class="servicenow-field">
+                <div class="servicenow-field-label">Control Objective</div>
+                <div class="servicenow-field-value">Ensure all MFA factor resets initiated through helpdesk channels require secondary identity verification (voice call) before processing.</div>
+              </div>
+              <div class="servicenow-field">
+                <div class="servicenow-field-label">Framework</div>
+                <div class="servicenow-field-value">SOX ITGC — Logical Access Controls</div>
+              </div>
+              <div class="servicenow-field">
+                <div class="servicenow-field-label">Gap Description</div>
+                <div class="servicenow-field-value" style="color:#C62828;">MFA reset for user jchen was completed by helpdesk agent via social engineering without voice verification. Attacker impersonated employee to reset MFA, enabling unauthorized VPN access.</div>
+              </div>
+              <div class="servicenow-field">
+                <div class="servicenow-field-label">Risk Rating</div>
+                <div class="servicenow-field-value" style="color:#C62828;font-weight:600;">High</div>
+              </div>
+              <div class="servicenow-field full">
+                <div class="servicenow-field-label">Remediation</div>
+                <div class="servicenow-field-value">
+                  Okta authentication policy enforced — voice verification now required for all helpdesk-initiated MFA resets (KTLYST Artifact LA-2026-0847-IAM-003). No exceptions. SOX-regulated control.
+                </div>
+              </div>
+              <div class="servicenow-field">
+                <div class="servicenow-field-label">KTLYST Artifact ID</div>
+                <div class="servicenow-field-value" style="font-family:'JetBrains Mono',monospace;color:#2E7D32;">LA-2026-0847-GRC-007</div>
+              </div>
+              <div class="servicenow-field">
+                <div class="servicenow-field-label">Validation Status</div>
+                <div class="servicenow-field-value">Remediated — pending external audit validation (Q2 2026)</div>
+              </div>
+            </div>
+
+            <div class="servicenow-audit">
+              <div class="servicenow-audit-title">KTLYST Audit Trail — Evidence Chain</div>
+
+              <div class="servicenow-audit-entry">
+                <span class="servicenow-audit-time">Mon 09:14:22</span>
+                <span class="servicenow-audit-action"><strong>Source ingested:</strong> FBI advisory on Scattered Spider helpdesk social engineering TTP</span>
+              </div>
+              <div class="servicenow-audit-entry">
+                <span class="servicenow-audit-time">Mon 09:14:38</span>
+                <span class="servicenow-audit-action"><strong>Pattern extracted:</strong> MFA reset via helpdesk → VPN access from new device (behavioral signature)</span>
+              </div>
+              <div class="servicenow-audit-entry">
+                <span class="servicenow-audit-time">Mon 09:15:01</span>
+                <span class="servicenow-audit-action"><strong>Correlated:</strong> 5 source events across 5 teams linked to campaign CAMP-2026-0847</span>
+              </div>
+              <div class="servicenow-audit-entry">
+                <span class="servicenow-audit-time">Mon 09:15:12</span>
+                <span class="servicenow-audit-action"><strong>SOX gap identified:</strong> No voice verification control existed for helpdesk MFA resets</span>
+              </div>
+              <div class="servicenow-audit-entry">
+                <span class="servicenow-audit-time">Mon 09:17:04</span>
+                <span class="servicenow-audit-action"><strong>CISO approved:</strong> 7 artifacts approved in single review (3 min). Governance hash: sha256:7f3a2...e91c</span>
+              </div>
+              <div class="servicenow-audit-entry">
+                <span class="servicenow-audit-time">Mon 09:17:44</span>
+                <span class="servicenow-audit-action"><strong>Deployed:</strong> Okta policy enforced, control record created. 7 artifacts → 6 tools in 40 seconds.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /mock-container -->
+
+  <!-- ─── Provenance Sidebar ─── -->
+  <div class="provenance-panel" id="provenancePanel">
+    <div class="prov-header">Provenance Chain</div>
+
+    <div class="prov-section">
+      <div class="prov-campaign">
+        <div class="prov-campaign-label">Active Campaign</div>
+        <div class="prov-campaign-id">CAMP-2026-0847</div>
+        <div class="prov-campaign-name">Scattered Spider — Helpdesk Social Engineering</div>
+      </div>
+    </div>
+
+    <div class="prov-section" id="provArtifactInfo">
+      <div class="prov-section-title">Current Artifact</div>
+      <div class="prov-artifact-id" id="provArtifactId">LA-2026-0847-DET-001</div>
+      <div style="margin-top:8px;">
+        <div class="prov-mitre" id="provMitre1">T1078</div>
+        <div class="prov-mitre" id="provMitre2">T1556</div>
+      </div>
+    </div>
+
+    <div class="prov-section">
+      <div class="prov-section-title">Deployment Chain</div>
+      <div class="prov-chain">
+        <div class="prov-step source">
+          <div class="prov-step-label">Source Ingested</div>
+          <div class="prov-step-detail">FBI advisory on Scattered Spider helpdesk social engineering TTP</div>
+          <div class="prov-step-time">Mon 09:14</div>
+        </div>
+        <div class="prov-step process">
+          <div class="prov-step-label">KTLYST Extracted Pattern</div>
+          <div class="prov-step-detail">Behavioral signature: MFA reset via helpdesk + VPN from new device within 24h</div>
+          <div class="prov-step-time">Mon 09:14 — 09:15</div>
+        </div>
+        <div class="prov-step approve">
+          <div class="prov-step-label">Human Approved</div>
+          <div class="prov-step-detail">CISO reviewed 7 artifacts in single batch. 3-minute review. Approved all.</div>
+          <div class="prov-step-time">Mon 09:17 (3 min review)</div>
+        </div>
+        <div class="prov-step deploy">
+          <div class="prov-step-label" id="provDeployLabel">Deployed to Splunk</div>
+          <div class="prov-step-detail" id="provDeployDetail">SPL correlation rule active. Alert threshold configured. Notifications to SOC-L2.</div>
+          <div class="prov-step-time">Mon 09:17 — 40s deployment</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prov-section" id="provInputs">
+      <div class="prov-section-title" style="display:flex;align-items:center;gap:6px;">
+        <span style="color:var(--cyan);">&#9660;</span> Inputs — What Fed This Artifact
+      </div>
+      <div id="provInputsList" style="display:flex;flex-direction:column;gap:6px;"></div>
+    </div>
+
+    <div class="prov-section" id="provOutputs">
+      <div class="prov-section-title" style="display:flex;align-items:center;gap:6px;">
+        <span style="color:var(--green);">&#9650;</span> Outputs — What This Artifact Triggers
+      </div>
+      <div id="provOutputsList" style="display:flex;flex-direction:column;gap:6px;"></div>
+    </div>
+
+    <div class="prov-section">
+      <div class="prov-section-title">Governance Metadata</div>
+      <div style="font-size:12px;line-height:1.6;color:var(--text-dim);">
+        <div><strong style="color:var(--text);">Hash:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:11px;">sha256:7f3a2...e91c</span></div>
+        <div><strong style="color:var(--text);">Version:</strong> 1.0</div>
+        <div><strong style="color:var(--text);">Approver:</strong> CISO</div>
+        <div><strong style="color:var(--text);">Classification:</strong> Confidential</div>
+        <div><strong style="color:var(--text);">Retention:</strong> 7 years (SOX)</div>
+      </div>
+    </div>
+
+    <div class="prov-section" style="border-bottom:none;">
+      <div class="prov-section-title">All Campaign Artifacts</div>
+      <div style="display:flex;flex-direction:column;gap:4px;" id="provAllArtifacts">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main-area -->
+
+<script>
+  // ─── Data ───
+  const artifacts = [
+    {
+      id: 'splunk',
+      artifactId: 'LA-2026-0847-DET-001',
+      team: 'SOC — Detection Eng',
+      tool: 'Splunk',
+      title: 'VPN + MFA Correlation Rule (SPL)',
+      mitre: ['T1078', 'T1556'],
+      deployLabel: 'Deployed to Splunk',
+      deployDetail: 'SPL correlation rule active. Alert threshold configured. Notifications to SOC-L2, PagerDuty, ServiceNow.',
+      color: 'var(--orange)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider helpdesk social engineering TTP (Mon 09:14)' },
+        { source: 'IAM Team', text: 'Okta MFA reset log — jchen MFA reset via helpdesk ticket (Mon 14:22)' },
+        { source: 'SOC Team', text: 'VPN auth anomaly — jchen login from unrecognized device, Lagos geo (Mon 03:41)' }
+      ],
+      outputs: [
+        { target: 'SOC Analyst (L2)', text: 'Real-time alert in Splunk — "VPN+MFA Correlation: 4 events matched"', who: 'SOC L2 analyst sees alert in Splunk dashboard + PagerDuty notification' },
+        { target: 'ServiceNow', text: 'Auto-created incident ticket SEC-4412 linked to campaign CAMP-2026-0847', who: 'SOC Lead sees new P1 incident in queue' },
+        { target: 'Snowflake', text: 'Same detection logic replicated as SQL for threat hunting (Artifact #2)', who: 'Detection Eng runs deeper historical query' }
+      ]
+    },
+    {
+      id: 'snowflake',
+      artifactId: 'LA-2026-0847-DET-002',
+      team: 'SOC — Detection Eng',
+      tool: 'Snowflake',
+      title: 'VPN + MFA Correlation Rule (SQL)',
+      mitre: ['T1078', 'T1556'],
+      deployLabel: 'Deployed to Snowflake',
+      deployDetail: 'SQL query saved to SECURITY_ANALYST worksheet. Scheduled as recurring task every 15 min.',
+      color: 'var(--cyan)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI advisory: behavioral pattern — MFA reset + VPN from new device within 24h' },
+        { source: 'Splunk (Artifact #1)', text: 'Same detection logic translated from SPL → Snowflake SQL for security data lake' },
+        { source: 'IAM + VPN Logs', text: 'Historical MFA reset + VPN auth data in Snowflake security schema' }
+      ],
+      outputs: [
+        { target: 'Detection Eng', text: 'Scheduled query runs every 15 min — results feed threat hunting workflow', who: 'Detection engineer reviews new matches in Snowflake worksheet' },
+        { target: 'Data Science', text: 'Query results available for ML model training — risk scoring enrichment', who: 'Security data scientist uses results to refine risk model' },
+        { target: 'GRC (Artifact #7)', text: 'Query results serve as evidence for SOX audit trail', who: 'Compliance analyst references query outputs in control documentation' }
+      ]
+    },
+    {
+      id: 'okta',
+      artifactId: 'LA-2026-0847-IAM-003',
+      team: 'IAM — Identity',
+      tool: 'Okta Admin Console',
+      title: 'MFA Reset Voice Verification Policy',
+      mitre: ['T1556', 'T1199'],
+      deployLabel: 'Deployed to Okta',
+      deployDetail: 'Authentication policy active. Voice verification required for all helpdesk MFA resets. No exceptions.',
+      color: 'var(--yellow)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider uses helpdesk social engineering to reset MFA' },
+        { source: 'IAM Team', text: 'Okta log showing jchen MFA reset completed without voice verification' },
+        { source: 'IR Team', text: 'Post-incident finding: helpdesk agent bypassed identity check under social pressure' }
+      ],
+      outputs: [
+        { target: 'Helpdesk Agents', text: 'All MFA reset requests now require voice call + 6-digit code before processing', who: 'Helpdesk agent sees "Voice Verification Required" block in Okta workflow' },
+        { target: 'GRC (Artifact #7)', text: 'Policy enforcement serves as SOX remediation evidence', who: 'Compliance analyst links this policy to control gap CTRL-2026-0847-001' },
+        { target: 'All Employees', text: 'Users attempting MFA reset via helpdesk receive voice call to registered phone', who: 'Employee completes voice verification or reset is denied' }
+      ]
+    },
+    {
+      id: 'proofpoint',
+      artifactId: 'LA-2026-0847-EML-004',
+      team: 'Email Security',
+      tool: 'Proofpoint',
+      title: 'Lookalike Domain Block Rule',
+      mitre: ['T1566.002', 'T1583.001'],
+      deployLabel: 'Deployed to Proofpoint',
+      deployDetail: 'Transport rule active. 5 domain patterns blocked. 3 messages quarantined since deployment.',
+      color: 'var(--purple)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider registers lookalike SSO domains for credential phishing' },
+        { source: 'Email Security Team', text: 'Proofpoint log — phishing email with acme-okta-sso.com link sent to 12 employees' },
+        { source: 'KTLYST Pattern Engine', text: 'Extracted 5 domain patterns from advisory IOCs + observed infrastructure' }
+      ],
+      outputs: [
+        { target: 'Email Users', text: 'Phishing emails with lookalike domains quarantined before reaching inbox', who: 'Employee never sees the phishing email — it lands in quarantine' },
+        { target: 'Email Security Team', text: 'Alert triggered for each quarantined message — team reviews in Proofpoint console', who: 'Email security analyst validates true positive, updates block list' },
+        { target: 'SOC (Artifact #1)', text: 'Quarantine events correlated with campaign — enriches VPN+MFA detection context', who: 'SOC analyst sees phishing attempt linked to same campaign in Splunk' }
+      ]
+    },
+    {
+      id: 'crowdstrike',
+      artifactId: 'LA-2026-0847-EDR-005',
+      team: 'Endpoint — EDR',
+      tool: 'CrowdStrike Falcon',
+      title: 'Scattered Spider Stage-2 Loader IOA',
+      mitre: ['T1059.001', 'T1105', 'T1071.001'],
+      deployLabel: 'Deployed to CrowdStrike',
+      deployDetail: 'Custom IOA rule active. Process creation + network connection detection. Block + contain response. 2 hits blocked.',
+      color: 'var(--red)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider deploys stage-2 loader via encoded PowerShell + remote download' },
+        { source: 'Endpoint Team', text: 'CrowdStrike EDR telemetry — encoded PowerShell execution on jchen workstation (Mon 04:12)' },
+        { source: 'KTLYST Pattern Engine', text: 'Behavioral signature: powershell.exe -enc + outbound HTTPS within 30s' }
+      ],
+      outputs: [
+        { target: 'Endpoint Team', text: 'IOA blocks execution and network-contains host automatically on match', who: 'Endpoint analyst sees "Blocked — Critical" alert in Falcon console' },
+        { target: 'SOC (Artifact #6)', text: 'Block event triggers IR playbook step 1 — "Isolate Affected Endpoints"', who: 'SOC Lead gets PagerDuty alert — containment SLA timer starts' },
+        { target: 'IR Team', text: '2 hosts already blocked — forensic artifacts preserved for investigation', who: 'IR analyst collects memory dump + process tree from contained host' }
+      ]
+    },
+    {
+      id: 'jira',
+      artifactId: 'LA-2026-0847-IR-006',
+      team: 'IR / SOC',
+      tool: 'Jira Service Management',
+      title: 'Scattered Spider Response Playbook',
+      mitre: ['T1078', 'T1556', 'T1059.001'],
+      deployLabel: 'Deployed to Jira',
+      deployDetail: 'Playbook created with 6 response steps. Linked to 3 incidents. SLA timers active. Assigned to SOC Lead.',
+      color: 'var(--accent)',
+      inputs: [
+        { source: 'All 5 Source Events', text: 'FBI advisory + VPN anomaly + helpdesk phishing + MFA reset + encoded PowerShell — full campaign picture' },
+        { source: 'KTLYST Correlation', text: '5 isolated events linked into single campaign with causal chain and affected users' },
+        { source: 'Artifacts #1–#5', text: 'Detection rules, IAM policy, email block, and EDR IOA already deployed — playbook references all' }
+      ],
+      outputs: [
+        { target: 'SOC Lead', text: 'Playbook assigned with 6 response steps — containment SLA <4h, eradication <24h', who: 'SOC Lead sees IR-2026-0847 at top of queue, begins step 1' },
+        { target: 'CISO', text: 'Executive brief step auto-triggered — scope, containment status, SOX gap, remediation timeline', who: 'CISO receives structured brief with KTLYST provenance chain attached' },
+        { target: 'FS-ISAC', text: 'Step 5: anonymized IOCs shared with Financial Services ISAC per KTLYST export', who: 'ISAC members receive Scattered Spider behavioral signatures + domain patterns' }
+      ]
+    },
+    {
+      id: 'servicenow',
+      artifactId: 'LA-2026-0847-GRC-007',
+      team: 'GRC — Compliance',
+      tool: 'ServiceNow GRC',
+      title: 'SOX Control Gap — MFA Reset Verification',
+      mitre: ['T1556', 'T1199'],
+      deployLabel: 'Deployed to ServiceNow GRC',
+      deployDetail: 'Control record created. SOX gap documented. Remediation linked to Okta policy (Artifact #3). Audit trail attached.',
+      color: 'var(--green)',
+      inputs: [
+        { source: 'KTLYST Campaign Analysis', text: 'Campaign CAMP-2026-0847 revealed MFA reset completed without voice verification — SOX ITGC violation' },
+        { source: 'IAM Team (Artifact #3)', text: 'Okta policy now enforced — serves as remediation evidence for the control gap' },
+        { source: 'All 5 Source Events', text: 'Full provenance chain from FBI advisory through detection, correlation, and enforcement' }
+      ],
+      outputs: [
+        { target: 'Compliance Analyst', text: 'Control record CTRL-2026-0847-001 created — gap documented, remediation linked, status: Remediated', who: 'GRC analyst reviews control in ServiceNow — marks "pending external audit validation"' },
+        { target: 'External Auditors', text: 'KTLYST audit trail attached as evidence — 6 timestamped entries from source to enforcement', who: 'SOX auditor (Q2 2026) validates remediation with full provenance chain' },
+        { target: 'CISO', text: 'SOX gap surfaced proactively before audit — reduces audit risk exposure', who: 'CISO sees gap remediated in GRC dashboard — one fewer audit finding' }
+      ]
+    }
+  ];
+
+  // ─── Tab switching ───
+  const tabBar = document.getElementById('tabBar');
+  const tabs = tabBar.querySelectorAll('.tab');
+
+  function switchScreen(screenId) {
+    gtag('event', 'demo_stage_reached', { stage_name: screenId });
+    // Update tabs
+    tabs.forEach(t => t.classList.remove('active'));
+    const activeTab = tabBar.querySelector(`[data-screen="${screenId}"]`);
+    if (activeTab) activeTab.classList.add('active');
+
+    // Update screens
+    document.querySelectorAll('.mock-screen').forEach(s => s.classList.remove('active'));
+    const screen = document.getElementById('screen-' + screenId);
+    if (screen) screen.classList.add('active');
+
+    // Update provenance sidebar
+    const artifact = artifacts.find(a => a.id === screenId);
+    if (artifact) {
+      document.getElementById('provArtifactId').textContent = artifact.artifactId;
+      document.getElementById('provDeployLabel').textContent = artifact.deployLabel;
+      document.getElementById('provDeployDetail').textContent = artifact.deployDetail;
+
+      // Update MITRE tags
+      const mitreContainer = document.getElementById('provArtifactInfo');
+      const existingMitres = mitreContainer.querySelectorAll('.prov-mitre');
+      existingMitres.forEach(m => m.remove());
+      const mitreWrapper = document.createElement('div');
+      mitreWrapper.style.marginTop = '8px';
+      artifact.mitre.forEach(m => {
+        const tag = document.createElement('div');
+        tag.className = 'prov-mitre';
+        tag.textContent = m;
+        mitreWrapper.appendChild(tag);
+      });
+      mitreContainer.appendChild(mitreWrapper);
+
+      // Update inputs
+      const inputsList = document.getElementById('provInputsList');
+      inputsList.innerHTML = '';
+      (artifact.inputs || []).forEach(inp => {
+        const el = document.createElement('div');
+        el.className = 'prov-input-item prov-io-item';
+        el.innerHTML = `
+          <div class="prov-io-source">${inp.source}</div>
+          <div class="prov-io-text">${inp.text}</div>
+        `;
+        inputsList.appendChild(el);
+      });
+
+      // Update outputs
+      const outputsList = document.getElementById('provOutputsList');
+      outputsList.innerHTML = '';
+      (artifact.outputs || []).forEach(out => {
+        const el = document.createElement('div');
+        el.className = 'prov-output-item prov-io-item';
+        el.innerHTML = `
+          <div class="prov-io-target">${out.target}</div>
+          <div class="prov-io-text">${out.text}</div>
+          ${out.who ? `<div class="prov-io-who">${out.who}</div>` : ''}
+        `;
+        outputsList.appendChild(el);
+      });
+
+      // Highlight current in artifact list
+      document.querySelectorAll('.prov-artifact-list-item').forEach(item => {
+        item.style.background = item.dataset.id === screenId
+          ? 'var(--accent-glow)'
+          : 'transparent';
+        item.style.borderColor = item.dataset.id === screenId
+          ? 'rgba(59,130,246,0.3)'
+          : 'var(--border)';
+      });
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => switchScreen(tab.dataset.screen));
+  });
+
+  // ─── Populate "All Campaign Artifacts" list ───
+  const allArtifactsContainer = document.getElementById('provAllArtifacts');
+  artifacts.forEach(a => {
+    const item = document.createElement('div');
+    item.className = 'prov-artifact-list-item';
+    item.dataset.id = a.id;
+    item.style.cssText = `
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      ${a.id === 'splunk' ? 'background: var(--accent-glow); border-color: rgba(59,130,246,0.3);' : ''}
+    `;
+    item.innerHTML = `
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:${a.color};flex-shrink:0;"></span>
+        <span style="font-size:11px;font-weight:600;color:var(--text);">${a.team}</span>
+      </div>
+      <div style="font-size:11px;color:var(--text-dim);margin-bottom:2px;">${a.title}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);">${a.artifactId}</div>
+    `;
+    item.addEventListener('click', () => switchScreen(a.id));
+    allArtifactsContainer.appendChild(item);
+  });
+
+  // ─── Initial render ───
+  switchScreen('splunk');
+
+  // ─── Keyboard nav ───
+  document.addEventListener('keydown', (e) => {
+    const currentIdx = artifacts.findIndex(a =>
+      document.getElementById('screen-' + a.id).classList.contains('active')
+    );
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = (currentIdx + 1) % artifacts.length;
+      switchScreen(artifacts[next].id);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      const prev = (currentIdx - 1 + artifacts.length) % artifacts.length;
+      switchScreen(artifacts[prev].id);
+    }
+  });
+
+  // GA4: closing_loop_viewed — fires on page load
+  gtag('event', 'closing_loop_viewed');
+
+  // GA4: demo_started — fires once on first interaction
+  (function() {
+    var fired = false;
+    function fireDemoStarted() {
+      if (fired) return;
+      fired = true;
+      gtag('event', 'demo_started', { demo_page: 'provenance_explorer' });
+    }
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('.tab, .prov-artifact-list-item')) fireDemoStarted();
+    });
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) fireDemoStarted();
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
