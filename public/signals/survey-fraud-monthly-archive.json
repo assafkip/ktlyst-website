@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "description": "Archive of monthly survey fraud delta reports for repetition detection",
+    "created": "2026-02-21",
+    "max_months": 12
+  },
+  "reports": [
+    {
+      "generated_at": "2026-02-28T11:49:38.543529",
+      "top_deltas": [
+        {
+          "delta": "Bot traffic prevalence quantified at scale \u2014 Anura reports systematic measurement of bot composition in internet traffic, with direct applicability to survey entry streams",
+          "why_it_matters": "Likely indicates that bot-sourced survey traffic is now measurable as a distinct cohort; survey platforms may be receiving instrumented visibility into bot penetration rates. This shifts defense posture from reactive (detecting anomalies) to predictive (modeling bot baseline in entry cohorts).",
+          "control_impact": "strengthens",
+          "delta_category": "industry_benchmark",
+          "what_to_check": "Entry telemetry \u2014 ASN/IP reputation distribution + bot detection rule precision/recall vs. Anura baseline; compare PureSpectrum bot-flagged entry rate against industry benchmark if available",
+          "stream": "untagged",
+          "confidence": "medium",
+          "refs": [
+            2
+          ]
+        },
+        {
+          "delta": "Ad fraud cost quantification and niche targeting patterns \u2014 Anura published specific cost analysis and affiliate marketing niche vulnerability mapping, suggesting structured bot/fraud workflows targeting high-ROI survey verticals",
+          "why_it_matters": "Reported pattern suggests fraudsters are targeting specific survey niches (likely high-payout verticals like financial, tech, healthcare). This indicates coordinated, economics-driven entry campaigns rather than random bot noise. Survey routers may be seeing systematic over-representation in certain panel segments.",
+          "control_impact": "weakens",
+          "delta_category": "fraud_threat",
+          "what_to_check": "QEP telemetry \u2014 cohort velocity by study vertical + buyer niche + entry source; flag any ASN/IP clusters showing disproportionate completion in high-payout studies; validate against buyer payout matrix",
+          "stream": "untagged",
+          "confidence": "medium",
+          "refs": [
+            4,
+            9
+          ]
+        },
+        {
+          "delta": "Proxy tool distribution via malware installers \u2014 Microsoft and third-party sources report ClickFix and similar malware campaigns bundling proxy/anonymization tools; 7-Zip malware variant confirms supply-chain attack vector distributing proxy capabilities",
+          "why_it_matters": "Possible new infrastructure pathway for survey respondents to mask real location/device state. Proxy-equipped devices entering surveys would bypass geo-IP and device fingerprint consistency checks. Malware distribution suggests organized fraud operations obtaining proxy access at scale.",
+          "control_impact": "weakens",
+          "delta_category": "infrastructure_shift",
+          "what_to_check": "Entry telemetry \u2014 geo-IP vs. device timezone mismatches + proxy detection signals (known proxy IP lists, DNS leaks); device fingerprint stability scoring; cross-reference entry IPs against Verisoul proxy/VPN reputation; validate with internal referrer/redirect forensics for malware campaign signatures",
+          "stream": "untagged",
+          "confidence": "medium",
+          "refs": [
+            6,
+            15
+          ]
+        },
+        {
+          "delta": "Model distillation attack campaigns targeting large language models \u2014 Anthropic reports 16M+ blocked exchanges; signals possible use of LLM-generated synthetic responses in survey completion workflows",
+          "why_it_matters": "Likely indicates emergence of LLM-powered respondent automation (synthetic open-end answers, consistency injection). This bypasses traditional text entropy and semantic anomaly detection by generating natural-language survey responses. May explain recent uptick in high-quality-appearing but fraudulent completes.",
+          "control_impact": "weakens",
+          "delta_category": "fraud_threat",
+          "what_to_check": "QEP telemetry \u2014 open-end text entropy baseline + semantic clustering (check for repeated phrase patterns across different respondents); session velocity (time-to-complete vs. text length); cross-reference entry source with known LLM inference endpoints; validate with buyer checkpoint metadata for response coherence",
+          "stream": "untagged",
+          "confidence": "low",
+          "refs": [
+            1
+          ]
+        },
+        {
+          "delta": "Data clean rooms and quality feedback loops deployed as platform-level control \u2014 Cint announced global data quality feedback loop and data clean room capability; signals industry shift toward post-hoc respondent quality validation and cross-platform reputation sharing",
+          "why_it_matters": "Vendor capability shift suggests industry recognition of need for network-level fraud signal sharing. This may pressure fraudsters to diversify panel sources and reduce repeat entries. Implies weakening of single-panel attack repeatability.",
+          "control_impact": "strengthens",
+          "delta_category": "industry_benchmark",
+          "what_to_check": "Panel cohort telemetry \u2014 repeat entry detection across PureSpectrum + external panel sources (if shared reputation data available); validate Verisoul identity counters for cross-panel deduplication; monitor buyer acceptance rate deltas as clean room data sharing adoption increases",
+          "stream": "untagged",
+          "confidence": "high",
+          "refs": [
+            7,
+            8
+          ]
+        }
+      ],
+      "controls_at_risk": [
+        {
+          "control": "Geo-IP + device timezone consistency checks",
+          "reason": "Proxy tool distribution via malware (ClickFix, 7-Zip variant) enables fraudsters to mask real location; devices entering surveys with malware-bundled proxy will show spoofed geo-IP and timezone mismatches that bypass naive consistency validation.",
+          "refs": [
+            6,
+            15
+          ]
+        },
+        {
+          "control": "Open-end text entropy and semantic anomaly detection",
+          "reason": "LLM-powered synthetic response generation (inferred from model distillation attack scale) can produce natural-language survey answers that evade traditional entropy baselines; fraudsters can now automate response quality without human copy-paste effort.",
+          "refs": [
+            1
+          ]
+        },
+        {
+          "control": "Single-panel repeat-entry filtering",
+          "reason": "Industry deployment of cross-panel data clean rooms and reputation feedback loops signals that fraudsters will face increasing pressure to diversify panel sources; single-panel repeat detection becomes less effective if fraudsters distribute entries across multiple panel partnerships.",
+          "refs": [
+            7,
+            8
+          ]
+        },
+        {
+          "control": "Device fingerprint stability scoring",
+          "reason": "Proxy and malware-bundled anonymization tools can alter device fingerprints or mask them; devices accessing surveys through compromised hosts may exhibit fingerprint inconsistency that naive stability thresholds do not capture.",
+          "refs": [
+            6,
+            15
+          ]
+        }
+      ],
+      "monitor_next_month": [
+        "Track entry cohort ASN/IP distribution for anomalies matching known proxy/malware ISPs; compare against Verisoul reputation data for new proxy emergence",
+        "Monitor QEP open-end text clustering and entropy distribution for LLM-signature patterns (e.g., repeated phrases, unusual formality, semantic consistency across unrelated studies)",
+        "Validate cross-panel deduplication effectiveness as Cint clean room adoption scales; flag any uptick in repeat respondents across buyer partnerships",
+        "Check buyer acceptance rate deltas by study vertical; flag niche-specific entry surges matching Anura-reported high-ROI survey targets",
+        "Audit referrer/redirect chains for malware campaign indicators (known malware download sites, C2 domains, ClickFix signatures)"
+      ]
+    },
+    {
+      "generated_at": "2026-03-01T11:28:50.507018",
+      "top_deltas": [
+        {
+          "delta": "LLM-generated synthetic response injection via model distillation campaigns \u2014 Anthropic blocked 16M+ exchanges targeting Claude; signals emerging capability to auto-generate plausible survey responses at scale using stolen/distilled model weights",
+          "why_it_matters": "Synthetic responses bypass traditional open-end text entropy and semantic inconsistency detection. If distilled models are being weaponized for survey completion, entry-level text quality checks (grammar, coherence, topic relevance) will fail to distinguish synthetic from human responses. This represents a material escalation from scripted/templated answers to probabilistically-indistinguishable synthetic text.",
+          "control_impact": "weakens",
+          "delta_category": "fraud_threat",
+          "what_to_check": "Open-end text telemetry \u2014 measure perplexity/entropy shift in text blocks from high-velocity entry cohorts; cross-ref with known distilled model fingerprints (token distribution bias, repeated phrase patterns); validate via Verisoul semantic coherence counter and session velocity anomalies",
+          "stream": "stream_a",
+          "confidence": "medium",
+          "refs": [
+            1
+          ]
+        },
+        {
+          "delta": "Proxy tool distribution normalized via supply-chain compromise \u2014 Microsoft ClickFix variant and malicious 7-Zip installer confirm proxy bundling in consumer software; signals infrastructure commoditization enabling survey bot operators to obscure IP/ASN signatures",
+          "why_it_matters": "Proxy-enabled entry streams break IP reputation and geolocation consistency checks. If malware-distributed proxies proliferate, ASN clustering and geo-IP vs. demographics validation will face increased false-positive pressure. Operators no longer require custom C2 or commercial proxy services; they embed evasion in trojanized binaries.",
+          "control_impact": "weakens",
+          "delta_category": "infrastructure_shift",
+          "what_to_check": "Entry telemetry \u2014 ASN reputation churn within sessions (entry 1 ASN \u2260 entry 2 ASN within 10min); geo-IP consistency delta; referrer chain ASN mismatches; validate via MaxMind/IP2Location anomaly rate and Verisoul IP reputation counters",
+          "stream": "stream_b",
+          "confidence": "high",
+          "refs": [
+            6,
+            15
+          ]
+        },
+        {
+          "delta": "Bot traffic composition quantified at internet scale \u2014 Anura reports systematic bot/legitimate traffic ratio measurement; implies survey entry streams can be modeled as fraction of larger bot ecosystem and targeted via affiliate marketing niche strategies",
+          "why_it_matters": "This is the first published quantification of bot prevalence by vertical and niche. Combined with Anura's affiliate marketing niche targeting analysis, it suggests fraudsters are running ROI-optimized campaigns against specific survey verticals (e.g., CPG, fintech, health). Survey routers are likely exposed to structured bot ingestion from high-ROI niches.",
+          "control_impact": "weakens",
+          "delta_category": "industry_benchmark",
+          "what_to_check": "Entry cohort analysis \u2014 segment by referrer/vertical; measure bot rate delta by niche; check session velocity and device fingerprint churn within high-value survey verticals; validate via entry source reputation dashboard and Verisoul bot score distribution by survey category",
+          "stream": "stream_a",
+          "confidence": "high",
+          "refs": [
+            2,
+            9
+          ]
+        },
+        {
+          "delta": "Industry-wide data quality feedback loop and clean room deployment \u2014 Cint announced Global Data Quality Feedback Loop and data clean room capability; signals platform-level shift toward post-hoc respondent reputation sharing and cross-platform blacklisting",
+          "why_it_matters": "This is NOT a fraud_threat; it is a strengthening control. However, it signals that survey platforms are now sharing respondent reputation data across routers. Fraudsters will adapt by: (1) rotating identities faster, (2) targeting smaller/newer platforms not yet in feedback loop, (3) spoofing device fingerprints to evade reputation tracking. This creates pressure for PureSpectrum to harden device fingerprint validation and shorten entry-to-reputation-query latency.",
+          "control_impact": "strengthens",
+          "delta_category": "industry_benchmark",
+          "what_to_check": "Respondent reputation matching \u2014 measure cache hit rate on Cint/Dynata reputation queries; track identity rotation velocity within 7-day windows; validate via device fingerprint stability telemetry and checkpoint delta timing",
+          "stream": "stream_a",
+          "confidence": "high",
+          "refs": [
+            7,
+            8
+          ]
+        }
+      ],
+      "controls_at_risk": [
+        {
+          "control": "Open-end text semantic coherence check (entropy, grammar, topic relevance)",
+          "reason": "Anthropic's report of LLM-distillation attacks (16M+ blocked exchanges) signals fraudsters can now auto-generate plausible survey responses indistinguishable from human text. Traditional NLP-based quality filters will fail.",
+          "refs": [
+            1
+          ]
+        },
+        {
+          "control": "IP/ASN reputation blacklisting and geolocation consistency validation",
+          "reason": "Malware-distributed proxies (ClickFix, 7-Zip variants) commoditize IP masking. Entries can now route through diverse ASNs and proxies embedded in trojanized software, defeating single-session IP reputation checks.",
+          "refs": [
+            6,
+            15
+          ]
+        },
+        {
+          "control": "Session-level device fingerprint matching (UA-CH, canvas, WebGL fingerprint)",
+          "reason": "Industry feedback loops increase pressure for identity rotation. Fraudsters will invest in device fingerprint spoofing to evade cross-platform reputation sharing. Static fingerprint anchors will weaken.",
+          "refs": [
+            7,
+            8
+          ]
+        }
+      ],
+      "monitor_next_month": [
+        "LLM distillation campaigns expansion \u2014 track if model weights for GPT, Gemini, or Claude appear in underground forums/breach databases; measure semantic coherence anomaly rate in high-velocity open-end text cohorts",
+        "Proxy tool variant proliferation \u2014 monitor malware feeds for new trojanized software bundling proxy/socks tools; measure ASN churn and IP rotation velocity in entry streams",
+        "Affiliate marketing niche bot targeting \u2014 validate if high-ROI survey verticals (fintech, health, CPG) show disproportionate entry velocity or bot score elevation vs. baseline",
+        "Respondent reputation loop adoption \u2014 measure Cint/Dynata reputation query success rate and cache hit velocity; track if identity rotation accelerates post-announcement"
+      ]
+    }
+  ]
+}

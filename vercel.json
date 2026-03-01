@@ -9,5 +9,37 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "demo.ktlystlabs.com"
+        }
+      ],
+      "destination": "/demo/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "demo2.ktlystlabs.com"
+        }
+      ],
+      "destination": "/demo2/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dataflow.ktlystlabs.com"
+        }
+      ],
+      "destination": "/data_flow/:path*"
+    }
   ]
 }

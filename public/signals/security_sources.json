@@ -1,10 +1,10 @@
 {
   "metadata": {
     "created": "2026-02-02",
-    "last_updated": "2026-02-03",
+    "last_updated": "2026-02-21",
     "description": "Security research RSS feeds for CVEs, malware, threat actor TTPs, and government advisories - based on Awesome Threat Intel RSS",
-    "schema_version": "1.1",
-    "source_count": 92
+    "schema_version": "1.2",
+    "source_count": 105
   },
   "sources": [
     {
@@ -38,37 +38,10 @@
       "source_name": "CISA ICS Advisories",
       "source_type": "government",
       "category": "ics_advisory",
-      "rss_feeds": ["https://us-cert.cisa.gov/ics/advisories/advisories.xml"],
+      "rss_feeds": ["https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml"],
       "topics": ["ICS", "SCADA", "OT security", "critical infrastructure"],
       "priority": 1,
       "notes": "Industrial Control Systems advisories"
-    },
-    {
-      "source_name": "US-CERT Current Activity",
-      "source_type": "government",
-      "category": "government_advisory",
-      "rss_feeds": ["https://us-cert.cisa.gov/ncas/current-activity.xml"],
-      "topics": ["current activity", "vulnerabilities", "threats"],
-      "priority": 1,
-      "notes": "US-CERT Current Activity feed"
-    },
-    {
-      "source_name": "US-CERT Alerts",
-      "source_type": "government",
-      "category": "government_advisory",
-      "rss_feeds": ["https://us-cert.cisa.gov/ncas/alerts.xml"],
-      "topics": ["alerts", "technical advisories", "vulnerabilities"],
-      "priority": 1,
-      "notes": "US-CERT Technical Alerts & Analyst Notes"
-    },
-    {
-      "source_name": "US-CERT Analysis Reports",
-      "source_type": "government",
-      "category": "government_advisory",
-      "rss_feeds": ["https://us-cert.cisa.gov/ncas/analysis-reports.xml"],
-      "topics": ["malware analysis", "threat reports", "technical analysis"],
-      "priority": 1,
-      "notes": "US-CERT Analysis Reports"
     },
     {
       "source_name": "NCSC UK",
@@ -182,7 +155,7 @@
       "source_name": "ESET WeLiveSecurity",
       "source_type": "vendor_research",
       "category": "threat_research",
-      "rss_feeds": ["https://www.welivesecurity.com/feed/", "http://eset.com/int/rss.xml"],
+      "rss_feeds": ["https://www.welivesecurity.com/feed/"],
       "topics": ["malware", "threat research", "APT", "campaigns"],
       "priority": 1,
       "notes": "ESET threat research blog"
@@ -227,7 +200,7 @@
       "source_name": "Microsoft MSRC",
       "source_type": "vendor_research",
       "category": "vulnerability_disclosure",
-      "rss_feeds": ["https://msrc.microsoft.com/blog/feed", "https://msrc-blog.microsoft.com/feed/"],
+      "rss_feeds": ["https://msrc.microsoft.com/blog/feed"],
       "topics": ["Microsoft", "patches", "vulnerabilities", "Patch Tuesday"],
       "priority": 1,
       "notes": "Microsoft Security Response Center"
@@ -254,7 +227,7 @@
       "source_name": "Trend Micro",
       "source_type": "vendor_research",
       "category": "threat_research",
-      "rss_feeds": ["http://feeds.trendmicro.com/TrendMicroSimplySecurity", "http://feeds.trendmicro.com/Anti-MalwareBlog/"],
+      "rss_feeds": ["http://feeds.trendmicro.com/TrendMicroSimplySecurity"],
       "topics": ["malware", "ransomware", "threat research"],
       "priority": 1,
       "notes": "Trend Micro security blogs"
@@ -263,7 +236,7 @@
       "source_name": "Unit 42 (Palo Alto)",
       "source_type": "vendor_research",
       "category": "threat_research",
-      "rss_feeds": ["https://unit42.paloaltonetworks.com/feed/", "http://researchcenter.paloaltonetworks.com/unit42/feed/"],
+      "rss_feeds": ["https://unit42.paloaltonetworks.com/feed/"],
       "topics": ["threat research", "malware", "APT", "campaigns"],
       "priority": 1,
       "notes": "Palo Alto Networks Unit 42"
@@ -290,7 +263,7 @@
       "source_name": "Fortinet Threat Research",
       "source_type": "vendor_research",
       "category": "threat_research",
-      "rss_feeds": ["http://feeds.feedburner.com/fortinet/blog/threat-research"],
+      "rss_feeds": ["https://www.fortinet.com/blog/threat-research/rss.xml"],
       "topics": ["malware", "vulnerabilities", "threat research"],
       "priority": 1,
       "notes": "Fortinet FortiGuard Labs"
@@ -350,15 +323,6 @@
       "notes": "McAfee blogs"
     },
     {
-      "source_name": "FireEye",
-      "source_type": "vendor_research",
-      "category": "threat_research",
-      "rss_feeds": ["http://www.fireeye.com/blog/feed"],
-      "topics": ["APT", "malware", "threat research"],
-      "priority": 1,
-      "notes": "FireEye blog (legacy)"
-    },
-    {
       "source_name": "AT&T Cybersecurity",
       "source_type": "vendor_research",
       "category": "threat_research",
@@ -384,15 +348,6 @@
       "topics": ["phishing", "email security", "threat research"],
       "priority": 2,
       "notes": "Cofense phishing research"
-    },
-    {
-      "source_name": "Digital Shadows",
-      "source_type": "vendor_research",
-      "category": "threat_intelligence",
-      "rss_feeds": ["https://www.digitalshadows.com/blog-and-research/feed/"],
-      "topics": ["threat intelligence", "dark web", "digital risk"],
-      "priority": 2,
-      "notes": "Digital Shadows research"
     },
     {
       "source_name": "EclecticIQ",
@@ -440,15 +395,6 @@
       "notes": "Anomali threat intelligence"
     },
     {
-      "source_name": "RiskIQ",
-      "source_type": "vendor_research",
-      "category": "threat_intelligence",
-      "rss_feeds": ["https://www.riskiq.com/feed/"],
-      "topics": ["threat intelligence", "digital footprint", "attack surface"],
-      "priority": 2,
-      "notes": "RiskIQ research"
-    },
-    {
       "source_name": "SecureWorks",
       "source_type": "vendor_research",
       "category": "threat_research",
@@ -456,15 +402,6 @@
       "topics": ["threat research", "incident response", "CTU"],
       "priority": 1,
       "notes": "Dell SecureWorks CTU"
-    },
-    {
-      "source_name": "PhishLabs",
-      "source_type": "vendor_research",
-      "category": "phishing_research",
-      "rss_feeds": ["http://blog.phishlabs.com/rss.xml"],
-      "topics": ["phishing", "brand protection", "threat research"],
-      "priority": 2,
-      "notes": "PhishLabs research"
     },
     {
       "source_name": "0patch",
@@ -497,11 +434,7 @@
       "source_name": "Recorded Future",
       "source_type": "vendor_research",
       "category": "threat_intelligence",
-      "rss_feeds": [
-        "https://www.recordedfuture.com/category/cyber/feed/",
-        "https://www.recordedfuture.com/category/threat-intelligence/feed/",
-        "https://www.recordedfuture.com/category/vulnerability-management/feed/"
-      ],
+      "rss_feeds": ["https://www.recordedfuture.com/blog/feed"],
       "topics": ["threat intelligence", "vulnerabilities", "geopolitical"],
       "priority": 1,
       "notes": "Recorded Future research"
@@ -595,15 +528,6 @@
       "topics": ["penetration testing", "red team", "tools"],
       "priority": 2,
       "notes": "SensePost (Orange Cyberdefense)"
-    },
-    {
-      "source_name": "Signals Corps",
-      "source_type": "vendor_research",
-      "category": "threat_intelligence",
-      "rss_feeds": ["https://www.signalscorps.com/feed.xml"],
-      "topics": ["threat intelligence", "CTI"],
-      "priority": 2,
-      "notes": "Signals Corps"
     },
     {
       "source_name": "UpGuard",
@@ -717,7 +641,7 @@
       "source_name": "Dark Reading",
       "source_type": "news",
       "category": "security_news",
-      "rss_feeds": ["https://www.darkreading.com/rss.xml", "https://www.darkreading.com/rss/all.xml"],
+      "rss_feeds": ["https://www.darkreading.com/rss.xml"],
       "topics": ["enterprise security", "vulnerabilities", "threat intelligence"],
       "priority": 1,
       "notes": "Enterprise security news"
@@ -729,13 +653,14 @@
       "rss_feeds": ["https://threatpost.com/feed/"],
       "topics": ["vulnerabilities", "malware", "threat research"],
       "priority": 1,
-      "notes": "Security news and vulnerability coverage"
+      "enabled": false,
+      "notes": "DISABLED: Threatpost shut down mid-2022, feed is stale"
     },
     {
       "source_name": "The Record",
       "source_type": "news",
       "category": "security_news",
-      "rss_feeds": ["https://therecord.media/feed", "https://therecord.media/feed/"],
+      "rss_feeds": ["https://therecord.media/feed"],
       "topics": ["security news", "breaches", "threat actors", "investigations"],
       "priority": 1,
       "notes": "The Record by Recorded Future"
@@ -801,7 +726,8 @@
       "rss_feeds": ["https://www.zdnet.com/topic/security/rss.xml"],
       "topics": ["security news", "enterprise", "vulnerabilities"],
       "priority": 2,
-      "notes": "ZDNet security section"
+      "enabled": false,
+      "notes": "Disabled: feed includes general tech articles (TVs, laptops, gadgets) mixed with security"
     },
     {
       "source_name": "Infosecurity Magazine",
@@ -867,17 +793,134 @@
       "notes": "Reddit netsec community"
     },
     {
-      "source_name": "Infosec Institute",
-      "source_type": "education",
-      "category": "security_education",
-      "rss_feeds": [
-        "https://resources.infosecinstitute.com/topics/malware-analysis/feed/",
-        "https://resources.infosecinstitute.com/topics/news/feed/",
-        "https://resources.infosecinstitute.com/topics/threat-intelligence/feed/"
-      ],
-      "topics": ["training", "malware analysis", "threat intelligence"],
+      "source_name": "Fraud of the Day",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://fraudoftheday.com/feed"],
+      "topics": ["fraud cases", "reward scams", "survey exploitation", "government fraud"],
+      "priority": 1,
+      "notes": "Daily fraud cases including reward-based scams",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "About-Fraud News",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://about-fraud.com/feed"],
+      "topics": ["scam trends", "panel abuse", "fraud psychology", "fraud fighting"],
+      "priority": 1,
+      "notes": "Fraud trends and resources for fraud fighters",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "Anura Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://anura.io/blog/rss.xml"],
+      "topics": ["bot detection", "ad fraud", "survey fraud", "click fraud", "real-time prevention"],
+      "priority": 1,
+      "notes": "Bot detection in marketing and surveys",
+      "stream": "stream_b"
+    },
+    {
+      "source_name": "Cint Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://www.cint.com/blog/rss"],
+      "topics": ["survey router fraud", "trust score", "respondent quality", "panel fraud", "data quality"],
+      "priority": 1,
+      "notes": "Survey platform fraud defenses, router exploits, proxy evasion",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "All Things Insights",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://allthingsinsights.com/feed/"],
+      "topics": ["market research", "fraud prevention", "data integrity", "panel quality"],
+      "priority": 1,
+      "notes": "Next-gen survey fraud prevention, market research integrity",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "Prosopo Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://prosopo.io/feed.xml"],
+      "topics": ["bot detection", "AI bots", "survey submissions", "CAPTCHA"],
+      "priority": 1,
+      "notes": "AI bot compromises, stopping bot survey submissions",
+      "stream": "stream_b"
+    },
+    {
+      "source_name": "Greenbook Podcast",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://feeds.captivate.fm/greenbook/"],
+      "topics": ["market research", "survey fraud", "data risk", "panel quality"],
       "priority": 2,
-      "notes": "Infosec Institute resources"
+      "notes": "Market research industry podcast via Captivate",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "Survey Practice",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://surveypractice.org/feed"],
+      "topics": ["survey methodology", "data quality", "respondent behavior", "panel research"],
+      "priority": 1,
+      "notes": "Academic survey methodology and quality research",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "Insight Platforms",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://insightplatforms.com/feed"],
+      "topics": ["market research tech", "survey platforms", "data quality", "panel technology"],
+      "priority": 1,
+      "notes": "Market research technology and platform coverage",
+      "stream": "stream_a"
+    },
+    {
+      "source_name": "DataDome Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://datadome.co/blog/feed"],
+      "topics": ["bot detection", "bot management", "fraud prevention", "device fingerprinting"],
+      "priority": 1,
+      "notes": "Bot detection and online fraud prevention",
+      "stream": "stream_b"
+    },
+    {
+      "source_name": "Kasada Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://www.kasada.io/feed"],
+      "topics": ["bot mitigation", "automation fraud", "credential stuffing", "web scraping"],
+      "priority": 1,
+      "notes": "Anti-bot and automation fraud research",
+      "stream": "stream_b"
+    },
+    {
+      "source_name": "Sift Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://sift.com/blog/feed"],
+      "topics": ["digital fraud", "account fraud", "payment fraud", "trust and safety"],
+      "priority": 1,
+      "notes": "Digital trust and safety, fraud prevention",
+      "stream": "stream_b"
+    },
+    {
+      "source_name": "Unit21 Blog",
+      "source_type": "fraud_intelligence",
+      "category": "survey_fraud",
+      "rss_feeds": ["https://www.unit21.ai/blog/rss.xml"],
+      "topics": ["fraud operations", "anti-money laundering", "fraud detection", "risk operations"],
+      "priority": 1,
+      "notes": "Fraud and risk operations intelligence",
+      "stream": "stream_b"
     }
   ]
 }

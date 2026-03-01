@@ -48,21 +48,27 @@
       "source_type": "news",
       "rss_feeds": [
         "https://www.axios.com/pro/deals/feed"
-      ]
+      ],
+      "_note": "DISABLED: returns 403 (paid/gated). Keeping for reference.",
+      "enabled": false
     },
     {
       "source_name": "PitchBook News",
       "source_type": "news",
       "rss_feeds": [
         "https://pitchbook.com/feed"
-      ]
+      ],
+      "_note": "DISABLED: returns 403 (auth-gated). Keeping for reference.",
+      "enabled": false
     },
     {
       "source_name": "Fortune Term Sheet",
       "source_type": "news",
       "rss_feeds": [
         "https://fortune.com/section/term-sheet/feed/"
-      ]
+      ],
+      "_note": "DISABLED: returns 404 (feed removed). Keeping for reference.",
+      "enabled": false
     },
     {
       "source_name": "Venture Beat",

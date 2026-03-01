@@ -1,11 +1,54 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) — bot-filtered -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.__gaBotFiltered = (function(){
+        var ua = navigator.userAgent || '';
+        var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+        return bots.test(ua);
+      })();
+      if (!window.__gaBotFiltered) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-DPSD4GNJE0');
+      }
+    </script>
+    <script>
+      (function(){
+        var h=location.hostname;
+        if(h==='demo.ktlystlabs.com'){location.replace('/demo/');return}
+        if(h==='demo2.ktlystlabs.com'){location.replace('/demo2/');return}
+        if(h==='dataflow.ktlystlabs.com'){location.replace('/data_flow/');return}
+      })();
+    </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KTLYST Labs - Unleash Your Knowledge</title>
-    <meta name="description" content="Threat intelligence → deployable detection rules in <48 hours" />
+    <title>KTLYST Labs — The Nervous System for Enterprise Security</title>
+    <meta name="description" content="Every enterprise has 60+ security tools — 60 muscles with no nervous system. KTLYST is the nervous system for enterprise security that turns learning into governed, enforced defense." />
+    <link rel="canonical" href="https://www.ktlystlabs.com/">
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ktlystlabs.com/">
+    <meta property="og:title" content="KTLYST Labs — The Nervous System for Enterprise Security">
+    <meta property="og:description" content="Every enterprise has 60+ security tools — 60 muscles with no nervous system. KTLYST is the nervous system that turns learning into governed, enforced defense.">
+    <meta property="og:image" content="https://www.ktlystlabs.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="KTLYST Labs">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KTLYST Labs — The Nervous System for Enterprise Security">
+    <meta name="twitter:description" content="Every enterprise has 60+ security tools — 60 muscles with no nervous system. KTLYST is the nervous system.">
+    <meta name="twitter:image" content="https://www.ktlystlabs.com/og-image.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,5 +56,67 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a').forEach(function(link) {
+        var href = link.href || '';
+        var text = link.textContent.trim();
+
+        if (href.includes('calendly.com')) {
+          link.addEventListener('click', function() {
+            gtag('event', 'cta_click', {
+              link_text: text,
+              link_url: href,
+              cta_type: 'calendly',
+              page_section: getSectionName(link)
+            });
+          });
+        }
+
+        if (href.includes('docs.google.com/forms')) {
+          link.addEventListener('click', function() {
+            var ctaType = text.toLowerCase().includes('waitlist') ? 'waitlist' : 'design_partner_apply';
+            gtag('event', 'cta_click', {
+              link_text: text,
+              link_url: href,
+              cta_type: ctaType,
+              page_section: getSectionName(link)
+            });
+          });
+        }
+
+        if (href.startsWith('mailto:')) {
+          link.addEventListener('click', function() {
+            gtag('event', 'cta_click', {
+              link_text: text,
+              link_url: href,
+              cta_type: 'email',
+              page_section: getSectionName(link)
+            });
+          });
+        }
+
+        if (href.includes('linkedin.com/in/')) {
+          link.addEventListener('click', function() {
+            gtag('event', 'outbound_click', {
+              link_text: text,
+              link_url: href,
+              cta_type: 'linkedin_profile'
+            });
+          });
+        }
+      });
+
+      function getSectionName(el) {
+        var section = el.closest('section, [role="region"], nav, footer, header');
+        if (!section) return 'unknown';
+        if (section.tagName === 'NAV' || section.tagName === 'HEADER') return 'nav';
+        if (section.tagName === 'FOOTER') return 'footer';
+        var heading = section.querySelector('h1, h2');
+        if (heading) return heading.textContent.trim().slice(0, 40);
+        return 'hero';
+      }
+    });
+    </script>
   </body>
 </html>
