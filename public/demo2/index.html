@@ -1979,7 +1979,19 @@
      TAB BAR
      ═══════════════════════════════════════════ -->
 <div class="tab-bar" id="tabBar">
-  <button class="tab active" data-screen="splunk"
+  <button class="tab active" data-screen="okta"
+    style="--tab-color: var(--yellow); --tab-bg: var(--yellow-dim);">
+    <span class="tab-dot"></span>
+    IAM — Okta
+    <span class="tab-tool">MFA Policy</span>
+  </button>
+  <button class="tab" data-screen="crowdstrike"
+    style="--tab-color: var(--red); --tab-bg: var(--red-dim);">
+    <span class="tab-dot"></span>
+    Endpoint — CrowdStrike
+    <span class="tab-tool">Custom IOA</span>
+  </button>
+  <button class="tab" data-screen="splunk"
     style="--tab-color: var(--orange); --tab-bg: var(--orange-dim);">
     <span class="tab-dot"></span>
     SOC — Splunk
@@ -1991,23 +2003,11 @@
     SOC — Snowflake
     <span class="tab-tool">SQL Rule</span>
   </button>
-  <button class="tab" data-screen="okta"
-    style="--tab-color: var(--yellow); --tab-bg: var(--yellow-dim);">
-    <span class="tab-dot"></span>
-    IAM — Okta
-    <span class="tab-tool">MFA Policy</span>
-  </button>
   <button class="tab" data-screen="proofpoint"
     style="--tab-color: var(--purple); --tab-bg: var(--purple-dim);">
     <span class="tab-dot"></span>
     Email — Proofpoint
     <span class="tab-tool">Domain Block</span>
-  </button>
-  <button class="tab" data-screen="crowdstrike"
-    style="--tab-color: var(--red); --tab-bg: var(--red-dim);">
-    <span class="tab-dot"></span>
-    Endpoint — CrowdStrike
-    <span class="tab-tool">Custom IOA</span>
   </button>
   <button class="tab" data-screen="jira"
     style="--tab-color: var(--accent); --tab-bg: var(--accent-glow);">
@@ -2034,7 +2034,7 @@
     <!-- ════════════════════════════════════
          1. SPLUNK
          ════════════════════════════════════ -->
-    <div class="mock-screen active" id="screen-splunk">
+    <div class="mock-screen" id="screen-splunk">
       <div class="splunk-mock">
         <div class="splunk-topbar">
           <div class="splunk-logo">splunk&gt; <span>enterprise</span></div>
@@ -2056,9 +2056,10 @@
         </div>
 
         <div class="splunk-code">
-          <div class="code-block"><span class="comment">/* KTLYST Artifact: LA-2026-0847-DET-001 */</span>
+          <div class="code-block"><span class="comment">/* KTLYST Artifact: LA-2026-0847-DET-003 */</span>
 <span class="comment">/* Campaign: CAMP-2026-0847 (Scattered Spider) */</span>
-<span class="comment">/* Approved: CISO — 3 min review — Mon 09:17 */</span>
+<span class="comment">/* Approved: SOC Lead (M. Chen) — 3 min review — Mon 09:17:04 UTC */</span>
+<span class="comment">/* Policy: IR Policy KL-202601-v1.0.2 | Approval: INC#998877 */</span>
 
 <span class="kw">index</span>=vpn <span class="kw">sourcetype</span>=vpn:auth
 | <span class="fn">join</span> user [<span class="kw">search index</span>=iam <span class="kw">sourcetype</span>=okta:mfa action=reset]
@@ -2130,7 +2131,7 @@
           <span class="splunk-alert-badge">Alert Active</span>
           <span>Threshold: &ge;1 event &rarr; Notify: SOC-L2 channel &bull; PagerDuty &bull; ServiceNow incident</span>
           <span style="margin-left:auto;">
-            <span class="ktlyst-badge" style="font-size:9px;">LA-2026-0847-DET-001</span>
+            <span class="ktlyst-badge" style="font-size:9px;">LA-2026-0847-DET-003</span>
           </span>
         </div>
       </div>
@@ -2181,9 +2182,10 @@
 
             <div class="snowflake-editor">
               <div class="snowflake-code">
-                <div class="code-block"><span class="comment">-- KTLYST Artifact: LA-2026-0847-DET-002</span>
+                <div class="code-block"><span class="comment">-- KTLYST Artifact: LA-2026-0847-DET-004</span>
 <span class="comment">-- Campaign: CAMP-2026-0847 (Scattered Spider)</span>
-<span class="comment">-- Approved: CISO — 3 min review — Mon 09:17</span>
+<span class="comment">-- Approved: SOC Lead (M. Chen) — 3 min review — Mon 09:17:04 UTC</span>
+<span class="comment">-- Policy: IR Policy KL-202601-v1.0.2 | Approval: INC#998877</span>
 <span class="comment">-- Governance: Hash-verified, provenance-tracked</span>
 
 <span class="kw">SELECT</span>
@@ -2263,7 +2265,7 @@
     <!-- ════════════════════════════════════
          3. OKTA
          ════════════════════════════════════ -->
-    <div class="mock-screen" id="screen-okta">
+    <div class="mock-screen active" id="screen-okta">
       <div class="okta-mock">
         <div class="okta-topbar">
           <div class="okta-logo">okta</div>
@@ -2304,7 +2306,7 @@
               <div class="okta-card-body">
                 <div class="okta-field">
                   <div class="okta-field-label">Description</div>
-                  <div class="okta-field-value">Require voice call verification to registered phone before any MFA factor reset initiated via helpdesk ticket. Deployed by KTLYST governance — campaign CAMP-2026-0847.</div>
+                  <div class="okta-field-value">Require voice call verification to registered phone before any MFA factor reset initiated via helpdesk ticket. Deployed per IR Policy KL-202601-v1.0.2. Approved by SOC Lead (M. Chen) via INC#998877. Campaign CAMP-2026-0847.</div>
                 </div>
                 <div class="okta-field">
                   <div class="okta-field-label">Trigger Condition</div>
@@ -2323,7 +2325,7 @@
                 </div>
                 <div class="okta-field">
                   <div class="okta-field-label">KTLYST Artifact ID</div>
-                  <div class="okta-field-value mono">LA-2026-0847-IAM-003</div>
+                  <div class="okta-field-value mono">LA-2026-0847-IAM-001</div>
                 </div>
               </div>
             </div>
@@ -2379,7 +2381,7 @@
             <div class="proofpoint-rule-header">
               <div class="proofpoint-rule-title">
                 Block Lookalike Okta SSO Domains
-                <span style="font-size:11px;color:#999;font-weight:400;">LA-2026-0847-EML-004</span>
+                <span style="font-size:11px;color:#999;font-weight:400;">LA-2026-0847-EML-005</span>
               </div>
               <span class="proofpoint-rule-status">Active</span>
             </div>
@@ -2388,7 +2390,7 @@
               <div class="proofpoint-field">
                 <div class="proofpoint-field-label">Description</div>
                 <div style="font-size:13px;color:#333;line-height:1.4;">
-                  Block inbound email containing links to lookalike Okta SSO domains used in Scattered Spider phishing campaigns. Deployed via KTLYST governance — campaign CAMP-2026-0847.
+                  Block inbound email containing links to lookalike Okta SSO domains used in Scattered Spider phishing campaigns. Deployed per IR Policy KL-202601-v1.0.2. Approved by SOC Lead (M. Chen) via INC#998877. Campaign CAMP-2026-0847.
                 </div>
               </div>
 
@@ -2429,8 +2431,8 @@
               </div>
 
               <div style="margin-top:12px;padding-top:12px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;">
-                <span style="font-size:12px;color:#999;">Created: Mon 09:17 &bull; Last match: 3 messages quarantined</span>
-                <span class="ktlyst-badge" style="color:#F05A28;background:rgba(240,90,40,0.1);border-color:rgba(240,90,40,0.25);font-size:9px;">LA-2026-0847-EML-004</span>
+                <span style="font-size:12px;color:#999;">Created: Mon 09:17:44 UTC &bull; Last match: 3 messages quarantined</span>
+                <span class="ktlyst-badge" style="color:#F05A28;background:rgba(240,90,40,0.1);border-color:rgba(240,90,40,0.25);font-size:9px;">LA-2026-0847-EML-005</span>
               </div>
             </div>
           </div>
@@ -2478,7 +2480,7 @@
               <div class="crowdstrike-field">
                 <div class="crowdstrike-field-label">Detection Pattern</div>
                 <div class="crowdstrike-code">
-                  <div class="code-block"><span class="comment">// KTLYST Artifact: LA-2026-0847-EDR-005</span>
+                  <div class="code-block"><span class="comment">// KTLYST Artifact: LA-2026-0847-EDR-002</span>
 <span class="comment">// Campaign: CAMP-2026-0847 (Scattered Spider)</span>
 
 <span class="kw">ImageFileName</span> = <span class="str">"*\\powershell.exe"</span>
@@ -2514,12 +2516,12 @@
               <div class="crowdstrike-meta-row">
                 <div class="crowdstrike-meta-item">Platform: <strong>Windows</strong></div>
                 <div class="crowdstrike-meta-item">Policy: <strong>All Hosts</strong></div>
-                <div class="crowdstrike-meta-item">Created: <strong>Mon 09:17</strong></div>
+                <div class="crowdstrike-meta-item">Created: <strong>Mon 09:17:44 UTC</strong></div>
                 <div class="crowdstrike-meta-item">Hits: <strong style="color:#ED1C24;">2 blocked</strong></div>
               </div>
 
               <div style="margin-top:16px;padding-top:12px;border-top:1px solid #2A2A35;display:flex;align-items:center;justify-content:space-between;">
-                <span class="ktlyst-badge">LA-2026-0847-EDR-005</span>
+                <span class="ktlyst-badge">LA-2026-0847-EDR-002</span>
                 <span style="font-size:11px;color:rgba(255,255,255,0.3);">Governance hash: sha256:7f3a2...e91c</span>
               </div>
             </div>
@@ -2577,7 +2579,7 @@
                 <div class="jira-step-num">3</div>
                 <div class="jira-step-content">
                   <div class="jira-step-title">Reset Affected MFA Factors</div>
-                  <div class="jira-step-detail">In-person identity verification required. New MFA enrollment with hardware token only. Voice verification policy now enforced (Artifact LA-2026-0847-IAM-003).</div>
+                  <div class="jira-step-detail">In-person identity verification required. New MFA enrollment with hardware token only. Voice verification policy now enforced (Artifact LA-2026-0847-IAM-001).</div>
                 </div>
               </div>
 
@@ -2601,7 +2603,7 @@
                 <div class="jira-step-num">6</div>
                 <div class="jira-step-content">
                   <div class="jira-step-title">Executive Brief</div>
-                  <div class="jira-step-detail">Prepare CISO brief: scope of compromise, containment status, SOX control gap identified, remediation timeline. KTLYST provenance chain attached.</div>
+                  <div class="jira-step-detail">Prepare executive brief for CISO: scope of compromise, containment status, SOX control gap identified, remediation timeline. KTLYST provenance chain attached. Approval: INC#998877.</div>
                 </div>
               </div>
             </div>
@@ -2623,7 +2625,7 @@
                 </div>
                 <div class="jira-detail-row">
                   <span class="jira-detail-label">Created</span>
-                  <span class="jira-detail-value">Mon 09:17</span>
+                  <span class="jira-detail-value">Mon 09:17:44 UTC</span>
                 </div>
                 <div class="jira-detail-row">
                   <span class="jira-detail-label">KTLYST ID</span>
@@ -2731,7 +2733,7 @@
               <div class="servicenow-field full">
                 <div class="servicenow-field-label">Remediation</div>
                 <div class="servicenow-field-value">
-                  Okta authentication policy enforced — voice verification now required for all helpdesk-initiated MFA resets (KTLYST Artifact LA-2026-0847-IAM-003). No exceptions. SOX-regulated control.
+                  Okta authentication policy enforced per IR Policy KL-202601-v1.0.2 — voice verification now required for all helpdesk-initiated MFA resets (KTLYST Artifact LA-2026-0847-IAM-001). Approved by SOC Lead (M. Chen) via INC#998877. No exceptions. SOX-regulated control.
                 </div>
               </div>
               <div class="servicenow-field">
@@ -2748,28 +2750,28 @@
               <div class="servicenow-audit-title">KTLYST Audit Trail — Evidence Chain</div>
 
               <div class="servicenow-audit-entry">
-                <span class="servicenow-audit-time">Mon 09:14:22</span>
-                <span class="servicenow-audit-action"><strong>Source ingested:</strong> FBI advisory on Scattered Spider helpdesk social engineering TTP</span>
+                <span class="servicenow-audit-time">Mon 09:14:22 UTC</span>
+                <span class="servicenow-audit-action"><strong>Source ingested:</strong> FBI Flash Alert CU-000171-MW — Scattered Spider helpdesk social engineering TTP. Uploaded by J. Rivera (CTI Team). Source type: Direct warning.</span>
               </div>
               <div class="servicenow-audit-entry">
-                <span class="servicenow-audit-time">Mon 09:14:38</span>
-                <span class="servicenow-audit-action"><strong>Pattern extracted:</strong> MFA reset via helpdesk → VPN access from new device (behavioral signature)</span>
+                <span class="servicenow-audit-time">Mon 09:14:38 UTC</span>
+                <span class="servicenow-audit-action"><strong>Pattern extracted:</strong> MFA reset via helpdesk &rarr; VPN access from new device (behavioral signature)</span>
               </div>
               <div class="servicenow-audit-entry">
-                <span class="servicenow-audit-time">Mon 09:15:01</span>
+                <span class="servicenow-audit-time">Mon 09:15:01 UTC</span>
                 <span class="servicenow-audit-action"><strong>Correlated:</strong> 5 source events across 5 teams linked to campaign CAMP-2026-0847</span>
               </div>
               <div class="servicenow-audit-entry">
-                <span class="servicenow-audit-time">Mon 09:15:12</span>
+                <span class="servicenow-audit-time">Mon 09:15:12 UTC</span>
                 <span class="servicenow-audit-action"><strong>SOX gap identified:</strong> No voice verification control existed for helpdesk MFA resets</span>
               </div>
               <div class="servicenow-audit-entry">
-                <span class="servicenow-audit-time">Mon 09:17:04</span>
-                <span class="servicenow-audit-action"><strong>CISO approved:</strong> 7 artifacts approved in single review (3 min). Governance hash: sha256:7f3a2...e91c</span>
+                <span class="servicenow-audit-time">Mon 09:17:04 UTC</span>
+                <span class="servicenow-audit-action"><strong>SOC Lead approved:</strong> M. Chen approved 7 artifacts in single review (3 min). Policy: IR Policy KL-202601-v1.0.2. Approval chain: INC#998877. Hash: sha256:7f3a2...e91c</span>
               </div>
               <div class="servicenow-audit-entry">
-                <span class="servicenow-audit-time">Mon 09:17:44</span>
-                <span class="servicenow-audit-action"><strong>Deployed:</strong> Okta policy enforced, control record created. 7 artifacts → 6 tools in 40 seconds.</span>
+                <span class="servicenow-audit-time">Mon 09:17:44 UTC</span>
+                <span class="servicenow-audit-action"><strong>Deployed:</strong> Okta policy enforced, control record created. 7 artifacts &rarr; 6 tools in 40 seconds.</span>
               </div>
             </div>
           </div>
@@ -2793,10 +2795,32 @@
 
     <div class="prov-section" id="provArtifactInfo">
       <div class="prov-section-title">Current Artifact</div>
-      <div class="prov-artifact-id" id="provArtifactId">LA-2026-0847-DET-001</div>
+      <div class="prov-artifact-id" id="provArtifactId">LA-2026-0847-IAM-001</div>
       <div style="margin-top:8px;">
-        <div class="prov-mitre" id="provMitre1">T1078</div>
-        <div class="prov-mitre" id="provMitre2">T1556</div>
+        <div class="prov-mitre" id="provMitre1">T1556</div>
+        <div class="prov-mitre" id="provMitre2">T1199</div>
+      </div>
+    </div>
+
+    <div class="prov-section">
+      <div class="prov-section-title">Governance</div>
+      <div style="font-size:12px;line-height:1.6;color:var(--text-dim);">
+        <div><strong style="color:var(--text);">Policy:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green);">IR Policy KL-202601-v1.0.2</span></div>
+        <div><strong style="color:var(--text);">Approver:</strong> SOC Lead (M. Chen)</div>
+        <div><strong style="color:var(--text);">Approval Chain:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:11px;">INC#998877</span></div>
+        <div><strong style="color:var(--text);">Hash:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:11px;">sha256:7f3a2...e91c</span></div>
+        <div><strong style="color:var(--text);">Classification:</strong> Confidential</div>
+        <div><strong style="color:var(--text);">Retention:</strong> 7 years (SOX)</div>
+      </div>
+    </div>
+
+    <div class="prov-section">
+      <div class="prov-section-title">Source</div>
+      <div style="font-size:12px;line-height:1.6;color:var(--text-dim);">
+        <div><strong style="color:var(--text);">Report:</strong> FBI Flash Alert CU-000171-MW</div>
+        <div><strong style="color:var(--text);">Source Type:</strong> <span style="color:var(--red);font-weight:600;">Direct warning</span></div>
+        <div><strong style="color:var(--text);">Uploaded by:</strong> J. Rivera (CTI Team)</div>
+        <div><strong style="color:var(--text);">Received:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:11px;">Mon 09:14:22 UTC</span></div>
       </div>
     </div>
 
@@ -2805,23 +2829,23 @@
       <div class="prov-chain">
         <div class="prov-step source">
           <div class="prov-step-label">Source Ingested</div>
-          <div class="prov-step-detail">FBI advisory on Scattered Spider helpdesk social engineering TTP</div>
-          <div class="prov-step-time">Mon 09:14</div>
+          <div class="prov-step-detail">FBI Flash Alert CU-000171-MW — Scattered Spider helpdesk social engineering TTP</div>
+          <div class="prov-step-time">Mon 09:14:22 UTC — uploaded by J. Rivera (CTI Team)</div>
         </div>
         <div class="prov-step process">
           <div class="prov-step-label">KTLYST Extracted Pattern</div>
           <div class="prov-step-detail">Behavioral signature: MFA reset via helpdesk + VPN from new device within 24h</div>
-          <div class="prov-step-time">Mon 09:14 — 09:15</div>
+          <div class="prov-step-time">Mon 09:14:38 UTC — 09:15:01 UTC</div>
         </div>
         <div class="prov-step approve">
-          <div class="prov-step-label">Human Approved</div>
-          <div class="prov-step-detail">CISO reviewed 7 artifacts in single batch. 3-minute review. Approved all.</div>
-          <div class="prov-step-time">Mon 09:17 (3 min review)</div>
+          <div class="prov-step-label">SOC Lead Approved</div>
+          <div class="prov-step-detail">M. Chen reviewed 7 artifacts in single batch. 3-minute review. Approved all. Approval chain: INC#998877.</div>
+          <div class="prov-step-time">Mon 09:17:04 UTC (3 min review)</div>
         </div>
         <div class="prov-step deploy">
-          <div class="prov-step-label" id="provDeployLabel">Deployed to Splunk</div>
-          <div class="prov-step-detail" id="provDeployDetail">SPL correlation rule active. Alert threshold configured. Notifications to SOC-L2.</div>
-          <div class="prov-step-time">Mon 09:17 — 40s deployment</div>
+          <div class="prov-step-label" id="provDeployLabel">Deployed to Okta</div>
+          <div class="prov-step-detail" id="provDeployDetail">Authentication policy active. Voice verification required for all helpdesk MFA resets. No exceptions. Per IR Policy KL-202601-v1.0.2.</div>
+          <div class="prov-step-time">Mon 09:17:44 UTC — 40s deployment</div>
         </div>
       </div>
     </div>
@@ -2840,16 +2864,6 @@
       <div id="provOutputsList" style="display:flex;flex-direction:column;gap:6px;"></div>
     </div>
 
-    <div class="prov-section">
-      <div class="prov-section-title">Governance Metadata</div>
-      <div style="font-size:12px;line-height:1.6;color:var(--text-dim);">
-        <div><strong style="color:var(--text);">Hash:</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:11px;">sha256:7f3a2...e91c</span></div>
-        <div><strong style="color:var(--text);">Version:</strong> 1.0</div>
-        <div><strong style="color:var(--text);">Approver:</strong> CISO</div>
-        <div><strong style="color:var(--text);">Classification:</strong> Confidential</div>
-        <div><strong style="color:var(--text);">Retention:</strong> 7 years (SOX)</div>
-      </div>
-    </div>
 
     <div class="prov-section" style="border-bottom:none;">
       <div class="prov-section-title">All Campaign Artifacts</div>
@@ -2861,65 +2875,27 @@
 
 </div><!-- /main-area -->
 
+<div style="padding:8px 24px;background:var(--surface);border-top:1px solid var(--border);font-size:10px;color:var(--text-muted);line-height:1.5;">
+  Splunk&reg; is a trademark of Splunk Inc. Snowflake&reg; is a trademark of Snowflake Inc. Okta&reg; is a trademark of Okta, Inc. CrowdStrike&reg; and Falcon&reg; are trademarks of CrowdStrike, Inc. Proofpoint&reg; is a trademark of Proofpoint, Inc. Jira&reg; is a trademark of Atlassian Pty Ltd. ServiceNow&reg; is a trademark of ServiceNow, Inc. KTLYST is not affiliated with or endorsed by any of these companies. Tool interfaces shown are illustrative mockups.
+</div>
+
 <script>
   // ─── Data ───
   const artifacts = [
     {
-      id: 'splunk',
-      artifactId: 'LA-2026-0847-DET-001',
-      team: 'SOC — Detection Eng',
-      tool: 'Splunk',
-      title: 'VPN + MFA Correlation Rule (SPL)',
-      mitre: ['T1078', 'T1556'],
-      deployLabel: 'Deployed to Splunk',
-      deployDetail: 'SPL correlation rule active. Alert threshold configured. Notifications to SOC-L2, PagerDuty, ServiceNow.',
-      color: 'var(--orange)',
-      inputs: [
-        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider helpdesk social engineering TTP (Mon 09:14)' },
-        { source: 'IAM Team', text: 'Okta MFA reset log — jchen MFA reset via helpdesk ticket (Mon 14:22)' },
-        { source: 'SOC Team', text: 'VPN auth anomaly — jchen login from unrecognized device, Lagos geo (Mon 03:41)' }
-      ],
-      outputs: [
-        { target: 'SOC Analyst (L2)', text: 'Real-time alert in Splunk — "VPN+MFA Correlation: 4 events matched"', who: 'SOC L2 analyst sees alert in Splunk dashboard + PagerDuty notification' },
-        { target: 'ServiceNow', text: 'Auto-created incident ticket SEC-4412 linked to campaign CAMP-2026-0847', who: 'SOC Lead sees new P1 incident in queue' },
-        { target: 'Snowflake', text: 'Same detection logic replicated as SQL for threat hunting (Artifact #2)', who: 'Detection Eng runs deeper historical query' }
-      ]
-    },
-    {
-      id: 'snowflake',
-      artifactId: 'LA-2026-0847-DET-002',
-      team: 'SOC — Detection Eng',
-      tool: 'Snowflake',
-      title: 'VPN + MFA Correlation Rule (SQL)',
-      mitre: ['T1078', 'T1556'],
-      deployLabel: 'Deployed to Snowflake',
-      deployDetail: 'SQL query saved to SECURITY_ANALYST worksheet. Scheduled as recurring task every 15 min.',
-      color: 'var(--cyan)',
-      inputs: [
-        { source: 'CTI Team', text: 'FBI advisory: behavioral pattern — MFA reset + VPN from new device within 24h' },
-        { source: 'Splunk (Artifact #1)', text: 'Same detection logic translated from SPL → Snowflake SQL for security data lake' },
-        { source: 'IAM + VPN Logs', text: 'Historical MFA reset + VPN auth data in Snowflake security schema' }
-      ],
-      outputs: [
-        { target: 'Detection Eng', text: 'Scheduled query runs every 15 min — results feed threat hunting workflow', who: 'Detection engineer reviews new matches in Snowflake worksheet' },
-        { target: 'Data Science', text: 'Query results available for ML model training — risk scoring enrichment', who: 'Security data scientist uses results to refine risk model' },
-        { target: 'GRC (Artifact #7)', text: 'Query results serve as evidence for SOX audit trail', who: 'Compliance analyst references query outputs in control documentation' }
-      ]
-    },
-    {
       id: 'okta',
-      artifactId: 'LA-2026-0847-IAM-003',
+      artifactId: 'LA-2026-0847-IAM-001',
       team: 'IAM — Identity',
       tool: 'Okta Admin Console',
       title: 'MFA Reset Voice Verification Policy',
       mitre: ['T1556', 'T1199'],
       deployLabel: 'Deployed to Okta',
-      deployDetail: 'Authentication policy active. Voice verification required for all helpdesk MFA resets. No exceptions.',
+      deployDetail: 'Authentication policy active. Voice verification required for all helpdesk MFA resets. No exceptions. Per IR Policy KL-202601-v1.0.2.',
       color: 'var(--yellow)',
       inputs: [
-        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider uses helpdesk social engineering to reset MFA' },
-        { source: 'IAM Team', text: 'Okta log showing jchen MFA reset completed without voice verification' },
-        { source: 'IR Team', text: 'Post-incident finding: helpdesk agent bypassed identity check under social pressure' }
+        { source: 'CTI Team', text: 'FBI Flash Alert CU-000171-MW: Scattered Spider helpdesk social engineering TTP', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' },
+        { source: 'IAM Team', text: 'Okta log showing jchen MFA reset completed without voice verification', sourceType: 'Vendor sourced', time: 'Mon 14:22:08 UTC' },
+        { source: 'IR Team', text: 'Post-incident finding: helpdesk agent bypassed identity check under social pressure', sourceType: 'Public sourced', time: 'Mon 15:01:33 UTC' }
       ],
       outputs: [
         { target: 'Helpdesk Agents', text: 'All MFA reset requests now require voice call + 6-digit code before processing', who: 'Helpdesk agent sees "Voice Verification Required" block in Okta workflow' },
@@ -2928,29 +2904,8 @@
       ]
     },
     {
-      id: 'proofpoint',
-      artifactId: 'LA-2026-0847-EML-004',
-      team: 'Email Security',
-      tool: 'Proofpoint',
-      title: 'Lookalike Domain Block Rule',
-      mitre: ['T1566.002', 'T1583.001'],
-      deployLabel: 'Deployed to Proofpoint',
-      deployDetail: 'Transport rule active. 5 domain patterns blocked. 3 messages quarantined since deployment.',
-      color: 'var(--purple)',
-      inputs: [
-        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider registers lookalike SSO domains for credential phishing' },
-        { source: 'Email Security Team', text: 'Proofpoint log — phishing email with acme-okta-sso.com link sent to 12 employees' },
-        { source: 'KTLYST Pattern Engine', text: 'Extracted 5 domain patterns from advisory IOCs + observed infrastructure' }
-      ],
-      outputs: [
-        { target: 'Email Users', text: 'Phishing emails with lookalike domains quarantined before reaching inbox', who: 'Employee never sees the phishing email — it lands in quarantine' },
-        { target: 'Email Security Team', text: 'Alert triggered for each quarantined message — team reviews in Proofpoint console', who: 'Email security analyst validates true positive, updates block list' },
-        { target: 'SOC (Artifact #1)', text: 'Quarantine events correlated with campaign — enriches VPN+MFA detection context', who: 'SOC analyst sees phishing attempt linked to same campaign in Splunk' }
-      ]
-    },
-    {
       id: 'crowdstrike',
-      artifactId: 'LA-2026-0847-EDR-005',
+      artifactId: 'LA-2026-0847-EDR-002',
       team: 'Endpoint — EDR',
       tool: 'CrowdStrike Falcon',
       title: 'Scattered Spider Stage-2 Loader IOA',
@@ -2959,14 +2914,77 @@
       deployDetail: 'Custom IOA rule active. Process creation + network connection detection. Block + contain response. 2 hits blocked.',
       color: 'var(--red)',
       inputs: [
-        { source: 'CTI Team', text: 'FBI advisory: Scattered Spider deploys stage-2 loader via encoded PowerShell + remote download' },
-        { source: 'Endpoint Team', text: 'CrowdStrike EDR telemetry — encoded PowerShell execution on jchen workstation (Mon 04:12)' },
-        { source: 'KTLYST Pattern Engine', text: 'Behavioral signature: powershell.exe -enc + outbound HTTPS within 30s' }
+        { source: 'CTI Team', text: 'FBI Flash Alert CU-000171-MW: Scattered Spider deploys stage-2 loader via encoded PowerShell + remote download', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' },
+        { source: 'Endpoint Team', text: 'CrowdStrike EDR telemetry — encoded PowerShell execution on jchen workstation', sourceType: 'Vendor sourced', time: 'Mon 04:12:47 UTC' },
+        { source: 'KTLYST Pattern Engine', text: 'Behavioral signature: powershell.exe -enc + outbound HTTPS within 30s', sourceType: 'Vendor sourced', time: 'Mon 09:14:38 UTC' }
       ],
       outputs: [
         { target: 'Endpoint Team', text: 'IOA blocks execution and network-contains host automatically on match', who: 'Endpoint analyst sees "Blocked — Critical" alert in Falcon console' },
         { target: 'SOC (Artifact #6)', text: 'Block event triggers IR playbook step 1 — "Isolate Affected Endpoints"', who: 'SOC Lead gets PagerDuty alert — containment SLA timer starts' },
         { target: 'IR Team', text: '2 hosts already blocked — forensic artifacts preserved for investigation', who: 'IR analyst collects memory dump + process tree from contained host' }
+      ]
+    },
+    {
+      id: 'splunk',
+      artifactId: 'LA-2026-0847-DET-003',
+      team: 'SOC — Detection Eng',
+      tool: 'Splunk',
+      title: 'VPN + MFA Correlation Rule (SPL)',
+      mitre: ['T1078', 'T1556'],
+      deployLabel: 'Deployed to Splunk',
+      deployDetail: 'SPL correlation rule active. Alert threshold configured. Notifications to SOC-L2, PagerDuty, ServiceNow.',
+      color: 'var(--orange)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI Flash Alert CU-000171-MW: Scattered Spider helpdesk social engineering TTP', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' },
+        { source: 'IAM Team', text: 'Okta MFA reset log — jchen MFA reset via helpdesk ticket', sourceType: 'Vendor sourced', time: 'Mon 14:22:08 UTC' },
+        { source: 'SOC Team', text: 'VPN auth anomaly — jchen login from unrecognized device, Lagos geo', sourceType: 'Vendor sourced', time: 'Mon 03:41:12 UTC' }
+      ],
+      outputs: [
+        { target: 'SOC Analyst (L2)', text: 'Real-time alert in Splunk — "VPN+MFA Correlation: 4 events matched"', who: 'SOC L2 analyst sees alert in Splunk dashboard + PagerDuty notification' },
+        { target: 'ServiceNow', text: 'Auto-created incident ticket INC#998877 linked to campaign CAMP-2026-0847', who: 'SOC Lead sees new P1 incident in queue' },
+        { target: 'Snowflake', text: 'Same detection logic replicated as SQL for threat hunting (Artifact #4)', who: 'Detection Eng runs deeper historical query' }
+      ]
+    },
+    {
+      id: 'snowflake',
+      artifactId: 'LA-2026-0847-DET-004',
+      team: 'SOC — Detection Eng',
+      tool: 'Snowflake',
+      title: 'VPN + MFA Correlation Rule (SQL)',
+      mitre: ['T1078', 'T1556'],
+      deployLabel: 'Deployed to Snowflake',
+      deployDetail: 'SQL query saved to SECURITY_ANALYST worksheet. Scheduled as recurring task every 15 min.',
+      color: 'var(--cyan)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI Flash Alert CU-000171-MW: behavioral pattern — MFA reset + VPN from new device within 24h', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' },
+        { source: 'Splunk (Artifact #3)', text: 'Same detection logic translated from SPL to Snowflake SQL for security data lake', sourceType: 'Vendor sourced', time: 'Mon 09:17:44 UTC' },
+        { source: 'IAM + VPN Logs', text: 'Historical MFA reset + VPN auth data in Snowflake security schema', sourceType: 'Vendor sourced', time: 'Mon 09:14:38 UTC' }
+      ],
+      outputs: [
+        { target: 'Detection Eng', text: 'Scheduled query runs every 15 min — results feed threat hunting workflow', who: 'Detection engineer reviews new matches in Snowflake worksheet' },
+        { target: 'Data Science', text: 'Query results available for ML model training — risk scoring enrichment', who: 'Security data scientist uses results to refine risk model' },
+        { target: 'GRC (Artifact #7)', text: 'Query results serve as evidence for SOX audit trail', who: 'Compliance analyst references query outputs in control documentation' }
+      ]
+    },
+    {
+      id: 'proofpoint',
+      artifactId: 'LA-2026-0847-EML-005',
+      team: 'Email Security',
+      tool: 'Proofpoint',
+      title: 'Lookalike Domain Block Rule',
+      mitre: ['T1566.002', 'T1583.001'],
+      deployLabel: 'Deployed to Proofpoint',
+      deployDetail: 'Transport rule active. 5 domain patterns blocked. 3 messages quarantined since deployment.',
+      color: 'var(--purple)',
+      inputs: [
+        { source: 'CTI Team', text: 'FBI Flash Alert CU-000171-MW: Scattered Spider registers lookalike SSO domains for credential phishing', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' },
+        { source: 'Email Security Team', text: 'Proofpoint log — phishing email with acme-okta-sso.com link sent to 12 employees', sourceType: 'Vendor sourced', time: 'Mon 08:47:19 UTC' },
+        { source: 'KTLYST Pattern Engine', text: 'Extracted 5 domain patterns from advisory IOCs + observed infrastructure', sourceType: 'Vendor sourced', time: 'Mon 09:14:38 UTC' }
+      ],
+      outputs: [
+        { target: 'Email Users', text: 'Phishing emails with lookalike domains quarantined before reaching inbox', who: 'Employee never sees the phishing email — it lands in quarantine' },
+        { target: 'Email Security Team', text: 'Alert triggered for each quarantined message — team reviews in Proofpoint console', who: 'Email security analyst validates true positive, updates block list' },
+        { target: 'SOC (Artifact #3)', text: 'Quarantine events correlated with campaign — enriches VPN+MFA detection context', who: 'SOC analyst sees phishing attempt linked to same campaign in Splunk' }
       ]
     },
     {
@@ -2980,9 +2998,9 @@
       deployDetail: 'Playbook created with 6 response steps. Linked to 3 incidents. SLA timers active. Assigned to SOC Lead.',
       color: 'var(--accent)',
       inputs: [
-        { source: 'All 5 Source Events', text: 'FBI advisory + VPN anomaly + helpdesk phishing + MFA reset + encoded PowerShell — full campaign picture' },
-        { source: 'KTLYST Correlation', text: '5 isolated events linked into single campaign with causal chain and affected users' },
-        { source: 'Artifacts #1–#5', text: 'Detection rules, IAM policy, email block, and EDR IOA already deployed — playbook references all' }
+        { source: 'All 5 Source Events', text: 'FBI advisory + VPN anomaly + helpdesk phishing + MFA reset + encoded PowerShell — full campaign picture', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' },
+        { source: 'KTLYST Correlation', text: '5 isolated events linked into single campaign with causal chain and affected users', sourceType: 'Vendor sourced', time: 'Mon 09:15:01 UTC' },
+        { source: 'Artifacts #1-#5', text: 'IAM policy, EDR IOA, detection rules, email block already deployed — playbook references all', sourceType: 'Vendor sourced', time: 'Mon 09:17:44 UTC' }
       ],
       outputs: [
         { target: 'SOC Lead', text: 'Playbook assigned with 6 response steps — containment SLA <4h, eradication <24h', who: 'SOC Lead sees IR-2026-0847 at top of queue, begins step 1' },
@@ -2998,12 +3016,12 @@
       title: 'SOX Control Gap — MFA Reset Verification',
       mitre: ['T1556', 'T1199'],
       deployLabel: 'Deployed to ServiceNow GRC',
-      deployDetail: 'Control record created. SOX gap documented. Remediation linked to Okta policy (Artifact #3). Audit trail attached.',
+      deployDetail: 'Control record created. SOX gap documented. Remediation linked to Okta policy (Artifact #1). Audit trail attached. Approval chain: INC#998877.',
       color: 'var(--green)',
       inputs: [
-        { source: 'KTLYST Campaign Analysis', text: 'Campaign CAMP-2026-0847 revealed MFA reset completed without voice verification — SOX ITGC violation' },
-        { source: 'IAM Team (Artifact #3)', text: 'Okta policy now enforced — serves as remediation evidence for the control gap' },
-        { source: 'All 5 Source Events', text: 'Full provenance chain from FBI advisory through detection, correlation, and enforcement' }
+        { source: 'KTLYST Campaign Analysis', text: 'Campaign CAMP-2026-0847 revealed MFA reset completed without voice verification — SOX ITGC violation', sourceType: 'Vendor sourced', time: 'Mon 09:15:01 UTC' },
+        { source: 'IAM Team (Artifact #1)', text: 'Okta policy now enforced — serves as remediation evidence for the control gap', sourceType: 'Vendor sourced', time: 'Mon 09:17:44 UTC' },
+        { source: 'All 5 Source Events', text: 'Full provenance chain from FBI advisory through detection, correlation, and enforcement', sourceType: 'Direct warning', time: 'Mon 09:14:22 UTC' }
       ],
       outputs: [
         { target: 'Compliance Analyst', text: 'Control record CTRL-2026-0847-001 created — gap documented, remediation linked, status: Remediated', who: 'GRC analyst reviews control in ServiceNow — marks "pending external audit validation"' },
@@ -3056,9 +3074,14 @@
       (artifact.inputs || []).forEach(inp => {
         const el = document.createElement('div');
         el.className = 'prov-input-item prov-io-item';
+        const sourceTypeColor = inp.sourceType === 'Direct warning' ? 'var(--red)' : inp.sourceType === 'News article' ? 'var(--yellow)' : 'var(--cyan)';
         el.innerHTML = `
-          <div class="prov-io-source">${inp.source}</div>
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+            <div class="prov-io-source" style="margin-bottom:0;">${inp.source}</div>
+            ${inp.sourceType ? `<span style="font-size:9px;padding:1px 5px;border-radius:3px;background:rgba(255,255,255,0.06);border:1px solid ${sourceTypeColor};color:${sourceTypeColor};font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">${inp.sourceType}</span>` : ''}
+          </div>
           <div class="prov-io-text">${inp.text}</div>
+          ${inp.time ? `<div style="font-size:9px;color:var(--text-muted);margin-top:2px;font-family:'JetBrains Mono',monospace;">${inp.time}</div>` : ''}
         `;
         inputsList.appendChild(el);
       });
@@ -3105,7 +3128,7 @@
       border-radius: 6px;
       cursor: pointer;
       transition: all 0.2s;
-      ${a.id === 'splunk' ? 'background: var(--accent-glow); border-color: rgba(59,130,246,0.3);' : ''}
+      ${a.id === 'okta' ? 'background: var(--accent-glow); border-color: rgba(59,130,246,0.3);' : ''}
     `;
     item.innerHTML = `
       <div style="display:flex;align-items:center;gap:6px;margin-bottom:2px;">
@@ -3120,7 +3143,7 @@
   });
 
   // ─── Initial render ───
-  switchScreen('splunk');
+  switchScreen('okta');
 
   // ─── Keyboard nav ───
   document.addEventListener('keydown', (e) => {
