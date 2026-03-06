@@ -136,6 +136,53 @@
         }
         .site-nav .cta-button:hover { background: #5aadff; }
 
+        /* === DEMO CTA BANNER === */
+        .demo-cta-banner {
+            background: linear-gradient(135deg, #1c1815 0%, #2a2320 100%);
+            border-bottom: 1px solid rgba(196,75,37,0.3);
+        }
+        .demo-cta-inner {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .demo-cta-text {
+            font-size: 13px;
+            color: #c4b5a4;
+            font-weight: 500;
+        }
+        .demo-cta-link {
+            font-size: 13px;
+            font-weight: 700;
+            color: #c44b25;
+            text-decoration: none;
+            padding: 4px 14px;
+            border: 1px solid rgba(196,75,37,0.4);
+            border-radius: 6px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .demo-cta-link:hover {
+            background: rgba(196,75,37,0.12);
+            border-color: #c44b25;
+            color: #e05a30;
+        }
+        .demo-cta-close {
+            background: none;
+            border: none;
+            color: #635a4f;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 0 4px;
+            line-height: 1;
+        }
+        .demo-cta-close:hover { color: #c4b5a4; }
+
         /* === CONTAINER === */
         .container {
             max-width: 1060px;
@@ -932,6 +979,16 @@
         <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
     </div>
 </nav>
+
+<!-- Signals-to-Demo CTA Banner -->
+<div class="demo-cta-banner" id="demoBanner">
+    <div class="demo-cta-inner">
+        <span class="demo-cta-text">See how these threats become enforced defenses in 60 seconds</span>
+        <a href="/demo2/" class="demo-cta-link" onclick="gtag('event','cta_click',{cta_name:'signals_to_demo'})">Watch the Demo &rarr;</a>
+        <button class="demo-cta-close" onclick="document.getElementById('demoBanner').style.display='none';sessionStorage.setItem('hideDemoBanner','1')" aria-label="Dismiss">&times;</button>
+    </div>
+</div>
+<script>if(sessionStorage.getItem('hideDemoBanner'))document.getElementById('demoBanner').style.display='none';</script>
 
 <div class="container">
 
