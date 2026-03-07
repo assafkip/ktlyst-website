@@ -103,7 +103,9 @@ function App() {
         <div className="logo">KTLYST <span className="labs">Labs</span></div>
         <div className="nav-right">
           <a href="#how">How It Works</a>
-          <a href="#partner">Design Partner</a>
+          <a href="/about">About</a>
+          <a href="/research">Research</a>
+          <a href="/partners">Partners</a>
           <a href="/signals">Signals</a>
           <a href="https://calendly.com/assafkip" className="cta-button">Let's Talk</a>
         </div>
@@ -550,9 +552,12 @@ function App() {
       {/* Footer */}
       <footer className="site-footer">
         <div className="footer-links">
-          <a href="https://calendly.com/assafkip">Let's Talk</a>
-          <a href="mailto:crew@ktlystlabs.com">Contact Us</a>
+          <a href="/about">About</a>
+          <a href="/research">Research</a>
+          <a href="/partners">Partners</a>
           <a href="/signals">Signals</a>
+          <a href="https://calendly.com/assafkip">Let's Talk</a>
+          <a href="mailto:crew@ktlystlabs.com">Contact</a>
         </div>
         <p>&copy; 2026 KTLYST Labs. All rights reserved.</p>
       </footer>

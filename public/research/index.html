@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.__gaBotFiltered = (function(){
+      var ua = navigator.userAgent || '';
+      var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+      return bots.test(ua);
+    })();
+    if (!window.__gaBotFiltered) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DPSD4GNJE0');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research - KTLYST Labs | Breach Case Studies &amp; Academic Research</title>
+  <meta name="description" content="The evidence behind KTLYST. Five public re-breach cases totaling $900M+ in damages, academic research on intelligence sharing failures, and the case for a Security Learning Control Plane." />
+  <link rel="canonical" href="https://www.ktlystlabs.com/research">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ktlystlabs.com/research">
+  <meta property="og:title" content="Research - KTLYST Labs | Breach Case Studies &amp; Academic Research">
+  <meta property="og:description" content="Five public re-breach cases totaling $900M+ in damages prove the problem. Academic research confirms it. KTLYST is the fix.">
+  <meta property="og:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta property="og:site_name" content="KTLYST Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research - KTLYST Labs">
+  <meta name="twitter:description" content="Five public re-breach cases. $900M+ in damages. The evidence for why security needs a nervous system.">
+  <meta name="twitter:image" content="https://www.ktlystlabs.com/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #0a1628;
+      background-image: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a { color: #3b9dff; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #5aadff; }
+
+    .site-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 4rem; position: fixed; width: 100%; top: 0; z-index: 1000;
+      background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px);
+    }
+    .site-nav .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: #fff; text-decoration: none; }
+    .site-nav .logo .labs { color: #7c9cc8; margin-left: 0.5rem; }
+    .nav-right { display: flex; gap: 2rem; align-items: center; }
+    .nav-right a { color: #a0b0c0; font-size: 0.95rem; }
+    .nav-right a:hover { color: #3b9dff; }
+    .nav-right a.active { color: #3b9dff; font-weight: 600; }
+    .cta-button { background: #3b9dff; color: #000 !important; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 600; }
+    .cta-button:hover { background: #5aadff; }
+
+    .page-content { max-width: 1000px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+    .page-hero { text-align: center; margin-bottom: 4rem; }
+    .page-hero h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .page-hero .subtitle { font-size: 1.2rem; color: #c0d0e0; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+
+    .content-section { margin-bottom: 4rem; }
+    .content-section h2 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(59, 157, 255, 0.3); }
+    .content-section h3 { font-size: 1.3rem; font-weight: 600; color: #3b9dff; margin-bottom: 0.75rem; margin-top: 1.5rem; }
+    .content-section p { color: #c0d0e0; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
+
+    /* Stats banner */
+    .stats-banner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0 3rem; }
+    .stat-card { text-align: center; padding: 1.5rem; background: rgba(255, 107, 107, 0.06); border: 1px solid rgba(255, 107, 107, 0.2); border-radius: 8px; }
+    .stat-card .number { font-size: 2rem; font-weight: 700; color: #ff6b6b; display: block; margin-bottom: 0.3rem; }
+    .stat-card .label { color: #a0b0c0; font-size: 0.85rem; }
+
+    /* Case study cards */
+    .case-study {
+      background: rgba(59, 157, 255, 0.05); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 2rem; border-radius: 8px; margin-bottom: 2rem; transition: all 0.3s;
+    }
+    .case-study:hover { border-color: rgba(59, 157, 255, 0.4); }
+    .case-study .case-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    .case-study h3 { color: #fff; font-size: 1.3rem; margin: 0; }
+    .case-cost { color: #ff6b6b; font-weight: 700; font-size: 1.1rem; }
+    .case-study p { color: #a0b0c0; font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
+    .case-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+    .case-detail-item h4 { color: #3b9dff; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; letter-spacing: 0.5px; }
+    .case-detail-item p { font-size: 0.9rem; margin-bottom: 0; }
+    .ktlyst-angle {
+      background: rgba(59, 157, 255, 0.08); border-left: 3px solid #3b9dff;
+      padding: 1rem 1.5rem; border-radius: 0 6px 6px 0; margin-top: 1rem;
+    }
+    .ktlyst-angle p { color: #c0d0e0; font-size: 0.9rem; margin-bottom: 0; }
+    .ktlyst-angle strong { color: #3b9dff; }
+    .sources { margin-top: 1rem; font-size: 0.8rem; color: #7c9cc8; }
+    .sources span { display: block; margin-bottom: 0.2rem; }
+
+    /* Common thread */
+    .common-thread {
+      background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(59, 157, 255, 0.08));
+      border: 1px solid rgba(59, 157, 255, 0.3); padding: 2.5rem; border-radius: 8px; margin: 2rem 0;
+    }
+    .thread-list { list-style: none; margin-top: 1rem; }
+    .thread-list li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #c0d0e0; font-size: 1rem; }
+    .thread-list li::before { content: "\2192"; position: absolute; left: 0; color: #ff6b6b; font-weight: 600; }
+
+    /* Research papers */
+    .paper-card {
+      background: rgba(59, 157, 255, 0.05); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 1.5rem 2rem; border-radius: 8px; margin-bottom: 1.5rem; transition: all 0.3s;
+    }
+    .paper-card:hover { border-color: rgba(59, 157, 255, 0.4); }
+    .paper-card h3 { color: #fff; font-size: 1.1rem; margin: 0 0 0.5rem; }
+    .paper-meta { color: #7c9cc8; font-size: 0.85rem; margin-bottom: 0.75rem; }
+    .paper-card p { color: #a0b0c0; font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .paper-stat { display: inline-block; background: rgba(255, 107, 107, 0.1); border: 1px solid rgba(255, 107, 107, 0.2); color: #ff6b6b; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem; }
+
+    .quote-box {
+      background: rgba(59, 157, 255, 0.08); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 2rem; border-radius: 8px; text-align: center; margin: 2rem 0;
+    }
+    .quote-box blockquote { font-size: 1.2rem; color: #e0e0e0; font-style: italic; line-height: 1.8; margin-bottom: 1rem; }
+    .quote-box cite { color: #3b9dff; font-size: 0.95rem; font-style: normal; font-weight: 600; }
+
+    .site-footer { border-top: 1px solid rgba(59, 157, 255, 0.2); padding: 3rem 4rem; text-align: center; color: #7c9cc8; margin-top: 4rem; }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
+    .footer-links a { color: #3b9dff; }
+
+    @media (max-width: 768px) {
+      .site-nav { flex-direction: column; padding: 1rem; gap: 1rem; }
+      .page-content { padding: 6rem 1.5rem 3rem; }
+      .page-hero h1 { font-size: 2rem; }
+      .stats-banner { grid-template-columns: repeat(2, 1fr); }
+      .case-detail { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="logo">KTLYST <span class="labs">Labs</span></a>
+    <div class="nav-right">
+      <a href="/#how">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/research" class="active">Research</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-hero">
+      <h1>Research &amp; Evidence</h1>
+      <p class="subtitle">The problem KTLYST solves isn't theoretical. These are public cases, academic research, and industry data that document why security teams keep getting breached the same way twice.</p>
+    </div>
+
+    <!-- Top-line stats -->
+    <div class="stats-banner">
+      <div class="stat-card">
+        <span class="number">84%</span>
+        <span class="label">of breached orgs paid ransom</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">78%</span>
+        <span class="label">were breached again</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">36%</span>
+        <span class="label">by the exact same attacker</span>
+      </div>
+      <div class="stat-card">
+        <span class="number">$900M+</span>
+        <span class="label">combined damages across 5 cases</span>
+      </div>
+    </div>
+
+    <!-- Case Studies -->
+    <div class="content-section" id="cases">
+      <h2>Re-Breach Case Studies</h2>
+      <p>Five publicly documented cases where organizations responded to Breach 1 but failed to institutionalize the lesson. In every case, the learning existed. It just wasn't governed, enforced, or preserved.</p>
+
+      <!-- Change Healthcare -->
+      <div class="case-study">
+        <div class="case-header">
+          <h3>Change Healthcare / ALPHV BlackCat (2024)</h3>
+          <span class="case-cost">$872M+ in damages</span>
+        </div>
+        <p>CISA published advisory AA23-353A on December 19, 2023, warning about ALPHV BlackCat ransomware. 55 days later, Change Healthcare was breached using the exact techniques described in that advisory. 190 million individuals affected.</p>
+        <div class="case-detail">
+          <div class="case-detail-item">
+            <h4>WHAT HAPPENED</h4>
+            <p>ALPHV BlackCat ransomware group compromised Change Healthcare, the largest medical claims processor in the US. The attack disrupted pharmacy operations nationwide for weeks.</p>
+          </div>
+          <div class="case-detail-item">
+            <h4>THE GAP</h4>
+            <p>55 days between a CISA advisory describing the exact threat actor's TTPs and the breach. The intelligence existed. It wasn't operationalized.</p>
+          </div>
+        </div>
+        <div class="ktlyst-angle">
+          <p><strong>KTLYST angle:</strong> A single CISA advisory input produces 7 governed artifacts: detection rules, hunt hypotheses, playbook updates, MITRE mappings, compliance evidence, control updates, and monitoring rules. From one input, coordinated defense across the stack. In under 5 minutes.</p>
+        </div>
+        <div class="sources">
+          <span>Sources: UnitedHealth Group congressional testimony, HIPAA Journal, CISA AA23-353A</span>
+        </div>
+      </div>
+
+      <!-- LastPass -->
+      <div class="case-study">
+        <div class="case-header">
+          <h3>LastPass - Same Attacker, Two-Phase Breach (2022)</h3>
+          <span class="case-cost">$150M+ crypto theft</span>
+        </div>
+        <p>Breach 1 (Aug 2022): attacker compromised a developer laptop, stole source code and internal secrets. Breach 2 (same campaign): same attacker used the stolen source code as a roadmap to target one of only four DevOps engineers with backup access. Installed a keylogger on his home computer. Exfiltrated encrypted vault data for 1.6 million users.</p>
+        <div class="case-detail">
+          <div class="case-detail-item">
+            <h4>ROOT CAUSE</h4>
+            <p>After Breach 1, LastPass didn't recognize the stolen source code was a map to target specific high-value employees. Only 4 people had the keys. They should have been hardened immediately.</p>
+          </div>
+          <div class="case-detail-item">
+            <h4>COST</h4>
+            <p>$150M+ in cryptocurrency theft from cracked vaults (FBI-confirmed). $24.5M class action settlement. $1.2M UK fine.</p>
+          </div>
+        </div>
+        <div class="ktlyst-angle">
+          <p><strong>KTLYST angle:</strong> A governed learning artifact from Breach 1 would have produced: "source code stolen -> maps to infrastructure -> these 4 employees are now high-value targets -> enforce: rotate credentials, harden personal devices, restrict access scope." That artifact never existed.</p>
+        </div>
+        <div class="sources">
+          <span>Sources: Krebs on Security, Cybersecurity Dive, The Hacker News</span>
+        </div>
+      </div>
+
+      <!-- Okta -->
+      <div class="case-study">
+        <div class="case-header">
+          <h3>Okta - Breached 2022, Again 2023</h3>
+          <span class="case-cost">~$8B market cap loss</span>
+        </div>
+        <p>Breach 1 (Jan 2022): Lapsus$ compromised a third-party support engineer. Okta took 2 months to disclose. Breach 2 (Oct 2023): employee saved service account credentials to a personal Google account. Attacker accessed support system, downloaded a report on ALL customer support users.</p>
+        <div class="case-detail">
+          <div class="case-detail-item">
+            <h4>ROOT CAUSE</h4>
+            <p>Post-2022 remediation focused narrowly on third-party access. Didn't address employee credential hygiene. Same pattern: stolen credentials -> support system access -> customer data.</p>
+          </div>
+          <div class="case-detail-item">
+            <h4>COST</h4>
+            <p>~$8B combined market cap loss. $60M shareholder lawsuit settlement. Downstream impact on Cloudflare, 1Password, BeyondTrust.</p>
+          </div>
+        </div>
+        <div class="ktlyst-angle">
+          <p><strong>KTLYST angle:</strong> The learning from Breach 1 ("credential theft -> support system -> customer data") should have been enforced as a governance artifact: "any employee credential exposure -> immediate support system access review + personal account audit." That learning decayed.</p>
+        </div>
+        <div class="sources">
+          <span>Sources: Krebs on Security, CNBC, BeyondTrust</span>
+        </div>
+      </div>
+
+      <!-- T-Mobile -->
+      <div class="case-study">
+        <div class="case-header">
+          <h3>T-Mobile - 4+ Breaches in ~2 Years (2021-2023)</h3>
+          <span class="case-cost">$550M+ total costs</span>
+        </div>
+        <p>Aug 2021: 76.6M records exposed. Nov 2022: API vulnerability exploited for 6 weeks, 37M customer records. Plus two additional breaches in 2023. After 2021, T-Mobile pledged $150M in cybersecurity improvements. Despite this, an API ran unchecked for 6 weeks.</p>
+        <div class="case-detail">
+          <div class="case-detail-item">
+            <h4>ROOT CAUSE</h4>
+            <p>FCC found practices "consistently below standard." Money without institutional memory. No system verified that post-incident action items were completed, validated, and enforced.</p>
+          </div>
+          <div class="case-detail-item">
+            <h4>COST</h4>
+            <p>$350M class action settlement. $150M security pledge. $31.5M FCC settlement. Total: $550M+.</p>
+          </div>
+        </div>
+        <div class="ktlyst-angle">
+          <p><strong>KTLYST angle:</strong> T-Mobile pledged $150M and STILL got breached repeatedly. Money without institutional memory means throwing cash at the problem. No system ensured post-incident action items were completed, validated, and enforced.</p>
+        </div>
+        <div class="sources">
+          <span>Sources: Firewall Times, CyberScoop, Infosecurity Magazine</span>
+        </div>
+      </div>
+
+      <!-- MGM -->
+      <div class="case-study">
+        <div class="case-header">
+          <h3>MGM Resorts - Same Attack Class, 4 Years Apart</h3>
+          <span class="case-cost">$100M revenue impact</span>
+        </div>
+        <p>2019: 10.6M guest records stolen. Sep 2023: Scattered Spider called IT help desk, impersonated an employee using LinkedIn info, got a one-time password. Accessed Okta, escalated to Azure AD. ALPHV deployed ransomware. 10+ days of full operational shutdown across all properties.</p>
+        <div class="case-detail">
+          <div class="case-detail-item">
+            <h4>ROOT CAUSE</h4>
+            <p>Okta specifically warned MGM about targeted social engineering campaigns before the September 2023 attack. MGM did not act on the warning.</p>
+          </div>
+          <div class="case-detail-item">
+            <h4>COST</h4>
+            <p>$100M revenue impact (Q3 2023). $45M settlement. 10+ days operational disruption.</p>
+          </div>
+        </div>
+        <div class="ktlyst-angle">
+          <p><strong>KTLYST angle:</strong> Okta warned MGM. The warning was received but not enforced. No governance artifact was created: "social engineering risk -> help desk verification procedure -> enforce and validate." The learning existed. It just died in someone's inbox.</p>
+        </div>
+        <div class="sources">
+          <span>Sources: Inzone Insurance, CyberArk, SDO Security</span>
+        </div>
+      </div>
+
+      <!-- Rackspace -->
+      <div class="case-study">
+        <div class="case-header">
+          <h3>Rackspace - Chose Not to Patch, Paid 3x (2022-2025)</h3>
+          <span class="case-cost">$5M+ direct costs</span>
+        </div>
+        <p>Dec 2022: Play ransomware via unpatched Exchange vulnerability. Rackspace chose mitigation over patching. Hosted Exchange permanently shut down. Sep 2024: zero-day in third-party utility. Mar 2025: CL0P ransomware gang claimed Rackspace, began leaking data.</p>
+        <div class="case-detail">
+          <div class="case-detail-item">
+            <h4>ROOT CAUSE</h4>
+            <p>Deliberately chose not to patch a critical vulnerability. Made a documented decision, but that decision wasn't governed with an expiry date, risk owner, or mitigation validation.</p>
+          </div>
+          <div class="case-detail-item">
+            <h4>COST</h4>
+            <p>$5M+ direct expenses from 2022 alone. Hosted Exchange offering permanently terminated.</p>
+          </div>
+        </div>
+        <div class="ktlyst-angle">
+          <p><strong>KTLYST angle:</strong> Rackspace made a documented decision NOT to patch. That decision wasn't governed. No artifact tracked: "vulnerability disclosed -> mitigation chosen over patch -> risk accepted by [whom] -> validate mitigation effectiveness -> expiry date for review."</p>
+        </div>
+        <div class="sources">
+          <span>Sources: TechTarget, Cybersecurity Dive, Bleeping Computer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common Thread -->
+    <div class="common-thread">
+      <h2 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem; border: none; padding: 0;">The Common Thread</h2>
+      <p style="color: #c0d0e0; font-size: 1.05rem; margin-bottom: 1rem;">Across all cases: the organization "responded" to Breach 1 but failed to institutionalize the lesson.</p>
+      <ul class="thread-list">
+        <li><strong>Narrow remediation</strong> - fixed the specific exploit, not the class of vulnerability (Okta, MGM)</li>
+        <li><strong>Delayed/skipped patching</strong> - knowing the fix exists, choosing deferral (Rackspace, LastPass)</li>
+        <li><strong>No closed-loop governance</strong> - no system verified post-incident actions were completed (T-Mobile pledged $150M, still missed an API for 6 weeks)</li>
+        <li><strong>Learning decay</strong> - lessons documented but never operationalized into enforced defense (all five)</li>
+      </ul>
+      <div class="quote-box" style="margin-top: 1.5rem; background: transparent; border: none; padding: 1rem 0;">
+        <blockquote>"These companies didn't lack tools, talent, or budget. They lacked a system that turns 'we learned this' into 'we enforced this.' That's what KTLYST builds."</blockquote>
+      </div>
+    </div>
+
+    <!-- Academic Research -->
+    <div class="content-section" id="academic">
+      <h2>Academic Research</h2>
+      <p>The re-breach problem isn't just anecdotal. Academic research consistently documents the failure of security knowledge to flow from learning to enforcement.</p>
+
+      <div class="paper-card">
+        <h3>Threat Intelligence Sharing: Actionability Gap</h3>
+        <p class="paper-meta">Jin et al. - Academic research on CTI sharing effectiveness</p>
+        <p>Analysis of shared cyber threat intelligence found that only a fraction of shared indicators contain actionable detection rules. The vast majority of intelligence stays as informational context that never becomes operational defense.</p>
+        <span class="paper-stat">0.09% of shared indicators contain actionable rules</span>
+      </div>
+
+      <div class="paper-card">
+        <h3>Organizational Learning in Cybersecurity</h3>
+        <p class="paper-meta">Buchel et al. - Organizational learning theory applied to security</p>
+        <p>Documents how security organizations struggle to capture and operationalize lessons from incidents. Institutional knowledge concentrates in individuals rather than systems, creating vulnerability to turnover.</p>
+        <span class="paper-stat">48-month average CISO/security leader turnover cycle</span>
+      </div>
+
+      <div class="paper-card">
+        <h3>Detection Engineering as a Discipline</h3>
+        <p class="paper-meta">Industry trend analysis</p>
+        <p>Detection Engineering has emerged as a titled discipline, with companies now hiring Heads of Detection Engineering. This signals market recognition that the translation from intel to detection needs its own function, but most organizations still lack the infrastructure to govern the outputs.</p>
+      </div>
+
+      <div class="paper-card">
+        <h3>Post-Incident Learning Decay</h3>
+        <p class="paper-meta">Mitra et al., Fieblinger et al. - Security incident response studies</p>
+        <p>Research on incident response effectiveness shows that post-incident recommendations decay rapidly. Action items from postmortems are completed at low rates, and even when completed, the changes are rarely validated against future similar incidents.</p>
+      </div>
+    </div>
+
+    <!-- Industry Data -->
+    <div class="content-section" id="industry">
+      <h2>Industry Data</h2>
+
+      <div class="paper-card">
+        <h3>Enterprise Security Tool Sprawl</h3>
+        <p class="paper-meta">Panaseer 2022 Security Leaders Peer Report - 1,200 enterprise respondents</p>
+        <p>The average enterprise deploys 76 security tools. These tools generate data, alerts, and findings. But no system connects what each tool learns. That's 76 muscles with no nervous system.</p>
+        <span class="paper-stat">76 avg. security tools per enterprise</span>
+      </div>
+
+      <div class="paper-card">
+        <h3>Ransomware Re-Breach Statistics</h3>
+        <p class="paper-meta">Cybereason - Global ransomware study</p>
+        <p>84% of breached organizations paid the ransom. 78% of those were breached again. 36% by the exact same attacker. Paying doesn't fix the underlying problem: learning that doesn't persist.</p>
+      </div>
+
+      <div class="paper-card">
+        <h3>Regulatory Pressure for Demonstrable Learning</h3>
+        <p class="paper-meta">SEC, DORA regulatory frameworks</p>
+        <p>SEC cyber disclosure rules and DORA now require organizations to demonstrate learning from incidents. "We fixed it" is no longer sufficient. Regulators want evidence of systematic improvement.</p>
+      </div>
+    </div>
+
+    <!-- Practitioner Quotes -->
+    <div class="content-section">
+      <h2>What Practitioners Say</h2>
+
+      <div class="quote-box">
+        <blockquote>"If you put it in a silo you killed it."</blockquote>
+        <cite>Justin Somaini, former CISO of SAP and Unity</cite>
+      </div>
+
+      <div class="quote-box">
+        <blockquote>"There's a lot of institutional knowledge gap."</blockquote>
+        <cite>Drew Hunt, Dreamit Ventures</cite>
+      </div>
+
+      <div class="quote-box">
+        <blockquote>"Why is security threat intel admired yet dumb, and how do we make it smart and applicable?"</blockquote>
+        <cite>Terence Runge, CISO at Crinetics</cite>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip">Let's Talk</a>
+      <a href="mailto:crew@ktlystlabs.com">Contact</a>
+    </div>
+    <p>&copy; 2026 KTLYST Labs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
