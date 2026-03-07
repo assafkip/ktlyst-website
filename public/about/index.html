@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.__gaBotFiltered = (function(){
+      var ua = navigator.userAgent || '';
+      var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+      return bots.test(ua);
+    })();
+    if (!window.__gaBotFiltered) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DPSD4GNJE0');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About KTLYST Labs - The Nervous System for Enterprise Security</title>
+  <meta name="description" content="KTLYST Labs is building the nervous system for enterprise security. Founded by veterans of Google, Meta, LinkedIn, and ElevenLabs with 30+ years of combined threat intelligence experience." />
+  <link rel="canonical" href="https://www.ktlystlabs.com/about">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ktlystlabs.com/about">
+  <meta property="og:title" content="About KTLYST Labs - The Nervous System for Enterprise Security">
+  <meta property="og:description" content="Founded by veterans of Google, Meta, LinkedIn, and ElevenLabs. Building the system that turns security learning into enforced prevention.">
+  <meta property="og:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta property="og:site_name" content="KTLYST Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About KTLYST Labs">
+  <meta name="twitter:description" content="Founded by veterans of Google, Meta, LinkedIn, and ElevenLabs. Building the nervous system for enterprise security.">
+  <meta name="twitter:image" content="https://www.ktlystlabs.com/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #0a1628;
+      background-image: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a { color: #3b9dff; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #5aadff; }
+
+    /* Nav */
+    .site-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 4rem; position: fixed; width: 100%; top: 0; z-index: 1000;
+      background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px);
+    }
+    .site-nav .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: #fff; text-decoration: none; }
+    .site-nav .logo .labs { color: #7c9cc8; margin-left: 0.5rem; }
+    .nav-right { display: flex; gap: 2rem; align-items: center; }
+    .nav-right a { color: #a0b0c0; font-size: 0.95rem; }
+    .nav-right a:hover { color: #3b9dff; }
+    .nav-right a.active { color: #3b9dff; font-weight: 600; }
+    .cta-button { background: #3b9dff; color: #000 !important; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 600; }
+    .cta-button:hover { background: #5aadff; }
+
+    /* Page layout */
+    .page-content { max-width: 1000px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+    .page-hero { text-align: center; margin-bottom: 4rem; }
+    .page-hero h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .page-hero .subtitle { font-size: 1.2rem; color: #c0d0e0; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+
+    /* Sections */
+    .content-section { margin-bottom: 4rem; }
+    .content-section h2 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(59, 157, 255, 0.3); }
+    .content-section h3 { font-size: 1.3rem; font-weight: 600; color: #3b9dff; margin-bottom: 0.75rem; margin-top: 1.5rem; }
+    .content-section p { color: #c0d0e0; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
+
+    /* Cards */
+    .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 1.5rem; }
+    .card {
+      background: rgba(59, 157, 255, 0.05); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 2rem; border-radius: 8px; transition: all 0.3s;
+    }
+    .card:hover { background: rgba(59, 157, 255, 0.1); border-color: rgba(59, 157, 255, 0.4); }
+    .card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem; margin-top: 0; }
+    .card .role { color: #3b9dff; font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem; }
+    .card p { color: #a0b0c0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1rem; }
+    .badge { background: rgba(59, 157, 255, 0.15); color: #3b9dff; padding: 0.3rem 0.7rem; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+
+    /* Values */
+    .value-item { display: flex; gap: 1.5rem; margin-bottom: 2rem; align-items: flex-start; }
+    .value-icon { font-size: 1.8rem; color: #3b9dff; min-width: 40px; text-align: center; padding-top: 0.2rem; }
+    .value-text h3 { margin-top: 0; }
+    .value-text p { margin-bottom: 0; }
+
+    /* Tech stats */
+    .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 2rem 0; }
+    .stat-item { text-align: center; padding: 1.5rem; background: rgba(59, 157, 255, 0.06); border: 1px solid rgba(59, 157, 255, 0.2); border-radius: 8px; }
+    .stat-number { font-size: 2rem; font-weight: 700; color: #3b9dff; display: block; margin-bottom: 0.3rem; }
+    .stat-label { color: #a0b0c0; font-size: 0.85rem; }
+
+    /* Highlight box */
+    .highlight-box {
+      background: rgba(59, 157, 255, 0.08); border-left: 3px solid #3b9dff;
+      padding: 1.5rem 2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; }
+
+    /* Timeline */
+    .timeline { margin-top: 1.5rem; }
+    .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; }
+    .timeline-marker { display: flex; flex-direction: column; align-items: center; min-width: 20px; }
+    .timeline-dot { width: 12px; height: 12px; background: #3b9dff; border-radius: 50%; margin-top: 6px; }
+    .timeline-line { width: 2px; flex: 1; background: rgba(59, 157, 255, 0.2); margin-top: 4px; }
+    .timeline-content h4 { color: #fff; font-size: 1rem; margin-bottom: 0.3rem; }
+    .timeline-content p { color: #a0b0c0; font-size: 0.95rem; margin-bottom: 0; }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid rgba(59, 157, 255, 0.2); padding: 3rem 4rem; text-align: center; color: #7c9cc8; margin-top: 4rem; }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
+    .footer-links a { color: #3b9dff; }
+
+    @media (max-width: 768px) {
+      .site-nav { flex-direction: column; padding: 1rem; gap: 1rem; }
+      .page-content { padding: 6rem 1.5rem 3rem; }
+      .page-hero h1 { font-size: 2rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+      .value-item { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="logo">KTLYST <span class="labs">Labs</span></a>
+    <div class="nav-right">
+      <a href="/#how">How It Works</a>
+      <a href="/about" class="active">About</a>
+      <a href="/research">Research</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-hero">
+      <h1>About KTLYST Labs</h1>
+      <p class="subtitle">We're building the nervous system for enterprise security. Every organization learns from incidents, intel, and investigations. Almost none institutionalize that learning. We fix that.</p>
+    </div>
+
+    <!-- Company Overview -->
+    <div class="content-section">
+      <h2>What We Do</h2>
+      <p>Every enterprise has 60+ security tools, but no system connecting what each team learns. Threat intel, SOC, IR, red team, and GRC operate in silos. Lessons die in tickets, wikis, and tribal knowledge. When people leave, the learning leaves with them.</p>
+      <p>KTLYST is the Security Learning Control Plane (SLCP). It captures learning from incidents, intel, and investigations. It normalizes messy findings into structured, governed artifacts with full provenance. It enforces those artifacts back into existing tools (Splunk, Snowflake, Elastic, ServiceNow) as production changes.</p>
+      <p>Every learning event compounds, making the next response faster and the organization harder to breach again.</p>
+
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-number">51K+</span>
+          <span class="stat-label">Lines of production code</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">27+</span>
+          <span class="stat-label">Validation gates</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Output platforms</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">&lt;5 min</span>
+          <span class="stat-label">Per item translation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founding Story -->
+    <div class="content-section">
+      <h2>The Founding Story</h2>
+      <p>KTLYST was born from a pattern both founders watched repeat across multiple organizations over a combined 30+ years in security.</p>
+
+      <div class="highlight-box">
+        <p>"At Google, I watched four teams fight the same scam operation without knowing it. At Meta, I saw lessons from one incident die before reaching the next team. At every organization, the same pattern: respond, document, forget, get breached again."</p>
+        <p style="color: #3b9dff; font-weight: 600; margin-top: 0.5rem;">- Assaf Kipnis, Founder &amp; CEO</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+          <div class="timeline-content">
+            <h4>The Pattern Emerges</h4>
+            <p>Across LinkedIn, Google, Meta, and ElevenLabs, Assaf saw the same failure: security teams learn hard lessons, document them somewhere, and lose them to silos, turnover, and tool fragmentation. The learning always dies.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+          <div class="timeline-content">
+            <h4>The Missing Layer</h4>
+            <p>Every enterprise has muscles (SIEMs, EDRs, firewalls, IAM). What none of them have is a nervous system connecting what each muscle learns. The problem isn't detection. It's that organizations respond to incidents but never institutionalize the lesson.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+          <div class="timeline-content">
+            <h4>KTLYST Labs Founded</h4>
+            <p>Assaf and Stephan joined forces to build the Security Learning Control Plane. A domain expert who crossed the technical boundary, building 51K+ lines of production code using AI as his primary development tool.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"><div class="timeline-dot"></div></div>
+          <div class="timeline-content">
+            <h4>Today</h4>
+            <p>Working with design partners in regulated industries to deploy the first governed translation workflows. Detection rules are the first proof point. The goal is prevention engineering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="content-section">
+      <h2>Team</h2>
+      <p>Combined 30+ years in security detection and threat intelligence. We've built these systems at scale and seen firsthand how intelligence dies between teams.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Assaf Kipnis</h3>
+          <div class="role">Founder &amp; CEO</div>
+          <p>12 years in threat intelligence across LinkedIn, Google Trust &amp; Safety, Meta (under the CISO), and ElevenLabs (Head of Threat Intelligence &amp; Investigations). Designed the architectural patterns that allow security knowledge to compound instead of reset.</p>
+          <div class="badge-row">
+            <span class="badge">Google</span>
+            <span class="badge">Meta</span>
+            <span class="badge">LinkedIn</span>
+            <span class="badge">ElevenLabs</span>
+          </div>
+          <a href="https://www.linkedin.com/in/assafkipnis/">LinkedIn Profile &rarr;</a>
+        </div>
+
+        <div class="card">
+          <h3>Stephan Kaufmann</h3>
+          <div class="role">Co-Founder &amp; COO</div>
+          <p>20+ years in security operations leadership at HP, McAfee, and Meta. Built large-scale threat intelligence and detection systems. Spent 8-10 hours a week manually translating intel into defenses - the exact workflow KTLYST automates.</p>
+          <div class="badge-row">
+            <span class="badge">Meta</span>
+            <span class="badge">McAfee</span>
+            <span class="badge">HP</span>
+          </div>
+          <a href="https://www.linkedin.com/in/stephan-kaufmann/">LinkedIn Profile &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IP & Technology -->
+    <div class="content-section">
+      <h2>Technology</h2>
+      <p>KTLYST is a purpose-built system, not a wrapper around an LLM. The architecture is designed for deterministic, auditable, governed security knowledge management.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Zero-Inference Extraction</h3>
+          <p>No hallucinated indicators. Every extracted behavior and indicator traces back to source text at the character level. Deterministic, not probabilistic.</p>
+        </div>
+        <div class="card">
+          <h3>Character-Level Provenance</h3>
+          <p>Every output clause is linked to the exact source text that produced it. Engineers see exactly which part of the input triggered which output.</p>
+        </div>
+        <div class="card">
+          <h3>Append-Only Audit Trail</h3>
+          <p>Every decision, approval, and modification is recorded immutably. Full governance chain from input through to deployed artifact.</p>
+        </div>
+        <div class="card">
+          <h3>Schema-Aware Compilation</h3>
+          <p>Multi-tenant RLS isolation. Output compilation is aware of target platform schemas (Splunk SPL, Snowflake SQL, Elastic KQL, Sift).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values -->
+    <div class="content-section">
+      <h2>Values</h2>
+
+      <div class="value-item">
+        <div class="value-icon">&#9670;</div>
+        <div class="value-text">
+          <h3>AI-First</h3>
+          <p>We build with AI as our primary tool, not an afterthought. Our codebase is a testament to what domain experts can build when AI removes the implementation barrier.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">&#9670;</div>
+        <div class="value-text">
+          <h3>Experts First</h3>
+          <p>Security decisions should be made by security professionals. KTLYST amplifies human judgment, never replaces it. Nothing ships without explicit human approval.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">&#9670;</div>
+        <div class="value-text">
+          <h3>Being Wrong Is a Virtue</h3>
+          <p>We value honest assessment over confident claims. If something isn't validated, we say so. If we're wrong, we correct and learn. That's the whole thesis.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">&#9670;</div>
+        <div class="value-text">
+          <h3>Always Learning</h3>
+          <p>The system improves with every input. So does the company. We seek feedback, iterate fast, and treat every conversation as training data for better decisions.</p>
+        </div>
+      </div>
+
+      <div class="value-item">
+        <div class="value-icon">&#9670;</div>
+        <div class="value-text">
+          <h3>Speak the Educated Truth</h3>
+          <p>No buzzwords, no hype, no overclaiming. We describe exactly what exists, what's planned, and where the gaps are. Trust is built on precision.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Info -->
+    <div class="content-section">
+      <h2>Company</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Structure</h3>
+          <p>Delaware C-Corporation, incorporated January 2026. 10M authorized shares.</p>
+        </div>
+        <div class="card">
+          <h3>Stage</h3>
+          <p>Pre-seed. Raising $2.5M to deploy with 3-5 design partners in regulated industries.</p>
+        </div>
+        <div class="card">
+          <h3>Thesis Endorsers</h3>
+          <p>Two CISOs, the CTO of the FBI, and Meta's threat intelligence leadership have endorsed the thesis.</p>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p>crew@ktlystlabs.com<br><a href="https://calendly.com/assafkip">Schedule a conversation &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/research">Research</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip">Let's Talk</a>
+      <a href="mailto:crew@ktlystlabs.com">Contact</a>
+    </div>
+    <p>&copy; 2026 KTLYST Labs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
