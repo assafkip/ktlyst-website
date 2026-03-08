@@ -252,6 +252,46 @@ html, body {
     line-height: 1.6;
 }
 
+/* Catalyst Cards */
+.catalyst-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.catalyst-card {
+    background: rgba(59, 157, 255, 0.05);
+    border: 1px solid rgba(59, 157, 255, 0.2);
+    padding: 1.75rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.catalyst-card:hover {
+    background: rgba(59, 157, 255, 0.1);
+    border-color: rgba(59, 157, 255, 0.4);
+}
+
+.catalyst-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.catalyst-card h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.catalyst-card p {
+    color: #a0b0c0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Solution Section */
 .solution {
     background: rgba(59, 157, 255, 0.05);
@@ -525,6 +565,87 @@ html, body {
 
 .compat-adoption p {
     color: #a0b0c0;
+}
+
+/* Comparison Section */
+.comparison {
+    margin-top: 3rem;
+}
+
+.compare-table {
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.compare-header,
+.compare-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1.2fr;
+    gap: 0;
+}
+
+.compare-header .compare-col {
+    background: rgba(59, 157, 255, 0.08);
+    color: #a0b0c0;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.75rem 0.75rem;
+    border-bottom: 2px solid rgba(59, 157, 255, 0.3);
+    text-align: center;
+}
+
+.compare-header .compare-label-col {
+    background: transparent;
+    border-bottom-color: transparent;
+}
+
+.compare-header .compare-highlight {
+    color: #3b9dff;
+    background: rgba(59, 157, 255, 0.15);
+}
+
+.compare-row .compare-col {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.9rem;
+    color: #a0b0c0;
+    border-bottom: 1px solid rgba(59, 157, 255, 0.1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.compare-row .compare-label-col {
+    color: #c0d0e0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.compare-row .compare-highlight {
+    color: #e0e0e0;
+    background: rgba(59, 157, 255, 0.06);
+}
+
+.compare-yes { color: #22c55e; font-weight: 700; }
+.compare-no { color: #ff6b6b; font-weight: 700; }
+.compare-partial { color: #eab308; font-weight: 700; }
+
+.compare-bottom {
+    background: rgba(59, 157, 255, 0.15);
+    border: 1px solid rgba(59, 157, 255, 0.4);
+    padding: 1.5rem 2rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.compare-bottom p {
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 /* Data & Deployment */
@@ -1599,6 +1720,41 @@ html, body {
 
     .criteria-list {
         grid-template-columns: 1fr;
+    }
+
+    .catalyst-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compare-header,
+    .compare-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .compare-header .compare-col,
+    .compare-row .compare-col {
+        display: none;
+    }
+
+    .compare-header .compare-label-col,
+    .compare-row .compare-label-col,
+    .compare-header .compare-highlight,
+    .compare-row .compare-highlight {
+        display: flex;
+    }
+
+    .compare-row .compare-label-col {
+        background: rgba(59, 157, 255, 0.06);
+        justify-content: center;
+        text-align: center;
+        border-bottom: none;
+        padding-bottom: 0.25rem;
+    }
+
+    .compare-row .compare-highlight {
+        border-bottom: 1px solid rgba(59, 157, 255, 0.2);
+        padding-top: 0.25rem;
     }
 
     /* Graphic responsive overrides */
