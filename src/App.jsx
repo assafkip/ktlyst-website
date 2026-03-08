@@ -118,7 +118,7 @@ function App() {
 
         <h1 className="hero-headline"><span className="emphasis">Memory &gt; more tools.</span></h1>
 
-        <p className="hero-tagline">Every enterprise has 60+ security tools &mdash; 60 muscles with no nervous system. KTLYST is the nervous system.</p>
+        <p className="hero-tagline">Every enterprise has 60+ security tools &mdash; 60 muscles with no nervous system. Adding tool #61 won't fix that. KTLYST is the nervous system that connects them all.</p>
 
         <div className="hero-fork">
           <a href="/signals" className="fork-card">
@@ -146,7 +146,7 @@ function App() {
         <div className="problem-statement">
           <span className="result-number">Over 50% of breaches</span> are detected externally. Not because translation is slow &mdash; because institutional knowledge doesn't persist. Lessons learned vanish. Effectiveness resets.
           <br /><br />
-          Your security stack has muscles &mdash; SIEMs, EDRs, firewalls, IAM. What it doesn't have is a nervous system that connects what each muscle learns.
+          Your security stack has muscles &mdash; SIEMs, EDRs, firewalls, IAM. What it doesn't have is a nervous system connecting what each muscle learns. Every new tool adds capability but not coordination. 76 tools per enterprise, zero shared memory.
           <br /><br />
           LastPass, T-Mobile, Okta, MGM, Rackspace &mdash; all responded to Breach 1, none institutionalized the lesson. <a href="/research" style={{ color: '#ff6b6b' }}>$900M+ in combined damages</a>.
         </div>
@@ -186,6 +186,29 @@ function App() {
               <div className="silo-item">Test data</div>
             </div>
             <div className="silo-drain">Knowledge dies here</div>
+          </div>
+        </div>
+
+        <div className="catalyst-grid">
+          <div className="catalyst-card">
+            <span className="catalyst-icon">&#9889;</span>
+            <h3>Agentic AI changes the threat model</h3>
+            <p>48% of security professionals rank agentic AI as the top attack vector for 2026. Autonomous agents don't just exploit vulnerabilities, they chain them. Organizations that can't institutionalize lessons from one attack will face compounding exposure from the next.</p>
+          </div>
+          <div className="catalyst-card">
+            <span className="catalyst-icon">&#128273;</span>
+            <h3>Attackers log in, they don't break in</h3>
+            <p>Identity-centric breaches now dominate. Stolen credentials, session hijacking, and OAuth abuse bypass perimeter defenses entirely. Detection requires cross-team context that no single tool holds. Without a system connecting what each team knows, these attacks repeat.</p>
+          </div>
+          <div className="catalyst-card">
+            <span className="catalyst-icon">&#9878;</span>
+            <h3>Regulators are forcing the issue</h3>
+            <p>SEC cyber disclosure rules and DORA in the EU now require enterprises to demonstrate they learn from incidents, not just respond to them. "We patched it" is no longer a sufficient answer. Provenance, governance, and institutional memory are becoming compliance requirements.</p>
+          </div>
+          <div className="catalyst-card">
+            <span className="catalyst-icon">&#8635;</span>
+            <h3>The 48-month knowledge reset</h3>
+            <p>Average CISO tenure is 48 months. When leadership turns over, institutional knowledge resets. The team that understood why a detection existed is gone. The context behind a policy exception is lost. Every transition is a window for re-breach.</p>
           </div>
         </div>
       </section>
@@ -439,6 +462,63 @@ function App() {
         </div>
         <div className="compat-adoption">
           <p>Governed artifacts deploy directly into your existing tools&mdash;Splunk, Sentinel, Datadog, Elastic, Jira, ServiceNow. No new console. No infrastructure changes. <strong>Typical adoption:</strong> Plug into existing workflows in under a week.</p>
+        </div>
+      </section>
+
+      {/* How We're Different */}
+      <section className="site-section comparison" id="compare">
+        <h2 className="section-heading">How We're Different</h2>
+        <p style={{ textAlign: 'center', color: '#c0d0e0', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
+          KTLYST is not another security tool. It is the governance layer above your existing tools that makes them work together.
+        </p>
+
+        <div className="compare-table">
+          <div className="compare-header">
+            <div className="compare-col compare-label-col"></div>
+            <div className="compare-col">SIEM / SOAR</div>
+            <div className="compare-col">Threat Intel Platform</div>
+            <div className="compare-col">Detection-as-Code</div>
+            <div className="compare-col compare-highlight">KTLYST (SLCP)</div>
+          </div>
+          <div className="compare-row">
+            <div className="compare-col compare-label-col">Primary function</div>
+            <div className="compare-col">Collect logs, trigger alerts</div>
+            <div className="compare-col">Aggregate threat feeds</div>
+            <div className="compare-col">Version detection rules</div>
+            <div className="compare-col compare-highlight">Govern how organizations learn</div>
+          </div>
+          <div className="compare-row">
+            <div className="compare-col compare-label-col">Knowledge persistence</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Resets with team turnover</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Feeds expire, context lost</div>
+            <div className="compare-col"><span className="compare-partial">&#9673;</span> Rules versioned, not context</div>
+            <div className="compare-col compare-highlight"><span className="compare-yes">&#10003;</span> Full provenance, compounds over time</div>
+          </div>
+          <div className="compare-row">
+            <div className="compare-col compare-label-col">Cross-team learning</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Siloed by team</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Intel team only</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Detection eng only</div>
+            <div className="compare-col compare-highlight"><span className="compare-yes">&#10003;</span> Intel + IR + Red Team + GRC</div>
+          </div>
+          <div className="compare-row">
+            <div className="compare-col compare-label-col">Governance and audit</div>
+            <div className="compare-col"><span className="compare-partial">&#9673;</span> Alert rules, no provenance</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> No artifact governance</div>
+            <div className="compare-col"><span className="compare-partial">&#9673;</span> Git history only</div>
+            <div className="compare-col compare-highlight"><span className="compare-yes">&#10003;</span> Full ownership, approval, provenance</div>
+          </div>
+          <div className="compare-row">
+            <div className="compare-col compare-label-col">Consolidation effect</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Adds to tool sprawl</div>
+            <div className="compare-col"><span className="compare-no">&#10005;</span> Another dashboard</div>
+            <div className="compare-col"><span className="compare-partial">&#9673;</span> Manages one artifact type</div>
+            <div className="compare-col compare-highlight"><span className="compare-yes">&#10003;</span> Connects your 60 existing tools</div>
+          </div>
+        </div>
+
+        <div className="compare-bottom">
+          <p>SIEMs are reflexes. KTLYST is the nervous system. You don't replace your muscles. You give them a brain that remembers.</p>
         </div>
       </section>
 
