@@ -1,0 +1,44 @@
+# KTLYST Labs
+
+> The nervous system for enterprise security.
+
+KTLYST Labs builds the Security Learning Control Plane (SLCP) - infrastructure that captures what enterprise security teams learn from incidents, intelligence, and investigations, governs that knowledge with provenance and ownership, and enforces it back into existing tools as detections, playbooks, and controls.
+
+## The Problem
+
+Every enterprise has 60+ security tools - 60 muscles with no nervous system. Teams learn from incidents but never institutionalize the lessons. 84% of breached organizations paid ransom. 78% were breached again. 36% by the exact same attacker. $900M+ in combined damages across five public cases (LastPass, Okta, T-Mobile, MGM, Rackspace). The problem is not detection. It is that organizations respond to incidents but never institutionalize the lesson.
+
+## The Product
+
+KTLYST is a Security Learning Control Plane. It ingests security learning from any source (intel reports, incident postmortems, red team findings, government advisories). It normalizes messy findings into structured, governed Learning Artifacts with character-level provenance. It enforces those artifacts into existing tools: Splunk SPL, Snowflake SQL, Elastic KQL, ServiceNow, Jira. 51,000+ lines of production code. 27+ validation gates. Zero-inference extraction (no hallucinated indicators). Append-only audit trail.
+
+Detection rules are the first governed artifact type. The goal is prevention engineering - making entire categories of attacks stop happening because the system remembers.
+
+## Key Pages
+
+- Homepage: https://www.ktlystlabs.com/
+- About (company overview, team, founding story): https://www.ktlystlabs.com/about
+- Research (breach case studies, academic research): https://www.ktlystlabs.com/research
+- Design Partner Program: https://www.ktlystlabs.com/partners
+- Security Signals (live intel feed): https://www.ktlystlabs.com/signals
+- Interactive Demo: https://www.ktlystlabs.com/demo
+
+## Team
+
+- Assaf Kipnis, Founder and CEO. 12 years in threat intelligence at LinkedIn, Google, Meta, and ElevenLabs (Head of Threat Intelligence and Investigations).
+- Stephan Kaufmann, Co-Founder and COO. 20+ years in security operations at HP, McAfee, and Meta.
+
+## Thesis Endorsers
+
+Two CISOs, the CTO of the FBI, and Meta's threat intelligence leadership have endorsed the thesis.
+
+## Category
+
+Security Learning Control Plane (SLCP). Adjacent to but distinct from: SIEM, SOAR, TIP, GRC. KTLYST is not a detection tool. It is the governance layer above execution tools.
+
+## Contact
+
+- Email: crew@ktlystlabs.com
+- Website: https://www.ktlystlabs.com
+- LinkedIn (Assaf): https://www.linkedin.com/in/assafkipnis/
+- LinkedIn (Stephan): https://www.linkedin.com/in/stephan-kaufmann/
