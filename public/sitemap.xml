@@ -43,6 +43,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.ktlystlabs.com/privacy</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.ktlystlabs.com/responsible-ai</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.ktlystlabs.com/demo</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
