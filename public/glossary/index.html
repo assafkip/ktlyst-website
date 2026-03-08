@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.__gaBotFiltered = (function(){
+      var ua = navigator.userAgent || '';
+      var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+      return bots.test(ua);
+    })();
+    if (!window.__gaBotFiltered) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DPSD4GNJE0');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Learning Glossary - KTLYST Labs | Key Terms &amp; Definitions</title>
+  <meta name="description" content="Definitions of Security Learning Control Plane (SLCP), detection governance, knowledge compounding, governed translation, Learning Artifacts, provenance chains, and other key security concepts." />
+  <link rel="canonical" href="https://www.ktlystlabs.com/glossary">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ktlystlabs.com/glossary">
+  <meta property="og:title" content="Security Learning Glossary - KTLYST Labs">
+  <meta property="og:description" content="Definitions of SLCP, detection governance, knowledge compounding, and other key security learning concepts.">
+  <meta property="og:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta property="og:site_name" content="KTLYST Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Security Learning Glossary - KTLYST Labs">
+  <meta name="twitter:description" content="Key definitions for security learning, detection governance, and knowledge compounding.">
+  <meta name="twitter:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta name="author" content="KTLYST Labs">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DefinedTermSet",
+        "name": "Security Learning Glossary",
+        "url": "https://www.ktlystlabs.com/glossary",
+        "description": "Key terms and definitions for security learning, detection governance, and the Security Learning Control Plane.",
+        "hasDefinedTerm": [
+          {
+            "@type": "DefinedTerm",
+            "name": "Security Learning Control Plane (SLCP)",
+            "description": "Infrastructure that captures what enterprise security teams learn from incidents, intelligence, and investigations, governs that knowledge with provenance and ownership, and enforces it into existing security tools. KTLYST is the first SLCP."
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Learning Artifact",
+            "description": "A structured, governed unit of security knowledge with full provenance. Created from raw security learning (incident findings, intel reports, red team results) and enforced into existing tools as detections, playbooks, or controls."
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Detection Governance",
+            "description": "The practice of managing the lifecycle of detection rules and security controls with ownership, approval workflows, version control, and audit trails."
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Knowledge Compounding",
+            "description": "The effect where each security learning event enriches future responses, making the organization progressively harder to breach. The opposite of knowledge decay."
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Governed Translation",
+            "description": "The process of converting raw security intelligence into production-ready artifacts with full provenance, validation, and approval chains."
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Re-Breach",
+            "description": "When an organization suffers a second breach due to failure to institutionalize lessons from the first. 78% of breached organizations are breached again."
+          },
+          {
+            "@type": "DefinedTerm",
+            "name": "Prevention Engineering",
+            "description": "The discipline of making entire categories of attacks stop happening by systematically converting lessons learned into enforced defense."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a Security Learning Control Plane (SLCP)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Security Learning Control Plane (SLCP) is infrastructure that captures what enterprise security teams learn from incidents, intelligence, and investigations, governs that knowledge with provenance and ownership, and enforces it into existing security tools as detections, playbooks, and controls. It sits above execution tools (SIEMs, EDRs, SOAR) as a horizontal governance layer. KTLYST is the first SLCP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between KTLYST and a SIEM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A SIEM (Security Information and Event Management) collects and correlates security events in real time. KTLYST is not a SIEM. It operates above SIEMs as a governance layer. SIEMs are reflexes - they react to events. KTLYST is the nervous system - it captures what the organization learns from those events and enforces it back into the SIEM and other tools as governed artifacts. KTLYST outputs (detection rules, playbooks, controls) land in your existing SIEM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is detection governance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Detection governance is the practice of managing the lifecycle of detection rules and security controls with ownership, approval workflows, version control, provenance, and audit trails. It ensures that detections are reviewed before deployment, changes are tracked, and every rule traces back to the intelligence or incident that created it. Without detection governance, organizations accumulate unmaintained rules that create noise and miss real threats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is knowledge compounding in cybersecurity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knowledge compounding is the effect where each security learning event - an incident response, a threat intelligence report, a red team exercise - enriches the organization's future responses. Instead of lessons dying in postmortems and wikis, they become governed artifacts that improve detection, response, and prevention over time. It is the opposite of knowledge decay, where institutional knowledge disappears through team turnover, tool fragmentation, and siloed operations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a re-breach and why does it happen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A re-breach occurs when an organization suffers a second breach because it failed to institutionalize the lessons from the first. According to Cybereason, 78% of breached organizations are breached again, and 36% by the exact same attacker. Re-breaches happen because organizations respond to incidents but never systematically convert lessons learned into enforced defense across their security stack."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is prevention engineering?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prevention engineering is the discipline of making entire categories of attacks stop happening by systematically converting security learning into enforced prevention. It goes beyond detection (finding attacks after they happen) to ensure that lessons from past incidents, intelligence, and exercises are operationalized across the security stack before the next attack."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ktlystlabs.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Glossary", "item": "https://www.ktlystlabs.com/glossary"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #0a1628;
+      background-image: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a { color: #3b9dff; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #5aadff; }
+    .site-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 4rem; position: fixed; width: 100%; top: 0; z-index: 1000;
+      background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px);
+    }
+    .site-nav .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: #fff; text-decoration: none; }
+    .site-nav .logo .labs { color: #7c9cc8; margin-left: 0.5rem; }
+    .nav-right { display: flex; gap: 2rem; align-items: center; }
+    .nav-right a { color: #a0b0c0; font-size: 0.95rem; }
+    .nav-right a:hover { color: #3b9dff; }
+    .nav-right a.active { color: #3b9dff; font-weight: 600; }
+    .cta-button { background: #3b9dff; color: #000 !important; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 600; }
+    .cta-button:hover { background: #5aadff; }
+    .page-content { max-width: 900px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+    .page-hero { text-align: center; margin-bottom: 4rem; }
+    .page-hero h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .page-hero .subtitle { font-size: 1.2rem; color: #c0d0e0; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+
+    /* Definition list */
+    .term-entry { margin-bottom: 3rem; scroll-margin-top: 6rem; }
+    .term-entry h2 {
+      font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem; border-bottom: 2px solid rgba(59, 157, 255, 0.3);
+    }
+    .term-aka { color: #7c9cc8; font-size: 0.9rem; margin-bottom: 1rem; }
+    .term-definition {
+      background: rgba(59, 157, 255, 0.06); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 1.5rem 2rem; border-radius: 8px; margin-bottom: 1rem;
+    }
+    .term-definition p { color: #e0e0e0; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0; }
+    .term-context { color: #a0b0c0; font-size: 0.95rem; line-height: 1.7; }
+    .term-context p { margin-bottom: 0.75rem; }
+    .term-see-also { margin-top: 0.75rem; font-size: 0.9rem; }
+    .term-see-also span { color: #7c9cc8; }
+
+    /* Quick nav */
+    .quick-nav {
+      display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 3rem;
+      justify-content: center;
+    }
+    .quick-nav a {
+      background: rgba(59, 157, 255, 0.08); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.9rem; color: #c0d0e0;
+      transition: all 0.3s;
+    }
+    .quick-nav a:hover { background: rgba(59, 157, 255, 0.15); border-color: #3b9dff; color: #fff; }
+
+    .site-footer { border-top: 1px solid rgba(59, 157, 255, 0.2); padding: 3rem 4rem; text-align: center; color: #7c9cc8; margin-top: 4rem; }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
+    .footer-links a { color: #3b9dff; }
+
+    @media (max-width: 768px) {
+      .site-nav { flex-direction: column; padding: 1rem; gap: 1rem; }
+      .page-content { padding: 6rem 1.5rem 3rem; }
+      .page-hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="logo">KTLYST <span class="labs">Labs</span></a>
+    <div class="nav-right">
+      <a href="/#how">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/research">Research</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-hero">
+      <h1>Security Learning Glossary</h1>
+      <p class="subtitle">Key terms and concepts for understanding security learning, detection governance, and the Security Learning Control Plane.</p>
+      <p style="color: #7c9cc8; font-size: 0.85rem; margin-top: 1rem;">Last updated: <time datetime="2026-03-07">March 7, 2026</time></p>
+    </div>
+
+    <div class="quick-nav">
+      <a href="#slcp">SLCP</a>
+      <a href="#learning-artifact">Learning Artifact</a>
+      <a href="#detection-governance">Detection Governance</a>
+      <a href="#knowledge-compounding">Knowledge Compounding</a>
+      <a href="#governed-translation">Governed Translation</a>
+      <a href="#provenance-chain">Provenance Chain</a>
+      <a href="#re-breach">Re-Breach</a>
+      <a href="#learning-decay">Learning Decay</a>
+      <a href="#prevention-engineering">Prevention Engineering</a>
+      <a href="#zero-inference-extraction">Zero-Inference Extraction</a>
+      <a href="#detection-engineering">Detection Engineering</a>
+      <a href="#security-knowledge-graph">Security Knowledge Graph</a>
+    </div>
+
+    <div class="term-entry" id="slcp">
+      <h2>Security Learning Control Plane (SLCP)</h2>
+      <div class="term-definition">
+        <p>Infrastructure that captures what enterprise security teams learn from incidents, intelligence, and investigations, governs that knowledge with provenance and ownership, and enforces it into existing security tools as detections, playbooks, and controls. The SLCP sits above execution tools (SIEMs, EDRs, SOAR platforms) as a horizontal governance layer.</p>
+      </div>
+      <div class="term-context">
+        <p>Every enterprise has 60+ security tools - SIEMs, EDRs, firewalls, IAM systems. These are the muscles. The SLCP is the nervous system that connects what each tool learns. Without it, security teams respond to incidents but never institutionalize the lesson.</p>
+        <p>KTLYST is the first Security Learning Control Plane. The term draws from infrastructure concepts (like Kubernetes' control plane for containers) applied to security knowledge management.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#learning-artifact">Learning Artifact</a>, <a href="#detection-governance">Detection Governance</a>, <a href="#knowledge-compounding">Knowledge Compounding</a></div>
+    </div>
+
+    <div class="term-entry" id="learning-artifact">
+      <h2>Learning Artifact</h2>
+      <div class="term-definition">
+        <p>A structured, governed unit of security knowledge with full provenance. Created from raw security learning (incident findings, intel reports, red team results) and enforced into existing tools as detections, playbooks, controls, or compliance evidence.</p>
+      </div>
+      <div class="term-context">
+        <p>Learning Artifacts are the primary object in a <a href="#slcp">Security Learning Control Plane</a>. Unlike traditional IOCs or detection rules, a Learning Artifact carries its entire lineage: what source produced it, who approved it, which validation gates it passed, and where it's currently enforced.</p>
+        <p>Detection rules are the first Learning Artifact type. Future types include playbook updates, control tightenings, policy changes, and compliance evidence.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#governed-translation">Governed Translation</a>, <a href="#provenance-chain">Provenance Chain</a></div>
+    </div>
+
+    <div class="term-entry" id="detection-governance">
+      <h2>Detection Governance</h2>
+      <div class="term-definition">
+        <p>The practice of managing the lifecycle of detection rules and security controls with ownership, approval workflows, version control, provenance, and audit trails. Ensures that detections are reviewed before deployment, changes are tracked, and every rule traces back to the intelligence or incident that created it.</p>
+      </div>
+      <div class="term-context">
+        <p>Most organizations have hundreds or thousands of detection rules with no clear ownership. When a rule fires, nobody knows who wrote it, why, or whether it's still relevant. Detection governance solves this by treating detections as governed artifacts rather than fire-and-forget configurations.</p>
+        <p>Without detection governance, organizations accumulate unmaintained rules that create noise, miss real threats, and can't be audited for compliance. SEC cyber disclosure rules and DORA now require organizations to demonstrate this kind of systematic improvement.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#learning-artifact">Learning Artifact</a>, <a href="#detection-engineering">Detection Engineering</a></div>
+    </div>
+
+    <div class="term-entry" id="knowledge-compounding">
+      <h2>Knowledge Compounding</h2>
+      <div class="term-definition">
+        <p>The effect where each security learning event - an incident response, a threat intelligence report, a red team exercise - enriches the organization's future responses, making it progressively harder to breach. The opposite of <a href="#learning-decay">learning decay</a>.</p>
+      </div>
+      <div class="term-context">
+        <p>In most organizations, security knowledge is additive at best and decaying at worst. A postmortem produces findings, but those findings die in a wiki. An intel report gets read, but the TTPs never become detections. When a senior engineer leaves, their knowledge walks out the door.</p>
+        <p>Knowledge compounding requires infrastructure that captures each learning event, connects it to previous knowledge, and enforces it across the stack. Over time, the system accumulates a <a href="#security-knowledge-graph">security knowledge graph</a> that makes every new response faster and more complete.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#learning-decay">Learning Decay</a>, <a href="#security-knowledge-graph">Security Knowledge Graph</a></div>
+    </div>
+
+    <div class="term-entry" id="governed-translation">
+      <h2>Governed Translation</h2>
+      <div class="term-definition">
+        <p>The process of converting raw security intelligence into production-ready artifacts (detection rules, playbooks, controls) with full provenance, validation, and approval chains. Every output clause traces back to source text.</p>
+      </div>
+      <div class="term-context">
+        <p>Traditional intel-to-detection translation is manual, unstructured, and ungoverned. An analyst reads a PDF, mentally extracts TTPs, and writes rules by hand. There's no provenance linking the output to the source, no validation gates, and no audit trail.</p>
+        <p>Governed translation automates the extraction and structuring while preserving the human judgment layer. Analysts review and approve. The system handles the deterministic conversion, provenance tracking, and multi-platform compilation (Splunk SPL, Snowflake SQL, Elastic KQL).</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#provenance-chain">Provenance Chain</a>, <a href="#zero-inference-extraction">Zero-Inference Extraction</a></div>
+    </div>
+
+    <div class="term-entry" id="provenance-chain">
+      <h2>Provenance Chain</h2>
+      <div class="term-definition">
+        <p>The complete lineage of a <a href="#learning-artifact">Learning Artifact</a> from its original source through every transformation, validation, and approval to its deployed state. At the character level: every output clause links back to the exact source text that produced it.</p>
+      </div>
+      <div class="term-context">
+        <p>Provenance chains are essential for audit, compliance, and trust. When a detection rule fires in Splunk, the analyst can trace it back through the governed translation pipeline to the original CISA advisory, incident report, or red team finding that triggered it. This is critical for SEC cyber disclosure requirements and DORA compliance.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#governed-translation">Governed Translation</a>, <a href="#detection-governance">Detection Governance</a></div>
+    </div>
+
+    <div class="term-entry" id="re-breach">
+      <h2>Re-Breach</h2>
+      <div class="term-definition">
+        <p>When an organization suffers a second (or subsequent) breach due to failure to institutionalize lessons from the first. According to Cybereason, 78% of breached organizations are breached again, and 36% by the exact same attacker.</p>
+      </div>
+      <div class="term-context">
+        <p>Public re-breach cases include <a href="/research">LastPass ($150M+ crypto theft), Okta (~$8B market cap loss), T-Mobile ($550M+ costs), MGM ($100M revenue impact), and Rackspace</a> - totaling $900M+ in combined damages. In every case, the organization responded to Breach 1 but failed to institutionalize the lesson.</p>
+        <p>Re-breaches are the strongest evidence that the security industry has a learning problem, not a tooling problem.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#learning-decay">Learning Decay</a>, <a href="#prevention-engineering">Prevention Engineering</a></div>
+    </div>
+
+    <div class="term-entry" id="learning-decay">
+      <h2>Learning Decay</h2>
+      <div class="term-definition">
+        <p>The gradual loss of institutional security knowledge through team turnover, tool fragmentation, siloed operations, and the absence of systems to capture and enforce what teams learn. The average CISO/security leader turnover cycle is 48 months.</p>
+      </div>
+      <div class="term-context">
+        <p>Learning decay is the root cause of <a href="#re-breach">re-breaches</a>. Organizations document lessons in postmortems, wikis, and tickets, but these formats don't persist as operational defense. When people leave, the learning leaves with them. When tools change, the context is lost.</p>
+        <p>The opposite of learning decay is <a href="#knowledge-compounding">knowledge compounding</a>, which requires infrastructure purpose-built for security knowledge management.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#knowledge-compounding">Knowledge Compounding</a>, <a href="#re-breach">Re-Breach</a></div>
+    </div>
+
+    <div class="term-entry" id="prevention-engineering">
+      <h2>Prevention Engineering</h2>
+      <div class="term-definition">
+        <p>The discipline of making entire categories of attacks stop happening by systematically converting security learning into enforced prevention across the security stack. The evolution beyond detection engineering.</p>
+      </div>
+      <div class="term-context">
+        <p>Detection engineering focuses on finding attacks after they begin. Prevention engineering goes further: every incident, intelligence report, and red team exercise systematically reduces the attack surface for the next attempt. The category progression is: Detection Engineering -> Learning Engineering -> Prevention Engineering.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#detection-engineering">Detection Engineering</a>, <a href="#knowledge-compounding">Knowledge Compounding</a></div>
+    </div>
+
+    <div class="term-entry" id="zero-inference-extraction">
+      <h2>Zero-Inference Extraction</h2>
+      <div class="term-definition">
+        <p>An extraction methodology that produces no hallucinated indicators. Every extracted behavior, TTP, and indicator traces back to specific source text at the character level. Deterministic, not probabilistic.</p>
+      </div>
+      <div class="term-context">
+        <p>In security, false positives are costly and false data is dangerous. Zero-inference extraction means the system never guesses, infers, or generates indicators that aren't explicitly present in the source material. Same input produces the same output every time.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#provenance-chain">Provenance Chain</a>, <a href="#governed-translation">Governed Translation</a></div>
+    </div>
+
+    <div class="term-entry" id="detection-engineering">
+      <h2>Detection Engineering</h2>
+      <div class="term-definition">
+        <p>The discipline of designing, building, testing, and maintaining detection rules that identify security threats in an organization's environment. Now a titled role, with companies hiring Heads of Detection Engineering.</p>
+      </div>
+      <div class="term-context">
+        <p>Detection engineering emerged as organizations recognized that writing detection rules requires dedicated expertise. However, most detection engineering teams still lack governance infrastructure - rules are written without provenance, deployed without approval workflows, and abandoned without lifecycle management.</p>
+        <p>KTLYST provides the governance layer that detection engineering teams need but don't have: <a href="#detection-governance">detection governance</a> as infrastructure rather than process.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#detection-governance">Detection Governance</a>, <a href="#prevention-engineering">Prevention Engineering</a></div>
+    </div>
+
+    <div class="term-entry" id="security-knowledge-graph">
+      <h2>Security Knowledge Graph</h2>
+      <div class="term-definition">
+        <p>A connected graph of every adversary, technique, control, detection, and learning event in an organization's security history. Built incrementally through <a href="#knowledge-compounding">knowledge compounding</a> as the organization uses the <a href="#slcp">SLCP</a>.</p>
+      </div>
+      <div class="term-context">
+        <p>The security knowledge graph is the long-term moat. Each time a team uses KTLYST, institutional knowledge gets captured, versioned, and connected. Over years, this produces an organizational memory that knows which adversaries have targeted the company, what techniques worked, which controls were effective, and where gaps remain.</p>
+        <p>A knowledge graph that learns is a moat that deepens with every incident.</p>
+      </div>
+      <div class="term-see-also"><span>See also:</span> <a href="#knowledge-compounding">Knowledge Compounding</a>, <a href="#slcp">SLCP</a></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/research">Research</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip">Let's Talk</a>
+      <a href="mailto:crew@ktlystlabs.com">Contact</a>
+    </div>
+    <p>&copy; 2026 KTLYST Labs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
