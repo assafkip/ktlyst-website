@@ -147,7 +147,7 @@ function App() {
           <br /><br />
           Your security stack has muscles &mdash; SIEMs, EDRs, firewalls, IAM. What it doesn't have is a nervous system that connects what each muscle learns.
           <br /><br />
-          LastPass, T-Mobile, Okta, MGM, Rackspace &mdash; all responded to Breach 1, none institutionalized the lesson. $900M+ in combined damages.
+          LastPass, T-Mobile, Okta, MGM, Rackspace &mdash; all responded to Breach 1, none institutionalized the lesson. <a href="/research" style={{ color: '#ff6b6b' }}>$900M+ in combined damages</a>.
         </div>
 
         <div className="silo-diagram">
@@ -502,7 +502,7 @@ function App() {
           Typical engagement: 60&ndash;90 days. Weekly sync with your team. We'll work with your existing stack (Splunk, Sentinel, Datadog, etc.).
         </p>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScr8iT20E4YuavrMgYM7EEOsNUAKZ61c1RkCLspidxHIOaNEg/viewform?usp=header" className="primary">Apply to Partner Program</a>
+        <a href="/partners" className="primary">Learn More &amp; Apply</a>
       </section>
 
       {/* Team */}
@@ -514,7 +514,7 @@ function App() {
         </p>
 
         <p className="team-intro-alt">
-          Combined 30+ years in security detection and threat intelligence. We're building infrastructure that prevents knowledge from disappearing.
+          Combined 30+ years in security detection and threat intelligence. We're building infrastructure that prevents knowledge from disappearing. <a href="/about" style={{ color: '#3b9dff' }}>Read our story &rarr;</a>
         </p>
 
         <div className="team-grid">

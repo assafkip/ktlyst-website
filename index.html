@@ -52,9 +52,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="author" content="KTLYST Labs">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.ktlystlabs.com/#organization",
+          "name": "KTLYST Labs",
+          "url": "https://www.ktlystlabs.com",
+          "logo": "https://www.ktlystlabs.com/logo.png",
+          "description": "KTLYST is the Security Learning Control Plane (SLCP) - the nervous system for enterprise security. It captures what security teams learn from incidents, intelligence, and investigations, governs that knowledge with provenance and ownership, and enforces it into existing tools as detections, playbooks, and controls.",
+          "foundingDate": "2026-01-01",
+          "founders": [
+            {
+              "@type": "Person",
+              "name": "Assaf Kipnis",
+              "jobTitle": "Founder & CEO",
+              "url": "https://www.linkedin.com/in/assafkipnis/"
+            },
+            {
+              "@type": "Person",
+              "name": "Stephan Kaufmann",
+              "jobTitle": "Co-Founder & COO",
+              "url": "https://www.linkedin.com/in/stephan-kaufmann/"
+            }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/ktlyst-labs",
+            "https://x.com/KTLYST_labs"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "crew@ktlystlabs.com",
+            "contactType": "sales"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.ktlystlabs.com/#website",
+          "url": "https://www.ktlystlabs.com",
+          "name": "KTLYST Labs",
+          "publisher": {"@id": "https://www.ktlystlabs.com/#organization"}
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "KTLYST",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Cloud",
+          "description": "Security Learning Control Plane that captures what enterprise security teams learn from incidents and investigations, governs that knowledge with provenance and ownership, and enforces it into existing security tools.",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/PreOrder",
+            "description": "Design Partner Program - early access"
+          },
+          "creator": {"@id": "https://www.ktlystlabs.com/#organization"}
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ktlystlabs.com/"}
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>KTLYST Labs - The Nervous System for Enterprise Security</h1>
+      <p>KTLYST is a Security Learning Control Plane (SLCP) that captures what enterprise security teams learn from incidents, intelligence, and investigations, governs that knowledge with provenance and ownership, and enforces it back into existing tools as detections, playbooks, and controls.</p>
+      <h2>The Problem</h2>
+      <p>Every enterprise has 60+ security tools - 60 muscles with no nervous system. Teams respond to incidents but never institutionalize the lessons. 84% of breached organizations paid ransom. 78% were breached again. 36% by the exact same attacker. LastPass, Okta, T-Mobile, MGM, and Rackspace collectively suffered $900M+ in damages from re-breaches.</p>
+      <h2>How It Works</h2>
+      <p>KTLYST follows a five-stage pipeline: Ingest security learning from any source. Normalize findings into structured Learning Artifacts with evidence chains. Govern with ownership, approval, and provenance. Enforce outputs into existing tools (Splunk SPL, Snowflake SQL, Elastic KQL, ServiceNow). Compound - every new finding enriches the next response.</p>
+      <h2>Team</h2>
+      <p>Assaf Kipnis, Founder and CEO - 12 years in threat intelligence at LinkedIn, Google, Meta, and ElevenLabs. Stephan Kaufmann, Co-Founder and COO - 20+ years in security operations at HP, McAfee, and Meta.</p>
+      <nav>
+        <a href="/about">About</a> |
+        <a href="/research">Research &amp; Case Studies</a> |
+        <a href="/partners">Design Partner Program</a> |
+        <a href="/signals">Security Signals</a>
+      </nav>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
