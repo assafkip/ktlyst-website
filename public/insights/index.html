@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.__gaBotFiltered = (function(){
+      var ua = navigator.userAgent || '';
+      var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+      return bots.test(ua);
+    })();
+    if (!window.__gaBotFiltered) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DPSD4GNJE0');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights - KTLYST Labs | Security Learning &amp; Detection Governance</title>
+  <meta name="description" content="Analysis of recent breaches through the security learning lens. How organizations fail to institutionalize lessons and what a Security Learning Control Plane changes." />
+  <link rel="canonical" href="https://www.ktlystlabs.com/insights">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ktlystlabs.com/insights">
+  <meta property="og:title" content="Insights - KTLYST Labs | Security Learning &amp; Detection Governance">
+  <meta property="og:description" content="Analysis of recent breaches through the security learning lens. What a Security Learning Control Plane changes.">
+  <meta property="og:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta property="og:site_name" content="KTLYST Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights - KTLYST Labs">
+  <meta name="twitter:description" content="Security learning insights. Breach analysis through the governance lens.">
+  <meta name="twitter:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta name="author" content="Assaf Kipnis, KTLYST Labs">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "name": "KTLYST Labs Insights",
+        "url": "https://www.ktlystlabs.com/insights",
+        "description": "Analysis of security breaches, detection governance, and the case for a Security Learning Control Plane.",
+        "publisher": {"@id": "https://www.ktlystlabs.com/#organization"},
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Change Healthcare: 55 Days Between Advisory and $872M Breach",
+            "datePublished": "2026-03-07",
+            "author": {"@type": "Person", "name": "Assaf Kipnis"},
+            "url": "https://www.ktlystlabs.com/insights#change-healthcare"
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Why 78% of Breached Organizations Get Breached Again",
+            "datePublished": "2026-03-07",
+            "author": {"@type": "Person", "name": "Assaf Kipnis"},
+            "url": "https://www.ktlystlabs.com/insights#re-breach-pattern"
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "The 48-Month CISO Cycle and What It Means for Security Knowledge",
+            "datePublished": "2026-03-07",
+            "author": {"@type": "Person", "name": "Assaf Kipnis"},
+            "url": "https://www.ktlystlabs.com/insights#ciso-turnover"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ktlystlabs.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.ktlystlabs.com/insights"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #0a1628;
+      background-image: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a { color: #3b9dff; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #5aadff; }
+    .site-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 4rem; position: fixed; width: 100%; top: 0; z-index: 1000;
+      background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px);
+    }
+    .site-nav .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: #fff; text-decoration: none; }
+    .site-nav .logo .labs { color: #7c9cc8; margin-left: 0.5rem; }
+    .nav-right { display: flex; gap: 2rem; align-items: center; }
+    .nav-right a { color: #a0b0c0; font-size: 0.95rem; }
+    .nav-right a:hover { color: #3b9dff; }
+    .nav-right a.active { color: #3b9dff; font-weight: 600; }
+    .cta-button { background: #3b9dff; color: #000 !important; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 600; }
+    .cta-button:hover { background: #5aadff; }
+    .page-content { max-width: 800px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+    .page-hero { text-align: center; margin-bottom: 4rem; }
+    .page-hero h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .page-hero .subtitle { font-size: 1.2rem; color: #c0d0e0; max-width: 650px; margin: 0 auto; line-height: 1.8; }
+
+    /* Article cards */
+    .article {
+      background: rgba(59, 157, 255, 0.05); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 2.5rem; border-radius: 8px; margin-bottom: 3rem; scroll-margin-top: 6rem;
+      transition: border-color 0.3s;
+    }
+    .article:hover { border-color: rgba(59, 157, 255, 0.4); }
+    .article-meta { color: #7c9cc8; font-size: 0.85rem; margin-bottom: 1rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .article h2 { font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.4; }
+    .article p { color: #c0d0e0; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem; }
+    .article h3 { font-size: 1.15rem; font-weight: 600; color: #3b9dff; margin: 1.5rem 0 0.75rem; }
+    .article-highlight {
+      background: rgba(59, 157, 255, 0.08); border-left: 3px solid #3b9dff;
+      padding: 1rem 1.5rem; border-radius: 0 6px 6px 0; margin: 1.5rem 0;
+    }
+    .article-highlight p { margin-bottom: 0; }
+    .article-stat { display: inline-block; background: rgba(255, 107, 107, 0.1); border: 1px solid rgba(255, 107, 107, 0.2); color: #ff6b6b; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.9rem; font-weight: 600; }
+    .article-tags { display: flex; gap: 0.5rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .tag { background: rgba(59, 157, 255, 0.1); border: 1px solid rgba(59, 157, 255, 0.2); color: #a0b0c0; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.8rem; }
+
+    /* CTA */
+    .subscribe-cta {
+      background: linear-gradient(135deg, rgba(59, 157, 255, 0.12), rgba(59, 157, 255, 0.05));
+      border: 1px solid rgba(59, 157, 255, 0.3); padding: 2.5rem; border-radius: 8px;
+      text-align: center; margin: 3rem 0;
+    }
+    .subscribe-cta h2 { font-size: 1.5rem; color: #fff; margin-bottom: 0.75rem; }
+    .subscribe-cta p { color: #c0d0e0; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .subscribe-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .subscribe-links a {
+      padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.95rem;
+    }
+    .subscribe-links .primary { background: #3b9dff; color: #000; }
+    .subscribe-links .primary:hover { background: #5aadff; }
+    .subscribe-links .secondary { border: 1px solid rgba(59, 157, 255, 0.4); color: #3b9dff; }
+    .subscribe-links .secondary:hover { background: rgba(59, 157, 255, 0.1); }
+
+    .site-footer { border-top: 1px solid rgba(59, 157, 255, 0.2); padding: 3rem 4rem; text-align: center; color: #7c9cc8; margin-top: 4rem; }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
+    .footer-links a { color: #3b9dff; }
+
+    @media (max-width: 768px) {
+      .site-nav { flex-direction: column; padding: 1rem; gap: 1rem; }
+      .page-content { padding: 6rem 1.5rem 3rem; }
+      .page-hero h1 { font-size: 2rem; }
+      .article { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="logo">KTLYST <span class="labs">Labs</span></a>
+    <div class="nav-right">
+      <a href="/#how">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/research">Research</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-hero">
+      <h1>Insights</h1>
+      <p class="subtitle">Analysis of recent breaches, security learning failures, and what changes when organizations build institutional memory.</p>
+    </div>
+
+    <!-- Article 1 -->
+    <article class="article" id="change-healthcare">
+      <div class="article-meta">
+        <span>By <a href="/about">Assaf Kipnis</a></span>
+        <span><time datetime="2026-03-07">March 7, 2026</time></span>
+        <span>5 min read</span>
+      </div>
+      <h2>Change Healthcare: 55 Days Between Advisory and $872M Breach</h2>
+      <p>On December 19, 2023, CISA published advisory AA23-353A warning about ALPHV BlackCat ransomware - including specific TTPs, indicators, and mitigation steps. 55 days later, Change Healthcare was breached using the exact techniques described in that advisory.</p>
+      <p>The result: $872M+ in damages, 190 million individuals affected, and nationwide pharmacy disruptions lasting weeks.</p>
+
+      <h3>The intelligence existed</h3>
+      <p>This isn't a case where the threat was unknown. CISA published a detailed advisory with actionable information. The gap wasn't intelligence - it was operationalization. The advisory was received, probably read, and never converted into enforced defense across Change Healthcare's security stack.</p>
+
+      <div class="article-highlight">
+        <p>In a <a href="/glossary#slcp">Security Learning Control Plane</a>, a single CISA advisory input produces 7 <a href="/glossary#learning-artifact">governed artifacts</a>: detection rules, hunt hypotheses, playbook updates, MITRE mappings, compliance evidence, control updates, and monitoring rules. From one input, coordinated defense. In under 5 minutes.</p>
+      </div>
+
+      <h3>The pattern</h3>
+      <p>Change Healthcare is the clearest example of a systemic failure: the security industry produces intelligence at scale, but lacks infrastructure to convert that intelligence into enforced prevention. The 55-day gap between advisory and breach is not an anomaly - it's the default when <a href="/glossary#governed-translation">governed translation</a> doesn't exist.</p>
+
+      <p>The question isn't "did they know?" It's "did the knowing become doing?" For Change Healthcare, the answer was no. For <a href="/research">five other major organizations</a>, the answer was the same.</p>
+
+      <div class="article-tags">
+        <span class="tag">re-breach</span>
+        <span class="tag">CISA advisory</span>
+        <span class="tag">healthcare</span>
+        <span class="tag">ransomware</span>
+        <span class="tag">ALPHV BlackCat</span>
+      </div>
+    </article>
+
+    <!-- Article 2 -->
+    <article class="article" id="re-breach-pattern">
+      <div class="article-meta">
+        <span>By <a href="/about">Assaf Kipnis</a></span>
+        <span><time datetime="2026-03-07">March 7, 2026</time></span>
+        <span>4 min read</span>
+      </div>
+      <h2>Why 78% of Breached Organizations Get Breached Again</h2>
+      <p>The statistic is from Cybereason's ransomware study: <span class="article-stat">84% paid ransom</span>, <span class="article-stat">78% breached again</span>, <span class="article-stat">36% by the same attacker</span>. But the numbers only tell half the story.</p>
+
+      <h3>It's not a tooling problem</h3>
+      <p>The average enterprise deploys 76 security tools (Panaseer, 2022). T-Mobile pledged $150M in security improvements after their 2021 breach and was breached again within 15 months. MGM received a specific warning from Okta about social engineering campaigns and didn't act on it. These organizations don't lack tools, talent, or budget.</p>
+      <p>They lack a system that turns "we learned this" into "we enforced this."</p>
+
+      <h3>The four failure modes</h3>
+      <p>Across <a href="/research">five public re-breach cases</a> totaling $900M+ in damages, the same four patterns repeat:</p>
+      <p><strong>Narrow remediation.</strong> Fix the specific exploit, not the class of vulnerability. Okta fixed third-party access after 2022 but ignored employee credential hygiene - same attack pattern, different vector, 18 months later.</p>
+      <p><strong>Delayed patching.</strong> Rackspace chose mitigation over patching a critical Exchange vulnerability. The decision was documented but not governed - no expiry date, no risk owner, no mitigation validation.</p>
+      <p><strong>No closed loop.</strong> T-Mobile pledged $150M and still missed an API running unchecked for 6 weeks. No system verified that post-incident action items were completed, validated, and enforced.</p>
+      <p><strong><a href="/glossary#learning-decay">Learning decay</a>.</strong> Lessons documented in postmortems, wikis, and tickets. Never operationalized into production defense. When people leave, the knowledge leaves with them.</p>
+
+      <div class="article-highlight">
+        <p>The fix isn't more tools. It's infrastructure that captures what teams learn and enforces it across the stack. A <a href="/glossary#slcp">Security Learning Control Plane</a> that ensures the knowing becomes the doing.</p>
+      </div>
+
+      <div class="article-tags">
+        <span class="tag">re-breach</span>
+        <span class="tag">learning decay</span>
+        <span class="tag">Cybereason</span>
+        <span class="tag">institutional memory</span>
+      </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article class="article" id="ciso-turnover">
+      <div class="article-meta">
+        <span>By <a href="/about">Assaf Kipnis</a></span>
+        <span><time datetime="2026-03-07">March 7, 2026</time></span>
+        <span>3 min read</span>
+      </div>
+      <h2>The 48-Month CISO Cycle and What It Means for Security Knowledge</h2>
+      <p>The average CISO/security leader tenure is 48 months. Every four years, the person who holds the most context about an organization's security posture, threat landscape, and institutional lessons walks out the door.</p>
+
+      <h3>What leaves with them</h3>
+      <p>When a senior security leader departs, they take with them: knowledge of past incidents and what was learned, relationships with threat intelligence sources, understanding of which controls are effective and which are theater, context on why specific architectural decisions were made, and institutional memory of previous attack patterns.</p>
+      <p>The incoming CISO starts from a partial picture. They inherit tools, dashboards, and documentation, but not the institutional knowledge that informed decisions. The organization's security effectiveness resets.</p>
+
+      <h3>The compound cost</h3>
+      <p>This isn't just a people problem. It's a systems problem. Organizations that depend on individuals for institutional knowledge are structurally vulnerable to the 48-month cycle. Each transition creates a window where past lessons are forgotten, previous decisions lack context, and the attack surface quietly expands.</p>
+
+      <div class="article-highlight">
+        <p><a href="/glossary#knowledge-compounding">Knowledge compounding</a> requires that learning lives in infrastructure, not in people. A <a href="/glossary#security-knowledge-graph">security knowledge graph</a> that captures every incident, every decision, every lesson - and makes it available to whoever holds the role next. The system remembers what your teams learned, regardless of who's on the team.</p>
+      </div>
+
+      <div class="article-tags">
+        <span class="tag">CISO turnover</span>
+        <span class="tag">institutional memory</span>
+        <span class="tag">knowledge compounding</span>
+        <span class="tag">security leadership</span>
+      </div>
+    </article>
+
+    <!-- Subscribe CTA -->
+    <div class="subscribe-cta">
+      <h2>Follow Our Thinking</h2>
+      <p>Weekly security signals, breach analysis, and insights on detection governance.</p>
+      <div class="subscribe-links">
+        <a href="/signals" class="primary">Security Signals Feed</a>
+        <a href="https://www.linkedin.com/company/ktlyst-labs" class="secondary">Follow on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/research">Research</a>
+      <a href="/glossary">Glossary</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip">Let's Talk</a>
+      <a href="mailto:crew@ktlystlabs.com">Contact</a>
+    </div>
+    <p>&copy; 2026 KTLYST Labs. All rights reserved.</p>
+  </footer>
+</body>
+</html>

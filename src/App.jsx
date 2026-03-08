@@ -105,6 +105,7 @@ function App() {
           <a href="#how">How It Works</a>
           <a href="/about">About</a>
           <a href="/research">Research</a>
+          <a href="/insights">Insights</a>
           <a href="/partners">Partners</a>
           <a href="/signals">Signals</a>
           <a href="https://calendly.com/assafkip" className="cta-button">Let's Talk</a>
@@ -554,6 +555,8 @@ function App() {
         <div className="footer-links">
           <a href="/about">About</a>
           <a href="/research">Research</a>
+          <a href="/insights">Insights</a>
+          <a href="/glossary">Glossary</a>
           <a href="/partners">Partners</a>
           <a href="/signals">Signals</a>
           <a href="https://calendly.com/assafkip">Let's Talk</a>
