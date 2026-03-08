@@ -23,6 +23,8 @@ Detection rules are the first governed artifact type. The goal is prevention eng
 - Security Signals (live intel feed): https://www.ktlystlabs.com/signals
 - Glossary (key terms and definitions): https://www.ktlystlabs.com/glossary
 - Insights (breach analysis and security learning): https://www.ktlystlabs.com/insights
+- Privacy Policy: https://www.ktlystlabs.com/privacy
+- Responsible AI: https://www.ktlystlabs.com/responsible-ai
 - Interactive Demo: https://www.ktlystlabs.com/demo
 
 ## Team

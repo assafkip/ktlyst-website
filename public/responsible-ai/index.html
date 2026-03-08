@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.__gaBotFiltered = (function(){
+      var ua = navigator.userAgent || '';
+      var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+      return bots.test(ua);
+    })();
+    if (!window.__gaBotFiltered) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-DPSD4GNJE0');
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsible AI - KTLYST Labs</title>
+  <meta name="description" content="How KTLYST Labs builds and uses AI responsibly. Our principles for transparency, human oversight, data governance, and security in AI-assisted security operations." />
+  <link rel="canonical" href="https://www.ktlystlabs.com/responsible-ai">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ktlystlabs.com/responsible-ai">
+  <meta property="og:title" content="Responsible AI - KTLYST Labs">
+  <meta property="og:description" content="Our principles for building AI that makes security teams stronger, not dependent.">
+  <meta property="og:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta property="og:site_name" content="KTLYST Labs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Responsible AI - KTLYST Labs">
+  <meta name="twitter:description" content="Our principles for building AI that makes security teams stronger, not dependent.">
+  <meta name="twitter:image" content="https://www.ktlystlabs.com/og-image.png">
+  <meta name="author" content="KTLYST Labs">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Responsible AI",
+        "url": "https://www.ktlystlabs.com/responsible-ai",
+        "description": "KTLYST Labs responsible AI principles covering transparency, human oversight, data governance, bias mitigation, and security.",
+        "publisher": {"@id": "https://www.ktlystlabs.com/#organization"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ktlystlabs.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Responsible AI", "item": "https://www.ktlystlabs.com/responsible-ai"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #0a1628;
+      background-image: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+      background-attachment: fixed;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    a { color: #3b9dff; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #5aadff; }
+
+    /* Nav */
+    .site-nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 4rem; position: fixed; width: 100%; top: 0; z-index: 1000;
+      background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(10px);
+    }
+    .site-nav .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; color: #fff; text-decoration: none; }
+    .site-nav .logo .labs { color: #7c9cc8; margin-left: 0.5rem; }
+    .nav-right { display: flex; gap: 2rem; align-items: center; }
+    .nav-right a { color: #a0b0c0; font-size: 0.95rem; }
+    .nav-right a:hover { color: #3b9dff; }
+    .nav-right a.active { color: #3b9dff; font-weight: 600; }
+    .cta-button { background: #3b9dff; color: #000 !important; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 600; }
+    .cta-button:hover { background: #5aadff; }
+
+    /* Page layout */
+    .page-content { max-width: 900px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+    .page-hero { text-align: center; margin-bottom: 3rem; }
+    .page-hero h1 { font-size: 3rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .page-hero .subtitle { font-size: 1.15rem; color: #c0d0e0; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+
+    /* Sections */
+    .content-section { margin-bottom: 3rem; }
+    .content-section h2 { font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(59, 157, 255, 0.3); }
+    .content-section h3 { font-size: 1.2rem; font-weight: 600; color: #3b9dff; margin-bottom: 0.5rem; margin-top: 1.25rem; }
+    .content-section p { color: #c0d0e0; font-size: 1rem; line-height: 1.8; margin-bottom: 0.75rem; }
+    .content-section ul { color: #c0d0e0; font-size: 1rem; line-height: 1.8; margin-left: 1.5rem; margin-bottom: 1rem; }
+    .content-section li { margin-bottom: 0.4rem; }
+
+    /* Principle cards */
+    .principle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 1.5rem 0; }
+    .principle-card {
+      background: rgba(59, 157, 255, 0.05); border: 1px solid rgba(59, 157, 255, 0.2);
+      padding: 1.75rem; border-radius: 8px; transition: all 0.3s;
+    }
+    .principle-card:hover { background: rgba(59, 157, 255, 0.1); border-color: rgba(59, 157, 255, 0.4); }
+    .principle-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
+    .principle-card h3 { color: #fff; font-size: 1.15rem; margin: 0 0 0.5rem 0; }
+    .principle-card p { color: #a0b0c0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0; }
+
+    /* Highlight box */
+    .highlight-box {
+      background: rgba(59, 157, 255, 0.08); border-left: 3px solid #3b9dff;
+      padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; }
+
+    /* Commitment list */
+    .commitment-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+    .commitment-check { color: #3b9dff; font-size: 1.2rem; min-width: 24px; padding-top: 0.1rem; }
+    .commitment-text h3 { margin-top: 0; }
+    .commitment-text p { margin-bottom: 0; }
+
+    /* Footer */
+    .site-footer { border-top: 1px solid rgba(59, 157, 255, 0.2); padding: 3rem 4rem; text-align: center; color: #7c9cc8; margin-top: 4rem; }
+    .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+    .footer-links a { color: #3b9dff; }
+
+    @media (max-width: 768px) {
+      .site-nav { flex-direction: column; padding: 1rem; gap: 1rem; }
+      .page-content { padding: 6rem 1.5rem 3rem; }
+      .page-hero h1 { font-size: 2rem; }
+      .principle-grid { grid-template-columns: 1fr; }
+      .commitment-item { flex-direction: column; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/" class="logo">KTLYST <span class="labs">Labs</span></a>
+    <div class="nav-right">
+      <a href="/#how">How It Works</a>
+      <a href="/about">About</a>
+      <a href="/research">Research</a>
+      <a href="/insights">Insights</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-hero">
+      <h1>Responsible AI</h1>
+      <p class="subtitle">KTLYST uses AI to help security teams learn faster, not to replace their judgment. Here is how we build and deploy AI responsibly.</p>
+      <p style="color: #7c9cc8; font-size: 0.85rem; margin-top: 1rem;">Last updated: <time datetime="2026-03-07">March 7, 2026</time></p>
+    </div>
+
+    <!-- Why This Matters -->
+    <div class="content-section">
+      <h2>Why This Matters</h2>
+      <p>KTLYST sits at the intersection of AI and enterprise security. The artifacts we help create, detection rules, governance policies, and response playbooks, directly affect how organizations defend themselves. That means the AI in our platform must be trustworthy, transparent, and accountable.</p>
+      <p>We believe AI should amplify human expertise, not obscure it. Every design decision we make starts from that premise.</p>
+    </div>
+
+    <!-- Core Principles -->
+    <div class="content-section">
+      <h2>Our Principles</h2>
+
+      <div class="principle-grid">
+        <div class="principle-card">
+          <div class="principle-icon">&#128065;</div>
+          <h3>Transparency</h3>
+          <p>Every AI-generated artifact includes a full provenance chain. You can trace any output back to its source input, the model that processed it, and the validation gates it passed through. No black boxes.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">&#9995;</div>
+          <h3>Human in the Loop</h3>
+          <p>AI assists, humans decide. Every governed artifact requires human review and approval before it reaches production systems. We design for expert oversight, not autonomy.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">&#128274;</div>
+          <h3>Data Sovereignty</h3>
+          <p>Your security data stays yours. We do not train models on customer data. We do not share customer data between organizations. Customer environments are isolated by design.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">&#128736;</div>
+          <h3>Zero-Inference Extraction</h3>
+          <p>Our AI extracts what is explicitly stated in source documents, not what it infers or assumes. This eliminates hallucinated detections and ensures artifacts reflect real intelligence, not model speculation.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">&#9989;</div>
+          <h3>Validation at Every Step</h3>
+          <p>AI-generated outputs pass through 27+ validation gates before reaching production. Schema validation, syntax checking, semantic review, and human approval are all required, not optional.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">&#128200;</div>
+          <h3>Measurable Outcomes</h3>
+          <p>We track and report accuracy, false positive rates, and artifact quality metrics. If an AI component does not improve outcomes for security teams, we do not ship it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- How AI Is Used -->
+    <div class="content-section">
+      <h2>How We Use AI in KTLYST</h2>
+      <p>AI serves specific, bounded functions in the KTLYST platform. Here is what AI does and does not do.</p>
+
+      <h3>AI does</h3>
+      <ul>
+        <li><strong>Extract structured data</strong> from unstructured security documents (advisories, postmortems, intel reports)</li>
+        <li><strong>Normalize findings</strong> into governed, schema-compliant artifacts</li>
+        <li><strong>Translate artifacts</strong> into platform-specific formats (Splunk SPL, Snowflake SQL, Elastic KQL, Sigma)</li>
+        <li><strong>Flag inconsistencies</strong> between existing detections and new intelligence</li>
+        <li><strong>Suggest improvements</strong> based on new learning events across the organization's history</li>
+      </ul>
+
+      <h3>AI does not</h3>
+      <ul>
+        <li><strong>Make deployment decisions</strong> - humans approve every artifact before it reaches production</li>
+        <li><strong>Access production systems autonomously</strong> - all enforcement requires explicit authorization workflows</li>
+        <li><strong>Train on customer data</strong> - customer data is never used to improve our models or shared across tenants</li>
+        <li><strong>Override human judgment</strong> - when AI output conflicts with expert review, the expert wins</li>
+        <li><strong>Operate without audit trails</strong> - every AI action is logged with full provenance</li>
+      </ul>
+    </div>
+
+    <!-- Data Governance -->
+    <div class="content-section">
+      <h2>Data Governance in AI Workflows</h2>
+
+      <div class="commitment-item">
+        <span class="commitment-check">&#10003;</span>
+        <div class="commitment-text">
+          <h3>Tenant isolation</h3>
+          <p>Each customer's data is processed in isolated environments. No cross-tenant data mixing, no shared model fine-tuning, no data leakage between organizations.</p>
+        </div>
+      </div>
+
+      <div class="commitment-item">
+        <span class="commitment-check">&#10003;</span>
+        <div class="commitment-text">
+          <h3>No model training on customer data</h3>
+          <p>We do not use customer security data to train, fine-tune, or improve AI models. Your threat intelligence, incident reports, and detection rules are never part of any training dataset.</p>
+        </div>
+      </div>
+
+      <div class="commitment-item">
+        <span class="commitment-check">&#10003;</span>
+        <div class="commitment-text">
+          <h3>Encryption in transit and at rest</h3>
+          <p>All data is encrypted using TLS 1.2+ in transit and AES-256 at rest. AI processing occurs within encrypted environments.</p>
+        </div>
+      </div>
+
+      <div class="commitment-item">
+        <span class="commitment-check">&#10003;</span>
+        <div class="commitment-text">
+          <h3>Retention controls</h3>
+          <p>Customers control data retention policies. When data is deleted, it is removed from all systems, including any intermediate AI processing caches.</p>
+        </div>
+      </div>
+
+      <div class="commitment-item">
+        <span class="commitment-check">&#10003;</span>
+        <div class="commitment-text">
+          <h3>Audit logging</h3>
+          <p>Every AI interaction is logged: what input was provided, what model processed it, what output was generated, who reviewed it, and whether it was approved or rejected.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bias and Fairness -->
+    <div class="content-section">
+      <h2>Bias and Fairness</h2>
+      <p>In security contexts, bias in AI can mean missed threats, false positives targeting specific systems, or skewed prioritization. We address this through:</p>
+      <ul>
+        <li><strong>Diverse validation sets</strong> - testing AI outputs against varied threat types, attack vectors, and platform configurations</li>
+        <li><strong>Human review gates</strong> - domain experts review AI outputs before deployment, catching patterns automated testing might miss</li>
+        <li><strong>Continuous monitoring</strong> - tracking output quality across different input types to detect degradation or skew</li>
+        <li><strong>Source diversity</strong> - supporting multiple intelligence sources to reduce single-source bias in extracted artifacts</li>
+      </ul>
+    </div>
+
+    <!-- Third-Party AI -->
+    <div class="content-section">
+      <h2>Third-Party AI Models</h2>
+      <p>Where we use third-party AI models (such as large language models for extraction and translation), we apply the following safeguards:</p>
+      <ul>
+        <li>We evaluate each provider's data handling, retention, and training policies before integration</li>
+        <li>We use API configurations that disable model training on our inputs where available</li>
+        <li>We do not send raw customer data to third-party models without anonymization or abstraction</li>
+        <li>We maintain the ability to switch providers without affecting customer workflows</li>
+      </ul>
+    </div>
+
+    <!-- Incident Response -->
+    <div class="content-section">
+      <h2>AI Incident Response</h2>
+      <p>If an AI component produces harmful, inaccurate, or unexpected outputs:</p>
+      <ul>
+        <li>Validation gates catch and block the output before it reaches production</li>
+        <li>Affected artifacts are flagged and quarantined for review</li>
+        <li>The incident is logged with full context for investigation</li>
+        <li>Customers are notified if any approved artifact is later found to be affected</li>
+        <li>Root cause analysis informs updates to validation rules and processing pipelines</li>
+      </ul>
+    </div>
+
+    <!-- Regulatory Alignment -->
+    <div class="content-section">
+      <h2>Regulatory Alignment</h2>
+      <p>We design our AI practices to align with emerging AI governance frameworks.</p>
+      <ul>
+        <li><strong>EU AI Act</strong> - our use of AI in security operations falls within risk categories that require transparency and human oversight, both of which we provide by default</li>
+        <li><strong>NIST AI Risk Management Framework</strong> - we follow NIST AI RMF principles for identifying, assessing, and mitigating AI risks</li>
+        <li><strong>ISO 42001</strong> - our AI management practices align with ISO 42001 requirements for AI governance systems</li>
+        <li><strong>SEC/DORA</strong> - for regulated industry customers, our provenance and audit capabilities support compliance with disclosure and operational resilience requirements</li>
+      </ul>
+    </div>
+
+    <!-- Commitment -->
+    <div class="content-section">
+      <h2>Our Commitment</h2>
+      <div class="highlight-box">
+        <p>We are building a product that security teams trust with their most critical learning. That trust starts with how we use AI. We will continue to update this page as our practices evolve, as regulations develop, and as we learn from our design partners and customers.</p>
+        <p style="margin-top: 0.75rem;">Questions about our AI practices? Reach out at <a href="mailto:crew@ktlystlabs.com">crew@ktlystlabs.com</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/research">Research</a>
+      <a href="/insights">Insights</a>
+      <a href="/glossary">Glossary</a>
+      <a href="/partners">Partners</a>
+      <a href="/signals">Signals</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://calendly.com/assafkip">Let's Talk</a>
+      <a href="mailto:crew@ktlystlabs.com">Contact</a>
+    </div>
+    <p>&copy; 2026 KTLYST Labs. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/responsible-ai">Responsible AI</a></p>
+  </footer>
+</body>
+</html>
