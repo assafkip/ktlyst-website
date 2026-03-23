@@ -1,63 +1,43 @@
 {
-  "generated_at": "2026-02-21T10:24:56.444095",
+  "generated_at": "2026-03-08T08:41:36.429990",
   "summary": {
-    "hot_signals_count": 4,
+    "hot_signals_count": 3,
     "overdue_count": 0,
     "stalled_count": 65,
     "intro_opportunities_count": 0,
     "ready_to_contact_count": 17,
-    "total_actions": 86
+    "total_actions": 85
   },
   "hot_signals": [
     {
       "signal": {
-        "id": "vc_9c6d5c551e1b",
-        "summary": "General Catalyst commits $5B to India over five years",
-        "source_url": "https://techcrunch.com/2026/02/19/general-catalyst-commits-5b-to-india-over-five-years/",
-        "source_type": "news",
-        "source_date": "2026-02-20",
+        "id": "rss_648f4786f3a9",
+        "summary": "How the MacBook Neo compares to its closest Windows and Chromebook rivals - by the specs",
+        "source_url": "https://www.zdnet.com/article/macbook-neo-alternatives/",
+        "source_type": "blog",
+        "source_date": "2026-03-06",
         "signal_type": "soft",
-        "signal_category": "security_trend_commentary"
+        "signal_category": "threat_intelligence"
       },
       "matched_contact": {
-        "contact_id": "quentin_clark_general_catalyst",
-        "name": "Quentin Clark",
-        "firm": "General Catalyst",
+        "contact_id": "ali_partovi_neo",
+        "name": "Ali Partovi",
+        "firm": "Neo",
         "status": "not_started",
-        "tier": "B"
+        "tier": "C",
+        "match_type": "name"
       },
-      "hours_ago": 27,
-      "action": "Reference this in outreach to Quentin Clark",
+      "hours_ago": 42,
+      "action": "Reference this threat_intelligence in outreach to Ali Partovi",
       "priority": "medium"
     },
     {
       "signal": {
-        "id": "vc_579c7a47e16e",
-        "summary": "General Catalyst commits $5B to India over five years",
-        "source_url": "https://techcrunch.com/2026/02/19/general-catalyst-commits-5b-to-india-over-five-years/",
-        "source_type": "news",
-        "source_date": "2026-02-20",
-        "signal_type": "soft",
-        "signal_category": "security_trend_commentary"
-      },
-      "matched_contact": {
-        "contact_id": "quentin_clark_general_catalyst",
-        "name": "Quentin Clark",
-        "firm": "General Catalyst",
-        "status": "not_started",
-        "tier": "B"
-      },
-      "hours_ago": 27,
-      "action": "Reference this in outreach to Quentin Clark",
-      "priority": "medium"
-    },
-    {
-      "signal": {
-        "id": "vc_196e1991fe98",
-        "summary": "Ali Partovi\u2019s Neo looks to upend the accelerator model with low-dilution terms",
-        "source_url": "https://techcrunch.com/2026/02/19/ali-partovis-neo-looks-to-upend-the-accelerator-model-with-low-dilution-terms/",
-        "source_type": "news",
-        "source_date": "2026-02-20",
+        "id": "rss_f6b1fb0a1a95",
+        "summary": "Tim Draper On The AI Boom, Bitcoin\u2019s Future And Building \u2018Human Accelerators\u2019",
+        "source_url": "https://news.crunchbase.com/venture/tim-draper-ai-bitcoin-human-accelerators/",
+        "source_type": "crunchbase",
+        "source_date": "2026-03-06",
         "signal_type": "soft",
         "signal_category": "security_trend_commentary"
       },
@@ -66,19 +46,20 @@
         "name": "Amit Agarwal",
         "firm": "Accel",
         "status": "not_started",
-        "tier": "C"
+        "tier": "C",
+        "match_type": "firm"
       },
-      "hours_ago": 28,
-      "action": "Reference this in outreach to Amit Agarwal",
+      "hours_ago": 44,
+      "action": "Reference this security_trend_commentary in outreach to Amit Agarwal",
       "priority": "medium"
     },
     {
       "signal": {
-        "id": "vc_1b73e02bbdbc",
-        "summary": "Ali Partovi\u2019s Neo looks to upend the accelerator model with low-dilution terms",
-        "source_url": "https://techcrunch.com/2026/02/19/ali-partovis-neo-looks-to-upend-the-accelerator-model-with-low-dilution-terms/",
-        "source_type": "news",
-        "source_date": "2026-02-20",
+        "id": "rss_0b3a207315f6",
+        "summary": "Pentesters actually using AI in engagements - what does your workflow look like? (not the LinkedIn fantasy version)",
+        "source_url": "https://www.reddit.com/r/cybersecurity/comments/1rmal7a/pentesters_actually_using_ai_in_engagements_what/",
+        "source_type": "blog",
+        "source_date": "2026-03-06",
         "signal_type": "soft",
         "signal_category": "security_trend_commentary"
       },
@@ -87,10 +68,11 @@
         "name": "Amit Agarwal",
         "firm": "Accel",
         "status": "not_started",
-        "tier": "C"
+        "tier": "C",
+        "match_type": "firm"
       },
-      "hours_ago": 28,
-      "action": "Reference this in outreach to Amit Agarwal",
+      "hours_ago": 46,
+      "action": "Reference this security_trend_commentary in outreach to Amit Agarwal",
       "priority": "medium"
     }
   ],

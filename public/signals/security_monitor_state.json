@@ -1,113 +1,113 @@
 {
-  "last_run": "2026-03-01T19:22:50.199658",
+  "last_run": "2026-03-23T14:54:18.035150",
   "feeds_checked": {
-    "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml": "2026-03-01T19:22:18.671866",
-    "https://www.schneier.com/feed/": "2026-03-01T19:22:20.185201",
-    "https://www.sentinelone.com/feed/": "2026-03-01T19:22:19.161786",
-    "https://www.crowdstrike.com/blog/feed": "2026-03-01T19:22:18.632209",
+    "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml": "2026-03-23T14:53:39.255806",
+    "https://www.schneier.com/feed/": "2026-03-20T14:40:10.177211",
+    "https://www.sentinelone.com/feed/": "2026-03-23T14:54:11.019559",
+    "https://www.crowdstrike.com/blog/feed": "2026-03-23T14:53:49.021394",
     "https://nvd.nist.gov/feeds/xml/cve/misc/nvd-rss.xml": "2026-02-02T20:39:52.502022",
-    "https://isc.sans.edu/rssfeed.xml": "2026-03-01T19:22:22.340302",
-    "https://unit42.paloaltonetworks.com/feed/": "2026-03-01T19:22:18.615844",
-    "https://www.microsoft.com/en-us/security/blog/feed/": "2026-03-01T19:22:21.280166",
-    "https://blog.qualys.com/feed": "2026-03-01T19:22:19.115078",
+    "https://isc.sans.edu/rssfeed.xml": "2026-03-16T14:52:27.584480",
+    "https://unit42.paloaltonetworks.com/feed/": "2026-03-23T14:53:57.967770",
+    "https://www.microsoft.com/en-us/security/blog/feed/": "2026-03-23T14:54:05.749972",
+    "https://blog.qualys.com/feed": "2026-03-23T14:54:09.279233",
     "http://krebsonsecurity.com/feed/": "2026-03-01T19:22:25.878276",
-    "https://isc.sans.edu/rssfeed_full.xml": "2026-03-01T19:22:23.178120",
-    "http://feeds.feedburner.com/feedburner/Talos": "2026-03-01T19:22:18.788528",
+    "https://isc.sans.edu/rssfeed_full.xml": "2026-03-23T14:54:15.999979",
+    "http://feeds.feedburner.com/feedburner/Talos": "2026-03-23T14:53:43.691149",
     "https://www.cyberscoop.com/feed": "2026-02-23T21:07:08.092782",
-    "http://feeds.trendmicro.com/TrendMicroSimplySecurity": "2026-03-01T19:22:20.158476",
-    "https://blog.malwarebytes.com/feed/": "2026-03-01T19:22:23.989165",
-    "https://www.reddit.com/r/cybersecurity/.rss": "2026-03-01T19:22:29.523334",
-    "https://thedfirreport.com/feed/": "2026-03-01T19:22:21.711106",
-    "http://feeds.feedburner.com/Securityweek": "2026-03-01T19:22:24.729111",
+    "http://feeds.trendmicro.com/TrendMicroSimplySecurity": "2026-03-23T14:53:43.626885",
+    "https://blog.malwarebytes.com/feed/": "2026-03-09T02:10:53.839989",
+    "https://www.reddit.com/r/cybersecurity/.rss": "2026-03-20T14:42:09.572028",
+    "https://thedfirreport.com/feed/": "2026-03-20T14:40:40.491248",
+    "http://feeds.feedburner.com/Securityweek": "2026-03-20T14:41:20.262487",
     "http://thehackernews.com/feeds/posts/default": "2026-02-23T21:07:13.595926",
-    "https://securelist.com/feed/": "2026-03-01T19:22:23.273868",
+    "https://securelist.com/feed/": "2026-03-20T14:40:00.844203",
     "https://ransomware.live/rss.xml": "2026-02-23T21:07:23.200531",
-    "https://www.bleepingcomputer.com/feed/": "2026-03-01T19:22:21.716382",
-    "https://www.darkreading.com/rss.xml": "2026-03-01T19:22:22.383786",
+    "https://www.bleepingcomputer.com/feed/": "2026-03-20T14:40:11.692925",
+    "https://www.darkreading.com/rss.xml": "2026-03-20T14:41:37.313084",
     "https://threatpost.com/feed/": "2026-02-21T23:08:33.379809",
-    "https://www.kb.cert.org/vuls/atomfeed/": "2026-03-01T19:22:18.513479",
-    "https://www.exploit-db.com/rss.xml": "2026-03-01T19:22:18.425424",
-    "https://www.welivesecurity.com/feed/": "2026-03-01T19:22:20.202293",
-    "https://therecord.media/feed": "2026-03-01T19:22:25.799376",
-    "https://risky.biz/rss.xml": "2026-03-01T19:22:21.476983",
-    "https://srslyriskybiz.substack.com/feed": "2026-03-01T19:22:50.104489",
-    "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml": "2026-03-01T19:22:18.605005",
-    "https://www.cisecurity.org/feed/advisories": "2026-03-01T19:22:18.627626",
-    "https://www.sentinelone.com/labs/feed/": "2026-03-01T19:22:18.698215",
-    "https://www.upguard.com/news/rss.xml": "2026-03-01T19:22:21.706537",
-    "https://research.checkpoint.com/feed/": "2026-03-01T19:22:18.578896",
-    "https://blog.cloudflare.com/tag/security/rss": "2026-03-01T19:22:19.056926",
-    "https://blog.fox-it.com/feed/": "2026-03-01T19:22:18.953026",
-    "https://blog.eclecticiq.com/rss.xml": "2026-03-01T19:22:19.128063",
-    "https://www.bitdefender.com/blog/api/rss/labs/": "2026-03-01T19:22:19.134891",
-    "https://sed-cms.broadcom.com/rss/v1/blogs/rss.xml": "2026-03-01T19:22:18.707107",
-    "https://nao-sec.org/feed": "2026-03-01T19:22:22.487969",
-    "https://www.troyhunt.com/rss/": "2026-03-01T19:22:22.327038",
-    "https://www.upguard.com/breaches/rss.xml": "2026-03-01T19:22:22.363330",
-    "https://medium.com/feed/anton-on-security": "2026-03-01T19:22:21.228872",
-    "https://blog.0patch.com/feeds/posts/default": "2026-03-01T19:22:21.076138",
-    "https://www.virusbulletin.com/rss": "2026-03-01T19:22:21.187900",
-    "https://blogs.cisco.com/security/feed": "2026-03-01T19:22:21.193417",
-    "https://www.schneier.com/blog/atom.xml": "2026-03-01T19:22:21.520300",
-    "https://blog.virustotal.com/feeds/posts/default": "2026-03-01T19:22:21.181960",
-    "https://sensepost.com/rss.xml": "2026-03-01T19:22:21.686317",
-    "https://www.bellingcat.com/feed/": "2026-03-01T19:22:24.723382",
-    "https://cofense.com/feed/": "2026-03-01T19:22:21.334437",
+    "https://www.kb.cert.org/vuls/atomfeed/": "2026-03-23T14:53:46.751326",
+    "https://www.exploit-db.com/rss.xml": "2026-03-23T14:53:39.231700",
+    "https://www.welivesecurity.com/feed/": "2026-03-23T14:53:46.770646",
+    "https://therecord.media/feed": "2026-03-20T14:41:05.094816",
+    "https://risky.biz/rss.xml": "2026-03-20T14:39:58.066357",
+    "https://srslyriskybiz.substack.com/feed": "2026-03-23T14:54:15.984152",
+    "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml": "2026-03-23T14:53:39.311457",
+    "https://www.cisecurity.org/feed/advisories": "2026-03-23T14:53:46.704498",
+    "https://www.sentinelone.com/labs/feed/": "2026-03-23T14:53:57.955287",
+    "https://www.upguard.com/news/rss.xml": "2026-03-09T02:10:51.790434",
+    "https://research.checkpoint.com/feed/": "2026-03-23T14:53:55.619448",
+    "https://blog.cloudflare.com/tag/security/rss": "2026-03-23T14:54:09.364452",
+    "https://blog.fox-it.com/feed/": "2026-03-20T14:39:45.779610",
+    "https://blog.eclecticiq.com/rss.xml": "2026-03-20T14:39:55.266973",
+    "https://www.bitdefender.com/blog/api/rss/labs/": "2026-03-20T14:39:55.314437",
+    "https://sed-cms.broadcom.com/rss/v1/blogs/rss.xml": "2026-03-23T14:53:53.867922",
+    "https://nao-sec.org/feed": "2026-03-20T14:40:40.619150",
+    "https://www.troyhunt.com/rss/": "2026-03-20T14:41:02.321222",
+    "https://www.upguard.com/breaches/rss.xml": "2026-03-23T14:54:12.152085",
+    "https://medium.com/feed/anton-on-security": "2026-03-20T14:40:00.869717",
+    "https://blog.0patch.com/feeds/posts/default": "2026-03-20T14:39:57.831021",
+    "https://www.virusbulletin.com/rss": "2026-03-20T14:39:57.872317",
+    "https://blogs.cisco.com/security/feed": "2026-03-23T14:54:02.682858",
+    "https://www.schneier.com/blog/atom.xml": "2026-03-23T14:54:12.181845",
+    "https://blog.virustotal.com/feeds/posts/default": "2026-03-19T14:40:50.146683",
+    "https://sensepost.com/rss.xml": "2026-03-20T14:40:11.679562",
+    "https://www.bellingcat.com/feed/": "2026-03-20T14:41:12.251156",
+    "https://cofense.com/feed/": "2026-03-20T14:39:57.759381",
     "https://therecord.media/feed/": "2026-02-21T23:08:32.359725",
-    "https://www.proofpoint.com/us/rss.xml": "2026-03-01T19:22:18.634125",
-    "https://www.wired.com/feed/category/security/latest/rss": "2026-03-01T19:22:24.014740",
+    "https://www.proofpoint.com/us/rss.xml": "2026-03-23T14:54:00.837313",
+    "https://www.wired.com/feed/category/security/latest/rss": "2026-03-20T14:40:40.638212",
     "http://www.malware-traffic-analysis.net/blog-entries.rss": "2026-03-01T19:22:26.611062",
-    "https://arstechnica.com/tag/security/feed/": "2026-03-01T19:22:28.910245",
+    "https://arstechnica.com/tag/security/feed/": "2026-03-19T14:40:52.821210",
     "https://www.zdnet.com/topic/security/rss.xml": "2026-02-21T23:08:32.127911",
-    "https://www.webroot.com/blog/feed/": "2026-03-01T19:22:21.305630",
-    "https://www.theguardian.com/technology/data-computer-security/rss": "2026-03-01T19:22:27.187755",
+    "https://www.webroot.com/blog/feed/": "2026-03-20T14:40:10.163081",
+    "https://www.theguardian.com/technology/data-computer-security/rss": "2026-03-20T14:41:12.189933",
     "http://www.infosecurity-magazine.com/rss/news/": "2026-02-23T21:06:59.657269",
     "https://www.hackread.com/feed/": "2026-02-23T21:07:04.144209",
     "http://www.reddit.com/r/netsec/.rss": "2026-02-23T21:07:09.454941",
-    "https://googleonlinesecurity.blogspot.com/atom.xml": "2026-03-01T19:22:27.265150",
+    "https://googleonlinesecurity.blogspot.com/atom.xml": "2026-03-09T02:10:55.540053",
     "https://www.grahamcluley.com/feed/": "2026-02-23T21:07:04.137691",
-    "https://www.paloaltonetworks.com/blog/rss": "2026-03-01T19:22:18.972616",
-    "https://blog.quarkslab.com/feeds/all.rss.xml": "2026-03-01T19:22:49.085069",
+    "https://www.paloaltonetworks.com/blog/rss": "2026-03-23T14:54:09.387145",
+    "https://blog.quarkslab.com/feeds/all.rss.xml": "2026-03-19T14:41:32.568502",
     "http://securityaffairs.co/wordpress/feed": "2026-02-23T21:07:17.227126",
-    "https://socprime.com/blog/feed/": "2026-03-01T19:22:42.312101",
+    "https://socprime.com/blog/feed/": "2026-03-20T14:42:56.880892",
     "https://googleprojectzero.blogspot.com/feeds/posts/default": "2026-02-06T19:05:47.490833",
     "https://blogs.quickheal.com/feed/": "2026-02-06T19:05:45.715911",
     "https://www.mcafee.com/blogs/feed": "2026-02-07T19:44:29.808421",
-    "https://allthingsinsights.com/feed/": "2026-03-01T19:22:43.581013",
+    "https://allthingsinsights.com/feed/": "2026-03-20T14:42:51.845811",
     "https://www.cint.com/blog/rss": "2026-03-01T19:22:44.843157",
-    "https://prosopo.io/feed.xml": "2026-03-01T19:22:23.727401",
-    "https://www.unit21.ai/blog/rss.xml": "2026-03-01T19:22:22.527727",
-    "https://sift.com/blog/feed": "2026-03-01T19:22:27.165276",
-    "https://www.kasada.io/feed": "2026-03-01T19:22:25.848834",
+    "https://prosopo.io/feed.xml": "2026-03-20T14:40:00.728325",
+    "https://www.unit21.ai/blog/rss.xml": "2026-03-20T14:39:59.184587",
+    "https://sift.com/blog/feed": "2026-03-20T14:42:09.373341",
+    "https://www.kasada.io/feed": "2026-03-20T14:42:09.412021",
     "https://datadome.co/blog/feed": "2026-03-01T19:22:45.827483",
     "https://insightplatforms.com/feed": "2026-02-23T21:07:09.441131",
     "https://anura.io/blog/rss.xml": "2026-02-23T21:07:09.432070",
-    "https://feeds.captivate.fm/greenbook/": "2026-03-01T19:22:23.935647",
-    "https://fraudoftheday.com/feed": "2026-03-01T19:22:43.603012",
+    "https://feeds.captivate.fm/greenbook/": "2026-03-20T14:42:09.548438",
+    "https://fraudoftheday.com/feed": "2026-03-19T14:41:18.221587",
     "https://about-fraud.com/feed": "2026-02-23T21:07:13.585329",
     "https://surveypractice.org/feed": "2026-02-21T23:09:11.055799"
   },
-  "signals_generated": 5531,
+  "signals_generated": 6737,
   "feed_health": {
     "https://www.cisa.gov/cybersecurity-advisories/all.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.736035",
+      "last_error": "2026-03-23T14:53:39.266136",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.cisa.gov/news.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.735801",
+      "last_error": "2026-03-23T14:53:39.266234",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.cisa.gov/cisa/blog.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.735869",
+      "last_error": "2026-03-23T14:53:39.266346",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://us-cert.cisa.gov/ics/advisories/advisories.xml": {
@@ -139,172 +139,172 @@
       "items_ingested_last_30d": 0
     },
     "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml": {
-      "last_success": "2026-03-01T19:22:18.671863",
+      "last_success": "2026-03-23T14:53:39.255804",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "items_ingested_last_30d": 4
     },
     "https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:22.349446",
+      "last_error": "2026-03-23T14:54:09.371795",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.kb.cert.org/vuls/atomfeed/": {
-      "last_success": "2026-03-01T19:22:18.513476",
+      "last_success": "2026-03-23T14:53:46.751323",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "items_ingested_last_30d": 7
     },
     "https://www.cisecurity.org/feed/advisories": {
-      "last_success": "2026-03-01T19:22:18.627624",
+      "last_success": "2026-03-23T14:53:46.704492",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 1
+      "items_ingested_last_30d": 9
     },
     "https://www.nist.gov/blogs/cybersecurity-insights/rss.xml": {
-      "last_success": "2026-03-01T19:22:18.605002",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:53:39.311454",
+      "last_error": "2026-03-03T17:19:39.282213",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 2
+      "items_ingested_last_30d": 4
     },
     "https://www.exploit-db.com/rss.xml": {
-      "last_success": "2026-03-01T19:22:18.425414",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:53:39.231690",
+      "last_error": "2026-03-10T14:36:04.944044",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "items_ingested_last_30d": 5
     },
     "https://otx.alienvault.com/feeds/pulses/rss": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:18.797938",
+      "last_error": "2026-03-23T14:53:43.586475",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.phishtank.com/rss/verified_online_phish_feed.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.735990",
+      "last_error": "2026-03-23T14:54:11.035448",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://ransomware.live/rss.xml": {
       "last_success": "2026-02-23T21:07:23.200526",
-      "last_error": "2026-03-01T19:22:49.736053",
+      "last_error": "2026-03-23T14:54:11.035632",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 40
     },
     "http://feeds.feedburner.com/feedburner/Talos": {
-      "last_success": "2026-03-01T19:22:18.788523",
+      "last_success": "2026-03-23T14:53:43.691147",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "items_ingested_last_30d": 16
     },
     "https://blogs.cisco.com/security/feed": {
-      "last_success": "2026-03-01T19:22:21.193416",
+      "last_success": "2026-03-23T14:54:02.682855",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 2
+      "items_ingested_last_30d": 38
     },
     "https://www.crowdstrike.com/blog/feed": {
-      "last_success": "2026-03-01T19:22:18.632207",
+      "last_success": "2026-03-23T14:53:49.021387",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 4
+      "items_ingested_last_30d": 19
     },
     "https://www.welivesecurity.com/feed/": {
-      "last_success": "2026-03-01T19:22:20.202289",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:53:46.770643",
+      "last_error": "2026-03-11T18:29:44.034345",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 4
+      "items_ingested_last_30d": 13
     },
     "https://securelist.com/feed/": {
-      "last_success": "2026-03-01T19:22:23.273864",
-      "last_error": "2026-02-26T15:56:16.241955",
+      "last_success": "2026-03-20T14:40:00.844200",
+      "last_error": "2026-03-23T14:54:11.035355",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 5
     },
     "https://blog.malwarebytes.com/feed/": {
-      "last_success": "2026-03-01T19:22:23.989161",
-      "last_error": "2026-02-27T16:28:59.338105",
+      "last_success": "2026-03-09T02:10:53.839985",
+      "last_error": "2026-03-23T14:54:11.035508",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 21
+      "consecutive_failures": 11,
+      "items_ingested_last_30d": 36
     },
     "https://cloud.google.com/blog/topics/threat-intelligence/feed": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:21.240336",
+      "last_error": "2026-03-23T14:54:02.678609",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.microsoft.com/en-us/security/blog/feed/": {
-      "last_success": "2026-03-01T19:22:21.280163",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:54:05.749968",
+      "last_error": "2026-03-06T15:42:59.873643",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 4
+      "items_ingested_last_30d": 24
     },
     "https://msrc.microsoft.com/blog/feed": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:21.506207",
+      "last_error": "2026-03-23T14:54:11.035471",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://blog.qualys.com/feed": {
-      "last_success": "2026-03-01T19:22:19.115070",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:54:09.279228",
+      "last_error": "2026-03-19T14:41:31.859428",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
       "items_ingested_last_30d": 0
     },
     "https://www.sentinelone.com/labs/feed/": {
-      "last_success": "2026-03-01T19:22:18.698213",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:53:57.955283",
+      "last_error": "2026-03-17T15:32:58.600193",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "items_ingested_last_30d": 5
     },
     "http://feeds.trendmicro.com/TrendMicroSimplySecurity": {
-      "last_success": "2026-03-01T19:22:20.158469",
+      "last_success": "2026-03-23T14:53:43.626882",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 2
+      "items_ingested_last_30d": 20
     },
     "https://unit42.paloaltonetworks.com/feed/": {
-      "last_success": "2026-03-01T19:22:18.615842",
+      "last_success": "2026-03-23T14:53:57.967764",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 2
+      "items_ingested_last_30d": 16
     },
     "https://www.paloaltonetworks.com/blog/rss": {
-      "last_success": "2026-03-01T19:22:18.972614",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:54:09.387144",
+      "last_error": "2026-03-17T15:32:58.601685",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "items_ingested_last_30d": 9
     },
     "https://research.checkpoint.com/feed/": {
-      "last_success": "2026-03-01T19:22:18.578891",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:53:55.619443",
+      "last_error": "2026-03-17T15:32:58.601661",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "items_ingested_last_30d": 12
     },
     "http://feeds.feedburner.com/fortinet/blog/threat-research": {
       "last_success": null,
@@ -315,44 +315,44 @@
     },
     "https://nakedsecurity.sophos.com/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.736731",
+      "last_error": "2026-03-23T14:54:11.035301",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.proofpoint.com/us/rss.xml": {
-      "last_success": "2026-03-01T19:22:18.634124",
+      "last_success": "2026-03-23T14:54:00.837309",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "items_ingested_last_30d": 16
     },
     "https://securityintelligence.com/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:28.892453",
+      "last_error": "2026-03-23T14:54:11.035613",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.bitdefender.com/blog/api/rss/labs/": {
-      "last_success": "2026-03-01T19:22:19.134889",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "last_success": "2026-03-20T14:39:55.314435",
+      "last_error": "2026-03-23T14:54:11.034526",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 4
     },
     "https://sed-cms.broadcom.com/rss/v1/blogs/rss.xml": {
-      "last_success": "2026-03-01T19:22:18.707103",
+      "last_success": "2026-03-23T14:53:53.867913",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 5
+      "items_ingested_last_30d": 24
     },
     "https://www.mcafee.com/blogs/feed": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:19.116973",
+      "last_error": "2026-03-23T14:54:09.284562",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "http://www.fireeye.com/blog/feed": {
@@ -364,24 +364,24 @@
     },
     "https://cybersecurity.att.com/site/blog-all-rss": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:19.138422",
+      "last_error": "2026-03-23T14:54:09.371686",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://blog.cloudflare.com/tag/security/rss": {
-      "last_success": "2026-03-01T19:22:19.056921",
-      "last_error": null,
-      "error_message": null,
+      "last_success": "2026-03-23T14:54:09.364449",
+      "last_error": "2026-03-19T14:41:34.596634",
+      "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "items_ingested_last_30d": 10
     },
     "https://cofense.com/feed/": {
-      "last_success": "2026-03-01T19:22:21.334434",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 4
+      "last_success": "2026-03-20T14:39:57.759377",
+      "last_error": "2026-03-23T14:54:11.035319",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 7
     },
     "https://www.digitalshadows.com/blog-and-research/feed/": {
       "last_success": null,
@@ -391,38 +391,38 @@
       "items_ingested_last_30d": 0
     },
     "https://blog.eclecticiq.com/rss.xml": {
-      "last_success": "2026-03-01T19:22:19.128060",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "last_success": "2026-03-20T14:39:55.266966",
+      "last_error": "2026-03-23T14:54:11.034442",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 2
     },
     "https://blog.fox-it.com/feed/": {
-      "last_success": "2026-03-01T19:22:18.953023",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
+      "last_success": "2026-03-20T14:39:45.779606",
+      "last_error": "2026-03-23T14:54:11.035079",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 0
     },
     "https://googleprojectzero.blogspot.com/feeds/posts/default": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.733069",
+      "last_error": "2026-03-23T14:54:11.035216",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://googleonlinesecurity.blogspot.com/atom.xml": {
-      "last_success": "2026-03-01T19:22:27.265146",
-      "last_error": "2026-02-28T19:41:42.134395",
+      "last_success": "2026-03-09T02:10:55.540048",
+      "last_error": "2026-03-23T14:54:11.035528",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 11,
       "items_ingested_last_30d": 2
     },
     "https://www.anomali.com/site/blog-rss": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:21.462010",
+      "last_error": "2026-03-23T14:54:11.034462",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.riskiq.com/feed/": {
@@ -434,9 +434,9 @@
     },
     "https://www.secureworks.com/rss?feed=blog&category=research-intelligence": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.732603",
+      "last_error": "2026-03-23T14:54:11.034408",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "http://blog.phishlabs.com/rss.xml": {
@@ -447,24 +447,24 @@
       "items_ingested_last_30d": 0
     },
     "https://blog.0patch.com/feeds/posts/default": {
-      "last_success": "2026-03-01T19:22:21.076133",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "last_success": "2026-03-20T14:39:57.831018",
+      "last_error": "2026-03-23T14:54:11.035236",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 1
     },
     "https://blog.quarkslab.com/feeds/all.rss.xml": {
-      "last_success": "2026-03-01T19:22:49.085064",
-      "last_error": "2026-02-28T19:41:42.121220",
+      "last_success": "2026-03-19T14:41:32.568489",
+      "last_error": "2026-03-23T14:54:11.035337",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 1
+      "consecutive_failures": 2,
+      "items_ingested_last_30d": 5
     },
     "https://blogs.quickheal.com/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.735706",
+      "last_error": "2026-03-23T14:54:11.035499",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.recordedfuture.com/category/cyber/feed/": {
@@ -475,73 +475,73 @@
       "items_ingested_last_30d": 0
     },
     "https://socprime.com/blog/feed/": {
-      "last_success": "2026-03-01T19:22:42.312094",
-      "last_error": "2026-02-28T19:41:42.133926",
+      "last_success": "2026-03-20T14:42:56.880888",
+      "last_error": "2026-03-23T14:54:11.823581",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 11
     },
     "https://posts.specterops.io/feed": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.732969",
+      "last_error": "2026-03-23T14:54:11.034500",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.tripwire.com/state-of-security/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:20.986715",
+      "last_error": "2026-03-23T14:54:11.034430",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "http://www.veracode.com/blog/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:23.991831",
+      "last_error": "2026-03-23T14:54:11.035460",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.virusbulletin.com/rss": {
-      "last_success": "2026-03-01T19:22:21.187898",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
+      "last_success": "2026-03-20T14:39:57.872314",
+      "last_error": "2026-03-23T14:54:11.034488",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 0
     },
     "https://blog.virustotal.com/feeds/posts/default": {
-      "last_success": "2026-03-01T19:22:21.181956",
-      "last_error": "2026-02-26T00:08:24.949248",
+      "last_success": "2026-03-19T14:40:50.146679",
+      "last_error": "2026-03-23T14:54:11.035255",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 2,
       "items_ingested_last_30d": 0
     },
     "https://www.webroot.com/blog/feed/": {
-      "last_success": "2026-03-01T19:22:21.305627",
-      "last_error": "2026-02-26T15:56:16.241870",
+      "last_success": "2026-03-20T14:40:10.163077",
+      "last_error": "2026-03-23T14:54:11.035426",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 0
     },
     "https://www.intezer.com/blog/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:25.822863",
+      "last_error": "2026-03-23T14:54:11.035397",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.hackerone.com/blog.rss": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:22.341811",
+      "last_error": "2026-03-23T14:54:11.746282",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://sensepost.com/rss.xml": {
-      "last_success": "2026-03-01T19:22:21.686313",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
+      "last_success": "2026-03-20T14:40:11.679556",
+      "last_error": "2026-03-23T14:54:11.745343",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 0
     },
     "https://www.signalscorps.com/feed.xml": {
@@ -552,95 +552,95 @@
       "items_ingested_last_30d": 0
     },
     "https://www.upguard.com/news/rss.xml": {
-      "last_success": "2026-03-01T19:22:21.706535",
-      "last_error": "2026-02-26T00:09:17.160591",
+      "last_success": "2026-03-09T02:10:51.790430",
+      "last_error": "2026-03-23T14:54:11.745786",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 20
+      "consecutive_failures": 11,
+      "items_ingested_last_30d": 39
     },
     "https://isc.sans.edu/rssfeed.xml": {
-      "last_success": "2026-03-01T19:22:22.340298",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 12
+      "last_success": "2026-03-16T14:52:27.584477",
+      "last_error": "2026-03-23T14:54:11.746400",
+      "error_message": "No entries returned",
+      "consecutive_failures": 5,
+      "items_ingested_last_30d": 27
     },
     "https://thedfirreport.com/feed/": {
-      "last_success": "2026-03-01T19:22:21.711105",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
+      "last_success": "2026-03-20T14:40:40.491241",
+      "last_error": "2026-03-23T14:54:11.745519",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 1
     },
     "http://krebsonsecurity.com/feed/": {
       "last_success": "2026-03-01T19:22:25.878272",
-      "last_error": "2026-02-28T19:41:42.120259",
+      "last_error": "2026-03-23T14:54:11.035121",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 19,
       "items_ingested_last_30d": 6
     },
     "https://www.schneier.com/feed/": {
-      "last_success": "2026-03-01T19:22:20.185196",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 8
+      "last_success": "2026-03-20T14:40:10.177209",
+      "last_error": "2026-03-23T14:54:11.323038",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 25
     },
     "https://www.troyhunt.com/rss/": {
-      "last_success": "2026-03-01T19:22:22.327030",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 2
+      "last_success": "2026-03-20T14:41:02.321215",
+      "last_error": "2026-03-23T14:54:11.745667",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 6
     },
     "https://www.grahamcluley.com/feed/": {
       "last_success": "2026-02-23T21:07:04.137689",
-      "last_error": "2026-03-01T19:22:49.735890",
+      "last_error": "2026-03-23T14:54:11.036810",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 0
     },
     "http://www.malware-traffic-analysis.net/blog-entries.rss": {
       "last_success": "2026-03-01T19:22:26.611054",
-      "last_error": "2026-02-28T19:41:42.120047",
+      "last_error": "2026-03-23T14:54:11.034856",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 19,
       "items_ingested_last_30d": 1
     },
     "https://nao-sec.org/feed": {
-      "last_success": "2026-03-01T19:22:22.487958",
-      "last_error": "2026-02-26T00:09:17.161070",
+      "last_success": "2026-03-20T14:40:40.619145",
+      "last_error": "2026-03-23T14:54:11.036801",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 0
     },
     "https://medium.com/feed/anton-on-security": {
-      "last_success": "2026-03-01T19:22:21.228869",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "last_success": "2026-03-20T14:40:00.869714",
+      "last_error": "2026-03-23T14:54:11.034474",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 4
     },
     "https://www.hackmageddon.com/feed/": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:23.772076",
+      "last_error": "2026-03-23T14:54:11.035277",
       "error_message": "No entries returned",
-      "consecutive_failures": 9,
+      "consecutive_failures": 28,
       "items_ingested_last_30d": 0
     },
     "https://www.bleepingcomputer.com/feed/": {
-      "last_success": "2026-03-01T19:22:21.716381",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 46
+      "last_success": "2026-03-20T14:40:11.692923",
+      "last_error": "2026-03-23T14:54:11.036603",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 127
     },
     "https://www.darkreading.com/rss.xml": {
-      "last_success": "2026-03-01T19:22:22.383782",
-      "last_error": "2026-02-26T00:09:17.161180",
+      "last_success": "2026-03-20T14:41:37.313075",
+      "last_error": "2026-03-23T14:54:11.036784",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 27
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 74
     },
     "https://threatpost.com/feed/": {
       "last_success": "2026-02-21T23:08:33.379806",
@@ -650,53 +650,53 @@
       "items_ingested_last_30d": 0
     },
     "https://therecord.media/feed": {
-      "last_success": "2026-03-01T19:22:25.799366",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 24
+      "last_success": "2026-03-20T14:41:05.094812",
+      "last_error": "2026-03-23T14:54:11.036793",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 49
     },
     "https://risky.biz/rss.xml": {
-      "last_success": "2026-03-01T19:22:21.476980",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 9
+      "last_success": "2026-03-20T14:39:58.066354",
+      "last_error": "2026-03-23T14:54:11.034884",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 37
     },
     "http://thehackernews.com/feeds/posts/default": {
       "last_success": "2026-02-23T21:07:13.595924",
-      "last_error": "2026-03-01T19:22:49.736713",
+      "last_error": "2026-03-23T14:54:11.036674",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 25
     },
     "http://feeds.feedburner.com/Securityweek": {
-      "last_success": "2026-03-01T19:22:24.729108",
-      "last_error": "2026-02-27T16:29:00.554164",
+      "last_success": "2026-03-20T14:41:20.262479",
+      "last_error": "2026-03-23T14:54:11.036751",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 36
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 79
     },
     "https://www.cyberscoop.com/feed": {
       "last_success": "2026-02-23T21:07:08.092777",
-      "last_error": "2026-03-01T19:22:49.736694",
+      "last_error": "2026-03-23T14:54:11.036700",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 1
     },
     "https://arstechnica.com/tag/security/feed/": {
-      "last_success": "2026-03-01T19:22:28.910236",
-      "last_error": "2026-02-28T19:41:42.120897",
+      "last_success": "2026-03-19T14:40:52.821208",
+      "last_error": "2026-03-23T14:54:11.036682",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 1
+      "consecutive_failures": 2,
+      "items_ingested_last_30d": 5
     },
     "https://www.wired.com/feed/category/security/latest/rss": {
-      "last_success": "2026-03-01T19:22:24.014736",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 9
+      "last_success": "2026-03-20T14:40:40.638211",
+      "last_error": "2026-03-23T14:54:11.036717",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 41
     },
     "https://www.zdnet.com/topic/security/rss.xml": {
       "last_success": "2026-02-21T23:08:32.127909",
@@ -707,51 +707,51 @@
     },
     "http://www.infosecurity-magazine.com/rss/news/": {
       "last_success": "2026-02-23T21:06:59.657232",
-      "last_error": "2026-03-01T19:22:49.736657",
+      "last_error": "2026-03-23T14:54:11.036709",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 6
     },
     "https://www.hackread.com/feed/": {
       "last_success": "2026-02-23T21:07:04.144202",
-      "last_error": "2026-03-01T19:22:49.735836",
+      "last_error": "2026-03-23T14:54:11.036759",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 6
     },
     "http://securityaffairs.co/wordpress/feed": {
       "last_success": "2026-02-23T21:07:17.227120",
-      "last_error": "2026-03-01T19:22:49.736682",
+      "last_error": "2026-03-23T14:54:11.036726",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 18
     },
     "https://www.theguardian.com/technology/data-computer-security/rss": {
-      "last_success": "2026-03-01T19:22:27.187752",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
-    },
-    "https://www.bellingcat.com/feed/": {
-      "last_success": "2026-03-01T19:22:24.723376",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
+      "last_success": "2026-03-20T14:41:12.189929",
+      "last_error": "2026-03-23T14:54:11.036739",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 2
     },
+    "https://www.bellingcat.com/feed/": {
+      "last_success": "2026-03-20T14:41:12.251153",
+      "last_error": "2026-03-23T14:54:11.036767",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 16
+    },
     "https://www.reddit.com/r/cybersecurity/.rss": {
-      "last_success": "2026-03-01T19:22:29.523326",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 116
+      "last_success": "2026-03-20T14:42:09.572026",
+      "last_error": "2026-03-23T14:54:11.036692",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 269
     },
     "http://www.reddit.com/r/netsec/.rss": {
       "last_success": "2026-02-23T21:07:09.454939",
-      "last_error": "2026-03-01T19:22:49.735974",
+      "last_error": "2026-03-23T14:54:11.036775",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 5
     },
     "https://resources.infosecinstitute.com/topics/malware-analysis/feed/": {
@@ -762,95 +762,95 @@
       "items_ingested_last_30d": 0
     },
     "https://fraudoftheday.com/feed": {
-      "last_success": "2026-03-01T19:22:43.603007",
-      "last_error": "2026-02-28T19:41:42.121042",
+      "last_success": "2026-03-19T14:41:18.221583",
+      "last_error": "2026-03-23T14:54:11.036664",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 11
+      "consecutive_failures": 2,
+      "items_ingested_last_30d": 17
     },
     "https://about-fraud.com/feed": {
       "last_success": "2026-02-23T21:07:13.585326",
-      "last_error": "2026-03-01T19:22:49.735934",
+      "last_error": "2026-03-23T14:54:11.035143",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 3
     },
     "https://anura.io/blog/rss.xml": {
       "last_success": "2026-02-23T21:07:09.432067",
-      "last_error": "2026-03-01T19:22:49.732367",
+      "last_error": "2026-03-23T14:54:11.036654",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 0
     },
     "https://www.cint.com/blog/rss": {
       "last_success": "2026-03-01T19:22:44.843146",
-      "last_error": "2026-02-28T19:41:42.134437",
+      "last_error": "2026-03-23T14:54:11.036645",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 19,
       "items_ingested_last_30d": 2
     },
     "https://allthingsinsights.com/feed/": {
-      "last_success": "2026-03-01T19:22:43.581004",
-      "last_error": "2026-02-27T16:28:59.337831",
+      "last_success": "2026-03-20T14:42:51.845807",
+      "last_error": "2026-03-23T14:54:11.036635",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 2
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 9
     },
     "https://prosopo.io/feed.xml": {
-      "last_success": "2026-03-01T19:22:23.727380",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 1
+      "last_success": "2026-03-20T14:40:00.728320",
+      "last_error": "2026-03-23T14:54:11.035101",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 3
     },
     "https://feeds.captivate.fm/greenbook/": {
-      "last_success": "2026-03-01T19:22:23.935642",
-      "last_error": "2026-02-28T19:41:42.120912",
+      "last_success": "2026-03-20T14:42:09.548435",
+      "last_error": "2026-03-23T14:54:11.035194",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 0
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 2
     },
     "https://surveypractice.org/feed": {
       "last_success": "2026-02-21T23:09:11.055793",
-      "last_error": "2026-03-01T19:22:49.732705",
+      "last_error": "2026-03-23T14:54:11.035173",
       "error_message": "No entries returned",
-      "consecutive_failures": 8,
+      "consecutive_failures": 27,
       "items_ingested_last_30d": 1
     },
     "https://insightplatforms.com/feed": {
       "last_success": "2026-02-23T21:07:09.441128",
-      "last_error": "2026-03-01T19:22:49.734518",
+      "last_error": "2026-03-23T14:54:11.035023",
       "error_message": "No entries returned",
-      "consecutive_failures": 6,
+      "consecutive_failures": 25,
       "items_ingested_last_30d": 0
     },
     "https://datadome.co/blog/feed": {
       "last_success": "2026-03-01T19:22:45.827477",
-      "last_error": "2026-02-28T19:41:42.134371",
+      "last_error": "2026-03-23T14:54:11.036625",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 19,
       "items_ingested_last_30d": 4
     },
     "https://www.kasada.io/feed": {
-      "last_success": "2026-03-01T19:22:25.848829",
-      "last_error": "2026-02-27T16:28:59.338131",
+      "last_success": "2026-03-20T14:42:09.412018",
+      "last_error": "2026-03-23T14:54:11.035049",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 1
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 2
     },
     "https://sift.com/blog/feed": {
-      "last_success": "2026-03-01T19:22:27.165268",
-      "last_error": "2026-02-27T16:28:59.337808",
+      "last_success": "2026-03-20T14:42:09.373334",
+      "last_error": "2026-03-23T14:54:11.036615",
       "error_message": "No entries returned",
-      "consecutive_failures": 0,
+      "consecutive_failures": 1,
       "items_ingested_last_30d": 0
     },
     "https://www.unit21.ai/blog/rss.xml": {
-      "last_success": "2026-03-01T19:22:22.527723",
-      "last_error": null,
-      "error_message": null,
-      "consecutive_failures": 0,
-      "items_ingested_last_30d": 19
+      "last_success": "2026-03-20T14:39:59.184583",
+      "last_error": "2026-03-23T14:54:11.034999",
+      "error_message": "No entries returned",
+      "consecutive_failures": 1,
+      "items_ingested_last_30d": 25
     },
     "http://researchcenter.paloaltonetworks.com/unit42/feed/": {
       "last_success": null,
@@ -860,11 +860,11 @@
       "items_ingested_last_30d": 0
     },
     "https://www.sentinelone.com/feed/": {
-      "last_success": "2026-03-01T19:22:19.161783",
+      "last_success": "2026-03-23T14:54:11.019555",
       "last_error": null,
       "error_message": null,
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "items_ingested_last_30d": 8
     },
     "https://resources.infosecinstitute.com/topics/news/feed/": {
       "last_success": null,
@@ -895,8 +895,8 @@
       "items_ingested_last_30d": 0
     },
     "https://srslyriskybiz.substack.com/feed": {
-      "last_success": "2026-03-01T19:22:50.104484",
-      "last_error": "2026-02-28T19:41:42.134537",
+      "last_success": "2026-03-23T14:54:15.984147",
+      "last_error": "2026-03-20T14:42:56.895423",
       "error_message": "No entries returned",
       "consecutive_failures": 0,
       "items_ingested_last_30d": 0
@@ -916,25 +916,25 @@
       "items_ingested_last_30d": 0
     },
     "https://www.schneier.com/blog/atom.xml": {
-      "last_success": "2026-03-01T19:22:21.520298",
-      "last_error": "2026-02-26T15:56:16.242016",
+      "last_success": "2026-03-23T14:54:12.181841",
+      "last_error": "2026-03-20T14:42:56.897165",
       "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 3
+      "items_ingested_last_30d": 19
     },
     "https://www.upguard.com/breaches/rss.xml": {
-      "last_success": "2026-03-01T19:22:22.363326",
-      "last_error": "2026-02-28T19:41:42.120356",
+      "last_success": "2026-03-23T14:54:12.152080",
+      "last_error": "2026-03-05T19:06:27.178874",
       "error_message": "No entries returned",
       "consecutive_failures": 0,
       "items_ingested_last_30d": 0
     },
     "https://isc.sans.edu/rssfeed_full.xml": {
-      "last_success": "2026-03-01T19:22:23.178112",
-      "last_error": "2026-02-26T15:56:16.242445",
+      "last_success": "2026-03-23T14:54:15.999977",
+      "last_error": "2026-03-05T19:06:27.583988",
       "error_message": "No entries returned",
       "consecutive_failures": 0,
-      "items_ingested_last_30d": 10
+      "items_ingested_last_30d": 43
     },
     "https://therecord.media/feed/": {
       "last_success": "2026-02-21T23:08:32.359723",
@@ -959,23 +959,23 @@
     },
     "https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:49.736091",
+      "last_error": "2026-03-23T14:53:39.266292",
       "error_message": "No entries returned",
-      "consecutive_failures": 8,
+      "consecutive_failures": 27,
       "items_ingested_last_30d": 0
     },
     "https://www.fortinet.com/blog/threat-research/rss.xml": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:18.700565",
+      "last_error": "2026-03-23T14:54:00.833922",
       "error_message": "No entries returned",
-      "consecutive_failures": 8,
+      "consecutive_failures": 27,
       "items_ingested_last_30d": 0
     },
     "https://www.recordedfuture.com/blog/feed": {
       "last_success": null,
-      "last_error": "2026-03-01T19:22:20.987863",
+      "last_error": "2026-03-23T14:54:11.034452",
       "error_message": "No entries returned",
-      "consecutive_failures": 8,
+      "consecutive_failures": 27,
       "items_ingested_last_30d": 0
     }
   }

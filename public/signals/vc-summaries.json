@@ -1,127 +1,160 @@
 {
-  "generated_at": "2026-03-01T11:23:34.490361",
+  "generated_at": "2026-03-23T08:10:44.171285",
   "pitch_me_signals": {
     "title": "Investors Open to Pitches",
     "description": "Active signals from VC investors explicitly welcoming cybersecurity and early-stage startup pitches (LinkedIn activity only)",
     "signals": [
       {
-        "investor": "Alex Iskold",
-        "firm": "2048 Ventures",
-        "profile_url": "https://www.linkedin.com/in/alexiskold/",
-        "signal_date": "2026-02-13",
-        "summary": "Founder & Partner at 2048 Ventures (NYC) actively seeking pitches. 2nd degree connection, past colleague, 1 mutual connection. Profile says: \"The best way to pitch me and 2048 Ventures is 2048...\" \u2014 pre-seed/seed focus.",
-        "excerpt": "Actively seeking founders via pitch portal. 2nd degree with mutual connection.",
+        "investor": "Alberto Yepez",
+        "firm": "ForgePoint Capital",
+        "profile_url": "https://www.linkedin.com/in/albertoyepez",
+        "signal_date": "2026-03-06",
+        "summary": "Alberto Y\u00e9pez reposted this",
+        "excerpt": "Alberto Y\u00e9pez reposted this\nForgepoint Capital\nForgepoint Capital\n39,223 followers\n39,223 followers\n3d \u2022 \n \n3 days ago \u2022 Visible to anyone on or off LinkedIn\n\u2699\ufe0f The AI experimentation phase is over. T",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Daniella Cohen",
-        "firm": "2048 Ventures",
-        "profile_url": "https://www.linkedin.com/in/daniellacohen/",
-        "signal_date": "2026-02-13",
-        "summary": "Principal at 2048 Ventures (NYC), recently promoted. Profile says: \"Pitch me at 2048.vc/pitch-daniella. I'm obsessed with supporting founders.\" Recently posted on LinkedIn.",
-        "excerpt": "Recently promoted Principal actively seeking pitches at 2048 Ventures.",
+        "investor": "Jay Leek",
+        "firm": "SYN Ventures",
+        "profile_url": "https://www.linkedin.com/in/jayleek",
+        "signal_date": "2026-03-06",
+        "summary": "SYN Ventures",
+        "excerpt": "SYN Ventures\nSYN Ventures\n4,307 followers\n4,307 followers\n3mo \u2022 \n \n3 months ago \u2022 Visible to anyone on or off LinkedIn\nWe are excited to announce our investment in Helmet Security, Inc., a leading pro",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Tim Draper",
-        "firm": "Draper Associates",
-        "profile_url": "https://www.linkedin.com/in/timdraper/",
-        "signal_date": "2026-02-13",
-        "summary": "Founding Partner at Draper Associates (San Mateo, CA). 2nd degree connection, 1 mutual. Legendary VC (Skype, Tesla, SpaceX early investor) actively posting about seeking founders on LinkedIn.",
-        "excerpt": "Legendary VC posting about seeking founders. 2nd degree with mutual connection.",
+        "investor": "Ed Sim",
+        "firm": "Boldstart Ventures",
+        "profile_url": "https://www.linkedin.com/in/edsim",
+        "signal_date": "2026-03-06",
+        "summary": "\ud835\udc00\ud835\udc20\ud835\udc1e\ud835\udc27\ud835\udc2d \ud835\udc2c\ud835\udc24\ud835\udc22\ud835\udc25\ud835\udc25\ud835\udc2c help agents use your products, build in your codebase and enforce your policies. They\u2019re not just words - they are what the unit of software for agentic devs, and need powerful dev tools",
+        "excerpt": "\ud835\udc00\ud835\udc20\ud835\udc1e\ud835\udc27\ud835\udc2d \ud835\udc2c\ud835\udc24\ud835\udc22\ud835\udc25\ud835\udc25\ud835\udc2c help agents use your products, build in your codebase and enforce your policies. They\u2019re not just words - they are what the unit of software for agentic devs, and need powerful dev tools ",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Lee Edwards",
-        "firm": "Root Ventures",
-        "profile_url": "https://www.linkedin.com/in/leeredwards/",
-        "signal_date": "2026-02-13",
-        "summary": "General Partner at Root Ventures (San Francisco). Hardware/deep-tech focused fund actively seeking startups. Recently posted on LinkedIn.",
-        "excerpt": "Root Ventures GP actively looking for startups.",
+        "investor": "Bogomil Balkansky",
+        "firm": "Sequoia Capital",
+        "profile_url": "https://www.linkedin.com/in/balkansky",
+        "signal_date": "2026-03-06",
+        "summary": "Bogomil Balkansky",
+        "excerpt": "Bogomil Balkansky\nBogomil Balkansky\n   \u2022 2nd\nPremium \u2022 2nd\nPartner at Sequoia Capital\nPartner at Sequoia Capital\n2mo \u2022 \n \n2 months ago \u2022 Visible to anyone on or off LinkedIn\nFollow\nAgentic access is t",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Ben Metcalfe",
-        "firm": "Monochrome Capital",
-        "profile_url": "https://www.linkedin.com/in/dotben/",
-        "signal_date": "2026-02-13",
-        "summary": "Founder & General Partner at Monochrome Capital (San Francisco). Focused on cloud infrastructure and AI early-stage investing. Recently posted on LinkedIn about looking for startups.",
-        "excerpt": "Early-stage VC focused on cloud infra and AI, actively seeking founders.",
+        "investor": "Asheem Chandna",
+        "firm": "Greylock",
+        "profile_url": "https://www.linkedin.com/in/chandna",
+        "signal_date": "2026-03-06",
+        "summary": "Asheem Chandna reposted this",
+        "excerpt": "Asheem Chandna reposted this\nYonatan Striem Amit\nYonatan Striem Amit\n   \u2022 2nd\nPremium \u2022 2nd\nInnovative Tech Founder & Executive | Thought Leader | Product & Engineering Leader | Hacker & Builder | CTO",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Andrew Ackerman",
-        "firm": "Multiple Startups",
-        "profile_url": "https://www.linkedin.com/in/andrewackerman/",
-        "signal_date": "2026-02-13",
-        "summary": "Angel Investor and SPV sponsor (NYC). 21+ years experience as serial entrepreneur turned angel/VC syndicate sponsor. Recently posted on LinkedIn about seeking founders.",
-        "excerpt": "NYC angel investor and SPV sponsor actively seeking founders.",
+        "investor": "Adam Fisher",
+        "firm": "Bessemer Venture Partners",
+        "profile_url": "https://il.linkedin.com/in/adamrfisher",
+        "signal_date": "2026-03-06",
+        "summary": "Amit Karp",
+        "excerpt": "Amit Karp\nAmit Karp\n   \u2022 2nd\nPremium \u2022 2nd\nPartner at Bessemer Venture Partners\nPartner at Bessemer Venture Partners\n2mo \u2022 Edited \u2022 \n \n2 months ago \u2022 Edited \u2022 Visible to anyone on or off LinkedIn\nFoll",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Mikhail Kalendarev",
-        "firm": "Unknown",
-        "profile_url": "https://www.linkedin.com/in/mikhailkalendarev/",
-        "signal_date": "2026-02-13",
-        "summary": "Co-Founder/investor based in Rishon LeZion, Israel. Serial entrepreneur and investor focused on seed to Series A with preference for startups generating $1M+ ARR. Recently posted on LinkedIn.",
-        "excerpt": "Israel-based investor focused on seed to Series A, $1M+ ARR startups.",
+        "investor": "Daniel Miessler",
+        "firm": "Unsupervised Learning",
+        "profile_url": "https://www.linkedin.com/in/danielmiessler/",
+        "signal_date": "2026-03-06",
+        "summary": "3 Days. 100% Founder Vibes. A New Tiger Cage. Are You Ready???",
+        "excerpt": "3 Days. 100% Founder Vibes. A New Tiger Cage. Are You Ready???\n\nWe are excited to announce our inaugural \u201cFounder Festival\u201d hosted at the Children\u2019s Creativity Museum next to Moscone during the RSA Co",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
       },
       {
-        "investor": "Bryce Keane",
-        "firm": "Marloo",
-        "profile_url": "https://www.linkedin.com/in/brycekeane/",
-        "signal_date": "2026-02-13",
-        "summary": "Angel Investor at Marloo (London). 2nd degree connection, 1 mutual. Nearly two decades helping startups and funds. Recently posted on LinkedIn.",
-        "excerpt": "London angel investor, 2nd degree with mutual connection.",
+        "investor": "Ofer Schreiber",
+        "firm": "YL Ventures",
+        "profile_url": "https://www.linkedin.com/in/oferschr/",
+        "signal_date": "2026-03-06",
+        "summary": "Ofer Schreiber",
+        "excerpt": "Ofer Schreiber\nOfer Schreiber\n   \u2022 1st\nPremium \u2022 1st\nSenior Partner & Head of Israel Office at YL Ventures | Ranked in Top 10 VCs Worldwide by PitchBook\nSenior Partner & Head of Israel Office at YL Ve",
         "source_type": "linkedin",
         "relevance": "high",
         "ktlyst_alignment": ""
-      },
-      {
-        "investor": "Justin Somaini",
-        "firm": "Independent (ex-YL Ventures)",
-        "profile_url": "https://www.linkedin.com/in/jsomaini/",
-        "signal_date": "2026-02-02",
-        "summary": "Left YL Ventures, now helping founders ideating on what to build. Explicitly offering to be a thought partner for early-stage cyber founders (Seed/A).",
-        "excerpt": "Founders who are ideating on what to build and want a thought partner on where to focus. If that's you, reach out.",
-        "source_type": "linkedin",
-        "relevance": "high",
-        "ktlyst_alignment": "PERFECT - explicitly seeking early-stage cyber founders to advise"
       },
       {
         "investor": "Barmak Meftah",
         "firm": "Ballistic Ventures",
-        "profile_url": "https://www.linkedin.com/in/barmakmeftah/recent-activity/all/",
-        "signal_date": "2026-02-02",
-        "summary": "WitnessAI raised $58M strategic round, launching WitnessAI Agentic Security - directly relevant to KTLYST's agentic security positioning",
-        "excerpt": "Incredibly excited to share that WitnessAI has raised a $58M strategic round. At the same time, today the company is launching WitnessAI Agentic Security",
+        "profile_url": "https://www.linkedin.com/in/barmakmeftah/",
+        "signal_date": "2026-03-06",
+        "summary": "Congratulations to the 2026 RSAC Launch Pad finalists, Incalmo, Konvu,\u00a0and OBVERRA, who will take the stage to pitch their ideas in front of a room full of security leaders, operators, and investors o",
+        "excerpt": "Congratulations to the 2026 RSAC Launch Pad finalists, Incalmo, Konvu,\u00a0and OBVERRA, who will take the stage to pitch their ideas in front of a room full of security leaders, operators, and investors o",
         "source_type": "linkedin",
         "relevance": "high",
-        "ktlyst_alignment": "PERFECT - Agentic Security is directly in KTLYST's space"
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Barmak Meftah",
+        "firm": "Ballistic Ventures",
+        "profile_url": "https://www.linkedin.com/in/barmakmeftah/",
+        "signal_date": "2026-03-06",
+        "summary": "Incredibly excited to share that WitnessAI has raised a $58M strategic round. At the same time, today the company is\u00a0launching WitnessAI Agentic Security.",
+        "excerpt": "Incredibly excited to share that WitnessAI has raised a $58M strategic round. At the same time, today the company is\u00a0launching WitnessAI Agentic Security. \n\nThis moment feels especially meaningful giv",
+        "source_type": "linkedin",
+        "relevance": "high",
+        "ktlyst_alignment": ""
       }
     ],
     "count": 10,
-    "last_updated": "2026-03-01"
+    "last_updated": "2026-03-23"
   },
   "new_funds": {
     "title": "Recent Fund Announcements",
     "description": "New funds raised by investors relevant to cybersecurity and AI (actual investor activity)",
     "signals": [
+      {
+        "investor": "Dharmesh Thakker",
+        "firm": "Battery Ventures",
+        "profile_url": "https://www.linkedin.com/in/dthakker",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-03-06",
+        "thesis": "Dharmesh Thakker",
+        "source_type": "linkedin",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Adam Fisher",
+        "firm": "Bessemer Venture Partners",
+        "profile_url": "https://il.linkedin.com/in/adamrfisher",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-03-06",
+        "thesis": "This has been bothering me for a while.",
+        "source_type": "linkedin",
+        "ktlyst_alignment": ""
+      },
+      {
+        "investor": "Crunchbase Funding Rounds",
+        "firm": "crunchbase",
+        "profile_url": "https://news.crunchbase.com/venture/yc-backed-denki-raise-financial-audit-automation-ai/",
+        "fund_name": "",
+        "fund_size": "",
+        "signal_date": "2026-03-05",
+        "thesis": "Exclusive: Founded By 2 Brothers In Their 20s, YC-Backed Denki Raises $4.1M To Automate Financial Audits",
+        "source_type": "crunchbase",
+        "ktlyst_alignment": ""
+      },
       {
         "investor": "Crunchbase Funding Rounds",
         "firm": "crunchbase",
@@ -198,106 +231,109 @@
         "thesis": "Bessemer invested in Upwind Security - $250M Series B at $1.5B valuation for cloud security startup",
         "source_type": "linkedin",
         "ktlyst_alignment": ""
-      },
-      {
-        "investor": "Liran Grinberg",
-        "firm": "Team8",
-        "profile_url": "https://www.linkedin.com/in/lirangr/recent-activity/all/",
-        "fund_name": "",
-        "fund_size": "",
-        "signal_date": "2026-01-22",
-        "thesis": "Claroty raised $150M+ at $3B valuation - third mega round from Team8 portfolio (following Port.io $100M and Classiq $130M)",
-        "source_type": "linkedin",
-        "ktlyst_alignment": ""
       }
     ],
-    "count": 8,
-    "last_updated": "2026-03-01"
+    "count": 10,
+    "last_updated": "2026-03-23"
   },
   "time_periods": {
     "daily": {
-      "executive_summary": "Market sentiment shows investor skepticism toward generic AI-SaaS and agentic security tools, which creates a favorable opening for KTLYST's governance-first, infrastructure-layer thesis. The cybersecurity sector is experiencing a re-evaluation ($20B+ valuation corrections cited), indicating VCs are moving away from narrow point solutions toward platforms that solve institutional learning and decision durability\u2014exactly KTLYST's positioning as the learning control plane above fragmented execution tools.",
+      "executive_summary": "Today's signal set is thin and generalist-heavy, with only one security-specific signal: Ballistic Ventures' investment thesis in Above Security (a governance/control-plane play in detection). This validates KTLYST's market positioning around security infrastructure and institutional learning, but the broader VC conversation is dominated by AI SDR skepticism, autonomous agent caution, and generalist hiring \u2014 suggesting early-stage security infrastructure founders should emphasize proven unit economics over AI hype. No new dedicated security funds emerged today, but Ballistic Ventures remains a strong fit for KTLYST's horizontal learning layer thesis.",
       "key_themes": [
-        "VCs rejecting generic AI-SaaS without clear infrastructure/ROI differentiation",
-        "Cybersecurity market correction and repricing\u2014opportunity for differentiated infrastructure plays",
-        "Growing recognition that AI/automation risks require governance, provenance, and auditable decision-making",
-        "Shift from point-solution SOC tooling toward horizontal, cross-tool coordination layers",
-        "Institutional memory and compounding security learning as competitive moat"
-      ],
-      "hot_investors": [],
-      "recommended_actions": [
-        "Monitor TechCrunch Venture and Venture Beat cybersecurity coverage daily\u2014map which VCs are quoted rejecting agentic/generic AI SaaS to identify firms open to governance-first infrastructure pitches",
-        "Research investors quoted in '20VC x SaaStr This Week' cybersecurity segment ($20B correction story)\u2014they're actively evaluating security infrastructure repricing and may be scouting next-generation control-plane plays",
-        "Prepare pitch positioning that explicitly contrasts KTLYST with agentic SOC automation and detection-as-code trends; emphasize governance, provenance, and institutional learning as the underinvested layer",
-        "Track security-focused micro-VCs and seed funds (look for recent announcements in Q1 2026) to identify newly capitalized early-stage investors with fresh deployment capital for infrastructure",
-        "Create a tracker of VCs who've invested in horizontal platform layers (e.g., orchestration, data governance, compliance infrastructure) outside pure security\u2014map potential cross-vertical thesis overlap",
-        "Develop a 'What We're Not' one-pager (not detection-as-code, not SOC automation, not agentic) for outreach\u2014use investor skepticism toward those categories as an opening"
-      ],
-      "period": "daily",
-      "period_days": 1,
-      "generated_at": "2026-03-01T11:22:57.865704",
-      "signal_count": 12,
-      "hard_signal_count": 4,
-      "soft_signal_count": 8
-    },
-    "weekly": {
-      "executive_summary": "This week reveals a critical market divergence: investors are explicitly rejecting generic 'AI for security' and SOC automation plays, while simultaneously signaling appetite for governance, infrastructure, and institutional memory solutions. The cybersecurity market saw a $20B valuation reset (Anthropic impact), but the underlying trend favors horizontal infrastructure layers\u2014exactly KTLYST's positioning. Enterprise MCP adoption outpacing security controls is a direct validation of the control-plane thesis.",
-      "key_themes": [
-        "AI skepticism in security SaaS\u2014investors want infrastructure, not agents or alert-fatigue tools",
-        "Control plane and governance architecture gaining investor interest as security matures",
-        "Enterprise MCP adoption crisis exposing gaps in security orchestration and institutional learning",
-        "Security as data/intelligence systems narrative strengthening; compounding institutional memory becoming defensibility signal",
-        "Detection engineering and prevention engineering shifting from point tools to governance layers",
-        "Cybersecurity valuation reset but infrastructure plays remain resilient"
+        "Security infrastructure/control-plane plays gaining VC validation (Above Security investment)",
+        "VC skepticism toward pure AI/agent automation without clear differentiation or business models",
+        "Generalist hiring and institutional knowledge retention gaining importance in post-AI hype era",
+        "Early-stage founders face term sheet drought despite strong growth \u2014 emphasis on unit economics and proven traction over narrative",
+        "Governance, provenance, and durable decision-making emerging as unsexy but valuable infrastructure thesis"
       ],
       "hot_investors": [
         {
-          "name": "Unknown",
-          "firm": "20VC / SaaStr Network",
-          "profile_url": "https://www.saastr.com",
-          "reason": "SaaStr blog explicitly called out $20B cybersecurity valuation wipe and deca-millionaire founder trends; signals active thesis refinement on what works in security post-AI hype. Their coverage of 'why every B2B product feels dated' suggests investors are re-evaluating infrastructure plays vs. point solutions.",
-          "recent_activity": "Published 20VC x SaaStr analysis noting Anthropic's impact on cybersecurity valuations and broader skepticism of oversold AI security solutions"
-        },
-        {
-          "name": "Unknown",
-          "firm": "Security-focused seed/early-stage VCs (signal from TechCrunch)",
-          "profile_url": "https://techcrunch.com/2026/03/01/investors-spill-what-they-arent-looking-for-anymore-in-ai-saas-companies/",
-          "reason": "TechCrunch article 'Investors spill what they aren't looking for anymore in AI SaaS' indicates active capital reallocation away from AI-wrapper tools and toward foundational infrastructure. KTLYST's governance + learning angle directly addresses what investors DO want: durability, auditability, institutional compounding.",
-          "recent_activity": "Actively articulating rejection of AI-for-AI's-sake security tools; favoring structural/architectural solutions"
-        },
-        {
-          "name": "Unknown",
-          "firm": "Infrastructure/Horizontal Platform VCs",
-          "profile_url": "https://venturebeat.com/security/enterprise-mcp-adoption-is-outpacing-security-controls",
-          "reason": "VentureBeat signal on MCP adoption outpacing security controls is a direct validation of KTLYST's core insight: execution tools proliferate, but governance layer is missing. Investors backing horizontal orchestration/control-plane plays will see this as proof of market need.",
-          "recent_activity": "Market data showing enterprise MCP sprawl creating governance vacuum\u2014signals investor interest in control-plane solutions"
+          "name": "Barmak Meftah",
+          "firm": "Ballistic Ventures",
+          "profile_url": "https://ballisticventures.com",
+          "reason": "Explicitly invested in Above Security, a detection governance/control-plane company. This directly validates KTLYST's thesis that security learning and governance infrastructure (sitting above execution tools) is fundable. Ballistic has shown appetite for infrastructure plays in detection engineering.",
+          "recent_activity": "Published thesis post 'Why we invested in Above Security' explaining conviction in governance and provenance-driven security infrastructure"
         }
       ],
       "recommended_actions": [
-        "Immediately anchor pitch narrative to 'investors reject AI-wrapper security; demand governance infrastructure' trend from TechCrunch/SaaStr signals\u2014position KTLYST as the compounding institutional memory layer, not an AI agent or detection tool",
-        "Weaponize the 'Enterprise MCP adoption outpacing security controls' signal in outreach: it's proof that execution tools scale faster than governance, creating wedge for SLCP. Use this as qualification filter in investor meetings.",
-        "Map the SaaStr/$20B cybersecurity reset: identify which early-stage/seed VCs are actively re-deploying capital away from consumer security AI and into B2B infrastructure plays. These are warm leads for KTLYST's Series A/B trajectory.",
-        "Research which VCs funded Anthropic, Crunchbase-tracked security acquisitions (Arctic Wolf/Sevco), and governance-infrastructure plays\u2014they've shown conviction in category and will have dry powder post-correction.",
-        "Create 1-pager titled 'Why Detection Tools Fail: The Missing Learning Layer' using MCP/control-plane data to position KTLYST as infrastructure, not tooling. Share with security-focused LPs before formal pitch.",
-        "Monitor detection engineering + prevention engineering discourse in SaaStr, 20VC, Insight Partners circles\u2014early signal that these will be 2026 funding categories; KTLYST is the learning infrastructure enabling both.",
-        "Deprioritize outreach to generalist AI/SaaS VCs; focus exclusively on security-native, infrastructure-focused, and governance-compliance investors who understand horizontal platform dynamics.",
-        "Flag that no explicit 'pitch-me' signals from investors this week\u2014suggest attending SaaStr, 20VC events or security-focused founder networks where infrastructure investors congregate post-AI correction."
+        "Research Ballistic Ventures' full portfolio and investment thesis; Barmak Meftah is a warm signal for KTLYST's control-plane positioning \u2014 prioritize warm intro through mutual connections in security infrastructure space",
+        "Monitor Ballistic's upcoming security investments for pattern confirmation (if they fund more infrastructure/governance plays, KTLYST is on their thesis radar)",
+        "Prepare messaging that differentiates KTLYST from Above Security: emphasize horizontal learning capture ACROSS all security teams (not just detection), compounding institutional memory, and auditable decision-enforcement across heterogeneous tool stacks",
+        "Deprioritize outreach to investors posting about AI SDRs, autonomous agents, and AI hype \u2014 current market sentiment shows VC skepticism without clear ROI/differentiation; focus on investors with provenance/governance angle",
+        "Given thin signal day: expand monitoring to security-specific newsletters (Recorded Future, Fortified, Darknetdiaries community, Trail of Bits), security fund Twitter/X accounts, and security-focused VC meetings (e.g., Sands, Crosspoint, Norwest security verticals) for next 24\u201348 hours",
+        "Track whether any new security-native funds announce closing in next week; current data shows no new fund announcements \u2014 this is a gap to fill with continuous monitoring"
+      ],
+      "period": "daily",
+      "period_days": 1,
+      "generated_at": "2026-03-23T08:10:06.664557",
+      "signal_count": 17,
+      "hard_signal_count": 4,
+      "soft_signal_count": 13
+    },
+    "weekly": {
+      "executive_summary": "This week shows strong momentum in security infrastructure and AI governance investments, with key players like Boldstart Ventures and Ballistic Ventures actively backing companies addressing the 'too many alerts, not enough action' problem\u2014a direct pain point KTLYST solves. The market is signaling appetite for horizontal security layers and governance frameworks, particularly as agentic AI and autonomous tools proliferate, creating urgent demand for provenance, decision auditing, and institutional learning compounding.",
+      "key_themes": [
+        "Alert fatigue and actionable context as critical market pain",
+        "Governance and auditability requirements for AI/agentic security tools",
+        "Security infrastructure plays gaining traction over point solutions",
+        "Institutional memory and learning compounding as competitive advantage",
+        "Prevention engineering and proactive posture investment acceleration"
+      ],
+      "hot_investors": [
+        {
+          "name": "Ed Sim",
+          "firm": "Boldstart Ventures",
+          "profile_url": "https://www.linkedin.com/posts/edsim_today-is-our-launch-day-were-out-of-stealth-activity-7439712749259014146-rJl0",
+          "reason": "Explicitly messaging the exact problem KTLYST solves: 'Too many alerts. Not enough action. What's missing is actionable context, the connective tissue between an asset, its...' Also posting about partnership from inception/ideation stage, indicating openness to pre-seed founders.",
+          "recent_activity": "Launched new stealth portfolio company focused on actionable context; messaging around tool overload and need for connective tissue between assets and decisions"
+        },
+        {
+          "name": "Barmak Meftah",
+          "firm": "Ballistic Ventures",
+          "profile_url": "https://www.linkedin.com/posts/barmakmeftah_ai-cloudsecurity-cybersecurity-activity-7439785329643016192-D37i",
+          "reason": "Leading Series A for Native Security and investing in Above Security; explicitly focused on security infrastructure plays that sit above execution tools. Also authored investment thesis pieces on why governance and infrastructure matter. Actively writing about security at RSAC 2026.",
+          "recent_activity": "Led Series A for Native Security; published investment thesis on Above Security; attending RSAC 2026; messaging around offense-at-scale and infrastructure plays"
+        },
+        {
+          "name": "Kobi Samboursky",
+          "firm": "Glilot Capital Partners",
+          "profile_url": "https://www.linkedin.com/posts/kobisamboursky_niv-ai-is-officially-emerging-from-stealth-activity-7439662299226742785-jcyJ",
+          "reason": "Managing Partner at Glilot, actively backing AI-native security infrastructure (Niv AI $12M stealth exit). Signals interest in compounding intelligence systems and AI governance frameworks, not just point tools.",
+          "recent_activity": "Backed Niv AI's $12M stealth emergence; messaging around AI as systemic change driver; investing across cybersecurity and broader AI infrastructure"
+        },
+        {
+          "name": "Adam Fisher",
+          "firm": "Bessemer Venture Partners",
+          "profile_url": "https://www.linkedin.com/posts/adamrfisher_bessemer-venture-partners-bvp-is-proud-activity-7439950344618536961-wi9Z",
+          "reason": "BVP ranked #1 most active foreign VC in 2025. Large check size and broad portfolio give credibility for future rounds, and their activity level suggests receptiveness to compelling infrastructure narratives.",
+          "recent_activity": "Ranked #1 most active foreign VC for 2025; maintaining high deal velocity across technology"
+        }
+      ],
+      "recommended_actions": [
+        "Prioritize outreach to Ed Sim (Boldstart) and Barmak Meftah (Ballistic) with narrative anchored to their exact messaging: KTLYST as the 'connective tissue' and 'actionable context' layer they're explicitly seeking. Frame as solving their portfolio company pain point.",
+        "Develop a one-pager comparing KTLYST to the Above Security and Native Security investments\u2014position as the governance/learning layer that makes those execution tools durable and compounding. Use Ballistic's own thesis language.",
+        "Monitor Glilot Capital and Kobi Samboursky for next fund announcement or deployment signals; Niv AI's $12M stealth exit suggests appetite for security AI infrastructure with governance angles.",
+        "Track Boldstart's stealth launch closely\u2014if it's a context/governance play, there's strong thesis alignment. Consider warm introduction through shared networks.",
+        "Create a 'governance for agentic security' positioning piece addressing the Nvidia/NVIDIA GTC 2026 signals about agentic AI governance gaps\u2014this is an emerging VC theme and KTLYST is architecturally positioned to own it.",
+        "Attend or network around RSAC 2026 (Ballistic will be there); this is where security infrastructure investors congregate and can see KTLYST's wedge (detection rules) in action.",
+        "Research Chenxi Wang (Rain Capital) and The Residency pipeline\u2014they're running founder galas with 500 investors; if they back security, could be a warm intro opportunity.",
+        "Map out which Bessemer partners own security/infrastructure vertical; BVP's #1 activity ranking + pre-seed appetite makes them valuable for Series A pipeline building."
       ],
       "period": "weekly",
       "period_days": 7,
-      "generated_at": "2026-03-01T11:23:12.225226",
-      "signal_count": 150,
-      "hard_signal_count": 59,
-      "soft_signal_count": 91
+      "generated_at": "2026-03-23T08:10:22.670001",
+      "signal_count": 162,
+      "hard_signal_count": 52,
+      "soft_signal_count": 110
     },
     "monthly": {
       "period": "monthly",
       "period_days": 30,
-      "generated_at": "2026-03-01T11:23:34.487157",
-      "signal_count": 1921,
-      "hard_signal_count": 293,
-      "soft_signal_count": 1628,
-      "executive_summary": "Collected 1921 signals over the past 30 days. 34 from LinkedIn. Manual review recommended.",
+      "generated_at": "2026-03-23T08:10:44.158266",
+      "signal_count": 1109,
+      "hard_signal_count": 256,
+      "soft_signal_count": 853,
+      "executive_summary": "Collected 1109 signals over the past 30 days. 84 from LinkedIn. Manual review recommended.",
       "key_themes": [
         "Review signals manually - LLM summarization unavailable"
       ],
