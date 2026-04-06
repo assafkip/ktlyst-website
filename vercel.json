@@ -12,34 +12,52 @@
   ],
   "rewrites": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "demo.ktlystlabs.com"
-        }
-      ],
-      "destination": "/demo/:path*"
+      "source": "/",
+      "has": [{ "type": "host", "value": "dp-demo.ktlystlabs.com" }],
+      "destination": "/dp_demo/index.html"
     },
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "demo2.ktlystlabs.com"
-        }
-      ],
-      "destination": "/demo2/:path*"
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "dp-demo.ktlystlabs.com" }],
+      "destination": "/dp_demo/:path+"
     },
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "dataflow.ktlystlabs.com"
-        }
-      ],
-      "destination": "/data_flow/:path*"
+      "source": "/",
+      "has": [{ "type": "host", "value": "demo.ktlystlabs.com" }],
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "demo.ktlystlabs.com" }],
+      "destination": "/demo/:path+"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "demo2.ktlystlabs.com" }],
+      "destination": "/demo2/index.html"
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "demo2.ktlystlabs.com" }],
+      "destination": "/demo2/:path+"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "dataflow.ktlystlabs.com" }],
+      "destination": "/data_flow/index.html"
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "dataflow.ktlystlabs.com" }],
+      "destination": "/data_flow/:path+"
+    },
+    {
+      "source": "/signals",
+      "destination": "/signals/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
