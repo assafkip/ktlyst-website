@@ -1,0 +1,23 @@
+title: 'KTLYST - Multi-stage router compromise persistence'
+id: 48ec9746-fdc7-522c-ba7d-1eecbb73765b
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1584.008
+logsource:
+    category: registry_set
+    product: windows
+detection:
+    selection:
+        TargetObject|contains: 'CurrentVersion\Run'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

@@ -1,0 +1,20 @@
+---
+attack_technique: T1584.008
+display_name: "Multi-stage router compromise persistence"
+atomic_tests:
+  - name: "KTLYST - Multi-stage router compromise persistence Simulation"
+    auto_generated_guid: cb76e609-c87f-411e-b787-fa218724d3d1
+    description: |
+      Simulates Multi-stage router compromise persistence technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

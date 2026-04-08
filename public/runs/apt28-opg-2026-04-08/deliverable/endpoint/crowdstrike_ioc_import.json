@@ -1,0 +1,84 @@
+{
+  "indicators": [
+    {
+      "type": "domain",
+      "value": "www.googletagmanager.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "advisory.It",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "office365.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "GOV.UK",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    }
+  ]
+}

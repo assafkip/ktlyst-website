@@ -1,0 +1,30 @@
+title: 'KTLYST - VPS infrastructure setup for DNS operations'
+id: 2c6c2e8b-6899-56b9-8c10-e35c2e0f67aa
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1588.006
+logsource:
+    category: process_creation
+    product: any
+detection:
+    selection_process:
+        Image|endswith:
+            - '\npm.exe'
+            - '\pip.exe'
+            - '\nuget.exe'
+    selection_action:
+        CommandLine|contains|any:
+            - 'install'
+            - 'update'
+    condition: selection_process and selection_action
+falsepositives:
+    - Legitimate administrative activity
