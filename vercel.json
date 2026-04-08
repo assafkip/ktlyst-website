@@ -56,6 +56,10 @@
       "destination": "/signals/index.html"
     },
     {
+      "source": "/runs",
+      "destination": "/runs/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

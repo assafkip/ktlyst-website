@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.__gaBotFiltered = (function(){
+        var ua = navigator.userAgent || '';
+        var bots = /bot|crawl|spider|slurp|baidu|yandex|duckduckbot|bingbot|googlebot|facebookexternalhit|semrush|ahrefs|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|dataforseo|serpstat|megaindex|rogerbot|screaming frog|headlesschrome|puppeteer|phantomjs|wget|curl|python-requests|scrapy|httpx|go-http-client|java\/|okhttp|libwww|lwp-trivial|winhttp|httrack|netcraft|archive\.org/i;
+        return bots.test(ua);
+      })();
+      if (!window.__gaBotFiltered) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DPSD4GNJE0';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-DPSD4GNJE0');
+      }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>KTLYST Runs - Live Advisory Extractions | KTLYST Labs</title>
+    <meta name="description" content="See what happens when a real advisory hits the KTLYST pipeline. 9 team packages, 25+ platform-native files, 40 seconds.">
+    <link rel="canonical" href="https://www.ktlystlabs.com/runs">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ktlystlabs.com/runs">
+    <meta property="og:title" content="KTLYST Runs - Live Advisory Extractions">
+    <meta property="og:description" content="See what happens when a real advisory hits the KTLYST pipeline. 9 team packages, 25+ platform-native files, 40 seconds.">
+    <meta property="og:site_name" content="KTLYST Labs">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KTLYST Runs - Live Advisory Extractions">
+    <meta name="twitter:description" content="See what happens when a real advisory hits the KTLYST pipeline. 9 team packages, 25+ platform-native files, 40 seconds.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f0ebe2;
+            --bg-card: #faf7f2;
+            --bg-elevated: #fff;
+            --bg-hover: #ece6db;
+            --bg-dark: #1c1815;
+            --text: #1a1612;
+            --text-muted: #635a4f;
+            --text-faint: #978e83;
+            --border: #ddd5c8;
+            --border-light: #e8e1d6;
+            --accent: #c44b25;
+            --accent-soft: rgba(196,75,37,0.08);
+            --serif: 'Instrument Serif', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --mono: 'JetBrains Mono', 'SF Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+
+        /* NAV */
+        .site-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(59, 157, 255, 0.1);
+        }
+        .site-nav .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .site-nav .logo .labs { color: #7c9cc8; margin-left: 0.4rem; }
+        .site-nav .nav-right { display: flex; gap: 1.5rem; align-items: center; }
+        .site-nav .nav-right a {
+            text-decoration: none;
+            color: #a0b0c0;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .site-nav .nav-right a:hover { color: #3b9dff; }
+        .site-nav .nav-right a.active { color: #3b9dff; }
+        .site-nav .cta-button {
+            background: #3b9dff;
+            color: #000 !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .site-nav .cta-button:hover { background: #5aadff; }
+
+        /* HERO */
+        .hero {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: 2.8rem;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        .hero-stat {
+            text-align: center;
+        }
+        .hero-stat .num {
+            font-family: var(--mono);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .hero-stat .label {
+            font-size: 0.8rem;
+            color: var(--text-faint);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* RUNS LIST */
+        .runs-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+        .run-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .run-card:hover {
+            background: var(--bg-elevated);
+            border-color: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .run-card .run-date {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--text-faint);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .run-card .run-title {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            margin: 0.4rem 0;
+        }
+        .run-card .run-source {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+        .run-teams {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+        .team-tag {
+            font-size: 0.7rem;
+            font-family: var(--mono);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-faint);
+        }
+        .empty-state h3 {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: var(--bg-dark);
+            color: #a0b0c0;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .site-footer a { color: #3b9dff; text-decoration: none; }
+        .site-footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 1rem; }
+            .run-card { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="/" class="logo">KTLYST<span class="labs">LABS</span></a>
+        <div class="nav-right">
+            <a href="/signals">Signals</a>
+            <a href="/runs" class="active">Runs</a>
+            <a href="https://calendly.com/assaf-ktlyst/30min" class="cta-button" target="_blank">Book a Demo</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Live Advisory Extractions</h1>
+        <p>Real advisories. Real extraction. 9 team packages, 25+ platform-native files, 40 seconds from advisory drop to deployment artifacts.</p>
+        <div class="hero-stats" id="heroStats">
+            <div class="hero-stat">
+                <div class="num" id="statRuns">0</div>
+                <div class="label">Runs</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">9</div>
+                <div class="label">Team Packages</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">40s</div>
+                <div class="label">Per Advisory</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="runs-container" id="runsList">
+        <div class="empty-state" id="emptyState">
+            <h3>First runs coming soon</h3>
+            <p>We run real advisories through the KTLYST pipeline daily. Check back tomorrow.</p>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 KTLYST Labs. <a href="/">Home</a> | <a href="/signals">Signals</a> | <a href="https://calendly.com/assaf-ktlyst/30min">Book a Demo</a></p>
+    </footer>
+
+    <script>
+    (async function() {
+        try {
+            const resp = await fetch('/runs/runs-index.json');
+            const runs = await resp.json();
+            if (!runs.length) return;
+
+            document.getElementById('emptyState').style.display = 'none';
+            document.getElementById('statRuns').textContent = runs.length;
+
+            const container = document.getElementById('runsList');
+            const teams = ['SOC', 'IAM', 'Email', 'Endpoint', 'Cloud', 'Red Team', 'Executive', 'Compliance', 'IOCs'];
+
+            runs.sort((a, b) => b.date.localeCompare(a.date));
+
+            runs.forEach(function(run) {
+                var card = document.createElement('a');
+                card.className = 'run-card';
+                card.href = '/runs/' + run.id + '/';
+
+                var teamsHtml = teams.map(function(t) {
+                    return '<span class="team-tag">' + t + '</span>';
+                }).join('');
+
+                card.innerHTML =
+                    '<div class="run-date">' + run.date + ' - ' + (run.source || 'Advisory') + '</div>' +
+                    '<div class="run-title">' + run.title + '</div>' +
+                    '<div class="run-source">' + (run.summary || '') + '</div>' +
+                    '<div class="run-teams">' + teamsHtml + '</div>';
+
+                container.appendChild(card);
+
+                // GA4 tracking
+                card.addEventListener('click', function() {
+                    gtag('event', 'run_click', { run_id: run.id, run_title: run.title });
+                });
+            });
+        } catch (e) {
+            // runs-index.json not found or empty, show empty state
+        }
+    })();
+    </script>
+</body>
+</html>
