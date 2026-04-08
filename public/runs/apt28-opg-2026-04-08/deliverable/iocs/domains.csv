@@ -1,0 +1,5 @@
+domain,type,page,source_span,context
+www.googletagmanager.com,domain,1,1220-1244,"'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);"
+advisory.It,domain,2,4700-4711,data may originate from further infrastructure not listed in this advisory.It is believed that the DNS
+office365.com,domain,3,2973-2986,ok.comimap-mail.outlook.comoutlook.live.comoutlook.office.comoutlook.office365.com APT28
+GOV.UK,domain,5,2229-2235,"Can&#039;t find what you&#039;re looking for? Useful links GCHQ MI5 SIS NPSA GOV.UK {""path"":{""b"

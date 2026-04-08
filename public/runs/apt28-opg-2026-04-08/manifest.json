@@ -1,0 +1,11 @@
+{
+  "id": "apt28-opg-2026-04-08",
+  "date": "2026-04-08",
+  "title": "APT28 DNS Hijacking Operations",
+  "source_url": "https://www.ncsc.gov.uk/news/apt28-exploit-routers-to-enable-dns-hijacking-operations",
+  "company": "Ontario Power Generation",
+  "industry": "Energy",
+  "teams": ["SOC", "IAM", "Email", "Endpoint", "Cloud", "Red Team", "Executive", "Compliance", "IOCs"],
+  "public_url": "https://www.ktlystlabs.com/runs/apt28-opg-2026-04-08/",
+  "created_at": "2026-04-08T23:17:43Z"
+}

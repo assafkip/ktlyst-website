@@ -1,0 +1,95 @@
+{
+  "type": "bundle",
+  "id": "bundle--e6a4d9dd-e037-4762-8f04-0b797e08ef7e",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "created": "2026-04-08T23:17:43.000Z",
+      "modified": "2026-04-08T23:17:43.000Z",
+      "name": "KTLYST",
+      "identity_class": "system"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cba6b24b-ac1e-5b84-af21-d8808b1e6ad4",
+      "created": "2026-04-08T23:17:43.000Z",
+      "modified": "2026-04-08T23:17:43.000Z",
+      "name": "Malicious domain: www.googletagmanager.com",
+      "pattern": "[domain-name:value = 'www.googletagmanager.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-08T23:17:43.000Z",
+      "created_by_ref": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "labels": [
+        "malicious-activity"
+      ],
+      "external_references": [
+        {
+          "source_name": "value-drop-pipeline"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d02d3775-c9bd-5ee1-afe2-a92759f4fe2d",
+      "created": "2026-04-08T23:17:43.000Z",
+      "modified": "2026-04-08T23:17:43.000Z",
+      "name": "Malicious domain: advisory.It",
+      "pattern": "[domain-name:value = 'advisory.It']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-08T23:17:43.000Z",
+      "created_by_ref": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "labels": [
+        "malicious-activity"
+      ],
+      "external_references": [
+        {
+          "source_name": "value-drop-pipeline"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--79f7b2c4-562c-5cbc-a857-b42d7f2a2c63",
+      "created": "2026-04-08T23:17:43.000Z",
+      "modified": "2026-04-08T23:17:43.000Z",
+      "name": "Malicious domain: office365.com",
+      "pattern": "[domain-name:value = 'office365.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-08T23:17:43.000Z",
+      "created_by_ref": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "labels": [
+        "malicious-activity"
+      ],
+      "external_references": [
+        {
+          "source_name": "value-drop-pipeline"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7b5bef0a-ff90-5910-874e-8c756f41264f",
+      "created": "2026-04-08T23:17:43.000Z",
+      "modified": "2026-04-08T23:17:43.000Z",
+      "name": "Malicious domain: GOV.UK",
+      "pattern": "[domain-name:value = 'GOV.UK']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-08T23:17:43.000Z",
+      "created_by_ref": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "labels": [
+        "malicious-activity"
+      ],
+      "external_references": [
+        {
+          "source_name": "value-drop-pipeline"
+        }
+      ]
+    }
+  ]
+}

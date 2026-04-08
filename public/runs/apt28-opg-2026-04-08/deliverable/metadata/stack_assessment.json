@@ -1,0 +1,17 @@
+{
+  "name": "Ontario Power Generation",
+  "industry": "Energy",
+  "description": "Ontario Power Generation - Energy",
+  "inferred_stack": {
+    "email": "Microsoft 365 (Exchange Online)",
+    "identity": "Microsoft Entra ID (Azure AD)",
+    "cloud": "Microsoft Azure / AWS",
+    "edr": "CrowdStrike Falcon",
+    "siem": "Splunk"
+  },
+  "compliance": [
+    "NERC CIP",
+    "TSA Pipeline Security",
+    "IEC 62443"
+  ]
+}

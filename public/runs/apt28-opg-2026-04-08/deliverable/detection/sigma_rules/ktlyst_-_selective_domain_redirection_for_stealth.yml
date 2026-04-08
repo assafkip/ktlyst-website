@@ -1,0 +1,25 @@
+title: 'KTLYST - Selective domain redirection for stealth'
+id: 6a9e627a-f1ec-5e1f-8fd1-22be2d862f93
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1586
+logsource:
+    category: authentication
+    product: any
+detection:
+    selection:
+        status: 'failure'
+    filter_low_count:
+        count|gte: 5
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

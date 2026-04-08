@@ -1,0 +1,5 @@
+IndicatorType,IndicatorValue,Action,Severity,Title,Description,RecommendedActions,Category
+DomainName,www.googletagmanager.com,AlertAndBlock,Medium,KTLYST - www.googletagmanager.com,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing
+DomainName,advisory.It,AlertAndBlock,Medium,KTLYST - advisory.It,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing
+DomainName,office365.com,AlertAndBlock,Medium,KTLYST - office365.com,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing
+DomainName,GOV.UK,AlertAndBlock,Medium,KTLYST - GOV.UK,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing

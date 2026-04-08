@@ -1,0 +1,22 @@
+title: 'KTLYST - GOV.UK'
+id: 5ca194aa-6041-5e26-83ab-7d7dd80acd35
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 5
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 5'
+tags:
+    - attack.detection
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'GOV.UK'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity
