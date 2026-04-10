@@ -1,0 +1,25 @@
+title: 'KTLYST - MFA fatigue attack'
+id: f19656ea-9a5d-5b31-9b59-0ff80380aeb5
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1078
+logsource:
+    category: authentication
+    product: any
+detection:
+    selection:
+        status: 'failure'
+    filter_low_count:
+        count|gte: 5
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

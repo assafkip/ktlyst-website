@@ -1,0 +1,17 @@
+# Cloud Security Checklist
+
+**Cloud Platform:** Azure Government
+**Generated:** 2026-04-09
+
+## Immediate Actions
+
+- [ ] Run Azure AD hunt queries from `cloud/azure_ad_hunt.kql`
+- [ ] Run OAuth app audit from `cloud/oauth_app_audit.kql`
+- [ ] Review conditional access gaps in `cloud/conditional_access_gaps.json`
+- [ ] Check for unauthorized app consents in last 30 days
+
+## Verification
+
+- [ ] All suspicious sign-ins investigated
+- [ ] Unauthorized app consents revoked
+- [ ] CA gap recommendations reviewed with identity team

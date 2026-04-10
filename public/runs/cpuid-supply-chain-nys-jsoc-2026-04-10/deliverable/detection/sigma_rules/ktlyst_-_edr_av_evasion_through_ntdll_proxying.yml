@@ -1,0 +1,26 @@
+title: 'KTLYST - EDR/AV evasion through NTDLL proxying'
+id: 9722b90d-09ce-5d08-afb7-8eea5e727503
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1562
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains|any:
+            - 'Set-MpPreference'
+            - 'DisableRealtimeMonitoring'
+            - '-ep bypass'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

@@ -1,0 +1,22 @@
+title: 'KTLYST - https://www.pcgamer.com/hardware/microsoft-claims-wireguard-'
+id: dbfd2cac-b873-5589-8f1d-b92e3c9d2933
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 2
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 2'
+tags:
+    - attack.detection
+logsource:
+    category: proxy
+    product: any
+detection:
+    selection:
+        url|contains: 'https://www.pcgamer.com/hardware/microsoft-claims-wireguard-and-veracrypt-account-termination-wa'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

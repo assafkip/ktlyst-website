@@ -1,0 +1,25 @@
+title: 'KTLYST - Multi-workflow parallel attack execution'
+id: 1da3195b-7337-5398-870f-58fdde5e03a4
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1566
+logsource:
+    category: mail
+    product: any
+detection:
+    selection:
+        action: 'delivered'
+    filter_attachments:
+        attachment_count|gte: 1
+    condition: selection and filter_attachments
+falsepositives:
+    - Legitimate administrative activity

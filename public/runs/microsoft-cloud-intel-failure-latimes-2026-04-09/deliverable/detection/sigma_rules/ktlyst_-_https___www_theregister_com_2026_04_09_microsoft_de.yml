@@ -1,0 +1,22 @@
+title: 'KTLYST - https://www.theregister.com/2026/04/09/microsoft_dev_account'
+id: 8ea7be3c-bdc2-5208-ba21-afaebb05aa69
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 2
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 2'
+tags:
+    - attack.detection
+logsource:
+    category: proxy
+    product: any
+detection:
+    selection:
+        url|contains: 'https://www.theregister.com/2026/04/09/microsoft_dev_account_deactivations/'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

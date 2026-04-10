@@ -1,0 +1,84 @@
+{
+  "indicators": [
+    {
+      "type": "domain",
+      "value": "www.propublica.org",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "www.theregister.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "www.pcgamer.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "michelf.ca",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST - Device code phishing infrastructure",
+      "source": "KTLYST / value-drop-pipeline",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "phishing",
+        "device-code"
+      ],
+      "expiration": ""
+    }
+  ]
+}

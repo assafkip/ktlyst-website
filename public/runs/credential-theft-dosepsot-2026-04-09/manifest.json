@@ -1,0 +1,11 @@
+{
+  "id": "credential-theft-dosepsot-2026-04-09",
+  "date": "2026-04-09",
+  "title": "When Attackers Already Have the Keys: MFA Bypass via Session Hijacking",
+  "source_url": "https://www.bleepingcomputer.com/news/security/when-attackers-already-have-the-keys-mfa-is-just-another-door-to-open/",
+  "company": "DoseSpot",
+  "industry": "Healthcare SaaS",
+  "teams": ["SOC", "IAM", "Email", "Endpoint", "Cloud", "Red Team", "Executive", "Compliance", "IOCs"],
+  "public_url": "https://www.ktlystlabs.com/runs/credential-theft-dosepsot-2026-04-09/",
+  "created_at": "2026-04-09T20:09:51Z"
+}

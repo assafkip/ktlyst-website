@@ -1,0 +1,26 @@
+title: 'KTLYST - Documentation evasion leading to regulatory approval bypass'
+id: aa0f0e4b-214b-5cf8-9ec5-9b6f82cb37c0
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1562
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains|any:
+            - 'Set-MpPreference'
+            - 'DisableRealtimeMonitoring'
+            - '-ep bypass'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

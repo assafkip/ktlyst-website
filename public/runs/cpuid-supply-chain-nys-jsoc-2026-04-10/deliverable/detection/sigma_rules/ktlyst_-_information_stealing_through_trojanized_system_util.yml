@@ -1,0 +1,26 @@
+title: 'KTLYST - Information stealing through trojanized system utilities'
+id: 107cd84e-ffa5-5165-a440-5b074f8debc7
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1041
+logsource:
+    category: file_access
+    product: cloud
+detection:
+    selection:
+        action|contains|any:
+            - 'upload'
+            - 'sync'
+            - 'transfer'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

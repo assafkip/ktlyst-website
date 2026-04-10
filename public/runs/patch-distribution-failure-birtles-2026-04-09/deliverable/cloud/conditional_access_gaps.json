@@ -1,0 +1,44 @@
+{
+  "advisory": "Unit42 Device Code OAuth Phishing",
+  "generated": "2026-04-09T20:10:18.862923+00:00",
+  "recommended_policies": [
+    {
+      "name": "Block device code flow for all users",
+      "priority": "CRITICAL",
+      "type": "Block",
+      "target": "authenticationFlows.transferMethods == deviceCodeFlow",
+      "rationale": "Device code flow is the primary attack vector. Block unless explicitly needed.",
+      "exceptions": [
+        "Service accounts",
+        "IoT device accounts",
+        "Break-glass accounts"
+      ]
+    },
+    {
+      "name": "Require compliant device for OAuth grants",
+      "priority": "HIGH",
+      "type": "Grant with conditions",
+      "target": "All cloud apps",
+      "rationale": "Prevents token theft from unmanaged devices.",
+      "conditions": [
+        "Require device to be marked as compliant"
+      ]
+    },
+    {
+      "name": "Block sign-in from anonymous IPs",
+      "priority": "HIGH",
+      "type": "Block",
+      "target": "Named locations: anonymous proxy IPs",
+      "rationale": "Attacker polls for token from non-corporate infrastructure."
+    },
+    {
+      "name": "Require MFA for all external IPs",
+      "priority": "MEDIUM",
+      "type": "Grant with conditions",
+      "target": "All users, non-trusted locations",
+      "conditions": [
+        "Require multi-factor authentication"
+      ]
+    }
+  ]
+}

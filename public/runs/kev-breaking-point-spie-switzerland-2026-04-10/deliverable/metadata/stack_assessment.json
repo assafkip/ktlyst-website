@@ -1,0 +1,21 @@
+{
+  "name": "SPIE Switzerland",
+  "industry": "Critical Infrastructure Engineering / Facilities (EU NIS2)",
+  "description": "SPIE Switzerland - Critical Infrastructure Engineering / Facilities (EU NIS2)",
+  "inferred_stack": {
+    "email": "Proofpoint (email gateway)",
+    "identity": "Unknown",
+    "cloud": "Unknown",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Unknown",
+    "additional_tools": {
+      "contracts": "DocuSign",
+      "remote_support": "TeamViewer",
+      "project_mgmt": "Atlassian (Jira/Confluence)"
+    }
+  },
+  "compliance": [
+    "SOC 2 Type II",
+    "ISO 27001"
+  ]
+}

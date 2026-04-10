@@ -1,0 +1,30 @@
+title: 'KTLYST - Supply chain attack via compromised distribution infrastruct'
+id: 46a1bc39-edd9-561f-9a0c-8550f883c830
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1195
+logsource:
+    category: process_creation
+    product: any
+detection:
+    selection_process:
+        Image|endswith:
+            - '\npm.exe'
+            - '\pip.exe'
+            - '\nuget.exe'
+    selection_action:
+        CommandLine|contains|any:
+            - 'install'
+            - 'update'
+    condition: selection_process and selection_action
+falsepositives:
+    - Legitimate administrative activity

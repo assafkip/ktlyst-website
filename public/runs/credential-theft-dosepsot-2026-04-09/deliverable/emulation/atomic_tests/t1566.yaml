@@ -1,0 +1,20 @@
+---
+attack_technique: T1566
+display_name: "AI-assisted targeted phishing campaign"
+atomic_tests:
+  - name: "KTLYST - AI-assisted targeted phishing campaign Simulation"
+    auto_generated_guid: 1573a3d7-026d-4b24-9021-09182abfa245
+    description: |
+      Simulates AI-assisted targeted phishing campaign technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""
