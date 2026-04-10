@@ -1,0 +1,25 @@
+title: 'KTLYST - AI-assisted targeted phishing campaign'
+id: eba34a93-e341-5e48-8313-9209886b04e6
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1566
+logsource:
+    category: mail
+    product: any
+detection:
+    selection:
+        action: 'delivered'
+    filter_attachments:
+        attachment_count|gte: 1
+    condition: selection and filter_attachments
+falsepositives:
+    - Legitimate administrative activity

@@ -1,0 +1,49 @@
+{
+  "generated": "2026-04-09T20:09:50.562884+00:00",
+  "source": "value-drop-pipeline",
+  "report": "Advisory Extraction",
+  "domains": [
+    {
+      "type": "domain",
+      "value": "www.propublica.org",
+      "page": 1,
+      "start": 2889,
+      "end": 2907,
+      "context": "https://www.propublica.org/article/federal-government-ai-cautionary-tales"
+    },
+    {
+      "type": "domain",
+      "value": "www.theregister.com",
+      "page": 2,
+      "start": 1214,
+      "end": 1233,
+      "context": "https://www.theregister.com/2026/04/09/microsoft_dev_account_deactivations/"
+    },
+    {
+      "type": "domain",
+      "value": "www.pcgamer.com",
+      "page": 2,
+      "start": 1951,
+      "end": 1966,
+      "context": "https://www.pcgamer.com/hardware/microsoft-claims-wireguard-and-veracrypt-account-termination-wa"
+    },
+    {
+      "type": "domain",
+      "value": "michelf.ca",
+      "page": 3,
+      "start": 286,
+      "end": 296,
+      "context": "Markdown Extra syntax via https://michelf.ca/projects/php-markdown/extra/"
+    }
+  ],
+  "tools": [
+    {
+      "value": "Empire",
+      "type": "tool",
+      "source": "regex_known_tool",
+      "context": "212;helped Microsoft expand a government business empire worth billions of\ndollars.\nTags: cloud computing , cybersecurity , Microsoft , national security po"
+    }
+  ],
+  "total_domains": 4,
+  "total_tools": 1
+}

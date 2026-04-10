@@ -1,0 +1,23 @@
+title: 'KTLYST - Infrastructure system targeting pattern'
+id: d29183ea-b969-5c16-84be-b2f218ea9b1b
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1595
+logsource:
+    category: registry_set
+    product: windows
+detection:
+    selection:
+        TargetObject|contains: 'CurrentVersion\Run'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

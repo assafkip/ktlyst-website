@@ -1,0 +1,23 @@
+{
+  "id": "kev-breaking-point-rubicon-founders-2026-04-10",
+  "date": "2026-04-10",
+  "title": "Analysis of One Billion CISA KEV Remediation Records Exposes Limits of Human-Scale Security",
+  "source_url": "https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/",
+  "company": "Rubicon Founders",
+  "industry": "Healthcare Investment / Portfolio Operator",
+  "personalized": false,
+  "stack_source": "industry_defaults",
+  "teams": [
+    "SOC",
+    "IAM",
+    "Email",
+    "Endpoint",
+    "Cloud",
+    "Red Team",
+    "Executive",
+    "Compliance",
+    "IOCs"
+  ],
+  "public_url": "https://www.ktlystlabs.com/runs/kev-breaking-point-rubicon-founders-2026-04-10/",
+  "created_at": "2026-04-10T16:44:40Z"
+}

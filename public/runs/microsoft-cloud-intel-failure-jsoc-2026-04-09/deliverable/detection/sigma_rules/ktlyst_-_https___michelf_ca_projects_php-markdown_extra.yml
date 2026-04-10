@@ -1,0 +1,22 @@
+title: 'KTLYST - https://michelf.ca/projects/php-markdown/extra/'
+id: f4e91f71-2291-513a-8a29-114f936a873f
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 3
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 3'
+tags:
+    - attack.detection
+logsource:
+    category: proxy
+    product: any
+detection:
+    selection:
+        url|contains: 'https://michelf.ca/projects/php-markdown/extra/'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

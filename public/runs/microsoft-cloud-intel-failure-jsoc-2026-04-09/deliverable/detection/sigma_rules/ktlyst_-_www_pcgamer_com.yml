@@ -1,0 +1,22 @@
+title: 'KTLYST - www.pcgamer.com'
+id: 414bf139-ee17-558d-8cdc-c072449e9179
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 2
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 2'
+tags:
+    - attack.detection
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'www.pcgamer.com'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

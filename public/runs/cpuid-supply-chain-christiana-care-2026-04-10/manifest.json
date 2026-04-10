@@ -1,0 +1,23 @@
+{
+  "id": "cpuid-supply-chain-christiana-care-2026-04-10",
+  "date": "2026-04-10",
+  "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+  "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+  "company": "Christiana Care Health System",
+  "industry": "Healthcare / Regulated Health System",
+  "personalized": false,
+  "stack_source": "industry_defaults",
+  "teams": [
+    "SOC",
+    "IAM",
+    "Email",
+    "Endpoint",
+    "Cloud",
+    "Red Team",
+    "Executive",
+    "Compliance",
+    "IOCs"
+  ],
+  "public_url": "https://www.ktlystlabs.com/runs/cpuid-supply-chain-christiana-care-2026-04-10/",
+  "created_at": "2026-04-10T16:39:51Z"
+}

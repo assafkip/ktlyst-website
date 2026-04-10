@@ -1,0 +1,20 @@
+---
+attack_technique: T1547
+display_name: "Scan-and-report model bypass"
+atomic_tests:
+  - name: "KTLYST - Scan-and-report model bypass Simulation"
+    auto_generated_guid: 23cdf1c6-6e91-4fda-8acf-6b047640ef40
+    description: |
+      Simulates Scan-and-report model bypass technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

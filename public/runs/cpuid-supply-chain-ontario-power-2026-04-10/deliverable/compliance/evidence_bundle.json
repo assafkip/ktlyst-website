@@ -1,0 +1,75 @@
+{
+  "bundle_version": "1.0",
+  "generated": "2026-04-10T16:38:58.957688+00:00",
+  "generator": "KTLYST",
+  "advisory": {
+    "source": "value-drop-pipeline",
+    "report": "Advisory Extraction",
+    "processed_at": "2026-04-10T16:38:58.957688+00:00"
+  },
+  "target": {
+    "name": "Ontario Power Generation",
+    "industry": "Energy / Critical Infrastructure"
+  },
+  "extraction_summary": {
+    "total_indicators": 0,
+    "domains": 0,
+    "behavioral_patterns": 12,
+    "detection_rules": 7,
+    "platforms_compiled": [
+      "sentinel",
+      "splunk",
+      "sigma"
+    ]
+  },
+  "deliverables_produced": [
+    "cloud/azure_ad_hunt.kql",
+    "cloud/checklist.md",
+    "cloud/conditional_access_gaps.json",
+    "cloud/oauth_app_audit.kql",
+    "compliance/evidence_bundle.json",
+    "compliance/framework_mapping.csv",
+    "detection/sigma_rules/*.yml",
+    "detection/splunk_savedsearches.conf",
+    "email/defender_tenant_blocklist.csv",
+    "email/domains_blocklist.txt",
+    "email/m365_transport_rule.ps1",
+    "emulation/atomic_tests/*.yaml",
+    "emulation/attack_navigator_layer.json",
+    "emulation/detection_gap_matrix.md",
+    "emulation/emulation_plan.md",
+    "endpoint/crowdstrike_ioc_import.json",
+    "endpoint/visibility_assessment.md",
+    "executive/threat_brief.pdf",
+    "identity/checklist.md",
+    "identity/entra_conditional_access_policy.json",
+    "identity/entra_hunt_queries.kql",
+    "iocs/domains.csv",
+    "iocs/domains.stix.json",
+    "iocs/full_ioc_list.json",
+    "metadata/generation_audit.jsonl",
+    "metadata/source_advisory.json",
+    "metadata/stack_assessment.json",
+    "metadata/stack_decisions.json"
+  ],
+  "provenance": {
+    "extraction_mode": "dual-lane (scripted authoritative, LLM advisory)",
+    "validation_gates": "V-001 through V-005",
+    "source_type": "news_article",
+    "confidence_assessment": {
+      "claim_authenticity": "MODERATE",
+      "material_validity": "LOW",
+      "operational_impact": "LOW",
+      "regulatory_trigger": "LOW",
+      "claim_reasoning": "",
+      "material_reasoning": "",
+      "impact_reasoning": "",
+      "regulatory_reasoning": ""
+    }
+  },
+  "compliance_frameworks": [
+    "NERC CIP",
+    "TSA Pipeline Security",
+    "IEC 62443"
+  ]
+}

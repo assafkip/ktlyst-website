@@ -1,0 +1,33 @@
+{
+  "@odata.type": "#microsoft.graph.conditionalAccessPolicy",
+  "displayName": "KTLYST - Block Device Code Flow (NYS Office of Information Technology Services)",
+  "state": "enabledForReportingButNotEnforced",
+  "conditions": {
+    "applications": {
+      "includeApplications": [
+        "All"
+      ]
+    },
+    "authenticationFlows": {
+      "transferMethods": "deviceCodeFlow"
+    },
+    "users": {
+      "includeUsers": [
+        "All"
+      ],
+      "excludeGroups": []
+    }
+  },
+  "grantControls": {
+    "operator": "OR",
+    "builtInControls": [
+      "block"
+    ]
+  },
+  "metadata": {
+    "generatedBy": "KTLYST",
+    "generatedAt": "2026-04-09T20:09:50.553497+00:00",
+    "advisory": "Unit42 Device Code OAuth Phishing",
+    "note": "This policy is created in report-only mode. Review sign-in impact before enabling enforcement. Exclude service accounts and break-glass accounts as needed."
+  }
+}

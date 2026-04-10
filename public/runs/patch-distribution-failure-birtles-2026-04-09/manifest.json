@@ -1,0 +1,11 @@
+{
+  "id": "patch-distribution-failure-birtles-2026-04-09",
+  "date": "2026-04-09",
+  "title": "Microsoft Suspends Developer Accounts for High-Profile Open Source Projects, Blocking Patch Distribution",
+  "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-suspends-dev-accounts-for-high-profile-open-source-projects/",
+  "company": "Tokio Marine HCC",
+  "industry": "Insurance / Financial Services",
+  "teams": ["SOC", "IAM", "Email", "Endpoint", "Cloud", "Red Team", "Executive", "Compliance", "IOCs"],
+  "public_url": "https://www.ktlystlabs.com/runs/patch-distribution-failure-birtles-2026-04-09/",
+  "created_at": "2026-04-09T20:10:18Z"
+}

@@ -1,0 +1,25 @@
+title: 'KTLYST - Cobbled product deployment without security mapping'
+id: fe0d7dc0-339c-5cb7-a7ce-3b273acb0820
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1027.013
+logsource:
+    category: file_rename
+    product: windows
+detection:
+    selection:
+        TargetFilename|endswith:
+            - '.encrypted'
+            - '.locked'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

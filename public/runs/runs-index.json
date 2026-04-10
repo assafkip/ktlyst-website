@@ -104,5 +104,68 @@
     "source_url": "https://tldrsec.com/p/tldr-sec-323",
     "summary": "Full KTLYST run for Undisclosed: 9 team packages, platform-native files",
     "url": "/runs/tldrsec-323-ciso-efficiency-torrell-2026-04-09/"
+  },
+  {
+    "id": "cpuid-supply-chain-ontario-power-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-ontario-power-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-christiana-care-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for Christiana Care Health System: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-christiana-care-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-nys-jsoc-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for NYS Office of Information Technology Services: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-nys-jsoc-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-doordash-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for DoorDash: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-doordash-2026-04-10/"
+  },
+  {
+    "id": "kev-breaking-point-straumann-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Analysis of One Billion CISA KEV Remediation Records Exposes Limits of Human-Scale Security",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/",
+    "summary": "Full KTLYST run for Straumann Group: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/kev-breaking-point-straumann-2026-04-10/"
+  },
+  {
+    "id": "kev-breaking-point-spie-switzerland-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Analysis of One Billion CISA KEV Remediation Records Exposes Limits of Human-Scale Security",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/",
+    "summary": "Full KTLYST run for SPIE Switzerland: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/kev-breaking-point-spie-switzerland-2026-04-10/"
+  },
+  {
+    "id": "kev-breaking-point-rubicon-founders-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Analysis of One Billion CISA KEV Remediation Records Exposes Limits of Human-Scale Security",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/",
+    "summary": "Full KTLYST run for Rubicon Founders: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/kev-breaking-point-rubicon-founders-2026-04-10/"
   }
 ]

@@ -1,0 +1,24 @@
+title: 'KTLYST - Critical security update blockage through platform control'
+id: 933c975d-3615-5bca-8565-235537989cd9
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+logsource:
+    category: authentication
+    product: any
+detection:
+    selection:
+        status: 'failure'
+    filter_low_count:
+        count|gte: 5
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

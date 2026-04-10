@@ -1,0 +1,15 @@
+{
+  "type": "bundle",
+  "id": "bundle--92a63593-876e-4aa5-84f7-8a71fbbb5b82",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "created": "2026-04-10T16:42:44.000Z",
+      "modified": "2026-04-10T16:42:44.000Z",
+      "name": "KTLYST",
+      "identity_class": "system"
+    }
+  ]
+}
