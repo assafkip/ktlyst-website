@@ -213,6 +213,16 @@
         "TG_API_HASH": "YOUR_TELEGRAM_API_HASH"
       }
     },
+    "_obsidian": {
+      "_comment": "Rename to 'obsidian' to enable. Requires Obsidian Local REST API plugin. Get key from plugin settings.",
+      "command": "uvx",
+      "args": [
+        "mcp-obsidian"
+      ],
+      "env": {
+        "OBSIDIAN_API_KEY": "YOUR_OBSIDIAN_API_KEY"
+      }
+    },
     "_playwright": {
       "_comment": "Rename to 'playwright' to enable. Browser automation alternative to Chrome MCP.",
       "command": "npx",
@@ -252,5 +262,5 @@
       ]
     }
   },
-  "_recommended_plugins": "Enable these in Claude Code plugin manager: document-skills@anthropic-agent-skills, Notion@claude-plugins-official, github@claude-plugins-official"
+  "_recommended_plugins": "Enable these in Claude Code plugin manager: document-skills@anthropic-agent-skills, Notion@claude-plugins-official (if using Notion CRM), github@claude-plugins-official"
 }

@@ -26,7 +26,6 @@ kipi-system/                          # Project root (skeleton/template repo + m
 ├── build-template-repo.sh            # Builds clean template for GitHub fork users
 ├── validate-separation.py            # Validation harness (used by kipi check)
 ├── instance-registry.json            # Registered project instances
-├── skill-manifest.json               # Plugin group assignments per instance
 ├── settings-template.json            # Template for new instances
 │
 ├── sites/                            # Vercel-deployed skill landing pages (GITIGNORED content)
@@ -36,18 +35,14 @@ kipi-system/                          # Project root (skeleton/template repo + m
 │
 ├── plugins/                          # Plugin groups (loaded directly from disk)
 │   ├── kipi-core/                    # Core (every instance)
-│   │   ├── .claude-plugin/plugin.json
 │   │   └── skills/
 │   │       ├── audhd-executive-function/
 │   │       ├── founder-voice/
 │   │       └── research-mode/
 │   ├── kipi-ops/                     # Operations (GTM instances)
-│   │   ├── .claude-plugin/plugin.json
 │   │   └── skills/
-│   │       ├── council/
-│   │       └── customer-fit-review/
+│   │       └── council/
 │   └── kipi-design/                  # Design (UI/visual instances)
-│       ├── .claude-plugin/plugin.json
 │       └── skills/
 │           ├── ui-ux-pro-max/
 │           ├── brand/
@@ -62,7 +57,7 @@ kipi-system/                          # Project root (skeleton/template repo + m
 │   │
 │   ├── agents/                       # Custom agent definitions
 │   │   ├── preflight.md              # Haiku - pipeline gate-keeper
-│   │   ├── data-ingest.md            # Haiku - calendar/email/Notion pulls
+│   │   ├── data-ingest.md            # Haiku - calendar/email/CRM pulls
 │   │   ├── engagement-hitlist.md     # Opus - copy-paste engagement actions
 │   │   ├── synthesizer.md            # Opus - daily schedule assembly
 │   │   └── content-reviewer.md       # Sonnet - 4-pass content review
@@ -71,10 +66,11 @@ kipi-system/                          # Project root (skeleton/template repo + m
 │   │   └── founder.md                # Entrepreneur OS voice baseline
 │   │
 │   ├── rules/                        # Path-scoped instruction files
-│   │   └── (15 files: anti-misclassification, audhd, auto-detection,
+│   │   └── (16 files: anti-misclassification, audhd-interaction, auto-detection,
 │   │        coding-standards, content-output, design-auto-invoke,
 │   │        dev-skills-auto-invoke, folder-structure, marketing-system,
-│   │        md-hygiene, morning-pipeline, security, sycophancy,
+│   │        md-hygiene, morning-pipeline, security,
+│   │        social-reaction-gate, sycophancy,
 │   │        token-discipline, voice-enforcement)
 │   │
 │   └── plans/                        # Plan mode output (auto-created, GITIGNORED)
@@ -82,6 +78,11 @@ kipi-system/                          # Project root (skeleton/template repo + m
 │
 ├── q-system/                         # Core operating system
 │   ├── CLAUDE.md                     # Q-system behavioral rules (<200 lines)
+│   ├── CRM-Dashboard.md              # Obsidian Dataview CRM queries
+│   ├── .obsidian/                    # Obsidian vault config (GITIGNORED, user-specific)
+│   ├── .obsidian-starter/            # Obsidian config template (committed)
+│   │   ├── app.json
+│   │   └── community-plugins.json
 │   │
 │   ├── canonical/                    # Source of truth (IMMUTABLE by agents)
 │   │   ├── decisions.md
@@ -143,6 +144,7 @@ kipi-system/                          # Project root (skeleton/template repo + m
 │   │   ├── morning-log-*.json
 │   │   ├── schedule-data-*.json
 │   │   ├── daily-schedule-*.html
+│   │   ├── prd-*.md                  # PRD documents (named prd-<slug>-YYYY-MM-DD.md)
 │   │   ├── session-effort-*.log
 │   │   └── .gitkeep
 │   │
@@ -215,6 +217,7 @@ kipi-system/                          # Project root (skeleton/template repo + m
 **New Python harness?** -> `q-system/.q-system/scripts/<name>.py` (if in scripts/) or `q-system/.q-system/<name>.py` (if top-level harness)
 **New canonical file?** -> `q-system/canonical/<name>.md`
 **New marketing template?** -> `q-system/marketing/templates/<name>.md`
+**New PRD?** -> `q-system/output/prd-<slug>-YYYY-MM-DD.md` (use template from `q-system/marketing/templates/prd.md`)
 **New onboarding guide?** -> `q-system/.q-system/onboarding/guides/connect-<tool>.md`
 
 ## Naming Conventions
@@ -230,6 +233,7 @@ kipi-system/                          # Project root (skeleton/template repo + m
 | Python scripts | kebab-case.py | `log-step.py` |
 | Bus files | kebab-case.json | `linkedin-posts.json` |
 | Output files | `type-YYYY-MM-DD.ext` | `morning-log-2026-04-02.json` |
+| PRD files | `prd-<slug>-YYYY-MM-DD.md` | `prd-usage-report-fixes-2026-04-09.md` |
 
 ## QROOT Resolution
 
