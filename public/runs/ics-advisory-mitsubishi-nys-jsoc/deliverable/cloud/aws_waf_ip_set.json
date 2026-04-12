@@ -1,0 +1,98 @@
+{
+  "resourceType": "AWS::WAFv2::Combined",
+  "name": "KTLYST-NYS-Office-of-Information-Technology-Services-Phishing-IOC-2026-04-12",
+  "scope": "REGIONAL",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-12T19:07:42.283375+00:00",
+  "createdFor": "NYS Office of Information Technology Services",
+  "resources": {
+    "ipSet": {
+      "type": "AWS::WAFv2::IPSet",
+      "name": "KTLYST-NYS-Office-of-Information-Technology-Services-PhishingDomains",
+      "scope": "REGIONAL",
+      "ipAddressVersion": "IPV4",
+      "addresses": [],
+      "note": "Populate addresses with A-record resolutions of the domain list below. KTLYST emits the domain list here because WAF cannot match domain strings directly; pair with a Lambda refresher that resolves and updates the IPSet every hour.",
+      "relatedDomains": [
+        "iconicsinc.my.site.com",
+        "www.mitsubishielectric.co.jp",
+        "www.mitsubishielectric.co.jp",
+        "iconicsinc.my.site.com",
+        "iconics.com",
+        "iconics.com",
+        "iconicsinc.my.site.com",
+        "www.mitsubishielectric.co.jp",
+        "www.mitsubishielectric.co.jp",
+        "iconicsinc.my.site.com",
+        "iconics.com",
+        "iconics.com",
+        "www.mitsubishielectric.co.jp",
+        "www.mitsubishielectric.co.jp",
+        "iconicsinc.my.site.com",
+        "www.mitsubishielectric.co.jp",
+        "www.mitsubishielectric.co.jp",
+        "iconicsinc.my.site.com",
+        "iconics.com",
+        "iconics.com",
+        "iconicsinc.my.site.com",
+        "www.mitsubishielectric.co.jp",
+        "www.mitsubishielectric.co.jp",
+        "iconicsinc.my.site.com",
+        "iconics.com",
+        "iconics.com",
+        "www.mitsubishielectric.co.jp",
+        "www.mitsubishielectric.co.jp"
+      ]
+    },
+    "ruleGroup": {
+      "type": "AWS::WAFv2::RuleGroup",
+      "name": "KTLYST-NYS-Office-of-Information-Technology-Services-PhishingRules",
+      "scope": "REGIONAL",
+      "capacity": 50,
+      "rules": [
+        {
+          "name": "BlockKtlystPhishingIOCs",
+          "priority": 1,
+          "action": {
+            "block": {}
+          },
+          "statement": {
+            "ipSetReferenceStatement": {
+              "arnRef": "KTLYST-PhishingDomains"
+            }
+          },
+          "visibilityConfig": {
+            "sampledRequestsEnabled": true,
+            "cloudWatchMetricsEnabled": true,
+            "metricName": "KtlystPhishingBlocks"
+          }
+        },
+        {
+          "name": "BlockAnonymousIPs",
+          "priority": 2,
+          "action": {
+            "block": {}
+          },
+          "statement": {
+            "managedRuleGroupStatement": {
+              "vendorName": "AWS",
+              "name": "AWSManagedRulesAnonymousIpList"
+            }
+          },
+          "overrideAction": {
+            "none": {}
+          },
+          "visibilityConfig": {
+            "sampledRequestsEnabled": true,
+            "cloudWatchMetricsEnabled": true,
+            "metricName": "KtlystAnonymousIPBlocks"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "indicator_count": 28,
+    "note": "Deploy to a non-production WebACL first. Block action is immediate; CloudWatch metrics give you FP rate before rolling to prod."
+  }
+}

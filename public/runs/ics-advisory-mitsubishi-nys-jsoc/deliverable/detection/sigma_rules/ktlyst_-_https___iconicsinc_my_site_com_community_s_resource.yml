@@ -1,0 +1,22 @@
+title: 'KTLYST - https://iconicsinc.my.site.com/community/s/resource-center/p'
+id: ece8be7d-6a25-5143-b5ed-8bab3e640ce8
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 4
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 4'
+tags:
+    - attack.detection
+logsource:
+    category: proxy
+    product: any
+detection:
+    selection:
+        url|contains: 'https://iconicsinc.my.site.com/community/s/resource-center/product-downloads'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

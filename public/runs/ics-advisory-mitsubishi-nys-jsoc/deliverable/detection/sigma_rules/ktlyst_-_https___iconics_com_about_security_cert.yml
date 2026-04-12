@@ -1,0 +1,22 @@
+title: 'KTLYST - https://iconics.com/about/security/cert'
+id: 2b4ba6f0-0d03-5304-a9b2-a9255fce479c
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 4
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 4'
+tags:
+    - attack.detection
+logsource:
+    category: proxy
+    product: any
+detection:
+    selection:
+        url|contains: 'https://iconics.com/about/security/cert'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

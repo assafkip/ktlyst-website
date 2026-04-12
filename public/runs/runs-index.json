@@ -1,100 +1,57 @@
 [
   {
-    "id": "apt28-dns-hijack-2026-04-08",
-    "date": "2026-04-08",
-    "title": "APT28 DNS Hijacking Operations",
-    "source": "www.ncsc.gov.uk",
-    "summary": "KTLYST extraction: 9 team packages from advisory analysis",
-    "url": "/runs/apt28-dns-hijack-2026-04-08/"
+    "id": "iranian-plc-exploitation-spie-energy",
+    "date": "2026-04-12",
+    "title": "Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a",
+    "summary": "Full KTLYST run for SPIE Switzerland: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/iranian-plc-exploitation-spie-energy/"
   },
   {
-    "id": "apt28-opg-2026-04-08",
-    "date": "2026-04-08",
-    "title": "APT28 DNS Hijacking Operations",
-    "source": "www.ncsc.gov.uk",
-    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files",
-    "url": "/runs/apt28-opg-2026-04-08/"
+    "id": "iranian-plc-exploitation-ontario-power",
+    "date": "2026-04-12",
+    "title": "Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a",
+    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/iranian-plc-exploitation-ontario-power/"
   },
   {
-    "id": "credential-theft-mfa-bypass-2026-04-09",
-    "date": "2026-04-09",
-    "title": "When Attackers Already Have the Keys: MFA Bypass via Session Hijacking",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/security/when-attackers-already-have-the-keys-mfa-is-just-another-door-to-open/",
-    "summary": "Full KTLYST run for Poppy Bank: 9 team packages, platform-native files",
-    "url": "/runs/credential-theft-mfa-bypass-2026-04-09/"
+    "id": "iranian-plc-exploitation-kennametal-manufacturing",
+    "date": "2026-04-12",
+    "title": "Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a",
+    "summary": "Full KTLYST run for Kennametal: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/iranian-plc-exploitation-kennametal-manufacturing/"
   },
   {
-    "id": "microsoft-cloud-intel-failure-jsoc-2026-04-09",
-    "date": "2026-04-09",
-    "title": "Federal Evaluators Found Serious Security Gaps in Microsoft Cloud - FedRAMP Authorized Anyway",
-    "source": "www.schneier.com",
-    "source_url": "https://www.schneier.com/blog/archives/2026/04/on-microsofts-lousy-cloud-security.html",
-    "summary": "Full KTLYST run for NYS Office of Information Technology Services: 9 team packages, platform-native files",
-    "url": "/runs/microsoft-cloud-intel-failure-jsoc-2026-04-09/"
+    "id": "iranian-plc-exploitation-enigma-ot-ciso",
+    "date": "2026-04-12",
+    "title": "Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a",
+    "summary": "Full KTLYST run for Enigma SOI: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/iranian-plc-exploitation-enigma-ot-ciso/"
   },
   {
-    "id": "credential-theft-dosepsot-2026-04-09",
-    "date": "2026-04-09",
-    "title": "When Attackers Already Have the Keys: MFA Bypass via Session Hijacking",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/security/when-attackers-already-have-the-keys-mfa-is-just-another-door-to-open/",
-    "summary": "Full KTLYST run for DoseSpot: 9 team packages, platform-native files",
-    "url": "/runs/credential-theft-dosepsot-2026-04-09/"
+    "id": "ics-advisory-mitsubishi-nys-jsoc",
+    "date": "2026-04-12",
+    "title": "Mitsubishi Electric GENESIS64 and ICONICS Suite Products ICS Advisory",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-097-01",
+    "summary": "Full KTLYST run for NYS Office of Information Technology Services: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/ics-advisory-mitsubishi-nys-jsoc/"
   },
   {
-    "id": "microsoft-cloud-intel-failure-latimes-2026-04-09",
-    "date": "2026-04-09",
-    "title": "Federal Evaluators Found Serious Security Gaps in Microsoft Cloud - FedRAMP Authorized Anyway",
-    "source": "www.schneier.com",
-    "source_url": "https://www.schneier.com/blog/archives/2026/04/on-microsofts-lousy-cloud-security.html",
-    "summary": "Full KTLYST run for Los Angeles Times: 9 team packages, platform-native files",
-    "url": "/runs/microsoft-cloud-intel-failure-latimes-2026-04-09/"
-  },
-  {
-    "id": "patch-distribution-failure-birtles-2026-04-09",
-    "date": "2026-04-09",
-    "title": "Microsoft Suspends Developer Accounts for High-Profile Open Source Projects, Blocking Patch Distribution",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-suspends-dev-accounts-for-high-profile-open-source-projects/",
-    "summary": "Full KTLYST run for Tokio Marine HCC: 9 team packages, platform-native files",
-    "url": "/runs/patch-distribution-failure-birtles-2026-04-09/"
-  },
-  {
-    "id": "cpuid-supply-chain-ontario-power-2026-04-10",
-    "date": "2026-04-10",
-    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
-    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files (industry defaults)",
-    "url": "/runs/cpuid-supply-chain-ontario-power-2026-04-10/"
-  },
-  {
-    "id": "cpuid-supply-chain-christiana-care-2026-04-10",
-    "date": "2026-04-10",
-    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
-    "summary": "Full KTLYST run for Christiana Care Health System: 9 team packages, platform-native files (industry defaults)",
-    "url": "/runs/cpuid-supply-chain-christiana-care-2026-04-10/"
-  },
-  {
-    "id": "cpuid-supply-chain-nys-jsoc-2026-04-10",
-    "date": "2026-04-10",
-    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
-    "summary": "Full KTLYST run for NYS Office of Information Technology Services: 9 team packages, platform-native files (industry defaults)",
-    "url": "/runs/cpuid-supply-chain-nys-jsoc-2026-04-10/"
-  },
-  {
-    "id": "cpuid-supply-chain-doordash-2026-04-10",
-    "date": "2026-04-10",
-    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
-    "summary": "Full KTLYST run for DoorDash: 9 team packages, platform-native files (industry defaults)",
-    "url": "/runs/cpuid-supply-chain-doordash-2026-04-10/"
+    "id": "ics-advisory-contemporary-controls-ontario-power",
+    "date": "2026-04-12",
+    "title": "Contemporary Controls BASC 20T ICS Advisory",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-099-01",
+    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/ics-advisory-contemporary-controls-ontario-power/"
   },
   {
     "id": "kev-breaking-point-straumann-2026-04-10",
@@ -122,5 +79,104 @@
     "source_url": "https://www.bleepingcomputer.com/news/security/analysis-of-one-billion-cisa-kev-remediation-records-exposes-limits-of-human-scale-security/",
     "summary": "Full KTLYST run for Rubicon Founders: 9 team packages, platform-native files (industry defaults)",
     "url": "/runs/kev-breaking-point-rubicon-founders-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-ontario-power-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-ontario-power-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-nys-jsoc-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for NYS Office of Information Technology Services: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-nys-jsoc-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-doordash-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for DoorDash: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-doordash-2026-04-10/"
+  },
+  {
+    "id": "cpuid-supply-chain-christiana-care-2026-04-10",
+    "date": "2026-04-10",
+    "title": "Supply Chain Attack at CPUID Pushes Malware with CPU-Z, HWMonitor",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/supply-chain-attack-at-cpuid-pushes-malware-with-cpu-z-hwmonitor/",
+    "summary": "Full KTLYST run for Christiana Care Health System: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cpuid-supply-chain-christiana-care-2026-04-10/"
+  },
+  {
+    "id": "patch-distribution-failure-birtles-2026-04-09",
+    "date": "2026-04-09",
+    "title": "Microsoft Suspends Developer Accounts for High-Profile Open Source Projects, Blocking Patch Distribution",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-suspends-dev-accounts-for-high-profile-open-source-projects/",
+    "summary": "Full KTLYST run for Tokio Marine HCC: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/patch-distribution-failure-birtles-2026-04-09/"
+  },
+  {
+    "id": "microsoft-cloud-intel-failure-latimes-2026-04-09",
+    "date": "2026-04-09",
+    "title": "Federal Evaluators Found Serious Security Gaps in Microsoft Cloud - FedRAMP Authorized Anyway",
+    "source": "www.schneier.com",
+    "source_url": "https://www.schneier.com/blog/archives/2026/04/on-microsofts-lousy-cloud-security.html",
+    "summary": "Full KTLYST run for Los Angeles Times: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/microsoft-cloud-intel-failure-latimes-2026-04-09/"
+  },
+  {
+    "id": "microsoft-cloud-intel-failure-jsoc-2026-04-09",
+    "date": "2026-04-09",
+    "title": "Federal Evaluators Found Serious Security Gaps in Microsoft Cloud - FedRAMP Authorized Anyway",
+    "source": "www.schneier.com",
+    "source_url": "https://www.schneier.com/blog/archives/2026/04/on-microsofts-lousy-cloud-security.html",
+    "summary": "Full KTLYST run for NYS Office of Information Technology Services: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/microsoft-cloud-intel-failure-jsoc-2026-04-09/"
+  },
+  {
+    "id": "credential-theft-mfa-bypass-2026-04-09",
+    "date": "2026-04-09",
+    "title": "When Attackers Already Have the Keys: MFA Bypass via Session Hijacking",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/when-attackers-already-have-the-keys-mfa-is-just-another-door-to-open/",
+    "summary": "Full KTLYST run for Poppy Bank: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/credential-theft-mfa-bypass-2026-04-09/"
+  },
+  {
+    "id": "credential-theft-dosepsot-2026-04-09",
+    "date": "2026-04-09",
+    "title": "When Attackers Already Have the Keys: MFA Bypass via Session Hijacking",
+    "source": "www.bleepingcomputer.com",
+    "source_url": "https://www.bleepingcomputer.com/news/security/when-attackers-already-have-the-keys-mfa-is-just-another-door-to-open/",
+    "summary": "Full KTLYST run for DoseSpot: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/credential-theft-dosepsot-2026-04-09/"
+  },
+  {
+    "id": "apt28-opg-2026-04-08",
+    "date": "2026-04-08",
+    "title": "APT28 DNS Hijacking Operations",
+    "source": "www.ncsc.gov.uk",
+    "source_url": "https://www.ncsc.gov.uk/news/apt28-exploit-routers-to-enable-dns-hijacking-operations",
+    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/apt28-opg-2026-04-08/"
+  },
+  {
+    "id": "apt28-dns-hijack-2026-04-08",
+    "date": "2026-04-08",
+    "title": "APT28 DNS Hijacking Operations",
+    "source": "www.ncsc.gov.uk",
+    "source_url": "https://www.ncsc.gov.uk/news/apt28-exploit-routers-to-enable-dns-hijacking-operations",
+    "summary": "Full KTLYST run for : 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/apt28-dns-hijack-2026-04-08/"
   }
 ]

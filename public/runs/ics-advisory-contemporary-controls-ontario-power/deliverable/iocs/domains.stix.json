@@ -1,0 +1,35 @@
+{
+  "type": "bundle",
+  "id": "bundle--ec98a931-d18f-42c5-98cd-79a8ef2bb04b",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "created": "2026-04-12T19:07:28.000Z",
+      "modified": "2026-04-12T19:07:28.000Z",
+      "name": "KTLYST",
+      "identity_class": "system"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--87f0b2ca-a4ec-5826-b4e0-27a83505acc2",
+      "created": "2026-04-12T19:07:28.000Z",
+      "modified": "2026-04-12T19:07:28.000Z",
+      "name": "Malicious domain: www.ccontrols.com",
+      "pattern": "[domain-name:value = 'www.ccontrols.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-04-12T19:07:28.000Z",
+      "created_by_ref": "identity--8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef",
+      "labels": [
+        "malicious-activity"
+      ],
+      "external_references": [
+        {
+          "source_name": "value-drop-pipeline"
+        }
+      ]
+    }
+  ]
+}

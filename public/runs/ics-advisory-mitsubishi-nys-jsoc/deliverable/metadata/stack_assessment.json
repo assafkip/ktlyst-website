@@ -1,0 +1,22 @@
+{
+  "name": "NYS Office of Information Technology Services",
+  "industry": "government",
+  "description": "NYS Office of Information Technology Services - government",
+  "inferred_stack": {
+    "email": "Microsoft 365 (Exchange Online)",
+    "identity": "Google Workspace",
+    "cloud": "Google Cloud / AWS",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Chronicle / Splunk (likely)",
+    "additional_tools": {
+      "contracts": "DocuSign",
+      "project_mgmt": "Atlassian (Jira/Confluence)"
+    }
+  },
+  "compliance": [
+    "FISMA",
+    "FedRAMP",
+    "NIST 800-53",
+    "CMMC"
+  ]
+}

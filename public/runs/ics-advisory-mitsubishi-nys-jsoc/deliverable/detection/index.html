@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KTLYST - SOC / Detection - NYS Office of Information Technology Services</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 24px 16px;
+  background: #0a0e1a;
+  color: #e6edf3;
+  line-height: 1.45;
+}
+.container { max-width: 720px; margin: 0 auto; }
+.back {
+  display: inline-block;
+  font-size: 12px;
+  color: #8b9bb4;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.back:hover { color: #4a7fbf; }
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b9bb4;
+  margin-bottom: 8px;
+}
+h1.title { font-size: 22px; font-weight: 700; margin: 0 0 6px 0; }
+.summary { font-size: 13px; color: #b8c5d6; margin: 0 0 4px 0; }
+.breadcrumb { font-size: 11px; color: #6b7a90; margin: 0; }
+ul.files {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+ul.files li { margin-bottom: 8px; }
+a.file {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  background: #131826;
+  border: 1px solid #1f2738;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+a.file:hover { border-color: #4a7fbf; }
+.file-name { font-size: 13px; font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.file-desc { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../teaser.html">&larr; Back to overview</a>
+    <div class="eyebrow">KTLYST Value Drop</div>
+    <h1 class="title">SOC / Detection</h1>
+    <p class="summary">Sentinel, Splunk, Sigma, and Elastic rules ready to import</p>
+    <p class="breadcrumb">NYS Office of Information Technology Services &middot; Advisory Extraction</p>
+    <ul class="files">
+        <li><a class="file" href="sigma_rules/ktlyst_-_credential_harvesting_from_genesis_sqlite_cache.yml"><span class="file-name">sigma_rules/ktlyst_-_credential_harvesting_from_genesis_sqlite_cache.yml</span><span class="file-desc">ktlyst   credential harvesting from genesis sqlite cache (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_gui-based_credential_exposure_through_hyper_histori.yml"><span class="file-name">sigma_rules/ktlyst_-_gui-based_credential_exposure_through_hyper_histori.yml</span><span class="file-desc">ktlyst   gui based credential exposure through hyper histori (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_https___iconics_com_about_security_cert.yml"><span class="file-name">sigma_rules/ktlyst_-_https___iconics_com_about_security_cert.yml</span><span class="file-desc">ktlyst   https   iconics com about security cert (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_https___iconicsinc_my_site_com_community_s_resource.yml"><span class="file-name">sigma_rules/ktlyst_-_https___iconicsinc_my_site_com_community_s_resource.yml</span><span class="file-desc">ktlyst   https   iconicsinc my site com community s resource (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_https___www_mitsubishielectric_co_jp_psirt_vulnerab.yml"><span class="file-name">sigma_rules/ktlyst_-_https___www_mitsubishielectric_co_jp_psirt_vulnerab.yml</span><span class="file-desc">ktlyst   https   www mitsubishielectric co jp psirt vulnerab (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_iconics_com.yml"><span class="file-name">sigma_rules/ktlyst_-_iconics_com.yml</span><span class="file-desc">ktlyst   iconics com (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_iconicsinc_my_site_com.yml"><span class="file-name">sigma_rules/ktlyst_-_iconicsinc_my_site_com.yml</span><span class="file-desc">ktlyst   iconicsinc my site com (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_local_credential_harvesting_from_sqlite_cache_files.yml"><span class="file-name">sigma_rules/ktlyst_-_local_credential_harvesting_from_sqlite_cache_files.yml</span><span class="file-desc">ktlyst   local credential harvesting from sqlite cache files (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_multi-vector_attack_combining_network_and_local_acc.yml"><span class="file-name">sigma_rules/ktlyst_-_multi-vector_attack_combining_network_and_local_acc.yml</span><span class="file-desc">ktlyst   multi vector attack combining network and local acc (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_network-based_attack_progression_to_credential_thef.yml"><span class="file-name">sigma_rules/ktlyst_-_network-based_attack_progression_to_credential_thef.yml</span><span class="file-desc">ktlyst   network based attack progression to credential thef (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_physical_access_exploitation_for_credential_harvest.yml"><span class="file-name">sigma_rules/ktlyst_-_physical_access_exploitation_for_credential_harvest.yml</span><span class="file-desc">ktlyst   physical access exploitation for credential harvest (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_privilege_escalation_through_credential_reuse.yml"><span class="file-name">sigma_rules/ktlyst_-_privilege_escalation_through_credential_reuse.yml</span><span class="file-desc">ktlyst   privilege escalation through credential reuse (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_social_engineering_to_gain_initial_system_access.yml"><span class="file-name">sigma_rules/ktlyst_-_social_engineering_to_gain_initial_system_access.yml</span><span class="file-desc">ktlyst   social engineering to gain initial system access (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_www_mitsubishielectric_co_jp.yml"><span class="file-name">sigma_rules/ktlyst_-_www_mitsubishielectric_co_jp.yml</span><span class="file-desc">ktlyst   www mitsubishielectric co jp (YML)</span></a></li>
+        <li><a class="file" href="splunk_savedsearches.conf"><span class="file-name">splunk_savedsearches.conf</span><span class="file-desc">splunk savedsearches (CONF)</span></a></li>
+    </ul>
+  </div>
+  
+</body>
+</html>
