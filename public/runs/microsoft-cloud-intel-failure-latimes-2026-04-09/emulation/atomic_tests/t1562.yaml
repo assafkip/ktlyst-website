@@ -1,0 +1,20 @@
+---
+attack_technique: T1562
+display_name: "Documentation evasion leading to regulatory approval bypass"
+atomic_tests:
+  - name: "KTLYST - Documentation evasion leading to regulatory approval bypass Simulation"
+    auto_generated_guid: 517ddf26-05ae-4978-a71a-2644573ac821
+    description: |
+      Simulates Documentation evasion leading to regulatory approval bypass technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

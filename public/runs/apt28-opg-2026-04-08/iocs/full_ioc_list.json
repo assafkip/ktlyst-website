@@ -1,0 +1,42 @@
+{
+  "generated": "2026-04-08T23:17:43.219932+00:00",
+  "source": "value-drop-pipeline",
+  "report": "Advisory Extraction",
+  "domains": [
+    {
+      "type": "domain",
+      "value": "www.googletagmanager.com",
+      "page": 1,
+      "start": 1220,
+      "end": 1244,
+      "context": "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);"
+    },
+    {
+      "type": "domain",
+      "value": "advisory.It",
+      "page": 2,
+      "start": 4700,
+      "end": 4711,
+      "context": "data may originate from further infrastructure not listed in this advisory.It is believed that the DNS"
+    },
+    {
+      "type": "domain",
+      "value": "office365.com",
+      "page": 3,
+      "start": 2973,
+      "end": 2986,
+      "context": "ok.comimap-mail.outlook.comoutlook.live.comoutlook.office.comoutlook.office365.com APT28"
+    },
+    {
+      "type": "domain",
+      "value": "GOV.UK",
+      "page": 5,
+      "start": 2229,
+      "end": 2235,
+      "context": "Can&#039;t find what you&#039;re looking for? Useful links GCHQ MI5 SIS NPSA GOV.UK {\"path\":{\"b"
+    }
+  ],
+  "tools": [],
+  "total_domains": 4,
+  "total_tools": 0
+}

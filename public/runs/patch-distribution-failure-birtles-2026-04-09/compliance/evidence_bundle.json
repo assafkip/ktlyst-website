@@ -1,0 +1,73 @@
+{
+  "bundle_version": "1.0",
+  "generated": "2026-04-09T20:10:18.863614+00:00",
+  "generator": "KTLYST",
+  "advisory": {
+    "source": "value-drop-pipeline",
+    "report": "Advisory Extraction",
+    "processed_at": "2026-04-09T20:10:18.863614+00:00"
+  },
+  "target": {
+    "name": "Tokio Marine HCC",
+    "industry": "Insurance / Financial Services"
+  },
+  "extraction_summary": {
+    "total_indicators": 0,
+    "domains": 0,
+    "behavioral_patterns": 5,
+    "detection_rules": 1,
+    "platforms_compiled": [
+      "sentinel",
+      "splunk",
+      "sigma"
+    ]
+  },
+  "deliverables_produced": [
+    "executive/threat_brief.pdf",
+    "detection/sentinel_rules.json",
+    "detection/sentinel_watchlist.csv",
+    "detection/splunk_savedsearches.conf",
+    "detection/sigma_rules/*.yml",
+    "detection/elastic_rules.ndjson",
+    "identity/entra_conditional_access_policy.json",
+    "identity/entra_hunt_queries.kql",
+    "identity/okta_policy_recommendation.json",
+    "email/domains_blocklist.txt",
+    "email/m365_transport_rule.ps1",
+    "email/defender_tenant_blocklist.csv",
+    "endpoint/crowdstrike_ioc_import.json",
+    "endpoint/mde_ioc_import.csv",
+    "endpoint/visibility_assessment.md",
+    "cloud/azure_ad_hunt.kql",
+    "cloud/oauth_app_audit.kql",
+    "cloud/conditional_access_gaps.json",
+    "emulation/attack_navigator_layer.json",
+    "emulation/atomic_tests/*.yaml",
+    "emulation/emulation_plan.md",
+    "emulation/detection_gap_matrix.md",
+    "compliance/framework_mapping.csv",
+    "compliance/evidence_bundle.json",
+    "iocs/domains.csv",
+    "iocs/domains.stix.json",
+    "iocs/full_ioc_list.json"
+  ],
+  "provenance": {
+    "extraction_mode": "dual-lane (scripted authoritative, LLM advisory)",
+    "validation_gates": "V-001 through V-005",
+    "source_type": "vendor_notification",
+    "confidence_assessment": {
+      "claim_authenticity": "HIGH",
+      "material_validity": "HIGH",
+      "operational_impact": "MODERATE",
+      "regulatory_trigger": "MODERATE",
+      "claim_reasoning": "",
+      "material_reasoning": "",
+      "impact_reasoning": "",
+      "regulatory_reasoning": ""
+    }
+  },
+  "compliance_frameworks": [
+    "SOC 2 Type II",
+    "ISO 27001"
+  ]
+}

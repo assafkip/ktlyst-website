@@ -1,0 +1,23 @@
+title: 'KTLYST - Scan-and-report model bypass'
+id: 9798aa45-5a88-5484-adcd-4eccfd6340ff
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1547
+logsource:
+    category: registry_set
+    product: windows
+detection:
+    selection:
+        TargetObject|contains: 'CurrentVersion\Run'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

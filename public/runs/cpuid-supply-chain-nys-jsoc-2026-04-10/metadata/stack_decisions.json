@@ -1,0 +1,224 @@
+{
+  "stack": {
+    "email": "Google Workspace",
+    "identity": "Okta",
+    "cloud": "AWS / GCP",
+    "edr": "CrowdStrike Falcon",
+    "siem": "Splunk / Datadog"
+  },
+  "gate_count": 14,
+  "decisions": [
+    {
+      "file": "detection/sentinel_rules.json",
+      "emitted": false,
+      "reason": "skipped: siem='splunk / datadog' does not match ['sentinel']"
+    },
+    {
+      "file": "detection/sentinel_watchlist.csv",
+      "emitted": false,
+      "reason": "skipped: siem='splunk / datadog' does not match ['sentinel']"
+    },
+    {
+      "file": "detection/splunk_savedsearches.conf",
+      "emitted": true,
+      "reason": "siem='splunk / datadog' matches 'splunk'"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_api_compromise_leading_to_download_link_manipulatio.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_supply_chain_attack_via_compromised_distribution_in.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_file_masquerading_with_legitimate_software_branding.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_multi-staged_malware_deployment_with_memory_executi.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_edr_av_evasion_through_ntdll_proxying.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_opportunistic_timing_exploitation_during_maintenanc.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_cross-platform_utility_targeting_campaign.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_cloudflare_r2_abuse_for_malware_hosting.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_russian_installer_deployment_with_setup_wrapper.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_selective_link_poisoning_while_preserving_originals.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_information_stealing_through_trojanized_system_util.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_advanced_loader_deployment_with_known_ttps.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/elastic_rules.ndjson",
+      "emitted": false,
+      "reason": "skipped: siem='splunk / datadog' does not match ['elastic']"
+    },
+    {
+      "file": "identity/entra_conditional_access_policy.json",
+      "emitted": false,
+      "reason": "skipped: identity='okta' does not match ['entra', 'microsoft', 'azure ad']"
+    },
+    {
+      "file": "identity/entra_hunt_queries.kql",
+      "emitted": false,
+      "reason": "skipped: identity='okta' does not match ['entra', 'microsoft', 'azure ad']"
+    },
+    {
+      "file": "identity/okta_policy_recommendation.json",
+      "emitted": true,
+      "reason": "identity='okta' matches 'okta'"
+    },
+    {
+      "file": "email/domains_blocklist.txt",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "email/m365_transport_rule.ps1",
+      "emitted": false,
+      "reason": "skipped: email='google workspace' does not match ['microsoft 365', 'm365', 'office 365']"
+    },
+    {
+      "file": "email/defender_tenant_blocklist.csv",
+      "emitted": false,
+      "reason": "skipped: email='google workspace' does not match ['microsoft 365', 'm365', 'office 365']"
+    },
+    {
+      "file": "endpoint/crowdstrike_ioc_import.json",
+      "emitted": true,
+      "reason": "edr='crowdstrike falcon' matches 'crowdstrike'"
+    },
+    {
+      "file": "endpoint/mde_ioc_import.csv",
+      "emitted": false,
+      "reason": "skipped: edr='crowdstrike falcon' does not match ['microsoft defender', 'defender for endpoint', 'mde']"
+    },
+    {
+      "file": "endpoint/visibility_assessment.md",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "cloud/azure_ad_hunt.kql",
+      "emitted": false,
+      "reason": "skipped: cloud='aws / gcp' does not match ['azure', 'microsoft']"
+    },
+    {
+      "file": "cloud/oauth_app_audit.kql",
+      "emitted": false,
+      "reason": "skipped: cloud='aws / gcp' does not match ['azure', 'microsoft']"
+    },
+    {
+      "file": "cloud/conditional_access_gaps.json",
+      "emitted": false,
+      "reason": "skipped: identity='okta' does not match ['entra', 'microsoft', 'azure ad']"
+    },
+    {
+      "file": "emulation/attack_navigator_layer.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1036_005.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1195.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1562.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1595.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1041.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/emulation_plan.md",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/detection_gap_matrix.md",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "compliance/framework_mapping.csv",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "iocs/domains.csv",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "iocs/domains.stix.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "iocs/full_ioc_list.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "metadata/source_advisory.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "metadata/stack_assessment.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    }
+  ],
+  "emitted_count": 31,
+  "skipped_count": 11
+}

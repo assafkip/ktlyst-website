@@ -1,0 +1,20 @@
+---
+attack_technique: T1027.013
+display_name: "Cobbled product deployment without security mapping"
+atomic_tests:
+  - name: "KTLYST - Cobbled product deployment without security mapping Simulation"
+    auto_generated_guid: c18c7c85-572f-438d-8c5f-5fac32d7da38
+    description: |
+      Simulates Cobbled product deployment without security mapping technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

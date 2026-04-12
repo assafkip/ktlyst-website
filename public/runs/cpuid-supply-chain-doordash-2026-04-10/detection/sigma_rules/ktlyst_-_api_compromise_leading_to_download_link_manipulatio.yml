@@ -1,0 +1,26 @@
+title: 'KTLYST - API compromise leading to download link manipulation'
+id: 19d4898e-d6b8-54c5-8a72-091f787a5d6a
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1036.005
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains|any:
+            - 'Set-MpPreference'
+            - 'DisableRealtimeMonitoring'
+            - '-ep bypass'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

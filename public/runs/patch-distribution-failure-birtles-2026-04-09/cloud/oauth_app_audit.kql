@@ -1,0 +1,39 @@
+// KTLYST OAuth App Audit Queries
+// Generated: 2026-04-09
+
+// ================================================================
+// Audit 1: Recent OAuth app consents
+// ================================================================
+AuditLogs
+| where TimeGenerated >= ago(30d)
+| where OperationName has "Consent to application"
+| extend AppName = TargetResources[0].displayName
+| extend AppId = TargetResources[0].id
+| extend ConsentedBy = InitiatedBy.user.userPrincipalName
+| extend Permissions = TargetResources[0].modifiedProperties
+| project TimeGenerated, AppName, AppId, ConsentedBy, Permissions
+| order by TimeGenerated desc
+
+// ================================================================
+// Audit 2: Apps with high-risk permissions
+// ================================================================
+AuditLogs
+| where TimeGenerated >= ago(90d)
+| where OperationName has "Add app role assignment"
+| extend AppName = TargetResources[0].displayName
+| extend Permission = TargetResources[0].modifiedProperties[0].newValue
+| where Permission has_any ("Mail.Read", "Mail.ReadWrite",
+    "Files.ReadWrite.All", "User.Read.All", "Directory.Read.All")
+| project TimeGenerated, AppName, Permission
+| order by TimeGenerated desc
+
+// ================================================================
+// Audit 3: Enterprise apps added in last 30 days
+// ================================================================
+AuditLogs
+| where TimeGenerated >= ago(30d)
+| where OperationName == "Add service principal"
+| extend AppName = TargetResources[0].displayName
+| extend CreatedBy = InitiatedBy.user.userPrincipalName
+| project TimeGenerated, AppName, CreatedBy
+| order by TimeGenerated desc

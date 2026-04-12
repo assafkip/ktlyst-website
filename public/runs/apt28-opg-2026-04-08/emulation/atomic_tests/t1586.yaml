@@ -1,0 +1,20 @@
+---
+attack_technique: T1586
+display_name: "Selective domain redirection for stealth"
+atomic_tests:
+  - name: "KTLYST - Selective domain redirection for stealth Simulation"
+    auto_generated_guid: 2bd22314-3353-4140-84df-6e0061bf5eac
+    description: |
+      Simulates Selective domain redirection for stealth technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

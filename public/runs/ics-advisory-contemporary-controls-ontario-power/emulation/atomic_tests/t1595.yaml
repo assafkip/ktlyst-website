@@ -1,0 +1,20 @@
+---
+attack_technique: T1595
+display_name: "PLC enumeration to system manipulation sequence"
+atomic_tests:
+  - name: "KTLYST - PLC enumeration to system manipulation sequence Simulation"
+    auto_generated_guid: 241fc061-1d5f-4870-9c5b-240ca268603f
+    description: |
+      Simulates PLC enumeration to system manipulation sequence technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

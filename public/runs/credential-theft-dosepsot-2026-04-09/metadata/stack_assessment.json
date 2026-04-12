@@ -1,0 +1,17 @@
+{
+  "name": "DoseSpot",
+  "industry": "Healthcare SaaS",
+  "description": "DoseSpot - Healthcare SaaS",
+  "inferred_stack": {
+    "email": "Microsoft 365 (Exchange Online)",
+    "identity": "Microsoft Entra ID (Azure AD)",
+    "cloud": "Microsoft Azure",
+    "edr": "CrowdStrike Falcon",
+    "siem": "Microsoft Sentinel"
+  },
+  "compliance": [
+    "HIPAA",
+    "HITECH",
+    "FDA 21 CFR Part 11"
+  ]
+}

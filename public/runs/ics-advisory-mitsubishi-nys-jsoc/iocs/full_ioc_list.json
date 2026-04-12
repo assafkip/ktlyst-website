@@ -1,0 +1,34 @@
+{
+  "generated": "2026-04-12T19:07:42.284834+00:00",
+  "source": "value-drop-pipeline",
+  "report": "Advisory Extraction",
+  "domains": [
+    {
+      "type": "domain",
+      "value": "iconicsinc.my.site.com",
+      "page": 1,
+      "start": 2632,
+      "end": 2654,
+      "context": "\"https://iconicsinc.my.site.com/community/s/resource-center/product-downloads\" and install it. After"
+    },
+    {
+      "type": "domain",
+      "value": "www.mitsubishielectric.co.jp",
+      "page": 1,
+      "start": 3149,
+      "end": 3177,
+      "context": "\"https://www.mitsubishielectric.co.jp/psirt/vulnerability/pdf/2025-023.pdf\"."
+    },
+    {
+      "type": "domain",
+      "value": "iconics.com",
+      "page": 2,
+      "start": 491,
+      "end": 502,
+      "context": "\"https://iconics.com/about/security/cert\"."
+    }
+  ],
+  "tools": [],
+  "total_domains": 3,
+  "total_tools": 0
+}

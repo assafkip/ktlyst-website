@@ -1,0 +1,64 @@
+{
+  "bundle_version": "1.0",
+  "generated": "2026-04-10T16:42:44.037712+00:00",
+  "generator": "KTLYST",
+  "advisory": {
+    "source": "value-drop-pipeline",
+    "report": "Advisory Extraction",
+    "processed_at": "2026-04-10T16:42:44.037712+00:00"
+  },
+  "target": {
+    "name": "Straumann Group",
+    "industry": "Medical Devices / Manufacturing (EU NIS2)"
+  },
+  "extraction_summary": {
+    "total_indicators": 0,
+    "domains": 0,
+    "behavioral_patterns": 10,
+    "detection_rules": 5,
+    "platforms_compiled": [
+      "sentinel",
+      "splunk",
+      "sigma"
+    ]
+  },
+  "deliverables_produced": [
+    "cloud/checklist.md",
+    "compliance/evidence_bundle.json",
+    "compliance/framework_mapping.csv",
+    "detection/sigma_rules/*.yml",
+    "email/domains_blocklist.txt",
+    "emulation/atomic_tests/*.yaml",
+    "emulation/attack_navigator_layer.json",
+    "emulation/detection_gap_matrix.md",
+    "emulation/emulation_plan.md",
+    "endpoint/visibility_assessment.md",
+    "identity/checklist.md",
+    "iocs/domains.csv",
+    "iocs/domains.stix.json",
+    "iocs/full_ioc_list.json",
+    "metadata/generation_audit.jsonl",
+    "metadata/source_advisory.json",
+    "metadata/stack_assessment.json",
+    "metadata/stack_decisions.json"
+  ],
+  "provenance": {
+    "extraction_mode": "dual-lane (scripted authoritative, LLM advisory)",
+    "validation_gates": "V-001 through V-005",
+    "source_type": "government_advisory",
+    "confidence_assessment": {
+      "claim_authenticity": "HIGH",
+      "material_validity": "HIGH",
+      "operational_impact": "HIGH",
+      "regulatory_trigger": "HIGH",
+      "claim_reasoning": "",
+      "material_reasoning": "",
+      "impact_reasoning": "",
+      "regulatory_reasoning": ""
+    }
+  },
+  "compliance_frameworks": [
+    "SOC 2 Type II",
+    "ISO 27001"
+  ]
+}

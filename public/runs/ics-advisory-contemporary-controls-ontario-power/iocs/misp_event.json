@@ -1,0 +1,50 @@
+{
+  "Event": {
+    "uuid": "646137e2-9a06-4823-ad8f-bd0bb097d9a6",
+    "info": "KTLYST - Ontario Power Generation - Advisory Extraction",
+    "date": "2026-04-12",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"Ontario Power Generation\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [
+      {
+        "uuid": "e90cd8f3-d085-5bd2-b8b1-c1bc8e65b791",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
+        "value": "www.ccontrols.com",
+        "timestamp": "1776020848"
+      }
+    ],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-12T19:07:28.760138+00:00",
+    "customer": "Ontario Power Generation",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 1,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}

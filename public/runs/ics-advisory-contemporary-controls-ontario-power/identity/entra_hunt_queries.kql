@@ -1,0 +1,40 @@
+// Hunt 1: Device code authentication events (last 30 days)
+// Any device code auth is suspicious if your org doesn't use it intentionally
+SigninLogs
+| where TimeGenerated >= ago(30d)
+| where AuthenticationProtocol == "deviceCode"
+| project TimeGenerated, UserPrincipalName, AppDisplayName,
+          IPAddress, Location, DeviceDetail, Status
+| order by TimeGenerated desc
+
+// Hunt 2: Connections to IOC domains from sign-in context
+// Cross-reference sign-in IPs with network logs hitting IOC domains
+let ioc_domains = dynamic(["www.ccontrols.com"]);
+DeviceNetworkEvents
+| where TimeGenerated >= ago(30d)
+| where RemoteUrl has_any (ioc_domains)
+| project TimeGenerated, DeviceName, RemoteUrl, RemoteIP,
+          InitiatingProcessFileName
+| order by TimeGenerated desc
+
+// Hunt 3: New OAuth app consents (last 30 days)
+// Attackers register or abuse OAuth apps to maintain access
+AuditLogs
+| where TimeGenerated >= ago(30d)
+| where OperationName == "Consent to application"
+| extend AppName = TargetResources[0].displayName
+| extend ConsentedBy = InitiatedBy.user.userPrincipalName
+| project TimeGenerated, AppName, ConsentedBy, CorrelationId
+| order by TimeGenerated desc
+
+// Hunt 4: Suspicious mail access after device code auth
+// Token theft gives attackers access to email without password change
+SigninLogs
+| where TimeGenerated >= ago(30d)
+| where AuthenticationProtocol == "deviceCode"
+| join kind=inner (
+    OfficeActivity
+    | where TimeGenerated >= ago(30d)
+    | where Operation in ("MailItemsAccessed", "FileAccessed")
+) on $left.UserPrincipalName == $right.UserId
+| project TimeGenerated, UserPrincipalName, Operation, ClientIP

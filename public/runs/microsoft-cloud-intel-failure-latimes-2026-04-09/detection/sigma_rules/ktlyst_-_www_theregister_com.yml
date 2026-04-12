@@ -1,0 +1,22 @@
+title: 'KTLYST - www.theregister.com'
+id: f9d2fbcc-e0c5-5e39-a628-6d68f18ac9e6
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 2
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 2'
+tags:
+    - attack.detection
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'www.theregister.com'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

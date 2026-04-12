@@ -1,0 +1,70 @@
+{
+  "Event": {
+    "uuid": "1a495101-aaf2-4416-a123-aa9a5eee5a25",
+    "info": "KTLYST - NYS Office of Information Technology Services - Advisory Extraction",
+    "date": "2026-04-12",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"NYS Office of Information Technology Services\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [
+      {
+        "uuid": "c875abea-3377-5ac2-8c0b-49e4da422180",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "iconicsinc.my.site.com",
+        "timestamp": "1776020862"
+      },
+      {
+        "uuid": "df060372-9b81-50f2-b674-320173d975d6",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "www.mitsubishielectric.co.jp",
+        "timestamp": "1776020862"
+      },
+      {
+        "uuid": "16d34191-47e6-504f-a8dc-bb2862b0570d",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "iconics.com",
+        "timestamp": "1776020862"
+      }
+    ],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-12T19:07:42.284939+00:00",
+    "customer": "NYS Office of Information Technology Services",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 3,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}

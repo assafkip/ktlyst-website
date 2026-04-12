@@ -1,0 +1,16 @@
+{
+  "name": "Tokio Marine HCC",
+  "industry": "Insurance / Financial Services",
+  "description": "Tokio Marine HCC - Insurance / Financial Services",
+  "inferred_stack": {
+    "email": "Google Workspace",
+    "identity": "Okta",
+    "cloud": "AWS / GCP",
+    "edr": "CrowdStrike Falcon",
+    "siem": "Splunk / Datadog"
+  },
+  "compliance": [
+    "SOC 2 Type II",
+    "ISO 27001"
+  ]
+}

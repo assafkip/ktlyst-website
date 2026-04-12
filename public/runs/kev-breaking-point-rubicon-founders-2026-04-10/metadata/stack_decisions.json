@@ -1,0 +1,204 @@
+{
+  "stack": {
+    "email": "Microsoft 365 (Exchange Online)",
+    "identity": "Microsoft Entra ID (Azure AD)",
+    "cloud": "Microsoft Azure",
+    "edr": "CrowdStrike Falcon",
+    "siem": "Microsoft Sentinel"
+  },
+  "gate_count": 14,
+  "decisions": [
+    {
+      "file": "detection/sentinel_rules.json",
+      "emitted": true,
+      "reason": "siem='microsoft sentinel' matches 'sentinel'"
+    },
+    {
+      "file": "detection/sentinel_watchlist.csv",
+      "emitted": true,
+      "reason": "siem='microsoft sentinel' matches 'sentinel'"
+    },
+    {
+      "file": "detection/splunk_savedsearches.conf",
+      "emitted": false,
+      "reason": "skipped: siem='microsoft sentinel' does not match ['splunk']"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_pre-patch_exploitation_followed_by_delayed_remediat.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_ai-powered_autonomous_attack_acceleration.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_manual_tax_exploitation_pattern.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_risk_mass_accumulation_attack_strategy.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_pre-disclosure_exploitation_window_abuse.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_scan-and-report_model_bypass.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_infrastructure_system_targeting_pattern.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_theoretical_vs_exploitable_vulnerability_misdirecti.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_human_ceiling_exploitation_timing.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_average_window_of_exposure_maximization.yml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "detection/elastic_rules.ndjson",
+      "emitted": false,
+      "reason": "skipped: siem='microsoft sentinel' does not match ['elastic']"
+    },
+    {
+      "file": "identity/entra_conditional_access_policy.json",
+      "emitted": true,
+      "reason": "identity='microsoft entra id (azure ad)' matches 'entra'"
+    },
+    {
+      "file": "identity/entra_hunt_queries.kql",
+      "emitted": true,
+      "reason": "identity='microsoft entra id (azure ad)' matches 'entra'"
+    },
+    {
+      "file": "identity/okta_policy_recommendation.json",
+      "emitted": false,
+      "reason": "skipped: identity='microsoft entra id (azure ad)' does not match ['okta']"
+    },
+    {
+      "file": "email/domains_blocklist.txt",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "email/m365_transport_rule.ps1",
+      "emitted": true,
+      "reason": "email='microsoft 365 (exchange online)' matches 'microsoft 365'"
+    },
+    {
+      "file": "email/defender_tenant_blocklist.csv",
+      "emitted": true,
+      "reason": "email='microsoft 365 (exchange online)' matches 'microsoft 365'"
+    },
+    {
+      "file": "endpoint/crowdstrike_ioc_import.json",
+      "emitted": true,
+      "reason": "edr='crowdstrike falcon' matches 'crowdstrike'"
+    },
+    {
+      "file": "endpoint/mde_ioc_import.csv",
+      "emitted": false,
+      "reason": "skipped: edr='crowdstrike falcon' does not match ['microsoft defender', 'defender for endpoint', 'mde']"
+    },
+    {
+      "file": "endpoint/visibility_assessment.md",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "cloud/azure_ad_hunt.kql",
+      "emitted": true,
+      "reason": "cloud='microsoft azure' matches 'azure'"
+    },
+    {
+      "file": "cloud/oauth_app_audit.kql",
+      "emitted": true,
+      "reason": "cloud='microsoft azure' matches 'azure'"
+    },
+    {
+      "file": "cloud/conditional_access_gaps.json",
+      "emitted": true,
+      "reason": "identity='microsoft entra id (azure ad)' matches 'entra'"
+    },
+    {
+      "file": "emulation/attack_navigator_layer.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1082.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1021.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/atomic_tests/t1547.yaml",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/emulation_plan.md",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "emulation/detection_gap_matrix.md",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "compliance/framework_mapping.csv",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "iocs/domains.csv",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "iocs/domains.stix.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "iocs/full_ioc_list.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "metadata/source_advisory.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "metadata/stack_assessment.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    }
+  ],
+  "emitted_count": 34,
+  "skipped_count": 4
+}

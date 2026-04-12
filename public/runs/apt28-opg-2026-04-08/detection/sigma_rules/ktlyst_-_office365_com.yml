@@ -1,0 +1,22 @@
+title: 'KTLYST - office365.com'
+id: 597f7883-5594-5577-8533-1d1309371761
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 3
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 3'
+tags:
+    - attack.detection
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'office365.com'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

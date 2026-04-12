@@ -1,0 +1,25 @@
+title: 'KTLYST - Social engineering to gain initial system access'
+id: a5b7bbf3-0c6b-5881-852d-15cdf6fce621
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1566
+logsource:
+    category: mail
+    product: any
+detection:
+    selection:
+        action: 'delivered'
+    filter_attachments:
+        attachment_count|gte: 1
+    condition: selection and filter_attachments
+falsepositives:
+    - Legitimate administrative activity

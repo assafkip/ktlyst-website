@@ -1,0 +1,5 @@
+Value,Type,Action,Notes,ExpirationDate
+www.googletagmanager.com,Url,Block,KTLYST - Device Code Phishing,
+advisory.It,Url,Block,KTLYST - Device Code Phishing,
+office365.com,Url,Block,KTLYST - Device Code Phishing,
+GOV.UK,Url,Block,KTLYST - Device Code Phishing,

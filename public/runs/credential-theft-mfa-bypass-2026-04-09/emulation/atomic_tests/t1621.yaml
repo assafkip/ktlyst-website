@@ -1,0 +1,20 @@
+---
+attack_technique: T1621
+display_name: "Help desk social engineering bypass"
+atomic_tests:
+  - name: "KTLYST - Help desk social engineering bypass Simulation"
+    auto_generated_guid: b7b2d12d-7ef8-46bd-8567-70edc9a59763
+    description: |
+      Simulates Help desk social engineering bypass technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

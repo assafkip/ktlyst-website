@@ -1,0 +1,22 @@
+title: 'KTLYST - iconicsinc.my.site.com'
+id: a382cb68-7bfb-51ca-a0b8-16ede4a6ff87
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 4
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 4'
+tags:
+    - attack.detection
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'iconicsinc.my.site.com'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

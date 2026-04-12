@@ -1,0 +1,38 @@
+# KTLYST Caldera adversary profile for NYS Office of Information Technology Services
+# Generated: 2026-04-12
+# Advisory: value-drop-pipeline
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: af98c2ae-c42e-45aa-aa5e-cc1669bd8e1e
+name: KTLYST - NYS Office of Information Technology Services - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for NYS Office of Information Technology Services. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # Local credential harvesting from SQLite cache files
+  - 00000000-0000-0000-0000-000000000002   # GUI-based credential exposure through Hyper Historian Splitter
+  - 00000000-0000-0000-0000-000000000003   # Credential harvesting from GENESIS SQLite cache
+  - 00000000-0000-0000-0000-000000000004   # Social engineering to gain initial system access
+  - 00000000-0000-0000-0000-000000000005   # Network-based attack progression to credential theft
+  - 00000000-0000-0000-0000-000000000006   # Physical access exploitation for credential harvesting
+  - 00000000-0000-0000-0000-000000000007   # Privilege escalation through credential reuse
+  - 00000000-0000-0000-0000-000000000008   # Multi-vector attack combining network and local access
+
+tags:
+  - ktlyst
+  - nys-office-of-information-technology-services
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: NYS Office of Information Technology Services
+  created_at: 2026-04-12T19:07:42.284325+00:00
+  indicator_step_count: 8

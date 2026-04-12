@@ -1,0 +1,18 @@
+{
+  "generated": "2026-04-12T19:07:28.760040+00:00",
+  "source": "value-drop-pipeline",
+  "report": "Advisory Extraction",
+  "domains": [
+    {
+      "type": "domain",
+      "value": "www.ccontrols.com",
+      "page": 1,
+      "start": 1340,
+      "end": 1357,
+      "context": "https://www.ccontrols.com/support/contacttech.htm"
+    }
+  ],
+  "tools": [],
+  "total_domains": 1,
+  "total_tools": 0
+}

@@ -1,0 +1,20 @@
+---
+attack_technique: T1021
+display_name: "Manual tax exploitation pattern"
+atomic_tests:
+  - name: "KTLYST - Manual tax exploitation pattern Simulation"
+    auto_generated_guid: 76032d0b-0127-44af-842e-aca432e309c8
+    description: |
+      Simulates Manual tax exploitation pattern technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

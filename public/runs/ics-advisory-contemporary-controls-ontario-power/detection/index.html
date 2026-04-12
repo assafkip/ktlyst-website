@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KTLYST - SOC / Detection - Ontario Power Generation</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 24px 16px;
+  background: #0a0e1a;
+  color: #e6edf3;
+  line-height: 1.45;
+}
+.container { max-width: 720px; margin: 0 auto; }
+.back {
+  display: inline-block;
+  font-size: 12px;
+  color: #8b9bb4;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.back:hover { color: #4a7fbf; }
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b9bb4;
+  margin-bottom: 8px;
+}
+h1.title { font-size: 22px; font-weight: 700; margin: 0 0 6px 0; }
+.summary { font-size: 13px; color: #b8c5d6; margin: 0 0 4px 0; }
+.breadcrumb { font-size: 11px; color: #6b7a90; margin: 0; }
+ul.files {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+ul.files li { margin-bottom: 8px; }
+a.file {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  background: #131826;
+  border: 1px solid #1f2738;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+a.file:hover { border-color: #4a7fbf; }
+.file-name { font-size: 13px; font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.file-desc { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../index.html">&larr; Back to overview</a>
+    <div class="eyebrow">KTLYST Run</div>
+    <h1 class="title">SOC / Detection</h1>
+    <p class="summary">Sentinel, Splunk, Sigma, and Elastic rules ready to import</p>
+    <p class="breadcrumb">Ontario Power Generation &middot; Advisory Extraction</p>
+    <ul class="files">
+        <li><a class="file" href="sentinel_rules.json"><span class="file-name">sentinel_rules.json</span><span class="file-desc">sentinel rules (JSON)</span></a></li>
+        <li><a class="file" href="sentinel_watchlist.csv"><span class="file-name">sentinel_watchlist.csv</span><span class="file-desc">sentinel watchlist (CSV)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_component_discovery_to_administrative_control_takeo.yml"><span class="file-name">sigma_rules/ktlyst_-_component_discovery_to_administrative_control_takeo.yml</span><span class="file-desc">ktlyst   component discovery to administrative control takeo (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_network_traffic_sniffing_to_packet_forgery_attack_c.yml"><span class="file-name">sigma_rules/ktlyst_-_network_traffic_sniffing_to_packet_forgery_attack_c.yml</span><span class="file-desc">ktlyst   network traffic sniffing to packet forgery attack c (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_plc_enumeration_to_system_manipulation_sequence.yml"><span class="file-name">sigma_rules/ktlyst_-_plc_enumeration_to_system_manipulation_sequence.yml</span><span class="file-desc">ktlyst   plc enumeration to system manipulation sequence (YML)</span></a></li>
+        <li><a class="file" href="sigma_rules/ktlyst_-_www_ccontrols_com.yml"><span class="file-name">sigma_rules/ktlyst_-_www_ccontrols_com.yml</span><span class="file-desc">ktlyst   www ccontrols com (YML)</span></a></li>
+    </ul>
+  </div>
+  
+</body>
+</html>
