@@ -16,24 +16,6 @@
     "url": "/runs/apt28-opg-2026-04-08/"
   },
   {
-    "id": "storm-2755-payroll-pirate-2026-04-09",
-    "date": "2026-04-09",
-    "title": "Storm-2755 Payroll Pirate: AiTM Session Hijacking Targeting Canadian Employees",
-    "source": "www.microsoft.com",
-    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/04/09/investigating-storm-2755-payroll-pirate-attacks-targeting-canadian-employees/",
-    "summary": "Full KTLYST run for AT&T: 9 team packages, platform-native files",
-    "url": "/runs/storm-2755-payroll-pirate-2026-04-09/"
-  },
-  {
-    "id": "storm-2755-opg-2026-04-09",
-    "date": "2026-04-09",
-    "title": "Storm-2755 Payroll Pirate: AiTM Session Hijacking Targeting Canadian Employees",
-    "source": "www.microsoft.com",
-    "source_url": "https://www.microsoft.com/en-us/security/blog/2026/04/09/investigating-storm-2755-payroll-pirate-attacks-targeting-canadian-employees/",
-    "summary": "Full KTLYST run for Ontario Power Generation: 9 team packages, platform-native files",
-    "url": "/runs/storm-2755-opg-2026-04-09/"
-  },
-  {
     "id": "credential-theft-mfa-bypass-2026-04-09",
     "date": "2026-04-09",
     "title": "When Attackers Already Have the Keys: MFA Bypass via Session Hijacking",
@@ -77,33 +59,6 @@
     "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-suspends-dev-accounts-for-high-profile-open-source-projects/",
     "summary": "Full KTLYST run for Tokio Marine HCC: 9 team packages, platform-native files",
     "url": "/runs/patch-distribution-failure-birtles-2026-04-09/"
-  },
-  {
-    "id": "patch-distribution-failure-christiana-2026-04-09",
-    "date": "2026-04-09",
-    "title": "Microsoft Suspends Developer Accounts for High-Profile Open Source Projects, Blocking Patch Distribution",
-    "source": "www.bleepingcomputer.com",
-    "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-suspends-dev-accounts-for-high-profile-open-source-projects/",
-    "summary": "Full KTLYST run for Christiana Care Health System: 9 team packages, platform-native files",
-    "url": "/runs/patch-distribution-failure-christiana-2026-04-09/"
-  },
-  {
-    "id": "tldrsec-323-ciso-efficiency-hunkapiller-2026-04-09",
-    "date": "2026-04-09",
-    "title": "tl;dr sec #323: CISO Influence Lessons + LLMs Democratizing Vuln Hunting",
-    "source": "tldrsec.com",
-    "source_url": "https://tldrsec.com/p/tldr-sec-323",
-    "summary": "Full KTLYST run for Florida State University: 9 team packages, platform-native files",
-    "url": "/runs/tldrsec-323-ciso-efficiency-hunkapiller-2026-04-09/"
-  },
-  {
-    "id": "tldrsec-323-ciso-efficiency-torrell-2026-04-09",
-    "date": "2026-04-09",
-    "title": "tl;dr sec #323: CISO Influence Lessons + LLMs Democratizing Vuln Hunting",
-    "source": "tldrsec.com",
-    "source_url": "https://tldrsec.com/p/tldr-sec-323",
-    "summary": "Full KTLYST run for Undisclosed: 9 team packages, platform-native files",
-    "url": "/runs/tldrsec-323-ciso-efficiency-torrell-2026-04-09/"
   },
   {
     "id": "cpuid-supply-chain-ontario-power-2026-04-10",
