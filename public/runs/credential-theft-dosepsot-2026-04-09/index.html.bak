@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Attackers Already Have the Keys: MFA Bypass via Session Hijacking - KTLYST Run</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#f0ebe2; --card:#faf7f2; --text:#1a1612; --muted:#635a4f; --faint:#978e83; --border:#ddd5c8; --accent:#c44b25; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"DM Sans",sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+.nav { background:rgba(10,22,40,0.95); padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+.nav a { color:#a0b0c0; text-decoration:none; font-size:0.9rem; }
+.nav .logo { color:#fff; font-weight:700; letter-spacing:2px; font-size:1.3rem; }
+.nav .logo span { color:#7c9cc8; }
+.hero { max-width:860px; margin:0 auto; padding:3rem 2rem 1.5rem; }
+.hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+.hero .meta { color:var(--muted); font-size:0.9rem; margin-bottom:1.5rem; }
+.stats { display:flex; gap:1.5rem; margin:1.5rem 0; flex-wrap:wrap; }
+.stat { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:1rem 1.5rem; text-align:center; }
+.stat .num { font-family:"JetBrains Mono",monospace; font-size:1.5rem; font-weight:600; color:var(--accent); }
+.stat .label { font-size:0.75rem; color:var(--faint); text-transform:uppercase; letter-spacing:1px; }
+.container { max-width:860px; margin:0 auto; padding:0 2rem 3rem; }
+.team-section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.2rem 1.5rem; margin-bottom:0.8rem; }
+.team-section h3 { font-size:1rem; margin-bottom:0.5rem; }
+.file-list { list-style:none; }
+.file-list li { font-family:"JetBrains Mono",monospace; font-size:0.8rem; padding:0.3rem 0; color:var(--muted); border-bottom:1px solid var(--border); }
+.file-list li:last-child { border-bottom:none; }
+.file-list a { color:var(--accent); text-decoration:none; }
+.file-list a:hover { text-decoration:underline; }
+.footer { background:#1c1815; color:#a0b0c0; padding:1.5rem; text-align:center; font-size:0.85rem; }
+.footer a { color:#3b9dff; text-decoration:none; }
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="logo">KTLYST<span>LABS</span></a>
+  <div style="display:flex;gap:1.5rem">
+    <a href="/signals">Signals</a>
+    <a href="/runs">All Runs</a>
+  </div>
+</nav>
+<section class="hero">
+  <h1>When Attackers Already Have the Keys: MFA Bypass via Session Hijacking</h1>
+  <div class="meta">KTLYST Run: credential-theft-dosepsot-2026-04-09 | 2026-04-09 | Prepared for DoseSpot</div>
+  <div class="stats">
+    <div class="stat"><div class="num">0</div><div class="label">Indicators</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">Rules</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">TTPs</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">Behaviors</div></div>
+    <div class="stat"><div class="num">20s</div><div class="label">Processing</div></div>
+  </div>
+</section>
+<div class="container">
+<div class="team-section"><h3>Cloud Security (4 files)</h3><ul class="file-list"><li><a href="deliverable/cloud/azure_ad_hunt.kql">cloud/azure_ad_hunt.kql</a></li><li><a href="deliverable/cloud/checklist.md">cloud/checklist.md</a></li><li><a href="deliverable/cloud/conditional_access_gaps.json">cloud/conditional_access_gaps.json</a></li><li><a href="deliverable/cloud/oauth_app_audit.kql">cloud/oauth_app_audit.kql</a></li></ul></div>
+<div class="team-section"><h3>Compliance (2 files)</h3><ul class="file-list"><li><a href="deliverable/compliance/evidence_bundle.json">compliance/evidence_bundle.json</a></li><li><a href="deliverable/compliance/framework_mapping.csv">compliance/framework_mapping.csv</a></li></ul></div>
+<div class="team-section"><h3>Detection / SOC (11 files)</h3><ul class="file-list"><li><a href="deliverable/detection/elastic_rules.ndjson">detection/elastic_rules.ndjson</a></li><li><a href="deliverable/detection/sentinel_rules.json">detection/sentinel_rules.json</a></li><li><a href="deliverable/detection/sentinel_watchlist.csv">detection/sentinel_watchlist.csv</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_ai-assisted_targeted_phishing_campaign.yml">detection/sigma_rules/ktlyst_-_ai-assisted_targeted_phishing_campaign.yml</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_cloud-synced_passkey_compromise_chain.yml">detection/sigma_rules/ktlyst_-_cloud-synced_passkey_compromise_chain.yml</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_device_theft_to_authentication_bypass.yml">detection/sigma_rules/ktlyst_-_device_theft_to_authentication_bypass.yml</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_email_breach_to_credential_stuffing_attack_chain.yml">detection/sigma_rules/ktlyst_-_email_breach_to_credential_stuffing_attack_chain.yml</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_help_desk_social_engineering_attack.yml">detection/sigma_rules/ktlyst_-_help_desk_social_engineering_attack.yml</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_mfa_fatigue_attack.yml">detection/sigma_rules/ktlyst_-_mfa_fatigue_attack.yml</a></li><li><a href="deliverable/detection/sigma_rules/ktlyst_-_real-time_phishing_relay__aitm__attack.yml">detection/sigma_rules/ktlyst_-_real-time_phishing_relay__aitm__attack.yml</a></li><li><a href="deliverable/detection/splunk_savedsearches.conf">detection/splunk_savedsearches.conf</a></li></ul></div>
+<div class="team-section"><h3>Email Security (3 files)</h3><ul class="file-list"><li><a href="deliverable/email/defender_tenant_blocklist.csv">email/defender_tenant_blocklist.csv</a></li><li><a href="deliverable/email/domains_blocklist.txt">email/domains_blocklist.txt</a></li><li><a href="deliverable/email/m365_transport_rule.ps1">email/m365_transport_rule.ps1</a></li></ul></div>
+<div class="team-section"><h3>Red Team / Emulation (6 files)</h3><ul class="file-list"><li><a href="deliverable/emulation/atomic_tests/t1078.yaml">emulation/atomic_tests/t1078.yaml</a></li><li><a href="deliverable/emulation/atomic_tests/t1566.yaml">emulation/atomic_tests/t1566.yaml</a></li><li><a href="deliverable/emulation/atomic_tests/t1621.yaml">emulation/atomic_tests/t1621.yaml</a></li><li><a href="deliverable/emulation/attack_navigator_layer.json">emulation/attack_navigator_layer.json</a></li><li><a href="deliverable/emulation/detection_gap_matrix.md">emulation/detection_gap_matrix.md</a></li><li><a href="deliverable/emulation/emulation_plan.md">emulation/emulation_plan.md</a></li></ul></div>
+<div class="team-section"><h3>Endpoint (3 files)</h3><ul class="file-list"><li><a href="deliverable/endpoint/crowdstrike_ioc_import.json">endpoint/crowdstrike_ioc_import.json</a></li><li><a href="deliverable/endpoint/mde_ioc_import.csv">endpoint/mde_ioc_import.csv</a></li><li><a href="deliverable/endpoint/visibility_assessment.md">endpoint/visibility_assessment.md</a></li></ul></div>
+<div class="team-section"><h3>Executive (2 files)</h3><ul class="file-list"><li><a href="deliverable/executive/team_package_index.md">executive/team_package_index.md</a></li><li><a href="deliverable/executive/threat_brief.pdf">executive/threat_brief.pdf</a></li></ul></div>
+<div class="team-section"><h3>Identity / IAM (4 files)</h3><ul class="file-list"><li><a href="deliverable/identity/checklist.md">identity/checklist.md</a></li><li><a href="deliverable/identity/entra_conditional_access_policy.json">identity/entra_conditional_access_policy.json</a></li><li><a href="deliverable/identity/entra_hunt_queries.kql">identity/entra_hunt_queries.kql</a></li><li><a href="deliverable/identity/okta_policy_recommendation.json">identity/okta_policy_recommendation.json</a></li></ul></div>
+<div class="team-section"><h3>IOCs (3 files)</h3><ul class="file-list"><li><a href="deliverable/iocs/domains.csv">iocs/domains.csv</a></li><li><a href="deliverable/iocs/domains.stix.json">iocs/domains.stix.json</a></li><li><a href="deliverable/iocs/full_ioc_list.json">iocs/full_ioc_list.json</a></li></ul></div>
+<div class="team-section"><h3>Metadata (3 files)</h3><ul class="file-list"><li><a href="deliverable/metadata/generation_audit.jsonl">metadata/generation_audit.jsonl</a></li><li><a href="deliverable/metadata/source_advisory.json">metadata/source_advisory.json</a></li><li><a href="deliverable/metadata/stack_assessment.json">metadata/stack_assessment.json</a></li></ul></div>
+
+</div>
+<footer class="footer">
+  <p>Generated by KTLYST Labs | <a href="https://calendly.com/assaf-ktlyst/30min">Book a Demo</a></p>
+</footer>
+</body></html>

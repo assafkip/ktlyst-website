@@ -1,0 +1,168 @@
+{
+  "phases": [
+    {
+      "name": "Check for Active Compromise",
+      "phase_number": 0,
+      "time_estimate": "15 min",
+      "actions": [
+        {
+          "description": "Import IOCs for detect-mode monitoring",
+          "tier": 1,
+          "impact_tag": "DETECTION-GAP",
+          "team": "endpoint",
+          "tool": ""
+        },
+        {
+          "description": "Hunt for indicators across all endpoints",
+          "tier": 1,
+          "impact_tag": "DETECTION-GAP",
+          "team": "endpoint",
+          "tool": ""
+        },
+        {
+          "description": "Import IOC blocklists",
+          "tier": 1,
+          "impact_tag": "PERIMETER",
+          "team": "iocs",
+          "tool": ""
+        }
+      ]
+    },
+    {
+      "name": "Immediate Response",
+      "phase_number": 1,
+      "time_estimate": "30 min",
+      "actions": [
+        {
+          "description": "Block threat domains at email gateway",
+          "tier": 1,
+          "impact_tag": "VECTOR-BLOCK",
+          "team": "email",
+          "tool": "Microsoft 365 (Exchange Online)"
+        },
+        {
+          "description": "Deploy transport rules in Microsoft 365 (Exchange Online)",
+          "tier": 1,
+          "impact_tag": "VECTOR-BLOCK",
+          "team": "email",
+          "tool": "Microsoft 365 (Exchange Online)"
+        }
+      ]
+    },
+    {
+      "name": "This Week",
+      "phase_number": 2,
+      "time_estimate": "4 hours",
+      "actions": [
+        {
+          "description": "Audit OAuth app consents and service principal sign-ins",
+          "tier": 2,
+          "impact_tag": "CREDENTIAL-EXPOSURE",
+          "team": "cloud",
+          "tool": "Google Cloud / AWS"
+        },
+        {
+          "description": "Deploy cloud-layer analytic rules",
+          "tier": 2,
+          "impact_tag": "CREDENTIAL-EXPOSURE",
+          "team": "cloud",
+          "tool": "Google Cloud / AWS"
+        },
+        {
+          "description": "Deploy detection rules to Chronicle / Splunk (likely)",
+          "tier": 2,
+          "impact_tag": "DETECTION-GAP",
+          "team": "detection",
+          "tool": "Chronicle / Splunk (likely)"
+        },
+        {
+          "description": "Enable watchlist monitoring for advisory indicators",
+          "tier": 2,
+          "impact_tag": "DETECTION-GAP",
+          "team": "detection",
+          "tool": "Chronicle / Splunk (likely)"
+        },
+        {
+          "description": "Review and deploy Conditional Access policy changes",
+          "tier": 2,
+          "impact_tag": "IDENTITY",
+          "team": "identity",
+          "tool": "Google Workspace"
+        },
+        {
+          "description": "Run identity hunt queries in Google Workspace",
+          "tier": 2,
+          "impact_tag": "IDENTITY",
+          "team": "identity",
+          "tool": "Google Workspace"
+        }
+      ]
+    },
+    {
+      "name": "Harden",
+      "phase_number": 3,
+      "time_estimate": "ongoing",
+      "actions": [
+        {
+          "description": "File framework mapping as evidence for next audit",
+          "tier": 3,
+          "impact_tag": "GOVERNANCE",
+          "team": "compliance",
+          "tool": ""
+        },
+        {
+          "description": "Review evidence bundle for completeness",
+          "tier": 3,
+          "impact_tag": "GOVERNANCE",
+          "team": "compliance",
+          "tool": ""
+        },
+        {
+          "description": "Schedule red team exercise against emulation plan",
+          "tier": 3,
+          "impact_tag": "VALIDATION",
+          "team": "emulation",
+          "tool": ""
+        },
+        {
+          "description": "Run Atomic Red Team tests for covered techniques",
+          "tier": 3,
+          "impact_tag": "VALIDATION",
+          "team": "emulation",
+          "tool": ""
+        },
+        {
+          "description": "Forward board brief to CISO/VP Security",
+          "tier": 3,
+          "impact_tag": "GOVERNANCE",
+          "team": "executive",
+          "tool": ""
+        },
+        {
+          "description": "Schedule 30-minute review of Tier 3 artifacts",
+          "tier": 3,
+          "impact_tag": "GOVERNANCE",
+          "team": "executive",
+          "tool": ""
+        }
+      ]
+    }
+  ],
+  "top_3": [
+    {
+      "description": "Import IOCs for detect-mode monitoring",
+      "tier": 1,
+      "time": "5 min"
+    },
+    {
+      "description": "Hunt for indicators across all endpoints",
+      "tier": 1,
+      "time": "5 min"
+    },
+    {
+      "description": "Import IOC blocklists",
+      "tier": 1,
+      "time": "5 min"
+    }
+  ]
+}

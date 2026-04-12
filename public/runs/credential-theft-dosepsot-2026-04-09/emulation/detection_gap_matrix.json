@@ -1,0 +1,30 @@
+{
+  "covered_count": 3,
+  "partial_count": 0,
+  "blind_count": 0,
+  "total_steps": 3,
+  "remediation_pct": 100,
+  "steps": [
+    {
+      "action": "Phishing email",
+      "layer": "email",
+      "covered": true,
+      "detection_source": "Email gateway",
+      "mitre_id": "T1566"
+    },
+    {
+      "action": "Payload delivery",
+      "layer": "network",
+      "covered": true,
+      "detection_source": "Network proxy",
+      "mitre_id": "T1204"
+    },
+    {
+      "action": "Post-compromise access",
+      "layer": "cloud",
+      "covered": true,
+      "detection_source": "Cloud app logs",
+      "mitre_id": "T1078"
+    }
+  ]
+}
