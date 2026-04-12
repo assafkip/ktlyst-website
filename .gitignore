@@ -37,5 +37,8 @@ q-system/.q-system/agent-pipeline/bus/
 # Pruned markdown archives (historical, not loaded in context)
 q-system/memory/archives/
 
+# Stray pipeline output from misrouted q-system runs
+q-ktlyst/
+
 # Node
 node_modules/
