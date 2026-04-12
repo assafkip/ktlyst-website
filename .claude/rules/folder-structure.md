@@ -253,3 +253,15 @@ Scripts at different depths must resolve QROOT differently:
 - Never put secrets in committed files (use `${VAR}` references)
 - Never create output files in `q-system/` root (use `output/`)
 - Never modify `canonical/` files without council check (see auto-detection rules)
+
+## `public/runs/` Policy (ENFORCED)
+
+`public/runs/` holds **tracked deploy artifacts**, not local pipeline output. The KTLYST website serves this directory as static assets via Vite/Vercel. Runs are visible in production the moment they land on `main`.
+
+Rules:
+- Every committed run directory MUST contain a complete wrapper at `<run>/index.html`. A run dir with only `deliverable/` is incomplete and will silently fall through to the SPA shell in production.
+- `public/runs/runs-index.json` is the gallery feed, fetched client-side by `public/runs/index.html`. Every entry MUST point to a run dir whose `index.html` exists. Adding an entry without the wrapper creates a dead-end card.
+- Working-tree mutation of already-published runs is forbidden. If the pipeline regenerates a published run, that regen MUST land via an explicit commit with a real message — never as uncommitted drift.
+- Local pipeline runs that aren't ready to publish belong elsewhere. They MUST NOT be created under `public/runs/` and then "fixed later." Either commit the complete wrapper or run the pipeline against an output dir outside the repo.
+
+If a run is orphaned (dir on disk, no entry in `runs-index.json`) or broken (entry in index, no wrapper on disk), the pre-commit guard at `q-system/.q-system/scripts/check-runs-integrity.py` will block the commit.
