@@ -3,7 +3,7 @@ attack_technique: T1036.005
 display_name: "API compromise leading to download link manipulation"
 atomic_tests:
   - name: "KTLYST - API compromise leading to download link manipulation Simulation"
-    auto_generated_guid: 2bbd7b99-8977-4b5b-95b1-c1c11acbcfcc
+    auto_generated_guid: 856d65db-78fa-416b-b73e-816c72c3a47e
     description: |
       Simulates API compromise leading to download link manipulation technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

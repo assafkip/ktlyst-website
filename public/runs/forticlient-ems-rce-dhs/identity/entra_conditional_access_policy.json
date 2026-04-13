@@ -26,7 +26,7 @@
   },
   "metadata": {
     "generatedBy": "KTLYST",
-    "generatedAt": "2026-04-13T15:22:44.607279+00:00",
+    "generatedAt": "2026-04-13T18:31:40.122145+00:00",
     "advisory": "Unit42 Device Code OAuth Phishing",
     "note": "This policy is created in report-only mode. Review sign-in impact before enabling enforcement. Exclude service accounts and break-glass accounts as needed."
   }

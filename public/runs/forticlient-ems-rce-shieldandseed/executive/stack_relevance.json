@@ -1,0 +1,50 @@
+{
+  "platform": "Unknown",
+  "layers_affected": [
+    {
+      "layer": "detection",
+      "relevance": "critical",
+      "artifacts": 8
+    },
+    {
+      "layer": "cloud",
+      "relevance": "critical",
+      "artifacts": 8
+    },
+    {
+      "layer": "emulation",
+      "relevance": "critical",
+      "artifacts": 8
+    },
+    {
+      "layer": "executive",
+      "relevance": "critical",
+      "artifacts": 7
+    },
+    {
+      "layer": "identity",
+      "relevance": "critical",
+      "artifacts": 7
+    },
+    {
+      "layer": "email",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "endpoint",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "perimeter",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "compliance",
+      "relevance": "high",
+      "artifacts": 4
+    }
+  ]
+}

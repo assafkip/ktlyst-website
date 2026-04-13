@@ -20,7 +20,7 @@
   },
   "metadata": {
     "generatedBy": "KTLYST",
-    "generatedAt": "2026-04-10T16:40:47.071132+00:00",
+    "generatedAt": "2026-04-13T18:31:39.852994+00:00",
     "applicable": true,
     "note": "This policy is created in INACTIVE status. Review app-level impact before activating. Some legitimate flows (IoT devices, CLI tools) may use device code."
   }

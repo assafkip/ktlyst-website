@@ -31,7 +31,7 @@
   },
   "metadata": {
     "generatedBy": "KTLYST",
-    "generatedAt": "2026-04-13T15:22:44.609601+00:00",
+    "generatedAt": "2026-04-13T18:31:40.123827+00:00",
     "createdFor": "U.S. Department of Homeland Security",
     "note": "Rule ships with enabled=false. Review in Sentinel > Analytics > Active Rules before enabling. Cloud team owns this rule; it is distinct from the SIEM detection bundle shipped by the SIEM team."
   }

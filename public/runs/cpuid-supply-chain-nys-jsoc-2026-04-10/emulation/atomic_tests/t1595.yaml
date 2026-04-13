@@ -3,7 +3,7 @@ attack_technique: T1595
 display_name: "Opportunistic timing exploitation during maintenance windows"
 atomic_tests:
   - name: "KTLYST - Opportunistic timing exploitation during maintenance windows Simulation"
-    auto_generated_guid: 839fcff3-de2a-4546-8d99-3e40c5c47f5a
+    auto_generated_guid: c8dc4f64-d5c5-4be1-b743-63d25d3ec31e
     description: |
       Simulates Opportunistic timing exploitation during maintenance windows technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

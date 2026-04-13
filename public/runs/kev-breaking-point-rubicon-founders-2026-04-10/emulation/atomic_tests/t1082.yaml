@@ -3,7 +3,7 @@ attack_technique: T1082
 display_name: "AI-powered autonomous attack acceleration"
 atomic_tests:
   - name: "KTLYST - AI-powered autonomous attack acceleration Simulation"
-    auto_generated_guid: 11f8e09c-1f88-476c-be22-c924b83cff3b
+    auto_generated_guid: 023a7e97-ba3e-4253-8b74-3a252f66b1c3
     description: |
       Simulates AI-powered autonomous attack acceleration technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

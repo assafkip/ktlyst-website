@@ -3,7 +3,7 @@
 **Advisory:** Advisory Extraction
 **Prepared for:** U.S. Department of Homeland Security
 **Generated:** 2026-04-13
-**Total files:** 59
+**Total files:** 60
 
 ## Deployment Tiers
 
@@ -18,7 +18,6 @@ Each artifact has a deployment tier based on risk and reversibility:
 Forward this index to team leads. Each team opens their folder.
 
 ### CISO / VP Security
-- `executive/threat_brief.pdf` -- 3-page brief, forward to leadership
 - `executive/board_brief.md` -- 1-page board brief, paste into the board pack
 - `executive/risk_quantification.json` -- loss bands + probability (reads into board brief)
 - This index file

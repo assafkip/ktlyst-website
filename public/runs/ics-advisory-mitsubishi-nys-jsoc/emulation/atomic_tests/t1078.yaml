@@ -3,7 +3,7 @@ attack_technique: T1078
 display_name: "Local credential harvesting from SQLite cache files"
 atomic_tests:
   - name: "KTLYST - Local credential harvesting from SQLite cache files Simulation"
-    auto_generated_guid: 7792271b-95b2-4f6d-a3ee-9ec4a519da3d
+    auto_generated_guid: 9e01e817-cd03-4e25-9ae7-7f53b17fc432
     description: |
       Simulates Local credential harvesting from SQLite cache files technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

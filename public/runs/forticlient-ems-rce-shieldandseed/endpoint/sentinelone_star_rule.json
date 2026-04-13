@@ -8,7 +8,7 @@
   "query": "EventType = \"IP Connect\" AND DstIP.Domain IN () AND SrcProcName IN (\"chrome.exe\", \"msedge.exe\", \"firefox.exe\", \"powershell.exe\", \"pwsh.exe\")",
   "status": "Draft",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:22:47.970141+00:00",
+  "generatedAt": "2026-04-13T18:31:40.208362+00:00",
   "createdFor": "Shield & Seed LLC",
   "tags": [
     "KTLYST",

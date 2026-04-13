@@ -1,7 +1,7 @@
 {
   "event_type": "advisory.package.generated",
-  "event_id": "ktlyst-u.s.-department-of-homeland-security-2026-04-13T15:22:44.613839+00:00",
-  "timestamp": "2026-04-13T15:22:44.613839+00:00",
+  "event_id": "ktlyst-u.s.-department-of-homeland-security-2026-04-13T18:31:40.126951+00:00",
+  "timestamp": "2026-04-13T18:31:40.126951+00:00",
   "actor": {
     "system": "KTLYST",
     "component": "deliverable_builder",
@@ -24,7 +24,7 @@
     "behavioral_pattern_count": 2
   },
   "output": {
-    "file_count": 59,
+    "file_count": 60,
     "files": [
       "cloud/aws_waf_ip_set.json",
       "cloud/azure_ad_hunt.kql",
@@ -64,10 +64,11 @@
       "endpoint/visibility_assessment.md",
       "executive/action_plan.json",
       "executive/board_brief.md",
+      "executive/deployment_summary.json",
       "executive/index.html",
       "executive/risk_quantification.json",
+      "executive/stack_relevance.json",
       "executive/team_package_index.md",
-      "executive/threat_brief.pdf",
       "identity/checklist.md",
       "identity/entra_conditional_access_policy.json",
       "identity/entra_hunt_queries.kql",

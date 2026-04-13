@@ -1,0 +1,40 @@
+# KTLYST Caldera adversary profile for Straumann Group
+# Generated: 2026-04-13
+# Advisory: value-drop-pipeline
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: 22aed301-8a29-4c7b-9bc9-583d45b7c10a
+name: KTLYST - Straumann Group - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for Straumann Group. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # Pre-patch exploitation followed by delayed remediation
+  - 00000000-0000-0000-0000-000000000002   # AI-powered autonomous attack acceleration
+  - 00000000-0000-0000-0000-000000000003   # Manual tax exploitation pattern
+  - 00000000-0000-0000-0000-000000000004   # Risk mass accumulation attack strategy
+  - 00000000-0000-0000-0000-000000000005   # Pre-disclosure exploitation window abuse
+  - 00000000-0000-0000-0000-000000000006   # Scan-and-report model bypass
+  - 00000000-0000-0000-0000-000000000007   # Infrastructure system targeting pattern
+  - 00000000-0000-0000-0000-000000000008   # Remediation resource exhaustion strategy
+  - 00000000-0000-0000-0000-000000000009   # Human ceiling exploitation timing
+  - 00000000-0000-0000-0000-000000000010   # Average window of exposure maximization
+
+tags:
+  - ktlyst
+  - straumann-group
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: Straumann Group
+  created_at: 2026-04-13T18:31:40.595695+00:00
+  indicator_step_count: 10

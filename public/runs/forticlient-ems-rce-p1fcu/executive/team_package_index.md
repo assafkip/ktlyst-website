@@ -3,7 +3,7 @@
 **Advisory:** Advisory Extraction
 **Prepared for:** P1FCU
 **Generated:** 2026-04-13
-**Total files:** 60
+**Total files:** 62
 
 ## Deployment Tiers
 

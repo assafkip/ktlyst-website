@@ -1,0 +1,35 @@
+# KTLYST Caldera adversary profile for Tokio Marine HCC
+# Generated: 2026-04-13
+# Advisory: value-drop-pipeline
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: 56a5807a-47d8-4392-addb-c41d56373553
+name: KTLYST - Tokio Marine HCC - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for Tokio Marine HCC. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # Automated account suspension without human notification or appeal process
+  - 00000000-0000-0000-0000-000000000002   # Supply chain disruption through developer account termination
+  - 00000000-0000-0000-0000-000000000003   # Communication breakdown leading to service disruption
+  - 00000000-0000-0000-0000-000000000004   # Critical security update blockage through platform control
+  - 00000000-0000-0000-0000-000000000005   # Escalation through public pressure and media attention
+
+tags:
+  - ktlyst
+  - tokio-marine-hcc
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: Tokio Marine HCC
+  created_at: 2026-04-13T18:31:40.717800+00:00
+  indicator_step_count: 5

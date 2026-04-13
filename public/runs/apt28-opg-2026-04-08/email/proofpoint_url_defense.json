@@ -3,7 +3,7 @@
   "name": "KTLYST - Ontario Power Generation - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for Ontario Power Generation. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T18:13:58.583806+00:00",
+  "generatedAt": "2026-04-13T18:31:39.694971+00:00",
   "organization": "Ontario Power Generation",
   "action": "block",
   "entries": [

@@ -3,7 +3,7 @@ attack_technique: T1566
 display_name: "Social engineering to gain initial system access"
 atomic_tests:
   - name: "KTLYST - Social engineering to gain initial system access Simulation"
-    auto_generated_guid: bdebd42e-ac42-4d51-86ca-62bc8ce7d69b
+    auto_generated_guid: ccde10ba-b608-4f63-bea1-8923be3c9f62
     description: |
       Simulates Social engineering to gain initial system access technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

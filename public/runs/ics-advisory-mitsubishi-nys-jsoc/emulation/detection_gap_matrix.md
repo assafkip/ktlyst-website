@@ -1,7 +1,7 @@
 # Detection Gap Matrix
 
 **Target Stack:** email: Microsoft 365 (Exchange Online), identity: Google Workspace, cloud: Google Cloud / AWS, edr: Unknown (not inferable from DNS), siem: Chronicle / Splunk (likely), additional_tools: {'contracts': 'DocuSign', 'project_mgmt': 'Atlassian (Jira/Confluence)'}
-**Generated:** 2026-04-12
+**Generated:** 2026-04-13
 
 ## Coverage Summary
 

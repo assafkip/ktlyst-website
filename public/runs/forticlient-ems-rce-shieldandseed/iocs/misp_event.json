@@ -1,6 +1,6 @@
 {
   "Event": {
-    "uuid": "858a4dc8-d30c-4d3a-a762-63ad7e10da58",
+    "uuid": "c10a549a-67e2-4ecc-93cc-a2c349632db2",
     "info": "KTLYST - Shield & Seed LLC - Advisory Extraction",
     "date": "2026-04-13",
     "threat_level_id": "2",
@@ -30,7 +30,7 @@
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T15:22:47.972188+00:00",
+    "generated_at": "2026-04-13T18:31:40.212283+00:00",
     "customer": "Shield & Seed LLC",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 0,

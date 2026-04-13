@@ -1,0 +1,118 @@
+{
+  "event_type": "advisory.package.generated",
+  "event_id": "ktlyst-christiana-care-health-system-2026-04-13T18:31:39.763750+00:00",
+  "timestamp": "2026-04-13T18:31:39.763750+00:00",
+  "actor": {
+    "system": "KTLYST",
+    "component": "deliverable_builder",
+    "version": "1.0"
+  },
+  "subject": {
+    "customer_name": "Christiana Care Health System",
+    "customer_industry": "Healthcare / Regulated Health System",
+    "customer_compliance": [
+      "HIPAA",
+      "HITECH",
+      "FDA 21 CFR Part 11"
+    ]
+  },
+  "advisory": {
+    "source": "value-drop-pipeline",
+    "report": "Advisory Extraction",
+    "indicator_count": 0,
+    "behavioral_pattern_count": 10
+  },
+  "output": {
+    "file_count": 63,
+    "files": [
+      "cloud/azure_ad_hunt.kql",
+      "cloud/azure_sentinel_identity_analytic.json",
+      "cloud/checklist.md",
+      "cloud/conditional_access_gaps.json",
+      "cloud/index.html",
+      "cloud/oauth_app_audit.kql",
+      "compliance/audit_trail_entry.json",
+      "compliance/evidence_bundle.json",
+      "compliance/framework_mapping.csv",
+      "compliance/index.html",
+      "detection/index.html",
+      "detection/sentinel_rules.json",
+      "detection/sentinel_watchlist.csv",
+      "detection/sigma_rules/ktlyst_-_api_compromise_leading_to_download_link_manipulatio.yml",
+      "detection/sigma_rules/ktlyst_-_cloudflare_r2_storage_abuse_for_malware_distributio.yml",
+      "detection/sigma_rules/ktlyst_-_cross-platform_utility_targeting_campaign.yml",
+      "detection/sigma_rules/ktlyst_-_edr_av_evasion_through_ntdll_proxying.yml",
+      "detection/sigma_rules/ktlyst_-_file_masquerading_with_legitimate_software_branding.yml",
+      "detection/sigma_rules/ktlyst_-_multi-staged_malware_deployment_with_memory_executi.yml",
+      "detection/sigma_rules/ktlyst_-_opportunistic_timing_exploitation_during_maintenanc.yml",
+      "detection/sigma_rules/ktlyst_-_russian_installer_deployment_with_setup_wrapper.yml",
+      "detection/sigma_rules/ktlyst_-_selective_link_poisoning_while_preserving_clean_dow.yml",
+      "detection/sigma_rules/ktlyst_-_supply_chain_attack_via_compromised_distribution_in.yml",
+      "email/defender_tenant_blocklist.csv",
+      "email/domains_blocklist.txt",
+      "email/index.html",
+      "email/m365_transport_rule.ps1",
+      "email/proofpoint_url_defense.json",
+      "emulation/atomic_tests/t1036_005.yaml",
+      "emulation/atomic_tests/t1195.yaml",
+      "emulation/atomic_tests/t1562.yaml",
+      "emulation/atomic_tests/t1595.yaml",
+      "emulation/attack_navigator_layer.json",
+      "emulation/caldera_adversary.yml",
+      "emulation/detection_gap_matrix.json",
+      "emulation/detection_gap_matrix.md",
+      "emulation/emulation_plan.md",
+      "emulation/index.html",
+      "endpoint/crowdstrike_ioc_import.json",
+      "endpoint/index.html",
+      "endpoint/visibility_assessment.md",
+      "executive/action_plan.json",
+      "executive/board_brief.md",
+      "executive/deployment_summary.json",
+      "executive/index.html",
+      "executive/risk_quantification.json",
+      "executive/stack_relevance.json",
+      "executive/team_package_index.md",
+      "identity/checklist.md",
+      "identity/entra_conditional_access_policy.json",
+      "identity/entra_hunt_queries.kql",
+      "identity/index.html",
+      "identity/scim_audit.kql",
+      "index.html",
+      "iocs/domains.csv",
+      "iocs/domains.stix.json",
+      "iocs/full_ioc_list.json",
+      "iocs/index.html",
+      "iocs/misp_event.json",
+      "metadata/generation_audit.jsonl",
+      "metadata/source_advisory.json",
+      "metadata/stack_assessment.json",
+      "metadata/stack_decisions.json"
+    ],
+    "root": "deliverable/"
+  },
+  "evidence_references": {
+    "evidence_bundle": "compliance/evidence_bundle.json",
+    "framework_mapping": "compliance/framework_mapping.csv",
+    "stack_decisions": "metadata/stack_decisions.json",
+    "generation_audit": "metadata/generation_audit.jsonl"
+  },
+  "compliance_mapping": {
+    "soc2": [
+      "CC7.2 - System Monitoring",
+      "CC8.1 - Change Management"
+    ],
+    "iso27001": [
+      "A.12.4 - Logging and Monitoring",
+      "A.16.1 - Information Security Incident Management"
+    ],
+    "nist_csf": [
+      "DE.AE-2",
+      "RS.AN-1"
+    ]
+  },
+  "retention": {
+    "recommended_retention_days": 2555,
+    "note": "Append to customer's immutable audit log. KTLYST retains a copy in the deliverable bundle for reconciliation. Seven-year retention covers SOX + HIPAA baselines; adjust per customer policy."
+  }
+}

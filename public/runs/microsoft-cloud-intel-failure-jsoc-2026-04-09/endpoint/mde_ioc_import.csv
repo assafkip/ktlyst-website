@@ -1,5 +1,0 @@
-IndicatorType,IndicatorValue,Action,Severity,Title,Description,RecommendedActions,Category
-DomainName,www.propublica.org,AlertAndBlock,Medium,KTLYST - www.propublica.org,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing
-DomainName,www.theregister.com,AlertAndBlock,Medium,KTLYST - www.theregister.com,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing
-DomainName,www.pcgamer.com,AlertAndBlock,Medium,KTLYST - www.pcgamer.com,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing
-DomainName,michelf.ca,AlertAndBlock,Medium,KTLYST - michelf.ca,Device code phishing infrastructure identified by KTLYST.,Block domain and investigate any historical connections.,Phishing

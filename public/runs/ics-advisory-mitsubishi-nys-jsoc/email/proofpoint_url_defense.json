@@ -1,9 +1,9 @@
 {
   "resourceType": "urlBlockList",
-  "name": "KTLYST - NYS Office of Information Technology Services - Phishing Domains (2026-04-12)",
+  "name": "KTLYST - NYS Office of Information Technology Services - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for NYS Office of Information Technology Services. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-12T19:07:42.282842+00:00",
+  "generatedAt": "2026-04-13T18:31:40.299484+00:00",
   "organization": "NYS Office of Information Technology Services",
   "action": "block",
   "entries": [

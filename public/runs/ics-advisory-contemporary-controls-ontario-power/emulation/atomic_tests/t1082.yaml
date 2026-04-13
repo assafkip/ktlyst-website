@@ -3,7 +3,7 @@ attack_technique: T1082
 display_name: "Component discovery to administrative control takeover"
 atomic_tests:
   - name: "KTLYST - Component discovery to administrative control takeover Simulation"
-    auto_generated_guid: d7c414e9-bb92-4f30-a193-ea2bcd08c959
+    auto_generated_guid: 3888496d-ebd0-4f04-ac07-6c3e00615d7d
     description: |
       Simulates Component discovery to administrative control takeover technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

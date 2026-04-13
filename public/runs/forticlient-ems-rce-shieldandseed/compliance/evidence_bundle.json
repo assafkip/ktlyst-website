@@ -1,11 +1,11 @@
 {
   "bundle_version": "1.0",
-  "generated": "2026-04-13T15:22:47.974121+00:00",
+  "generated": "2026-04-13T18:31:40.214294+00:00",
   "generator": "KTLYST",
   "advisory": {
     "source": "value-drop-pipeline",
     "report": "Advisory Extraction",
-    "processed_at": "2026-04-13T15:22:47.974121+00:00"
+    "processed_at": "2026-04-13T18:31:40.214294+00:00"
   },
   "target": {
     "name": "Shield & Seed LLC",
@@ -60,10 +60,11 @@
     "endpoint/visibility_assessment.md",
     "executive/action_plan.json",
     "executive/board_brief.md",
+    "executive/deployment_summary.json",
     "executive/index.html",
     "executive/risk_quantification.json",
+    "executive/stack_relevance.json",
     "executive/team_package_index.md",
-    "executive/threat_brief.pdf",
     "identity/checklist.md",
     "identity/entra_conditional_access_policy.json",
     "identity/entra_hunt_queries.kql",

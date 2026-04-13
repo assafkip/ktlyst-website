@@ -1,7 +1,7 @@
 # Identity Hardening Checklist
 
 **Identity Provider:** Microsoft Entra ID (Azure AD)
-**Generated:** 2026-04-12
+**Generated:** 2026-04-13
 
 ## Immediate Actions
 

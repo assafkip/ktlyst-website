@@ -1,7 +1,7 @@
 # Endpoint Visibility Assessment
 
 **EDR:** CrowdStrike Falcon
-**Generated:** 2026-04-10
+**Generated:** 2026-04-13
 
 ## What Your EDR Sees
 

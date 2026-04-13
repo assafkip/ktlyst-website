@@ -1,6 +1,6 @@
 // KTLYST Azure AD Hunt Queries
 // Advisory: Unit42 Device Code OAuth Phishing
-// Generated: 2026-04-12
+// Generated: 2026-04-13
 
 // ================================================================
 // Hunt 1: All device code authentication events

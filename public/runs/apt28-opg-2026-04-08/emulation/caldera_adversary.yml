@@ -7,7 +7,7 @@
 # real ability UUID from your Caldera library (or import the
 # Atomic Red Team plugin) before running an operation.
 
-id: 1b77f390-5418-4ef8-92fc-8bbe75aa0820
+id: 2192dc10-3aad-47e7-9c43-2a62312e35e8
 name: KTLYST - Ontario Power Generation - Phishing Emulation
 description: >-
   KTLYST-generated adversary profile for Ontario Power Generation. Exercises the
@@ -36,5 +36,5 @@ tags:
 ktlyst_metadata:
   generated_by: KTLYST
   created_for: Ontario Power Generation
-  created_at: 2026-04-13T18:13:58.586098+00:00
+  created_at: 2026-04-13T18:31:39.696812+00:00
   indicator_step_count: 10

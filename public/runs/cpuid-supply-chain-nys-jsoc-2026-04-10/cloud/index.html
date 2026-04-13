@@ -111,10 +111,18 @@ a.file:hover { border-color: #4a7fbf; }
     <h1 class="title">Cloud Security</h1>
     <p class="summary">Sign-in hunts, OAuth audit, conditional access gap analysis</p>
     <p class="breadcrumb">NYS Office of Information Technology Services &middot; Advisory Extraction</p>
-    
+    <div class="pills">
+      <button class="pill active" data-platform="">All</button>
+      <button class="pill" data-platform="microsoft">Microsoft</button>
+      <button class="pill" data-platform="splunk">Splunk</button>
+      <button class="pill" data-platform="elastic">Elastic</button>
+      <button class="pill" data-platform="crowdstrike">CrowdStrike</button>
+    </div>
     <a class="dl-folder" href="../downloads/cloud.zip">Download Cloud Security package</a>
     <ul class="files">
+        <li class="file-item" data-platform="aws"><a class="file" href="aws_waf_ip_set.json"><span class="file-name">aws_waf_ip_set.json</span><span class="badge badge-aws">Aws</span><span class="file-desc">aws waf ip set (JSON)</span></a></li>
         <li class="file-item" data-platform=""><a class="file" href="checklist.md"><span class="file-name">checklist.md</span><span class="file-desc">checklist (MD)</span></a></li>
+        <li class="file-item" data-platform="gcp"><a class="file" href="gcp_armor_policy.yaml"><span class="file-name">gcp_armor_policy.yaml</span><span class="badge badge-gcp">Gcp</span><span class="file-desc">gcp armor policy (YAML)</span></a></li>
     </ul>
   </div>
   <script>

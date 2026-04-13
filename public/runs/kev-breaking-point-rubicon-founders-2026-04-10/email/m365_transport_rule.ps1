@@ -1,5 +1,5 @@
 # KTLYST - Block phishing domains via Exchange Online transport rule
-# Generated: 2026-04-10
+# Generated: 2026-04-13
 # Organization: Rubicon Founders
 # Review before running. This blocks inbound email containing these domains.
 #
@@ -9,7 +9,7 @@
 $domains = @('')
 
 New-TransportRule `
-    -Name "Rubicon Founders - KTLYST Block Phishing Domains (2026-04-10)" `
+    -Name "Rubicon Founders - KTLYST Block Phishing Domains (2026-04-13)" `
     -SubjectOrBodyContainsWords $domains `
     -FromAddressContainsWords $domains `
     -SenderDomainIs $domains `
@@ -18,7 +18,7 @@ New-TransportRule `
 
 # To also block in URLs within message bodies:
 # New-TransportRule `
-#     -Name "Rubicon Founders - KTLYST Block Phishing URLs (2026-04-10)" `
+#     -Name "Rubicon Founders - KTLYST Block Phishing URLs (2026-04-13)" `
 #     -HeaderContainsMessageHeader "X-MS-Exchange-Organization-UrlScan-Verdict" `
 #     -SubjectOrBodyContainsWords $domains `
 #     -DeleteMessage $true

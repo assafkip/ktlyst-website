@@ -1,0 +1,37 @@
+# KTLYST Caldera adversary profile for DoseSpot
+# Generated: 2026-04-13
+# Advisory: value-drop-pipeline
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: 645553b0-7e34-492b-ab20-da0c53783f5d
+name: KTLYST - DoseSpot - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for DoseSpot. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # Email breach to credential stuffing attack chain
+  - 00000000-0000-0000-0000-000000000002   # AI-assisted targeted phishing campaign
+  - 00000000-0000-0000-0000-000000000003   # Help desk social engineering attack
+  - 00000000-0000-0000-0000-000000000004   # Real-time phishing relay (AiTM) attack
+  - 00000000-0000-0000-0000-000000000005   # MFA fatigue attack
+  - 00000000-0000-0000-0000-000000000006   # Cloud-synced passkey compromise chain
+  - 00000000-0000-0000-0000-000000000007   # Device theft to authentication bypass
+
+tags:
+  - ktlyst
+  - dosespot
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: DoseSpot
+  created_at: 2026-04-13T18:31:39.948882+00:00
+  indicator_step_count: 7

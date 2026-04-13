@@ -3,7 +3,7 @@ attack_technique: T1195
 display_name: "Supply chain attack via compromised distribution infrastructure"
 atomic_tests:
   - name: "KTLYST - Supply chain attack via compromised distribution infrastructure Simulation"
-    auto_generated_guid: c352653f-ab09-4367-883e-61482b295fb4
+    auto_generated_guid: f793a4b8-7b7b-4342-868b-3337876b2e5c
     description: |
       Simulates Supply chain attack via compromised distribution infrastructure technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

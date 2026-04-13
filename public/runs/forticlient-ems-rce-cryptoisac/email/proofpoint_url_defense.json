@@ -3,7 +3,7 @@
   "name": "KTLYST - Crypto ISAC - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for Crypto ISAC. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:23:00.274487+00:00",
+  "generatedAt": "2026-04-13T18:31:40.041489+00:00",
   "organization": "Crypto ISAC",
   "action": "block",
   "entries": [],

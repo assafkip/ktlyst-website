@@ -1,0 +1,42 @@
+# KTLYST Caldera adversary profile for Ontario Power Generation
+# Generated: 2026-04-13
+# Advisory: value-drop-pipeline
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: 4b7e1e87-26ac-4088-b259-27d852ee925c
+name: KTLYST - Ontario Power Generation - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for Ontario Power Generation. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # API compromise leading to download link manipulation
+  - 00000000-0000-0000-0000-000000000002   # Supply chain attack via compromised distribution infrastructure
+  - 00000000-0000-0000-0000-000000000003   # File masquerading with legitimate software branding
+  - 00000000-0000-0000-0000-000000000004   # Multi-staged malware deployment with memory execution
+  - 00000000-0000-0000-0000-000000000005   # EDR/AV evasion through NTDLL proxying
+  - 00000000-0000-0000-0000-000000000006   # Opportunistic timing exploitation during maintenance windows
+  - 00000000-0000-0000-0000-000000000007   # Cross-platform utility targeting campaign
+  - 00000000-0000-0000-0000-000000000008   # Cloudflare R2 abuse for malware hosting
+  - 00000000-0000-0000-0000-000000000009   # Russian installer deployment with setup wrapper
+  - 00000000-0000-0000-0000-000000000010   # Selective link poisoning while preserving originals
+  - 00000000-0000-0000-0000-000000000011   # Information stealing through trojanized system utilities
+  - 00000000-0000-0000-0000-000000000012   # Advanced loader deployment with known TTPs
+
+tags:
+  - ktlyst
+  - ontario-power-generation
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: Ontario Power Generation
+  created_at: 2026-04-13T18:31:39.899244+00:00
+  indicator_step_count: 12

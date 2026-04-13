@@ -1,7 +1,7 @@
 # Detection Gap Matrix
 
 **Target Stack:** email: Microsoft 365 GCC, identity: Microsoft Entra ID (Azure AD), cloud: Azure Government, edr: CrowdStrike Falcon GovCloud, siem: Microsoft Sentinel
-**Generated:** 2026-04-09
+**Generated:** 2026-04-13
 
 ## Coverage Summary
 

@@ -3,7 +3,7 @@ attack_technique: T1562
 display_name: "EDR/AV evasion through NTDLL proxying"
 atomic_tests:
   - name: "KTLYST - EDR/AV evasion through NTDLL proxying Simulation"
-    auto_generated_guid: d53671a6-5f81-454b-91d0-758137bd8952
+    auto_generated_guid: c6ceb7f7-af4a-4c83-a58c-512c8c2e82e7
     description: |
       Simulates EDR/AV evasion through NTDLL proxying technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

@@ -1,0 +1,80 @@
+{
+  "Event": {
+    "uuid": "1eba7378-cc78-4a10-a88c-06fb894e4288",
+    "info": "KTLYST - NYS Office of Information Technology Services - Advisory Extraction",
+    "date": "2026-04-13",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"NYS Office of Information Technology Services\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [
+      {
+        "uuid": "147bd127-562e-56d3-b52b-d77c1e13613c",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "www.propublica.org",
+        "timestamp": "1776105100"
+      },
+      {
+        "uuid": "d430eaec-2c72-5b6c-8b2e-851c97eedbe4",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "www.theregister.com",
+        "timestamp": "1776105100"
+      },
+      {
+        "uuid": "9323f13d-94a0-508f-a2a9-da2f797c9008",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "www.pcgamer.com",
+        "timestamp": "1776105100"
+      },
+      {
+        "uuid": "f2b04c2f-5db5-5628-b3bf-fd0a5f288040",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
+        "value": "michelf.ca",
+        "timestamp": "1776105100"
+      }
+    ],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-13T18:31:40.635383+00:00",
+    "customer": "NYS Office of Information Technology Services",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 4,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}

@@ -3,7 +3,7 @@
   "name": "KTLYST-Databricks-Phishing-IOC-2026-04-13",
   "scope": "REGIONAL",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:22:44.976103+00:00",
+  "generatedAt": "2026-04-13T18:31:40.085080+00:00",
   "createdFor": "Databricks",
   "resources": {
     "ipSet": {

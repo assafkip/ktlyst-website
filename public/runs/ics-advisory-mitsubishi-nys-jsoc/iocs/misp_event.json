@@ -1,8 +1,8 @@
 {
   "Event": {
-    "uuid": "1a495101-aaf2-4416-a123-aa9a5eee5a25",
+    "uuid": "79215db2-e883-476a-a9dd-d94ee3a67d67",
     "info": "KTLYST - NYS Office of Information Technology Services - Advisory Extraction",
-    "date": "2026-04-12",
+    "date": "2026-04-13",
     "threat_level_id": "2",
     "analysis": "2",
     "distribution": "1",
@@ -34,7 +34,7 @@
         "distribution": "1",
         "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
         "value": "iconicsinc.my.site.com",
-        "timestamp": "1776020862"
+        "timestamp": "1776105100"
       },
       {
         "uuid": "df060372-9b81-50f2-b674-320173d975d6",
@@ -44,7 +44,7 @@
         "distribution": "1",
         "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
         "value": "www.mitsubishielectric.co.jp",
-        "timestamp": "1776020862"
+        "timestamp": "1776105100"
       },
       {
         "uuid": "16d34191-47e6-504f-a8dc-bb2862b0570d",
@@ -54,14 +54,14 @@
         "distribution": "1",
         "comment": "KTLYST for NYS Office of Information Technology Services - from value-drop-pipeline",
         "value": "iconics.com",
-        "timestamp": "1776020862"
+        "timestamp": "1776105100"
       }
     ],
     "extends_uuid": ""
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-12T19:07:42.284939+00:00",
+    "generated_at": "2026-04-13T18:31:40.301521+00:00",
     "customer": "NYS Office of Information Technology Services",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 3,

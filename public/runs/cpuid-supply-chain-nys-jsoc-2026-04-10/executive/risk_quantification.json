@@ -1,0 +1,17 @@
+{
+  "loss_low_usd": 585000,
+  "loss_expected_usd": 1872000,
+  "loss_high_usd": 5850000,
+  "probability_band": "plausible within 12 months",
+  "severity": "high",
+  "size_bucket": "mid",
+  "industry": "government",
+  "industry_multiplier": 1.3,
+  "assumptions": [
+    "Loss bands derived from public incident cost references (Verizon DBIR, IBM Cost of a Data Breach), indexed by size bucket and industry multiplier.",
+    "Expected-case uses the midpoint scaled by advisory severity. Not a forecast. Use for order-of-magnitude board discussion.",
+    "Size bucket 'mid' covers the target based on the profile library convention.",
+    "Industry 'government' applied multiplier 1.3x."
+  ],
+  "generated": "2026-04-13T18:31:39.851556+00:00"
+}

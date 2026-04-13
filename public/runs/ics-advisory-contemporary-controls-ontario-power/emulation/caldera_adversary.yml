@@ -1,5 +1,5 @@
 # KTLYST Caldera adversary profile for Ontario Power Generation
-# Generated: 2026-04-12
+# Generated: 2026-04-13
 # Advisory: value-drop-pipeline
 #
 # Drop into caldera/data/adversaries/ and restart the Caldera
@@ -7,7 +7,7 @@
 # real ability UUID from your Caldera library (or import the
 # Atomic Red Team plugin) before running an operation.
 
-id: d2d31ba9-bd50-46d0-a909-a6c664291d22
+id: f1b40981-968d-4044-aae8-afa16f4cc866
 name: KTLYST - Ontario Power Generation - Phishing Emulation
 description: >-
   KTLYST-generated adversary profile for Ontario Power Generation. Exercises the
@@ -29,5 +29,5 @@ tags:
 ktlyst_metadata:
   generated_by: KTLYST
   created_for: Ontario Power Generation
-  created_at: 2026-04-12T19:07:28.759569+00:00
+  created_at: 2026-04-13T18:31:40.254439+00:00
   indicator_step_count: 3

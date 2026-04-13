@@ -238,6 +238,16 @@
       "reason": "neutral (no gate)"
     },
     {
+      "file": "emulation/detection_gap_matrix.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
+      "file": "executive/action_plan.json",
+      "emitted": true,
+      "reason": "neutral (no gate)"
+    },
+    {
       "file": "compliance/framework_mapping.csv",
       "emitted": true,
       "reason": "neutral (no gate)"
@@ -273,6 +283,6 @@
       "reason": "neutral (no gate)"
     }
   ],
-  "emitted_count": 38,
+  "emitted_count": 40,
   "skipped_count": 14
 }

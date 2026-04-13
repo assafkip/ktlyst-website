@@ -3,7 +3,7 @@ attack_technique: T1586
 display_name: "Selective domain redirection for stealth"
 atomic_tests:
   - name: "KTLYST - Selective domain redirection for stealth Simulation"
-    auto_generated_guid: d21304fb-bf0a-4946-9fc5-8f759d0b8b5c
+    auto_generated_guid: 7ddec177-81d4-4df1-8279-108ed673224d
     description: |
       Simulates Selective domain redirection for stealth technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

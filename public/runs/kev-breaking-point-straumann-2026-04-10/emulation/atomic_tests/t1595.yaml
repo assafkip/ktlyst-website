@@ -3,7 +3,7 @@ attack_technique: T1595
 display_name: "Infrastructure system targeting pattern"
 atomic_tests:
   - name: "KTLYST - Infrastructure system targeting pattern Simulation"
-    auto_generated_guid: 07bbef03-0dbb-49e5-a2a6-54711e0d4367
+    auto_generated_guid: 67076608-cdcc-4bf6-abbc-bb9b5155f850
     description: |
       Simulates Infrastructure system targeting pattern technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

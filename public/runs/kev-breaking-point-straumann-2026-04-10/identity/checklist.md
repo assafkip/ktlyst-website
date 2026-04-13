@@ -1,10 +1,11 @@
 # Identity Hardening Checklist
 
 **Identity Provider:** Unknown
-**Generated:** 2026-04-10
+**Generated:** 2026-04-13
 
 ## Immediate Actions
 
+- [ ] Run SCIM provisioning audit hunts from `identity/scim_audit.kql`
 - [ ] Audit OAuth app consents from last 30 days
 - [ ] Verify device code flow is restricted or blocked
 - [ ] Review break-glass account exclusions

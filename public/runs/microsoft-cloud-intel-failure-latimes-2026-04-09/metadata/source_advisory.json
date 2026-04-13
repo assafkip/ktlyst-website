@@ -1,7 +1,7 @@
 {
   "source": "value-drop-pipeline",
   "report": "Advisory Extraction",
-  "processed_at": "2026-04-09T20:09:52.041256+00:00",
+  "processed_at": "2026-04-13T18:31:40.679031+00:00",
   "total_indicators": 8,
   "processing_time": 11.60487413406372
 }

@@ -3,7 +3,7 @@
   "name": "KTLYST - Databricks - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for Databricks. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:22:44.975245+00:00",
+  "generatedAt": "2026-04-13T18:31:40.084449+00:00",
   "organization": "Databricks",
   "action": "block",
   "entries": [],

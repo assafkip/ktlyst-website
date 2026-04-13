@@ -1,0 +1,74 @@
+{
+  "resourceType": "AWS::WAFv2::Combined",
+  "name": "KTLYST-Los-Angeles-Times-Phishing-IOC-2026-04-13",
+  "scope": "REGIONAL",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-13T18:31:40.677325+00:00",
+  "createdFor": "Los Angeles Times",
+  "resources": {
+    "ipSet": {
+      "type": "AWS::WAFv2::IPSet",
+      "name": "KTLYST-Los-Angeles-Times-PhishingDomains",
+      "scope": "REGIONAL",
+      "ipAddressVersion": "IPV4",
+      "addresses": [],
+      "note": "Populate addresses with A-record resolutions of the domain list below. KTLYST emits the domain list here because WAF cannot match domain strings directly; pair with a Lambda refresher that resolves and updates the IPSet every hour.",
+      "relatedDomains": [
+        "www.propublica.org",
+        "www.theregister.com",
+        "www.pcgamer.com",
+        "michelf.ca"
+      ]
+    },
+    "ruleGroup": {
+      "type": "AWS::WAFv2::RuleGroup",
+      "name": "KTLYST-Los-Angeles-Times-PhishingRules",
+      "scope": "REGIONAL",
+      "capacity": 50,
+      "rules": [
+        {
+          "name": "BlockKtlystPhishingIOCs",
+          "priority": 1,
+          "action": {
+            "block": {}
+          },
+          "statement": {
+            "ipSetReferenceStatement": {
+              "arnRef": "KTLYST-PhishingDomains"
+            }
+          },
+          "visibilityConfig": {
+            "sampledRequestsEnabled": true,
+            "cloudWatchMetricsEnabled": true,
+            "metricName": "KtlystPhishingBlocks"
+          }
+        },
+        {
+          "name": "BlockAnonymousIPs",
+          "priority": 2,
+          "action": {
+            "block": {}
+          },
+          "statement": {
+            "managedRuleGroupStatement": {
+              "vendorName": "AWS",
+              "name": "AWSManagedRulesAnonymousIpList"
+            }
+          },
+          "overrideAction": {
+            "none": {}
+          },
+          "visibilityConfig": {
+            "sampledRequestsEnabled": true,
+            "cloudWatchMetricsEnabled": true,
+            "metricName": "KtlystAnonymousIPBlocks"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "indicator_count": 4,
+    "note": "Deploy to a non-production WebACL first. Block action is immediate; CloudWatch metrics give you FP rate before rolling to prod."
+  }
+}

@@ -7,7 +7,7 @@
 # real ability UUID from your Caldera library (or import the
 # Atomic Red Team plugin) before running an operation.
 
-id: a8f9b240-dfa6-4491-aea9-5b6885cd7bca
+id: 503495ff-b9fc-47f8-9d41-17e376353a76
 name: KTLYST - Crypto ISAC - Phishing Emulation
 description: >-
   KTLYST-generated adversary profile for Crypto ISAC. Exercises the
@@ -29,5 +29,5 @@ tags:
 ktlyst_metadata:
   generated_by: KTLYST
   created_for: Crypto ISAC
-  created_at: 2026-04-13T15:23:00.276980+00:00
+  created_at: 2026-04-13T18:31:40.042880+00:00
   indicator_step_count: 3

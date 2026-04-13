@@ -3,7 +3,7 @@
   "name": "KTLYST - P1FCU - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for P1FCU. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:22:46.016137+00:00",
+  "generatedAt": "2026-04-13T18:31:40.163696+00:00",
   "organization": "P1FCU",
   "action": "block",
   "entries": [],

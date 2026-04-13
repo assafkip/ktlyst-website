@@ -1,6 +1,6 @@
 {
   "Event": {
-    "uuid": "d14f8780-2ff5-462a-a052-2e0b8968d69d",
+    "uuid": "2fdb471d-2bac-4ff7-a468-7be5c5ed28a8",
     "info": "KTLYST - Ontario Power Generation - Advisory Extraction",
     "date": "2026-04-13",
     "threat_level_id": "2",
@@ -34,7 +34,7 @@
         "distribution": "1",
         "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
         "value": "www.googletagmanager.com",
-        "timestamp": "1776104038"
+        "timestamp": "1776105099"
       },
       {
         "uuid": "2c44e0d6-c4cb-54f8-b355-4b5ff5bf77fc",
@@ -44,7 +44,7 @@
         "distribution": "1",
         "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
         "value": "advisory.It",
-        "timestamp": "1776104038"
+        "timestamp": "1776105099"
       },
       {
         "uuid": "da56f344-aca2-5e48-950e-3e974b8e787f",
@@ -54,7 +54,7 @@
         "distribution": "1",
         "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
         "value": "office365.com",
-        "timestamp": "1776104038"
+        "timestamp": "1776105099"
       },
       {
         "uuid": "0658a67b-8fbb-53ce-8dc5-a84335d01368",
@@ -64,14 +64,14 @@
         "distribution": "1",
         "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
         "value": "GOV.UK",
-        "timestamp": "1776104038"
+        "timestamp": "1776105099"
       }
     ],
     "extends_uuid": ""
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T18:13:58.587021+00:00",
+    "generated_at": "2026-04-13T18:31:39.697542+00:00",
     "customer": "Ontario Power Generation",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 4,

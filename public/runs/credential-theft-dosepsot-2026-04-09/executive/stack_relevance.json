@@ -1,0 +1,50 @@
+{
+  "platform": "Microsoft 365 / Entra ID",
+  "layers_affected": [
+    {
+      "layer": "detection",
+      "relevance": "critical",
+      "artifacts": 10
+    },
+    {
+      "layer": "emulation",
+      "relevance": "critical",
+      "artifacts": 9
+    },
+    {
+      "layer": "executive",
+      "relevance": "critical",
+      "artifacts": 7
+    },
+    {
+      "layer": "cloud",
+      "relevance": "critical",
+      "artifacts": 6
+    },
+    {
+      "layer": "identity",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "email",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "perimeter",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "compliance",
+      "relevance": "high",
+      "artifacts": 4
+    },
+    {
+      "layer": "endpoint",
+      "relevance": "high",
+      "artifacts": 3
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "advisory": "Unit42 Device Code OAuth Phishing",
-  "generated": "2026-04-13T15:22:44.975981+00:00",
+  "generated": "2026-04-13T18:31:40.084990+00:00",
   "recommended_policies": [
     {
       "name": "Block device code flow for all users",

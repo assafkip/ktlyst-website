@@ -1,6 +1,6 @@
 {
   "Event": {
-    "uuid": "da2257be-cb02-4f8c-8065-e6036db09412",
+    "uuid": "8513dbf7-4efc-49e6-bac7-180827070db5",
     "info": "KTLYST - P1FCU - Advisory Extraction",
     "date": "2026-04-13",
     "threat_level_id": "2",
@@ -30,7 +30,7 @@
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T15:22:46.019986+00:00",
+    "generated_at": "2026-04-13T18:31:40.166095+00:00",
     "customer": "P1FCU",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 0,

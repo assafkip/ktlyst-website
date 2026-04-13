@@ -1,6 +1,6 @@
 {
   "Event": {
-    "uuid": "d7331fa9-3373-42aa-8800-06f64f73125e",
+    "uuid": "f10d0c8c-e3c3-4354-8b5b-12a18f282015",
     "info": "KTLYST - Databricks - Advisory Extraction",
     "date": "2026-04-13",
     "threat_level_id": "2",
@@ -30,7 +30,7 @@
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T15:22:44.978531+00:00",
+    "generated_at": "2026-04-13T18:31:40.086478+00:00",
     "customer": "Databricks",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 0,

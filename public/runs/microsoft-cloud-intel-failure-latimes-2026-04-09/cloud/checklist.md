@@ -1,13 +1,12 @@
 # Cloud Security Checklist
 
 **Cloud Platform:** AWS / GCP
-**Generated:** 2026-04-09
+**Generated:** 2026-04-13
 
 ## Immediate Actions
 
-- [ ] Run Azure AD hunt queries from `cloud/azure_ad_hunt.kql`
-- [ ] Run OAuth app audit from `cloud/oauth_app_audit.kql`
-- [ ] Review conditional access gaps in `cloud/conditional_access_gaps.json`
+- [ ] Deploy AWS WAFv2 IPSet + rule group from `cloud/aws_waf_ip_set.json` (non-prod first)
+- [ ] Import Cloud Armor policy with `gcloud compute security-policies import` from `cloud/gcp_armor_policy.yaml`
 - [ ] Check for unauthorized app consents in last 30 days
 
 ## Verification

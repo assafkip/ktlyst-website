@@ -1,0 +1,52 @@
+// KTLYST SCIM Provisioning Audit - Los Angeles Times
+// Generated: 2026-04-13
+// Paste into Log Analytics (Entra) or adapt for Okta System Log.
+
+
+// Hunt 1: New SCIM-capable apps consented in the last 30 days
+// Attackers add a new enterprise app with provisioning scope as a
+// persistence primitive. Flag any new service principal with SCIM.
+AuditLogs
+| where TimeGenerated >= ago(30d)
+| where OperationName == "Consent to application"
+| extend AppName = tostring(TargetResources[0].displayName)
+| extend ConsentedBy = tostring(InitiatedBy.user.userPrincipalName)
+| extend Permissions = TargetResources[0].modifiedProperties
+| where tostring(Permissions) has_any (
+    "User.ReadWrite.All",
+    "Directory.ReadWrite.All",
+    "AppRoleAssignment.ReadWrite.All"
+  )
+| project TimeGenerated, AppName, ConsentedBy, Permissions
+| order by TimeGenerated desc
+
+// Hunt 2: Bulk provisioning burst by one app
+// A legitimate SCIM sync pushes a steady, predictable delta. A sudden
+// burst of user creates or attribute updates from a single app in a
+// short window is a strong signal of abuse.
+AuditLogs
+| where TimeGenerated >= ago(7d)
+| where Category == "UserManagement"
+| where OperationName in ("Add user", "Update user", "Enable account")
+| extend AppName = tostring(InitiatedBy.app.displayName)
+| where isnotempty(AppName)
+| summarize OpCount = count() by bin(TimeGenerated, 10m), AppName, OperationName
+| where OpCount > 25
+| order by TimeGenerated desc
+
+// Hunt 3: After-hours SCIM attribute overwrites
+// SCIM-driven attribute overwrites during off-hours are rarely
+// legitimate. Adjust the hour-of-day window to your business hours.
+let business_start = 8;
+let business_end = 19;
+AuditLogs
+| where TimeGenerated >= ago(14d)
+| where OperationName == "Update user"
+| extend AppName = tostring(InitiatedBy.app.displayName)
+| extend TargetUpn = tostring(TargetResources[0].userPrincipalName)
+| extend HourOfDay = datetime_part("Hour", TimeGenerated)
+| where isnotempty(AppName)
+| where HourOfDay < business_start or HourOfDay >= business_end
+| project TimeGenerated, AppName, TargetUpn,
+          AttrChanges = TargetResources[0].modifiedProperties
+| order by TimeGenerated desc

@@ -1,8 +1,8 @@
 Framework,Control,Description,Advisory Relevance,Action Taken,Date
-NIST CSF,ID.RA-1,Asset vulnerabilities identified,OAuth device code flow identified as attack surface,Detection rules deployed,2026-04-09
-NIST CSF,PR.AC-7,"Users, devices, authentication managed",Device code auth flow targeted by campaign,Conditional Access policy recommended,2026-04-09
-NIST CSF,DE.CM-1,Network monitored for cybersecurity events,IOC domains identified for monitoring,Watchlist and detection rules generated,2026-04-09
-NIST CSF,DE.AE-2,Detected events analyzed for attack targets,10 behavioral patterns extracted and mapped to MITRE ATT&CK,Full analysis in report,2026-04-09
-NIST CSF,RS.AN-1,Notifications from detection systems investigated,Advisory processed into actionable team packages,Deliverable package generated,2026-04-09
-HIPAA,164.312(d),Person or entity authentication,Device code flow abuse bypasses standard authentication,Conditional Access policy restricting device code flow,2026-04-09
-HIPAA,164.312(a)(1),Access control,Stolen OAuth tokens grant unauthorized access to email and files,OAuth app audit queries and monitoring deployed,2026-04-09
+NIST CSF,ID.RA-1,Asset vulnerabilities identified,OAuth device code flow identified as attack surface,Detection rules deployed,2026-04-13
+NIST CSF,PR.AC-7,"Users, devices, authentication managed",Device code auth flow targeted by campaign,Conditional Access policy recommended,2026-04-13
+NIST CSF,DE.CM-1,Network monitored for cybersecurity events,IOC domains identified for monitoring,Watchlist and detection rules generated,2026-04-13
+NIST CSF,DE.AE-2,Detected events analyzed for attack targets,10 behavioral patterns extracted and mapped to MITRE ATT&CK,Full analysis in report,2026-04-13
+NIST CSF,RS.AN-1,Notifications from detection systems investigated,Advisory processed into actionable team packages,Deliverable package generated,2026-04-13
+HIPAA,164.312(d),Person or entity authentication,Device code flow abuse bypasses standard authentication,Conditional Access policy restricting device code flow,2026-04-13
+HIPAA,164.312(a)(1),Access control,Stolen OAuth tokens grant unauthorized access to email and files,OAuth app audit queries and monitoring deployed,2026-04-13

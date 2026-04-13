@@ -1,7 +1,7 @@
 {
   "event_type": "advisory.package.generated",
-  "event_id": "ktlyst-ontario-power-generation-2026-04-13T18:13:58.591267+00:00",
-  "timestamp": "2026-04-13T18:13:58.591267+00:00",
+  "event_id": "ktlyst-ontario-power-generation-2026-04-13T18:31:39.699710+00:00",
+  "timestamp": "2026-04-13T18:31:39.699710+00:00",
   "actor": {
     "system": "KTLYST",
     "component": "deliverable_builder",

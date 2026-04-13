@@ -1,7 +1,7 @@
 # Emulation Plan
 
 **Advisory:** Advisory Extraction
-**Generated:** 2026-04-09
+**Generated:** 2026-04-13
 
 ## Objective
 

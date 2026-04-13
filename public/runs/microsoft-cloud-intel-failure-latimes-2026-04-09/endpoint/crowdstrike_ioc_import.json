@@ -5,7 +5,7 @@
       "value": "www.propublica.org",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Los Angeles Times - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -15,8 +15,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Los Angeles Times",
+        "phishing"
       ],
       "expiration": ""
     },
@@ -25,7 +25,7 @@
       "value": "www.theregister.com",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Los Angeles Times - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -35,8 +35,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Los Angeles Times",
+        "phishing"
       ],
       "expiration": ""
     },
@@ -45,7 +45,7 @@
       "value": "www.pcgamer.com",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Los Angeles Times - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -55,8 +55,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Los Angeles Times",
+        "phishing"
       ],
       "expiration": ""
     },
@@ -65,7 +65,7 @@
       "value": "michelf.ca",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Los Angeles Times - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -75,8 +75,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Los Angeles Times",
+        "phishing"
       ],
       "expiration": ""
     }

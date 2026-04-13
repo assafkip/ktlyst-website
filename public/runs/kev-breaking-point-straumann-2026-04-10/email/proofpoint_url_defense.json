@@ -1,0 +1,19 @@
+{
+  "resourceType": "urlBlockList",
+  "name": "KTLYST - Straumann Group - Phishing Domains (2026-04-13)",
+  "description": "Phishing infrastructure identified by KTLYST for Straumann Group. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-13T18:31:40.594629+00:00",
+  "organization": "Straumann Group",
+  "action": "block",
+  "entries": [],
+  "policyRoute": {
+    "name": "KTLYST - Straumann Group - URL Defense Reroute",
+    "direction": "inbound",
+    "condition": {
+      "urlDefense": "rewriteAndBlock",
+      "listRef": "KTLYST phishing domain list"
+    },
+    "notes": "Admin review before enabling: confirm no legitimate vendor domains are in the KTLYST list. Route sits in front of the default TAP URL Defense route."
+  }
+}

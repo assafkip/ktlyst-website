@@ -1,0 +1,44 @@
+# KTLYST Cloud Armor policy for Los Angeles Times
+# Generated: 2026-04-13
+# Apply with: gcloud compute security-policies import ktlyst-los-angeles-times-phishing-ioc --source=this_file.yaml
+
+name: ktlyst-los-angeles-times-phishing-ioc
+description: 'KTLYST phishing IOC block policy for Los Angeles Times'
+type: CLOUD_ARMOR
+rules:
+- priority: 1000
+  action: deny(403)
+  match:
+    expr:
+      expression: "request.headers['host'].contains('www.propublica.org') || request.headers['host'].contains('www.theregister.com') || request.headers['host'].contains('www.pcgamer.com') || request.headers['host'].contains('michelf.ca')"
+  description: 'Block requests referencing KTLYST phishing domains'
+- priority: 1100
+  action: deny(403)
+  match:
+    expr:
+      expression: "origin.region_code == 'T1'"
+  description: 'Block known anonymizer / TOR exit ranges'
+- priority: 2000
+  action: rate_based_ban
+  rateLimitOptions:
+    rateLimitThreshold:
+      count: 100
+      intervalSec: 60
+    banDurationSec: 600
+    conformAction: allow
+    exceedAction: deny(429)
+    enforceOnKey: IP
+  match:
+    versionedExpr: SRC_IPS_V1
+    config:
+      srcIpRanges:
+      - '*'
+  description: 'Rate-limit unauthenticated requests'
+- priority: 2147483647
+  action: allow
+  match:
+    versionedExpr: SRC_IPS_V1
+    config:
+      srcIpRanges:
+      - '*'
+  description: 'Default allow'

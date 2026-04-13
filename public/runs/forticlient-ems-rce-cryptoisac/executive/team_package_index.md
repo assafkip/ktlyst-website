@@ -3,7 +3,7 @@
 **Advisory:** Advisory Extraction
 **Prepared for:** Crypto ISAC
 **Generated:** 2026-04-13
-**Total files:** 59
+**Total files:** 61
 
 ## Deployment Tiers
 

@@ -1,7 +1,7 @@
 # Detection Gap Matrix
 
 **Target Stack:** email: Google Workspace, identity: Okta, cloud: AWS / GCP, edr: CrowdStrike Falcon, siem: Splunk / Datadog
-**Generated:** 2026-04-09
+**Generated:** 2026-04-13
 
 ## Coverage Summary
 

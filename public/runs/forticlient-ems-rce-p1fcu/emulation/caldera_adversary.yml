@@ -7,7 +7,7 @@
 # real ability UUID from your Caldera library (or import the
 # Atomic Red Team plugin) before running an operation.
 
-id: 13b1f503-435e-45bc-89ca-316c7eab9854
+id: 7c945c6d-bc09-40b6-97a4-3e41ebcb12c0
 name: KTLYST - P1FCU - Phishing Emulation
 description: >-
   KTLYST-generated adversary profile for P1FCU. Exercises the
@@ -29,5 +29,5 @@ tags:
 ktlyst_metadata:
   generated_by: KTLYST
   created_for: P1FCU
-  created_at: 2026-04-13T15:22:46.018473+00:00
+  created_at: 2026-04-13T18:31:40.165303+00:00
   indicator_step_count: 3

@@ -1,6 +1,6 @@
 {
   "Event": {
-    "uuid": "a658cc20-26a6-4a1a-8160-1c2d0cb3497e",
+    "uuid": "83b8a55a-83d1-4e8e-8399-f9ee1b7377ea",
     "info": "KTLYST - U.S. Department of Homeland Security - Advisory Extraction",
     "date": "2026-04-13",
     "threat_level_id": "2",
@@ -30,7 +30,7 @@
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T15:22:44.611171+00:00",
+    "generated_at": "2026-04-13T18:31:40.125031+00:00",
     "customer": "U.S. Department of Homeland Security",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 0,

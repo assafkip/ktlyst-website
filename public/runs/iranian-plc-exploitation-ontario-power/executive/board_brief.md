@@ -2,7 +2,7 @@
 
 **Advisory:** Advisory Extraction
 **Source:** value-drop-pipeline
-**Prepared:** 2026-04-12
+**Prepared:** 2026-04-13
 
 ## Business Impact
 
@@ -21,7 +21,7 @@ Figures are order-of-magnitude estimates for a mid-size energy organization. Not
 
 - Approve the Tier 1 auto-deploy artifacts (IOC blocks, watchlists, tenant block lists).
 - Route the Tier 2 detection-as-code changes through the existing SOC pull-request workflow this week.
-- Schedule a 30-minute review for the Tier 3 identity, cloud, and emulation artifacts before enforcement.
+- Schedule a review for the Tier 3 identity, cloud, and emulation artifacts before enforcement.
 
 ## Residual Risk
 

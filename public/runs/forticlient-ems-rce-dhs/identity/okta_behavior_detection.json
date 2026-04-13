@@ -37,7 +37,7 @@
   },
   "metadata": {
     "generatedBy": "KTLYST",
-    "generatedAt": "2026-04-13T15:22:44.607696+00:00",
+    "generatedAt": "2026-04-13T18:31:40.122409+00:00",
     "applicable": false,
     "note": "Pair with the KTLYST ACCESS_POLICY in okta_policy_recommendation.json. Access policy blocks the grant type; behavior rule catches the context when an exception is allowed."
   }

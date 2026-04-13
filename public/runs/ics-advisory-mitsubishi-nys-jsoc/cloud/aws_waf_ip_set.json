@@ -1,9 +1,9 @@
 {
   "resourceType": "AWS::WAFv2::Combined",
-  "name": "KTLYST-NYS-Office-of-Information-Technology-Services-Phishing-IOC-2026-04-12",
+  "name": "KTLYST-NYS-Office-of-Information-Technology-Services-Phishing-IOC-2026-04-13",
   "scope": "REGIONAL",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-12T19:07:42.283375+00:00",
+  "generatedAt": "2026-04-13T18:31:40.299807+00:00",
   "createdFor": "NYS Office of Information Technology Services",
   "resources": {
     "ipSet": {

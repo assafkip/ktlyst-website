@@ -3,7 +3,7 @@ attack_technique: T1041
 display_name: "Information stealing through trojanized system utilities"
 atomic_tests:
   - name: "KTLYST - Information stealing through trojanized system utilities Simulation"
-    auto_generated_guid: bda59c03-4901-4d5c-87d9-f4488b09ce00
+    auto_generated_guid: bf4db7d9-acaa-4490-941a-1313405c3f92
     description: |
       Simulates Information stealing through trojanized system utilities technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

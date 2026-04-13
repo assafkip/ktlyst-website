@@ -1,0 +1,44 @@
+{
+  "type": "BEHAVIOR_RULE",
+  "name": "KTLYST - NYS Office of Information Technology Services - Suspicious Device Code Context",
+  "status": "INACTIVE",
+  "description": "Flag device-code sign-ins that carry at least one high-risk signal: anonymizer / proxy, impossible travel, new device, or non-corporate IP range.",
+  "settings": {
+    "behaviors": [
+      {
+        "type": "ANOMALOUS_LOCATION",
+        "threshold": "HIGH"
+      },
+      {
+        "type": "ANOMALOUS_DEVICE",
+        "threshold": "HIGH"
+      },
+      {
+        "type": "ANOMALOUS_IP",
+        "threshold": "HIGH"
+      },
+      {
+        "type": "VELOCITY",
+        "threshold": "HIGH"
+      }
+    ],
+    "grantTypes": {
+      "include": [
+        "urn:ietf:params:oauth:grant-type:device_code"
+      ]
+    }
+  },
+  "actions": {
+    "riskScore": "HIGH",
+    "notify": [
+      "security-ops"
+    ],
+    "stepUp": "REQUIRE_MFA"
+  },
+  "metadata": {
+    "generatedBy": "KTLYST",
+    "generatedAt": "2026-04-13T18:31:39.853108+00:00",
+    "applicable": true,
+    "note": "Pair with the KTLYST ACCESS_POLICY in okta_policy_recommendation.json. Access policy blocks the grant type; behavior rule catches the context when an exception is allowed."
+  }
+}

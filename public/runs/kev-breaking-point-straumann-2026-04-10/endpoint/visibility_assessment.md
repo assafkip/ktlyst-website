@@ -1,7 +1,7 @@
 # Endpoint Visibility Assessment
 
 **EDR:** Unknown (not inferable from DNS)
-**Generated:** 2026-04-10
+**Generated:** 2026-04-13
 
 ## What Your EDR Sees
 

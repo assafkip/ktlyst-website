@@ -1,5 +1,5 @@
 # KTLYST Cloud Armor policy for NYS Office of Information Technology Services
-# Generated: 2026-04-12
+# Generated: 2026-04-13
 # Apply with: gcloud compute security-policies import ktlyst-nys-office-of-information-technology-services-phishing-ioc --source=this_file.yaml
 
 name: ktlyst-nys-office-of-information-technology-services-phishing-ioc

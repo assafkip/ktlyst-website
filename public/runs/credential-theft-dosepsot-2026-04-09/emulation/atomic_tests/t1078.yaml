@@ -3,7 +3,7 @@ attack_technique: T1078
 display_name: "Email breach to credential stuffing attack chain"
 atomic_tests:
   - name: "KTLYST - Email breach to credential stuffing attack chain Simulation"
-    auto_generated_guid: 40f22c02-f472-4f63-843c-f37e6b95bd50
+    auto_generated_guid: 89599b0d-f340-4134-bdda-4e4d8f08477d
     description: |
       Simulates Email breach to credential stuffing attack chain technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

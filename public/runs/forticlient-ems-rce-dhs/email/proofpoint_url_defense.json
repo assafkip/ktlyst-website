@@ -3,7 +3,7 @@
   "name": "KTLYST - U.S. Department of Homeland Security - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for U.S. Department of Homeland Security. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:22:44.608266+00:00",
+  "generatedAt": "2026-04-13T18:31:40.122945+00:00",
   "organization": "U.S. Department of Homeland Security",
   "action": "block",
   "entries": [],

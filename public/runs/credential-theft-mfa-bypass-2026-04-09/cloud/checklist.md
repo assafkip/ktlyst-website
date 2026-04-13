@@ -1,13 +1,14 @@
 # Cloud Security Checklist
 
 **Cloud Platform:** Microsoft Azure
-**Generated:** 2026-04-09
+**Generated:** 2026-04-13
 
 ## Immediate Actions
 
 - [ ] Run Azure AD hunt queries from `cloud/azure_ad_hunt.kql`
 - [ ] Run OAuth app audit from `cloud/oauth_app_audit.kql`
 - [ ] Review conditional access gaps in `cloud/conditional_access_gaps.json`
+- [ ] Review `cloud/azure_sentinel_identity_analytic.json` in Sentinel > Analytics before enabling
 - [ ] Check for unauthorized app consents in last 30 days
 
 ## Verification

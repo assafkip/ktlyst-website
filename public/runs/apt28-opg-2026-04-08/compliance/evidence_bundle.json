@@ -1,11 +1,11 @@
 {
   "bundle_version": "1.0",
-  "generated": "2026-04-13T18:13:58.591055+00:00",
+  "generated": "2026-04-13T18:31:39.699586+00:00",
   "generator": "KTLYST",
   "advisory": {
     "source": "value-drop-pipeline",
     "report": "Advisory Extraction",
-    "processed_at": "2026-04-13T18:13:58.591055+00:00"
+    "processed_at": "2026-04-13T18:31:39.699586+00:00"
   },
   "target": {
     "name": "Ontario Power Generation",

@@ -3,7 +3,7 @@
   "name": "KTLYST-P1FCU-Phishing-IOC-2026-04-13",
   "scope": "REGIONAL",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T15:22:46.017529+00:00",
+  "generatedAt": "2026-04-13T18:31:40.164475+00:00",
   "createdFor": "P1FCU",
   "resources": {
     "ipSet": {

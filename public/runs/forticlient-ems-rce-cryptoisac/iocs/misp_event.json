@@ -1,6 +1,6 @@
 {
   "Event": {
-    "uuid": "b36f8bf9-c73f-4d73-8036-a68180213304",
+    "uuid": "9e06f63c-c3f1-4f04-8da9-d3cbbd2afe31",
     "info": "KTLYST - Crypto ISAC - Advisory Extraction",
     "date": "2026-04-13",
     "threat_level_id": "2",
@@ -30,7 +30,7 @@
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T15:23:00.277813+00:00",
+    "generated_at": "2026-04-13T18:31:40.043551+00:00",
     "customer": "Crypto ISAC",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 0,

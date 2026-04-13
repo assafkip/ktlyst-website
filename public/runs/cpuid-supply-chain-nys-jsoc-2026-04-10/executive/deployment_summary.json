@@ -1,0 +1,21 @@
+{
+  "total_artifacts": 56,
+  "tier_1_auto_deploy": 11,
+  "tier_2_pr_review": 23,
+  "tier_3_human_approval": 22,
+  "teams_covered": [
+    "Cloud",
+    "Compliance",
+    "SOC / Detection",
+    "Email Security",
+    "Red Team",
+    "Endpoint",
+    "Executive",
+    "IAM",
+    "IOC Exports"
+  ],
+  "teams_with_gaps": [],
+  "coverage_techniques": 0,
+  "coverage_total_steps": 0,
+  "coverage_pct": 0
+}

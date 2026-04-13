@@ -1,8 +1,8 @@
 {
   "Event": {
-    "uuid": "646137e2-9a06-4823-ad8f-bd0bb097d9a6",
+    "uuid": "f1d2b2ee-a470-447a-8885-5d9db06415b2",
     "info": "KTLYST - Ontario Power Generation - Advisory Extraction",
-    "date": "2026-04-12",
+    "date": "2026-04-13",
     "threat_level_id": "2",
     "analysis": "2",
     "distribution": "1",
@@ -34,14 +34,14 @@
         "distribution": "1",
         "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
         "value": "www.ccontrols.com",
-        "timestamp": "1776020848"
+        "timestamp": "1776105100"
       }
     ],
     "extends_uuid": ""
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-12T19:07:28.760138+00:00",
+    "generated_at": "2026-04-13T18:31:40.255349+00:00",
     "customer": "Ontario Power Generation",
     "source_advisory": "value-drop-pipeline",
     "indicator_count": 1,

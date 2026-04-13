@@ -5,24 +5,19 @@
       "phase_number": 0,
       "actions": [
         {
-          "description": "Import IOCs for detect-mode monitoring",
-          "tier": 1,
-          "impact_tag": "DETECTION-GAP",
-          "team": "endpoint",
-          "tool": ""
-        },
-        {
           "description": "Hunt for indicators across all endpoints",
+          "action_type": "hunt",
           "tier": 1,
           "impact_tag": "DETECTION-GAP",
           "team": "endpoint",
           "tool": ""
         },
         {
-          "description": "Import IOC blocklists",
+          "description": "Import IOCs for detect-mode monitoring",
+          "action_type": "detect",
           "tier": 1,
-          "impact_tag": "PERIMETER",
-          "team": "iocs",
+          "impact_tag": "DETECTION-GAP",
+          "team": "endpoint",
           "tool": ""
         }
       ]
@@ -33,6 +28,7 @@
       "actions": [
         {
           "description": "Block threat domains at email gateway",
+          "action_type": "block",
           "tier": 1,
           "impact_tag": "VECTOR-BLOCK",
           "team": "email",
@@ -40,6 +36,7 @@
         },
         {
           "description": "Deploy transport rules in Proofpoint (email gateway)",
+          "action_type": "block",
           "tier": 1,
           "impact_tag": "VECTOR-BLOCK",
           "team": "email",
@@ -52,28 +49,24 @@
       "phase_number": 2,
       "actions": [
         {
-          "description": "Audit OAuth app consents and service principal sign-ins",
+          "description": "Run identity hunt queries",
+          "action_type": "hunt",
           "tier": 2,
-          "impact_tag": "CREDENTIAL-EXPOSURE",
-          "team": "cloud",
+          "impact_tag": "IDENTITY",
+          "team": "identity",
           "tool": ""
         },
         {
-          "description": "Deploy cloud-layer analytic rules",
-          "tier": 2,
-          "impact_tag": "CREDENTIAL-EXPOSURE",
-          "team": "cloud",
-          "tool": ""
-        },
-        {
-          "description": "Deploy detection rules",
+          "description": "Enable watchlist monitoring for advisory indicators",
+          "action_type": "detect",
           "tier": 2,
           "impact_tag": "DETECTION-GAP",
           "team": "detection",
           "tool": ""
         },
         {
-          "description": "Enable watchlist monitoring for advisory indicators",
+          "description": "Deploy detection rules",
+          "action_type": "block",
           "tier": 2,
           "impact_tag": "DETECTION-GAP",
           "team": "detection",
@@ -81,13 +74,7 @@
         },
         {
           "description": "Review and deploy Conditional Access policy changes",
-          "tier": 2,
-          "impact_tag": "IDENTITY",
-          "team": "identity",
-          "tool": ""
-        },
-        {
-          "description": "Run identity hunt queries",
+          "action_type": "block",
           "tier": 2,
           "impact_tag": "IDENTITY",
           "team": "identity",
@@ -100,28 +87,16 @@
       "phase_number": 3,
       "actions": [
         {
-          "description": "File framework mapping as evidence for next audit",
-          "tier": 3,
-          "impact_tag": "GOVERNANCE",
-          "team": "compliance",
-          "tool": ""
-        },
-        {
-          "description": "Review evidence bundle for completeness",
-          "tier": 3,
-          "impact_tag": "GOVERNANCE",
-          "team": "compliance",
-          "tool": ""
-        },
-        {
-          "description": "Schedule red team exercise against emulation plan",
+          "description": "Run Atomic Red Team tests for covered techniques",
+          "action_type": "hunt",
           "tier": 3,
           "impact_tag": "VALIDATION",
           "team": "emulation",
           "tool": ""
         },
         {
-          "description": "Run Atomic Red Team tests for covered techniques",
+          "description": "Schedule red team exercise against emulation plan",
+          "action_type": "audit",
           "tier": 3,
           "impact_tag": "VALIDATION",
           "team": "emulation",
@@ -129,6 +104,7 @@
         },
         {
           "description": "Forward board brief to CISO/VP Security",
+          "action_type": "audit",
           "tier": 3,
           "impact_tag": "GOVERNANCE",
           "team": "executive",
@@ -136,6 +112,7 @@
         },
         {
           "description": "Schedule review of Tier 3 artifacts",
+          "action_type": "audit",
           "tier": 3,
           "impact_tag": "GOVERNANCE",
           "team": "executive",
@@ -146,15 +123,15 @@
   ],
   "top_3": [
     {
-      "description": "Import IOCs for detect-mode monitoring",
-      "tier": 1
-    },
-    {
       "description": "Hunt for indicators across all endpoints",
       "tier": 1
     },
     {
-      "description": "Import IOC blocklists",
+      "description": "Import IOCs for detect-mode monitoring",
+      "tier": 1
+    },
+    {
+      "description": "Block threat domains at email gateway",
       "tier": 1
     }
   ]

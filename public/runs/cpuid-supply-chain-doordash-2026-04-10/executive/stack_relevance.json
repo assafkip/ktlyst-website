@@ -1,0 +1,50 @@
+{
+  "platform": "Okta",
+  "layers_affected": [
+    {
+      "layer": "detection",
+      "relevance": "critical",
+      "artifacts": 14
+    },
+    {
+      "layer": "emulation",
+      "relevance": "critical",
+      "artifacts": 11
+    },
+    {
+      "layer": "executive",
+      "relevance": "critical",
+      "artifacts": 7
+    },
+    {
+      "layer": "identity",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "perimeter",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "cloud",
+      "relevance": "high",
+      "artifacts": 4
+    },
+    {
+      "layer": "compliance",
+      "relevance": "high",
+      "artifacts": 4
+    },
+    {
+      "layer": "email",
+      "relevance": "high",
+      "artifacts": 3
+    },
+    {
+      "layer": "endpoint",
+      "relevance": "high",
+      "artifacts": 3
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 # real ability UUID from your Caldera library (or import the
 # Atomic Red Team plugin) before running an operation.
 
-id: 6def0df3-b0fa-462c-a209-b37e1dfb19cf
+id: cf163f56-0f04-4557-a888-0f02e91a15bf
 name: KTLYST - Shield & Seed LLC - Phishing Emulation
 description: >-
   KTLYST-generated adversary profile for Shield & Seed LLC. Exercises the
@@ -29,5 +29,5 @@ tags:
 ktlyst_metadata:
   generated_by: KTLYST
   created_for: Shield & Seed LLC
-  created_at: 2026-04-13T15:22:47.971477+00:00
+  created_at: 2026-04-13T18:31:40.211283+00:00
   indicator_step_count: 3

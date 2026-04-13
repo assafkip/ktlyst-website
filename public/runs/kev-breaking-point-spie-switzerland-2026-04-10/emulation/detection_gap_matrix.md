@@ -1,7 +1,7 @@
 # Detection Gap Matrix
 
 **Target Stack:** email: Proofpoint (email gateway), identity: Unknown, cloud: Unknown, edr: Unknown (not inferable from DNS), siem: Unknown, additional_tools: {'contracts': 'DocuSign', 'remote_support': 'TeamViewer', 'project_mgmt': 'Atlassian (Jira/Confluence)'}
-**Generated:** 2026-04-10
+**Generated:** 2026-04-13
 
 ## Coverage Summary
 

@@ -3,7 +3,7 @@ attack_technique: T1621
 display_name: "Help desk social engineering attack"
 atomic_tests:
   - name: "KTLYST - Help desk social engineering attack Simulation"
-    auto_generated_guid: ae329df0-5266-422a-abab-bf5ef2c43001
+    auto_generated_guid: 4d2b2870-0a3f-4725-96f7-681bd1bd1779
     description: |
       Simulates Help desk social engineering attack technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

@@ -1,0 +1,19 @@
+{
+  "resourceType": "urlBlockList",
+  "name": "KTLYST - SPIE Switzerland - Phishing Domains (2026-04-13)",
+  "description": "Phishing infrastructure identified by KTLYST for SPIE Switzerland. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-13T18:31:40.555853+00:00",
+  "organization": "SPIE Switzerland",
+  "action": "block",
+  "entries": [],
+  "policyRoute": {
+    "name": "KTLYST - SPIE Switzerland - URL Defense Reroute",
+    "direction": "inbound",
+    "condition": {
+      "urlDefense": "rewriteAndBlock",
+      "listRef": "KTLYST phishing domain list"
+    },
+    "notes": "Admin review before enabling: confirm no legitimate vendor domains are in the KTLYST list. Route sits in front of the default TAP URL Defense route."
+  }
+}
