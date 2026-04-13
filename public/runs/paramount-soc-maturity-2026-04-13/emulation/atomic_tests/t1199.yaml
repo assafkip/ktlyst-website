@@ -3,7 +3,7 @@ attack_technique: T1199
 display_name: "Trusted Relationship"
 atomic_tests:
   - name: "KTLYST - Trusted Relationship Simulation"
-    auto_generated_guid: b5ce6e88-e49f-4814-ab1b-83c8b8010713
+    auto_generated_guid: bfb83138-c575-4704-bece-4fb0134f4600
     description: |
       Simulates Trusted Relationship technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

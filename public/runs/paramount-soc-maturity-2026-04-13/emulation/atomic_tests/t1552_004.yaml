@@ -3,7 +3,7 @@ attack_technique: T1552.004
 display_name: "Private Keys"
 atomic_tests:
   - name: "KTLYST - Private Keys Simulation"
-    auto_generated_guid: 87247177-ea9b-4099-89b4-ea5d1a58dfbd
+    auto_generated_guid: 472a7a18-56cc-4804-9a69-5ff4105af3ba
     description: |
       Simulates Private Keys technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

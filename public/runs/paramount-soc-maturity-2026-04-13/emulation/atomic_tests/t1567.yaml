@@ -3,7 +3,7 @@ attack_technique: T1567
 display_name: "Exfiltration Over Web Service"
 atomic_tests:
   - name: "KTLYST - Exfiltration Over Web Service Simulation"
-    auto_generated_guid: be696024-1529-450c-8b10-57a9e96e4c17
+    auto_generated_guid: ccf70518-b4c2-4d04-bd4c-aeb48cfdb40d
     description: |
       Simulates Exfiltration Over Web Service technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.
