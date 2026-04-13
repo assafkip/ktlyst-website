@@ -1,0 +1,20 @@
+---
+attack_technique: T1583.001
+display_name: "Domains"
+atomic_tests:
+  - name: "KTLYST - Domains Simulation"
+    auto_generated_guid: 6fcb10a6-c0a2-4872-bf03-75417d0ead9a
+    description: |
+      Simulates Domains technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

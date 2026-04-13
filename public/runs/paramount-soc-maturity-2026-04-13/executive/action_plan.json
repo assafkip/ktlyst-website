@@ -1,0 +1,162 @@
+{
+  "phases": [
+    {
+      "name": "Check for Active Compromise",
+      "phase_number": 0,
+      "actions": [
+        {
+          "description": "Hunt for indicators across all endpoints",
+          "action_type": "hunt",
+          "tier": 1,
+          "impact_tag": "DETECTION-GAP",
+          "team": "endpoint",
+          "tool": "CrowdStrike Falcon, Carbon Black"
+        },
+        {
+          "description": "Import IOCs into CrowdStrike Falcon, Carbon Black for detect-mode monitoring",
+          "action_type": "detect",
+          "tier": 1,
+          "impact_tag": "DETECTION-GAP",
+          "team": "endpoint",
+          "tool": "CrowdStrike Falcon, Carbon Black"
+        }
+      ]
+    },
+    {
+      "name": "Immediate Response",
+      "phase_number": 1,
+      "actions": [
+        {
+          "description": "Block threat domains at email gateway",
+          "action_type": "block",
+          "tier": 1,
+          "impact_tag": "VECTOR-BLOCK",
+          "team": "email",
+          "tool": "Proofpoint"
+        },
+        {
+          "description": "Deploy transport rules in Proofpoint",
+          "action_type": "block",
+          "tier": 1,
+          "impact_tag": "VECTOR-BLOCK",
+          "team": "email",
+          "tool": "Proofpoint"
+        }
+      ]
+    },
+    {
+      "name": "This Week",
+      "phase_number": 2,
+      "actions": [
+        {
+          "description": "Run identity hunt queries in Microsoft Entra ID",
+          "action_type": "hunt",
+          "tier": 2,
+          "impact_tag": "IDENTITY",
+          "team": "identity",
+          "tool": "Microsoft Entra ID"
+        },
+        {
+          "description": "Enable watchlist monitoring for advisory indicators",
+          "action_type": "detect",
+          "tier": 2,
+          "impact_tag": "DETECTION-GAP",
+          "team": "detection",
+          "tool": "Splunk"
+        },
+        {
+          "description": "Audit OAuth app consents and service principal sign-ins",
+          "action_type": "audit",
+          "tier": 2,
+          "impact_tag": "CREDENTIAL-EXPOSURE",
+          "team": "cloud",
+          "tool": "AWS (streaming), Azure (corporate)"
+        },
+        {
+          "description": "Deploy cloud-layer analytic rules",
+          "action_type": "block",
+          "tier": 2,
+          "impact_tag": "CREDENTIAL-EXPOSURE",
+          "team": "cloud",
+          "tool": "AWS (streaming), Azure (corporate)"
+        },
+        {
+          "description": "Deploy detection rules to Splunk",
+          "action_type": "block",
+          "tier": 2,
+          "impact_tag": "DETECTION-GAP",
+          "team": "detection",
+          "tool": "Splunk"
+        },
+        {
+          "description": "Review and deploy Conditional Access policy changes",
+          "action_type": "block",
+          "tier": 2,
+          "impact_tag": "IDENTITY",
+          "team": "identity",
+          "tool": "Microsoft Entra ID"
+        }
+      ]
+    },
+    {
+      "name": "Harden",
+      "phase_number": 3,
+      "actions": [
+        {
+          "description": "Run Atomic Red Team tests for covered techniques",
+          "action_type": "hunt",
+          "tier": 3,
+          "impact_tag": "VALIDATION",
+          "team": "emulation",
+          "tool": ""
+        },
+        {
+          "description": "Schedule red team exercise against emulation plan",
+          "action_type": "audit",
+          "tier": 3,
+          "impact_tag": "VALIDATION",
+          "team": "emulation",
+          "tool": ""
+        },
+        {
+          "description": "Forward board brief to CISO/VP Security",
+          "action_type": "audit",
+          "tier": 3,
+          "impact_tag": "GOVERNANCE",
+          "team": "executive",
+          "tool": ""
+        },
+        {
+          "description": "Schedule review of Tier 3 artifacts",
+          "action_type": "audit",
+          "tier": 3,
+          "impact_tag": "GOVERNANCE",
+          "team": "executive",
+          "tool": ""
+        },
+        {
+          "description": "Review soc package",
+          "action_type": "audit",
+          "tier": 3,
+          "impact_tag": "GENERAL",
+          "team": "soc",
+          "tool": ""
+        }
+      ]
+    }
+  ],
+  "top_3": [
+    {
+      "description": "Hunt for indicators across all endpoints",
+      "tier": 1
+    },
+    {
+      "description": "Import IOCs into CrowdStrike Falcon, Carbon Black for detect-mode monitoring",
+      "tier": 1
+    },
+    {
+      "description": "Block threat domains at email gateway",
+      "tier": 1
+    }
+  ]
+}

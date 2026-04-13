@@ -1,0 +1,74 @@
+{
+  "resourceType": "urlBlockList",
+  "name": "KTLYST - Paramount Global - Phishing Domains (2026-04-13)",
+  "description": "Phishing infrastructure identified by KTLYST for Paramount Global. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-13T19:31:19.158493+00:00",
+  "organization": "Paramount Global",
+  "action": "block",
+  "entries": [
+    {
+      "value": "Fleetdeck.io",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "Level.io",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "MEGA.NZ",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "targetsname-sso.com",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "targetsname-servicedesk.com",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "targetsname-okta.com",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "targetsname-cms.com",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "targetsname-helpdesk.com",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    },
+    {
+      "value": "oktalogin-targetcompany.com",
+      "type": "domain",
+      "matchSubdomains": true,
+      "comment": "KTLYST phishing IOC for Paramount Global"
+    }
+  ],
+  "policyRoute": {
+    "name": "KTLYST - Paramount Global - URL Defense Reroute",
+    "direction": "inbound",
+    "condition": {
+      "urlDefense": "rewriteAndBlock",
+      "listRef": "KTLYST phishing domain list"
+    },
+    "notes": "Admin review before enabling: confirm no legitimate vendor domains are in the KTLYST list. Route sits in front of the default TAP URL Defense route."
+  }
+}

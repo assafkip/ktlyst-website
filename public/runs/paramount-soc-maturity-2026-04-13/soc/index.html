@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KTLYST - SOC Playbooks - Paramount Global</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 24px 16px;
+  background: #0a0e1a;
+  color: #e6edf3;
+  line-height: 1.45;
+}
+.container { max-width: 720px; margin: 0 auto; }
+.back {
+  display: inline-block;
+  font-size: 12px;
+  color: #8b9bb4;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.back:hover { color: #4a7fbf; }
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b9bb4;
+  margin-bottom: 8px;
+}
+h1.title { font-size: 22px; font-weight: 700; margin: 0 0 6px 0; }
+.summary { font-size: 13px; color: #b8c5d6; margin: 0 0 4px 0; }
+.breadcrumb { font-size: 11px; color: #6b7a90; margin: 0; }
+.pills { display: flex; gap: 6px; margin: 14px 0 10px; flex-wrap: wrap; }
+.pill {
+  padding: 5px 12px;
+  border: 1px solid #1f2738;
+  border-radius: 20px;
+  background: transparent;
+  color: #8b9bb4;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.pill:hover { border-color: #4a7fbf; color: #e6edf3; }
+.pill.active { background: #4a7fbf; border-color: #4a7fbf; color: #fff; }
+.dl-folder {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #131826;
+  border: 1px solid #1f2738;
+  border-radius: 6px;
+  color: #4a7fbf;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  transition: border-color 0.15s;
+}
+.dl-folder:hover { border-color: #4a7fbf; }
+ul.files {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+ul.files li { margin-bottom: 8px; }
+a.file {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 14px;
+  background: #131826;
+  border: 1px solid #1f2738;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s;
+}
+a.file:hover { border-color: #4a7fbf; }
+.file-name { font-size: 13px; font-weight: 600; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.file-desc { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+.badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-top: 4px;
+  width: fit-content;
+}
+.badge-microsoft { background: #1a3a5c; color: #5ba1e0; }
+.badge-splunk { background: #3a2a1a; color: #e08a5b; }
+.badge-elastic { background: #1a3a2a; color: #5be08a; }
+.badge-crowdstrike { background: #3a1a1a; color: #e05b5b; }
+.badge-okta { background: #2a2a3a; color: #8a8ae0; }
+.badge-sentinelone { background: #2a1a3a; color: #b05be0; }
+.badge-aws { background: #3a3a1a; color: #e0c05b; }
+.badge-gcp { background: #1a2a3a; color: #5bc0e0; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="../index.html">&larr; Back to overview</a>
+    <div class="eyebrow">KTLYST Run</div>
+    <h1 class="title">SOC Playbooks</h1>
+    <p class="summary">Incident response playbooks mapped to MITRE ATT&amp;CK techniques</p>
+    <p class="breadcrumb">Paramount Global &middot; AA23-320A Scattered Spider (FBI/CISA Joint Advisory)</p>
+    
+    <a class="dl-folder" href="../downloads/soc.zip">Download SOC Playbooks package</a>
+    <ul class="files">
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/index.md"><span class="file-name">playbooks/index.md</span><span class="file-desc">index (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1018-remote_system_discovery.md"><span class="file-name">playbooks/playbook-t1018-remote_system_discovery.md</span><span class="file-desc">playbook t1018 remote system discovery (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1021.007-cloud_services.md"><span class="file-name">playbooks/playbook-t1021.007-cloud_services.md</span><span class="file-desc">playbook t1021.007 cloud services (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1074-data_staged.md"><span class="file-name">playbooks/playbook-t1074-data_staged.md</span><span class="file-desc">playbook t1074 data staged (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1078-valid_accounts.md"><span class="file-name">playbooks/playbook-t1078-valid_accounts.md</span><span class="file-desc">playbook t1078 valid accounts (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1078.002-domain_accounts.md"><span class="file-name">playbooks/playbook-t1078.002-domain_accounts.md</span><span class="file-desc">playbook t1078.002 domain accounts (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1083-file_and_directory_discovery.md"><span class="file-name">playbooks/playbook-t1083-file_and_directory_discovery.md</span><span class="file-desc">playbook t1083 file and directory discovery (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1090-proxy.md"><span class="file-name">playbooks/playbook-t1090-proxy.md</span><span class="file-desc">playbook t1090 proxy (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1114-email_collection.md"><span class="file-name">playbooks/playbook-t1114-email_collection.md</span><span class="file-desc">playbook t1114 email collection (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1136-create_account.md"><span class="file-name">playbooks/playbook-t1136-create_account.md</span><span class="file-desc">playbook t1136 create account (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1199-trusted_relationship.md"><span class="file-name">playbooks/playbook-t1199-trusted_relationship.md</span><span class="file-desc">playbook t1199 trusted relationship (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1204-user_execution.md"><span class="file-name">playbooks/playbook-t1204-user_execution.md</span><span class="file-desc">playbook t1204 user execution (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1213.002-sharepoint.md"><span class="file-name">playbooks/playbook-t1213.002-sharepoint.md</span><span class="file-desc">playbook t1213.002 sharepoint (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1213.003-code_repositories.md"><span class="file-name">playbooks/playbook-t1213.003-code_repositories.md</span><span class="file-desc">playbook t1213.003 code repositories (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1217-browser_information_discovery.md"><span class="file-name">playbooks/playbook-t1217-browser_information_discovery.md</span><span class="file-desc">playbook t1217 browser information discovery (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1219-remote_access_tools.md"><span class="file-name">playbooks/playbook-t1219-remote_access_tools.md</span><span class="file-desc">playbook t1219 remote access tools (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1484.002-trust_modification.md"><span class="file-name">playbooks/playbook-t1484.002-trust_modification.md</span><span class="file-desc">playbook t1484.002 trust modification (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1486-data_encrypted_for_impact.md"><span class="file-name">playbooks/playbook-t1486-data_encrypted_for_impact.md</span><span class="file-desc">playbook t1486 data encrypted for impact (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1530-data_from_cloud_storage.md"><span class="file-name">playbooks/playbook-t1530-data_from_cloud_storage.md</span><span class="file-desc">playbook t1530 data from cloud storage (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1538-cloud_service_dashboard.md"><span class="file-name">playbooks/playbook-t1538-cloud_service_dashboard.md</span><span class="file-desc">playbook t1538 cloud service dashboard (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1539-steal_web_session_cookie.md"><span class="file-name">playbooks/playbook-t1539-steal_web_session_cookie.md</span><span class="file-desc">playbook t1539 steal web session cookie (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1552.001-credentials_in_files.md"><span class="file-name">playbooks/playbook-t1552.001-credentials_in_files.md</span><span class="file-desc">playbook t1552.001 credentials in files (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1552.004-private_keys.md"><span class="file-name">playbooks/playbook-t1552.004-private_keys.md</span><span class="file-desc">playbook t1552.004 private keys (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1556.006-multi-factor_authentication.md"><span class="file-name">playbooks/playbook-t1556.006-multi-factor_authentication.md</span><span class="file-desc">playbook t1556.006 multi factor authentication (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1566-phishing.md"><span class="file-name">playbooks/playbook-t1566-phishing.md</span><span class="file-desc">playbook t1566 phishing (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1566.004-spearphishing_voice.md"><span class="file-name">playbooks/playbook-t1566.004-spearphishing_voice.md</span><span class="file-desc">playbook t1566.004 spearphishing voice (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1567-exfiltration_over_web_service.md"><span class="file-name">playbooks/playbook-t1567-exfiltration_over_web_service.md</span><span class="file-desc">playbook t1567 exfiltration over web service (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1567.002-exfiltration_to_cloud_storage.md"><span class="file-name">playbooks/playbook-t1567.002-exfiltration_to_cloud_storage.md</span><span class="file-desc">playbook t1567.002 exfiltration to cloud storage (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1578.002-create_cloud_instance.md"><span class="file-name">playbooks/playbook-t1578.002-create_cloud_instance.md</span><span class="file-desc">playbook t1578.002 create cloud instance (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1583.001-domains.md"><span class="file-name">playbooks/playbook-t1583.001-domains.md</span><span class="file-desc">playbook t1583.001 domains (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1585.001-social_media_accounts.md"><span class="file-name">playbooks/playbook-t1585.001-social_media_accounts.md</span><span class="file-desc">playbook t1585.001 social media accounts (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1589-gather_victim_identity_information.md"><span class="file-name">playbooks/playbook-t1589-gather_victim_identity_information.md</span><span class="file-desc">playbook t1589 gather victim identity information (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1593.001-social_media.md"><span class="file-name">playbooks/playbook-t1593.001-social_media.md</span><span class="file-desc">playbook t1593.001 social media (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1594-search_victim-owned_websites.md"><span class="file-name">playbooks/playbook-t1594-search_victim-owned_websites.md</span><span class="file-desc">playbook t1594 search victim owned websites (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1597.002-purchase_technical_data.md"><span class="file-name">playbooks/playbook-t1597.002-purchase_technical_data.md</span><span class="file-desc">playbook t1597.002 purchase technical data (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1598-phishing_for_information.md"><span class="file-name">playbooks/playbook-t1598-phishing_for_information.md</span><span class="file-desc">playbook t1598 phishing for information (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1598.004-spearphishing_voice.md"><span class="file-name">playbooks/playbook-t1598.004-spearphishing_voice.md</span><span class="file-desc">playbook t1598.004 spearphishing voice (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1606-forge_web_credentials.md"><span class="file-name">playbooks/playbook-t1606-forge_web_credentials.md</span><span class="file-desc">playbook t1606 forge web credentials (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1621-multi-factor_authentication_request_generation.md"><span class="file-name">playbooks/playbook-t1621-multi-factor_authentication_request_generation.md</span><span class="file-desc">playbook t1621 multi factor authentication request generation (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1648-serverless_execution.md"><span class="file-name">playbooks/playbook-t1648-serverless_execution.md</span><span class="file-desc">playbook t1648 serverless execution (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1656-impersonation.md"><span class="file-name">playbooks/playbook-t1656-impersonation.md</span><span class="file-desc">playbook t1656 impersonation (MD)</span></a></li>
+        <li class="file-item" data-platform=""><a class="file" href="playbooks/playbook-t1657-financial_theft.md"><span class="file-name">playbooks/playbook-t1657-financial_theft.md</span><span class="file-desc">playbook t1657 financial theft (MD)</span></a></li>
+    </ul>
+  </div>
+  <script>
+  (function() {
+    var pills = document.querySelectorAll('.pill');
+    if (!pills.length) return;
+    function activate(p) {
+      pills.forEach(function(x) { x.classList.remove('active'); });
+      p.classList.add('active');
+      var plat = p.dataset.platform;
+      document.querySelectorAll('.file-item').forEach(function(li) {
+        var fp = li.dataset.platform;
+        li.style.display = (!plat || !fp || fp === plat) ? '' : 'none';
+      });
+    }
+    pills.forEach(function(p) { p.onclick = function() { activate(p); }; });
+    var def = '';
+    if (def) {
+      pills.forEach(function(p) {
+        if (p.dataset.platform === def) activate(p);
+      });
+    }
+  })();
+  </script>
+  
+</body>
+</html>

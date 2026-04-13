@@ -1,5 +1,14 @@
 [
   {
+    "id": "paramount-soc-maturity-2026-04-13",
+    "date": "2026-04-13",
+    "title": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
+    "source": "cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a",
+    "summary": "SOC Maturity Accelerator for Paramount Global: 10 team packages, 144 files, dual EDR (CrowdStrike + Carbon Black), 42 IR playbooks, Splunk/Proofpoint/Entra",
+    "url": "/runs/paramount-soc-maturity-2026-04-13/"
+  },
+  {
     "id": "forticlient-ems-rce-shieldandseed",
     "date": "2026-04-13",
     "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",

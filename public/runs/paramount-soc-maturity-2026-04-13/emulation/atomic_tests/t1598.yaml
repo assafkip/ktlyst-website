@@ -1,0 +1,20 @@
+---
+attack_technique: T1598
+display_name: "Phishing for Information"
+atomic_tests:
+  - name: "KTLYST - Phishing for Information Simulation"
+    auto_generated_guid: 8cb2120d-c4ef-4619-9eaf-55dba2956a40
+    description: |
+      Simulates Phishing for Information technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

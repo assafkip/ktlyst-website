@@ -1,0 +1,20 @@
+---
+attack_technique: T1219
+display_name: "Remote Access Tools"
+atomic_tests:
+  - name: "KTLYST - Remote Access Tools Simulation"
+    auto_generated_guid: 4b2d5c7b-1bbd-4610-afb9-fb6c1662b832
+    description: |
+      Simulates Remote Access Tools technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

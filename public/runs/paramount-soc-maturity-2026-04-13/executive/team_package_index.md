@@ -1,0 +1,67 @@
+# Team Package Index
+
+**Advisory:** AA23-320A Scattered Spider (FBI/CISA Joint Advisory)
+**Prepared for:** Paramount Global
+**Generated:** 2026-04-13
+**Total files:** 144
+
+## Deployment Tiers
+
+Each artifact has a deployment tier based on risk and reversibility:
+
+- **Tier 1 (Auto-deploy):** IOC blocklists, domain blocks, watchlists. Low risk, time-sensitive.
+- **Tier 2 (Detection-as-Code):** Detection rules, hunt queries. Human reviews a diff.
+- **Tier 3 (Human Approval):** Policies, assessments, emulation plans. High impact, review required.
+
+## Distribution Guide
+
+Forward this index to team leads. Each team opens their folder.
+
+### CISO / VP Security
+- `executive/threat_brief.pdf` -- 3-page brief, forward to leadership
+- `executive/board_brief.md` -- 1-page board brief, paste into the board pack
+- `executive/risk_quantification.json` -- loss bands + probability (reads into board brief)
+- This index file
+
+### SOC / Detection Engineering (Splunk)
+- `detection/splunk_savedsearches.conf` -- drop into $SPLUNK_HOME
+- `detection/sigma_rules/*.yml` -- convert with `sigma convert`
+
+### Identity & Access Management (Microsoft Entra ID)
+- `identity/entra_conditional_access_policy.json` -- deploy via Graph API (report-only mode)
+- `identity/entra_hunt_queries.kql` -- paste into Log Analytics
+- `identity/scim_audit.kql` -- SCIM provisioning audit hunts (vendor-neutral)
+
+### Email Security (Proofpoint)
+- `email/domains_blocklist.txt` -- one domain per line, import anywhere
+- `email/proofpoint_url_defense.json` -- Proofpoint URL Defense custom block list + policy route
+
+### Endpoint Security (CrowdStrike Falcon, Carbon Black)
+- `endpoint/crowdstrike_ioc_import.json` -- import via Falcon API
+- `endpoint/carbon_black_feed_report.json` -- push via CB Cloud Threat Intel API or import as watchlist feed
+- `endpoint/visibility_assessment.md` -- READ THIS: what EDR sees vs doesn't
+
+### Cloud Security (AWS (streaming), Azure (corporate))
+- `cloud/azure_ad_hunt.kql` -- paste into Log Analytics
+- `cloud/oauth_app_audit.kql` -- audit recent OAuth app consents
+- `cloud/conditional_access_gaps.json` -- recommended CA policies
+- `cloud/aws_waf_ip_set.json` -- AWS WAFv2 IPSet + rule group, Terraform-ready
+- `cloud/azure_sentinel_identity_analytic.json` -- Sentinel Analytic Rule scoped to cloud identity
+
+### Red / Purple Team
+- `emulation/attack_navigator_layer.json` -- import into ATT&CK Navigator
+- `emulation/atomic_tests/*.yaml` -- Atomic Red Team format
+- `emulation/caldera_adversary.yml` -- Caldera adversary profile
+- `emulation/emulation_plan.md` -- ordered attack steps
+- `emulation/detection_gap_matrix.md` -- what's covered vs not
+
+### GRC / Compliance
+- `compliance/framework_mapping.csv` -- NIST CSF + applicable frameworks
+- `compliance/evidence_bundle.json` -- audit-ready provenance
+- `compliance/audit_trail_entry.json` -- single-record audit log entry (SOC 2 / ISO 27001)
+
+### Raw IOC Data (Shared)
+- `iocs/domains.csv` -- all IOC domains with source spans
+- `iocs/domains.stix.json` -- STIX 2.1 bundle for TIP import
+- `iocs/misp_event.json` -- MISP 2.4 Event JSON for MISP bulk import
+- `iocs/full_ioc_list.json` -- full structured IOC list

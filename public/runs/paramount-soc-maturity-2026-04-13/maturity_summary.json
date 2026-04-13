@@ -1,0 +1,19 @@
+{
+  "framing": "SOC Maturity Accelerator",
+  "message": "Your team would need to build these artifacts manually. KTLYST produced them in 51 seconds.",
+  "artifact_counts": {
+    "detection_rules": 11,
+    "ioc_entries": 5,
+    "hunt_queries": 8,
+    "ir_playbooks": 43,
+    "atomic_tests": 41,
+    "executive_briefs": 8,
+    "compliance_artifacts": 4,
+    "total_files": 142
+  },
+  "time_comparison": {
+    "manual_estimate_hours": "72-128",
+    "manual_estimate_days": "9-16",
+    "ktlyst_seconds": 51
+  }
+}

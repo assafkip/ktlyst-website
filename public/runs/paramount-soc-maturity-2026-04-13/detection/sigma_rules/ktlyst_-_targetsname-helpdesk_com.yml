@@ -1,0 +1,22 @@
+title: 'KTLYST - targetsname-helpdesk.com'
+id: 5368fb00-f6fe-5da2-a4b6-1bfe7d9e991c
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 5
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 5'
+tags:
+    - attack.detection
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'targetsname-helpdesk.com'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

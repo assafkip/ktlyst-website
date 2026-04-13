@@ -1,0 +1,10 @@
+domain,type,page,source_span,context
+Fleetdeck.io,domain,3,1373-1385,Fleetdeck.io
+Level.io,domain,3,1441-1449,Level.io
+MEGA.NZ,domain,4,1922-1929,"Recently, this includes exfiltration to multiple sites including MEGA.NZ and U.S.-based data centers such"
+targetsname-sso.com,domain,5,914-933,targetsname-sso.com
+targetsname-servicedesk.com,domain,5,937-964,targetsname-servicedesk.com
+targetsname-okta.com,domain,5,968-988,targetsname-okta.com
+targetsname-cms.com,domain,5,1016-1035,targetsname-cms.com
+targetsname-helpdesk.com,domain,5,1039-1063,targetsname-helpdesk.com
+oktalogin-targetcompany.com,domain,5,1067-1094,oktalogin-targetcompany.com

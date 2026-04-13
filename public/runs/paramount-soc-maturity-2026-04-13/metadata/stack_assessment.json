@@ -1,0 +1,42 @@
+{
+  "name": "Paramount Global",
+  "ticker": "PARA",
+  "industry": "media_entertainment",
+  "hq": "New York, NY",
+  "employees": "~24,000",
+  "size_bucket": "xlarge",
+  "description": "Global media and entertainment company. Paramount Pictures, CBS, Paramount+, Pluto TV, MTV, Nickelodeon. Post-merger (Viacom + CBS, 2019). 3 distinct security teams.",
+  "inferred_stack": {
+    "siem": "Splunk",
+    "edr": "CrowdStrike Falcon, Carbon Black",
+    "email": "Proofpoint",
+    "identity": "Microsoft Entra ID",
+    "cloud": "AWS (streaming), Azure (corporate)"
+  },
+  "stack_sources": [
+    "Direct from Alex Beaver (Apr 2026 conversation)",
+    "SIEM: Splunk (confirmed)",
+    "EDR: CrowdStrike primary, Carbon Black on some endpoints (confirmed)",
+    "Email: Proofpoint (confirmed)",
+    "SOAR: yes, unnamed (confirmed)"
+  ],
+  "compliance": [
+    "SOX (public company, NYSE: PARA)",
+    "CCPA/CPRA (California, streaming subscriber data)",
+    "COPPA (Nickelodeon, children's content)",
+    "MPA content security (film/studio distribution)"
+  ],
+  "team_structure": {
+    "corporate_security": {
+      "lead": "Alex Beaver",
+      "role": "IR/Detection",
+      "scope": "Enterprise IT, SOC, detection engineering, incident response"
+    },
+    "content_security": {
+      "scope": "Film/piracy protection, IP theft, pre-release content"
+    },
+    "streaming_security": {
+      "scope": "Paramount+, Pluto TV, subscriber data, cloud infrastructure"
+    }
+  }
+}

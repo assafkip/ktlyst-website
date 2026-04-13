@@ -1,0 +1,20 @@
+---
+attack_technique: T1530
+display_name: "Data from Cloud Storage"
+atomic_tests:
+  - name: "KTLYST - Data from Cloud Storage Simulation"
+    auto_generated_guid: d73603c7-2a6a-4921-af1f-0f0e6076f6f3
+    description: |
+      Simulates Data from Cloud Storage technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

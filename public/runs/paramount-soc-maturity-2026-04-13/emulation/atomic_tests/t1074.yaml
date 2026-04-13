@@ -1,0 +1,20 @@
+---
+attack_technique: T1074
+display_name: "Data Staged"
+atomic_tests:
+  - name: "KTLYST - Data Staged Simulation"
+    auto_generated_guid: 359962f9-7f9e-44af-ab2e-fed51a777097
+    description: |
+      Simulates Data Staged technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

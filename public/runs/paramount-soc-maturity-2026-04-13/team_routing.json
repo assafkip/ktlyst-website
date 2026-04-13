@@ -1,0 +1,48 @@
+{
+  "advisory": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
+  "prepared_for": "Paramount Global",
+  "generated": "2026-04-13",
+  "stack": {
+    "siem": "Splunk",
+    "edr": "CrowdStrike Falcon, Carbon Black",
+    "email": "Proofpoint",
+    "identity": "Microsoft Entra ID",
+    "cloud": "AWS (streaming), Azure (corporate)"
+  },
+  "team_routing": {
+    "corporate_security": {
+      "scope": "Enterprise IT, SOC, detection engineering, incident response",
+      "folders": [
+        "detection/ - SIEM detection rules mapped to attack chain steps",
+        "endpoint/ - EDR IOC imports + visibility assessment",
+        "emulation/ - ATT&CK Navigator, Atomic tests, hunt hypotheses, gap matrix",
+        "iocs/ - STIX bundle, IOC exports, domain lists",
+        "soc/ - IR playbooks per attack technique with SIEM-specific triage",
+        "executive/ - Threat brief + board brief + risk quantification"
+      ],
+      "lead": "Alex Beaver",
+      "role": "IR/Detection"
+    },
+    "content_security": {
+      "scope": "Film/piracy protection, IP theft, pre-release content",
+      "folders": [
+        "detection/ - SIEM detection rules mapped to attack chain steps",
+        "endpoint/ - EDR IOC imports + visibility assessment",
+        "emulation/ - ATT&CK Navigator, Atomic tests, hunt hypotheses, gap matrix",
+        "iocs/ - STIX bundle, IOC exports, domain lists",
+        "soc/ - IR playbooks per attack technique with SIEM-specific triage",
+        "executive/ - Threat brief + board brief + risk quantification",
+        "compliance/ - NIST CSF mapping + audit evidence bundle",
+        "email/ - Email security policies and domain blocklists"
+      ]
+    },
+    "streaming_security": {
+      "scope": "Paramount+, Pluto TV, subscriber data, cloud infrastructure",
+      "folders": [
+        "cloud/ - Cloud hunt queries, OAuth audit, conditional access gaps",
+        "identity/ - Identity hardening, hunt queries, policy recommendations",
+        "executive/ - Threat brief + board brief + risk quantification"
+      ]
+    }
+  }
+}

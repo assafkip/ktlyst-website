@@ -1,0 +1,91 @@
+{
+  "generated": "2026-04-13T19:31:19.171516+00:00",
+  "source": "CISA",
+  "report": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
+  "domains": [
+    {
+      "type": "domain",
+      "value": "Fleetdeck.io",
+      "page": 3,
+      "start": 1373,
+      "end": 1385,
+      "context": "Fleetdeck.io"
+    },
+    {
+      "type": "domain",
+      "value": "Level.io",
+      "page": 3,
+      "start": 1441,
+      "end": 1449,
+      "context": "Level.io"
+    },
+    {
+      "type": "domain",
+      "value": "MEGA.NZ",
+      "page": 4,
+      "start": 1922,
+      "end": 1929,
+      "context": "Recently, this includes exfiltration to multiple sites including MEGA.NZ and U.S.-based data centers such"
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-sso.com",
+      "page": 5,
+      "start": 914,
+      "end": 933,
+      "context": "targetsname-sso.com"
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-servicedesk.com",
+      "page": 5,
+      "start": 937,
+      "end": 964,
+      "context": "targetsname-servicedesk.com"
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-okta.com",
+      "page": 5,
+      "start": 968,
+      "end": 988,
+      "context": "targetsname-okta.com"
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-cms.com",
+      "page": 5,
+      "start": 1016,
+      "end": 1035,
+      "context": "targetsname-cms.com"
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-helpdesk.com",
+      "page": 5,
+      "start": 1039,
+      "end": 1063,
+      "context": "targetsname-helpdesk.com"
+    },
+    {
+      "type": "domain",
+      "value": "oktalogin-targetcompany.com",
+      "page": 5,
+      "start": 1067,
+      "end": 1094,
+      "context": "oktalogin-targetcompany.com"
+    }
+  ],
+  "tools": [
+    {
+      "type": "tool",
+      "value": "Ngrok",
+      "page": 3,
+      "start": 0,
+      "end": 5,
+      "context": "Table cell: Ngrok [S0508]"
+    }
+  ],
+  "total_domains": 9,
+  "total_tools": 1
+}

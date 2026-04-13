@@ -1,0 +1,20 @@
+---
+attack_technique: T1018
+display_name: "Remote System Discovery"
+atomic_tests:
+  - name: "KTLYST - Remote System Discovery Simulation"
+    auto_generated_guid: 28df1801-6b7d-4860-9737-b8dbbfbae07a
+    description: |
+      Simulates Remote System Discovery technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

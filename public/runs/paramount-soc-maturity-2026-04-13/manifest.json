@@ -1,0 +1,11 @@
+{
+  "id": "paramount-soc-maturity-2026-04-13",
+  "date": "2026-04-13",
+  "title": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
+  "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a",
+  "company": "Paramount Global",
+  "industry": "Media & Entertainment",
+  "teams": ["SOC", "Detection", "IAM", "Email", "Endpoint", "Cloud", "Red Team", "Executive", "Compliance", "IOCs"],
+  "public_url": "https://www.ktlystlabs.com/runs/paramount-soc-maturity-2026-04-13/",
+  "created_at": "2026-04-13T19:11:43Z"
+}

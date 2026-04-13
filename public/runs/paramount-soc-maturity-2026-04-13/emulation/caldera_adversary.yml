@@ -1,0 +1,71 @@
+# KTLYST Caldera adversary profile for Paramount Global
+# Generated: 2026-04-13
+# Advisory: CISA
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: e0a42d42-b0ae-40cb-915f-2b3d3eb6a611
+name: KTLYST - Paramount Global - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for Paramount Global. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # Browser Information Discovery
+  - 00000000-0000-0000-0000-000000000002   # Steal Web Session Cookie
+  - 00000000-0000-0000-0000-000000000003   # Gather Victim Identity Information
+  - 00000000-0000-0000-0000-000000000004   # Phishing for Information
+  - 00000000-0000-0000-0000-000000000005   # Purchase Technical Data
+  - 00000000-0000-0000-0000-000000000006   # Search Victim-Owned Websites
+  - 00000000-0000-0000-0000-000000000007   # Spearphishing Voice
+  - 00000000-0000-0000-0000-000000000008   # Social Media
+  - 00000000-0000-0000-0000-000000000009   # Domains
+  - 00000000-0000-0000-0000-000000000010   # Social Media Accounts
+  - 00000000-0000-0000-0000-000000000011   # Phishing
+  - 00000000-0000-0000-0000-000000000012   # Spearphishing Voice
+  - 00000000-0000-0000-0000-000000000013   # Trusted Relationship
+  - 00000000-0000-0000-0000-000000000014   # Domain Accounts
+  - 00000000-0000-0000-0000-000000000015   # Serverless Execution
+  - 00000000-0000-0000-0000-000000000016   # User Execution
+  - 00000000-0000-0000-0000-000000000017   # Create Account
+  - 00000000-0000-0000-0000-000000000018   # Multi-Factor Authentication
+  - 00000000-0000-0000-0000-000000000019   # Valid Accounts
+  - 00000000-0000-0000-0000-000000000020   # Trust Modification
+  - 00000000-0000-0000-0000-000000000021   # Create Cloud Instance
+  - 00000000-0000-0000-0000-000000000022   # Impersonation
+  - 00000000-0000-0000-0000-000000000023   # Forge Web Credentials
+  - 00000000-0000-0000-0000-000000000024   # Multi-Factor Authentication Request Generation
+  - 00000000-0000-0000-0000-000000000025   # Credentials In Files
+  - 00000000-0000-0000-0000-000000000026   # Private Keys
+  - 00000000-0000-0000-0000-000000000027   # Cloud Service Dashboard
+  - 00000000-0000-0000-0000-000000000028   # File and Directory Discovery
+  - 00000000-0000-0000-0000-000000000029   # Remote System Discovery
+  - 00000000-0000-0000-0000-000000000030   # Cloud Services
+  - 00000000-0000-0000-0000-000000000031   # Code Repositories
+  - 00000000-0000-0000-0000-000000000032   # Sharepoint
+  - 00000000-0000-0000-0000-000000000033   # Data Staged
+  - 00000000-0000-0000-0000-000000000034   # Email Collection
+  - 00000000-0000-0000-0000-000000000035   # Data from Cloud Storage
+  - 00000000-0000-0000-0000-000000000036   # Remote Access Tools
+  - 00000000-0000-0000-0000-000000000037   # Proxy
+  - 00000000-0000-0000-0000-000000000038   # Exfiltration Over Web Service
+  - 00000000-0000-0000-0000-000000000039   # Data Encrypted for Impact
+  - 00000000-0000-0000-0000-000000000040   # Exfiltration to Cloud Storage
+  - 00000000-0000-0000-0000-000000000041   # Financial Theft
+
+tags:
+  - ktlyst
+  - paramount-global
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: Paramount Global
+  created_at: 2026-04-13T19:31:19.170394+00:00
+  indicator_step_count: 41

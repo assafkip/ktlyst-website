@@ -1,0 +1,184 @@
+{
+  "indicators": [
+    {
+      "type": "domain",
+      "value": "Fleetdeck.io",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "Level.io",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "MEGA.NZ",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-sso.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-servicedesk.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-okta.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-cms.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "targetsname-helpdesk.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    },
+    {
+      "type": "domain",
+      "value": "oktalogin-targetcompany.com",
+      "action": "detect",
+      "severity": "medium",
+      "description": "KTLYST for Paramount Global - phishing infrastructure",
+      "source": "KTLYST / CISA",
+      "platforms": [
+        "windows",
+        "mac",
+        "linux"
+      ],
+      "applied_globally": true,
+      "tags": [
+        "KTLYST",
+        "Paramount Global",
+        "phishing"
+      ],
+      "expiration": ""
+    }
+  ]
+}

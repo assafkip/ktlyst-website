@@ -1,0 +1,20 @@
+---
+attack_technique: T1484.002
+display_name: "Trust Modification"
+atomic_tests:
+  - name: "KTLYST - Trust Modification Simulation"
+    auto_generated_guid: 862bb569-3459-4568-9ab0-6e425d71c291
+    description: |
+      Simulates Trust Modification technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

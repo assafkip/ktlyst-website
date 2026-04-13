@@ -1,0 +1,55 @@
+{
+  "platform": "Entra ID",
+  "layers_affected": [
+    {
+      "layer": "emulation",
+      "relevance": "critical",
+      "artifacts": 47
+    },
+    {
+      "layer": "soc",
+      "relevance": "critical",
+      "artifacts": 43
+    },
+    {
+      "layer": "detection",
+      "relevance": "critical",
+      "artifacts": 11
+    },
+    {
+      "layer": "executive",
+      "relevance": "critical",
+      "artifacts": 8
+    },
+    {
+      "layer": "cloud",
+      "relevance": "critical",
+      "artifacts": 7
+    },
+    {
+      "layer": "identity",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "perimeter",
+      "relevance": "critical",
+      "artifacts": 5
+    },
+    {
+      "layer": "endpoint",
+      "relevance": "high",
+      "artifacts": 4
+    },
+    {
+      "layer": "compliance",
+      "relevance": "high",
+      "artifacts": 4
+    },
+    {
+      "layer": "email",
+      "relevance": "high",
+      "artifacts": 3
+    }
+  ]
+}

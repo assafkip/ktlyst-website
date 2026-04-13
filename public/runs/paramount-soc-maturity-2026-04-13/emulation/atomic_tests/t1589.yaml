@@ -1,0 +1,20 @@
+---
+attack_technique: T1589
+display_name: "Gather Victim Identity Information"
+atomic_tests:
+  - name: "KTLYST - Gather Victim Identity Information Simulation"
+    auto_generated_guid: 92810af4-a91f-4b05-b077-8d016a0d1127
+    description: |
+      Simulates Gather Victim Identity Information technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""
