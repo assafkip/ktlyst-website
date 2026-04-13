@@ -1,5 +1,14 @@
 [
   {
+    "id": "trivy-supply-chain-costanoa-2026-04-13",
+    "date": "2026-04-13",
+    "title": "CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign)",
+    "source": "wiz.io",
+    "source_url": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack",
+    "summary": "Full KTLYST run: 9 team packages, 66 files. Trivy v0.69.4 compromised, 75/76 GitHub Action tags force-pushed, persistence backdoor active. Dual SIEM, CrowdStrike, Entra ID + Okta.",
+    "url": "/runs/trivy-supply-chain-costanoa-2026-04-13/"
+  },
+  {
     "id": "paramount-soc-maturity-2026-04-13",
     "date": "2026-04-13",
     "title": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KTLYST - CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: #0a0e1a;
+  color: #d0d5e0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.layout { display: flex; min-height: 100vh; }
+.sidebar {
+  position: sticky; top: 0; max-height: 100vh;
+  width: 260px; min-width: 260px;
+  align-self: flex-start;
+  background: #080b14;
+  border-right: 1px solid #1a1f2e;
+  padding: 20px 0;
+  overflow-y: auto;
+  display: flex; flex-direction: column;
+}
+.sb-brand {
+  font-size: 12px; font-weight: 700; letter-spacing: 2px;
+  color: #6366f1; text-transform: uppercase;
+  padding: 0 16px; margin-bottom: 16px;
+}
+.sb-nav { flex: 1; }
+.sb-nav-item {
+  display: block; padding: 8px 16px; text-decoration: none;
+  border-left: 2px solid transparent; transition: all 0.15s;
+}
+.sb-nav-item:hover { background: rgba(255,255,255,0.03); }
+.sb-nav-item.active { border-left-color: #6366f1; background: rgba(99,102,241,0.08); }
+.sb-label {
+  display: block; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.5px; text-transform: uppercase; color: #6b7a90;
+}
+.sb-nav-item.active .sb-label { color: #818cf8; }
+.sb-sub { display: block; font-size: 12px; color: #8b9bb4; margin-top: 1px; }
+.sb-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  padding: 12px 16px; border-top: 1px solid #1a1f2e;
+}
+.sb-stat { text-align: center; padding: 6px 0; }
+.sb-stat-num { display: block; font-size: 18px; font-weight: 700; color: #fff; }
+.sb-stat-label { display: block; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; color: #6b7a90; }
+.sb-company {
+  padding: 12px 16px; border-top: 1px solid #1a1f2e;
+  font-size: 11px; color: #8b9bb4;
+}
+.sb-company-name { font-size: 13px; font-weight: 600; color: #d0d5e0; margin-bottom: 2px; }
+.sb-company-stack { margin-bottom: 2px; }
+.sb-company-compliance { font-size: 10px; color: #6b7a90; }
+main { flex: 1; max-width: 860px; padding: 32px 40px 48px; }
+.header-bar {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 24px; padding-bottom: 16px;
+  border-bottom: 1px solid #1a1f2e;
+}
+.hb-brand { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #6366f1; }
+.hb-advisory { font-size: 13px; color: #8b9bb4; flex: 1; }
+.hb-severity {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+  padding: 3px 8px; border-radius: 3px;
+  background: #3b1a1a; color: #f87171;
+}
+.sb-section { margin-bottom: 32px; scroll-margin-top: 24px; }
+.sb-section h2 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.sb-section h3 { font-size: 14px; font-weight: 600; color: #a0adc0; margin-bottom: 8px; }
+.section-hint { font-size: 13px; color: #8b9bb4; margin-bottom: 16px; }
+.context-details { }
+.context-summary { cursor: pointer; list-style: none; user-select: none; }
+.context-summary::-webkit-details-marker { display: none; }
+.context-summary::marker { display: none; }
+.context-summary h2::after { content: ' +'; font-size: 14px; color: #6b7a90; font-weight: 400; }
+details[open] > .context-summary h2::after { content: ' \2212'; }
+.sb-section-hero { margin-bottom: 24px; }
+.hero-title { font-size: 20px; font-weight: 800; color: #fff; line-height: 1.25; margin-bottom: 4px; }
+.hero-advisory { font-size: 13px; color: #8b9bb4; margin-bottom: 6px; }
+.hero-advisory a { color: #818cf8; text-decoration: none; }
+.hero-advisory a:hover { text-decoration: underline; }
+.hero-sub { font-size: 13px; color: #6b7a90; margin-bottom: 16px; }
+.dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.dash-grid > div { background: #0f1322; border: 1px solid #1a1f2e; border-radius: 10px; padding: 16px; }
+.dash-coverage-summary { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.coverage-breakdown { display: flex; gap: 12px; font-size: 12px; }
+.cov-full { color: #34d399; }
+.cov-partial { color: #fbbf24; }
+.cov-blind { color: #f87171; }
+.speed-num { font-size: 36px; font-weight: 800; color: #fff; }
+.speed-unit { font-size: 14px; font-weight: 400; color: #8b9bb4; margin-left: 4px; }
+.speed-label { font-size: 12px; color: #8b9bb4; margin-top: 4px; }
+.speed-compare { font-size: 11px; color: #6b7a90; margin-top: 4px; }
+.speed-compare strong { color: #f87171; }
+.risk-num { font-size: 28px; font-weight: 700; color: #fbbf24; }
+.risk-label { font-size: 12px; color: #8b9bb4; margin-top: 4px; }
+.threat-impact {
+  background: #131826; border: 1px solid #1f2738; border-radius: 8px;
+  padding: 14px 16px; margin: 12px 0; font-size: 13px; color: #b8c5d6;
+}
+.attack-chain { margin: 16px 0; }
+.chain-step {
+  display: inline-flex; flex-direction: column; align-items: center;
+  padding: 10px 14px; margin: 4px;
+  background: #131826; border: 1px solid #1f2738; border-radius: 8px;
+  min-width: 120px; text-align: center;
+}
+.chain-step.chain-blind { border-color: #f87171; background: #1a1015; }
+.chain-step.chain-covered { border-color: #34d399; background: #0f1a15; }
+.chain-id { font-size: 11px; font-weight: 700; color: #6366f1; letter-spacing: 0.5px; }
+.chain-action { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+.stack-explain { margin: 12px 0; }
+.stack-how { font-size: 12px; color: #6b7a90; margin-bottom: 10px; }
+.stack-table { width: 100%; font-size: 13px; border-collapse: collapse; }
+.stack-table td { padding: 6px 10px; border-bottom: 1px solid #1a1f2e; }
+.stack-field { color: #6b7a90; font-weight: 600; text-transform: capitalize; width: 120px; }
+.compliance-tags { margin-top: 10px; }
+.compliance-tag {
+  display: inline-block; font-size: 10px; font-weight: 600;
+  padding: 2px 8px; border-radius: 3px; margin-right: 4px;
+  background: #1a2540; color: #60a5fa;
+}
+.pipeline-flow {
+  display: flex; align-items: center; gap: 0;
+  margin: 16px 0; flex-wrap: wrap; justify-content: center;
+}
+.pf-box { padding: 16px 20px; border-radius: 10px; text-align: center; min-width: 160px; }
+.pf-input { background: #131826; border: 1px solid #1f2738; }
+.pf-engine { background: #1a1540; border: 1px solid #6366f1; }
+.pf-output { background: #0f2018; border: 1px solid #10b981; }
+.pf-box-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8b9bb4; }
+.pf-box-val { font-size: 14px; font-weight: 700; color: #fff; margin-top: 4px; }
+.pf-arrow { width: 32px; height: 2px; background: #2a3040; position: relative; }
+.pf-arrow::after { content: ''; position: absolute; right: 0; top: -4px; border: 5px solid transparent; border-left: 6px solid #2a3040; }
+.pipeline-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.compare-without, .compare-with { padding: 14px; border-radius: 8px; font-size: 13px; }
+.compare-without { background: #1a1015; border: 1px solid #2a1520; }
+.compare-without strong { color: #f87171; }
+.compare-with { background: #0f2018; border: 1px solid #153020; }
+.compare-with strong { color: #34d399; }
+.compare-without p, .compare-with p { margin-top: 6px; color: #8b9bb4; }
+.act-cards { display: flex; flex-direction: column; gap: 12px; margin: 8px 0 16px; }
+.act-card {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 20px;
+  background: rgba(99,102,241,0.06);
+  border: 1px solid rgba(99,102,241,0.18);
+  border-radius: 10px; transition: border-color 0.15s;
+}
+.act-card:hover { border-color: #6366f1; }
+.act-num {
+  flex-shrink: 0; width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  background: #6366f1; color: #fff; font-weight: 700; font-size: 15px;
+  border-radius: 8px;
+}
+.act-body { flex: 1; }
+.act-primary { border-color: rgba(99,102,241,0.3); background: rgba(99,102,241,0.08); }
+.act-tool { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+.act-desc { font-size: 14px; color: #b8c5d6; font-weight: 400; line-height: 1.4; }
+.act-outcome { font-size: 11px; color: #34d399; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.also-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px; margin-top: 12px;
+}
+.also-card {
+  display: block; padding: 12px 14px;
+  background: #0f1322; border: 1px solid #1a1f2e;
+  border-radius: 8px; text-decoration: none; color: inherit;
+  transition: border-color 0.15s;
+}
+.also-card:hover { border-color: #6366f1; }
+.also-title { font-size: 13px; font-weight: 600; color: #d0d5e0; }
+.also-desc { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+.also-count { font-size: 11px; color: #6366f1; font-weight: 600; margin-top: 4px; }
+.ap-phase { margin-bottom: 16px; }
+.ap-phase-header {
+  display: flex; align-items: baseline; gap: 8px;
+  margin-bottom: 8px; padding-bottom: 6px;
+  border-bottom: 1px solid #1a1f2e;
+}
+.ap-phase-name { font-size: 14px; font-weight: 700; color: #fff; }
+.ap-action {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px; margin-bottom: 4px;
+  background: #0f1322; border-radius: 6px; font-size: 13px;
+}
+.ap-desc { flex: 1; color: #d0d5e0; }
+.ap-tier { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 3px; letter-spacing: 0.5px; }
+.tier-1 { background: #1a3a1a; color: #34d399; }
+.tier-2 { background: #3a3a1a; color: #fbbf24; }
+.tier-3 { background: #3a1a1a; color: #f87171; }
+.ap-impact { font-size: 9px; font-weight: 600; color: #6b7a90; letter-spacing: 0.5px; text-transform: uppercase; }
+.teams-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px; margin-top: 16px;
+}
+.team-card {
+  display: block; padding: 14px 16px;
+  background: #0f1322; border: 1px solid #1a1f2e;
+  border-radius: 10px; text-decoration: none; color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.team-card:hover { border-color: #6366f1; transform: translateY(-1px); }
+.team-title { font-size: 14px; font-weight: 600; color: #fff; }
+.team-files { font-size: 11px; color: #6366f1; font-weight: 600; margin: 2px 0; }
+.team-desc { font-size: 12px; color: #8b9bb4; }
+.team-deploys { font-size: 11px; color: #6b7a90; margin-top: 4px; }
+.ioc-table { width: 100%; font-size: 12px; border-collapse: collapse; margin: 12px 0; }
+.ioc-table th {
+  text-align: left; padding: 8px 10px; font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px; color: #6b7a90;
+  border-bottom: 1px solid #1a1f2e;
+}
+.ioc-table td {
+  padding: 6px 10px; border-bottom: 1px solid #1a1f2e;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #d0d5e0;
+}
+.ioc-type { color: #818cf8; font-weight: 600; font-family: -apple-system, system-ui, sans-serif; }
+.insight-callout {
+  background: #1a1015; border: 1px solid #3b1a1a; border-radius: 8px;
+  padding: 14px 16px; margin: 16px 0; font-size: 13px; color: #f87171;
+}
+.insight-callout strong { color: #fca5a5; }
+.prov-intro { font-size: 13px; color: #8b9bb4; margin-bottom: 16px; }
+.prov-chain {
+  display: flex; align-items: center; gap: 0;
+  margin: 16px 0; flex-wrap: wrap; justify-content: center;
+}
+.prov-step {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 12px 16px; background: #0f1322; border: 1px solid #1a1f2e;
+  border-radius: 8px; min-width: 100px; text-align: center;
+}
+.prov-num { font-size: 18px; font-weight: 700; color: #6366f1; }
+.prov-label { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+.prov-arrow { width: 24px; height: 2px; background: #2a3040; position: relative; }
+.prov-arrow::after { content: ''; position: absolute; right: 0; top: -4px; border: 5px solid transparent; border-left: 6px solid #2a3040; }
+.prov-meta { font-size: 11px; color: #6b7a90; margin-top: 4px; }
+.report-footer {
+  margin-top: 48px; padding-top: 16px;
+  border-top: 1px solid #1a1f2e;
+  font-size: 11px; color: #6b7a90; text-align: center;
+}
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  main { padding: 20px 16px 100px; }
+  .dash-grid { grid-template-columns: 1fr; }
+  .pipeline-flow { flex-direction: column; }
+  .pf-arrow { width: 2px; height: 24px; }
+  .pf-arrow::after { right: -4px; top: auto; bottom: 0; border: 5px solid transparent; border-top: 6px solid #2a3040; }
+  .pipeline-compare { grid-template-columns: 1fr; }
+  .teams-grid { grid-template-columns: 1fr; }
+  .prov-chain { flex-direction: column; }
+  .prov-arrow { width: 2px; height: 16px; }
+  .prov-arrow::after { right: -4px; top: auto; bottom: 0; border: 5px solid transparent; border-top: 6px solid #2a3040; }
+}
+</style>
+<script>
+  !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onFeatureFlags onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  posthog.init('phc_UPtsFTILhptGbkcCd0hZElqnDMWJvmmmA5vbQeKXCFu', {api_host: 'https://us.i.posthog.com', person_profiles: 'identified_only'});
+</script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sb-brand">KTLYST</div>
+      <div class="sb-nav"><a class="sb-nav-item" href="#start" data-section="start"><span class="sb-label">Your Stack</span><span class="sb-sub">What goes where</span></a><a class="sb-nav-item" href="#teams" data-section="teams"><span class="sb-label">Find Your Team</span><span class="sb-sub">Open your folder</span></a><a class="sb-nav-item" href="#overview" data-section="overview"><span class="sb-label">See the Numbers</span><span class="sb-sub">Coverage + risk snapshot</span></a><a class="sb-nav-item" href="#threat" data-section="threat"><span class="sb-label">Understand the Threat</span><span class="sb-sub">4-stage supply chain attack</span></a><a class="sb-nav-item" href="#iocs" data-section="iocs"><span class="sb-label">IOC Package</span><span class="sb-sub">Domains, hashes, artifacts</span></a><a class="sb-nav-item" href="#pipeline" data-section="pipeline"><span class="sb-label">How It Works</span><span class="sb-sub">1 advisory, 9 folders</span></a><a class="sb-nav-item" href="#actions" data-section="actions"><span class="sb-label">Full Plan</span><span class="sb-sub">Phased rollout</span></a><a class="sb-nav-item" href="#audit" data-section="audit"><span class="sb-label">Verify It</span><span class="sb-sub">Provenance trail</span></a></div><div class="sb-stats"><div class="sb-stat"><span class="sb-stat-num">3</span><span class="sb-stat-label">C2 Domains</span></div><div class="sb-stat"><span class="sb-stat-num">9</span><span class="sb-stat-label">Techniques</span></div><div class="sb-stat"><span class="sb-stat-num">9</span><span class="sb-stat-label">Teams</span></div><div class="sb-stat"><span class="sb-stat-num">66</span><span class="sb-stat-label">Files</span></div></div><div class="sb-company"><div class="sb-company-name">Enterprise Profile</div><div class="sb-company-stack">GitHub Actions + Trivy CI/CD / Splunk + Sentinel / CrowdStrike Falcon / Entra ID + Okta / M365 / AWS + Azure</div><div class="sb-company-compliance">SOC 2, GDPR, CCPA, SOX IT Controls</div></div>
+    </aside>
+    <main>
+      <div class="header-bar">
+        <span class="hb-brand">KTLYST</span>
+        <span class="hb-advisory">CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign, March 2026)</span>
+        <span class="hb-severity">CRITICAL</span>
+      </div>
+
+      <div class="sb-section sb-section-hero" id="start">
+        <h1 class="hero-title">Advisory Extraction: CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign)</h1><div class="hero-advisory"><a href="https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack" target="_blank" rel="noopener">Trivy Vulnerability Scanner Supply Chain Compromise (Wiz Research, March 19-23, 2026)</a></div><p class="hero-sub">1 advisory, 9 team packages, 66 platform-native files. Your vulnerability scanner was the weapon. Trivy v0.69.4 compromised, 75/76 GitHub Action tags force-pushed, credential theft at scale, persistence backdoor still active.</p>
+
+        <div class="insight-callout"><strong>The persistence backdoor may still be active.</strong> Any org that ran Trivy v0.69.4 could have <code>~/.config/systemd/user/sysmon.py</code> polling for secondary payloads every 5 minutes right now. This demo is immediately actionable, not a retrospective exercise.</div>
+
+        <h2>What Goes Into Your Stack</h2>
+        <p class="section-hint">Each card maps to a tool you run. Click to open the files.</p>
+        <div class="act-cards"><div class="act-card act-primary"><span class="act-num">1</span><div class="act-body"><div class="act-tool">Splunk + Microsoft Sentinel</div><div class="act-desc">DNS queries to typosquatted C2 domain. Outbound to 45.148.10.212. Trivy v0.69.4 process execution. systemd user service creation. /proc/*/mem access patterns. GitHub API calls creating tpcp-docs repos.</div><div class="act-outcome">SPL + KQL + SIGMA rules, ready to deploy</div></div></div><div class="act-card act-primary"><span class="act-num">2</span><div class="act-body"><div class="act-tool">GitHub Actions + DevSecOps</div><div class="act-desc">Audit all workflows referencing trivy-action or setup-trivy. Pin actions to SHA hashes. Scan container registries for compromised images. Audit AWS Secrets Manager access during attack window.</div><div class="act-outcome">Audit playbooks + remediation scripts + container quarantine</div></div></div><div class="act-card act-primary"><span class="act-num">3</span><div class="act-body"><div class="act-tool">CrowdStrike Falcon</div><div class="act-desc">All C2 domains, IPs, malicious binary hashes. Persistence hunt script for sysmon.py backdoor. Trivy version audit across fleet.</div><div class="act-outcome">IOC JSON + MDE CSV + hunt scripts</div></div></div><div class="act-card act-primary"><span class="act-num">4</span><div class="act-body"><div class="act-tool">Entra ID + Okta</div><div class="act-desc">GitHub token rotation playbook. Service account audit. OAuth app review. Session invalidation for anyone who ran compromised Trivy or triggered compromised Actions.</div><div class="act-outcome">Hunt queries + rotation playbooks + PowerShell scripts</div></div></div><div class="act-card act-primary"><span class="act-num">5</span><div class="act-body"><div class="act-tool">Executive Brief (PDF)</div><div class="act-desc">3-page board-ready brief. What happened. Your exposure (which pipelines ran Trivy during the window). Response status. Residual risk from active persistence mechanism.</div><div class="act-outcome">PDF, ready to forward</div></div></div></div><div class="also-grid"><a class="also-card" href="#teams"><div class="also-title">Email Security</div><div class="also-desc">Internal developer advisory + follow-on phishing indicators</div><div class="also-count">2 files</div></a><a class="also-card" href="#teams"><div class="also-title">Red Team / Emulation</div><div class="also-desc">ATT&CK Navigator + Atomic Red Team tests + detection gap matrix</div><div class="also-count">3 files</div></a><a class="also-card" href="#teams"><div class="also-title">Compliance / GRC</div><div class="also-desc">NIST CSF mapping + supply chain risk update + credential exposure assessment</div><div class="also-count">4 files</div></a><a class="also-card" href="#teams"><div class="also-title">IOC Exports</div><div class="also-desc">STIX 2.1 bundle + CSV watchlist + 88 compromised Action commit hashes</div><div class="also-count">3 files</div></a></div>
+      </div>
+
+      <div class="sb-section" id="teams">
+        <h2>Find Your Team's Package</h2>
+        <p class="section-hint">Each team gets their own folder with files in their tool's native format.</p>
+        <div class="teams-grid">
+          <div class="team-card"><div class="team-title">SOC / Detection</div><div class="team-files">4 files</div><div class="team-desc">SPL queries, KQL queries, SIGMA rules for C2 beacon, systemd persistence, proc mem scraping, anomalous GitHub repo creation</div><div class="team-deploys">Deploys to: Splunk + Sentinel</div></div><div class="team-card"><div class="team-title">IAM / Identity</div><div class="team-files">4 files</div><div class="team-desc">GitHub token rotation playbook, service account audit, OAuth app review, session invalidation script</div><div class="team-deploys">Deploys to: Entra ID + Okta + GitHub</div></div><div class="team-card"><div class="team-title">Email Security</div><div class="team-files">2 files</div><div class="team-desc">Internal developer advisory template, follow-on phishing indicators from spoofed commit authors</div><div class="team-deploys">Deploys to: M365 Exchange Online</div></div><div class="team-card"><div class="team-title">Endpoint / IT</div><div class="team-files">5 files</div><div class="team-desc">IOC imports, persistence hunt script (sysmon.py), Trivy version audit, D3FEND visibility assessment</div><div class="team-deploys">Deploys to: CrowdStrike Falcon + MDE</div></div><div class="team-card"><div class="team-title">Cloud / DevSecOps</div><div class="team-files">5 files</div><div class="team-desc">GitHub Actions audit, SHA pinning remediation, container image quarantine, AWS secrets audit, npm supply chain check</div><div class="team-deploys">Deploys to: GitHub Actions + Docker Hub + GHCR + ECR + AWS</div></div><div class="team-card"><div class="team-title">Red Team / Emulation</div><div class="team-files">3 files</div><div class="team-desc">ATT&CK Navigator layer (9 techniques), Atomic Red Team tests, detection gap matrix for CI/CD blind spots</div></div><div class="team-card"><div class="team-title">Executive / CISO</div><div class="team-files">2 files</div><div class="team-desc">3-page threat brief PDF + team package index. Board-ready language. Persistence risk highlighted.</div></div><div class="team-card"><div class="team-title">Compliance / GRC</div><div class="team-files">4 files</div><div class="team-desc">NIST CSF mapping (ID.SC Supply Chain Risk), supply chain risk update, credential exposure assessment, evidence bundle</div></div><div class="team-card"><div class="team-title">IOC Management</div><div class="team-files">3 files</div><div class="team-desc">STIX 2.1 bundle, CSV watchlist, 88 compromised GitHub Action commit hashes for automated workflow auditing</div></div>
+        </div>
+      </div>
+
+      <div class="sb-section" id="overview">
+        <details class="context-details" open>
+          <summary class="context-summary"><h2>Coverage Snapshot</h2></summary>
+          <div class="dash-grid">
+            <div class="dash-coverage"><h3>MITRE ATT&CK Coverage</h3><div class="dash-coverage-summary">9 techniques addressed</div><div class="coverage-breakdown"><span class="cov-full">6 fully covered</span><span class="cov-partial">1 partial</span><span class="cov-blind">2 blind spots</span></div></div><div class="dash-speed"><h3>Deployment Readiness</h3><div class="speed-num">66<span class="speed-unit">files</span></div><div class="speed-label">Across 9 team packages</div><div class="speed-compare">Manual equivalent: <strong>5-7 analyst-days</strong></div></div><div class="dash-risk"><h3>Key Gap</h3><div class="risk-num" style="color: #f87171;">CI/CD Pipeline</div><div class="risk-label">GitHub Actions runtime is outside EDR visibility. /proc/pid/mem scraping may not trigger alerts. User-level systemd services evade most detection.</div></div><div><h3>Active Threat</h3><div class="risk-num" style="color: #f87171; font-size: 20px;">Persistence Live</div><div class="risk-label">sysmon.py polling every 5 minutes on any machine that ran Trivy v0.69.4. Secondary payloads possible.</div></div>
+          </div>
+          <div class="stack-explain"><p class="stack-how">Built for an enterprise running Trivy in CI/CD with GitHub Actions, dual-SIEM, CrowdStrike, and Entra ID + Okta.</p><table class="stack-table"><tr><td class="stack-field">CI/CD</td><td>GitHub Actions + Trivy scanning</td></tr><tr><td class="stack-field">SIEM</td><td>Splunk + Microsoft Sentinel (dual output)</td></tr><tr><td class="stack-field">EDR</td><td>CrowdStrike Falcon</td></tr><tr><td class="stack-field">Identity</td><td>Entra ID (Azure AD) + Okta (GitHub SSO)</td></tr><tr><td class="stack-field">Email</td><td>M365 Exchange Online</td></tr><tr><td class="stack-field">Cloud</td><td>AWS + Azure (multi-cloud)</td></tr><tr><td class="stack-field">Container</td><td>Docker Hub, GHCR, ECR</td></tr></table><div class="compliance-tags"><span class="compliance-tag">SOC 2</span> <span class="compliance-tag">GDPR</span> <span class="compliance-tag">CCPA</span> <span class="compliance-tag">SOX IT Controls</span></div></div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="threat">
+        <details class="context-details" open>
+          <summary class="context-summary"><h2>The Threat</h2></summary>
+          <div class="threat-impact">March 19-23, 2026. Attackers retained access from a prior Aqua Security incident. Pushed malicious commits spoofing known contributors. Compromised Trivy v0.69.4 binaries distributed via GitHub Releases, Docker Hub, GHCR, and ECR. 75/76 trivy-action tags force-pushed with credential-stealing payloads. Malware harvested environment variables, SSH keys, cloud credentials, and tokens. Encrypted with AES-256-CBC + RSA-4096 and exfiltrated to Cloudflare Tunnel or fallback GitHub repos. Persistence backdoor installed on developer machines. Attack expanded to npm ecosystem March 22.</div>
+
+          <h3>Attack Stages</h3>
+          <div class="attack-chain">
+            <div class="chain-step chain-covered"><span class="chain-id">T1195.002</span><span class="chain-action">Supply Chain (Software)</span></div><div class="chain-step chain-blind"><span class="chain-id">T1548</span><span class="chain-action">Elevation Control</span></div><div class="chain-step chain-covered"><span class="chain-id">T1555</span><span class="chain-action">Credential Stores</span></div><div class="chain-step chain-covered"><span class="chain-id">T1005</span><span class="chain-action">Data from Local System</span></div><div class="chain-step chain-covered"><span class="chain-id">T1041</span><span class="chain-action">Exfil Over C2</span></div><div class="chain-step chain-covered"><span class="chain-id">T1087</span><span class="chain-action">Account Discovery</span></div><div class="chain-step chain-covered"><span class="chain-id">T1098</span><span class="chain-action">Account Manipulation</span></div><div class="chain-step chain-blind"><span class="chain-id">T1547.014</span><span class="chain-action">systemd Persistence</span></div><div class="chain-step chain-covered"><span class="chain-id">T1187</span><span class="chain-action">Forced Auth (CI/CD)</span></div>
+          </div>
+          <div class="insight-callout"><strong>Two blind spots.</strong> T1548 (Elevation Control Abuse) in CI/CD runners and T1547.014 (systemd user-level persistence) are commonly missed by EDR. The detection gap matrix in the Red Team package maps exactly where your stack can and cannot see this attack.</div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="iocs">
+        <details class="context-details">
+          <summary class="context-summary"><h2>Indicator Package</h2></summary>
+          <p class="section-hint">All IOCs from public sources (Wiz Research). Full STIX 2.1 bundle in the IOC team package.</p>
+
+          <h3>C2 Infrastructure</h3>
+          <table class="ioc-table">
+            <tr><th>Type</th><th>Indicator</th></tr>
+            <tr><td class="ioc-type">Primary C2</td><td>scan.aquasecurtiy[.]org (typosquatted Aqua Security domain)</td></tr>
+            <tr><td class="ioc-type">Persistence C2</td><td>tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io (ICP-hosted, polls every 5 min)</td></tr>
+            <tr><td class="ioc-type">Tunnel C2</td><td>plug-tab-protective-relay.trycloudflare.com</td></tr>
+            <tr><td class="ioc-type">C2 IP</td><td>45.148.10.212 (TECHOFF SRV LIMITED, Amsterdam)</td></tr>
+          </table>
+
+          <h3>Malicious Binary Hashes (SHA-256)</h3>
+          <table class="ioc-table">
+            <tr><th>Platform</th><th>Hash</th></tr>
+            <tr><td class="ioc-type">FreeBSD-64bit</td><td>887e1f5b5b50162a60bd03b66269e0ae545d0aef0583c1c5b00972152ad7e073</td></tr>
+            <tr><td class="ioc-type">Linux-32bit</td><td>f7084b0229dce605ccc5506b14acd4d954a496da4b6134a294844ca8d601970d</td></tr>
+            <tr><td class="ioc-type">Linux-64bit</td><td>822dd269ec10459572dfaaefe163dae693c344249a0161953f0d5cdd110bd2a0</td></tr>
+          </table>
+
+          <h3>Persistence + Exfil Artifacts</h3>
+          <table class="ioc-table">
+            <tr><th>Type</th><th>Indicator</th></tr>
+            <tr><td class="ioc-type">Compromised binary</td><td>Trivy v0.69.4 (all platforms)</td></tr>
+            <tr><td class="ioc-type">Persistence file</td><td>~/.config/systemd/user/sysmon.py</td></tr>
+            <tr><td class="ioc-type">Exfil indicator</td><td>GitHub repos named tpcp-docs (created by malware to store stolen data)</td></tr>
+            <tr><td class="ioc-type">Docker images</td><td>Trivy 0.69.4, 0.69.5, 0.69.6</td></tr>
+            <tr><td class="ioc-type">GitHub Actions</td><td>75/76 trivy-action tags + 7 setup-trivy tags (88 compromised commits)</td></tr>
+            <tr><td class="ioc-type">Secondary</td><td>kics-github-action, tfsec, traceeshark (workflow compromise)</td></tr>
+            <tr><td class="ioc-type">Spoofed authors</td><td>"rauchg", "DmitriyLewen" (imposter commits)</td></tr>
+          </table>
+        </details>
+      </div>
+
+      <div class="sb-section" id="pipeline">
+        <details class="context-details">
+          <summary class="context-summary"><h2>How This Was Built</h2></summary>
+          <p class="section-hint">1 advisory in. 9 team packages out.</p>
+          <div class="pipeline-flow"><div class="pf-box pf-input"><div class="pf-box-label">Input</div><div class="pf-box-val">1 Advisory</div></div><div class="pf-arrow"></div><div class="pf-box pf-engine"><div class="pf-box-label">KTLYST Pipeline</div><div class="pf-box-val">Extract + Compile + Route</div></div><div class="pf-arrow"></div><div class="pf-box pf-output"><div class="pf-box-label">Output</div><div class="pf-box-val">9 Team Packages, 66 Files</div></div></div><div class="pipeline-compare"><div class="compare-without"><strong>Without KTLYST</strong><p>Security architect reads the Wiz blog post. Extracts IOCs. Writes Splunk queries. Translates to KQL. Builds GitHub Actions audit playbooks. Writes persistence hunt scripts. Briefs the CISO. Notifies developers. Each team waits in sequence. 5-7 analyst-days minimum.</p></div><div class="compare-with"><strong>With KTLYST</strong><p>Advisory goes in. SOC gets SIEM queries. DevSecOps gets pipeline audit scripts and container quarantine. Endpoint gets persistence hunting. IAM gets token rotation playbooks. Executive gets a brief. Nobody waits for anyone else.</p></div></div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="actions">
+        <details class="context-details">
+          <summary class="context-summary"><h2>Full Rollout Plan</h2></summary>
+          <div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 0: Check for Active Compromise</span></div><div class="ap-action"><span class="ap-desc">Hunt for persistence: scan all developer machines for ~/.config/systemd/user/sysmon.py</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">PERSISTENCE</span></div><div class="ap-action"><span class="ap-desc">Audit Trivy versions: flag any system or container running v0.69.4 binary (by hash)</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Check Docker registries for Trivy images tagged 0.69.4, 0.69.5, 0.69.6. Quarantine immediately.</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Import all C2 domains + IPs into CrowdStrike Falcon for detect-mode monitoring</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 1: Immediate Response (Day 1)</span></div><div class="ap-action"><span class="ap-desc">Block C2 domains at DNS/proxy layer: scan.aquasecurtiy[.]org, tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io, plug-tab-protective-relay.trycloudflare.com</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">VECTOR-BLOCK</span></div><div class="ap-action"><span class="ap-desc">Force-rotate all GitHub tokens, PATs, and deploy keys accessible in CI/CD during March 19-23</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">CREDENTIAL-EXPOSURE</span></div><div class="ap-action"><span class="ap-desc">Invalidate sessions for any developer who ran Trivy v0.69.4 or triggered compromised Actions</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">IDENTITY</span></div><div class="ap-action"><span class="ap-desc">Search GitHub org for repos named tpcp-docs (malware exfil indicator)</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 2: This Week</span></div><div class="ap-action"><span class="ap-desc">Deploy Splunk SPL + Sentinel KQL detection rules for C2 beacon, systemd persistence, proc mem scraping</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Audit all GitHub Actions workflows referencing trivy-action or setup-trivy. Review logs March 19-23.</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CI-CD</span></div><div class="ap-action"><span class="ap-desc">Pin ALL GitHub Actions to full SHA commit hashes. Deploy Dependabot config for automated SHA pinning.</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CI-CD</span></div><div class="ap-action"><span class="ap-desc">Audit AWS Secrets Manager access logs during attack window</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CREDENTIAL-EXPOSURE</span></div><div class="ap-action"><span class="ap-desc">Review OAuth grants for GitHub org. Flag any new third-party app authorizations March 19-23.</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">IDENTITY</span></div><div class="ap-action"><span class="ap-desc">Check npm: audit if any org packages were published or modified March 22-23 (CanisterWorm expansion)</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">SUPPLY-CHAIN</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 3: Harden</span></div><div class="ap-action"><span class="ap-desc">Run Atomic Red Team tests: malicious binary substitution, /proc/pid/mem scraping, systemd persistence, Actions secret exfil</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">VALIDATION</span></div><div class="ap-action"><span class="ap-desc">Review detection gap matrix with red team: validate CI/CD blind spots, user-level systemd gaps</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">VALIDATION</span></div><div class="ap-action"><span class="ap-desc">Update third-party risk register: Aqua Security/Trivy risk rating, GitHub Actions supply chain risk, open-source dependency governance</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GOVERNANCE</span></div><div class="ap-action"><span class="ap-desc">Complete credential exposure assessment: if CI/CD secrets were exfiltrated, what production systems could be accessed?</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">COMPLIANCE</span></div><div class="ap-action"><span class="ap-desc">Forward board brief to CISO. Send internal developer advisory.</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GOVERNANCE</span></div></div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="audit">
+        <details class="context-details">
+          <summary class="context-summary"><h2>Provenance Chain</h2></summary>
+          <h2>Every Action Traces Back to the Source</h2><p class="prov-intro">Zero inference. Every detection rule, every policy, every IOC has a provenance chain back to the exact sentence in the source advisory.</p><div class="prov-chain"><div class="prov-step"><span class="prov-num">1</span><span class="prov-label">Source sentence</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">2</span><span class="prov-label">Extracted TTP</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">3</span><span class="prov-label">Detection rule</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">4</span><span class="prov-label">Routed to team</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">5</span><span class="prov-label">Evidence bundle</span></div></div><div class="prov-meta">9 ATT&CK techniques mapped: T1195.002, T1548, T1555, T1005, T1041, T1087, T1098, T1547.014, T1187</div><div class="prov-meta">Extraction: dual-lane (scripted IOC + behavioral advisory)</div>
+        </details>
+      </div>
+
+      <div class="report-footer">
+        1 advisory, 9 teams, 66 files. Cross-team coverage with full provenance.
+      </div>
+    </main>
+  </div>
+
+  <script>
+  (function() {
+    var sections = document.querySelectorAll('.sb-section');
+    var navItems = document.querySelectorAll('.sb-nav-item');
+    if (!sections.length || !navItems.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          navItems.forEach(function(n) {
+            n.classList.toggle('active', n.dataset.section === id);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(function(s) { observer.observe(s); });
+
+    navItems.forEach(function(n) {
+      n.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.getElementById(this.dataset.section);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>

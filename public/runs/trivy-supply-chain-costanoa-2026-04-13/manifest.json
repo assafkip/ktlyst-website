@@ -1,0 +1,11 @@
+{
+  "id": "trivy-supply-chain-costanoa-2026-04-13",
+  "date": "2026-04-13",
+  "title": "CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign)",
+  "source_url": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack",
+  "company": "Generic Enterprise",
+  "industry": "Enterprise (Generic)",
+  "teams": ["SOC", "Detection", "IAM", "Email", "Endpoint", "Cloud", "Red Team", "Executive", "Compliance", "IOCs"],
+  "public_url": "https://www.ktlystlabs.com/runs/trivy-supply-chain-costanoa-2026-04-13/",
+  "created_at": "2026-04-13T22:00:00Z"
+}
