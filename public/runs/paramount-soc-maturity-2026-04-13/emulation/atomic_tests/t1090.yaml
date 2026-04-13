@@ -3,7 +3,7 @@ attack_technique: T1090
 display_name: "Proxy"
 atomic_tests:
   - name: "KTLYST - Proxy Simulation"
-    auto_generated_guid: d356bd58-3034-4d21-a8d5-33a57c3aa3cb
+    auto_generated_guid: 362cb25c-8bd9-41fa-ac7e-82959a1fc271
     description: |
       Simulates Proxy technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

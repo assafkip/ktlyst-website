@@ -3,7 +3,7 @@ attack_technique: T1556.006
 display_name: "Multi-Factor Authentication"
 atomic_tests:
   - name: "KTLYST - Multi-Factor Authentication Simulation"
-    auto_generated_guid: 0eb0192e-05d7-4a06-92f8-83f0cafebacc
+    auto_generated_guid: 8d7a57f4-6b4a-4a3f-a623-b9976d487d1e
     description: |
       Simulates Multi-Factor Authentication technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

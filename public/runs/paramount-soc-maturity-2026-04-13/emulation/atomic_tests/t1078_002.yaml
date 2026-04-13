@@ -3,7 +3,7 @@ attack_technique: T1078.002
 display_name: "Domain Accounts"
 atomic_tests:
   - name: "KTLYST - Domain Accounts Simulation"
-    auto_generated_guid: c371f237-17f0-4053-b700-b502d7d56a61
+    auto_generated_guid: e204cade-ae58-48b5-b520-8fb195c60871
     description: |
       Simulates Domain Accounts technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

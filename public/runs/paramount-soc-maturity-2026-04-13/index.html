@@ -85,30 +85,48 @@ main {
 
 /* ── Sections ── */
 .sb-section {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   scroll-margin-top: 24px;
 }
 .sb-section h2 {
   font-size: 20px; font-weight: 700; color: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .sb-section h3 {
   font-size: 14px; font-weight: 600; color: #a0adc0;
   margin-bottom: 8px;
 }
+.section-hint {
+  font-size: 13px; color: #8b9bb4; margin-bottom: 16px;
+}
 .muted { color: #6b7a90; font-size: 13px; }
 
-/* ── Hero ── */
+/* ── Progressive disclosure ── */
+.context-details { }
+.context-summary {
+  cursor: pointer; list-style: none; user-select: none;
+}
+.context-summary::-webkit-details-marker { display: none; }
+.context-summary::marker { display: none; }
+.context-summary h2::after {
+  content: ' +'; font-size: 14px; color: #6b7a90; font-weight: 400;
+}
+details[open] > .context-summary h2::after {
+  content: ' 2';
+}
+
+/* ── Hero (compact) ── */
+.sb-section-hero { margin-bottom: 24px; }
 .hero-for {
-  font-size: 13px; color: #6366f1; font-weight: 500;
-  margin-bottom: 8px;
+  font-size: 12px; color: #6366f1; font-weight: 500;
+  margin-bottom: 4px;
 }
 .hero-title {
-  font-size: 24px; font-weight: 800; color: #fff;
-  line-height: 1.25; margin-bottom: 8px;
+  font-size: 20px; font-weight: 800; color: #fff;
+  line-height: 1.25; margin-bottom: 4px;
 }
 .hero-sub {
-  font-size: 14px; color: #8b9bb4;
+  font-size: 13px; color: #8b9bb4; margin-bottom: 16px;
 }
 
 /* ── Dashboard ── */
@@ -206,14 +224,34 @@ main {
 .compare-with strong { color: #34d399; }
 .compare-without p, .compare-with p { margin-top: 6px; color: #8b9bb4; }
 
-/* ── Top 3 ── */
-.top3-box {
-  background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15);
-  border-radius: 10px; padding: 16px 20px; margin: 16px 0;
+/* ── Action cards (top 3) ── */
+.act-cards { display: flex; flex-direction: column; gap: 12px; margin: 8px 0 16px; }
+.act-card {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 20px;
+  background: rgba(99,102,241,0.06);
+  border: 1px solid rgba(99,102,241,0.18);
+  border-radius: 10px;
+  transition: border-color 0.15s;
 }
-.top3-box h3 { color: #818cf8; margin-bottom: 10px; }
-.top3-list { padding-left: 20px; }
-.top3-item { font-size: 13px; color: #d0d5e0; margin-bottom: 6px; }
+.act-card:hover { border-color: #6366f1; }
+.act-num {
+  flex-shrink: 0; width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  background: #6366f1; color: #fff; font-weight: 700; font-size: 15px;
+  border-radius: 8px;
+}
+.act-body { flex: 1; }
+.act-desc { font-size: 14px; color: #e0e5f0; font-weight: 500; line-height: 1.4; }
+.act-outcome {
+  font-size: 11px; color: #34d399; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;
+}
+.act-link {
+  display: inline-block; margin-top: 6px; font-size: 12px;
+  color: #818cf8; text-decoration: none; font-weight: 600;
+}
+.act-link:hover { color: #a5b4fc; text-decoration: underline; }
 
 /* ── Action plan ── */
 .ap-phase { margin-bottom: 16px; }
@@ -334,7 +372,7 @@ main {
   <div class="layout">
     <aside class="sidebar">
       <div class="sb-brand">KTLYST</div>
-      <div class="sb-nav"><a class="sb-nav-item" href="#start" data-section="start"><span class="sb-label">Start Here</span><span class="sb-sub">Your Report, Their Actions</span></a><a class="sb-nav-item" href="#overview" data-section="overview"><span class="sb-label">Overview</span><span class="sb-sub">Threat Dashboard</span></a><a class="sb-nav-item" href="#threat" data-section="threat"><span class="sb-label">The Threat</span><span class="sb-sub">The Threat + Why You</span></a><a class="sb-nav-item" href="#pipeline" data-section="pipeline"><span class="sb-label">The Pipeline</span><span class="sb-sub">59 Rules in 144 Files</span></a><a class="sb-nav-item" href="#actions" data-section="actions"><span class="sb-label">What To Do</span><span class="sb-sub">Action Plan (Phased)</span></a><a class="sb-nav-item" href="#teams" data-section="teams"><span class="sb-label">Team Packages</span><span class="sb-sub">9 Teams, 1 Report</span></a><a class="sb-nav-item" href="#samples" data-section="samples"><span class="sb-label">Deliverables</span><span class="sb-sub">Sample Files</span></a><a class="sb-nav-item" href="#audit" data-section="audit"><span class="sb-label">Audit</span><span class="sb-sub">Provenance Trail</span></a></div><div class="sb-stats"><div class="sb-stat"><span class="sb-stat-num">12</span><span class="sb-stat-label">Domains</span></div><div class="sb-stat"><span class="sb-stat-num">41</span><span class="sb-stat-label">Techniques</span></div><div class="sb-stat"><span class="sb-stat-num">59</span><span class="sb-stat-label">Rules</span></div><div class="sb-stat"><span class="sb-stat-num">144</span><span class="sb-stat-label">Files</span></div></div><div class="sb-company"><div class="sb-company-name">Paramount Global</div><div class="sb-company-stack">Splunk / CrowdStrike Falcon, Carbon Black / Proofpoint / Microsoft Entra ID / AWS (streaming), Azure (corporate)</div><div class="sb-company-compliance">SOX (public company, NYSE: PARA), CCPA/CPRA (California, streaming subscriber data), COPPA (Nickelodeon, children&#x27;s content), MPA content security (film/studio distribution)</div></div>
+      <div class="sb-nav"><a class="sb-nav-item" href="#start" data-section="start"><span class="sb-label">Do This First</span><span class="sb-sub">3 actions, copy-paste ready</span></a><a class="sb-nav-item" href="#teams" data-section="teams"><span class="sb-label">Find Your Team</span><span class="sb-sub">Open your folder</span></a><a class="sb-nav-item" href="#overview" data-section="overview"><span class="sb-label">See the Numbers</span><span class="sb-sub">Coverage + risk snapshot</span></a><a class="sb-nav-item" href="#threat" data-section="threat"><span class="sb-label">Understand the Threat</span><span class="sb-sub">Attack chain + impact</span></a><a class="sb-nav-item" href="#pipeline" data-section="pipeline"><span class="sb-label">How It Works</span><span class="sb-sub">59 rules, 144 files</span></a><a class="sb-nav-item" href="#actions" data-section="actions"><span class="sb-label">Full Plan</span><span class="sb-sub">Phased rollout</span></a><a class="sb-nav-item" href="#samples" data-section="samples"><span class="sb-label">See the Files</span><span class="sb-sub">Real pipeline output</span></a><a class="sb-nav-item" href="#audit" data-section="audit"><span class="sb-label">Verify It</span><span class="sb-sub">Provenance trail</span></a></div><div class="sb-stats"><div class="sb-stat"><span class="sb-stat-num">12</span><span class="sb-stat-label">Domains</span></div><div class="sb-stat"><span class="sb-stat-num">41</span><span class="sb-stat-label">Techniques</span></div><div class="sb-stat"><span class="sb-stat-num">59</span><span class="sb-stat-label">Rules</span></div><div class="sb-stat"><span class="sb-stat-num">144</span><span class="sb-stat-label">Files</span></div></div><div class="sb-company"><div class="sb-company-name">Paramount Global</div><div class="sb-company-stack">Splunk / CrowdStrike Falcon, Carbon Black / Proofpoint / Microsoft Entra ID / AWS (streaming), Azure (corporate)</div><div class="sb-company-compliance">SOX (public company, NYSE: PARA), CCPA/CPRA (California, streaming subscriber data), COPPA (Nickelodeon, children&#x27;s content), MPA content security (film/studio distribution)</div></div>
     </aside>
     <main>
       <div class="header-bar">
@@ -344,48 +382,58 @@ main {
         <span class="hb-source">government_advisory</span>
       </div>
 
-      <div class="sb-section" id="start">
-        <h1 class="hero-title">Advisory Extraction: Paramount Global</h1><p class="hero-sub">Advisory extraction — 9 team packages generated</p>
-      </div>
-
-      <div class="sb-section" id="overview">
-        <h2>Where Are We Right Now</h2>
-        <div class="dash-grid">
-          <div class="dash-coverage"><h3>MITRE ATT&CK Coverage</h3><div class="dash-coverage-summary">3 techniques addressed</div><div class="coverage-breakdown"><span class="cov-full">3 fully covered</span><span class="cov-partial">0 partial</span><span class="cov-blind">0 blind</span></div></div><div class="dash-speed"><h3>Deployment Readiness</h3><div class="speed-num">144<span class="speed-unit">files</span></div><div class="speed-label">Across 10 team packages</div></div><div class="dash-risk"><h3>Expected Loss</h3><div class="risk-num">$1.4M</div><div class="risk-label">plausible within 12 months</div></div><div class="dash-remediation"><h3>Remediation</h3><div class="remediation-bar"><div class="remediation-fill" style="width:100%"></div></div><div class="remediation-pct">100%</div></div>
-        </div>
-      </div>
-
-      <div class="sb-section" id="threat">
-        <div class="threat-impact">This advisory describes 41 behavioral attack pattern(s) and 12 infrastructure indicator(s) directly relevant to Paramount Global&amp;#x27;s stack. Successful exploitation would give an attacker durable access to identity, email, and cloud resources without triggering traditional endpoint alarms.</div><div class="attack-chain"><h3>Attack Chain</h3><div class="chain-step chain-covered"><span class="chain-id">T1566</span><span class="chain-action">Phishing email</span></div><div class="chain-step chain-covered"><span class="chain-id">T1204</span><span class="chain-action">Payload delivery</span></div><div class="chain-step chain-covered"><span class="chain-id">T1078</span><span class="chain-action">Post-compromise access</span></div></div>
-      </div>
-
-      <div class="sb-section" id="stack">
-        <h2>Stack Detection</h2>
-        <div class="stack-explain"><p class="stack-how">Inferred from Industry defaults records (MX, SPF, CNAME). No credentials or access required.</p><table class="stack-table"><tr><td class="stack-field">siem</td><td>Splunk</td></tr><tr><td class="stack-field">edr</td><td>CrowdStrike Falcon, Carbon Black</td></tr><tr><td class="stack-field">email</td><td>Proofpoint</td></tr><tr><td class="stack-field">identity</td><td>Microsoft Entra ID</td></tr><tr><td class="stack-field">cloud</td><td>AWS (streaming), Azure (corporate)</td></tr></table><div class="compliance-tags"><span class="compliance-tag">SOX (public company, NYSE: PARA)</span> <span class="compliance-tag">CCPA/CPRA (California, streaming subscriber data)</span> <span class="compliance-tag">COPPA (Nickelodeon, children&#x27;s content)</span> <span class="compliance-tag">MPA content security (film/studio distribution)</span></div></div>
-      </div>
-
-      <div class="sb-section" id="pipeline">
-        <h2>1 Report. 2026-04-13. Here's What Came Out.</h2>
-        <div class="pipeline-flow"><div class="pf-box pf-input"><div class="pf-box-label">Input</div><div class="pf-box-val">1 Report</div></div><div class="pf-arrow"></div><div class="pf-box pf-engine"><div class="pf-box-label">KTLYST Pipeline</div><div class="pf-box-val">Extract + Compile + Route</div></div><div class="pf-arrow"></div><div class="pf-box pf-output"><div class="pf-box-label">Output</div><div class="pf-box-val">10 Team Packages, 144 Files</div></div></div><div class="pipeline-compare"><div class="compare-without"><strong>Without KTLYST</strong><p>Security architect reads report. Extracts IOCs manually. Writes detection rules. Translates for identity, email, endpoint. Each team waits for hand-off.</p></div><div class="compare-with"><strong>With KTLYST</strong><p>Report goes in. Every team gets their package in their tool, in their format, with full provenance back to the source sentence.</p></div></div>
-      </div>
-
-      <div class="sb-section" id="actions">
-        <h2>Action Plan</h2>
-        <div class="top3-box"><h3>Start Here</h3><ol class="top3-list"><li class="top3-item">Hunt for indicators across all endpoints</li><li class="top3-item">Import IOCs into CrowdStrike Falcon, Carbon Black for detect-mode monitoring</li><li class="top3-item">Block threat domains at email gateway</li></ol></div>
-        <div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 0: Check for Active Compromise</span></div><div class="ap-action"><span class="ap-desc">Hunt for indicators across all endpoints</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Import IOCs into CrowdStrike Falcon, Carbon Black for detect-mode monitoring</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 1: Immediate Response</span></div><div class="ap-action"><span class="ap-desc">Block threat domains at email gateway</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">VECTOR-BLOCK</span></div><div class="ap-action"><span class="ap-desc">Deploy transport rules in Proofpoint</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">VECTOR-BLOCK</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 2: This Week</span></div><div class="ap-action"><span class="ap-desc">Run identity hunt queries in Microsoft Entra ID</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">IDENTITY</span></div><div class="ap-action"><span class="ap-desc">Enable watchlist monitoring for advisory indicators</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Audit OAuth app consents and service principal sign-ins</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CREDENTIAL-EXPOSURE</span></div><div class="ap-action"><span class="ap-desc">Deploy cloud-layer analytic rules</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CREDENTIAL-EXPOSURE</span></div><div class="ap-action"><span class="ap-desc">Deploy detection rules to Splunk</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Review and deploy Conditional Access policy changes</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">IDENTITY</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 3: Harden</span></div><div class="ap-action"><span class="ap-desc">Run Atomic Red Team tests for covered techniques</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">VALIDATION</span></div><div class="ap-action"><span class="ap-desc">Schedule red team exercise against emulation plan</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">VALIDATION</span></div><div class="ap-action"><span class="ap-desc">Forward board brief to CISO/VP Security</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GOVERNANCE</span></div><div class="ap-action"><span class="ap-desc">Schedule review of Tier 3 artifacts</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GOVERNANCE</span></div><div class="ap-action"><span class="ap-desc">Review soc package</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GENERAL</span></div></div>
+      <div class="sb-section sb-section-hero" id="start">
+        <h1 class="hero-title">Advisory Extraction: Paramount Global</h1><p class="hero-sub">Advisory extraction — team packages generated. Start below.</p>
+        <h2>Do This First</h2>
+        <p class="section-hint">3 actions. Each one links to the file you need. Copy-paste ready.</p>
+        <div class="act-cards"><div class="act-card"><span class="act-num">1</span><div class="act-body"><div class="act-desc">Hunt for indicators across all endpoints</div></div></div><div class="act-card"><span class="act-num">2</span><div class="act-body"><div class="act-desc">Import IOCs into CrowdStrike Falcon, Carbon Black for detect-mode monitoring</div></div></div><div class="act-card"><span class="act-num">3</span><div class="act-body"><div class="act-desc">Block threat domains at email gateway</div></div></div></div>
       </div>
 
       <div class="sb-section" id="teams">
-        <h2>9 Teams Get Their Own Package</h2>
+        <h2>Find Your Team's Package</h2>
+        <p class="section-hint">Each team gets their own folder with files in their tool's native format.</p>
         <div class="teams-grid">
           <a class="team-card" href="cloud/index.html"><div class="team-title">Cloud</div><div class="team-files">6 files</div><div class="team-desc">Cloud hunt queries + WAF rules + CA gaps</div><div class="team-deploys">Deploys to: AWS (streaming), Azure (corporate)</div></a><a class="team-card" href="compliance/index.html"><div class="team-title">Compliance</div><div class="team-files">3 files</div><div class="team-desc">Framework mapping + evidence bundle</div></a><a class="team-card" href="detection/index.html"><div class="team-title">Detection</div><div class="team-files">10 files</div><div class="team-desc">SIEM detection rules (Sentinel, Splunk, Sigma, Elastic)</div><div class="team-deploys">Deploys to: Splunk</div></a><a class="team-card" href="email/index.html"><div class="team-title">Email</div><div class="team-files">2 files</div><div class="team-desc">Email gateway blocklists + transport rules</div><div class="team-deploys">Deploys to: Proofpoint</div></a><a class="team-card" href="emulation/index.html"><div class="team-title">Emulation</div><div class="team-files">46 files</div><div class="team-desc">ATT&amp;CK Navigator, emulation plan, gap matrix</div></a><a class="team-card" href="endpoint/index.html"><div class="team-title">Endpoint</div><div class="team-files">3 files</div><div class="team-desc">EDR IOC imports + visibility assessment</div><div class="team-deploys">Deploys to: CrowdStrike Falcon, Carbon Black</div></a><a class="team-card" href="executive/index.html"><div class="team-title">Executive</div><div class="team-files">7 files</div><div class="team-desc">Board-level brief + risk quantification</div></a><a class="team-card" href="identity/index.html"><div class="team-title">Identity</div><div class="team-files">4 files</div><div class="team-desc">Identity provider policies + hunt queries</div><div class="team-deploys">Deploys to: Microsoft Entra ID</div></a><a class="team-card" href="iocs/index.html"><div class="team-title">Iocs</div><div class="team-files">4 files</div><div class="team-desc">Raw IOC exports (CSV, STIX, MISP)</div></a><a class="team-card" href="soc/index.html"><div class="team-title">Soc</div><div class="team-files">42 files</div><div class="team-desc">Soc package</div></a>
         </div>
       </div>
 
+      <div class="sb-section" id="overview">
+        <details class="context-details" open>
+          <summary class="context-summary"><h2>Coverage Snapshot</h2></summary>
+          <div class="dash-grid">
+            <div class="dash-coverage"><h3>MITRE ATT&CK Coverage</h3><div class="dash-coverage-summary">3 techniques addressed</div><div class="coverage-breakdown"><span class="cov-full">3 fully covered</span><span class="cov-partial">0 partial</span><span class="cov-blind">0 blind</span></div></div><div class="dash-speed"><h3>Deployment Readiness</h3><div class="speed-num">144<span class="speed-unit">files</span></div><div class="speed-label">Across 10 team packages</div></div><div class="dash-risk"><h3>Expected Loss</h3><div class="risk-num">$1.4M</div><div class="risk-label">plausible within 12 months</div></div><div class="dash-remediation"><h3>Remediation</h3><div class="remediation-bar"><div class="remediation-fill" style="width:100%"></div></div><div class="remediation-pct">100%</div></div>
+          </div>
+          <div class="stack-explain"><p class="stack-how">Inferred from Industry defaults records (MX, SPF, CNAME). No credentials or access required.</p><table class="stack-table"><tr><td class="stack-field">siem</td><td>Splunk</td></tr><tr><td class="stack-field">edr</td><td>CrowdStrike Falcon, Carbon Black</td></tr><tr><td class="stack-field">email</td><td>Proofpoint</td></tr><tr><td class="stack-field">identity</td><td>Microsoft Entra ID</td></tr><tr><td class="stack-field">cloud</td><td>AWS (streaming), Azure (corporate)</td></tr></table><div class="compliance-tags"><span class="compliance-tag">SOX (public company, NYSE: PARA)</span> <span class="compliance-tag">CCPA/CPRA (California, streaming subscriber data)</span> <span class="compliance-tag">COPPA (Nickelodeon, children&#x27;s content)</span> <span class="compliance-tag">MPA content security (film/studio distribution)</span></div></div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="threat">
+        <details class="context-details">
+          <summary class="context-summary"><h2>The Threat</h2></summary>
+          <div class="threat-impact">This advisory describes 41 behavioral attack pattern(s) and 12 infrastructure indicator(s) directly relevant to Paramount Global&amp;#x27;s stack. Successful exploitation would give an attacker durable access to identity, email, and cloud resources without triggering traditional endpoint alarms.</div><div class="attack-chain"><h3>Attack Chain</h3><div class="chain-step chain-covered"><span class="chain-id">T1566</span><span class="chain-action">Phishing email</span></div><div class="chain-step chain-covered"><span class="chain-id">T1204</span><span class="chain-action">Payload delivery</span></div><div class="chain-step chain-covered"><span class="chain-id">T1078</span><span class="chain-action">Post-compromise access</span></div></div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="pipeline">
+        <details class="context-details">
+          <summary class="context-summary"><h2>How This Was Built</h2></summary>
+          <p class="section-hint">1 report in. 2026-04-13. Here's what came out.</p>
+          <div class="pipeline-flow"><div class="pf-box pf-input"><div class="pf-box-label">Input</div><div class="pf-box-val">1 Report</div></div><div class="pf-arrow"></div><div class="pf-box pf-engine"><div class="pf-box-label">KTLYST Pipeline</div><div class="pf-box-val">Extract + Compile + Route</div></div><div class="pf-arrow"></div><div class="pf-box pf-output"><div class="pf-box-label">Output</div><div class="pf-box-val">10 Team Packages, 144 Files</div></div></div><div class="pipeline-compare"><div class="compare-without"><strong>Without KTLYST</strong><p>Security architect reads report. Extracts IOCs manually. Writes detection rules. Translates for identity, email, endpoint. Each team waits for hand-off.</p></div><div class="compare-with"><strong>With KTLYST</strong><p>Report goes in. Every team gets their package in their tool, in their format, with full provenance back to the source sentence.</p></div></div>
+        </details>
+      </div>
+
+      <div class="sb-section" id="actions">
+        <details class="context-details">
+          <summary class="context-summary"><h2>Full Rollout Plan</h2></summary>
+          <div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 0: Check for Active Compromise</span></div><div class="ap-action"><span class="ap-desc">Hunt for indicators across all endpoints</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Import IOCs into CrowdStrike Falcon, Carbon Black for detect-mode monitoring</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">DETECTION-GAP</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 1: Immediate Response</span></div><div class="ap-action"><span class="ap-desc">Block threat domains at email gateway</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">VECTOR-BLOCK</span></div><div class="ap-action"><span class="ap-desc">Deploy transport rules in Proofpoint</span><span class="ap-tier tier-1">TIER 1</span><span class="ap-impact">VECTOR-BLOCK</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 2: This Week</span></div><div class="ap-action"><span class="ap-desc">Run identity hunt queries in Microsoft Entra ID</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">IDENTITY</span></div><div class="ap-action"><span class="ap-desc">Enable watchlist monitoring for advisory indicators</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Audit OAuth app consents and service principal sign-ins</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CREDENTIAL-EXPOSURE</span></div><div class="ap-action"><span class="ap-desc">Deploy cloud-layer analytic rules</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">CREDENTIAL-EXPOSURE</span></div><div class="ap-action"><span class="ap-desc">Deploy detection rules to Splunk</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">DETECTION-GAP</span></div><div class="ap-action"><span class="ap-desc">Review and deploy Conditional Access policy changes</span><span class="ap-tier tier-2">TIER 2</span><span class="ap-impact">IDENTITY</span></div></div><div class="ap-phase"><div class="ap-phase-header"><span class="ap-phase-name">Phase 3: Harden</span></div><div class="ap-action"><span class="ap-desc">Run Atomic Red Team tests for covered techniques</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">VALIDATION</span></div><div class="ap-action"><span class="ap-desc">Schedule red team exercise against emulation plan</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">VALIDATION</span></div><div class="ap-action"><span class="ap-desc">Forward board brief to CISO/VP Security</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GOVERNANCE</span></div><div class="ap-action"><span class="ap-desc">Schedule review of Tier 3 artifacts</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GOVERNANCE</span></div><div class="ap-action"><span class="ap-desc">Review soc package</span><span class="ap-tier tier-3">TIER 3</span><span class="ap-impact">GENERAL</span></div></div>
+        </details>
+      </div>
+
       <div class="sb-section" id="samples">
-        <h2>What the Files Actually Look Like</h2>
-        <p class="muted" style="margin-bottom:12px">Click any file to see the full content. These are real pipeline outputs, not mockups.</p>
-        <div class="sample-file"><div class="sample-header" onclick="this.parentElement.classList.toggle('open')"><span class="sample-name">detection/splunk_savedsearches.conf</span><span class="sample-size"></span></div><div class="sample-desc"></div><pre class="sample-preview">[KTLYST - KTLYST Rule 1]
+        <details class="context-details">
+          <summary class="context-summary"><h2>Sample Files</h2></summary>
+          <p class="section-hint">Click any file to preview. Real pipeline output, not mockups.</p>
+          <div class="sample-file"><div class="sample-header" onclick="this.parentElement.classList.toggle('open')"><span class="sample-name">detection/splunk_savedsearches.conf</span><span class="sample-size"></span></div><div class="sample-desc"></div><pre class="sample-preview">[KTLYST - KTLYST Rule 1]
 search = 
 dispatch.earliest_time = -24h@h
 dispatch.latest_time = now
@@ -443,10 +491,14 @@ This advisory describes 41 behavioral attack pattern(s) and 12 infrastructure in
 Figures are order-of-magnitude estimates for a mid-size technology organization. Not a forecast. See `executive/risk_quantification.json` for the assumptions.
 
 ## Recommended Decision</pre></div>
+        </details>
       </div>
 
       <div class="sb-section" id="audit">
-        <h2>Every Action Traces Back to the Source</h2><p class="prov-intro">Zero inference. Every detection rule, every policy, every IOC has a provenance chain back to the exact sentence in the source report.</p><div class="prov-chain"><div class="prov-step"><span class="prov-num">1</span><span class="prov-label">Source sentence</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">2</span><span class="prov-label">Extracted TTP</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">3</span><span class="prov-label">Detection rule</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">4</span><span class="prov-label">Deployed to team</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">5</span><span class="prov-label">Evidence bundle</span></div></div><div class="prov-meta">Extraction: dual-lane (scripted authoritative, LLM advisory)</div><div class="prov-meta">Validation: V-001 through V-005</div>
+        <details class="context-details">
+          <summary class="context-summary"><h2>Provenance Chain</h2></summary>
+          <h2>Every Action Traces Back to the Source</h2><p class="prov-intro">Zero inference. Every detection rule, every policy, every IOC has a provenance chain back to the exact sentence in the source report.</p><div class="prov-chain"><div class="prov-step"><span class="prov-num">1</span><span class="prov-label">Source sentence</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">2</span><span class="prov-label">Extracted TTP</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">3</span><span class="prov-label">Detection rule</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">4</span><span class="prov-label">Deployed to team</span></div><div class="prov-arrow"></div><div class="prov-step"><span class="prov-num">5</span><span class="prov-label">Evidence bundle</span></div></div><div class="prov-meta">Extraction: dual-lane (scripted authoritative, LLM advisory)</div><div class="prov-meta">Validation: V-001 through V-005</div>
+        </details>
       </div>
 
       <div class="report-footer">

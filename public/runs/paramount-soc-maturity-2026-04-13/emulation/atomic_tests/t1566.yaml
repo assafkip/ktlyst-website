@@ -3,7 +3,7 @@ attack_technique: T1566
 display_name: "Phishing"
 atomic_tests:
   - name: "KTLYST - Phishing Simulation"
-    auto_generated_guid: 91860427-4e11-4daf-9611-11ce65bfe95e
+    auto_generated_guid: e2c59556-55fd-43d2-aeff-09b341da5df0
     description: |
       Simulates Phishing technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

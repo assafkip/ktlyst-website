@@ -1,7 +1,7 @@
 {
   "source": "CISA",
   "report": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
-  "processed_at": "2026-04-13T19:31:19.171905+00:00",
+  "processed_at": "2026-04-13T20:24:47.172557+00:00",
   "total_indicators": 12,
-  "processing_time": 50.8077187538147
+  "processing_time": 60.3288688659668
 }

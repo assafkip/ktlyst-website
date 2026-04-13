@@ -3,7 +3,7 @@ attack_technique: T1598
 display_name: "Phishing for Information"
 atomic_tests:
   - name: "KTLYST - Phishing for Information Simulation"
-    auto_generated_guid: 8cb2120d-c4ef-4619-9eaf-55dba2956a40
+    auto_generated_guid: 953dac58-e9bc-4588-95a1-5f2695df8450
     description: |
       Simulates Phishing for Information technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

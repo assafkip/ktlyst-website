@@ -3,7 +3,7 @@ attack_technique: T1597.002
 display_name: "Purchase Technical Data"
 atomic_tests:
   - name: "KTLYST - Purchase Technical Data Simulation"
-    auto_generated_guid: 28674756-914f-4fcd-894d-d410780fc44d
+    auto_generated_guid: 565e8f5d-35e3-4f76-9351-6f8f81d543fc
     description: |
       Simulates Purchase Technical Data technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

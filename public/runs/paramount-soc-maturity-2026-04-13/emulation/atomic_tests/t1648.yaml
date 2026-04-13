@@ -3,7 +3,7 @@ attack_technique: T1648
 display_name: "Serverless Execution"
 atomic_tests:
   - name: "KTLYST - Serverless Execution Simulation"
-    auto_generated_guid: 404214df-c8af-4ba5-aece-0f486b626a2c
+    auto_generated_guid: 3ff0858c-d239-4089-80d2-5652889bdd24
     description: |
       Simulates Serverless Execution technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.
