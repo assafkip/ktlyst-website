@@ -114,7 +114,7 @@
           "tool": ""
         },
         {
-          "description": "Schedule 30-minute review of Tier 3 artifacts",
+          "description": "Schedule review of Tier 3 artifacts",
           "tier": 3,
           "impact_tag": "GOVERNANCE",
           "team": "executive",
