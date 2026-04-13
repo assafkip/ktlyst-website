@@ -3,7 +3,7 @@ attack_technique: T1589
 display_name: "Gather Victim Identity Information"
 atomic_tests:
   - name: "KTLYST - Gather Victim Identity Information Simulation"
-    auto_generated_guid: a0db3b76-e6e8-49a3-a435-62f462a6c80b
+    auto_generated_guid: 9c2c2eb5-619d-4632-90f8-a10f9886f106
     description: |
       Simulates Gather Victim Identity Information technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

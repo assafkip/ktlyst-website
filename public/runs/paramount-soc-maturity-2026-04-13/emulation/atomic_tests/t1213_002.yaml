@@ -3,7 +3,7 @@ attack_technique: T1213.002
 display_name: "Sharepoint"
 atomic_tests:
   - name: "KTLYST - Sharepoint Simulation"
-    auto_generated_guid: a7c08846-070b-42b3-9983-bf770f1cd508
+    auto_generated_guid: bb164639-6758-4a37-a53c-0bd944bb465d
     description: |
       Simulates Sharepoint technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

@@ -1,11 +1,11 @@
 {
   "bundle_version": "1.0",
-  "generated": "2026-04-13T21:12:18.623348+00:00",
+  "generated": "2026-04-13T21:15:18.046493+00:00",
   "generator": "KTLYST",
   "advisory": {
     "source": "CISA",
-    "report": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
-    "processed_at": "2026-04-13T21:12:18.623348+00:00"
+    "report": "AA23-320A (FBI/CISA Joint Advisory)",
+    "processed_at": "2026-04-13T21:15:18.046493+00:00"
   },
   "target": {
     "name": "Paramount Global",

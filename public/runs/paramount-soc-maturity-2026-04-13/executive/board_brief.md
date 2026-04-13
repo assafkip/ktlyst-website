@@ -1,6 +1,6 @@
 # Paramount Global - Advisory Brief
 
-**Advisory:** AA23-320A Scattered Spider (FBI/CISA Joint Advisory)
+**Advisory:** AA23-320A (FBI/CISA Joint Advisory)
 **Source:** CISA
 **Prepared:** 2026-04-13
 

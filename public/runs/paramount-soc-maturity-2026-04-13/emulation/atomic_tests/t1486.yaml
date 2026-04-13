@@ -3,7 +3,7 @@ attack_technique: T1486
 display_name: "Data Encrypted for Impact"
 atomic_tests:
   - name: "KTLYST - Data Encrypted for Impact Simulation"
-    auto_generated_guid: a5d945ad-3e50-4052-95ce-579e967229fe
+    auto_generated_guid: ce7219f4-dff5-4f0b-a581-53e01c6a915f
     description: |
       Simulates Data Encrypted for Impact technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

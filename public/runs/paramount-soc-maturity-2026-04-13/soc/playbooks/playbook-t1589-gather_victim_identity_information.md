@@ -1,6 +1,6 @@
 # SOC Response Playbook: Gather Victim Identity Information
 
-**Advisory:** AA23-320A Scattered Spider (FBI/CISA Joint Advisory)
+**Advisory:** AA23-320A (FBI/CISA Joint Advisory)
 **Prepared for:** Paramount Global
 **Generated:** 2026-04-13
 **MITRE ATT&CK:** T1589

@@ -3,7 +3,7 @@ attack_technique: T1657
 display_name: "Financial Theft"
 atomic_tests:
   - name: "KTLYST - Financial Theft Simulation"
-    auto_generated_guid: 1c1725e9-0e88-4674-a980-ba70a327a6f6
+    auto_generated_guid: bb7e6eab-91ab-48fb-a629-665fc4830987
     description: |
       Simulates Financial Theft technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

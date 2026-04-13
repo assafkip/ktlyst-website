@@ -3,7 +3,7 @@ attack_technique: T1538
 display_name: "Cloud Service Dashboard"
 atomic_tests:
   - name: "KTLYST - Cloud Service Dashboard Simulation"
-    auto_generated_guid: 20fbe814-476c-444d-8f9c-153542e03435
+    auto_generated_guid: 3cd44e55-3d2d-4900-80a6-bf5eaae22588
     description: |
       Simulates Cloud Service Dashboard technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

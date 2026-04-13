@@ -3,7 +3,7 @@ attack_technique: T1484.002
 display_name: "Trust Modification"
 atomic_tests:
   - name: "KTLYST - Trust Modification Simulation"
-    auto_generated_guid: 91cb43d8-1f01-47f6-aca9-af8c3a647fa5
+    auto_generated_guid: 9e62df74-ce4e-413b-a129-010c865e2664
     description: |
       Simulates Trust Modification technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

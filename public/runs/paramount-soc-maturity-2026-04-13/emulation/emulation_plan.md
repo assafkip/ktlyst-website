@@ -1,6 +1,6 @@
 # Emulation Plan
 
-**Advisory:** AA23-320A Scattered Spider (FBI/CISA Joint Advisory)
+**Advisory:** AA23-320A (FBI/CISA Joint Advisory)
 **Generated:** 2026-04-13
 
 ## Objective

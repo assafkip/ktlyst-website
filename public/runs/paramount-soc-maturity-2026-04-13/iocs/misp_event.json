@@ -1,7 +1,7 @@
 {
   "Event": {
-    "uuid": "29d8ea81-483e-47a4-a135-6fd940f181ff",
-    "info": "KTLYST - Paramount Global - AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
+    "uuid": "35082bf7-2409-4c31-810e-c710c4355273",
+    "info": "KTLYST - Paramount Global - AA23-320A (FBI/CISA Joint Advisory)",
     "date": "2026-04-13",
     "threat_level_id": "2",
     "analysis": "2",
@@ -34,7 +34,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "Fleetdeck.io",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "14561164-42c6-5c99-8f5b-8c721c9bacfa",
@@ -44,7 +44,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "Level.io",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "33749617-af00-5eeb-85e7-5a4bc9b66331",
@@ -54,7 +54,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "MEGA.NZ",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "9ba04fb6-f4e3-5fce-b2de-fbc6158db259",
@@ -64,7 +64,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "targetsname-sso.com",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "6f1436a4-df18-5b46-94e7-08964ce36caa",
@@ -74,7 +74,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "targetsname-servicedesk.com",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "09eac462-8508-5051-906b-6327dfb645f1",
@@ -84,7 +84,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "targetsname-okta.com",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "56ac0a4d-7c16-5821-9efd-4f5358c0f3ec",
@@ -94,7 +94,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "targetsname-cms.com",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "8041d8f5-a770-5465-ad0d-44537fb690e0",
@@ -104,7 +104,7 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "targetsname-helpdesk.com",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       },
       {
         "uuid": "ca7afd1b-be54-5bc7-89ed-a3b9ba23d50f",
@@ -114,14 +114,14 @@
         "distribution": "1",
         "comment": "KTLYST for Paramount Global - from CISA",
         "value": "oktalogin-targetcompany.com",
-        "timestamp": "1776114738"
+        "timestamp": "1776114918"
       }
     ],
     "extends_uuid": ""
   },
   "_ktlyst_metadata": {
     "generator": "KTLYST",
-    "generated_at": "2026-04-13T21:12:18.621204+00:00",
+    "generated_at": "2026-04-13T21:15:18.043648+00:00",
     "customer": "Paramount Global",
     "source_advisory": "CISA",
     "indicator_count": 9,
