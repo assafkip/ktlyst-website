@@ -19,8 +19,9 @@ body {
 
 /* ── Sidebar ── */
 .sidebar {
-  position: sticky; top: 0; height: 100vh;
+  position: sticky; top: 0; max-height: 100vh;
   width: 260px; min-width: 260px;
+  align-self: flex-start;
   background: #080b14;
   border-right: 1px solid #1a1f2e;
   padding: 20px 0;
@@ -375,12 +376,6 @@ details[open] > .context-summary h2::after {
   border-top: 1px solid #1a1f2e;
   font-size: 11px; color: #6b7a90; text-align: center;
 }
-.footer-nav { margin-top: 8px; }
-.footer-nav kbd {
-  display: inline-block; padding: 2px 6px;
-  background: #1a1f2e; border-radius: 3px;
-  font-size: 10px; font-family: inherit;
-}
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
@@ -470,9 +465,6 @@ details[open] > .context-summary h2::after {
 
       <div class="report-footer">
         Cross-team coverage. One advisory, nine deployments.
-        <div class="footer-nav">
-          <kbd>Space</kbd> or <kbd>&darr;</kbd> to advance
-        </div>
       </div>
     </main>
   </div>
@@ -495,33 +487,14 @@ details[open] > .context-summary h2::after {
     }, { threshold: 0.3 });
     sections.forEach(function(s) { observer.observe(s); });
 
-    // Keyboard navigation
-    var sectionIds = Array.from(sections).map(function(s) { return s.id; });
-    var currentIdx = 0;
-    document.addEventListener('keydown', function(e) {
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      var next = -1;
-      if (e.key === ' ' || e.key === 'ArrowDown') {
-        e.preventDefault();
-        next = Math.min(currentIdx + 1, sectionIds.length - 1);
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        next = Math.max(currentIdx - 1, 0);
-      }
-      if (next >= 0) {
-        currentIdx = next;
-        document.getElementById(sectionIds[next]).scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-
     // Smooth scroll for sidebar links
+    var sectionIds = Array.from(sections).map(function(s) { return s.id; });
     navItems.forEach(function(n) {
       n.addEventListener('click', function(e) {
         e.preventDefault();
         var target = document.getElementById(this.dataset.section);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
-          currentIdx = sectionIds.indexOf(this.dataset.section);
         }
       });
     });
