@@ -3,7 +3,7 @@ attack_technique: T1217
 display_name: "Browser Information Discovery"
 atomic_tests:
   - name: "KTLYST - Browser Information Discovery Simulation"
-    auto_generated_guid: f49f1890-51df-410c-8988-c2c3025b79bf
+    auto_generated_guid: 7125781f-3899-4dfc-9286-56058ed3fae6
     description: |
       Simulates Browser Information Discovery technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

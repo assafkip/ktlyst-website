@@ -3,7 +3,7 @@ attack_technique: T1114
 display_name: "Email Collection"
 atomic_tests:
   - name: "KTLYST - Email Collection Simulation"
-    auto_generated_guid: 7d1ef87d-8629-4cd2-a1be-a00ed6b8667e
+    auto_generated_guid: 926fef23-2c84-497f-996f-bf9e684b4910
     description: |
       Simulates Email Collection technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

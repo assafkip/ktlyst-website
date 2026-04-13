@@ -372,7 +372,7 @@ details[open] > .context-summary h2::after {
   <div class="layout">
     <aside class="sidebar">
       <div class="sb-brand">KTLYST</div>
-      <div class="sb-nav"><a class="sb-nav-item" href="#start" data-section="start"><span class="sb-label">Do This First</span><span class="sb-sub">3 actions, copy-paste ready</span></a><a class="sb-nav-item" href="#teams" data-section="teams"><span class="sb-label">Find Your Team</span><span class="sb-sub">Open your folder</span></a><a class="sb-nav-item" href="#overview" data-section="overview"><span class="sb-label">See the Numbers</span><span class="sb-sub">Coverage + risk snapshot</span></a><a class="sb-nav-item" href="#threat" data-section="threat"><span class="sb-label">Understand the Threat</span><span class="sb-sub">Attack chain + impact</span></a><a class="sb-nav-item" href="#pipeline" data-section="pipeline"><span class="sb-label">How It Works</span><span class="sb-sub">59 rules, 144 files</span></a><a class="sb-nav-item" href="#actions" data-section="actions"><span class="sb-label">Full Plan</span><span class="sb-sub">Phased rollout</span></a><a class="sb-nav-item" href="#samples" data-section="samples"><span class="sb-label">See the Files</span><span class="sb-sub">Real pipeline output</span></a><a class="sb-nav-item" href="#audit" data-section="audit"><span class="sb-label">Verify It</span><span class="sb-sub">Provenance trail</span></a></div><div class="sb-stats"><div class="sb-stat"><span class="sb-stat-num">12</span><span class="sb-stat-label">Domains</span></div><div class="sb-stat"><span class="sb-stat-num">41</span><span class="sb-stat-label">Techniques</span></div><div class="sb-stat"><span class="sb-stat-num">59</span><span class="sb-stat-label">Rules</span></div><div class="sb-stat"><span class="sb-stat-num">144</span><span class="sb-stat-label">Files</span></div></div><div class="sb-company"><div class="sb-company-name">Paramount Global</div><div class="sb-company-stack">Splunk / CrowdStrike Falcon, Carbon Black / Proofpoint / Microsoft Entra ID / AWS (streaming), Azure (corporate)</div><div class="sb-company-compliance">SOX (public company, NYSE: PARA), CCPA/CPRA (California, streaming subscriber data), COPPA (Nickelodeon, children&#x27;s content), MPA content security (film/studio distribution)</div></div>
+      <div class="sb-nav"><a class="sb-nav-item" href="#start" data-section="start"><span class="sb-label">Do This First</span><span class="sb-sub">3 actions, copy-paste ready</span></a><a class="sb-nav-item" href="#teams" data-section="teams"><span class="sb-label">Find Your Team</span><span class="sb-sub">Open your folder</span></a><a class="sb-nav-item" href="#overview" data-section="overview"><span class="sb-label">See the Numbers</span><span class="sb-sub">Coverage + risk snapshot</span></a><a class="sb-nav-item" href="#threat" data-section="threat"><span class="sb-label">Understand the Threat</span><span class="sb-sub">Attack chain + impact</span></a><a class="sb-nav-item" href="#pipeline" data-section="pipeline"><span class="sb-label">How It Works</span><span class="sb-sub">59 rules, 144 files</span></a><a class="sb-nav-item" href="#actions" data-section="actions"><span class="sb-label">Full Plan</span><span class="sb-sub">Phased rollout</span></a><a class="sb-nav-item" href="#audit" data-section="audit"><span class="sb-label">Verify It</span><span class="sb-sub">Provenance trail</span></a></div><div class="sb-stats"><div class="sb-stat"><span class="sb-stat-num">12</span><span class="sb-stat-label">Domains</span></div><div class="sb-stat"><span class="sb-stat-num">41</span><span class="sb-stat-label">Techniques</span></div><div class="sb-stat"><span class="sb-stat-num">59</span><span class="sb-stat-label">Rules</span></div><div class="sb-stat"><span class="sb-stat-num">144</span><span class="sb-stat-label">Files</span></div></div><div class="sb-company"><div class="sb-company-name">Paramount Global</div><div class="sb-company-stack">Splunk / CrowdStrike Falcon, Carbon Black / Proofpoint / Microsoft Entra ID / AWS (streaming), Azure (corporate)</div><div class="sb-company-compliance">SOX (public company, NYSE: PARA), CCPA/CPRA (California, streaming subscriber data), COPPA (Nickelodeon, children&#x27;s content), MPA content security (film/studio distribution)</div></div>
     </aside>
     <main>
       <div class="header-bar">
@@ -429,70 +429,7 @@ details[open] > .context-summary h2::after {
         </details>
       </div>
 
-      <div class="sb-section" id="samples">
-        <details class="context-details">
-          <summary class="context-summary"><h2>Sample Files</h2></summary>
-          <p class="section-hint">Click any file to preview. Real pipeline output, not mockups.</p>
-          <div class="sample-file"><div class="sample-header" onclick="this.parentElement.classList.toggle('open')"><span class="sample-name">detection/splunk_savedsearches.conf</span><span class="sample-size"></span></div><div class="sample-desc"></div><pre class="sample-preview">[KTLYST - KTLYST Rule 1]
-search = 
-dispatch.earliest_time = -24h@h
-dispatch.latest_time = now
-cron_schedule = 0 * * * *
-is_scheduled = 1
-alert_type = number of events
-alert_comparator = greater than
-alert_threshold = 0
-enableSched = 1
-description = Auto-generated by KTLYST from threat intelligence.
 
-[KTLYST - IOC Detection - Fleetdeckio]
-search = index=main sourcetype=network &quot;Fleetdeck.io&quot;
-| stats count as hit_count, earliest(_time) as first_seen, latest(_time) as last_seen by src_ip, dest_ip, user
-| where hit_count &gt;= 1
-| sort -hit_count
-| table src_ip, dest_ip, user, hit_count, first_seen, last_seen
-dispatch.earliest_time = -24h@h
-dispatch.latest_time = now</pre></div><div class="sample-file"><div class="sample-header" onclick="this.parentElement.classList.toggle('open')"><span class="sample-name">identity/entra_conditional_access_policy.json</span><span class="sample-size"></span></div><div class="sample-desc"></div><pre class="sample-preview">{
-  &quot;@odata.type&quot;: &quot;#microsoft.graph.conditionalAccessPolicy&quot;,
-  &quot;displayName&quot;: &quot;KTLYST - Block Device Code Flow (Paramount Global)&quot;,
-  &quot;state&quot;: &quot;enabledForReportingButNotEnforced&quot;,
-  &quot;conditions&quot;: {
-    &quot;applications&quot;: {
-      &quot;includeApplications&quot;: [
-        &quot;All&quot;
-      ]
-    },
-    &quot;authenticationFlows&quot;: {
-      &quot;transferMethods&quot;: &quot;deviceCodeFlow&quot;
-    },
-    &quot;users&quot;: {
-      &quot;includeUsers&quot;: [
-        &quot;All&quot;
-      ],
-      &quot;excludeGroups&quot;: []
-    }
-  },</pre></div><div class="sample-file"><div class="sample-header" onclick="this.parentElement.classList.toggle('open')"><span class="sample-name">executive/board_brief.md</span><span class="sample-size"></span></div><div class="sample-desc"></div><pre class="sample-preview"># Paramount Global - Advisory Brief
-
-**Advisory:** AA23-320A Scattered Spider (FBI/CISA Joint Advisory)
-**Source:** CISA
-**Prepared:** 2026-04-13
-
-## Business Impact
-
-This advisory describes 41 behavioral attack pattern(s) and 12 infrastructure indicator(s) directly relevant to Paramount Global&#x27;s stack. Successful exploitation would give an attacker durable access to identity, email, and cloud resources without triggering traditional endpoint alarms.
-
-## Risk Quantification
-
-- **Low-case loss:** $450K
-- **Expected-case loss:** $1.4M
-- **High-case loss:** $4.5M
-- **Probability:** plausible within 12 months
-
-Figures are order-of-magnitude estimates for a mid-size technology organization. Not a forecast. See `executive/risk_quantification.json` for the assumptions.
-
-## Recommended Decision</pre></div>
-        </details>
-      </div>
 
       <div class="sb-section" id="audit">
         <details class="context-details">

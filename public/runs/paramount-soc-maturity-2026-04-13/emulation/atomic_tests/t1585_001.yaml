@@ -3,7 +3,7 @@ attack_technique: T1585.001
 display_name: "Social Media Accounts"
 atomic_tests:
   - name: "KTLYST - Social Media Accounts Simulation"
-    auto_generated_guid: d6803c15-c02d-4372-aad0-c2c4d21bd898
+    auto_generated_guid: 11bbfb81-18d3-44bb-9f56-d034e41dd482
     description: |
       Simulates Social Media Accounts technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

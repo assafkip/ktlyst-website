@@ -3,7 +3,7 @@ attack_technique: T1074
 display_name: "Data Staged"
 atomic_tests:
   - name: "KTLYST - Data Staged Simulation"
-    auto_generated_guid: 48dcfce6-45e8-4604-b439-6c0e0770c9d8
+    auto_generated_guid: 623f10d0-a234-40d5-8ae8-0fbb92c77747
     description: |
       Simulates Data Staged technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

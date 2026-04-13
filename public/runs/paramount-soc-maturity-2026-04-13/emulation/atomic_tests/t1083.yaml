@@ -3,7 +3,7 @@ attack_technique: T1083
 display_name: "File and Directory Discovery"
 atomic_tests:
   - name: "KTLYST - File and Directory Discovery Simulation"
-    auto_generated_guid: 4f446de3-5d94-409b-a233-67766975202a
+    auto_generated_guid: f587125c-25bc-4c5e-abe5-1e968f5db44a
     description: |
       Simulates File and Directory Discovery technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

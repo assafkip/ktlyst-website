@@ -1,6 +1,6 @@
 {
   "framing": "SOC Maturity Accelerator",
-  "message": "Your team would need to build these artifacts manually. KTLYST produced them in 61 seconds.",
+  "message": "Your team would need to build these artifacts manually. KTLYST produced them in 59 seconds.",
   "artifact_counts": {
     "detection_rules": 11,
     "ioc_entries": 5,
@@ -14,6 +14,6 @@
   "time_comparison": {
     "manual_estimate_hours": "72-128",
     "manual_estimate_days": "9-16",
-    "ktlyst_seconds": 61
+    "ktlyst_seconds": 59
   }
 }
