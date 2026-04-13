@@ -60,6 +60,18 @@
       "destination": "/runs/index.html"
     },
     {
+      "source": "/runs/:id",
+      "destination": "/runs/:id/index.html"
+    },
+    {
+      "source": "/runs/:id/",
+      "destination": "/runs/:id/index.html"
+    },
+    {
+      "source": "/runs/:id/:path*",
+      "destination": "/runs/:id/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
