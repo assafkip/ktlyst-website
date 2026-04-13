@@ -1,0 +1,20 @@
+---
+attack_technique: T1595
+display_name: "Web-based reconnaissance blocked by security controls"
+atomic_tests:
+  - name: "KTLYST - Web-based reconnaissance blocked by security controls Simulation"
+    auto_generated_guid: 6a1834e8-fafe-46da-b603-1dd8eb96e124
+    description: |
+      Simulates Web-based reconnaissance blocked by security controls technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

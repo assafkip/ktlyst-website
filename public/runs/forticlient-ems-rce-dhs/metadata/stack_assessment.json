@@ -1,0 +1,20 @@
+{
+  "name": "U.S. Department of Homeland Security",
+  "industry": "government",
+  "description": "U.S. Department of Homeland Security - government",
+  "inferred_stack": {
+    "email": "Proofpoint (email gateway)",
+    "identity": "Microsoft Entra ID (Azure AD)",
+    "cloud": "Microsoft Azure",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Microsoft Sentinel (likely)"
+  },
+  "stack_source": "DNS / MX / SPF",
+  "compliance": [
+    "FISMA",
+    "FedRAMP",
+    "NIST 800-53",
+    "CMMC"
+  ],
+  "emit_all_platforms": true
+}

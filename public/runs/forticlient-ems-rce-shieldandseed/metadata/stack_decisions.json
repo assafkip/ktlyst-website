@@ -1,0 +1,229 @@
+{
+  "stack": {
+    "email": "Unknown",
+    "identity": "Unknown",
+    "cloud": "Unknown",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Unknown"
+  },
+  "gate_count": 19,
+  "decisions": [
+    {
+      "file": "executive/board_brief.md",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "executive/risk_quantification.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/sentinel_rules.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/sentinel_watchlist.csv",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/splunk_savedsearches.conf",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_web-based_reconnaissance_blocked_by_security_contro.yml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_automated_threat_intelligence_gathering_attempt.yml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/sigma_rules/ktlyst_-_security_control_evasion_attempt_detection.yml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "detection/elastic_rules.ndjson",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "identity/entra_conditional_access_policy.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "identity/entra_hunt_queries.kql",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "identity/okta_policy_recommendation.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "identity/okta_behavior_detection.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "identity/scim_audit.kql",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "email/domains_blocklist.txt",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "email/m365_transport_rule.ps1",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "email/defender_tenant_blocklist.csv",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "email/proofpoint_url_defense.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "endpoint/crowdstrike_ioc_import.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "endpoint/mde_ioc_import.csv",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "endpoint/sentinelone_star_rule.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "endpoint/visibility_assessment.md",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "cloud/azure_ad_hunt.kql",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "cloud/oauth_app_audit.kql",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "cloud/conditional_access_gaps.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "cloud/aws_waf_ip_set.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "cloud/gcp_armor_policy.yaml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "cloud/azure_sentinel_identity_analytic.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/attack_navigator_layer.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/atomic_tests/t1595.yaml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/atomic_tests/t1562.yaml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/emulation_plan.md",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/detection_gap_matrix.md",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/caldera_adversary.yml",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "emulation/detection_gap_matrix.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "executive/action_plan.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "compliance/framework_mapping.csv",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "iocs/domains.csv",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "iocs/domains.stix.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "iocs/full_ioc_list.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "iocs/misp_event.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "metadata/source_advisory.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    },
+    {
+      "file": "metadata/stack_assessment.json",
+      "emitted": true,
+      "reason": "emit_all_platforms"
+    }
+  ],
+  "emitted_count": 43,
+  "skipped_count": 0
+}

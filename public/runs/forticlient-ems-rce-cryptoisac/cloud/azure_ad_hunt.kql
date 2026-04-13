@@ -1,0 +1,64 @@
+// KTLYST Azure AD Hunt Queries
+// Advisory: Unit42 Device Code OAuth Phishing
+// Generated: 2026-04-13
+
+// ================================================================
+// Hunt 1: All device code authentication events
+// ================================================================
+SigninLogs
+| where TimeGenerated >= ago(90d)
+| where AuthenticationProtocol == "deviceCode"
+| summarize
+    Count = count(),
+    DistinctUsers = dcount(UserPrincipalName),
+    FirstSeen = min(TimeGenerated),
+    LastSeen = max(TimeGenerated)
+    by AppDisplayName, IPAddress, Location.city
+| order by Count desc
+
+// ================================================================
+// Hunt 2: Device code auth from non-corporate IPs
+// ================================================================
+let corporate_ranges = dynamic(["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]);
+SigninLogs
+| where TimeGenerated >= ago(30d)
+| where AuthenticationProtocol == "deviceCode"
+| where not(ipv4_is_in_any_range(IPAddress, corporate_ranges))
+| project TimeGenerated, UserPrincipalName, AppDisplayName,
+          IPAddress, Location, ConditionalAccessStatus
+| order by TimeGenerated desc
+
+// ================================================================
+// Hunt 3: Impossible travel after device code auth
+// ================================================================
+SigninLogs
+| where TimeGenerated >= ago(30d)
+| where AuthenticationProtocol == "deviceCode"
+| extend City = tostring(Location.city), Country = tostring(Location.countryOrRegion)
+| project DeviceCodeTime = TimeGenerated, UserPrincipalName, City, Country, IPAddress
+| join kind=inner (
+    SigninLogs
+    | where TimeGenerated >= ago(30d)
+    | where AuthenticationProtocol != "deviceCode"
+    | extend City = tostring(Location.city), Country = tostring(Location.countryOrRegion)
+    | project OtherAuthTime = TimeGenerated, UserPrincipalName, City, Country, IPAddress
+) on UserPrincipalName
+| where abs(datetime_diff('minute', DeviceCodeTime, OtherAuthTime)) < 60
+| where City != City1
+| project UserPrincipalName, DeviceCodeTime, OtherAuthTime, City, City1
+
+// ================================================================
+// Hunt 4: Bulk mail/file access following device code auth
+// ================================================================
+SigninLogs
+| where TimeGenerated >= ago(30d)
+| where AuthenticationProtocol == "deviceCode"
+| project DeviceCodeTime = TimeGenerated, UserPrincipalName
+| join kind=inner (
+    OfficeActivity
+    | where TimeGenerated >= ago(30d)
+    | where Operation in ("MailItemsAccessed", "FileAccessed", "FilePreviewed")
+    | summarize OpCount = count() by UserId, bin(TimeGenerated, 1h)
+    | where OpCount > 50
+) on $left.UserPrincipalName == $right.UserId
+| where TimeGenerated between (DeviceCodeTime .. (DeviceCodeTime + 24h))

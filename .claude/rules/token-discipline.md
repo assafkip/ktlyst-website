@@ -35,7 +35,7 @@ Self-monitoring rules (Layer 2, always active even without hook triggers):
 
 When doing cleanup, migration, or rename tasks: run TWO grep passes.
 - Pass 1 catches obvious string/symbol hits.
-- Pass 2 catches stale Notion IDs, dead import paths, and embedded references in JSON, HTML, and markdown.
+- Pass 2 catches stale IDs, dead import paths, and embedded references in JSON, HTML, and markdown.
 - State "pass 1 done, starting pass 2" before finishing.
 - Not optional, even on small renames.
 

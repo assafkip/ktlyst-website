@@ -1,0 +1,28 @@
+title: 'KTLYST - Web-based reconnaissance blocked by security controls'
+id: 700286fe-9245-5445-a47b-e04808195503
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1595
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith:
+            - '\whoami.exe'
+            - '\net.exe'
+            - '\nltest.exe'
+            - '\ipconfig.exe'
+            - '\systeminfo.exe'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

@@ -1,0 +1,23 @@
+{
+  "id": "forticlient-ems-rce-p1fcu",
+  "date": "2026-04-13",
+  "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+  "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+  "company": "P1FCU",
+  "industry": "financial",
+  "personalized": true,
+  "stack_source": "dns",
+  "teams": [
+    "SOC",
+    "IAM",
+    "Email",
+    "Endpoint",
+    "Cloud",
+    "Red Team",
+    "Executive",
+    "Compliance",
+    "IOCs"
+  ],
+  "public_url": "https://www.ktlystlabs.com/runs/forticlient-ems-rce-p1fcu/",
+  "created_at": "2026-04-13T15:22:46Z"
+}

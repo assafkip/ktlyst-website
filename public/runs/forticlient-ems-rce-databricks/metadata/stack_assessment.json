@@ -1,0 +1,22 @@
+{
+  "name": "Databricks",
+  "industry": "technology",
+  "description": "Databricks - technology",
+  "inferred_stack": {
+    "email": "Google Workspace (Gmail)",
+    "identity": "Google Workspace",
+    "cloud": "Google Cloud / AWS",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Chronicle / Splunk (likely)",
+    "additional_tools": {
+      "project_mgmt": "Smartsheet",
+      "crm": "HubSpot"
+    }
+  },
+  "stack_source": "DNS / MX / SPF",
+  "compliance": [
+    "SOC 2 Type II",
+    "ISO 27001"
+  ],
+  "emit_all_platforms": true
+}

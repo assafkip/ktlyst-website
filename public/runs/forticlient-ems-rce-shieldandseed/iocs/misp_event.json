@@ -1,0 +1,39 @@
+{
+  "Event": {
+    "uuid": "858a4dc8-d30c-4d3a-a762-63ad7e10da58",
+    "info": "KTLYST - Shield & Seed LLC - Advisory Extraction",
+    "date": "2026-04-13",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"Shield & Seed LLC\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-13T15:22:47.972188+00:00",
+    "customer": "Shield & Seed LLC",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 0,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}

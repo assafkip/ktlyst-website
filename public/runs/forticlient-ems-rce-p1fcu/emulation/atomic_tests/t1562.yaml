@@ -1,0 +1,20 @@
+---
+attack_technique: T1562
+display_name: "Security control evasion attempt documentation"
+atomic_tests:
+  - name: "KTLYST - Security control evasion attempt documentation Simulation"
+    auto_generated_guid: e6ef1a13-3fa0-45f1-8ab2-f3e4ff9478aa
+    description: |
+      Simulates Security control evasion attempt documentation technique as observed in Unit42 Device Code
+      OAuth Phishing campaign. Use for purple team validation.
+    supported_platforms:
+      - windows
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. Review the attack step description in the emulation plan
+        2. Execute the technique in a controlled environment
+        3. Verify detection rules fire in your SIEM
+        4. Document coverage gaps
+      cleanup_command: ""

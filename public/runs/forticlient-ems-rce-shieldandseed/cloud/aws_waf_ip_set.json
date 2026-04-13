@@ -1,0 +1,69 @@
+{
+  "resourceType": "AWS::WAFv2::Combined",
+  "name": "KTLYST-Shield-&-Seed-LLC-Phishing-IOC-2026-04-13",
+  "scope": "REGIONAL",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-13T15:22:47.970633+00:00",
+  "createdFor": "Shield & Seed LLC",
+  "resources": {
+    "ipSet": {
+      "type": "AWS::WAFv2::IPSet",
+      "name": "KTLYST-Shield-&-Seed-LLC-PhishingDomains",
+      "scope": "REGIONAL",
+      "ipAddressVersion": "IPV4",
+      "addresses": [],
+      "note": "Populate addresses with A-record resolutions of the domain list below. KTLYST emits the domain list here because WAF cannot match domain strings directly; pair with a Lambda refresher that resolves and updates the IPSet every hour.",
+      "relatedDomains": []
+    },
+    "ruleGroup": {
+      "type": "AWS::WAFv2::RuleGroup",
+      "name": "KTLYST-Shield-&-Seed-LLC-PhishingRules",
+      "scope": "REGIONAL",
+      "capacity": 50,
+      "rules": [
+        {
+          "name": "BlockKtlystPhishingIOCs",
+          "priority": 1,
+          "action": {
+            "block": {}
+          },
+          "statement": {
+            "ipSetReferenceStatement": {
+              "arnRef": "KTLYST-PhishingDomains"
+            }
+          },
+          "visibilityConfig": {
+            "sampledRequestsEnabled": true,
+            "cloudWatchMetricsEnabled": true,
+            "metricName": "KtlystPhishingBlocks"
+          }
+        },
+        {
+          "name": "BlockAnonymousIPs",
+          "priority": 2,
+          "action": {
+            "block": {}
+          },
+          "statement": {
+            "managedRuleGroupStatement": {
+              "vendorName": "AWS",
+              "name": "AWSManagedRulesAnonymousIpList"
+            }
+          },
+          "overrideAction": {
+            "none": {}
+          },
+          "visibilityConfig": {
+            "sampledRequestsEnabled": true,
+            "cloudWatchMetricsEnabled": true,
+            "metricName": "KtlystAnonymousIPBlocks"
+          }
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "indicator_count": 0,
+    "note": "Deploy to a non-production WebACL first. Block action is immediate; CloudWatch metrics give you FP rate before rolling to prod."
+  }
+}

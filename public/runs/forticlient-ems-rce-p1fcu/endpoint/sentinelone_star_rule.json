@@ -1,0 +1,24 @@
+{
+  "name": "KTLYST - P1FCU - Phishing Infrastructure",
+  "description": "KTLYST custom STAR rule for P1FCU. Fires when any managed host connects to a known phishing IOC from a browser or a PowerShell session. Pairs network-layer signal with endpoint process context.",
+  "severity": "High",
+  "expirationMode": "Permanent",
+  "queryType": "events",
+  "queryLang": "S1QL",
+  "query": "EventType = \"IP Connect\" AND DstIP.Domain IN () AND SrcProcName IN (\"chrome.exe\", \"msedge.exe\", \"firefox.exe\", \"powershell.exe\", \"pwsh.exe\")",
+  "status": "Draft",
+  "generatedBy": "KTLYST",
+  "generatedAt": "2026-04-13T15:22:46.016917+00:00",
+  "createdFor": "P1FCU",
+  "tags": [
+    "KTLYST",
+    "P1FCU",
+    "phishing",
+    "ioc"
+  ],
+  "metadata": {
+    "advisory_date": "2026-04-13",
+    "indicator_count": 0,
+    "note": "Rule starts in Draft status. Review in S1 Console > Sentinels > Custom Rules before activating. Expected false-positive rate is low because the rule requires both network connection and browser/PS process context."
+  }
+}

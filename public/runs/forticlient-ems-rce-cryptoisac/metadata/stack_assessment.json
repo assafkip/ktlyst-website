@@ -1,0 +1,23 @@
+{
+  "name": "Crypto ISAC",
+  "industry": "financial",
+  "description": "Crypto ISAC - financial",
+  "inferred_stack": {
+    "email": "Google Workspace (Gmail)",
+    "identity": "Google Workspace",
+    "cloud": "Google Cloud / AWS",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Chronicle / Splunk (likely)",
+    "additional_tools": {
+      "crm": "HubSpot"
+    }
+  },
+  "stack_source": "DNS / MX / SPF",
+  "compliance": [
+    "SOX",
+    "PCI-DSS",
+    "GLBA",
+    "FFIEC"
+  ],
+  "emit_all_platforms": true
+}

@@ -1,0 +1,38 @@
+{
+  "name": "KTLYST - U.S. Department of Homeland Security - Cloud Identity IOC Correlation",
+  "type": "Microsoft.SecurityInsights/alertRules",
+  "apiVersion": "2022-11-01",
+  "kind": "Scheduled",
+  "properties": {
+    "displayName": "KTLYST - U.S. Department of Homeland Security - Cloud Identity IOC Correlation",
+    "description": "Correlates medium/high-risk sign-ins for U.S. Department of Homeland Security with cloud app activity referencing known KTLYST phishing IOCs. Runs every 15 minutes over a 1-hour window.",
+    "severity": "High",
+    "enabled": false,
+    "query": "let ioc_domains = dynamic([]);\nSigninLogs\n| where TimeGenerated >= ago(24h)\n| where RiskLevelDuringSignIn in ('medium','high')\n| join kind=inner (\n    CloudAppEvents\n    | where TimeGenerated >= ago(24h)\n    | where ObjectName has_any (ioc_domains)\n      or AccountObjectId has_any (ioc_domains)\n) on $left.UserPrincipalName == $right.AccountUpn\n| project TimeGenerated, UserPrincipalName, IPAddress,\n          RiskLevelDuringSignIn, ActionType, ObjectName",
+    "queryFrequency": "PT15M",
+    "queryPeriod": "PT1H",
+    "triggerOperator": "GreaterThan",
+    "triggerThreshold": 0,
+    "tactics": [
+      "InitialAccess",
+      "CredentialAccess",
+      "Persistence"
+    ],
+    "techniques": [
+      "T1078.004",
+      "T1566",
+      "T1550.001"
+    ],
+    "suppressionDuration": "PT1H",
+    "suppressionEnabled": false,
+    "eventGroupingSettings": {
+      "aggregationKind": "SingleAlert"
+    }
+  },
+  "metadata": {
+    "generatedBy": "KTLYST",
+    "generatedAt": "2026-04-13T15:22:44.609601+00:00",
+    "createdFor": "U.S. Department of Homeland Security",
+    "note": "Rule ships with enabled=false. Review in Sentinel > Analytics > Active Rules before enabling. Cloud team owns this rule; it is distinct from the SIEM detection bundle shipped by the SIEM team."
+  }
+}

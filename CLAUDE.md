@@ -6,7 +6,7 @@
 A portable founder operating system for Claude Code. Strategy, execution, relationship management, content pipeline, and daily routines - all running from your terminal.
 =======
 ## Founder OS (Skeleton)
-@q-system/q-system/CLAUDE.md
+@q-system/CLAUDE.md
 
 ## About
 KTLYST Labs company website -- React + Vite + Tailwind, deployed on Vercel.

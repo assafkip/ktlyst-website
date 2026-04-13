@@ -1,0 +1,26 @@
+title: 'KTLYST - Security control evasion attempt detection'
+id: 246a4cf2-67d8-5804-8c3e-4ec4ffb9c4f4
+status: experimental
+description: |
+    Auto-generated detection rule.
+    Source provenance: Page 1
+level: medium
+author: KTLYST
+date: 2026/03/24
+references:
+    - 'KTLYST source: Page 1'
+tags:
+    - attack.detection
+    - attack.t1562
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains|any:
+            - 'Set-MpPreference'
+            - 'DisableRealtimeMonitoring'
+            - '-ep bypass'
+    condition: selection
+falsepositives:
+    - Legitimate administrative activity

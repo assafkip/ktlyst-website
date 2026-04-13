@@ -1,0 +1,56 @@
+{
+  "source": "value-drop-pipeline",
+  "report": "Advisory Extraction",
+  "total_indicators": 0,
+  "domains": [],
+  "tools": [],
+  "behavioral_patterns": [
+    {
+      "value": "Web-based reconnaissance blocked by security controls\n\nBehaviors:\n  \u2022 Step 1: Attempt to access threat intelligence URL\n  \u2022 Step 2: Security system blocks access\n  \u2022 Step 3: Generate block notification with client details\n\nDetection: Monitor for blocked requests to security vendor URLs combined with specific attack IDs",
+      "type": "behavioral_pattern",
+      "page": 1,
+      "context": "Web-based reconnaissance blocked by security controls",
+      "confidence": 0.7,
+      "ttp_code": "T1595"
+    },
+    {
+      "value": "Potential threat intelligence gathering attempt\n\nBehaviors:\n  \u2022 Step 1: Target specific Fortinet PSIRT advisory URL\n  \u2022 Step 2: Access attempt from external IP\n  \u2022 Step 3: Trigger security control blocking mechanism\n\nDetection: Track access patterns to vulnerability disclosure pages that result in security blocks",
+      "type": "behavioral_pattern",
+      "page": 1,
+      "context": "Potential threat intelligence gathering attempt",
+      "confidence": 0.6,
+      "ttp_code": null
+    },
+    {
+      "value": "Security control enforcement and logging workflow\n\nBehaviors:\n  \u2022 Step 1: Detect suspicious web request\n  \u2022 Step 2: Apply blocking policy\n  \u2022 Step 3: Log attack ID and message ID\n  \u2022 Step 4: Generate administrator notification\n\nDetection: Correlate attack IDs with message IDs to identify coordinated probing attempts",
+      "type": "behavioral_pattern",
+      "page": 1,
+      "context": "Security control enforcement and logging workflow",
+      "confidence": 0.8,
+      "ttp_code": null
+    }
+  ],
+  "behavioral_pattern_count": 3,
+  "enriched_ttps": [],
+  "enriched_ttp_count": 0,
+  "rule_count": 1,
+  "snowflake_sql": "-- KTLYST Detection Rules\n-- Generated from 1 rules\n-- ============================================\n\n-- Rule 1: Detect Behavior: Web-based reconnaissance blocked by security contr\n-- ID: IOC-BEHAVIOR-e6d6c35b\n-- Generation: template (success)\n-- Description: Detects behavior indicator 'Web-based reconnaissance blocked by security controls\n\nBehaviors:\n  \u2022 Step 1: Attempt to access thre' extracted from threat intelligence.\n-- ------------------------------------------------------------\n-- Behavioral Pattern Detection: Web-based reconnaissance blocked by security controls\n\nBehaviors:\n  \u2022 Step 1: Attempt to access thre\n-- Source: behavioral_0\n-- TTP: T1595\n-- Kill Chain: \n-- Type: unknown\n\nSELECT\n    case_id,\n    user_id,\n    case_notes,\n    case_description,\n    created_at,\n    'Web-based reconnaissance blocked by security controls\n\nBehaviors:\n  \u2022 Step 1: Attempt to access thre' AS matched_pattern,\n    'T1595' AS ttp_code,\n    'behavioral_0' AS source_span\nFROM case_notes\nWHERE (\n    REGEXP_LIKE(LOWER(case_notes), LOWER('\\\\bWeb\\-based\\ reconnaissance\\ blocked\\ by\\ security\\ controls\\\n\\\nBehaviors:\\\n\\ \\ \u2022\\ Step\\ 1:\\ Attempt\\ to\\ access\\ thre\\\\b'))\n    OR REGEXP_LIKE(LOWER(case_description), LOWER('\\\\bWeb\\-based\\ reconnaissance\\ blocked\\ by\\ security\\ controls\\\n\\\nBehaviors:\\\n\\ \\ \u2022\\ Step\\ 1:\\ Attempt\\ to\\ access\\ thre\\\\b'))\n)\nAND created_at >= DATEADD(day, -90, CURRENT_TIMESTAMP())\nORDER BY created_at DESC;\n",
+  "compiled_outputs": {
+    "sentinel": "// KTLYST Detection Rules (KQL for Microsoft Sentinel)\n// Generated: 3 rules from 3 indicators\n// ============================================================\n\n// Rule 1: Behavioral Detection - Web-based reconnaissance blocked by security controls\n// Category: discovery\n// Source: Page 1\n// MITRE: T1595\nDeviceProcessEvents\n| where TimeGenerated >= ago(24h)\n| where FileName in~ (\"whoami.exe\", \"net.exe\", \"nltest.exe\", \"ipconfig.exe\", \"systeminfo.exe\")\n| summarize ReconCount = count(),\n    UniqueTools = dcount(FileName),\n    FirstSeen = min(TimeGenerated),\n    LastSeen = max(TimeGenerated)\n    by DeviceName, InitiatingProcessAccountName\n| where ReconCount >= 3 or UniqueTools >= 2\n| sort by ReconCount desc\n| take 100\n\n// Rule 2: Behavioral Detection - Potential threat intelligence gathering attempt\n// Category: credential_access\n// Source: Page 1\n// MITRE: \nSigninLogs\n| where TimeGenerated >= ago(24h)\n| where ResultType != \"0\"\n| summarize FailedCount = count(),\n    UniqueIPs = dcount(IPAddress),\n    UniqueLocations = dcount(Location),\n    FirstAttempt = min(TimeGenerated),\n    LastAttempt = max(TimeGenerated)\n    by UserPrincipalName\n| where FailedCount >= 5 or UniqueIPs >= 3\n| sort by FailedCount desc\n| take 100\n\n// Rule 3: Behavioral Detection - Security control enforcement and logging workflow\n// Category: credential_access\n// Source: Page 1\n// MITRE: \nSigninLogs\n| where TimeGenerated >= ago(24h)\n| where ResultType != \"0\"\n| summarize FailedCount = count(),\n    UniqueIPs = dcount(IPAddress),\n    UniqueLocations = dcount(Location),\n    FirstAttempt = min(TimeGenerated),\n    LastAttempt = max(TimeGenerated)\n    by UserPrincipalName\n| where FailedCount >= 5 or UniqueIPs >= 3\n| sort by FailedCount desc\n| take 100",
+    "splunk": "``` KTLYST Detection Rules (SPL for Splunk)\n``` Generated: 3 rules from 3 indicators\n\n``` Rule 1: Behavioral Detection - Web-based reconnaissance blocked by security controls\n``` Category: discovery\n``` Source: Page 1\n``` MITRE: T1595\nindex=main sourcetype=endpoint:process process_name IN (\"whoami.exe\", \"net.exe\", \"nltest.exe\", \"ipconfig.exe\", \"systeminfo.exe\")\n| stats count as recon_count, dc(process_name) as unique_tools, earliest(_time) as first_seen, latest(_time) as last_seen by dest, user\n| where recon_count >= 3 OR unique_tools >= 2\n| sort -recon_count\n| table dest, user, recon_count, unique_tools, first_seen, last_seen\n\n``` Rule 2: Behavioral Detection - Potential threat intelligence gathering attempt\n``` Category: credential_access\n``` Source: Page 1\n``` MITRE: \nindex=main sourcetype=authentication action=failure\n| stats count as failed_count, dc(src_ip) as unique_ips, earliest(_time) as first_attempt, latest(_time) as last_attempt by user\n| where failed_count >= 5 OR unique_ips >= 3\n| sort -failed_count\n| table user, failed_count, unique_ips, first_attempt, last_attempt\n\n``` Rule 3: Behavioral Detection - Security control enforcement and logging workflow\n``` Category: credential_access\n``` Source: Page 1\n``` MITRE: \nindex=main sourcetype=authentication action=failure\n| stats count as failed_count, dc(src_ip) as unique_ips, earliest(_time) as first_attempt, latest(_time) as last_attempt by user\n| where failed_count >= 5 OR unique_ips >= 3\n| sort -failed_count\n| table user, failed_count, unique_ips, first_attempt, last_attempt",
+    "sigma": "# KTLYST Detection Rules (SIGMA format)\n# Generated: 3 rules from 3 indicators\n# Convert to platform-native with: sigma convert -t <target>\n---\n\ntitle: 'KTLYST - Web-based reconnaissance blocked by security controls'\nid: 700286fe-9245-5445-a47b-e04808195503\nstatus: experimental\ndescription: |\n    Auto-generated detection rule.\n    Source provenance: Page 1\nlevel: medium\nauthor: KTLYST\ndate: 2026/03/24\nreferences:\n    - 'KTLYST source: Page 1'\ntags:\n    - attack.detection\n    - attack.t1595\nlogsource:\n    category: process_creation\n    product: windows\ndetection:\n    selection:\n        Image|endswith:\n            - '\\whoami.exe'\n            - '\\net.exe'\n            - '\\nltest.exe'\n            - '\\ipconfig.exe'\n            - '\\systeminfo.exe'\n    condition: selection\nfalsepositives:\n    - Legitimate administrative activity\n\n---\n\ntitle: 'KTLYST - Potential threat intelligence gathering attempt'\nid: 2dfc722a-3562-5d86-90f1-41a48a668d33\nstatus: experimental\ndescription: |\n    Auto-generated detection rule.\n    Source provenance: Page 1\nlevel: medium\nauthor: KTLYST\ndate: 2026/03/24\nreferences:\n    - 'KTLYST source: Page 1'\ntags:\n    - attack.detection\nlogsource:\n    category: authentication\n    product: any\ndetection:\n    selection:\n        status: 'failure'\n    filter_low_count:\n        count|gte: 5\n    condition: selection\nfalsepositives:\n    - Legitimate administrative activity\n\n---\n\ntitle: 'KTLYST - Security control enforcement and logging workflow'\nid: 2adeca50-b17c-5899-a5f5-6ef2b1a0b4d3\nstatus: experimental\ndescription: |\n    Auto-generated detection rule.\n    Source provenance: Page 1\nlevel: medium\nauthor: KTLYST\ndate: 2026/03/24\nreferences:\n    - 'KTLYST source: Page 1'\ntags:\n    - attack.detection\nlogsource:\n    category: authentication\n    product: any\ndetection:\n    selection:\n        status: 'failure'\n    filter_low_count:\n        count|gte: 5\n    condition: selection\nfalsepositives:\n    - Legitimate administrative activity\n"
+  },
+  "processing_time": 12.45283579826355,
+  "source_type": "news_article",
+  "report_type": "intake_memo",
+  "confidence_assessment": {
+    "claim_authenticity": "MODERATE",
+    "material_validity": "LOW",
+    "operational_impact": "LOW",
+    "regulatory_trigger": "LOW",
+    "claim_reasoning": "",
+    "material_reasoning": "",
+    "impact_reasoning": "",
+    "regulatory_reasoning": ""
+  }
+}

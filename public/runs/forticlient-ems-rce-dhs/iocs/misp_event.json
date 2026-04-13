@@ -1,0 +1,39 @@
+{
+  "Event": {
+    "uuid": "a658cc20-26a6-4a1a-8160-1c2d0cb3497e",
+    "info": "KTLYST - U.S. Department of Homeland Security - Advisory Extraction",
+    "date": "2026-04-13",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"U.S. Department of Homeland Security\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-13T15:22:44.611171+00:00",
+    "customer": "U.S. Department of Homeland Security",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 0,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}

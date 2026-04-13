@@ -1,5 +1,50 @@
 [
   {
+    "id": "forticlient-ems-rce-shieldandseed",
+    "date": "2026-04-13",
+    "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+    "source": "fortiguard.fortinet.com",
+    "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+    "summary": "Full KTLYST run for Shield & Seed LLC: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/forticlient-ems-rce-shieldandseed/"
+  },
+  {
+    "id": "forticlient-ems-rce-p1fcu",
+    "date": "2026-04-13",
+    "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+    "source": "fortiguard.fortinet.com",
+    "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+    "summary": "Full KTLYST run for P1FCU: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/forticlient-ems-rce-p1fcu/"
+  },
+  {
+    "id": "forticlient-ems-rce-dhs",
+    "date": "2026-04-13",
+    "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+    "source": "fortiguard.fortinet.com",
+    "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+    "summary": "Full KTLYST run for U.S. Department of Homeland Security: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/forticlient-ems-rce-dhs/"
+  },
+  {
+    "id": "forticlient-ems-rce-databricks",
+    "date": "2026-04-13",
+    "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+    "source": "fortiguard.fortinet.com",
+    "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+    "summary": "Full KTLYST run for Databricks: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/forticlient-ems-rce-databricks/"
+  },
+  {
+    "id": "forticlient-ems-rce-cryptoisac",
+    "date": "2026-04-13",
+    "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+    "source": "fortiguard.fortinet.com",
+    "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+    "summary": "Full KTLYST run for Crypto ISAC: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/forticlient-ems-rce-cryptoisac/"
+  },
+  {
     "id": "iranian-plc-exploitation-spie-energy",
     "date": "2026-04-12",
     "title": "Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure",

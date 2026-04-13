@@ -1,0 +1,23 @@
+{
+  "id": "forticlient-ems-rce-cryptoisac",
+  "date": "2026-04-13",
+  "title": "Critical FortiClient EMS RCE - Active Exploitation (CVSS 9.1)",
+  "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
+  "company": "Crypto ISAC",
+  "industry": "financial",
+  "personalized": true,
+  "stack_source": "dns",
+  "teams": [
+    "SOC",
+    "IAM",
+    "Email",
+    "Endpoint",
+    "Cloud",
+    "Red Team",
+    "Executive",
+    "Compliance",
+    "IOCs"
+  ],
+  "public_url": "https://www.ktlystlabs.com/runs/forticlient-ems-rce-cryptoisac/",
+  "created_at": "2026-04-13T15:23:00Z"
+}

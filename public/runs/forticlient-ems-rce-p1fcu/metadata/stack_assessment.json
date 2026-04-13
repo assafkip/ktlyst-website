@@ -1,0 +1,23 @@
+{
+  "name": "P1FCU",
+  "industry": "financial",
+  "description": "P1FCU - financial",
+  "inferred_stack": {
+    "email": "Microsoft 365 (Exchange Online)",
+    "identity": "Microsoft Entra ID (Azure AD)",
+    "cloud": "Microsoft Azure",
+    "edr": "Unknown (not inferable from DNS)",
+    "siem": "Microsoft Sentinel (likely)",
+    "additional_tools": {
+      "project_mgmt": "Atlassian (Jira/Confluence)"
+    }
+  },
+  "stack_source": "DNS / MX / SPF",
+  "compliance": [
+    "SOX",
+    "PCI-DSS",
+    "GLBA",
+    "FFIEC"
+  ],
+  "emit_all_platforms": true
+}

@@ -1,0 +1,39 @@
+{
+  "Event": {
+    "uuid": "d7331fa9-3373-42aa-8800-06f64f73125e",
+    "info": "KTLYST - Databricks - Advisory Extraction",
+    "date": "2026-04-13",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"Databricks\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-13T15:22:44.978531+00:00",
+    "customer": "Databricks",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 0,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}
