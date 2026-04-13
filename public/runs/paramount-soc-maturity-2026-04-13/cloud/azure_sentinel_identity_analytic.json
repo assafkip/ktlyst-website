@@ -31,7 +31,7 @@
   },
   "metadata": {
     "generatedBy": "KTLYST",
-    "generatedAt": "2026-04-13T21:20:51.354346+00:00",
+    "generatedAt": "2026-04-13T21:29:20.291938+00:00",
     "createdFor": "Paramount Global",
     "note": "Rule ships with enabled=false. Review in Sentinel > Analytics > Active Rules before enabling. Cloud team owns this rule; it is distinct from the SIEM detection bundle shipped by the SIEM team."
   }

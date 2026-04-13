@@ -3,7 +3,7 @@ attack_technique: T1018
 display_name: "Remote System Discovery"
 atomic_tests:
   - name: "KTLYST - Remote System Discovery Simulation"
-    auto_generated_guid: 63bcd9e1-45e2-415e-9db5-ca9784097796
+    auto_generated_guid: 257387c4-701d-417e-8bf1-29042e9290dd
     description: |
       Simulates Remote System Discovery technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

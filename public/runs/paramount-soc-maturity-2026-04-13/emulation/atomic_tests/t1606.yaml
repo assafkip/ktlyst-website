@@ -3,7 +3,7 @@ attack_technique: T1606
 display_name: "Forge Web Credentials"
 atomic_tests:
   - name: "KTLYST - Forge Web Credentials Simulation"
-    auto_generated_guid: ecea9d8b-e651-44ef-9b82-e4677f56266f
+    auto_generated_guid: a24f42fe-860a-4f6c-8fbc-1b74c06a2bb6
     description: |
       Simulates Forge Web Credentials technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

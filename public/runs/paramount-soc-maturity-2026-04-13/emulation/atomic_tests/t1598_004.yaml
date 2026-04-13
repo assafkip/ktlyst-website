@@ -3,7 +3,7 @@ attack_technique: T1598.004
 display_name: "Spearphishing Voice"
 atomic_tests:
   - name: "KTLYST - Spearphishing Voice Simulation"
-    auto_generated_guid: 3a25929d-4987-4134-9f19-0ebcfff0dd97
+    auto_generated_guid: 7f6213ee-6983-4cdb-a976-8883de4a209b
     description: |
       Simulates Spearphishing Voice technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

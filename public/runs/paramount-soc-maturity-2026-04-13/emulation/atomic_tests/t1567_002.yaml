@@ -3,7 +3,7 @@ attack_technique: T1567.002
 display_name: "Exfiltration to Cloud Storage"
 atomic_tests:
   - name: "KTLYST - Exfiltration to Cloud Storage Simulation"
-    auto_generated_guid: e577248b-7a6b-4e86-bf3e-e2c418e23015
+    auto_generated_guid: df6922b1-fd2d-4424-b790-498f52d820a8
     description: |
       Simulates Exfiltration to Cloud Storage technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

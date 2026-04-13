@@ -3,7 +3,7 @@ attack_technique: T1539
 display_name: "Steal Web Session Cookie"
 atomic_tests:
   - name: "KTLYST - Steal Web Session Cookie Simulation"
-    auto_generated_guid: 117f5d55-f48a-4848-a98d-4eef8ea7af3a
+    auto_generated_guid: 0349e415-59ad-4c86-b423-974d5a4bf547
     description: |
       Simulates Steal Web Session Cookie technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

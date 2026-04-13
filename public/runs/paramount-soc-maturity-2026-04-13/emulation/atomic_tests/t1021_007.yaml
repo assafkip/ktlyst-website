@@ -3,7 +3,7 @@ attack_technique: T1021.007
 display_name: "Cloud Services"
 atomic_tests:
   - name: "KTLYST - Cloud Services Simulation"
-    auto_generated_guid: d21b33d4-f7b6-4793-be1e-4187ea90325e
+    auto_generated_guid: ebab3714-b472-4e7a-9580-1b49af710fa4
     description: |
       Simulates Cloud Services technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.
