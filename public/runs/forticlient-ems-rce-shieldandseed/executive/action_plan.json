@@ -3,7 +3,6 @@
     {
       "name": "Check for Active Compromise",
       "phase_number": 0,
-      "time_estimate": "15 min",
       "actions": [
         {
           "description": "Import IOCs for detect-mode monitoring",
@@ -24,7 +23,6 @@
     {
       "name": "Immediate Response",
       "phase_number": 1,
-      "time_estimate": "30 min",
       "actions": [
         {
           "description": "Block threat domains at email gateway",
@@ -45,7 +43,6 @@
     {
       "name": "This Week",
       "phase_number": 2,
-      "time_estimate": "4 hours",
       "actions": [
         {
           "description": "Audit OAuth app consents and service principal sign-ins",
@@ -94,7 +91,6 @@
     {
       "name": "Harden",
       "phase_number": 3,
-      "time_estimate": "ongoing",
       "actions": [
         {
           "description": "Schedule red team exercise against emulation plan",
@@ -130,18 +126,15 @@
   "top_3": [
     {
       "description": "Import IOCs for detect-mode monitoring",
-      "tier": 1,
-      "time": "5 min"
+      "tier": 1
     },
     {
       "description": "Hunt for indicators across all endpoints",
-      "tier": 1,
-      "time": "5 min"
+      "tier": 1
     },
     {
       "description": "Block threat domains at email gateway",
-      "tier": 1,
-      "time": "5 min"
+      "tier": 1
     }
   ]
 }
