@@ -1,0 +1,40 @@
+# KTLYST Caldera adversary profile for Ontario Power Generation
+# Generated: 2026-04-13
+# Advisory: value-drop-pipeline
+#
+# Drop into caldera/data/adversaries/ and restart the Caldera
+# server. Ability IDs below are placeholders — map each to a
+# real ability UUID from your Caldera library (or import the
+# Atomic Red Team plugin) before running an operation.
+
+id: 1b77f390-5418-4ef8-92fc-8bbe75aa0820
+name: KTLYST - Ontario Power Generation - Phishing Emulation
+description: >-
+  KTLYST-generated adversary profile for Ontario Power Generation. Exercises the
+  attack chain described in the source advisory. Pair with the
+  detection_gap_matrix.md to track which steps your stack
+  caught in a live operation.
+objective: 36eecb80-ede6-4a15-a0dd-3c071ec8020d
+atomic_ordering:
+  - 00000000-0000-0000-0000-000000000001   # Router exploitation to DNS hijacking setup
+  - 00000000-0000-0000-0000-000000000002   # DNS hijacking to credential harvesting
+  - 00000000-0000-0000-0000-000000000003   # Opportunistic targeting and victim filtering
+  - 00000000-0000-0000-0000-000000000004   # Multi-stage router compromise persistence
+  - 00000000-0000-0000-0000-000000000005   # Selective domain redirection for stealth
+  - 00000000-0000-0000-0000-000000000006   # VPS infrastructure setup for DNS operations
+  - 00000000-0000-0000-0000-000000000007   # Credential theft to follow-on access
+  - 00000000-0000-0000-0000-000000000008   # Dual-cluster infrastructure operation
+  - 00000000-0000-0000-0000-000000000009   # Geographic targeting with router exploitation
+  - 00000000-0000-0000-0000-000000000010   # Multi-vector router exploitation campaign
+
+tags:
+  - ktlyst
+  - ontario-power-generation
+  - phishing
+
+# KTLYST metadata (non-Caldera fields, safe to keep)
+ktlyst_metadata:
+  generated_by: KTLYST
+  created_for: Ontario Power Generation
+  created_at: 2026-04-13T18:13:58.586098+00:00
+  indicator_step_count: 10

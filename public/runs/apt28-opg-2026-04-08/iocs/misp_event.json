@@ -1,0 +1,80 @@
+{
+  "Event": {
+    "uuid": "d14f8780-2ff5-462a-a052-2e0b8968d69d",
+    "info": "KTLYST - Ontario Power Generation - Advisory Extraction",
+    "date": "2026-04-13",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "distribution": "1",
+    "published": false,
+    "Orgc": {
+      "name": "KTLYST",
+      "uuid": "8fd5973f-c5e0-5ed6-bbf4-b89e2a9400ef"
+    },
+    "Tag": [
+      {
+        "name": "ktlyst:generated=\"true\""
+      },
+      {
+        "name": "ktlyst:customer=\"Ontario Power Generation\""
+      },
+      {
+        "name": "tlp:amber"
+      },
+      {
+        "name": "type:OSINT"
+      }
+    ],
+    "Attribute": [
+      {
+        "uuid": "43b015d0-453e-5301-8202-2c1dedf4ca2c",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
+        "value": "www.googletagmanager.com",
+        "timestamp": "1776104038"
+      },
+      {
+        "uuid": "2c44e0d6-c4cb-54f8-b355-4b5ff5bf77fc",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
+        "value": "advisory.It",
+        "timestamp": "1776104038"
+      },
+      {
+        "uuid": "da56f344-aca2-5e48-950e-3e974b8e787f",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
+        "value": "office365.com",
+        "timestamp": "1776104038"
+      },
+      {
+        "uuid": "0658a67b-8fbb-53ce-8dc5-a84335d01368",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "distribution": "1",
+        "comment": "KTLYST for Ontario Power Generation - from value-drop-pipeline",
+        "value": "GOV.UK",
+        "timestamp": "1776104038"
+      }
+    ],
+    "extends_uuid": ""
+  },
+  "_ktlyst_metadata": {
+    "generator": "KTLYST",
+    "generated_at": "2026-04-13T18:13:58.587021+00:00",
+    "customer": "Ontario Power Generation",
+    "source_advisory": "value-drop-pipeline",
+    "indicator_count": 4,
+    "note": "Event ships with published=false and distribution=1 (this community only). Review in MISP UI or via the API, adjust distribution and TLP per customer policy, then publish."
+  }
+}

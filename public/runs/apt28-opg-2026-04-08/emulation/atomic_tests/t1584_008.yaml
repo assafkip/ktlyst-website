@@ -3,7 +3,7 @@ attack_technique: T1584.008
 display_name: "Multi-stage router compromise persistence"
 atomic_tests:
   - name: "KTLYST - Multi-stage router compromise persistence Simulation"
-    auto_generated_guid: cb76e609-c87f-411e-b787-fa218724d3d1
+    auto_generated_guid: c610a440-a655-42b5-9c2c-ebd5621c8c83
     description: |
       Simulates Multi-stage router compromise persistence technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

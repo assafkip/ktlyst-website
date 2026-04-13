@@ -5,7 +5,7 @@
       "value": "www.googletagmanager.com",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Ontario Power Generation - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -15,8 +15,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Ontario Power Generation",
+        "phishing"
       ],
       "expiration": ""
     },
@@ -25,7 +25,7 @@
       "value": "advisory.It",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Ontario Power Generation - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -35,8 +35,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Ontario Power Generation",
+        "phishing"
       ],
       "expiration": ""
     },
@@ -45,7 +45,7 @@
       "value": "office365.com",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Ontario Power Generation - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -55,8 +55,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Ontario Power Generation",
+        "phishing"
       ],
       "expiration": ""
     },
@@ -65,7 +65,7 @@
       "value": "GOV.UK",
       "action": "detect",
       "severity": "medium",
-      "description": "KTLYST - Device code phishing infrastructure",
+      "description": "KTLYST for Ontario Power Generation - phishing infrastructure",
       "source": "KTLYST / value-drop-pipeline",
       "platforms": [
         "windows",
@@ -75,8 +75,8 @@
       "applied_globally": true,
       "tags": [
         "KTLYST",
-        "phishing",
-        "device-code"
+        "Ontario Power Generation",
+        "phishing"
       ],
       "expiration": ""
     }

@@ -3,7 +3,7 @@ attack_technique: T1583.002
 display_name: "DNS hijacking to credential harvesting"
 atomic_tests:
   - name: "KTLYST - DNS hijacking to credential harvesting Simulation"
-    auto_generated_guid: 02a83248-3a69-4f7a-9ae1-05b34b0ca4db
+    auto_generated_guid: 056dc4be-d654-42f4-a604-2bdf8396c74e
     description: |
       Simulates DNS hijacking to credential harvesting technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

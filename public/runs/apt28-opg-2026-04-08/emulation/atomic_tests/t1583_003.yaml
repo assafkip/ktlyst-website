@@ -3,7 +3,7 @@ attack_technique: T1583.003
 display_name: "Opportunistic targeting and victim filtering"
 atomic_tests:
   - name: "KTLYST - Opportunistic targeting and victim filtering Simulation"
-    auto_generated_guid: 18de208b-5330-4459-afc0-25eb7b8b109d
+    auto_generated_guid: 11858a63-4ab2-4ba1-8d91-4e5ca72c4fa9
     description: |
       Simulates Opportunistic targeting and victim filtering technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

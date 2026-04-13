@@ -1,7 +1,7 @@
 # Detection Gap Matrix
 
 **Target Stack:** email: Microsoft 365 (Exchange Online), identity: Microsoft Entra ID (Azure AD), cloud: Microsoft Azure / AWS, edr: CrowdStrike Falcon, siem: Splunk
-**Generated:** 2026-04-08
+**Generated:** 2026-04-13
 
 ## Coverage Summary
 

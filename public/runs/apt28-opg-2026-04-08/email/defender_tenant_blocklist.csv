@@ -1,5 +1,5 @@
-Value,Type,Action,Notes,ExpirationDate
-www.googletagmanager.com,Url,Block,KTLYST - Device Code Phishing,
-advisory.It,Url,Block,KTLYST - Device Code Phishing,
-office365.com,Url,Block,KTLYST - Device Code Phishing,
-GOV.UK,Url,Block,KTLYST - Device Code Phishing,
+Value,Type,Action,Notes,Organization,ExpirationDate
+www.googletagmanager.com,Url,Block,KTLYST for Ontario Power Generation,Ontario Power Generation,
+advisory.It,Url,Block,KTLYST for Ontario Power Generation,Ontario Power Generation,
+office365.com,Url,Block,KTLYST for Ontario Power Generation,Ontario Power Generation,
+GOV.UK,Url,Block,KTLYST for Ontario Power Generation,Ontario Power Generation,

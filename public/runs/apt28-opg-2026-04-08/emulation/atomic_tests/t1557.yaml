@@ -3,7 +3,7 @@ attack_technique: T1557
 display_name: "Router exploitation to DNS hijacking setup"
 atomic_tests:
   - name: "KTLYST - Router exploitation to DNS hijacking setup Simulation"
-    auto_generated_guid: c210f24b-3b3c-414d-812a-3c5de341dc7e
+    auto_generated_guid: f007c8cb-0c47-408e-a7e9-9d7cf7358389
     description: |
       Simulates Router exploitation to DNS hijacking setup technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

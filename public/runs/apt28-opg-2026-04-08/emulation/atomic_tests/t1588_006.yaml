@@ -3,7 +3,7 @@ attack_technique: T1588.006
 display_name: "VPS infrastructure setup for DNS operations"
 atomic_tests:
   - name: "KTLYST - VPS infrastructure setup for DNS operations Simulation"
-    auto_generated_guid: e89ad181-29b9-48c7-9047-7f43d9f2a90b
+    auto_generated_guid: 9ca17270-b6b6-441e-ab64-7f689a46620c
     description: |
       Simulates VPS infrastructure setup for DNS operations technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.
