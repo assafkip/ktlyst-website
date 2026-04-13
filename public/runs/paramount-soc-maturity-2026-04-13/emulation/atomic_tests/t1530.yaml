@@ -3,7 +3,7 @@ attack_technique: T1530
 display_name: "Data from Cloud Storage"
 atomic_tests:
   - name: "KTLYST - Data from Cloud Storage Simulation"
-    auto_generated_guid: 95a638ea-f753-483d-b88d-c2743619dc17
+    auto_generated_guid: adeb921b-5c8b-41f0-b20f-deb8a829cbb6
     description: |
       Simulates Data from Cloud Storage technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

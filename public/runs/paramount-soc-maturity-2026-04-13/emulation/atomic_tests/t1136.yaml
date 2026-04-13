@@ -3,7 +3,7 @@ attack_technique: T1136
 display_name: "Create Account"
 atomic_tests:
   - name: "KTLYST - Create Account Simulation"
-    auto_generated_guid: 72d9f026-0217-40b9-a79a-b5540cc6cf8e
+    auto_generated_guid: c8d4475a-7f01-4828-93c2-57cd470e5205
     description: |
       Simulates Create Account technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

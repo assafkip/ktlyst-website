@@ -3,7 +3,7 @@ attack_technique: T1204
 display_name: "User Execution"
 atomic_tests:
   - name: "KTLYST - User Execution Simulation"
-    auto_generated_guid: d22c9399-e611-4690-8d6c-0b1ec63c5a80
+    auto_generated_guid: a169eca6-87aa-46fe-87e2-7dc951ded392
     description: |
       Simulates User Execution technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

@@ -64,7 +64,7 @@ body {
 
 /* ── Main content ── */
 main {
-  flex: 1; max-width: 860px; padding: 32px 40px 120px;
+  flex: 1; max-width: 860px; padding: 32px 40px 48px;
 }
 
 /* ── Header bar ── */
@@ -267,6 +267,22 @@ details[open] > .context-summary h2::after {
 }
 .act-link:hover { color: #a5b4fc; text-decoration: underline; }
 
+/* ── Also grid (supporting packages) ── */
+.also-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px; margin-top: 12px;
+}
+.also-card {
+  display: block; padding: 12px 14px;
+  background: #0f1322; border: 1px solid #1a1f2e;
+  border-radius: 8px; text-decoration: none; color: inherit;
+  transition: border-color 0.15s;
+}
+.also-card:hover { border-color: #6366f1; }
+.also-title { font-size: 13px; font-weight: 600; color: #d0d5e0; }
+.also-desc { font-size: 11px; color: #8b9bb4; margin-top: 2px; }
+.also-count { font-size: 11px; color: #6366f1; font-weight: 600; margin-top: 4px; }
+
 /* ── Action plan ── */
 .ap-phase { margin-bottom: 16px; }
 .ap-phase-header {
@@ -400,7 +416,7 @@ details[open] > .context-summary h2::after {
         <h1 class="hero-title">Paramount Global</h1><div class="hero-advisory"><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a" target="_blank" rel="noopener">Credential Phishing and SIM Swapping Targeting IT Help Desks (CISA AA23-320A)</a></div><p class="hero-sub">This advisory created gaps in your AWS (streaming), Azure (corporate), Splunk, Proofpoint, CrowdStrike Falcon, Carbon Black. Here's what closes them.</p>
         <h2>What Goes Into Your Stack</h2>
         <p class="section-hint">Each card maps to a tool you run. Click to open the files.</p>
-        <div class="act-cards"><div class="act-card act-primary"><span class="act-num">1</span><div class="act-body"><div class="act-tool">AWS (streaming), Azure (corporate)</div><div class="act-desc">needs these hunt queries</div><div class="act-outcome">6 files, ready to import</div><a class="act-link" href="cloud/index.html">Open Cloud package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">2</span><div class="act-body"><div class="act-tool">Splunk</div><div class="act-desc">has 0 rules for this threat</div><div class="act-outcome">10 files, ready to import</div><a class="act-link" href="detection/index.html">Open Detection package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">3</span><div class="act-body"><div class="act-tool">Proofpoint</div><div class="act-desc">needs these domains blocked</div><div class="act-outcome">2 files, ready to import</div><a class="act-link" href="email/index.html">Open Email package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">4</span><div class="act-body"><div class="act-tool">CrowdStrike Falcon, Carbon Black</div><div class="act-desc">needs these IOCs loaded</div><div class="act-outcome">3 files, ready to import</div><a class="act-link" href="endpoint/index.html">Open Endpoint package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">5</span><div class="act-body"><div class="act-tool">Microsoft Entra ID</div><div class="act-desc">has no policies for this attack pattern</div><div class="act-outcome">4 files, ready to import</div><a class="act-link" href="identity/index.html">Open Identity package &rarr;</a></div></div><div class="act-card"><span class="act-num">6</span><div class="act-body"><div class="act-desc">Compliance: auditors will ask for this evidence</div><div class="act-outcome">3 files</div><a class="act-link" href="compliance/index.html">Open folder &rarr;</a></div></div><div class="act-card"><span class="act-num">7</span><div class="act-body"><div class="act-desc">Emulation: needs tests to validate your coverage</div><div class="act-outcome">46 files</div><a class="act-link" href="emulation/index.html">Open folder &rarr;</a></div></div><div class="act-card"><span class="act-num">8</span><div class="act-body"><div class="act-desc">Iocs: raw indicators for your threat intel platform</div><div class="act-outcome">4 files</div><a class="act-link" href="iocs/index.html">Open folder &rarr;</a></div></div><div class="act-card"><span class="act-num">9</span><div class="act-body"><div class="act-desc">Soc: analysts need playbooks for when detections fire</div><div class="act-outcome">42 files</div><a class="act-link" href="soc/index.html">Open folder &rarr;</a></div></div></div>
+        <div class="act-cards"><div class="act-card act-primary"><span class="act-num">1</span><div class="act-body"><div class="act-tool">AWS (streaming), Azure (corporate)</div><div class="act-desc">needs these hunt queries</div><div class="act-outcome">6 files, ready to import</div><a class="act-link" href="cloud/index.html">Open Cloud package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">2</span><div class="act-body"><div class="act-tool">Splunk</div><div class="act-desc">has 0 rules for this threat</div><div class="act-outcome">10 files, ready to import</div><a class="act-link" href="detection/index.html">Open Detection package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">3</span><div class="act-body"><div class="act-tool">Proofpoint</div><div class="act-desc">needs these domains blocked</div><div class="act-outcome">2 files, ready to import</div><a class="act-link" href="email/index.html">Open Email package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">4</span><div class="act-body"><div class="act-tool">CrowdStrike Falcon, Carbon Black</div><div class="act-desc">needs these IOCs loaded</div><div class="act-outcome">3 files, ready to import</div><a class="act-link" href="endpoint/index.html">Open Endpoint package &rarr;</a></div></div><div class="act-card act-primary"><span class="act-num">5</span><div class="act-body"><div class="act-tool">Microsoft Entra ID</div><div class="act-desc">has no policies for this attack pattern</div><div class="act-outcome">4 files, ready to import</div><a class="act-link" href="identity/index.html">Open Identity package &rarr;</a></div></div></div><div class="also-grid"><a class="also-card" href="compliance/index.html"><div class="also-title">Compliance</div><div class="also-desc">auditors will ask for this evidence</div><div class="also-count">3 files</div></a><a class="also-card" href="emulation/index.html"><div class="also-title">Emulation</div><div class="also-desc">needs tests to validate your coverage</div><div class="also-count">46 files</div></a><a class="also-card" href="iocs/index.html"><div class="also-title">Iocs</div><div class="also-desc">raw indicators for your threat intel platform</div><div class="also-count">4 files</div></a><a class="also-card" href="soc/index.html"><div class="also-title">Soc</div><div class="also-desc">analysts need playbooks for when detections fire</div><div class="also-count">42 files</div></a></div>
       </div>
 
       <div class="sb-section" id="teams">

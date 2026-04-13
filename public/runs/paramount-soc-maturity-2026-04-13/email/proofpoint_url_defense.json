@@ -3,7 +3,7 @@
   "name": "KTLYST - Paramount Global - Phishing Domains (2026-04-13)",
   "description": "Phishing infrastructure identified by KTLYST for Paramount Global. Block inbound mail referencing these domains and rewrite any outbound links through URL Defense.",
   "generatedBy": "KTLYST",
-  "generatedAt": "2026-04-13T21:29:20.290749+00:00",
+  "generatedAt": "2026-04-13T21:33:20.709620+00:00",
   "organization": "Paramount Global",
   "action": "block",
   "entries": [

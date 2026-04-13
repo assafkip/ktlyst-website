@@ -3,7 +3,7 @@ attack_technique: T1578.002
 display_name: "Create Cloud Instance"
 atomic_tests:
   - name: "KTLYST - Create Cloud Instance Simulation"
-    auto_generated_guid: 27ed775a-b552-4116-85e3-0094a21e4340
+    auto_generated_guid: 8f588b20-656c-4d08-bccd-58965b01a322
     description: |
       Simulates Create Cloud Instance technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.
