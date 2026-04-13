@@ -1,0 +1,34 @@
+---
+attack_technique: T1041
+display_name: "Exfiltration Over C2 Channel"
+atomic_tests:
+  - name: "KTLYST - Encrypted Credential Exfiltration Simulation"
+    auto_generated_guid: d4e5f6a7-8b9c-0d1e-2f3a-4b5c6d7e8f04
+    description: |
+      Simulates the AES-256-CBC + RSA-4096 encrypted credential exfiltration
+      used by Trivy/TeamPCP. The malware bundled stolen credentials into
+      tpcp.tar.gz and exfiltrated via Cloudflare Tunnel or fallback repo.
+    supported_platforms:
+      - linux
+      - macos
+    executor:
+      name: bash
+      command: |
+        echo "=== Encrypted Exfiltration Simulation ==="
+
+        # Create a fake credential bundle (benign test data)
+        echo "test_credential_data" > /tmp/test_cred.txt
+        tar czf /tmp/test_tpcp.tar.gz -C /tmp test_cred.txt
+
+        # Simulate AES encryption (using openssl)
+        openssl enc -aes-256-cbc -salt -in /tmp/test_tpcp.tar.gz \
+          -out /tmp/test_tpcp.enc -pass pass:testkey123 2>/dev/null || true
+
+        echo "Created encrypted bundle at /tmp/test_tpcp.enc"
+        echo "In the real attack, this would be sent to:"
+        echo "  - plug-tab-protective-relay.trycloudflare.com (primary)"
+        echo "  - tpcp-docs GitHub repo (fallback)"
+        echo ""
+        echo "Test complete - check if DLP/network detected the encrypted file creation"
+      cleanup_command: |
+        rm -f /tmp/test_cred.txt /tmp/test_tpcp.tar.gz /tmp/test_tpcp.enc

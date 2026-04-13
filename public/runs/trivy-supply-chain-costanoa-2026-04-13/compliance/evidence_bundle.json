@@ -1,0 +1,109 @@
+{
+  "evidence_bundle": {
+    "id": "EB-2026-0413-TRIVY-001",
+    "title": "CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign) - Evidence Bundle",
+    "generated_at": "2026-04-13T00:00:00Z",
+    "advisory_source": {
+      "title": "Trivy Compromised: TeamPCP Supply Chain Attack",
+      "url": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack",
+      "published": "2026-03-23",
+      "author": "Wiz Research"
+    },
+    "artifacts": [
+      {
+        "folder": "detection",
+        "team": "SOC / Detection",
+        "files": [
+          {"filename": "trivy-supply-chain.spl", "type": "Splunk SPL", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "trivy-supply-chain.kql", "type": "Sentinel KQL", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "trivy-sigma.yml", "type": "SIGMA Rule", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "identity",
+        "team": "IAM / Identity",
+        "files": [
+          {"filename": "github-token-rotation.md", "type": "Playbook", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "service-account-audit.kql", "type": "Sentinel KQL", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "oauth-app-review.md", "type": "Playbook", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "session-invalidation.ps1", "type": "PowerShell Script", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "email",
+        "team": "Email Security",
+        "files": [
+          {"filename": "developer-advisory-template.md", "type": "Email Template", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "phishing-indicators.txt", "type": "Indicator List", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "endpoint",
+        "team": "Endpoint / IT",
+        "files": [
+          {"filename": "crowdstrike-ioc-import.json", "type": "CrowdStrike IOC Import", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "mde-ioc-import.csv", "type": "Microsoft Defender CSV", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "persistence-hunt.ps1", "type": "PowerShell Script", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "trivy-version-audit.sh", "type": "Bash Script", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "visibility-assessment.md", "type": "Assessment", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "cloud",
+        "team": "Cloud / DevSecOps",
+        "files": [
+          {"filename": "github-actions-audit.md", "type": "Playbook", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "pin-actions-to-sha.md", "type": "Remediation Guide", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "container-image-audit.sh", "type": "Bash Script", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "aws-secrets-audit.py", "type": "Python Script", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "npm-supply-chain-check.md", "type": "Playbook", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "emulation",
+        "team": "Red Team / Purple Team",
+        "files": [
+          {"filename": "attack-navigator-layer.json", "type": "ATT&CK Navigator", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "atomic-red-team-tests.yml", "type": "Atomic Red Team YAML", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "detection-gap-matrix.md", "type": "Gap Analysis", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "executive",
+        "team": "Executive / CISO",
+        "files": [
+          {"filename": "board_brief.md", "type": "Board Brief", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "team_package_index.md", "type": "Package Index", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "compliance",
+        "team": "Compliance / GRC",
+        "files": [
+          {"filename": "nist_csf_mapping.md", "type": "Framework Mapping", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "supply_chain_risk_update.md", "type": "Risk Register Update", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "credential_exposure_assessment.md", "type": "Exposure Assessment", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "evidence_bundle.json", "type": "Evidence Bundle Index", "sha256": "self", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      },
+      {
+        "folder": "iocs",
+        "team": "Threat Intel / IOCs",
+        "files": [
+          {"filename": "trivy_stix_bundle.json", "type": "STIX 2.1 Bundle", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "ioc_watchlist.csv", "type": "IOC Watchlist CSV", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"},
+          {"filename": "compromised_action_tags.json", "type": "Compromised Commit Hashes", "sha256": "pending", "generated_at": "2026-04-13T00:00:00Z"}
+        ]
+      }
+    ],
+    "total_folders": 9,
+    "total_files": 30,
+    "compliance_frameworks": ["NIST CSF v2.0", "SOC 2", "GDPR", "CCPA", "PCI DSS"],
+    "chain_of_custody": {
+      "generated_by": "KTLYST Security Learning Control Plane",
+      "advisory_ingested_at": "2026-04-13T00:00:00Z",
+      "artifacts_generated_at": "2026-04-13T00:00:00Z",
+      "review_status": "pending"
+    }
+  }
+}

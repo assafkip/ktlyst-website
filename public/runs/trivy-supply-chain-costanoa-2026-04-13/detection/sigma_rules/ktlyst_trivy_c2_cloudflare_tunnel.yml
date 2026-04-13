@@ -1,0 +1,25 @@
+title: 'KTLYST - Trivy C2 Domain - Cloudflare Tunnel'
+id: e3c4d5f6-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: |
+    Detects DNS queries to Cloudflare Tunnel used as C2 channel by Trivy/TeamPCP
+    malware for encrypted credential exfiltration.
+    Source: Wiz advisory, March 2026
+level: high
+author: KTLYST
+date: 2026/04/13
+references:
+    - 'https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack'
+tags:
+    - attack.command_and_control
+    - attack.exfiltration
+    - attack.t1041
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'plug-tab-protective-relay.trycloudflare.com'
+    condition: selection
+falsepositives:
+    - Legitimate Cloudflare Tunnel usage. Correlate with process context.

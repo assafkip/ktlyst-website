@@ -1,0 +1,23 @@
+---
+attack_technique: T1098
+display_name: "Account Manipulation"
+atomic_tests:
+  - name: "KTLYST - Service Account Abuse for Package Publishing"
+    auto_generated_guid: f6a7b8c9-0d1e-2f3a-4b5c-6d7e8f9a0b06
+    description: |
+      Simulates the abuse of a compromised service account (like aqua-bot)
+      to publish malicious releases. The attackers used the compromised
+      account to push releases to GitHub, Docker Hub, GHCR, and ECR.
+    supported_platforms:
+      - linux
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. In a test GitHub org, create a service account (bot account)
+        2. Grant it release and package publish permissions
+        3. Use the account to create a release with a test binary
+        4. Verify: Does your GitHub audit log capture the publish?
+        5. Verify: Is the service account's activity monitored in SIEM?
+        6. Document: Which service accounts have publish permissions?
+      cleanup_command: ""

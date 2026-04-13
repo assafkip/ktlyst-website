@@ -1,0 +1,26 @@
+---
+attack_technique: T1195.002
+display_name: "Supply Chain Compromise: Software Supply Chain"
+atomic_tests:
+  - name: "KTLYST - Malicious Binary Substitution in CI Pipeline"
+    auto_generated_guid: a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c01
+    description: |
+      Simulates substitution of a CI/CD tool binary with a malicious version,
+      as observed in the Trivy/TeamPCP supply chain attack. The attacker replaced
+      the Trivy v0.69.4 binary with a credential-stealing variant.
+    supported_platforms:
+      - linux
+      - macos
+    executor:
+      name: bash
+      command: |
+        # Create a fake "tool binary" that simulates malicious behavior
+        echo '#!/bin/bash' > /tmp/test_binary
+        echo 'echo "Simulated malicious binary execution"' >> /tmp/test_binary
+        echo 'echo "Collecting environment variables..."' >> /tmp/test_binary
+        echo 'env > /tmp/test_env_dump.txt' >> /tmp/test_binary
+        chmod +x /tmp/test_binary
+        /tmp/test_binary
+        echo "Test complete - check if EDR detected the binary and env dump"
+      cleanup_command: |
+        rm -f /tmp/test_binary /tmp/test_env_dump.txt

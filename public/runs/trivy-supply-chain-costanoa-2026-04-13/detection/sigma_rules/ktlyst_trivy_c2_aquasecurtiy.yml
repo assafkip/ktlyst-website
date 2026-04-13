@@ -1,0 +1,26 @@
+title: 'KTLYST - Trivy C2 Domain - scan.aquasecurtiy.org'
+id: c1a2b3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: |
+    Detects DNS queries to typosquatted Aqua Security domain used as primary C2
+    in Trivy/TeamPCP supply chain attack. Malicious Trivy v0.69.4 exfiltrates
+    credentials to this domain.
+    Source: Wiz advisory, March 2026
+level: critical
+author: KTLYST
+date: 2026/04/13
+references:
+    - 'https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack'
+tags:
+    - attack.command_and_control
+    - attack.t1041
+    - attack.t1071.001
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'aquasecurtiy.org'
+    condition: selection
+falsepositives:
+    - None expected. This is a typosquatted domain.

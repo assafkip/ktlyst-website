@@ -1,0 +1,115 @@
+attack_technique: T1547.014
+display_name: "Boot or Logon Autostart Execution: Active Setup"
+atomic_tests:
+  - name: "systemd User Service Persistence (sysmon.py)"
+    auto_generated_guid: "trivy-teampcp-t1547014-001"
+    description: |
+      Simulates the TeamPCP persistence mechanism that writes a Python script
+      to ~/.config/systemd/user/sysmon.py as a user-level systemd service.
+
+      In the real attack:
+      - File written to ~/.config/systemd/user/sysmon.py
+      - Polls tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io every 5 minutes
+      - Downloads and executes secondary payloads
+      - Does NOT require root privileges
+
+      Reference: Trivy/TeamPCP Supply Chain Attack (March 2026)
+
+      This test creates a BENIGN version that logs activity instead of polling C2.
+    supported_platforms:
+      - linux
+    input_arguments:
+      persistence_dir:
+        description: "Directory for the persistence file"
+        type: path
+        default: "~/.config/systemd/user"
+      persistence_file:
+        description: "Name of the persistence script"
+        type: string
+        default: "sysmon_test.py"
+      service_name:
+        description: "Name of the systemd user service"
+        type: string
+        default: "sysmon-test"
+    executor:
+      command: |
+        # Create persistence directory (like the real attack)
+        mkdir -p #{persistence_dir}
+
+        # Write benign persistence script (real attack polls C2)
+        cat > #{persistence_dir}/#{persistence_file} << 'PERSIST_SCRIPT'
+        #!/usr/bin/env python3
+        """
+        BENIGN TEST - Simulates TeamPCP sysmon.py persistence.
+        Real malware polls tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io every 5 min.
+        This test version only writes to a local log file.
+        """
+        import time
+        import os
+        import datetime
+
+        LOG_FILE = "/tmp/teampcp_persistence_test.log"
+        POLL_INTERVAL = 10  # seconds (real attack: 300 seconds / 5 minutes)
+        MAX_ITERATIONS = 3  # stop after 3 polls (real attack: infinite)
+
+        def main():
+            with open(LOG_FILE, "a") as f:
+                f.write(f"[TEST] sysmon.py persistence started at {datetime.datetime.utcnow()}\n")
+                f.write(f"[TEST] PID: {os.getpid()}\n")
+                f.write(f"[TEST] User: {os.environ.get('USER', 'unknown')}\n")
+                f.write(f"[TEST] Real C2 would poll: tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io\n\n")
+
+                for i in range(MAX_ITERATIONS):
+                    f.write(f"[TEST] Poll {i+1}/{MAX_ITERATIONS} at {datetime.datetime.utcnow()}\n")
+                    f.flush()
+                    time.sleep(POLL_INTERVAL)
+
+                f.write(f"[TEST] Test complete. {MAX_ITERATIONS} polling cycles simulated.\n")
+
+        if __name__ == "__main__":
+            main()
+        PERSIST_SCRIPT
+
+        chmod +x #{persistence_dir}/#{persistence_file}
+
+        # Create systemd user service unit (like the real attack)
+        cat > #{persistence_dir}/#{service_name}.service << SERVICE_UNIT
+        [Unit]
+        Description=System Monitor Test Service
+        After=default.target
+
+        [Service]
+        Type=simple
+        ExecStart=/usr/bin/python3 #{persistence_dir}/#{persistence_file}
+        Restart=on-failure
+        RestartSec=300
+
+        [Install]
+        WantedBy=default.target
+        SERVICE_UNIT
+
+        # Enable and start (user-level, no root needed)
+        systemctl --user daemon-reload 2>/dev/null || true
+        systemctl --user enable #{service_name}.service 2>/dev/null || true
+        systemctl --user start #{service_name}.service 2>/dev/null || true
+
+        echo ""
+        echo "=== Persistence Installed ==="
+        echo "File: #{persistence_dir}/#{persistence_file}"
+        echo "Service: #{service_name}.service"
+        echo ""
+        echo "=== Detection Validation ==="
+        echo "Check if your security stack detected:"
+        echo "  1. New file in ~/.config/systemd/user/ directory"
+        echo "  2. systemctl --user enable/start commands"
+        echo "  3. New user-level systemd service activation"
+        echo "  4. Python process spawned by systemd with network intent"
+      cleanup_command: |
+        systemctl --user stop #{service_name}.service 2>/dev/null || true
+        systemctl --user disable #{service_name}.service 2>/dev/null || true
+        rm -f #{persistence_dir}/#{persistence_file}
+        rm -f #{persistence_dir}/#{service_name}.service
+        systemctl --user daemon-reload 2>/dev/null || true
+        rm -f /tmp/teampcp_persistence_test.log
+      name: sh
+      elevation_required: false

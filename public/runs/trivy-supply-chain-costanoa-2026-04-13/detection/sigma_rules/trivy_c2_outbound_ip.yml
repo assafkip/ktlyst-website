@@ -1,0 +1,26 @@
+title: TeamPCP Trivy Supply Chain - Outbound C2 IP
+id: b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e
+status: experimental
+description: |
+  Detects outbound network connections to 45.148.10.212, the IP address
+  associated with TeamPCP C2 infrastructure (TECHOFF SRV LIMITED, Amsterdam).
+  Used in the Trivy v0.69.4 supply chain compromise for credential exfiltration.
+references:
+  - https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack
+author: KTLYST
+date: 2026-04-13
+tags:
+  - attack.exfiltration
+  - attack.t1041
+  - attack.command_and_control
+  - cve.trivy.teampcp
+logsource:
+  category: firewall
+detection:
+  selection:
+    dst_ip:
+      - '45.148.10.212'
+  condition: selection
+falsepositives:
+  - None expected. This IP is associated with TECHOFF SRV LIMITED hosting and TeamPCP operations.
+level: critical

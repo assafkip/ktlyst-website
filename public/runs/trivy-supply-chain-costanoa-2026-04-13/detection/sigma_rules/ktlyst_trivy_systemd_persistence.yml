@@ -1,0 +1,25 @@
+title: 'KTLYST - Trivy Systemd User Service Persistence'
+id: f4d5e6a7-8b9c-0d1e-2f3a-4b5c6d7e8f9a
+status: experimental
+description: |
+    Detects creation of sysmon.py in systemd user service directory. This is the
+    persistence mechanism used by Trivy/TeamPCP malware to maintain C2 beacon
+    polling every 5 minutes.
+    Source: Wiz advisory, March 2026
+level: critical
+author: KTLYST
+date: 2026/04/13
+references:
+    - 'https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack'
+tags:
+    - attack.persistence
+    - attack.t1547.014
+logsource:
+    category: file_event
+    product: linux
+detection:
+    selection:
+        TargetFilename|contains: '.config/systemd/user/sysmon.py'
+    condition: selection
+falsepositives:
+    - None expected. Legitimate sysmon does not use .py extension or systemd user services.

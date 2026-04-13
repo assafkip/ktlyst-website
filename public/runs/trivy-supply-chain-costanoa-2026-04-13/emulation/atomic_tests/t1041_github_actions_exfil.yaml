@@ -1,0 +1,84 @@
+attack_technique: T1041
+display_name: "Exfiltration Over C2 Channel"
+atomic_tests:
+  - name: "GitHub Actions Secret Exfiltration Simulation"
+    auto_generated_guid: "trivy-teampcp-t1041-001"
+    description: |
+      Simulates the TeamPCP exfiltration technique used in compromised GitHub Actions.
+
+      In the real attack, the malicious action:
+      1. Collected environment variables (GITHUB_TOKEN, secrets)
+      2. Scraped /proc/<pid>/mem for in-memory credentials
+      3. Swept filesystem for SSH keys, cloud creds, tokens
+      4. Encrypted bundle with AES-256-CBC + RSA-4096 hybrid encryption
+      5. Exfiltrated to scan.aquasecurtiy[.]org or Cloudflare Tunnel
+      6. Fallback: created tpcp-docs GitHub repos to store stolen data
+
+      This test collects environment metadata (no real secrets) and stages
+      it locally to test detection of the exfiltration preparation behavior.
+
+      Reference: Trivy/TeamPCP Supply Chain Attack (March 2026)
+    supported_platforms:
+      - linux
+      - macos
+    input_arguments:
+      staging_dir:
+        description: "Directory to stage collected data"
+        type: path
+        default: "/tmp/teampcp_exfil_test"
+      bundle_file:
+        description: "Name of the encrypted bundle (simulated)"
+        type: string
+        default: "tpcp_test.tar.gz"
+    executor:
+      command: |
+        mkdir -p #{staging_dir}
+
+        echo "[TEST] GitHub Actions exfiltration simulation" > #{staging_dir}/manifest.txt
+        echo "[TEST] Started at $(date -u)" >> #{staging_dir}/manifest.txt
+        echo "" >> #{staging_dir}/manifest.txt
+
+        # Stage 1: Collect environment variable names (NOT values)
+        echo "[TEST] === Environment Variable Names ===" >> #{staging_dir}/manifest.txt
+        env | cut -d= -f1 | sort >> #{staging_dir}/manifest.txt
+        echo "" >> #{staging_dir}/manifest.txt
+
+        # Stage 2: Enumerate credential file locations (NOT contents)
+        echo "[TEST] === Credential File Locations ===" >> #{staging_dir}/manifest.txt
+        for path in ~/.ssh ~/.aws ~/.config/gcloud ~/.kube ~/.npmrc ~/.docker; do
+          if [ -e "$path" ]; then
+            echo "[TEST] EXISTS: $path" >> #{staging_dir}/manifest.txt
+          else
+            echo "[TEST] NOT FOUND: $path" >> #{staging_dir}/manifest.txt
+          fi
+        done
+        echo "" >> #{staging_dir}/manifest.txt
+
+        # Stage 3: Simulate encryption (create a tar.gz, no real encryption)
+        echo "[TEST] Staging bundle (real attack uses AES-256-CBC + RSA-4096)..." >> #{staging_dir}/manifest.txt
+        tar czf #{staging_dir}/#{bundle_file} -C #{staging_dir} manifest.txt 2>/dev/null
+
+        # Stage 4: Simulate exfiltration attempt (curl to localhost, not real C2)
+        echo "[TEST] Simulating exfiltration (real target: scan.aquasecurtiy.org)..."
+        echo "[TEST] In real attack, curl sends to:" >> #{staging_dir}/manifest.txt
+        echo "[TEST]   Primary: https://scan.aquasecurtiy.org/upload" >> #{staging_dir}/manifest.txt
+        echo "[TEST]   Tunnel: https://plug-tab-protective-relay.trycloudflare.com" >> #{staging_dir}/manifest.txt
+        echo "[TEST]   Fallback: create tpcp-docs repo via GitHub API" >> #{staging_dir}/manifest.txt
+
+        # Do NOT actually make network requests
+        echo "[TEST] (No actual network exfiltration performed in this test)"
+
+        echo ""
+        echo "=== Detection Validation ==="
+        echo "Check if your security stack detected:"
+        echo "  1. Process enumerating credential file paths (~/.ssh, ~/.aws, etc.)"
+        echo "  2. tar/gz compression of collected data in /tmp"
+        echo "  3. File named tpcp*.tar.gz created (IOC filename pattern)"
+        echo "  4. In CI/CD: unusual file access patterns from action runner"
+        echo ""
+        echo "Staged data: #{staging_dir}/"
+        ls -la #{staging_dir}/
+      cleanup_command: |
+        rm -rf #{staging_dir}
+      name: sh
+      elevation_required: false

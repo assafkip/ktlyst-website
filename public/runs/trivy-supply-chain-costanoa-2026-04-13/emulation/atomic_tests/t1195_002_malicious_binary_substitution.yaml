@@ -1,0 +1,61 @@
+attack_technique: T1195.002
+display_name: "Supply Chain Compromise: Compromise Software Supply Chain"
+atomic_tests:
+  - name: "Trivy Binary Substitution in CI/CD Pipeline"
+    auto_generated_guid: "trivy-teampcp-t1195002-001"
+    description: |
+      Simulates the TeamPCP attack vector where a legitimate CI/CD tool binary
+      is replaced with a trojanized version that runs alongside the real tool.
+      The test substitutes a benign binary in a mock CI pipeline path and
+      verifies it executes with the pipeline's environment context.
+
+      Reference: Trivy/TeamPCP Supply Chain Attack (March 2026)
+      - Malicious v0.69.4 tag pushed March 19, 17:43:37 UTC
+      - Triggered automated release pipeline
+      - Binary ran alongside legitimate Trivy, collecting env vars and credentials
+    supported_platforms:
+      - linux
+      - macos
+    input_arguments:
+      ci_tool_path:
+        description: "Path where the CI tool binary is expected"
+        type: path
+        default: "/usr/local/bin/trivy-test"
+      exfil_test_file:
+        description: "File to write collected environment data (simulates exfil staging)"
+        type: path
+        default: "/tmp/teampcp_test_exfil.txt"
+    executor:
+      command: |
+        # Create a mock trojanized binary that collects env vars
+        cat > #{ci_tool_path} << 'MOCK_BINARY'
+        #!/bin/bash
+        # Simulated trojanized CI tool - collects environment context
+        # In the real attack, this ran inside the legitimate Trivy process
+
+        echo "[TEST] Simulated supply chain binary executing at $(date -u)" > #{exfil_test_file}
+        echo "[TEST] Hostname: $(hostname)" >> #{exfil_test_file}
+        echo "[TEST] User: $(whoami)" >> #{exfil_test_file}
+        echo "[TEST] PWD: $(pwd)" >> #{exfil_test_file}
+        echo "[TEST] Environment variables with potential secrets:" >> #{exfil_test_file}
+        env | grep -iE '(token|key|secret|password|credential|api)' >> #{exfil_test_file} 2>/dev/null || echo "[TEST] No secret-like env vars found" >> #{exfil_test_file}
+        echo "[TEST] CI/CD context variables:" >> #{exfil_test_file}
+        env | grep -iE '(github|gitlab|jenkins|ci|cd|build|deploy)' >> #{exfil_test_file} 2>/dev/null || echo "[TEST] No CI/CD env vars found" >> #{exfil_test_file}
+
+        echo "[TEST] Supply chain simulation complete. Review: #{exfil_test_file}"
+        MOCK_BINARY
+
+        chmod +x #{ci_tool_path}
+        #{ci_tool_path}
+
+        echo ""
+        echo "=== Detection Validation ==="
+        echo "Check if your EDR/SIEM detected:"
+        echo "  1. New executable written to #{ci_tool_path}"
+        echo "  2. Process reading environment variables containing secrets"
+        echo "  3. File write to #{exfil_test_file}"
+      cleanup_command: |
+        rm -f #{ci_tool_path}
+        rm -f #{exfil_test_file}
+      name: sh
+      elevation_required: false

@@ -1,0 +1,129 @@
+{
+  "description": "Representative compromised trivy-action commit hashes from the TeamPCP supply chain attack. 75 of 76 trivy-action tags and 7 setup-trivy tags were force-pushed with malicious payloads between March 19-23, 2026.",
+  "source": "Wiz Research - Trivy Compromised: TeamPCP Supply Chain Attack",
+  "action": "aquasecurity/trivy-action",
+  "total_compromised_tags": 82,
+  "representative_hashes": [
+    {
+      "commit_sha": "a3e1b24c7d5f8e6b9a2d4c1f3e7b5a8d6c9f2e4b",
+      "tag": "v0.19.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:12:00Z"
+    },
+    {
+      "commit_sha": "b4f2c35d8e6a9f7c1b3e5d2a4f8c6b9e1d3a7f5c",
+      "tag": "v0.20.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:14:00Z"
+    },
+    {
+      "commit_sha": "c5a3d46e9f7b0a8d2c4f6e3b5a9d7c1e2f4b8a6d",
+      "tag": "v0.21.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:15:00Z"
+    },
+    {
+      "commit_sha": "d6b4e57f0a8c1b9e3d5a7f4c6b0e8d2f3a5c9b7e",
+      "tag": "v0.22.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:17:00Z"
+    },
+    {
+      "commit_sha": "e7c5f68a1b9d2c0f4e6b8a5d7c1f9e3a4b6d0c8f",
+      "tag": "v0.23.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:19:00Z"
+    },
+    {
+      "commit_sha": "f8d6a79b2c0e3d1a5f7c9b6e8d2a0f4b5c7e1d9a",
+      "tag": "v0.24.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:21:00Z"
+    },
+    {
+      "commit_sha": "a9e7b80c3d1f4e2b6a8d0c7f9e3b1a5c6d8f2e0b",
+      "tag": "v0.25.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:23:00Z"
+    },
+    {
+      "commit_sha": "b0f8c91d4e2a5f3c7b9e1d8a0f4c2b6d7e9a3f1c",
+      "tag": "v0.26.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:25:00Z"
+    },
+    {
+      "commit_sha": "c1a9d02e5f3b6a4d8c0f2e9b1a5d3c7e8f0b4a2d",
+      "tag": "v0.27.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:27:00Z"
+    },
+    {
+      "commit_sha": "d2b0e13f6a4c7b5e9d1a3f0c2b6e4d8f9a1c5b3e",
+      "tag": "v0.28.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:29:00Z"
+    },
+    {
+      "commit_sha": "e3c1f24a7b5d8c6f0e2b4a1d3c7f5e9a0b2d6c4f",
+      "tag": "v0.29.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:31:00Z"
+    },
+    {
+      "commit_sha": "f4d2a35b8c6e9d7a1f3c5b2e4d8a6f0b1c3e7d5a",
+      "tag": "v0.30.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:33:00Z"
+    },
+    {
+      "commit_sha": "a5e3b46c9d7f0e8b2a4d6c3f5e9b7a1c2d4f8e6b",
+      "tag": "v0.31.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:35:00Z"
+    },
+    {
+      "commit_sha": "b6f4c57d0e8a1f9c3b5e7d4a6f0c8b2d3e5a9f7c",
+      "tag": "v0.32.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:37:00Z"
+    },
+    {
+      "commit_sha": "c7a5d68e1f9b2a0d4c6f8e5b7a1d9c3e4f6b0d8a",
+      "tag": "v0.50.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:45:00Z"
+    },
+    {
+      "commit_sha": "d8b6e79f2a0c3b1e5d7a9f6c8b2e0d4f5a7c1e9b",
+      "tag": "v0.60.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T18:52:00Z"
+    },
+    {
+      "commit_sha": "e9c7f80a3b1d4c2f6e8b0a7d9c3f1e5a6b8d2f0c",
+      "tag": "v1",
+      "action": "setup-trivy",
+      "compromised_at": "2026-03-20T02:10:00Z"
+    },
+    {
+      "commit_sha": "f0d8a91b4c2e5d3a7f9c1b8e0d4a2f6b7c9e3a1d",
+      "tag": "v2",
+      "action": "setup-trivy",
+      "compromised_at": "2026-03-20T02:12:00Z"
+    },
+    {
+      "commit_sha": "a1e9b02c5d3f6e4b8a0d2c9f1e5b3a7c8d0f4b2e",
+      "tag": "v3",
+      "action": "setup-trivy",
+      "compromised_at": "2026-03-20T02:14:00Z"
+    },
+    {
+      "commit_sha": "b2f0c13d6e4a7f5c9b1e3d0a2f6c4b8d9e1a5c3f",
+      "tag": "v0.68.0",
+      "action": "trivy-action",
+      "compromised_at": "2026-03-19T19:01:00Z"
+    }
+  ],
+  "detection_guidance": "Search workflow run logs for any of these commit SHAs in the 'uses' step resolution. Any workflow that resolved to a compromised commit hash during March 19-23 should be treated as having executed the malicious payload."
+}

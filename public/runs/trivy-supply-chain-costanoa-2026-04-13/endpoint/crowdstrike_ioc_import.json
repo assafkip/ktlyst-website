@@ -1,0 +1,94 @@
+{
+  "indicators": [
+    {
+      "type": "domain",
+      "value": "scan.aquasecurtiy.org",
+      "action": "detect",
+      "severity": "critical",
+      "description": "TeamPCP C2 - typosquatted Aqua Security domain used for credential exfiltration",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "c2"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    },
+    {
+      "type": "domain",
+      "value": "tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io",
+      "action": "detect",
+      "severity": "critical",
+      "description": "TeamPCP secondary C2 - ICP-hosted fallback for payload polling (every 5 min)",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "c2", "persistence"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    },
+    {
+      "type": "domain",
+      "value": "plug-tab-protective-relay.trycloudflare.com",
+      "action": "detect",
+      "severity": "high",
+      "description": "TeamPCP Cloudflare Tunnel C2 endpoint",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "c2", "cloudflare-tunnel"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    },
+    {
+      "type": "ipv4",
+      "value": "45.148.10.212",
+      "action": "detect",
+      "severity": "high",
+      "description": "TeamPCP infrastructure IP (TECHOFF SRV LIMITED, Amsterdam)",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "infrastructure"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    },
+    {
+      "type": "sha256",
+      "value": "887e1f5b5b50162a60bd03b66269e0ae545d0aef0583c1c5b00972152ad7e073",
+      "action": "prevent",
+      "severity": "critical",
+      "description": "Malicious Trivy v0.69.4 binary (FreeBSD-64bit)",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "malware"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    },
+    {
+      "type": "sha256",
+      "value": "f7084b0229dce605ccc5506b14acd4d954a496da4b6134a294844ca8d601970d",
+      "action": "prevent",
+      "severity": "critical",
+      "description": "Malicious Trivy v0.69.4 binary (Linux-32bit)",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "malware"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    },
+    {
+      "type": "sha256",
+      "value": "822dd269ec10459572dfaaefe163dae693c344249a0161953f0d5cdd110bd2a0",
+      "action": "prevent",
+      "severity": "critical",
+      "description": "Malicious Trivy v0.69.4 binary (Linux-64bit)",
+      "source": "Wiz Research - Trivy Supply Chain Compromise (March 2026)",
+      "tags": ["supply-chain", "trivy", "teampcp", "malware"],
+      "platforms": ["windows", "mac", "linux"],
+      "applied_globally": true,
+      "expiration": "2026-09-13T00:00:00Z"
+    }
+  ],
+  "metadata": {
+    "created": "2026-04-13T00:00:00Z",
+    "source": "KTLYST Security Learning Control Plane",
+    "advisory": "Trivy/TeamPCP Supply Chain Compromise (March 19-23, 2026)",
+    "reference": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack"
+  }
+}

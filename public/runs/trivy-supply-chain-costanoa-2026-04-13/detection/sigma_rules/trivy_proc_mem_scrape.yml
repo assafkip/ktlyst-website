@@ -1,0 +1,38 @@
+title: TeamPCP Trivy Supply Chain - proc Memory Scraping
+id: e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8091
+status: experimental
+description: |
+  Detects access to /proc/<pid>/mem, used by the TeamPCP malware in the
+  Trivy supply chain attack (Stage 3) to scrape running process memory for
+  secrets, tokens, SSH keys, and cloud credentials. The malware reads process
+  memory directly, then encrypts findings with AES-256-CBC + RSA-4096 before
+  exfiltration.
+references:
+  - https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack
+author: KTLYST
+date: 2026-04-13
+tags:
+  - attack.collection
+  - attack.t1005
+  - attack.credential_access
+  - attack.t1555
+  - cve.trivy.teampcp
+logsource:
+  category: file_access
+  product: linux
+detection:
+  selection:
+    TargetFilename|re: '/proc/\d+/mem'
+  filter_debug:
+    Image|endswith:
+      - '/gdb'
+      - '/strace'
+      - '/valgrind'
+      - '/lldb'
+      - '/perf'
+  condition: selection and not filter_debug
+falsepositives:
+  - Debugging tools (gdb, strace, valgrind, lldb) are excluded by filter.
+  - Custom profiling tools that read /proc/pid/mem directly.
+  - Investigate any match in the context of Trivy usage and CI/CD activity.
+level: high

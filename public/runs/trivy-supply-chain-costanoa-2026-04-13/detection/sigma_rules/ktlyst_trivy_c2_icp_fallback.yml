@@ -1,0 +1,25 @@
+title: 'KTLYST - Trivy C2 Domain - ICP Fallback'
+id: d2b3c4e5-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: |
+    Detects DNS queries to ICP-hosted fallback C2 domain used by Trivy/TeamPCP
+    persistence mechanism (sysmon.py). Polls every 5 minutes for secondary payloads.
+    Source: Wiz advisory, March 2026
+level: critical
+author: KTLYST
+date: 2026/04/13
+references:
+    - 'https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack'
+tags:
+    - attack.command_and_control
+    - attack.persistence
+    - attack.t1547.014
+logsource:
+    category: dns
+    product: any
+detection:
+    selection:
+        dns.query.name|contains: 'tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io'
+    condition: selection
+falsepositives:
+    - None expected. This is attacker-controlled infrastructure on Internet Computer Protocol.

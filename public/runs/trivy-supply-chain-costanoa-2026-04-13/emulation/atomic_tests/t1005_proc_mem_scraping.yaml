@@ -1,0 +1,89 @@
+attack_technique: T1005
+display_name: "Data from Local System"
+atomic_tests:
+  - name: "Process Memory Scraping via /proc/pid/mem"
+    auto_generated_guid: "trivy-teampcp-t1005-001"
+    description: |
+      Simulates the TeamPCP GitHub Actions payload that scraped process memory
+      via /proc/<pid>/mem to extract credentials and secrets from running processes.
+
+      In the real attack, the compromised GitHub Action:
+      1. Enumerated running processes
+      2. Read /proc/<pid>/mem for each process
+      3. Searched memory for patterns matching tokens, keys, and credentials
+      4. Encrypted findings with AES-256-CBC + RSA-4096
+
+      Reference: Trivy/TeamPCP Supply Chain Attack (March 2026)
+
+      WARNING: This test reads process memory. Run only in isolated test environments.
+    supported_platforms:
+      - linux
+    input_arguments:
+      target_process:
+        description: "Process name to target for memory reading"
+        type: string
+        default: "bash"
+      output_file:
+        description: "File to write test results"
+        type: path
+        default: "/tmp/teampcp_procmem_test.txt"
+    dependency_executor_name: sh
+    dependencies:
+      - description: "Must be running on Linux with /proc filesystem"
+        prereq_command: "test -d /proc"
+        get_prereq_command: "echo 'This test requires Linux with /proc filesystem'"
+    executor:
+      command: |
+        echo "[TEST] /proc/pid/mem scraping simulation" > #{output_file}
+        echo "[TEST] Started at $(date -u)" >> #{output_file}
+        echo "" >> #{output_file}
+
+        # Find target process PIDs (like the real attack)
+        TARGET_PIDS=$(pgrep -x #{target_process} 2>/dev/null | head -3)
+
+        if [ -z "$TARGET_PIDS" ]; then
+          echo "[TEST] No #{target_process} processes found" >> #{output_file}
+          echo "No target processes found. Try a different target_process."
+          exit 0
+        fi
+
+        for pid in $TARGET_PIDS; do
+          echo "[TEST] Attempting to read /proc/$pid/mem ..." >> #{output_file}
+
+          # Check if we can read the maps (prerequisite for mem reading)
+          if [ -r "/proc/$pid/maps" ]; then
+            echo "[TEST] /proc/$pid/maps is readable" >> #{output_file}
+
+            # Read first heap region (simulates the attack's memory scraping)
+            HEAP_REGION=$(grep '\[heap\]' /proc/$pid/maps 2>/dev/null | head -1)
+            if [ -n "$HEAP_REGION" ]; then
+              echo "[TEST] Heap region found: $HEAP_REGION" >> #{output_file}
+
+              # Attempt to read (will likely fail without ptrace, which is the point)
+              if dd if=/proc/$pid/mem bs=1 count=256 skip=$((16#$(echo "$HEAP_REGION" | cut -d'-' -f1))) > /dev/null 2>&1; then
+                echo "[TEST] SUCCESS: /proc/$pid/mem is readable - DETECTION GAP" >> #{output_file}
+              else
+                echo "[TEST] BLOCKED: /proc/$pid/mem read denied (expected)" >> #{output_file}
+              fi
+            else
+              echo "[TEST] No heap region found in maps" >> #{output_file}
+            fi
+          else
+            echo "[TEST] /proc/$pid/maps not readable (good - access restricted)" >> #{output_file}
+          fi
+          echo "" >> #{output_file}
+        done
+
+        echo ""
+        echo "=== Detection Validation ==="
+        echo "Check if your security stack detected:"
+        echo "  1. Process reading /proc/*/mem (auditd key: proc_mem_access)"
+        echo "  2. Cross-process memory access attempts"
+        echo "  3. Unusual /proc filesystem traversal patterns"
+        echo ""
+        echo "Results: #{output_file}"
+        cat #{output_file}
+      cleanup_command: |
+        rm -f #{output_file}
+      name: sh
+      elevation_required: false

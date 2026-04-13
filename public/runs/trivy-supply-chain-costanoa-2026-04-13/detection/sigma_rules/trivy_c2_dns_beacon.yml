@@ -1,0 +1,31 @@
+title: TeamPCP Trivy Supply Chain - C2 DNS Beacon
+id: a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: |
+  Detects DNS queries to TeamPCP command-and-control domains used in the
+  Trivy v0.69.4 supply chain compromise (March 2026). scan.aquasecurtiy[.]org
+  is the primary exfiltration domain (typosquatted Aqua Security).
+  tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io is the ICP-hosted fallback for
+  secondary payload delivery. plug-tab-protective-relay.trycloudflare.com is
+  the Cloudflare Tunnel C2.
+references:
+  - https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack
+author: KTLYST
+date: 2026-04-13
+tags:
+  - attack.exfiltration
+  - attack.t1041
+  - attack.command_and_control
+  - cve.trivy.teampcp
+logsource:
+  category: dns
+detection:
+  selection:
+    query|contains:
+      - 'scan.aquasecurtiy.org'
+      - 'tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io'
+      - 'plug-tab-protective-relay.trycloudflare.com'
+  condition: selection
+falsepositives:
+  - Unlikely. These are attacker-controlled domains with no legitimate use.
+level: critical

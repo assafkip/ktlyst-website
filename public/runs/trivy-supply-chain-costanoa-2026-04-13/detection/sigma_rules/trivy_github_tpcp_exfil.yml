@@ -1,0 +1,33 @@
+title: TeamPCP Trivy Supply Chain - GitHub tpcp-docs Exfiltration Repo
+id: f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f809102
+status: experimental
+description: |
+  Detects processes or network activity related to creating GitHub repositories
+  named "tpcp-docs". The TeamPCP malware uses GitHub repo creation as a fallback
+  exfiltration channel when the primary Cloudflare Tunnel C2 is unavailable.
+  Stolen credentials are encrypted with AES-256-CBC + RSA-4096 hybrid encryption
+  and pushed as tpcp.tar.gz to these repos.
+references:
+  - https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack
+author: KTLYST
+date: 2026-04-13
+tags:
+  - attack.exfiltration
+  - attack.t1041
+  - cve.trivy.teampcp
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection_cmdline:
+    CommandLine|contains:
+      - 'tpcp-docs'
+  selection_curl:
+    CommandLine|contains|all:
+      - 'api.github.com'
+      - 'repos'
+      - 'tpcp'
+  condition: selection_cmdline or selection_curl
+falsepositives:
+  - Repositories legitimately named tpcp-docs (very unlikely outside of TeamPCP context).
+level: critical

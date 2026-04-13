@@ -1,0 +1,52 @@
+{
+  "stack_assessment": {
+    "profile": "Enterprise - CI/CD Security",
+    "description": "Assumed technology stack for a mid-size security-conscious company running Trivy in CI/CD pipelines.",
+    "assessed_at": "2026-04-13T00:00:00Z",
+    "stack": {
+      "ci_cd": {
+        "primary": "GitHub Actions",
+        "scanner": "Trivy (aquasecurity/trivy-action)",
+        "relevance": "critical - directly affected by supply chain compromise"
+      },
+      "siem": {
+        "platforms": ["Splunk", "Microsoft Sentinel"],
+        "output_formats": ["SPL", "KQL"],
+        "relevance": "high - detection rules delivered for both platforms"
+      },
+      "edr": {
+        "primary": "CrowdStrike Falcon",
+        "secondary": "Microsoft Defender for Endpoint",
+        "relevance": "high - IOC imports and persistence hunting delivered"
+      },
+      "identity": {
+        "platforms": ["Microsoft Entra ID", "Okta"],
+        "sso_provider": "GitHub SSO via Okta/Entra ID",
+        "relevance": "high - credential rotation and session invalidation required"
+      },
+      "email": {
+        "platform": "Microsoft 365 Exchange Online",
+        "relevance": "medium - internal developer advisory distribution"
+      },
+      "cloud": {
+        "providers": ["AWS", "Azure"],
+        "relevance": "critical - cloud credentials in CI/CD pipelines potentially exfiltrated"
+      },
+      "container_registries": {
+        "platforms": ["Docker Hub", "GitHub Container Registry (GHCR)", "Amazon ECR"],
+        "relevance": "critical - compromised Trivy images distributed through these registries"
+      }
+    },
+    "teams_receiving_packages": [
+      "SOC / Detection Engineering",
+      "IAM / Identity",
+      "Email Security",
+      "Endpoint / IT",
+      "Cloud / DevSecOps",
+      "Red Team / Purple Team",
+      "Executive / CISO",
+      "Compliance / GRC",
+      "Threat Intel / IOC Management"
+    ]
+  }
+}

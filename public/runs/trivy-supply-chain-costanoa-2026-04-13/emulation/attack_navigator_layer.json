@@ -1,0 +1,173 @@
+{
+  "name": "Trivy/TeamPCP Supply Chain Attack (March 2026)",
+  "versions": {
+    "attack": "14",
+    "navigator": "4.9.1",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "MITRE ATT&CK mapping for the Trivy/TeamPCP supply chain compromise. Covers initial compromise via imposter commits, malicious binary distribution, GitHub Actions payload, and systemd persistence.",
+  "filters": {
+    "platforms": ["Linux", "macOS", "Windows", "Containers", "IaaS"]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1195.002",
+      "tactic": "initial-access",
+      "color": "#ff6666",
+      "comment": "Stage 1-2: Malicious Trivy v0.69.4 binary distributed via compromised release pipeline + 75/76 trivy-action tags force-pushed with malicious workflow code.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "Initial Compromise + Binary Distribution"},
+        {"name": "evidence", "value": "Imposter commits spoofing rauchg and DmitriyLewen pushed to Trivy repo. v0.69.4 tag triggered release pipeline publishing malicious binaries to GitHub Releases, Docker Hub, GHCR, ECR."}
+      ],
+      "links": [],
+      "showSubtechniques": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1548",
+      "tactic": "privilege-escalation",
+      "color": "#ff9944",
+      "comment": "Compromised aqua-bot service account used to publish releases, bypassing normal approval workflows.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "Initial Compromise"},
+        {"name": "evidence", "value": "Attackers retained access from prior Aqua Security incident, used service account privileges to push tags and trigger automated release pipelines."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 80
+    },
+    {
+      "techniqueID": "T1555",
+      "tactic": "credential-access",
+      "color": "#ff6666",
+      "comment": "Stage 3: File system sweeps for SSH keys, cloud credentials, tokens, and other secret material on both CI/CD runners and developer machines.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "GitHub Actions Payload"},
+        {"name": "evidence", "value": "Three-stage payload swept filesystem for .ssh/, .aws/, .gcloud/, .kube/, .npmrc, and other credential stores."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "color": "#ff6666",
+      "comment": "Stage 3: Memory scraping via /proc/<pid>/mem to extract credentials from running process memory.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "GitHub Actions Payload"},
+        {"name": "evidence", "value": "Malicious GitHub Action read /proc/<pid>/mem of running processes to extract environment variables and in-memory secrets. This technique bypasses file-based secret detection."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "color": "#ff6666",
+      "comment": "Stage 2-3: Exfiltration of stolen credentials via AES-256-CBC + RSA-4096 hybrid encryption to typosquatted C2 domain or Cloudflare Tunnel.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "Binary Distribution + GitHub Actions Payload"},
+        {"name": "evidence", "value": "Credentials encrypted with AES-256-CBC, key wrapped with RSA-4096, exfiltrated to scan.aquasecurtiy[.]org (primary) or plug-tab-protective-relay.trycloudflare.com (tunnel). Fallback: create tpcp-docs GitHub repos to store stolen data."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1087",
+      "tactic": "discovery",
+      "color": "#ff9944",
+      "comment": "Enumeration of environment variables and system context to identify valuable targets and available credentials.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "Binary Distribution"},
+        {"name": "evidence", "value": "Malicious Trivy binary collected environment variables including CI/CD tokens, cloud credentials, and service account keys before exfiltration."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 70
+    },
+    {
+      "techniqueID": "T1098",
+      "tactic": "persistence",
+      "color": "#ff9944",
+      "comment": "Compromised aqua-bot service account used to publish malicious releases and force-push GitHub Action tags.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "Initial Compromise"},
+        {"name": "evidence", "value": "Service account from prior Aqua Security incident retained elevated privileges to npm, Docker Hub, GitHub releases, and GitHub Actions."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 80
+    },
+    {
+      "techniqueID": "T1547.014",
+      "tactic": "persistence",
+      "color": "#ff6666",
+      "comment": "Stage 4: systemd user service persistence via ~/.config/systemd/user/sysmon.py polling C2 every 5 minutes for secondary payloads.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "Persistence"},
+        {"name": "evidence", "value": "On developer machines, wrote sysmon.py to ~/.config/systemd/user/ as a user-level systemd service. Polls tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io every 5 minutes. Does not require root privileges."}
+      ],
+      "links": [],
+      "showSubtechniques": true,
+      "score": 100
+    },
+    {
+      "techniqueID": "T1187",
+      "tactic": "credential-access",
+      "color": "#ff9944",
+      "comment": "Forced authentication and token harvesting from GitHub Actions OIDC and CI/CD service accounts during workflow execution.",
+      "enabled": true,
+      "metadata": [
+        {"name": "attack_stage", "value": "GitHub Actions Payload"},
+        {"name": "evidence", "value": "Compromised GitHub Actions triggered token exchanges and harvested GITHUB_TOKEN, OIDC tokens, and any secrets mounted in the workflow environment."}
+      ],
+      "links": [],
+      "showSubtechniques": false,
+      "score": 70
+    }
+  ],
+  "gradient": {
+    "colors": ["#ffffff", "#ff9944", "#ff6666"],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {"label": "Critical - Direct evidence", "color": "#ff6666"},
+    {"label": "High - Supporting technique", "color": "#ff9944"}
+  ],
+  "metadata": [
+    {"name": "source", "value": "Wiz Research - Trivy/TeamPCP Supply Chain Attack"},
+    {"name": "date", "value": "March 19-23, 2026"},
+    {"name": "generated_by", "value": "KTLYST Security Learning Control Plane"}
+  ],
+  "links": [
+    {"label": "Wiz Research Blog", "url": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack"}
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#1a1a2e",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

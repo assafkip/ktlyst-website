@@ -1,0 +1,105 @@
+# =============================================================================
+# KTLYST - Phishing Indicators
+# Advisory: CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign)
+# Generated: 2026-04-13
+#
+# Social engineering patterns from the Trivy supply chain attack and expected
+# follow-on phishing targeting developers whose credentials were stolen.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# SECTION 1: SPOOFED COMMIT AUTHOR IDENTITIES
+# ---------------------------------------------------------------------------
+# The attackers pushed malicious commits to Trivy repositories by spoofing
+# the identities of trusted developers. Watch for these patterns in:
+# - Pull requests from unknown forks
+# - Direct commits bypassing branch protection
+# - Commits that don't match the author's verified GPG signature
+
+# Spoofed identity: "rauchg"
+# Real person: Guillermo Rauch (CEO, Vercel)
+# Attack pattern: Commits attributed to rauchg appeared in Trivy repos
+# but were not made by the real developer. The attackers exploited the
+# fact that Git allows arbitrary author name/email in commits.
+#
+# Detection: Any commit claiming to be from rauchg in a non-Vercel
+# repository should be verified against the author's GPG key.
+
+# Spoofed identity: "DmitriyLewen"
+# Real person: Dmitriy Lewen (Aqua Security/Trivy maintainer)
+# Attack pattern: Commits spoofing this Trivy maintainer's identity
+# were used to inject malicious code. Because DmitriyLewen is a
+# legitimate Trivy contributor, the commits appeared trustworthy.
+#
+# Detection: Verify commit signatures. Unsigned commits from known
+# maintainers in security-critical repos are a red flag.
+
+# ---------------------------------------------------------------------------
+# SECTION 2: EXPECTED FOLLOW-ON PHISHING PATTERNS
+# ---------------------------------------------------------------------------
+# Developers whose credentials were exfiltrated during March 19-23 are
+# high-value targets for follow-on social engineering. Watch for:
+
+# Pattern: Fake security advisory emails
+# - Subject lines like "Action Required: Trivy credential rotation"
+# - Links to typosquatted domains (aquasecurtiy.org, aqua-security.io)
+# - Impersonating Aqua Security, GitHub Security, or Wiz Research
+# - Containing "urgent" credential rotation links that harvest passwords
+
+# Pattern: Fake GitHub notifications
+# - "You have been mentioned in a security advisory"
+# - "Your token has been exposed in a public repository"
+# - Links to github-security[.]com or github-alerts[.]io (NOT real GitHub)
+# - OAuth authorization requests from unknown apps claiming to be security tools
+
+# Pattern: Fake npm/package registry alerts
+# - "Your npm package has been flagged for malicious content"
+# - "Verify your npm account to prevent suspension"
+# - Links that look like npmjs.com but are typosquatted
+
+# Pattern: Targeted LinkedIn/social outreach
+# - Messages referencing the Trivy incident by name
+# - Impersonating security researchers offering to "help verify exposure"
+# - Requests to run "verification scripts" on affected machines
+
+# ---------------------------------------------------------------------------
+# SECTION 3: DOMAINS TO BLOCK/FLAG IN EMAIL GATEWAY
+# ---------------------------------------------------------------------------
+# Block these domains in email filtering rules. These are confirmed C2 and
+# typosquatted domains from the attack.
+
+# C2 domains (block inbound and outbound)
+scan.aquasecurtiy.org
+*.aquasecurtiy.org
+tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io
+plug-tab-protective-relay.trycloudflare.com
+
+# Typosquat patterns to watch for in email links (regex patterns):
+# aquasecur[it]y\.org  (transposed letters)
+# aqua-security\.(io|com|net)  (hyphenated variants)
+# trivysecurity\.(com|io|org)  (trivy brand abuse)
+# github-security\.(com|io|org)  (GitHub brand abuse)
+# github-alerts\.(com|io|org)  (GitHub brand abuse)
+
+# ---------------------------------------------------------------------------
+# SECTION 4: INDICATORS FOR EMAIL SECURITY RULES
+# ---------------------------------------------------------------------------
+
+# Subject line keywords to flag (combine with external sender filter):
+# "Trivy" + "credential" + "rotation"
+# "Trivy" + "security" + "advisory"
+# "GitHub" + "token" + "exposed"
+# "npm" + "malicious" + "package"
+# "supply chain" + "compromise" + "verify"
+# "aqua security" + "urgent"
+
+# Attachment patterns to flag:
+# *.py files claiming to be "verification scripts"
+# tpcp.tar.gz (encrypted credential bundle filename from the malware)
+# pglog (dropper filename)
+
+# Link patterns to flag (in email body):
+# Any URL containing "aquasecurtiy" (typosquatted)
+# Any URL containing "tpcp-docs" (exfiltration repo name)
+# Cloudflare Tunnel URLs (*.trycloudflare.com) in non-Cloudflare context
+# ICP URLs (*.icp0.io) - unusual in corporate email

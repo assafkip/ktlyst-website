@@ -1,0 +1,28 @@
+{
+  "source_advisory": {
+    "title": "Trivy Compromised: TeamPCP Supply Chain Attack",
+    "url": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack",
+    "published_date": "2026-03-23",
+    "author": "Wiz Research",
+    "advisory_type": "supply-chain-compromise",
+    "severity": "critical",
+    "affected_product": "Trivy (Aqua Security)",
+    "affected_versions": ["v0.69.4", "v0.69.5", "v0.69.6"],
+    "attack_window": {
+      "start": "2026-03-19T17:43:37Z",
+      "end": "2026-03-23T00:00:00Z"
+    },
+    "threat_actor": "TeamPCP",
+    "mitre_techniques": [
+      "T1195.002",
+      "T1555",
+      "T1005",
+      "T1041",
+      "T1098",
+      "T1547.014",
+      "T1127"
+    ],
+    "ingested_at": "2026-04-13T00:00:00Z",
+    "ingested_by": "KTLYST Security Learning Control Plane"
+  }
+}

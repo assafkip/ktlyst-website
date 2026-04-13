@@ -1,0 +1,32 @@
+title: 'KTLYST - Process Memory Scraping via /proc/pid/mem'
+id: a5e6f7b8-9c0d-1e2f-3a4b-5c6d7e8f9a0b
+status: experimental
+description: |
+    Detects access to /proc/pid/mem by non-debugger processes. The Trivy/TeamPCP
+    GitHub Actions payload scrapes runner process memory to extract secrets
+    stored in environment variables and workflow context.
+    Source: Wiz advisory, March 2026
+level: high
+author: KTLYST
+date: 2026/04/13
+references:
+    - 'https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack'
+tags:
+    - attack.credential_access
+    - attack.t1005
+    - attack.t1555
+logsource:
+    category: file_access
+    product: linux
+detection:
+    selection:
+        TargetFilename|re: '/proc/\d+/mem'
+    filter:
+        Image|endswith:
+            - '/gdb'
+            - '/strace'
+            - '/lldb'
+            - '/valgrind'
+    condition: selection and not filter
+falsepositives:
+    - Legitimate debugging tools. Performance profilers.

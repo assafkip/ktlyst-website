@@ -1,0 +1,23 @@
+---
+attack_technique: T1187
+display_name: "Forced Authentication"
+atomic_tests:
+  - name: "KTLYST - GitHub API Credential Exfiltration via Repo Creation"
+    auto_generated_guid: c9d0e1f2-3a4b-5c6d-7e8f-9a0b1c2d3e09
+    description: |
+      Simulates the fallback exfiltration method where stolen credentials
+      are used to create GitHub repos (tpcp-docs pattern) and push
+      encrypted credential bundles to them.
+    supported_platforms:
+      - linux
+      - macos
+    executor:
+      name: manual
+      steps: |
+        1. In a test org, use a test token to create a new private repo
+        2. Name it with a pattern similar to "tpcp-docs"
+        3. Push a test file to the repo
+        4. Verify: Does GitHub audit log capture the repo creation?
+        5. Verify: Does SIEM alert on the tpcp-docs pattern?
+        6. Clean up: Delete the test repo
+      cleanup_command: ""

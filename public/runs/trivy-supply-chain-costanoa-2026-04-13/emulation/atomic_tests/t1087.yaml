@@ -1,0 +1,30 @@
+---
+attack_technique: T1087
+display_name: "Account Discovery"
+atomic_tests:
+  - name: "KTLYST - Developer Account Enumeration via GitHub API"
+    auto_generated_guid: a7b8c9d0-1e2f-3a4b-5c6d-7e8f9a0b1c07
+    description: |
+      Simulates enumeration of developer accounts with package registry
+      access, as would be performed after credential theft from CI/CD.
+    supported_platforms:
+      - linux
+      - macos
+    executor:
+      name: bash
+      command: |
+        echo "=== Account Discovery Simulation ==="
+        echo "Enumerating accounts with package registry access..."
+
+        # List GitHub org members (requires auth)
+        gh api /orgs/{org}/members --jq '.[].login' 2>/dev/null || \
+          echo "GitHub org member enumeration (requires authentication)"
+
+        # Check npm whoami
+        npm whoami 2>/dev/null || echo "npm: not authenticated"
+
+        # Check Docker Hub auth
+        docker info 2>/dev/null | grep -i username || echo "Docker: not authenticated"
+
+        echo "Test complete - check if API audit logs captured the enumeration"
+      cleanup_command: ""

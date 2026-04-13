@@ -1,0 +1,27 @@
+title: 'KTLYST - tpcp-docs Repository Creation (Exfil Indicator)'
+id: b6f7a8c9-0d1e-2f3a-4b5c-6d7e8f9a0b1c
+status: experimental
+description: |
+    Detects creation of GitHub repositories named tpcp-docs. The Trivy/TeamPCP
+    malware creates these repos as a fallback exfiltration channel when the
+    primary Cloudflare Tunnel C2 is unavailable.
+    Source: Wiz advisory, March 2026
+level: critical
+author: KTLYST
+date: 2026/04/13
+references:
+    - 'https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack'
+tags:
+    - attack.exfiltration
+    - attack.t1041
+    - attack.t1567
+logsource:
+    category: application
+    product: github
+detection:
+    selection:
+        action: 'repo.create'
+        repo_name|contains: 'tpcp-docs'
+    condition: selection
+falsepositives:
+    - None expected. This is a malware-specific naming pattern.
