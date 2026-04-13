@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-13T21:15:18.043539+00:00",
+  "generated": "2026-04-13T21:20:51.369186+00:00",
   "source": "CISA",
-  "report": "AA23-320A (FBI/CISA Joint Advisory)",
+  "report": "Credential Phishing and SIM Swapping Targeting IT Help Desks (CISA AA23-320A)",
   "domains": [
     {
       "type": "domain",

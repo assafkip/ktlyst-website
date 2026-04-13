@@ -7,7 +7,7 @@
 # real ability UUID from your Caldera library (or import the
 # Atomic Red Team plugin) before running an operation.
 
-id: 54e86711-c82e-41f0-af2b-8c2b1d3ee5d1
+id: 1a1c72fb-2374-4add-ba85-a0bf56ff1cfc
 name: KTLYST - Paramount Global - Phishing Emulation
 description: >-
   KTLYST-generated adversary profile for Paramount Global. Exercises the
@@ -67,5 +67,5 @@ tags:
 ktlyst_metadata:
   generated_by: KTLYST
   created_for: Paramount Global
-  created_at: 2026-04-13T21:15:18.042476+00:00
+  created_at: 2026-04-13T21:20:51.368248+00:00
   indicator_step_count: 41

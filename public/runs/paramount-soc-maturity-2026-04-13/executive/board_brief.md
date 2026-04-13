@@ -1,6 +1,6 @@
 # Paramount Global - Advisory Brief
 
-**Advisory:** AA23-320A (FBI/CISA Joint Advisory)
+**Advisory:** Credential Phishing and SIM Swapping Targeting IT Help Desks (CISA AA23-320A)
 **Source:** CISA
 **Prepared:** 2026-04-13
 

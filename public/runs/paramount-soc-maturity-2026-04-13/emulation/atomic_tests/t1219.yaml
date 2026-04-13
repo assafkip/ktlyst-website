@@ -3,7 +3,7 @@ attack_technique: T1219
 display_name: "Remote Access Tools"
 atomic_tests:
   - name: "KTLYST - Remote Access Tools Simulation"
-    auto_generated_guid: 9f043376-6c80-4f93-a379-61c87256f269
+    auto_generated_guid: fdf61352-301f-4a42-9587-eb8ab10f91d5
     description: |
       Simulates Remote Access Tools technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

@@ -3,7 +3,7 @@ attack_technique: T1621
 display_name: "Multi-Factor Authentication Request Generation"
 atomic_tests:
   - name: "KTLYST - Multi-Factor Authentication Request Generation Simulation"
-    auto_generated_guid: 88f815b4-b649-419c-b9d3-ae0ec7c75b41
+    auto_generated_guid: af422035-9e45-437c-aa90-392ac0483246
     description: |
       Simulates Multi-Factor Authentication Request Generation technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

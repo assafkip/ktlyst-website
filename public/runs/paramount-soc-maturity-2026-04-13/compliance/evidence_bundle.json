@@ -1,11 +1,11 @@
 {
   "bundle_version": "1.0",
-  "generated": "2026-04-13T21:15:18.046493+00:00",
+  "generated": "2026-04-13T21:20:51.372849+00:00",
   "generator": "KTLYST",
   "advisory": {
     "source": "CISA",
-    "report": "AA23-320A (FBI/CISA Joint Advisory)",
-    "processed_at": "2026-04-13T21:15:18.046493+00:00"
+    "report": "Credential Phishing and SIM Swapping Targeting IT Help Desks (CISA AA23-320A)",
+    "processed_at": "2026-04-13T21:20:51.372849+00:00"
   },
   "target": {
     "name": "Paramount Global",

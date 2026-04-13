@@ -3,7 +3,7 @@ attack_technique: T1583.001
 display_name: "Domains"
 atomic_tests:
   - name: "KTLYST - Domains Simulation"
-    auto_generated_guid: 199dacd2-57e6-42e6-b764-f14d41cdb349
+    auto_generated_guid: bf8712a0-1771-44cc-8db9-52f75fb38f75
     description: |
       Simulates Domains technique as observed in Unit42 Device Code
       OAuth Phishing campaign. Use for purple team validation.

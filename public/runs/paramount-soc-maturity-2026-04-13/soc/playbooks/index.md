@@ -1,6 +1,6 @@
 # SOC Playbook Index
 
-**Advisory:** AA23-320A (FBI/CISA Joint Advisory)
+**Advisory:** Credential Phishing and SIM Swapping Targeting IT Help Desks (CISA AA23-320A)
 **Prepared for:** Paramount Global
 **Generated:** 2026-04-13
 **Total playbooks:** 41

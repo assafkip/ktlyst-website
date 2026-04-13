@@ -1,7 +1,7 @@
 {
   "event_type": "advisory.package.generated",
-  "event_id": "ktlyst-paramount-global-2026-04-13T21:15:18.046646+00:00",
-  "timestamp": "2026-04-13T21:15:18.046646+00:00",
+  "event_id": "ktlyst-paramount-global-2026-04-13T21:20:51.373036+00:00",
+  "timestamp": "2026-04-13T21:20:51.373036+00:00",
   "actor": {
     "system": "KTLYST",
     "component": "deliverable_builder",
@@ -19,7 +19,7 @@
   },
   "advisory": {
     "source": "CISA",
-    "report": "AA23-320A (FBI/CISA Joint Advisory)",
+    "report": "Credential Phishing and SIM Swapping Targeting IT Help Desks (CISA AA23-320A)",
     "indicator_count": 12,
     "behavioral_pattern_count": 0
   },
