@@ -24,7 +24,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/q-system/hooks/statusline.sh\" 2>/dev/null || true"
+    "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/hooks/statusline.sh\" 2>/dev/null || true"
   },
   "permissions": {
     "allow": [
@@ -91,22 +91,22 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/q-system/hooks/git-health-check.sh\" 2>/dev/null || true",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/hooks/git-health-check.sh\" 2>/dev/null || true",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/q-system/hooks/session-start.py\" 2>/dev/null || true",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/hooks/session-start.py\" 2>/dev/null || true",
             "timeout": 5
           },
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/q-system/.q-system/scripts/md-prune.py\" 2>/dev/null || true",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/.q-system/scripts/md-prune.py\" 2>/dev/null || true",
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/q-system/.q-system/scripts/memory-freshness-check.py\" 2>/dev/null || true",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/.q-system/scripts/memory-freshness-check.py\" 2>/dev/null || true",
             "timeout": 5
           }
         ]
@@ -117,7 +117,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "test -f \"$CLAUDE_PROJECT_DIR/q-system/q-system/.q-system/token-guard.py\" && python3 \"$CLAUDE_PROJECT_DIR/q-system/q-system/.q-system/token-guard.py\" || true",
+            "command": "test -f \"$CLAUDE_PROJECT_DIR/q-system/.q-system/token-guard.py\" && python3 \"$CLAUDE_PROJECT_DIR/q-system/.q-system/token-guard.py\" || true",
             "timeout": 5
           }
         ]
@@ -129,7 +129,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "test -f \"$CLAUDE_PROJECT_DIR/q-system/q-system/.q-system/token-guard.py\" && python3 \"$CLAUDE_PROJECT_DIR/q-system/q-system/.q-system/token-guard.py\" || true",
+            "command": "test -f \"$CLAUDE_PROJECT_DIR/q-system/.q-system/token-guard.py\" && python3 \"$CLAUDE_PROJECT_DIR/q-system/.q-system/token-guard.py\" || true",
             "timeout": 5
           }
         ]
@@ -140,7 +140,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/q-system/hooks/post-compact.sh\" 2>/dev/null || true",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/hooks/post-compact.sh\" 2>/dev/null || true",
             "timeout": 5
           }
         ]
@@ -151,12 +151,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/q-system/hooks/auto-commit.py\" 2>/dev/null || true",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/q-system/hooks/auto-commit.py\" 2>/dev/null || true",
             "async": true
           },
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/q-system/hooks/stop-logger.sh\" 2>/dev/null || true",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/q-system/hooks/stop-logger.sh\" 2>/dev/null || true",
             "async": true
           }
         ]

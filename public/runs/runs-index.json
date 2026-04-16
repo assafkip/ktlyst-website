@@ -1,20 +1,65 @@
 [
   {
+    "id": "ivanti-april-2026-enigma-railway-ot-2026-04-14",
+    "date": "2026-04-14",
+    "title": "Ivanti April 2026 Security Update",
+    "source": "www.ivanti.com",
+    "source_url": "https://www.ivanti.com/blog/april-2026-security-update",
+    "summary": "Full KTLYST run for Enigma SOI: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/ivanti-april-2026-enigma-railway-ot-2026-04-14/"
+  },
+  {
+    "id": "cisa-kev-adobe-zeroday-temenos-2026-04-14",
+    "date": "2026-04-14",
+    "title": "CISA Adds Seven Known Exploited Vulnerabilities to Catalog (incl. Adobe Acrobat/Reader zero-day CVE-2026-34621, VBA CVE-2012-1854)",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/04/13/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+    "summary": "Full KTLYST run for Temenos: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/cisa-kev-adobe-zeroday-temenos-2026-04-14/"
+  },
+  {
+    "id": "cisa-kev-adobe-zeroday-mizuho-2026-04-14",
+    "date": "2026-04-14",
+    "title": "CISA Adds Seven Known Exploited Vulnerabilities to Catalog (incl. Adobe Acrobat/Reader zero-day CVE-2026-34621)",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/04/13/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+    "summary": "Full KTLYST run for Mizuho: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/cisa-kev-adobe-zeroday-mizuho-2026-04-14/"
+  },
+  {
+    "id": "cisa-kev-adobe-zeroday-horton-grc-vciso-2026-04-14",
+    "date": "2026-04-14",
+    "title": "CISA Adds Seven Known Exploited Vulnerabilities to Catalog (incl. Adobe Acrobat/Reader zero-day CVE-2026-34621)",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/04/13/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+    "summary": "Full KTLYST run for Independent vCISO: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cisa-kev-adobe-zeroday-horton-grc-vciso-2026-04-14/"
+  },
+  {
+    "id": "cisa-kev-adobe-zeroday-fruge-vciso-2026-04-14",
+    "date": "2026-04-14",
+    "title": "CISA Adds Seven Known Exploited Vulnerabilities to Catalog (incl. Adobe Acrobat/Reader zero-day CVE-2026-34621)",
+    "source": "www.cisa.gov",
+    "source_url": "https://www.cisa.gov/news-events/alerts/2026/04/13/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
+    "summary": "Full KTLYST run for XM Cyber: 9 team packages, platform-native files (stack-personalized)",
+    "url": "/runs/cisa-kev-adobe-zeroday-fruge-vciso-2026-04-14/"
+  },
+  {
     "id": "trivy-supply-chain-costanoa-2026-04-13",
     "date": "2026-04-13",
     "title": "CI/CD Supply Chain Attack (Trivy/TeamPCP Campaign)",
-    "source": "wiz.io",
+    "source": "www.wiz.io",
     "source_url": "https://www.wiz.io/blog/trivy-compromised-teampcp-supply-chain-attack",
-    "summary": "Full KTLYST run: 9 team packages, 66 files. Trivy v0.69.4 compromised, 75/76 GitHub Action tags force-pushed, persistence backdoor active. Dual SIEM, CrowdStrike, Entra ID + Okta.",
+    "summary": "Full KTLYST run for Generic Enterprise: 9 team packages, platform-native files (industry defaults)",
     "url": "/runs/trivy-supply-chain-costanoa-2026-04-13/"
   },
   {
     "id": "paramount-soc-maturity-2026-04-13",
     "date": "2026-04-13",
     "title": "AA23-320A Scattered Spider (FBI/CISA Joint Advisory)",
-    "source": "cisa.gov",
+    "source": "www.cisa.gov",
     "source_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-320a",
-    "summary": "SOC Maturity Accelerator for Paramount Global: 10 team packages, 144 files, dual EDR (CrowdStrike + Carbon Black), 42 IR playbooks, Splunk/Proofpoint/Entra",
+    "summary": "Full KTLYST run for Paramount Global: 9 team packages, platform-native files (industry defaults)",
     "url": "/runs/paramount-soc-maturity-2026-04-13/"
   },
   {
@@ -61,6 +106,15 @@
     "source_url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-099",
     "summary": "Full KTLYST run for Crypto ISAC: 9 team packages, platform-native files (stack-personalized)",
     "url": "/runs/forticlient-ems-rce-cryptoisac/"
+  },
+  {
+    "id": "cyberhaven-supply-chain-costanoa-2026-04-13",
+    "date": "2026-04-13",
+    "title": "Browser Extension Supply Chain Attack (Cyberhaven Campaign)",
+    "source": "www.cyberhaven.com",
+    "source_url": "https://www.cyberhaven.com/engineering-blog/cyberhavens-chrome-extension-security-incident-and-what-were-doing-about-it",
+    "summary": "Full KTLYST run for Generic Enterprise: 9 team packages, platform-native files (industry defaults)",
+    "url": "/runs/cyberhaven-supply-chain-costanoa-2026-04-13/"
   },
   {
     "id": "iranian-plc-exploitation-spie-energy",

@@ -40,3 +40,6 @@ q-system/memory/archives/
 
 # Node
 node_modules/
+
+# Generated demo runs (pipeline output, not source)
+public/runs/
