@@ -145,12 +145,12 @@
         var href = link.href || '';
         var text = link.textContent.trim();
 
-        if (href.includes('calendly.com')) {
+        if (href.includes('calendar.app.google') || href.includes('calendly.com')) {
           link.addEventListener('click', function() {
             gtag('event', 'cta_click', {
               link_text: text,
               link_url: href,
-              cta_type: 'calendly',
+              cta_type: 'book_demo',
               page_section: getSectionName(link)
             });
           });

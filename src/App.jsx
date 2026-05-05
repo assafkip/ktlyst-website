@@ -108,7 +108,7 @@ function App() {
           <a href="/insights">Insights</a>
           <a href="/partners">Partners</a>
           <a href="/signals">Signals</a>
-          <a href="https://calendly.com/assafkip" className="cta-button">Let's Talk</a>
+          <a href="https://calendar.app.google/Nr5LqskPRESaji876" className="cta-button">Let's Talk</a>
         </div>
       </nav>
 
@@ -639,7 +639,7 @@ function App() {
           <a href="/glossary">Glossary</a>
           <a href="/partners">Partners</a>
           <a href="/signals">Signals</a>
-          <a href="https://calendly.com/assafkip">Let's Talk</a>
+          <a href="https://calendar.app.google/Nr5LqskPRESaji876">Let's Talk</a>
           <a href="mailto:crew@ktlystlabs.com">Contact</a>
         </div>
         <p>&copy; 2026 KTLYST Labs. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/responsible-ai">Responsible AI</a></p>

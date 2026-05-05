@@ -27,7 +27,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10 pb-16">
           <a
-            href="https://calendly.com/assafkip"
+            href="https://calendar.app.google/Nr5LqskPRESaji876"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary btn-glow inline-block text-lg hover:scale-105 transform transition-all duration-200"

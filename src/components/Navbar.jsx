@@ -42,7 +42,7 @@ export default function Navbar() {
             </a>
             {/* CTA Button */}
             <a
-              href="https://calendly.com/assafkip"
+              href="https://calendar.app.google/Nr5LqskPRESaji876"
               target="_blank"
               rel="noopener noreferrer"
               className={`btn-primary text-sm transition-all duration-300 ${

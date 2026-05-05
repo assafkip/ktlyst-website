@@ -976,7 +976,7 @@
         <a href="/#how">How It Works</a>
         <a href="/#partner">Design Partner</a>
         <a href="/signals" class="active">Signals</a>
-        <a href="https://calendly.com/assafkip" class="cta-button">Let's Talk</a>
+        <a href="https://calendar.app.google/Nr5LqskPRESaji876" class="cta-button">Let's Talk</a>
     </div>
 </nav>
 
@@ -1177,7 +1177,7 @@
   <p style="color: var(--text-muted, #94a3b8); font-size: 0.85rem; margin-bottom: 8px;">
     Stop reading about threats. Start operationalizing them.
   </p>
-  <a href="https://calendly.com/assafkip" style="
+  <a href="https://calendar.app.google/Nr5LqskPRESaji876" style="
     color: #6366f1;
     text-decoration: none;
     font-weight: 500;
@@ -1850,9 +1850,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('a').forEach(function(link) {
     var href = link.href || '';
     var text = link.textContent.trim();
-    if (href.includes('calendly.com')) {
+    if (href.includes('calendar.app.google') || href.includes('calendly.com')) {
       link.addEventListener('click', function() {
-        gtag('event', 'cta_click', { link_text: text, link_url: href, cta_type: 'calendly', page_section: 'signals' });
+        gtag('event', 'cta_click', { link_text: text, link_url: href, cta_type: 'book_demo', page_section: 'signals' });
       });
     }
     if (href.includes('docs.google.com/forms')) {
